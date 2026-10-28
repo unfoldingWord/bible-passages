@@ -20,4 +20,8 @@ pieces around it.
 | 9   | Publish         | `dist/tc-mobile/` packages and title tables, release tags | [pipeline.md](pipeline.md#9-publish)         |
 | 10  | Project site    | live scope, sizing, sprints, decisions, coverage          | [site.md](site.md)                           |
 
-Files not yet written are being scoped.
+The dated critical path and go/no-go gates: [plan.md](plan.md).
+
+The scoping was reviewed adversarially on 2026-10-28 by a second model that
+re-derived every count with its own code; its findings are fixed in these
+files. A codex and grok pass runs on the PR through the review bench.

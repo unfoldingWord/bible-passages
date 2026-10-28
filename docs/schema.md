@@ -55,12 +55,13 @@ Keys name a span and nothing else. A key never changes meaning and is never
 reused (tc-mobile contract, "Keys"). The proposed form follows tc-mobile's own
 Bible fixture (`MRK.1.1-8`):
 
-| Unit                    | Form                       | Example        |
-| ----------------------- | -------------------------- | -------------- |
-| Chapter                 | `<BOOK>.<c>`               | `TIT.1`        |
-| Segment                 | `<BOOK>.<c>.<v>-<v>`       | `TIT.1.1-4`    |
-| Segment across chapters | `<BOOK>.<c>.<v>-<c>.<v>`   | `GEN.1.31-2.3` |
-| Pericope                | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
+| Unit     | Form                       | Example        |
+| -------- | -------------------------- | -------------- |
+| Chapter  | `<BOOK>.<c>`               | `TIT.1`        |
+| Segment  | `<BOOK>.<c>.<v>-<v>`       | `TIT.1.1-4`    |
+| Pericope | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
+
+No pericope or segment in this dataset crosses a chapter: BSB opens every one of its 1,189 chapters with a heading at verse 1, and the chunk files are per chapter. So every key is single-chapter. (tc-mobile's format allows cross-chapter spans; this dataset never needs them.)
 
 Because the span is in the key, moving a boundary always produces a new key.
 That is the contract's rule ("give the new passage a new key") enforced by the
@@ -187,13 +188,21 @@ every test run until they exist.
    titles (segments from UTN), for the whole Bible, in the Top 10 Strategic
    Languages, by 2026-11-16. servant.bible#1 lists segment titles as later.
    Which one is v0.1?
-2. **Pericope source**: Clear Bible's biblelib file (reported as 2,436
-   pericopes, CC BY 4.0) or BSB headings rebuilt (reported as 3,016)? Neither
-   count is re-verified in this repo yet.
+2. **Pericope source**: the requirements owner's build plan uses BSB `\s1`
+   headings: 3,016, measured in this repo
+   ([scoping/sizing.md](scoping/sizing.md)). Proposed: confirm BSB.
 3. **Keys**: the span-based keys above, instead of the pilot's order-based
    ones. An alternative is to embed a Scripture Burrito scope string, which
    tc-mobile already uses for sections (its ADR 0004): `TIT.1:1-4`,
-   `GEN.1:31-2:3`. Both fit the key rule.
+   `PSA.23:1-6`. Both fit the key rule.
+
+   **The cost of span keys:** any boundary change, even one verse, retires a
+   key, and the reviewed titles in every language attached to it would be
+   orphaned. Rule: a retired key is recorded with its successor in
+   `data/retired-keys.json`, and its titles carry forward to the new key as
+   `unreviewed` drafts. And the chunk source (decision 8) is pinned before
+   the first release, because changing it later retires thousands of keys.
+
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
