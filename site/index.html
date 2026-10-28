@@ -518,12 +518,17 @@ function savePick(id) {
         if (e?.code !== "invalid_argument") throw e;
         await ref.set({ picks: { ...(RV.resp[RV.uid]?.picks || {}), [id]: pick }, at });
       }
-      msg.textContent = "Saved"; el.dataset.touched = "";
+      msg.textContent = "Saved";
+      // Edits made while the save was in flight stay protected.
+      const now = el.querySelector("input:checked")?.value || "", nowNote = el.querySelector("textarea").value.trim();
+      if (now === choice && nowNote === note) el.dataset.touched = "";
     } catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
   });
   return saving;
 }
-document.addEventListener("change", (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
+// Any edit marks the card, so a snapshot never overwrites what is being typed.
+// "input" fires on every keystroke; "change" covers radios.
+for (const ev of ["input", "change"]) document.addEventListener(ev, (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
 async function resolveNames() {
   if (!RV.user) return;
   const ids = [...new Set(Object.keys(RV.resp))];
