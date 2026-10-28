@@ -69,10 +69,11 @@ export function checkKeys(
       }
       continue;
     }
-    // Follow the chain: a successor may itself be retired later.
+    // Follow the chain: a successor may itself be retired later. A live key
+    // ends the walk; its own retirement row is history (decisions/0001).
     const seen = new Set([key]);
     let next = successor;
-    while (retired.has(next) && !seen.has(next)) {
+    while (retired.has(next) && !current.spans.has(next) && !seen.has(next)) {
       seen.add(next);
       next = retired.get(next) ?? next;
     }

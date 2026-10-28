@@ -117,6 +117,21 @@ describe("checkKeys", () => {
     expect(checkKeys(previous, release(reused, movedRecord))).toEqual([]);
   });
 
+  it("passes on a boundary moved and then moved back", () => {
+    // v1 -> moved (records v1's keys) -> v1 again (records moved's keys).
+    // The two records point at each other; the live keys end each walk.
+    const back = [
+      ...movedRecord,
+      { key: "TIT.P.1.1-3", successor: "TIT.P.1.1-4" },
+      { key: "TIT.P.1.4-9", successor: "TIT.P.1.5-9" },
+      { key: "TIT.1.1-3", successor: "TIT.1.1-4" },
+      { key: "TIT.1.4-6", successor: "TIT.1.5-6" },
+    ];
+    expect(checkKeys(release(moved, movedRecord), release(v1, back))).toEqual(
+      []
+    );
+  });
+
   it("fails on a retired key used for a different span", () => {
     const previous = release(moved, movedRecord);
     const reused = book(
