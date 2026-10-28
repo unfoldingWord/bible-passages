@@ -468,7 +468,7 @@ function renderFoot() {
 function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
 
 /* ---------- decisions ---------- */
-const RV = { db: null, user: null, uid: null, canEdit: false, resp: {}, final: {}, names: {} };
+const RV = { db: null, user: null, uid: null, resp: {}, final: {}, names: {} };
 function buildDecisions() {
   $("#decs").innerHTML = DECIDE.map((d) => `<div class="panel dec" id="dec-${d.id}">
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span class="eyebrow">Decision ${d.n}</span><span class="chip">decides: ${d.by}</span></div>
@@ -559,7 +559,7 @@ setInterval(liveState, 60000);
   const [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
   if (!db) return;
   RV.db = db; RV.user = user;
-  if (user) { try { RV.uid = await user.id(); RV.canEdit = await user.canEdit(); } catch (e) { RV.uid = null; } }
+  if (user) { try { RV.uid = await user.id(); } catch (e) { RV.uid = null; } }
   updateDecisions();
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
