@@ -4,6 +4,32 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-28 (evening) — scoping, sizing, sprints, project site
+
+### Shipped
+
+| What                                                                                                                                    | Evidence                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| 6B scoping for every component, drawing on uW and partner work                                                                          | `docs/scoping/`; PR #1                                                                                 |
+| Sizing measured and independently re-derived: 3,016 pericopes, 13,608 chunks, 162 splits (194 naive), 1,184 ULT/UFW chunk disagreements | `docs/scoping/sizing.md`; second-model re-derivation matched every count                               |
+| Sprint 5–7 milestones and issues #2–#14                                                                                                 | GitHub milestones 1–3                                                                                  |
+| Project site, with a database for picks and recorded decisions                                                                          | https://claude.ai/artifact/RiDFC57H2UCyKHe4ZwhvDT; `live/snapshot` written and read back at view level |
+| Snapshot routine every 3 hours at :41 UTC                                                                                               | routine `trig_017eKbHFv181tiMyt76reL2T`; first run 21:41 UTC, not yet observed                         |
+| Verified comment on servant.bible#1 with decisions and the 162 split chunks                                                             | issuecomment-6480617648                                                                                |
+| Correctness-first practice and Klappy's canon in AGENTS.md; `six-b` skill                                                               | AGENTS.md "How we work"                                                                                |
+
+### Open
+
+- Review bench (`uwreview`) requested on PR #1 at `52d4616`; no verdict yet.
+- grok is not signed in here (`grok login --device-code`); codex cannot run sandboxed in this container and was not run locally.
+- Decisions on servant.bible#1; the issue has no assignee.
+
+### Next
+
+- Titus end to end by 1 Nov (#3), with measured rates.
+
+---
+
 ## 2026-10-28 — repo created and scaffolded
 
 ### Shipped
