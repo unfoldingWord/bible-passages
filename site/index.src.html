@@ -348,7 +348,7 @@ const CHECKS = [
   ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Reported", "From a read-only survey of the Door43 catalog; completeness not checked."],
   ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
   ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
-  ["This site's GitHub numbers refresh every 3 hours", "Unresolved", "Not yet. The scheduled refresh ran twice on 28 Oct and wrote nothing: GitHub returned 401 to the cloud sandbox's token and 429 (rate limited) without it. The numbers here were refreshed by hand; the \u201cupdated\u201d time in the masthead shows their age."],
+  ["This site's GitHub numbers are refreshed by hand", "Dated", "They are refreshed in work sessions, not on a schedule; the pill at the top shows their age. A scheduled cloud refresh was tried on 28 Oct and paused: GitHub returned 401 to the cloud sandbox's token and 429 (rate limited) without it."],
   ["Document links point at PR #1's branch", "Dated", "The docs are on chore/scaffold until PR #1 merges; the links move to main then."],
 ];
 
@@ -358,7 +358,7 @@ function liveState() {
   const age = (Date.now() - Date.parse(SNAP.asOf)) / 3.6e6;
   el.className = "live " + (SNAP_KIND === "live" ? (age > 7 ? "stale" : "on") : "");
   const ago = age < 1 ? Math.max(1, Math.round(age * 60)) + " min ago" : age < 48 ? Math.round(age) + " h ago" : Math.round(age / 24) + " days ago";
-  t.textContent = (SNAP_KIND === "live" ? "Live from GitHub" : "Baseline snapshot") + " · updated " + ago;
+  t.textContent = (SNAP_KIND === "live" ? "GitHub numbers" : "Baseline snapshot") + " · refreshed " + ago;
   el.title = new Date(SNAP.asOf).toUTCString();
   document.querySelectorAll(".dated").forEach((d) => {
     const w = Date.parse(d.dataset.written), old = Date.now() - w > 7 * 864e5;
@@ -452,7 +452,7 @@ function renderChecks() {
   $("#checks").innerHTML = CHECKS.map((c) => `<tr><td>${c[0]}</td><td><span class="pill ${cls[c[1]]}">${c[1]}</span></td><td>${c[2]}</td></tr>`).join("");
 }
 function renderFoot() {
-  $("#foot").innerHTML = `<span>Built from <a href="${REPO}" target="_blank" rel="noopener">unfoldingWord/bible-passages</a>. GitHub numbers come from a snapshot a scheduled routine writes every 3 hours (the pill at the top shows its age); measured counts are pinned to source commits.</span><span>Snapshot ${esc(SNAP.asOf)}.</span>`;
+  $("#foot").innerHTML = `<span>Built from <a href="${REPO}" target="_blank" rel="noopener">unfoldingWord/bible-passages</a>. GitHub numbers come from a snapshot refreshed by hand in work sessions (the pill at the top shows its age); measured counts are pinned to source commits.</span><span>Snapshot ${esc(SNAP.asOf)}.</span>`;
 }
 function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
 

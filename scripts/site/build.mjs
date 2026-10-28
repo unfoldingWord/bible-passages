@@ -1,6 +1,6 @@
 // Builds site/index.html from site/index.src.html by inlining the baseline
 // snapshot and the per-book counts. The published page renders from these
-// until the routine's live snapshot arrives.
+// until a newer snapshot is read from the page's database.
 //
 //   node scripts/site/snapshot.mjs > site/snapshot.json
 //   node scripts/site/build.mjs
