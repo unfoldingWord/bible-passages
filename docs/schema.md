@@ -196,8 +196,10 @@ every test run until they exist.
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: decided: measure Gemini and Claude on Titus, then choose.
-   See [decisions/0002](decisions/0002-measure-translation-models.md).
+6. **Translation**: the model is decided: measure Gemini and Claude on
+   Titus, then choose ([decisions/0002](decisions/0002-measure-translation-models.md)).
+   Still open: how key-term consistency is checked across a book and a
+   language.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.

@@ -34,8 +34,10 @@ drafts. Each retired key names one successor in `data/retired-keys.json`
 - **Split** (one key becomes several): the old titles carry to the one
   successor the record names; every other new key gets a fresh draft.
 - **Merge** (several keys become one): each old key names the merged key,
-  but no title carries automatically. The merged key gets a fresh draft,
-  and the reviewer sees all the old titles as reference.
+  but no title carries automatically. The merged key gets a fresh draft.
+  The old title sets are not deleted: they stay stored on their retired
+  keys, with their status, and that record is what the reviewer of the
+  merged key reads.
 
 So no reviewed title is silently dropped or silently chosen over another.
 
