@@ -1,3 +1,28 @@
 {
-  "sources": []
+  "sources": [
+    {
+      "id": "bsb-tit",
+      "url": "https://git.door43.org/Worldview/en_bsb/raw/commit/7abbfafaa2225e9add01f00bb01e4124a698f018/57-TIT.usfm",
+      "revision": "7abbfafaa2225e9add01f00bb01e4124a698f018",
+      "sha256": "6c1a44dc0e05fe5d612968d73fe56fc69f428dc61c3b795855b3bc0166f5ab8e",
+      "licence": "Public domain",
+      "attribution": "Berean Standard Bible (BSB), section headings, public domain"
+    },
+    {
+      "id": "ufw-vrs",
+      "url": "https://git.door43.org/Door43-Catalog/versification/raw/commit/af14923581a0a16efe0c319bfd2f283f26476fac/bible/ufw/ufw.vrs",
+      "revision": "af14923581a0a16efe0c319bfd2f283f26476fac",
+      "sha256": "390b4fa2dc00adfd7e38000db05f5cdaae2f5e0ed6027a4b13227bf978ed1bb4",
+      "licence": "CC-BY-SA-4.0",
+      "attribution": "unfoldingWord versification, CC BY-SA 4.0. Original work available at https://door43.org/"
+    },
+    {
+      "id": "ufw-chunks-tit",
+      "url": "https://git.door43.org/Door43-Catalog/versification/raw/commit/af14923581a0a16efe0c319bfd2f283f26476fac/bible/ufw/chunks/tit.json",
+      "revision": "af14923581a0a16efe0c319bfd2f283f26476fac",
+      "sha256": "595a2211425dda07c9485f6992468ce557f1cd94bb5bd00dbe620515c44dedfe",
+      "licence": "CC-BY-SA-4.0",
+      "attribution": "unfoldingWord chunk divisions, CC BY-SA 4.0. Original work available at https://door43.org/"
+    }
+  ]
 }

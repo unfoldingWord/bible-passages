@@ -61,3 +61,9 @@ jobs:
 
       - run: npm ci
       - run: npm run verify
+
+      # data/ and dist/ are generated: rebuilding from the pinned sources
+      # must reproduce the committed files exactly.
+      - run: npm run build
+      - name: Generated files match a fresh build
+        run: git diff --exit-code -- data dist

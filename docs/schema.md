@@ -29,6 +29,7 @@ sources.json                 every input, pinned
 data/
   structure/<BOOK>.json      pericopes and segments: keys and spans, no text
   titles/<lang>/<BOOK>.json  titles per key, with status and source
+  versification/ufw.json     last verse of each chapter, from ufw.vrs
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
@@ -62,6 +63,10 @@ Bible fixture (`MRK.1.1-8`):
 | Pericope | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
 
 No pericope or segment in this dataset crosses a chapter: BSB opens every one of its 1,189 chapters with a heading at verse 1, and the chunk files are per chapter. So every key is single-chapter. (tc-mobile's format allows cross-chapter spans; this dataset never needs them.)
+
+A one-verse span repeats its verse (`TIT.1.4-4`, not `TIT.1.4`), so every
+key has the same shape and a chapter key is never confused with a verse; 9 of
+Titus's 25 segments are one verse (measured, `data/structure/TIT.json`).
 
 Because the span is in the key, moving a boundary always produces a new key.
 That is the contract's rule ("give the new passage a new key") enforced by the
@@ -103,6 +108,7 @@ letters, digits and `. _ : -`, at most 64 characters).
 {
   "language": "en",
   "book": "TIT",
+  "name": { "text": "Titus", "status": "unreviewed", "source": "bsb-tit" },
   "titles": {
     "TIT.P.1.1-4": {
       "text": "Paul Greets Titus",
@@ -117,6 +123,8 @@ letters, digits and `. _ : -`, at most 64 characters).
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
 - `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
+- `name` is the book's name in this language; it becomes the package
+  `title`.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 
@@ -127,12 +135,14 @@ tc-mobile template package v0:
 
 - `id`: `bible-passages:<BOOK>` (proposed; an id is permanent once released).
 - `kind`: `bible-book`. `bookCode`: the USFM code.
-- `version`: the release tag without the `v`. Title tables carry the same
+- `version`: the release tag without the `v` (`0.0.0`, from `package.json`,
+  until the first release). Title tables carry the same
   version, so every release ships its own tables even when titles did not
   change.
 - `dataLicence`: `CC-BY-SA-4.0`. `recordingLicence`: `CC-BY-SA-4.0` (the only
   value v0 allows).
-- `source.url`: this repo. `source.revision`: the release tag.
+- `source.url`: this repo. `source.revision`: the release tag (`unreleased`
+  until the first release).
 - `attribution`: built from the `sources.json` entries the book used.
 
 ## `sources.json`
@@ -154,7 +164,8 @@ Every input the build reads, pinned so a build can be repeated:
 }
 ```
 
-The list is empty until the first data PR picks its inputs.
+`scripts/lib/sources.ts` downloads each input once into `.cache/sources/`
+(not committed) and refuses it if its SHA-256 does not match the pin.
 
 ## Releases
 
@@ -173,8 +184,12 @@ Run on every PR (`npm test`):
 | Every package in `dist/tc-mobile/` passes tc-mobile's checker                    | built     |
 | Every title table passes against its package and version                         | built     |
 | Every `sources.json` entry is pinned (URL, revision, hash, licence, attribution) | built     |
-| Every verse in exactly one pericope and one segment                              | not built |
-| Every span valid against the versification                                       | not built |
+| Every verse in exactly one pericope and one segment                              | built     |
+| Every span valid against the versification                                       | built     |
+| Every key unique, in the key format and naming its own span                      | built     |
+| Every segment inside the pericope it names                                       | built     |
+| `dist/` segment keys are the same as `data/`'s                                   | built     |
+| `data/` and `dist/` match a fresh build from the pinned sources (CI)             | built     |
 | No released key missing, moved or reused                                         | not built |
 | Every key titled in every language marked complete                               | not built |
 | Title length and script                                                          | not built |
