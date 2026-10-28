@@ -69,6 +69,18 @@ CI (`.github/workflows/ci.yml`) runs a gitleaks scan of full history and
 - **Do not edit `vendor/tc-mobile/`.** Update it by copying from a newer
   tc-mobile commit and updating `VENDOR.md`; the hash test enforces this.
 
+### All work is assigned
+
+- **No work starts on an unassigned issue.** Anyone may pick up an open,
+  unassigned issue by assigning it to themselves first; an issue that already
+  has an assignee belongs to them, so ask on the issue before touching it.
+- **Every PR has an assignee** and links the issue it serves (`Part of #N`
+  or `Closes #N`); every linked issue has an assignee too. CI checks this
+  (`.github/workflows/assigned.yml`).
+- An agent's work is assigned to the person the agent works for.
+- Unassign yourself, with a short note, if you stop. An unassigned issue is
+  free for anyone.
+
 ### Branches, commits and PRs
 
 - **Never push to `main`. Never merge without explicit permission** from the
