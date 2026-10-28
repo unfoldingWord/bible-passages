@@ -222,3 +222,8 @@ every test run until they exist.
     (`checking/headings`) segment titles use. Proposed: explanatory comment.
 11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
     difficulty after v0.1.
+
+12. **Single-segment pericopes**: 263 pericopes are exactly one segment
+    (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
+    segment titles describe the same verses. Title both (16,786 English
+    titles) or reuse the pericope title (16,523)?

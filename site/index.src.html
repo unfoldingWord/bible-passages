@@ -474,7 +474,7 @@ function renderFoot() {
 function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
 
 /* ---------- decisions ---------- */
-const RV = { db: null, user: null, uid: null, canEdit: false, resp: {}, final: {}, names: {} };
+const RV = { db: null, user: null, uid: null, resp: {}, final: {}, names: {} };
 function buildDecisions() {
   $("#decs").innerHTML = DECIDE.map((d) => `<div class="panel dec" id="dec-${d.id}">
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span class="eyebrow">Decision ${d.n}</span><span class="chip">decides: ${d.by}</span></div>
@@ -524,12 +524,17 @@ function savePick(id) {
         if (e?.code !== "invalid_argument") throw e;
         await ref.set({ picks: { ...(RV.resp[RV.uid]?.picks || {}), [id]: pick }, at });
       }
-      msg.textContent = "Saved"; el.dataset.touched = "";
+      msg.textContent = "Saved";
+      // Edits made while the save was in flight stay protected.
+      const now = el.querySelector("input:checked")?.value || "", nowNote = el.querySelector("textarea").value.trim();
+      if (now === choice && nowNote === note) el.dataset.touched = "";
     } catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
   });
   return saving;
 }
-document.addEventListener("change", (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
+// Any edit marks the card, so a snapshot never overwrites what is being typed.
+// "input" fires on every keystroke; "change" covers radios.
+for (const ev of ["input", "change"]) document.addEventListener(ev, (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
 async function resolveNames() {
   if (!RV.user) return;
   const ids = [...new Set(Object.keys(RV.resp))];
@@ -560,7 +565,7 @@ setInterval(liveState, 60000);
   const [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
   if (!db) return;
   RV.db = db; RV.user = user;
-  if (user) { try { RV.uid = await user.id(); RV.canEdit = await user.canEdit(); } catch (e) { RV.uid = null; } }
+  if (user) { try { RV.uid = await user.id(); } catch (e) { RV.uid = null; } }
   updateDecisions();
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
