@@ -29,13 +29,18 @@ const headers = {
 
 // A token the API rejects (401) is dropped and the request retried without
 // it: some sandboxes export a GITHUB_TOKEN that only works through a proxy.
-async function get(path) {
+// `whole` lists must fit in one page: the snapshot fails rather than show a
+// partial list as if it were complete.
+async function get(path, { whole = false } = {}) {
   let res = await fetch(`${API}/${path}`, { headers });
   if (res.status === 401 && headers.Authorization) {
     const { Authorization, ...anonymous } = headers;
     res = await fetch(`${API}/${path}`, { headers: anonymous });
   }
   if (!res.ok) throw new Error(`GET ${path}: ${res.status}`);
+  if (whole && /rel="next"/.test(res.headers.get("link") ?? "")) {
+    throw new Error(`GET ${path}: more than one page; the snapshot would be partial`);
+  }
   return res.json();
 }
 
@@ -43,34 +48,43 @@ const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
 
 const [repo, pulls, issues, milestones, runs, commits] = await Promise.all([
   get(`repos/${REPO}`),
-  get(`repos/${REPO}/pulls?state=all&per_page=50`),
-  get(`repos/${REPO}/issues?state=all&per_page=100`),
-  get(`repos/${REPO}/milestones?state=all&per_page=50`),
+  get(`repos/${REPO}/pulls?state=all&per_page=100`, { whole: true }),
+  get(`repos/${REPO}/issues?state=all&per_page=100`, { whole: true }),
+  get(`repos/${REPO}/milestones?state=all&per_page=100`, { whole: true }),
+  // The latest runs and commits only, by design: the page shows recent ones.
   get(`repos/${REPO}/actions/runs?per_page=20`),
   get(`repos/${REPO}/commits?per_page=15`),
 ]);
 
 // Coverage: which books have structure, and which languages have titles,
 // on the default branch. Empty until the first data PR merges.
+// An empty repository has no tree (409); any other failure stops the run.
 const tree = await get(
   `repos/${REPO}/git/trees/${repo.default_branch}?recursive=1`
-).catch(() => ({ tree: [] }));
+).catch((e) => {
+  if (/: 409$/.test(e.message)) return { tree: [], truncated: false };
+  throw e;
+});
+if (tree.truncated) throw new Error("git tree truncated; coverage would be partial");
 const paths = tree.tree.map((t) => t.path);
-const structure = paths
-  .filter((p) => /^data\/structure\/[1-3A-Z]{3}\.json$/.test(p))
-  .map((p) => p.slice(15, 18));
+const books = (re) =>
+  paths.flatMap((p) => {
+    const m = re.exec(p);
+    return m ? [m[1]] : [];
+  });
+const structure = books(/^data\/structure\/([1-3A-Z]{3})\.json$/);
 const titles = Object.fromEntries(
   LANGS.map((l) => [
     l,
-    paths
-      .filter((p) => p.startsWith(`data/titles/${l}/`) && p.endsWith(".json"))
-      .map((p) => p.slice(-8, -5)),
+    books(new RegExp(`^data/titles/${l.replace(/[-]/g, "\\-")}/([1-3A-Z]{3})\\.json$`)),
   ])
 );
 
 const [s1, s1comments, tcm] = await Promise.all([
   get("repos/unfoldingWord/servant.bible/issues/1"),
-  get("repos/unfoldingWord/servant.bible/issues/1/comments?per_page=100"),
+  get("repos/unfoldingWord/servant.bible/issues/1/comments?per_page=100", {
+    whole: true,
+  }),
   get("repos/unfoldingWord/tc-mobile/issues/1459"),
 ]);
 

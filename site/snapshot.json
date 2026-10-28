@@ -1,9 +1,9 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-10-28T22:04:23.285Z",
+  "asOf": "2026-10-28T22:10:50.954Z",
   "repo": {
-    "pushedAt": "2026-10-28T21:52:24Z",
+    "pushedAt": "2026-10-28T22:04:25Z",
     "defaultBranch": "main",
     "openIssues": 15
   },
@@ -26,7 +26,7 @@
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-28T22:01:06Z"
+      "at": "2026-10-28T22:09:38Z"
     },
     {
       "number": 1,
@@ -34,7 +34,7 @@
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-28T22:01:32Z"
+      "at": "2026-10-28T22:08:49Z"
     }
   ],
   "issues": [
@@ -157,6 +157,20 @@
     }
   ],
   "runs": [
+    {
+      "sha": "93d4f93",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T22:04:31Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777097841"
+    },
+    {
+      "sha": "93d4f93",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T22:04:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777095247"
+    },
     {
       "sha": "9301a0d",
       "branch": "feat/tit-structure",
@@ -282,20 +296,6 @@
       "conclusion": "success",
       "at": "2026-10-28T21:02:17Z",
       "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768522939"
-    },
-    {
-      "sha": "812b9d3",
-      "branch": "chore/scaffold",
-      "conclusion": "success",
-      "at": "2026-10-28T21:00:29Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768256018"
-    },
-    {
-      "sha": "8722d06",
-      "branch": "chore/scaffold",
-      "conclusion": "success",
-      "at": "2026-10-28T20:56:16Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40767662951"
     }
   ],
   "coverage": {

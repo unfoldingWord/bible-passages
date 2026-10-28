@@ -292,6 +292,14 @@ const DOCS_REF = "chore/scaffold";
 const doc = (path) => `${REPO}/${path.includes(".") ? "blob" : "tree"}/${DOCS_REF}/${path}`;
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+// Links built from snapshot data only ever point at github.com.
+const href = (u) => (/^https:\/\/github\.com\/[^\s"<>]*$/.test(String(u)) ? esc(u) : "#");
+// A snapshot from the database replaces the baseline only if it has the shape the renderers read.
+const isArr = Array.isArray;
+const snapshotOk = (d) => !!d && d.schema === "bp.snapshot" && d.v === 1 && typeof d.asOf === "string" && !Number.isNaN(Date.parse(d.asOf))
+  && isArr(d.runs) && isArr(d.commits) && isArr(d.pulls) && isArr(d.issues) && isArr(d.milestones)
+  && !!d.coverage && isArr(d.coverage.structure) && !!d.coverage.titles && typeof d.coverage.titles === "object"
+  && !!d.external && !!d.external.servant1 && !!d.external.tcm1459;
 const fmt = (n) => Number(n).toLocaleString("en-US");
 const day = (iso) => iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
 let SNAP = BASE, SNAP_KIND = "base";
@@ -384,19 +392,19 @@ function renderHome() {
     ["Books built", `${books}<small style="font-size:1rem;color:var(--muted)"> / 66</small>`, books ? "structure on the default branch" : "none yet; Titus is first"],
     ["Issues open", open, `${iss.length - open} closed`],
     ["Days to v0.1", Math.max(0, Math.ceil((Date.parse("2026-11-16T00:00:00Z") - Date.now()) / 864e5)), "16 Nov, Monday"],
-    ["Latest CI", run ? (run.conclusion === "success" ? "Pass" : run.conclusion) : "–", run ? `${run.sha} on ${esc(run.branch)}` : ""],
+    ["Latest CI", run ? (run.conclusion === "success" ? "Pass" : esc(run.conclusion)) : "–", run ? `${esc(run.sha)} on ${esc(run.branch)}` : ""],
   ].map(([k, v, d]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span><span class="d">${d}</span></div>`).join("");
   $("#sprint-mini").innerHTML = SNAP.milestones.map((m) => {
     const t = m.open_issues + m.closed_issues, p = t ? (m.closed_issues / t) * 100 : 0;
     return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${m.closed_issues}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
   }).join("");
-  $("#ci").innerHTML = SNAP.runs.slice(0, 20).reverse().map((r) => `<a class="${r.conclusion === "success" ? "ok" : r.conclusion === "failure" ? "no" : "sk"}" href="${esc(r.url)}" target="_blank" rel="noopener" title="${esc(r.sha)} · ${esc(r.branch)} · ${esc(r.conclusion)}">${r.conclusion === "success" ? "✓" : r.conclusion === "failure" ? "✕" : "–"}</a>`).join("");
-  $("#commits").innerHTML = `<table><tbody>${SNAP.commits.slice(0, 6).map((c) => `<tr><td class="mono"><a href="${REPO}/commit/${c.sha}" target="_blank" rel="noopener">${c.sha}</a></td><td>${esc(c.msg)}</td><td class="n">${day(c.at)}</td></tr>`).join("")}</tbody></table>`;
+  $("#ci").innerHTML = SNAP.runs.slice(0, 20).reverse().map((r) => `<a class="${r.conclusion === "success" ? "ok" : r.conclusion === "failure" ? "no" : "sk"}" href="${href(r.url)}" target="_blank" rel="noopener" title="${esc(r.sha)} · ${esc(r.branch)} · ${esc(r.conclusion)}">${r.conclusion === "success" ? "✓" : r.conclusion === "failure" ? "✕" : "–"}</a>`).join("");
+  $("#commits").innerHTML = `<table><tbody>${SNAP.commits.slice(0, 6).map((c) => `<tr><td class="mono"><a href="${REPO}/commit/${encodeURIComponent(c.sha)}" target="_blank" rel="noopener">${esc(c.sha)}</a></td><td>${esc(c.msg)}</td><td class="n">${day(c.at)}</td></tr>`).join("")}</tbody></table>`;
   const s1 = SNAP.external.servant1, t1 = SNAP.external.tcm1459;
   $("#linked").innerHTML = `<table><tbody>
-    <tr><td><a href="https://github.com/unfoldingWord/servant.bible/issues/1" target="_blank" rel="noopener">servant.bible#1</a></td><td>The dataset's tracking issue</td><td><span class="pill ${s1.state === "open" ? "blue" : "good"}">${s1.state}</span> <span class="pill ${s1.assignees ? "good" : "warn"}">${s1.assignees ? "assigned" : "no assignee"}</span></td><td class="n">${s1.comments} comments</td></tr>
-    <tr><td><a href="https://github.com/unfoldingWord/tc-mobile/issues/1459" target="_blank" rel="noopener">tc-mobile#1459</a></td><td>tC Mobile reads the dataset</td><td><span class="pill blue">${t1.state}</span></td><td class="n">${esc(t1.milestone || "")}</td></tr>
-    ${SNAP.pulls.map((p) => `<tr><td><a href="${REPO}/pull/${p.number}" target="_blank" rel="noopener">PR #${p.number}</a></td><td>${esc(p.title)}</td><td><span class="pill ${p.merged ? "good" : p.state === "open" ? "blue" : ""}">${p.merged ? "merged" : p.state}</span></td><td class="n">${day(p.at)}</td></tr>`).join("")}
+    <tr><td><a href="https://github.com/unfoldingWord/servant.bible/issues/1" target="_blank" rel="noopener">servant.bible#1</a></td><td>The dataset's tracking issue</td><td><span class="pill ${s1.state === "open" ? "blue" : "good"}">${esc(s1.state)}</span> <span class="pill ${s1.assignees ? "good" : "warn"}">${s1.assignees ? "assigned" : "no assignee"}</span></td><td class="n">${Number(s1.comments) || 0} comments</td></tr>
+    <tr><td><a href="https://github.com/unfoldingWord/tc-mobile/issues/1459" target="_blank" rel="noopener">tc-mobile#1459</a></td><td>tC Mobile reads the dataset</td><td><span class="pill blue">${esc(t1.state)}</span></td><td class="n">${esc(t1.milestone || "")}</td></tr>
+    ${SNAP.pulls.map((p) => `<tr><td><a href="${REPO}/pull/${Number(p.number)}" target="_blank" rel="noopener">PR #${Number(p.number)}</a></td><td>${esc(p.title)}</td><td><span class="pill ${p.merged ? "good" : p.state === "open" ? "blue" : ""}">${p.merged ? "merged" : esc(p.state)}</span></td><td class="n">${day(p.at)}</td></tr>`).join("")}
   </tbody></table>`;
 }
 function renderPlan() {
@@ -404,7 +412,7 @@ function renderPlan() {
   $("#sprints").innerHTML = SNAP.milestones.map((m) => {
     const items = SNAP.issues.filter((i) => i.milestone === m.title);
     return `<div class="panel"><div style="display:grid;gap:4px"><span class="eyebrow">Due ${day(m.due)}</span><h3>${esc(m.title)}</h3></div>
-      <ul class="plain">${items.map((i) => `<li><a href="${REPO}/issues/${i.number}" target="_blank" rel="noopener">#${i.number}</a> ${esc(i.title)} ${i.state === "closed" ? '<span class="pill good">done</span>' : ""}</li>`).join("")}</ul></div>`;
+      <ul class="plain">${items.map((i) => `<li><a href="${REPO}/issues/${Number(i.number)}" target="_blank" rel="noopener">#${Number(i.number)}</a> ${esc(i.title)} ${i.state === "closed" ? '<span class="pill good">done</span>' : ""}</li>`).join("")}</ul></div>`;
   }).join("");
 }
 function renderScope() {
@@ -536,8 +544,10 @@ setInterval(liveState, 60000);
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
     const d = snap.data();
-    if (!d || d.schema !== "bp.snapshot" || d.asOf < SNAP.asOf) return;
-    SNAP = d; SNAP_KIND = "live"; renderLive();
+    if (!snapshotOk(d) || d.asOf < SNAP.asOf) return;
+    const prev = [SNAP, SNAP_KIND];
+    try { SNAP = d; SNAP_KIND = "live"; renderLive(); }
+    catch (e) { [SNAP, SNAP_KIND] = prev; renderLive(); }
   }, () => { /* keep the snapshot already shown */ });
   db.collection("resp").onSnapshot(async (qs) => {
     RV.resp = {}; for (const doc of qs.docs) { const v = doc.data(); if (v) RV.resp[doc.id] = v; }
