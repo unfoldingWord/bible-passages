@@ -554,7 +554,9 @@ setInterval(liveState, 60000);
     await resolveNames(); updateDecisions();
   }, () => { /* keep the picks already shown */ });
   db.collection("final").onSnapshot((qs) => {
-    for (const doc of qs.docs) { const v = doc.data(); if (v) RV.final[doc.id] = v; }
+    // Each snapshot is the whole collection: a deleted decision disappears.
+    const next = {}; for (const doc of qs.docs) { const v = doc.data(); if (v) next[doc.id] = v; }
+    RV.final = next;
     updateDecisions();
   }, () => { /* keep the decisions already shown */ });
 })();
