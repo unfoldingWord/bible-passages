@@ -1,0 +1,224 @@
+{
+  "schema": "bp.snapshot",
+  "v": 1,
+  "asOf": "2026-10-28T20:59:18.980Z",
+  "repo": {
+    "pushedAt": "2026-10-28T20:56:11Z",
+    "defaultBranch": "main",
+    "openIssues": 14
+  },
+  "commits": [
+    {
+      "sha": "61abcd0",
+      "msg": "Initial commit: README and CC BY-SA 4.0 licence",
+      "at": "2026-10-28T19:57:22Z"
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "title": "Scaffold: layout, draft schema, checks, CLAUDE.md",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "at": "2026-10-28T20:56:12Z"
+    }
+  ],
+  "issues": [
+    {
+      "number": 14,
+      "title": "Servant.Bible registry entry for uw/bible-passages",
+      "state": "open",
+      "milestone": "Sprint 7 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 13,
+      "title": "Release v0.1.0 and hand it to tC Mobile (#1459)",
+      "state": "open",
+      "milestone": "Sprint 7 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 12,
+      "title": "dist generator, key-stability check and release workflow",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 11,
+      "title": "Review screen and sync to PRs",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 10,
+      "title": "Title translation runner with ported quality gates",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 9,
+      "title": "Glossaries for the 9 v0.1 languages from Translation Words",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 8,
+      "title": "Segment title drafting with a cross-model check",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 7,
+      "title": "Segments: nest chunks in pericopes and split at pericope starts",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 6,
+      "title": "Pericope parser for all 66 books, with the Psalms verse-1 rule",
+      "state": "open",
+      "milestone": "Sprint 6 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 5,
+      "title": "Project site for this dataset, with a scheduled snapshot",
+      "state": "open",
+      "milestone": "Sprint 5 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 4,
+      "title": "Ask the content team which chunk source is authoritative (1,184 differences)",
+      "state": "open",
+      "milestone": "Sprint 5 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 3,
+      "title": "Titus end to end: build one book and measure the real rates",
+      "state": "open",
+      "milestone": "Sprint 5 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 2,
+      "title": "Record the v0.1 decisions from servant.bible#1 as ADRs",
+      "state": "open",
+      "milestone": "Sprint 5 (10-19 → 11-01)",
+      "closedAt": null
+    }
+  ],
+  "milestones": [
+    {
+      "number": 1,
+      "title": "Sprint 5 (10-19 → 11-01)",
+      "open_issues": 4,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-01T00:00:00Z"
+    },
+    {
+      "number": 2,
+      "title": "Sprint 6 (11-02 → 11-15)",
+      "open_issues": 7,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-15T00:00:00Z"
+    },
+    {
+      "number": 3,
+      "title": "Sprint 7 (11-16 → 11-29) — v0.1.0",
+      "open_issues": 2,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-29T00:00:00Z"
+    }
+  ],
+  "runs": [
+    {
+      "sha": "8722d06",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:56:16Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40767662951"
+    },
+    {
+      "sha": "52d4616",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:52:29Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40767122060"
+    },
+    {
+      "sha": "8ec3c30",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:48:01Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40766473987"
+    },
+    {
+      "sha": "b913544",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:29:47Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40763787295"
+    },
+    {
+      "sha": "43c2760",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:15:08Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40761583791"
+    },
+    {
+      "sha": "84ad2b2",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:14:09Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40761431068"
+    },
+    {
+      "sha": "64537a6",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T20:10:58Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40760957052"
+    }
+  ],
+  "coverage": {
+    "structure": [],
+    "titles": {
+      "en": [],
+      "ar": [],
+      "fr": [],
+      "hi": [],
+      "id": [],
+      "zh-Hans": [],
+      "pt-BR": [],
+      "ru": [],
+      "es": [],
+      "sw": []
+    }
+  },
+  "external": {
+    "servant1": {
+      "state": "open",
+      "comments": 1,
+      "lastCommentAt": "2026-10-28T14:23:42Z",
+      "assignees": 0
+    },
+    "tcm1459": {
+      "state": "open",
+      "milestone": "Sprint 7 (11-16 → 11-29) — v1.3.0"
+    }
+  }
+}

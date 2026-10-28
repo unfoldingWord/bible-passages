@@ -1,0 +1,508 @@
+<title>Bible Passages Project</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800;6..12,900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the tC Mobile project site's frame (Ocean masthead, one global menu, routed pages),
+   with a 66-book strip as this project's own masthead mark. */
+:root{
+  --bg:#F4F8FA; --surface:#FFFFFF; --sunk:#EAF1F5;
+  --ink:#231F20; --ink-2:#44515B; --muted:#66757F; --line:#D8E3EA;
+  --head:#014263; --link:#0A6FA6; --focus:#31ADE3;
+  --mast:#014263; --mast-ink:#FFFFFF; --mast-ink-2:#BFE3F3;
+  --inspire:#31ADE3; --cultivate:#70C9CC; --kindle:#E59D33;
+  --s1:#1F86C2; --s2:#D9872A; --s3:#14A0A8;
+  --good:#1E7F48; --bad:#B8322B; --warn:#9A6514; --idle:#7C8A94;
+  --good-bg:#E3F3EA; --bad-bg:#FBE6E4; --warn-bg:#FBF0DC; --idle-bg:#EDF1F4;
+  --f-body:"Avenir Next","Avenir","Nunito Sans",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:10px; --wrap:1180px;
+  --step-0:clamp(.94rem,.9rem + .2vw,1.02rem);
+  --step-1:clamp(1.1rem,1rem + .4vw,1.25rem);
+  --step-2:clamp(1.35rem,1.15rem + .9vw,1.75rem);
+  --step-3:clamp(1.9rem,1.4rem + 2.2vw,3.1rem);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1A24; --surface:#10242F; --sunk:#0E1F29;
+  --ink:#E7EEF2; --ink-2:#BCC9D1; --muted:#8C9DA8; --line:#21404F;
+  --head:#8FD6F5; --link:#6CC6EF; --focus:#70C9CC;
+  --mast:#012F47; --mast-ink:#FFFFFF; --mast-ink-2:#A9D9EE;
+  --s1:#2F9AD0; --s2:#C2812A; --s3:#24A08A;
+  --good:#5CC48A; --bad:#F07C72; --warn:#E3B160; --idle:#8C9DA8;
+  --good-bg:#12352A; --bad-bg:#3A1C1B; --warn-bg:#3A2D14; --idle-bg:#16303D;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0B1A24; --surface:#10242F; --sunk:#0E1F29;
+  --ink:#E7EEF2; --ink-2:#BCC9D1; --muted:#8C9DA8; --line:#21404F;
+  --head:#8FD6F5; --link:#6CC6EF; --focus:#70C9CC;
+  --mast:#012F47; --mast-ink:#FFFFFF; --mast-ink-2:#A9D9EE;
+  --s1:#2F9AD0; --s2:#C2812A; --s3:#24A08A;
+  --good:#5CC48A; --bad:#F07C72; --warn:#E3B160; --idle:#8C9DA8;
+  --good-bg:#12352A; --bad-bg:#3A1C1B; --warn-bg:#3A2D14; --idle-bg:#16303D;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--mast)}
+a{color:var(--link);text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-body);color:var(--head);text-wrap:balance;line-height:1.15;margin:0}
+h2{font-size:var(--step-2);font-weight:900}
+h3{font-size:var(--step-1);font-weight:800}
+p{margin:0;max-width:68ch}
+.mono{font-family:var(--f-mono);font-size:.86em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-weight:800;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--s1)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--mast);color:var(--mast-ink)}
+.bar .wrap{display:flex;align-items:center;gap:16px;min-height:58px;padding-block:6px}
+.brand{color:var(--mast-ink);text-decoration:none;font-weight:900;font-size:1.02rem;white-space:nowrap}
+.brand span{color:var(--mast-ink-2);font-weight:600}
+.menu-btn{display:none;margin-left:auto;background:transparent;color:var(--mast-ink);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font:inherit;font-weight:700;cursor:pointer}
+nav.global{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav.global a{color:var(--mast-ink-2);text-decoration:none;font-weight:700;font-size:.92rem;padding:7px 11px;border-radius:999px;white-space:nowrap}
+nav.global a:hover{color:var(--mast-ink);background:rgba(255,255,255,.08)}
+nav.global a[aria-current="page"]{color:#012233;background:var(--inspire)}
+@media (max-width:900px){
+  .menu-btn{display:inline-block}
+  nav.global{display:none;position:absolute;left:0;right:0;top:100%;background:var(--mast);flex-direction:column;align-items:stretch;padding:8px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+  nav.global.open{display:flex}
+}
+.mast{background:var(--mast);color:var(--mast-ink);position:relative;overflow:hidden}
+.mast .wrap{position:relative;padding-block:clamp(26px,4vw,44px) 22px;display:grid;gap:12px}
+.mast .eyebrow{color:var(--cultivate)}
+.mast h1{font-size:var(--step-3);font-weight:900;color:var(--mast-ink);letter-spacing:-.02em}
+.mast .lede{color:var(--mast-ink-2);font-size:var(--step-1);max-width:62ch}
+.mast .meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--mast-ink-2);font-size:.88rem}
+.mast .meta b{color:var(--mast-ink)}
+.canon{display:grid;grid-template-columns:repeat(66,1fr);gap:2px;align-items:end;height:46px;margin-top:6px}
+.canon i{display:block;background:var(--inspire);opacity:.55;border-radius:2px 2px 0 0;min-height:3px}
+.canon i.nt{background:var(--cultivate)}
+.canon-cap{display:flex;justify-content:space-between;font-size:.74rem;color:var(--mast-ink-2)}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.1);width:max-content;max-width:100%}
+.live i{width:8px;height:8px;border-radius:50%;background:#9BB3C1;flex:none}
+.live.on i{background:var(--cultivate)}
+.live.stale i{background:var(--kindle)}
+main{padding-block:28px 64px}
+section.page{display:grid;gap:24px}
+.lead{display:grid;gap:10px}
+.lead p{color:var(--ink-2)}
+.grid{display:grid;gap:16px}
+.cols-2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:12px;min-width:0;align-content:start}
+.panel .sub{color:var(--muted);font-size:.86rem}
+.src{color:var(--muted);font-size:.8rem}
+.callout{display:grid;grid-template-columns:6px 1fr;gap:0 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.callout::before{content:"";background:linear-gradient(var(--inspire),var(--cultivate))}
+.callout > div{padding:16px 16px 16px 0;display:grid;gap:8px;min-width:0}
+.callout ul,ul.plain{margin:0;padding-left:1.1em;display:grid;gap:5px;color:var(--ink-2)}
+.kpis{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.kpi .k{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-weight:900;font-size:2rem;line-height:1.05;color:var(--head);font-variant-numeric:tabular-nums}
+.kpi .d{font-size:.84rem;color:var(--ink-2)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800;background:var(--sunk);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;font-size:.74rem;font-weight:800;padding:2px 9px;border-radius:999px;white-space:nowrap;background:var(--idle-bg);color:var(--ink-2)}
+.pill.good{background:var(--good-bg);color:var(--good)}
+.pill.bad{background:var(--bad-bg);color:var(--bad)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.blue{background:color-mix(in srgb,var(--s1) 16%,var(--surface));color:var(--head)}
+.ci{display:flex;flex-wrap:wrap;gap:4px}
+.ci a{width:26px;height:26px;border-radius:6px;display:grid;place-items:center;font-size:13px;font-weight:900;text-decoration:none}
+.ci .ok{background:var(--good-bg);color:var(--good)}
+.ci .no{background:var(--bad-bg);color:var(--bad)}
+.ci .sk{background:var(--idle-bg);color:var(--idle)}
+.chart{width:100%;overflow-x:auto}
+.chart svg{display:block;width:100%;height:auto;min-width:640px}
+.chart text{fill:var(--muted);font-family:var(--f-body);font-size:10px}
+.chart .gl{stroke:var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--ink-2)}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
+#tip{position:fixed;z-index:50;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;box-shadow:0 10px 24px rgba(1,30,48,.2);padding:8px 10px;font-size:.84rem}
+.sprints{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.meter{height:8px;border-radius:999px;background:var(--sunk);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--s1)}
+.cov{display:grid;grid-template-columns:auto repeat(10,minmax(34px,1fr));gap:2px;font-size:.72rem;min-width:520px}
+.cov b{font-weight:800;color:var(--muted);text-align:center;padding:4px 0}
+.cov span{height:16px;border-radius:3px;background:var(--sunk)}
+.cov span.y{background:var(--s3)}
+.cov .bk{font-family:var(--f-mono);color:var(--ink-2);padding-right:6px;text-align:right;line-height:16px}
+.dec{display:grid;gap:10px}
+.dec .opts{display:grid;gap:6px}
+.opt{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;border:1px solid var(--line);border-radius:8px;padding:9px 12px;cursor:pointer;background:var(--surface)}
+.opt:has(input:checked){border-color:var(--s1);box-shadow:inset 0 0 0 1px var(--s1)}
+.opt input{margin-top:4px;accent-color:var(--s1)}
+.opt b{font-weight:800}
+.opt .od{grid-column:2;color:var(--ink-2);font-size:.88rem}
+.opt .who{grid-column:2;display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--sunk);color:var(--ink-2);border:1px solid var(--line)}
+.dec textarea{font:inherit;font-size:.92rem;width:100%;min-height:56px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);resize:vertical}
+.btn{font:inherit;font-weight:800;font-size:.88rem;padding:7px 14px;border-radius:999px;border:1px solid var(--head);background:var(--head);color:var(--surface);cursor:pointer}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.final{border-radius:8px;padding:10px 12px;background:var(--good-bg);color:var(--ink)}
+.final b{color:var(--good)}
+.saved{font-size:.84rem;color:var(--muted)}
+.foot{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;color:var(--muted);font-size:.84rem;display:grid;gap:4px}
+@media (prefers-reduced-motion:no-preference){section.page{animation:in .2s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#home">Bible Passages <span>· unfoldingWord</span></a>
+  <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="global-nav">Menu</button>
+  <nav class="global" id="global-nav" aria-label="Project pages">
+    <a href="#home">Home</a><a href="#plan">Plan</a><a href="#scope">Scope</a><a href="#sizing">Sizing</a>
+    <a href="#decisions">Decisions</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
+    <a href="https://github.com/unfoldingWord/bible-passages" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</div></header>
+
+<div class="mast"><div class="wrap">
+  <span class="eyebrow">unfoldingWord · Servant.Bible dataset <span class="mono">uw/bible-passages</span></span>
+  <h1>Bible Passages</h1>
+  <p class="lede">Every passage of the Bible, divided into stories and the short segments a translator records, each with a plain title in the translator's own language. It lets a translator find the place in the story without chapter and verse.</p>
+  <div class="meta" id="mast-meta"></div>
+  <div><div class="canon" id="canon" aria-label="Pericopes per book, Genesis to Revelation"></div>
+  <div class="canon-cap"><span>Genesis</span><span>Pericopes per book (BSB headings)</span><span>Revelation</span></div></div>
+  <span class="live" id="live"><i></i><span id="live-text">Baseline snapshot</span></span>
+</div></div>
+
+<main class="wrap">
+
+<section class="page" data-page="home" aria-label="Home">
+  <div class="callout"><div>
+    <span class="eyebrow">Where it stands · 28 Oct 2026</span>
+    <ul>
+      <li><b>The repo exists and is scaffolded</b> (PR #1, in review by the review bench). No data yet. tC Mobile's own template checker runs in CI.</li>
+      <li><b>Every base count is measured and independently re-derived:</b> 3,016 pericopes, 13,608 chunks, 162 splits, so 13,770 segments and 16,786 English titles. The pilot's 194 splits came from a Psalms parsing quirk.</li>
+      <li><b>The constraint now is decisions.</b> Scope, keys and which chunk source is authoritative decide what gets built. ULT's chunk markers and the chunk files disagree at 1,184 places. See <a href="#decisions">Decisions</a>.</li>
+      <li><b>Next gate:</b> Titus built end to end by 1 Nov, so the rest of the plan is sized from measured rates, not guesses. See <a href="#plan">Plan</a>.</li>
+    </ul>
+  </div></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="grid cols-2">
+    <div class="panel"><h3>Sprints</h3><div id="sprint-mini" class="grid"></div>
+      <p class="src">Source: GitHub milestones · <span class="asof"></span></p></div>
+    <div class="panel"><h3>Latest commits and CI</h3>
+      <div class="ci" id="ci"></div><div class="tw" id="commits"></div>
+      <p class="src">Source: GitHub Actions and commits on the default branch · <span class="asof"></span></p></div>
+  </div>
+  <div class="panel"><h3>Linked work</h3><div class="tw" id="linked"></div>
+    <p class="src">Source: GitHub issues · <span class="asof"></span></p></div>
+</section>
+
+<section class="page" data-page="plan" hidden aria-label="Plan">
+  <div class="lead"><span class="eyebrow">Plan · sprints aligned with tC Mobile</span><h2>The road to v0.1 on 16 November</h2>
+  <p>Correctness comes before the date. Each gate passes on evidence or becomes a recorded decision. From <a href="https://github.com/unfoldingWord/bible-passages/blob/chore/scaffold/docs/scoping/plan.md" target="_blank" rel="noopener">docs/scoping/plan.md</a>.</p></div>
+  <div class="tw"><table><thead><tr><th>Date</th><th>Gate</th><th>Passes when</th><th>If it fails</th></tr></thead><tbody id="gates"></tbody></table></div>
+  <div class="sprints" id="sprints"></div>
+  <p class="src">Issues and milestones from GitHub · <span class="asof"></span></p>
+</section>
+
+<section class="page" data-page="scope" hidden aria-label="Scope">
+  <div class="lead"><span class="eyebrow">Scope · 6B evaluations</span><h2>What we borrow, bend and build</h2>
+  <p>Each component was checked against unfoldingWord and partner work first: Borrow (use as is), Bend (use in a new way), Break (where it actually failed), Beget (someone else carries it), Bide (wait, with a tripwire), Build (only what is left). Full tables, with evidence, are in <a href="https://github.com/unfoldingWord/bible-passages/tree/chore/scaffold/docs/scoping" target="_blank" rel="noopener">docs/scoping</a>.</p></div>
+  <div class="tw"><table><thead><tr><th>Component</th><th>Borrow</th><th>Bend</th><th>Break</th><th>Beget</th><th>Bide</th><th>Build</th></tr></thead><tbody id="sixb"></tbody></table></div>
+  <div class="panel"><h3>The breaks that shape the build</h3><ul class="plain" id="breaks"></ul></div>
+</section>
+
+<section class="page" data-page="sizing" hidden aria-label="Sizing">
+  <div class="lead"><span class="eyebrow">Sizing · measured, then derived</span><h2>How big the dataset is</h2>
+  <p>Every number is labelled measured or estimated. Measured counts come from pinned commits of Door43 sources and were re-derived by a second model with its own code.</p></div>
+  <div class="kpis" id="size-kpis"></div>
+  <div class="panel"><h3>Pericopes and segments by book</h3>
+    <div class="legend"><span><i style="background:var(--s1)"></i>Pericopes (BSB headings)</span><span><i style="background:var(--s3)"></i>Segments (chunks + splits)</span></div>
+    <div class="chart" id="chart-books"></div>
+    <p class="src">Sources: <span class="mono">Worldview/en_bsb@7abbfafa</span>, <span class="mono">Door43-Catalog/versification@af14923</span>.</p></div>
+  <div class="grid cols-2">
+    <div class="panel"><h3>Derived totals</h3><div class="tw"><table><tbody id="derived"></tbody></table></div></div>
+    <div class="panel"><h3>Not measured yet</h3><ul class="plain">
+      <li><b>Drafting cost and time per title.</b> Measured on Titus (#3).</li>
+      <li><b>Translation cost and time</b> for 151,074 strings.</li>
+      <li><b>Review minutes per title.</b> At an assumed 10 seconds, all of v0.1 is about 466 hours (47 per language). The assumption is labelled; Titus replaces it.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="page" data-page="decisions" hidden aria-label="Decisions">
+  <div class="lead"><span class="eyebrow">Decisions · pick, say why, and the decider records it</span><h2>Decisions before data</h2>
+  <p>Pick the option you'd choose and add a reason. A pick is input; only a recorded decision counts. The requirements owner decides product questions, the content team decides the chunk source, and the DRI decides delivery questions.</p></div>
+  <div class="panel" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><span class="saved" id="rv-status">Sign in to claude.ai to add a pick.</span></div>
+  <div class="grid" id="decs"></div>
+</section>
+
+<section class="page" data-page="coverage" hidden aria-label="Coverage">
+  <div class="lead"><span class="eyebrow">Coverage · books × languages</span><h2>What exists in the repo</h2>
+  <p>A cell fills when the default branch has that book's titles in that language. Empty until the first data PR merges.</p></div>
+  <div class="kpis" id="cov-kpis"></div>
+  <div class="panel"><div class="chart"><div class="cov" id="cov"></div></div>
+  <p class="src">Source: the repo tree on the default branch · <span class="asof"></span></p></div>
+</section>
+
+<section class="page" data-page="checks" hidden aria-label="Checks">
+  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2></div>
+  <div class="tw"><table><thead><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="checks"></tbody></table></div>
+</section>
+
+<div class="foot" id="foot"></div>
+</main>
+<div id="tip" hidden></div>
+
+<script>
+const BASE = {"schema":"bp.snapshot","v":1,"asOf":"2026-10-28T20:59:18.980Z","repo":{"pushedAt":"2026-10-28T20:56:11Z","defaultBranch":"main","openIssues":14},"commits":[{"sha":"61abcd0","msg":"Initial commit: README and CC BY-SA 4.0 licence","at":"2026-10-28T19:57:22Z"}],"pulls":[{"number":1,"title":"Scaffold: layout, draft schema, checks, CLAUDE.md","state":"open","draft":false,"merged":false,"at":"2026-10-28T20:56:12Z"}],"issues":[{"number":14,"title":"Servant.Bible registry entry for uw/bible-passages","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":13,"title":"Release v0.1.0 and hand it to tC Mobile (#1459)","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":12,"title":"dist generator, key-stability check and release workflow","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":11,"title":"Review screen and sync to PRs","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":10,"title":"Title translation runner with ported quality gates","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":9,"title":"Glossaries for the 9 v0.1 languages from Translation Words","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":8,"title":"Segment title drafting with a cross-model check","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":7,"title":"Segments: nest chunks in pericopes and split at pericope starts","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":6,"title":"Pericope parser for all 66 books, with the Psalms verse-1 rule","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":5,"title":"Project site for this dataset, with a scheduled snapshot","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":4,"title":"Ask the content team which chunk source is authoritative (1,184 differences)","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":3,"title":"Titus end to end: build one book and measure the real rates","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":2,"title":"Record the v0.1 decisions from servant.bible#1 as ADRs","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null}],"milestones":[{"number":1,"title":"Sprint 5 (10-19 → 11-01)","open_issues":4,"closed_issues":0,"state":"open","due":"2026-11-01T00:00:00Z"},{"number":2,"title":"Sprint 6 (11-02 → 11-15)","open_issues":7,"closed_issues":0,"state":"open","due":"2026-11-15T00:00:00Z"},{"number":3,"title":"Sprint 7 (11-16 → 11-29) — v0.1.0","open_issues":2,"closed_issues":0,"state":"open","due":"2026-11-29T00:00:00Z"}],"runs":[{"sha":"8722d06","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:56:16Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767662951"},{"sha":"52d4616","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:52:29Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767122060"},{"sha":"8ec3c30","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:48:01Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40766473987"},{"sha":"b913544","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:29:47Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40763787295"},{"sha":"43c2760","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:15:08Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761583791"},{"sha":"84ad2b2","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:14:09Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761431068"},{"sha":"64537a6","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:10:58Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40760957052"}],"coverage":{"structure":[],"titles":{"en":[],"ar":[],"fr":[],"hi":[],"id":[],"zh-Hans":[],"pt-BR":[],"ru":[],"es":[],"sw":[]}},"external":{"servant1":{"state":"open","comments":1,"lastCommentAt":"2026-10-28T14:23:42Z","assignees":0},"tcm1459":{"state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v1.3.0"}}};
+const BOOKS = [["GEN",50,135,634,16],["EXO",40,123,470,3],["LEV",27,70,372,0],["NUM",36,113,540,4],["DEU",34,91,480,1],["JOS",24,51,308,1],["JDG",21,52,302,5],["RUT",4,8,38,0],["1SA",31,70,396,4],["2SA",24,64,307,6],["1KI",22,94,358,0],["2KI",25,93,309,7],["1CH",29,84,356,7],["2CH",36,106,357,9],["EZR",10,28,112,3],["NEH",13,28,164,3],["EST",10,20,75,3],["JOB",42,50,433,2],["PSA",150,150,1135,0],["PRO",31,39,441,1],["ECC",12,26,114,6],["SNG",8,9,78,0],["ISA",66,120,690,3],["JER",52,122,570,5],["LAM",5,7,67,0],["EZK",48,114,549,3],["DAN",12,33,175,1],["HOS",14,19,101,0],["JOL",3,9,36,1],["AMO",9,14,77,1],["OBA",1,2,10,0],["JON",4,6,22,0],["MIC",7,15,51,1],["NAM",3,3,25,0],["HAB",3,7,29,0],["ZEP",3,10,24,0],["HAG",2,5,16,0],["ZEC",14,25,94,0],["MAL",4,8,24,0],["MAT",28,153,431,8],["MRK",16,96,269,7],["LUK",24,154,490,3],["JHN",21,84,360,11],["ACT",28,110,400,10],["ROM",16,47,197,4],["1CO",16,45,178,1],["2CO",13,25,110,1],["GAL",6,16,60,2],["EPH",6,17,61,1],["PHP",4,15,37,2],["COL",4,12,35,1],["1TH",5,10,32,0],["2TH",3,7,18,1],["1TI",6,20,45,1],["2TI",4,11,30,2],["TIT",3,8,24,1],["PHM",1,4,8,0],["HEB",13,34,122,2],["JAS",5,15,42,3],["1PE",5,15,43,1],["2PE",3,7,24,0],["1JN",5,15,41,0],["2JN",1,4,5,0],["3JN",1,4,5,0],["JUD",1,4,11,0],["REV",22,61,191,4]]; // [code, chapters, pericopes, chunks, splits]
+const REPO = "https://github.com/unfoldingWord/bible-passages";
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const fmt = (n) => Number(n).toLocaleString("en-US");
+const day = (iso) => iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
+let SNAP = BASE, SNAP_KIND = "base";
+
+const GATES = [
+  ["Sun 1 Nov", "Titus measured (#3)", "Titus built end to end, with time and cost per title and review minutes from one real reviewer", "Sprint 6 sizing stays an estimate, flagged here"],
+  ["Sun 1 Nov", "Decisions (#2)", "Scope, pericope source, keys and chunk source answered on servant.bible#1", "Build on the proposals, marked provisional; no keys released"],
+  ["Wed 4 Nov", "Go/no-go 1: scope", "Titus rates × 66 books × 10 languages fit before 13 Nov, cross-model checks included", "Choose the v0.1 subset now and say so"],
+  ["Sun 8 Nov", "English complete", "66 books: structure, pericope and segment titles, cross-model check, checks green", "Cut to the books done; the rest in v0.1.x"],
+  ["Fri 13 Nov", "Go/no-go 2: release", "Every v0.1 language through the gates; dist passes tC Mobile's checker; notes list review status", "Slip, or ship the subset that passes, as a decision"],
+  ["Mon 16 Nov", "v0.1.0 tag (#13)", "Tagged and read by tC Mobile (#1459)", "Recorded slip with a new date"],
+];
+
+const V = { applied: "good", observed: "warn", delegated: "blue", waiting: "blue", minimal: "blue", none: "good", "not-yet": "", skipped: "", "n/a": "", "none-yet": "" };
+const SIXB = [
+  ["Pericopes", "applied", "applied", "observed", "n/a", "n/a", "minimal", "pipeline.md#1-pericopes"],
+  ["Consensus check", "skipped", "skipped", "observed", "skipped", "n/a", "none", "pipeline.md#2-consensus-check"],
+  ["Segments", "applied", "applied", "observed", "delegated", "n/a", "minimal", "pipeline.md#3-segments"],
+  ["Versification", "applied", "applied", "observed", "n/a", "n/a", "minimal", "pipeline.md#4-versification"],
+  ["Segment titles", "applied", "applied", "none-yet", "skipped", "n/a", "not-yet", "ai.md#5-segment-titles"],
+  ["Metadata", "applied", "applied", "none-yet", "n/a", "n/a", "not-yet", "pipeline.md#6-metadata"],
+  ["Translation", "applied", "applied", "observed", "skipped", "n/a", "not-yet", "ai.md#7-translation"],
+  ["Review", "applied", "applied", "observed", "skipped", "n/a", "minimal", "review.md"],
+  ["Publish", "applied", "applied", "observed", "n/a", "waiting", "minimal", "pipeline.md#9-publish"],
+  ["Project site", "applied", "applied", "observed", "n/a", "n/a", "minimal", "site.md"],
+];
+const BREAKS = [
+  "<b>34 Psalms chapters in BSB have no verse 1 marker.</b> A simple parse starts their first pericope at verse 2 and over-counts splits by 32 (194 instead of 162).",
+  "<b>ULT's chunk markers and the chunk files disagree at 1,184 places</b> (622 + 562). Segment boundaries become permanent keys, so the authoritative source is the content team's call first.",
+  "<b>No pericope crosses a chapter:</b> BSB opens all 1,189 chapters with a heading at verse 1. A story that runs across a chapter break gets a new pericope there.",
+  "<b>Chinese has no Translation Words on Door43</b> to seed a glossary; the other 8 languages do.",
+  "<b>No uW tool writes reviewed text back to GitHub.</b> The pilot's review tab keeps reviews in its own store, so the one new piece is a sync that opens PRs.",
+  "<b>tC Mobile's checker can't see a key that moved between releases</b>, so the dataset checks key stability itself.",
+];
+
+const DECIDE = [
+  { id: "d1", n: 1, by: "Requirements owner", q: "What is v0.1?", opts: [["full", "The full request", "Pericope and segment titles, 66 books, 10 languages, by 16 Nov."], ["subset", "A gated subset", "All structure and English titles; languages that pass the gates by 13 Nov; the rest in v0.1.x."], ["issue", "The issue's scope", "Pericope titles and segments; segment titles later."]] },
+  { id: "d2", n: 2, by: "Requirements owner", q: "Where do pericopes come from?", opts: [["bsb", "BSB section headings", "3,016 headings, public domain. The build plan's choice. (Proposed.)"], ["other", "Another source", "Say which in your note."]] },
+  { id: "d3", n: 3, by: "DRI", q: "What form do keys take?", opts: [["span", "Span keys: TIT.1.1-4", "Matches tC Mobile's own fixture; a moved boundary always gets a new key. (Proposed.)"], ["scope", "Scripture Burrito scope: TIT.1:1-4", "Matches tC Mobile's section addressing (its ADR 0004)."], ["order", "Order keys: TIT.P02", "The pilot's form; inserting one pericope renumbers the rest."]] },
+  { id: "d8", n: 8, by: "Content team", q: "Which chunk source is authoritative?", opts: [["ufw", "The UFW chunk files", "13,608 chunks; the build plan's source."], ["ult", "ULT's \\ts\\* markers", "13,575 markers; 165 splits instead of 162."], ["case", "Case by case", "The content team rules on each of the 1,184 differences."]] },
+  { id: "d9", n: 9, by: "Requirements owner", q: "Is the consensus check in v0.1?", opts: [["out", "Out of v0.1", "BSB titles ship with their source; review flags changes; overrides can come later. (Proposed.)"], ["in", "In v0.1", "Needs a source for 8 copyrighted Bibles' headings (about 9,500 pages)."]] },
+  { id: "d10", n: 10, by: "Requirements owner", q: "Which heading style do segment titles use?", opts: [["explain", "Explanatory comment", "“Jesus heals a paralyzed man.” Short and plain. (Proposed.)"], ["topic", "Topical reference", "“Cure of a paralytic.” Shortest; assumes Bible knowledge."], ["about", "“About” comment", "“About Jesus healing a paralyzed man.” Clearly not Bible text."], ["question", "Question", "“Does Jesus have authority to heal?”"]] },
+  { id: "d11", n: 11, by: "Requirements owner", q: "What metadata is in v0.1?", opts: [["kt", "Key terms only", "They also feed the translation glossaries. (Proposed.)"], ["all", "All of it", "Topics, key terms, figures of speech, literary form, difficulty."], ["none", "None", "Spans and titles only; tC Mobile reads nothing else."]] },
+  { id: "d12", n: 12, by: "Requirements owner", q: "263 pericopes are a single segment. Title both?", opts: [["both", "Title both", "16,786 English titles."], ["dedupe", "Reuse the pericope title", "16,523 English titles; fewer strings to translate and review."]] },
+  { id: "d6", n: 6, by: "DRI", q: "Which model translates?", opts: [["gemini", "A fast Gemini model, checked by Claude", "The suggestion on record."], ["claude", "Claude, checked by a second model", "One provider for drafting and translation."], ["measure", "Measure both on Titus", "Pick from the measured quality and cost."]] },
+];
+
+const CHECKS = [
+  ["3,016 BSB section headings", "Re-derived", "Counted in en_bsb@7abbfafa; matched by a second model's own code."],
+  ["13,608 chunks in the UFW chunk files", "Re-derived", "Summed over versification@af14923 bible/ufw/chunks; matched independently."],
+  ["162 chunks contain a pericope start (165 on ULT markers)", "Re-derived", "Each split chunk holds exactly one start. 194 is the count without the Psalms verse-1 rule."],
+  ["1,184 places where ULT markers and chunk files disagree", "Re-derived", "Row-for-row identical list from two independent scripts (docs/scoping/ts-vs-ufw.tsv)."],
+  ["BSB is public domain", "Read", "en_bsb LICENSE.md: dedicated to the public domain on 30 Apr 2023."],
+  ["BSB uses the same versification as ULT", "Re-derived", "Last verse per chapter matches ufw.vrs in all 66 books; no verse bridges."],
+  ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Reported", "From a read-only survey of the Door43 catalog; completeness not checked."],
+  ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
+  ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
+  ["This site's numbers refresh every 3 hours", "Pending", "The routine is being set up; the pill at the top shows when the data was last written."],
+];
+
+/* ---------- render ---------- */
+function liveState() {
+  const el = $("#live"), t = $("#live-text");
+  const age = (Date.now() - Date.parse(SNAP.asOf)) / 3.6e6;
+  el.className = "live " + (SNAP_KIND === "live" ? (age > 7 ? "stale" : "on") : "");
+  t.textContent = (SNAP_KIND === "live" ? "Live data" : "Baseline snapshot") + " · " + new Date(SNAP.asOf).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
+  document.querySelectorAll(".asof").forEach((e) => (e.textContent = "as of " + day(SNAP.asOf)));
+}
+function renderMast() {
+  const days = Math.ceil((Date.parse("2026-11-16T00:00:00Z") - Date.now()) / 864e5);
+  $("#mast-meta").innerHTML = `<span>v0.1 target <b>16 Nov 2026</b> (${days > 0 ? days + " days" : "reached"})</span><span>Read by <b>tC Mobile v2</b> (#1459)</span><span>Data <b>CC BY-SA 4.0</b></span>`;
+  const max = Math.max(...BOOKS.map((b) => b[2]));
+  $("#canon").innerHTML = BOOKS.map((b, i) => `<i class="${i >= 39 ? "nt" : ""}" style="height:${Math.max(6, (b[2] / max) * 100)}%" title="${b[0]}: ${b[2]} pericopes"></i>`).join("");
+}
+function renderHome() {
+  const iss = SNAP.issues, open = iss.filter((i) => i.state === "open").length;
+  const run = SNAP.runs[0];
+  const books = SNAP.coverage.structure.length;
+  $("#kpis").innerHTML = [
+    ["Books built", `${books}<small style="font-size:1rem;color:var(--muted)"> / 66</small>`, books ? "structure on the default branch" : "none yet; Titus is first"],
+    ["Issues open", open, `${iss.length - open} closed`],
+    ["Days to v0.1", Math.max(0, Math.ceil((Date.parse("2026-11-16T00:00:00Z") - Date.now()) / 864e5)), "16 Nov, Monday"],
+    ["Latest CI", run ? (run.conclusion === "success" ? "Pass" : run.conclusion) : "–", run ? `${run.sha} on ${esc(run.branch)}` : ""],
+  ].map(([k, v, d]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span><span class="d">${d}</span></div>`).join("");
+  $("#sprint-mini").innerHTML = SNAP.milestones.map((m) => {
+    const t = m.open_issues + m.closed_issues, p = t ? (m.closed_issues / t) * 100 : 0;
+    return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${m.closed_issues}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
+  }).join("");
+  $("#ci").innerHTML = SNAP.runs.slice(0, 20).reverse().map((r) => `<a class="${r.conclusion === "success" ? "ok" : r.conclusion === "failure" ? "no" : "sk"}" href="${esc(r.url)}" target="_blank" rel="noopener" title="${esc(r.sha)} · ${esc(r.branch)} · ${esc(r.conclusion)}">${r.conclusion === "success" ? "✓" : r.conclusion === "failure" ? "✕" : "–"}</a>`).join("");
+  $("#commits").innerHTML = `<table><tbody>${SNAP.commits.slice(0, 6).map((c) => `<tr><td class="mono"><a href="${REPO}/commit/${c.sha}" target="_blank" rel="noopener">${c.sha}</a></td><td>${esc(c.msg)}</td><td class="n">${day(c.at)}</td></tr>`).join("")}</tbody></table>`;
+  const s1 = SNAP.external.servant1, t1 = SNAP.external.tcm1459;
+  $("#linked").innerHTML = `<table><tbody>
+    <tr><td><a href="https://github.com/unfoldingWord/servant.bible/issues/1" target="_blank" rel="noopener">servant.bible#1</a></td><td>The dataset's tracking issue</td><td><span class="pill ${s1.state === "open" ? "blue" : "good"}">${s1.state}</span> <span class="pill ${s1.assignees ? "good" : "warn"}">${s1.assignees ? "assigned" : "no assignee"}</span></td><td class="n">${s1.comments} comments</td></tr>
+    <tr><td><a href="https://github.com/unfoldingWord/tc-mobile/issues/1459" target="_blank" rel="noopener">tc-mobile#1459</a></td><td>tC Mobile reads the dataset</td><td><span class="pill blue">${t1.state}</span></td><td class="n">${esc(t1.milestone || "")}</td></tr>
+    ${SNAP.pulls.map((p) => `<tr><td><a href="${REPO}/pull/${p.number}" target="_blank" rel="noopener">PR #${p.number}</a></td><td>${esc(p.title)}</td><td><span class="pill ${p.merged ? "good" : p.state === "open" ? "blue" : ""}">${p.merged ? "merged" : p.state}</span></td><td class="n">${day(p.at)}</td></tr>`).join("")}
+  </tbody></table>`;
+}
+function renderPlan() {
+  $("#gates").innerHTML = GATES.map((g) => `<tr><td style="white-space:nowrap"><b>${g[0]}</b></td><td>${g[1]}</td><td>${g[2]}</td><td>${g[3]}</td></tr>`).join("");
+  $("#sprints").innerHTML = SNAP.milestones.map((m) => {
+    const items = SNAP.issues.filter((i) => i.milestone === m.title);
+    return `<div class="panel"><div style="display:grid;gap:4px"><span class="eyebrow">Due ${day(m.due)}</span><h3>${esc(m.title)}</h3></div>
+      <ul class="plain">${items.map((i) => `<li><a href="${REPO}/issues/${i.number}" target="_blank" rel="noopener">#${i.number}</a> ${esc(i.title)} ${i.state === "closed" ? '<span class="pill good">done</span>' : ""}</li>`).join("")}</ul></div>`;
+  }).join("");
+}
+function renderScope() {
+  $("#sixb").innerHTML = SIXB.map((r) => `<tr><td><a href="${REPO}/blob/chore/scaffold/docs/scoping/${r[7]}" target="_blank" rel="noopener"><b>${r[0]}</b></a></td>${r.slice(1, 7).map((v) => `<td><span class="pill ${V[v] ?? ""}">${v}</span></td>`).join("")}</tr>`).join("");
+  $("#breaks").innerHTML = BREAKS.map((b) => `<li>${b}</li>`).join("");
+}
+function renderSizing() {
+  const tot = BOOKS.reduce((a, b) => [a[0] + b[2], a[1] + b[3], a[2] + b[4]], [0, 0, 0]);
+  $("#size-kpis").innerHTML = [["Pericopes", tot[0], "measured"], ["Chunks", tot[1], "measured"], ["Splits", tot[2], "measured"], ["Segments", tot[1] + tot[2], "derived"]]
+    .map(([k, v, d]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${fmt(v)}</span><span class="d"><span class="pill ${d === "measured" ? "good" : "blue"}">${d}</span></span></div>`).join("");
+  const W = 1100, H = 240, L = 34, B = 34, bw = (W - L) / BOOKS.length, max = Math.max(...BOOKS.map((b) => b[3] + b[4]));
+  const y = (v) => H - B - (v / max) * (H - B - 12);
+  let g = "";
+  for (let t = 0; t <= max; t += 100) g += `<line class="gl" x1="${L}" x2="${W}" y1="${y(t)}" y2="${y(t)}"/><text x="${L - 6}" y="${y(t) + 3}" text-anchor="end">${t}</text>`;
+  BOOKS.forEach((b, i) => {
+    const x = L + i * bw;
+    g += `<rect x="${x + 1}" y="${y(b[3] + b[4])}" width="${bw * 0.42}" height="${H - B - y(b[3] + b[4])}" fill="var(--s3)"/>`;
+    g += `<rect x="${x + 1 + bw * 0.44}" y="${y(b[2])}" width="${bw * 0.42}" height="${H - B - y(b[2])}" fill="var(--s1)"/>`;
+    g += `<rect class="hit" data-i="${i}" x="${x}" y="0" width="${bw}" height="${H - B}" fill="transparent"/>`;
+    if (i % 3 === 0) g += `<text x="${x + bw / 2}" y="${H - B + 14}" text-anchor="middle">${b[0]}</text>`;
+  });
+  $("#chart-books").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Pericopes and segments for each of the 66 books">${g}</svg>`;
+  const tip = $("#tip");
+  $("#chart-books").addEventListener("mousemove", (e) => {
+    const i = e.target.dataset?.i; if (i === undefined) { tip.hidden = true; return; }
+    const b = BOOKS[i]; tip.hidden = false;
+    tip.innerHTML = `<b>${b[0]}</b> ${b[1]} chapters<br>${b[2]} pericopes · ${b[3]} chunks · ${b[4]} splits`;
+    tip.style.left = Math.min(e.clientX + 12, innerWidth - 220) + "px"; tip.style.top = e.clientY + 12 + "px";
+  });
+  $("#chart-books").addEventListener("mouseleave", () => (tip.hidden = true));
+  const seg = tot[1] + tot[2], en = tot[0] + seg;
+  $("#derived").innerHTML = [["Segments", seg, "chunks + splits"], ["English titles", en, "pericopes + segments"], ["Strings at v0.1 (10 languages)", en * 10, ""], ["To translate for v0.1 (9 languages)", en * 9, ""], ["Strings at 26 languages", en * 26, "later"], ["If single-segment pericopes reuse their title", en - 263, "decision 12"]]
+    .map(([k, v, n]) => `<tr><td>${k}<br><span class="saved">${n}</span></td><td class="n"><b>${fmt(v)}</b></td></tr>`).join("");
+}
+function renderCoverage() {
+  const L = ["en", "ar", "fr", "hi", "id", "zh-Hans", "pt-BR", "ru", "es", "sw"], C = SNAP.coverage;
+  const built = C.structure.length, tables = L.reduce((a, l) => a + (C.titles[l] || []).length, 0);
+  $("#cov-kpis").innerHTML = [["Books with structure", `${built} / 66`], ["Title tables", `${tables} / 660`], ["Languages started", L.filter((l) => (C.titles[l] || []).length).length + " / 10"]]
+    .map(([k, v]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span></div>`).join("");
+  let h = `<b></b>${L.map((l) => `<b>${l}</b>`).join("")}`;
+  BOOKS.forEach((b) => { h += `<span class="bk">${b[0]}</span>` + L.map((l) => `<span class="${(C.titles[l] || []).includes(b[0]) ? "y" : ""}" title="${b[0]} · ${l}"></span>`).join(""); });
+  $("#cov").innerHTML = h;
+}
+function renderChecks() {
+  const cls = { "Re-derived": "good", Read: "good", Reported: "blue", Assumption: "warn", Unresolved: "warn", Pending: "" };
+  $("#checks").innerHTML = CHECKS.map((c) => `<tr><td>${c[0]}</td><td><span class="pill ${cls[c[1]]}">${c[1]}</span></td><td>${c[2]}</td></tr>`).join("");
+}
+function renderFoot() {
+  $("#foot").innerHTML = `<span>Built from <a href="${REPO}" target="_blank" rel="noopener">unfoldingWord/bible-passages</a>. Numbers on GitHub refresh every 3 hours; measured counts are pinned to source commits.</span><span>Snapshot ${esc(SNAP.asOf)}.</span>`;
+}
+function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
+
+/* ---------- decisions ---------- */
+const RV = { db: null, user: null, uid: null, canEdit: false, resp: {}, final: {}, names: {} };
+function buildDecisions() {
+  $("#decs").innerHTML = DECIDE.map((d) => `<div class="panel dec" id="dec-${d.id}">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span class="eyebrow">Decision ${d.n}</span><span class="chip">decides: ${d.by}</span></div>
+    <h3>${d.q}</h3><div class="final" data-final hidden></div>
+    <fieldset class="opts" style="border:0;margin:0;padding:0"><legend class="saved">Your pick</legend>
+    ${d.opts.map(([k, t, x]) => `<label class="opt"><input type="radio" name="${d.id}" value="${k}" id="${d.id}-${k}" disabled><b>${t}</b><span class="od">${x}</span><span class="who" data-who="${k}"></span></label>`).join("")}
+    </fieldset>
+    <label class="saved" for="${d.id}-note">Why (optional)</label><textarea id="${d.id}-note" disabled></textarea>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn" data-save="${d.id}" disabled>Save my pick</button><span class="saved" data-msg></span></div>
+  </div>`).join("");
+  document.querySelectorAll("[data-save]").forEach((b) => b.addEventListener("click", () => savePick(b.dataset.save)));
+}
+function updateDecisions() {
+  for (const d of DECIDE) {
+    const el = $("#dec-" + d.id);
+    for (const [k] of d.opts) {
+      const who = Object.entries(RV.resp).filter(([, r]) => r.picks?.[d.id]?.choice === k).map(([u]) => RV.names[u] || "Someone");
+      el.querySelector(`[data-who="${k}"]`).innerHTML = who.map((n) => `<span class="chip">${esc(n)}</span>`).join("");
+    }
+    const f = RV.final[d.id], fe = el.querySelector("[data-final]");
+    fe.hidden = !f;
+    if (f) { const o = d.opts.find((x) => x[0] === f.choice); fe.innerHTML = `<b>Decided:</b> ${esc(o ? o[1] : f.choice)}${f.text ? " · " + esc(f.text) : ""} <span class="saved">(${day(f.at)})</span>`; }
+    const mine = RV.uid && RV.resp[RV.uid]?.picks?.[d.id];
+    const can = Boolean(RV.db && RV.uid);
+    el.querySelectorAll("input,textarea,button").forEach((x) => (x.disabled = !can));
+    if (mine && !el.dataset.touched) {
+      const r = el.querySelector(`input[value="${mine.choice}"]`); if (r) r.checked = true;
+      el.querySelector("textarea").value = mine.note || "";
+    }
+  }
+  $("#rv-status").textContent = RV.db && RV.uid ? "Your picks save to this page and everyone with access sees them." : "Sign in to claude.ai to add a pick. Decisions recorded so far still show.";
+}
+async function savePick(id) {
+  const el = $("#dec-" + id), msg = el.querySelector("[data-msg]");
+  const choice = el.querySelector("input:checked")?.value || "", note = el.querySelector("textarea").value.trim();
+  const cur = RV.resp[RV.uid] || { picks: {} };
+  const doc = { picks: { ...cur.picks, [id]: { choice, note, at: new Date().toISOString() } }, at: new Date().toISOString() };
+  msg.textContent = "Saving…";
+  try { await RV.db.doc("resp/" + RV.uid).set(doc); msg.textContent = "Saved"; el.dataset.touched = ""; }
+  catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
+}
+document.addEventListener("change", (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
+async function resolveNames() {
+  if (!RV.user) return;
+  const ids = [...new Set(Object.keys(RV.resp))];
+  if (!ids.length) return;
+  try { const ps = await RV.user.profiles(ids); for (const id of ids) RV.names[id] = ps[id]?.name || ""; } catch (e) { /* names are optional */ }
+}
+
+/* ---------- routing ---------- */
+const PAGES = ["home", "plan", "scope", "sizing", "decisions", "coverage", "checks"];
+function route() {
+  const p = PAGES.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
+  document.querySelectorAll("section.page").forEach((s) => (s.hidden = s.dataset.page !== p));
+  document.querySelectorAll("nav.global a").forEach((a) => {
+    if (a.getAttribute("href") === "#" + p) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+  $("#global-nav").classList.remove("open"); $("#menu-btn").setAttribute("aria-expanded", "false");
+}
+$("#menu-btn").addEventListener("click", () => { const o = $("#global-nav").classList.toggle("open"); $("#menu-btn").setAttribute("aria-expanded", String(o)); });
+addEventListener("hashchange", () => { route(); scrollTo({ top: 0 }); });
+
+renderMast(); renderLive(); renderScope(); renderSizing(); renderChecks(); buildDecisions(); updateDecisions(); route();
+setInterval(liveState, 60000);
+
+/* ---------- runtime: live snapshot, picks, decisions ---------- */
+(async () => {
+  if (!window.claude || !window.claude.use) return;
+  const [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+  if (!db) return;
+  RV.db = db; RV.user = user;
+  if (user) { try { RV.uid = await user.id(); RV.canEdit = await user.canEdit(); } catch (e) { RV.uid = null; } }
+  updateDecisions();
+  db.doc("live/snapshot").onSnapshot((snap) => {
+    if (!snap.exists) return;
+    const d = snap.data();
+    if (!d || d.schema !== "bp.snapshot" || d.asOf < SNAP.asOf) return;
+    SNAP = d; SNAP_KIND = "live"; renderLive();
+  }, () => { /* keep the snapshot already shown */ });
+  db.collection("resp").onSnapshot(async (qs) => {
+    RV.resp = {}; for (const doc of qs.docs) { const v = doc.data(); if (v) RV.resp[doc.id] = v; }
+    await resolveNames(); updateDecisions();
+  }, () => { /* keep the picks already shown */ });
+  db.collection("final").onSnapshot((qs) => {
+    for (const doc of qs.docs) { const v = doc.data(); if (v) RV.final[doc.id] = v; }
+    updateDecisions();
+  }, () => { /* keep the decisions already shown */ });
+})();
+</script>
