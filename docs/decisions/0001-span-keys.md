@@ -9,7 +9,13 @@
 Pericope and segment keys carry their span: `TIT.1.1-4` for a segment,
 `TIT.P.1.1-4` for a pericope, and `TIT.1.4-4` for a one-verse segment. A
 moved boundary always produces a new key; the old key is retired with its
-successor in `data/retired-keys.json` and is never reused.
+successor in `data/retired-keys.json`.
+
+A key is always its span. If a later edit makes a retired span live again
+(a boundary moved and then moved back), that same key is live again: the
+retirement stays in the record as history, and the titles on the key come
+back as `unreviewed`. A key is never attached to a different span, because
+its spelling is its span (decided by the DRI on 28 Oct).
 
 ## Why
 
@@ -17,7 +23,7 @@ successor in `data/retired-keys.json` and is never reused.
   contract says a moved passage gets a new key. Here the format enforces
   that rule instead of memory.
 - The key-stability check (#12) can then refuse a released key whose span
-  changed, or a retired key used again.
+  changed, or one that is missing with no retirement record.
 - Titus is already built this way (`data/structure/TIT.json`, #15), and a
   second model re-derived the same 25 keys from the raw sources.
 

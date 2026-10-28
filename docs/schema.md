@@ -66,7 +66,8 @@ No pericope or segment in this dataset crosses a chapter: BSB opens every one of
 Because the span is in the key, moving a boundary always produces a new key.
 That is the contract's rule ("give the new passage a new key") enforced by the
 form of the key rather than by memory. The old key is then retired: it stays in
-the record of released keys and is never used again.
+the record of released keys. It is never attached to a different span; if the
+same span is live again, so is its key ([decisions/0001](decisions/0001-span-keys.md)).
 
 This replaces the order-based IDs in the pilot (`TIT.P02`), where inserting one
 pericope renumbers every later one.
@@ -196,7 +197,7 @@ every test run until they exist.
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: the model is decided: measure Gemini and Claude on
+6. **Translation**: the selection procedure is decided: measure Gemini and Claude on
    Titus, then choose ([decisions/0002](decisions/0002-measure-translation-models.md)).
    Still open: how key-term consistency is checked across a book and a
    language.
