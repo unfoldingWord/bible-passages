@@ -1,5 +1,14 @@
 import { readdirSync, readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import {
+  checkKeys,
+  gitTags,
+  lastTag,
+  readRelease,
+  spans,
+  type Retired,
+} from "../scripts/lib/keys.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
 
 // Checks on data/structure/ and data/titles/. See docs/schema.md, "Checks".
@@ -127,7 +136,20 @@ describe("data/structure", () => {
     });
   });
 
-  it.todo("no key released in an earlier tag is missing, moved or reused");
+  // Against the most recent vX.Y.Z tag; the release workflow sets
+  // RELEASE_TAG so a release is checked against the tag before it. With no
+  // release yet only data/retired-keys.json is checked. Fixtures for each
+  // failure are in tests/keys.test.ts.
+  it("no key released in the last tag is missing, moved or reused", () => {
+    const cwd = fileURLToPath(root);
+    const tag = lastTag(gitTags(cwd), process.env.RELEASE_TAG);
+    const previous = tag ? readRelease(cwd, tag) : null;
+    const { retired } = read("data/retired-keys.json") as { retired: Retired };
+    const current = { spans: spans(structures.map(([, s]) => s)), retired };
+    expect(checkKeys(previous, current), `against ${tag ?? "no tag"}`).toEqual(
+      []
+    );
+  });
   it.todo("every key has a title in every language marked complete");
   it.todo("titles fit the length and script rules for their language");
 });

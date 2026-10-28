@@ -1,0 +1,264 @@
+import { execFileSync } from "node:child_process";
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { describe, expect, it } from "vitest";
+import {
+  checkKeys,
+  gitTags,
+  lastTag,
+  readRelease,
+  spans,
+  type Release,
+} from "../scripts/lib/keys.ts";
+import type { Ref, Structure } from "../scripts/lib/structure.ts";
+
+// The key-stability check on fixtures. tests/structure.test.ts runs it on
+// the real data against the last release tag. See docs/schema.md, "Keys".
+
+/** A one-chapter book from [pericope, segment...] spans as "from-to". */
+function book(...pericopes: [string, ...string[]][]): Structure {
+  const ref = (s: string) => s.split("-").map(Number) as [number, number];
+  const span = (s: string) => {
+    const [from, to] = ref(s);
+    return { start: [1, from] as Ref, end: [1, to] as Ref };
+  };
+  return {
+    book: "TIT",
+    versification: "ufw",
+    pericopes: pericopes.map(([p]) => ({ key: `TIT.P.1.${p}`, ...span(p) })),
+    segments: pericopes.flatMap(([p, ...segs]) =>
+      segs.map((s) => ({
+        key: `TIT.1.${s}`,
+        pericope: `TIT.P.1.${p}`,
+        ...span(s),
+      }))
+    ),
+  };
+}
+
+const release = (s: Structure, retired: Release["retired"] = []): Release => ({
+  spans: spans([s]),
+  retired,
+});
+
+const v1 = book(["1-4", "1-4"], ["5-9", "5-6", "7-9"]);
+// The boundary between the first two pericopes moved from 1:5 to 1:4.
+const moved = book(["1-3", "1-3"], ["4-9", "4-6", "7-9"]);
+const movedRecord = [
+  { key: "TIT.P.1.1-4", successor: "TIT.P.1.1-3" },
+  { key: "TIT.P.1.5-9", successor: "TIT.P.1.4-9" },
+  { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
+  { key: "TIT.1.5-6", successor: "TIT.1.4-6" },
+];
+
+describe("checkKeys", () => {
+  it("passes with no earlier release", () => {
+    expect(checkKeys(null, release(v1))).toEqual([]);
+  });
+
+  it("passes when nothing changed", () => {
+    expect(checkKeys(release(v1), release(v1))).toEqual([]);
+  });
+
+  it("passes when keys are only added", () => {
+    const more = book(
+      ["1-4", "1-4"],
+      ["5-9", "5-6", "7-9"],
+      ["10-16", "10-16"]
+    );
+    expect(checkKeys(release(v1), release(more))).toEqual([]);
+  });
+
+  it("fails on a moved boundary with no retirement record", () => {
+    expect(checkKeys(release(v1), release(moved))).toEqual([
+      "TIT.P.1.1-4 was released and is missing, with no record in data/retired-keys.json",
+      "TIT.P.1.5-9 was released and is missing, with no record in data/retired-keys.json",
+      "TIT.1.1-4 was released and is missing, with no record in data/retired-keys.json",
+      "TIT.1.5-6 was released and is missing, with no record in data/retired-keys.json",
+    ]);
+  });
+
+  it("passes on a moved boundary whose old keys are retired", () => {
+    expect(checkKeys(release(v1), release(moved, movedRecord))).toEqual([]);
+  });
+
+  it("fails on a dropped key with no retirement record", () => {
+    const dropped = book(["1-4", "1-4"], ["5-9", "5-9"]);
+    expect(checkKeys(release(v1), release(dropped))).toEqual([
+      "TIT.1.5-6 was released and is missing, with no record in data/retired-keys.json",
+      "TIT.1.7-9 was released and is missing, with no record in data/retired-keys.json",
+    ]);
+  });
+
+  it("fails on a released key whose span changed", () => {
+    const changed = release(v1);
+    changed.spans.set("TIT.1.7-9", { start: [1, 7], end: [1, 8] });
+    expect(checkKeys(release(v1), changed)).toEqual([
+      "TIT.1.7-9 moved from 1:7-1:9 to 1:7-1:8",
+    ]);
+  });
+
+  it("fails on a retired key used again", () => {
+    const previous = release(moved, movedRecord);
+    const reused = book(
+      ["1-3", "1-3"],
+      ["4-9", "4-6", "7-9"],
+      ["10-16", "10-16"]
+    );
+    reused.segments.push({
+      key: "TIT.1.1-4",
+      pericope: "TIT.P.1.1-3",
+      start: [1, 1],
+      end: [1, 4],
+    });
+    expect(checkKeys(previous, release(reused, movedRecord))).toEqual([
+      "TIT.1.1-4 is retired and used again",
+    ]);
+  });
+
+  it("fails when a released retirement record is removed or changed", () => {
+    const previous = release(moved, movedRecord);
+    // The first record's successor changed; the second record is gone.
+    const edited = [
+      { key: "TIT.P.1.1-4", successor: "TIT.P.1.4-9" },
+      ...movedRecord.slice(2),
+    ];
+    expect(checkKeys(previous, release(moved, edited))).toEqual([
+      "TIT.P.1.1-4: its retirement record (successor TIT.P.1.1-3) was removed or changed",
+      "TIT.P.1.5-9: its retirement record (successor TIT.P.1.4-9) was removed or changed",
+    ]);
+  });
+
+  it("fails on a successor that is not a current key", () => {
+    const record = [{ key: "TIT.1.9-9", successor: "TIT.1.9-10" }];
+    expect(checkKeys(null, release(v1, record))).toEqual([
+      "TIT.1.9-9: successor TIT.1.9-10 is not a current key",
+    ]);
+  });
+
+  it("follows a chain of successors to a current key", () => {
+    const record = [
+      { key: "TIT.1.1-5", successor: "TIT.1.1-4" },
+      { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
+    ];
+    expect(checkKeys(null, release(moved, record))).toEqual([]);
+  });
+
+  it("fails on a successor chain that loops", () => {
+    const record = [
+      { key: "TIT.1.1-5", successor: "TIT.1.1-6" },
+      { key: "TIT.1.1-6", successor: "TIT.1.1-5" },
+    ];
+    expect(checkKeys(null, release(v1, record))).toEqual([
+      "TIT.1.1-5: its successors loop back to TIT.1.1-5",
+      "TIT.1.1-6: its successors loop back to TIT.1.1-6",
+    ]);
+  });
+
+  it("fails on a key retired twice", () => {
+    const record = [
+      { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
+      { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
+    ];
+    expect(checkKeys(null, release(moved, record))).toEqual([
+      "TIT.1.1-4 is retired twice",
+    ]);
+  });
+});
+
+describe("lastTag", () => {
+  it("is null with no release tag", () => {
+    expect(lastTag([])).toBeNull();
+    expect(lastTag(["draft", "v1", "v1.0", "v1.0.0-rc.1", "1.0.0"])).toBeNull();
+  });
+
+  it("orders by version, not by text", () => {
+    expect(lastTag(["v0.9.0", "v0.10.0", "v0.2.11"])).toBe("v0.10.0");
+    expect(lastTag(["v1.0.0", "v0.99.99"])).toBe("v1.0.0");
+  });
+
+  it("leaves out the tag being released", () => {
+    expect(lastTag(["v0.1.0", "v0.2.0"], "v0.2.0")).toBe("v0.1.0");
+    expect(lastTag(["v0.1.0"], "v0.1.0")).toBeNull();
+  });
+
+  it("ignores tags with leading zeros", () => {
+    expect(lastTag(["v0.1.0", "v01.0.0"])).toBe("v0.1.0");
+  });
+});
+
+describe("reading a release from its tag", () => {
+  const git = (cwd: string, ...args: string[]) =>
+    execFileSync(
+      "git",
+      [
+        "-c",
+        "user.name=test",
+        "-c",
+        "user.email=test@example.invalid",
+        ...args,
+      ],
+      { cwd, encoding: "utf8" }
+    );
+  const tit = JSON.parse(
+    readFileSync(new URL("../data/structure/TIT.json", import.meta.url), "utf8")
+  ) as Structure;
+
+  function repo(): string {
+    const dir = mkdtempSync(join(tmpdir(), "release-keys-"));
+    git(dir, "init", "-q");
+    mkdirSync(join(dir, "data/structure"), { recursive: true });
+    writeFileSync(join(dir, "data/structure/TIT.json"), JSON.stringify(tit));
+    git(dir, "add", ".");
+    git(dir, "commit", "-q", "-m", "release");
+    git(dir, "tag", "v0.1.0");
+    return dir;
+  }
+
+  it("reads the tagged structure, with no retired keys when the file is absent", () => {
+    const dir = repo();
+    expect(gitTags(dir)).toEqual(["v0.1.0"]);
+    const released = readRelease(dir, "v0.1.0");
+    expect(released.retired).toEqual([]);
+    expect(released.spans).toEqual(spans([tit]));
+    expect(checkKeys(released, released)).toEqual([]);
+  });
+
+  it("reads the tagged retired-keys record", () => {
+    const dir = repo();
+    const record = { retired: [{ key: "TIT.1.1-5", successor: "TIT.1.1-4" }] };
+    writeFileSync(join(dir, "data/retired-keys.json"), JSON.stringify(record));
+    git(dir, "add", ".");
+    git(dir, "commit", "-q", "-m", "retire");
+    git(dir, "tag", "-a", "-m", "annotated", "v0.2.0");
+    expect(readRelease(dir, "v0.2.0").retired).toEqual(record.retired);
+  });
+
+  it("fails on a planted moved key in the real Titus structure", () => {
+    const released = readRelease(repo(), "v0.1.0");
+    // Move the first segment's end back one verse and give the next one the
+    // verse, keeping the keys but changing their spans.
+    const planted = structuredClone(tit);
+    const [a, b] = planted.segments;
+    if (!a || !b) throw new Error("Titus has fewer than two segments");
+    a.end = [a.end[0], a.end[1] - 1];
+    b.start = [b.start[0], b.start[1] - 1];
+    const problems = checkKeys(released, {
+      spans: spans([planted]),
+      retired: [],
+    });
+    expect(problems).toHaveLength(2);
+    expect(problems[0]).toMatch(
+      new RegExp(`^${a.key.replace(/\./g, "\\.")} moved from `)
+    );
+  });
+
+  it("refuses a shallow clone", () => {
+    const source = repo();
+    git(source, "commit", "-q", "--allow-empty", "-m", "second");
+    const dir = mkdtempSync(join(tmpdir(), "release-keys-shallow-"));
+    git(dir, "clone", "-q", "--depth", "1", `file://${source}`, "clone");
+    expect(() => gitTags(join(dir, "clone"))).toThrow(/shallow clone/);
+  });
+});
