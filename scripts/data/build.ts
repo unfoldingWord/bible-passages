@@ -73,7 +73,12 @@ for (const book of BOOKS) {
     for (const [key, draft] of Object.entries(drafts)) {
       if (!segmentKeys.has(key))
         throw new Error(`${book}: draft for unknown segment key ${key}`);
-      titles[key] = draft;
+      // The check's details stay in data/drafts/; the table gets the title.
+      titles[key] = {
+        text: draft.text,
+        status: draft.status,
+        source: draft.source,
+      };
     }
   }
   await write(`titles/en/${book}.json`, {

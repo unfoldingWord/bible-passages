@@ -134,8 +134,14 @@ A committed input, not generated: AI-drafted titles, `titles` keyed by segment
 key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
 into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
 rebuild cannot wipe a draft. A draft for a key that is not a segment in the
-structure fails the build. Drafts start `unreviewed`; the instructions that
-produced them are in `prompts/`. Only English Titus exists so far.
+structure fails the build. The instructions that produced them are in
+`prompts/`. Only English Titus exists so far.
+
+Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
+for a disagreement `criteria`, `why` and a `suggestion`). A draft is
+`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
+and goes to a person first. The check's details stay here; the built table
+gets `text`, `status` and `source`.
 
 ## `dist/tc-mobile/`
 
