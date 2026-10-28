@@ -128,6 +128,15 @@ letters, digits and `. _ : -`, at most 64 characters).
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 
+## `data/drafts/<lang>/<BOOK>.json`
+
+A committed input, not generated: AI-drafted titles, `titles` keyed by segment
+key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
+into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
+rebuild cannot wipe a draft. A draft for a key that is not a segment in the
+structure fails the build. Drafts start `unreviewed`; the instructions that
+produced them are in `prompts/`. Only English Titus exists so far.
+
 ## `dist/tc-mobile/`
 
 Generated from `data/` by `scripts/`. Never edited by hand. Each package is a

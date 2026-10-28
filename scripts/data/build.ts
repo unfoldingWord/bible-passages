@@ -2,6 +2,7 @@
 // pericope titles for each book, and the verse counts the checks use.
 //
 //   node scripts/data/build.ts
+import { existsSync, readFileSync } from "node:fs";
 import { BOOKS } from "../lib/books.ts";
 import { readSource } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
@@ -54,6 +55,26 @@ for (const book of BOOKS) {
         `${book} ${h.chapter}:${h.verse}: heading without a pericope`
       );
     titles[p.key] = { text: h.text, status: "unreviewed", source };
+  }
+  // AI drafts are committed inputs in data/drafts/, which the build never
+  // clears, so a rebuild cannot wipe them. A draft for a key that is not a
+  // segment fails the build.
+  const draftFile = new URL(`drafts/en/${book}.json`, data);
+  if (existsSync(draftFile)) {
+    const drafts = (
+      JSON.parse(readFileSync(draftFile, "utf8")) as {
+        titles: Record<
+          string,
+          { text: string; status: string; source: string }
+        >;
+      }
+    ).titles;
+    const segmentKeys = new Set(structure.segments.map((s) => s.key));
+    for (const [key, draft] of Object.entries(drafts)) {
+      if (!segmentKeys.has(key))
+        throw new Error(`${book}: draft for unknown segment key ${key}`);
+      titles[key] = draft;
+    }
   }
   await write(`titles/en/${book}.json`, {
     language: "en",
