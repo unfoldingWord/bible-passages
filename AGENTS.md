@@ -17,6 +17,24 @@ that build and check it; nothing here is deployed.
 - Decisions with their reasons: [`docs/decisions/`](docs/decisions).
 - Session log: [`docs/progress_tracker.md`](docs/progress_tracker.md).
 
+## Why, and the bar
+
+This work serves unfoldingWord's mission: leaders in the global church able
+to take the Bible into every language. The dataset exists so translators can
+find their way through a book, in their own language.
+
+The bar is software we are proud to ship and tools people love and love to
+share:
+
+- **Simple to use.** A title is short, plain and clear to someone reading in
+  their second language. A review screen asks one thing at a time.
+- **Works across languages.** Every surface handles many scripts and
+  right-to-left text from the start, not as a later fix.
+- **Excellent, not just finished.** A step is done when it is checked, not
+  when it runs.
+- **Built with the family.** Reuse unfoldingWord and partner work first, and
+  give back what we make (see "6B before Build").
+
 ## Stack and commands
 
 Node 22, TypeScript (strict), vitest, prettier.

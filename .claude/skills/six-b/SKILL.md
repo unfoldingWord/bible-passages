@@ -14,6 +14,20 @@ The aim is the most work not done. Each step narrows what this repo must
 build itself. Nothing is built until the five steps before Build have a
 recorded verdict.
 
+**Where to look.** Borrow and Bend draw on unfoldingWord and partner projects:
+the unfoldingWord GitHub org (tc-mobile, tc-study, translation-helps-mcp,
+translationCore, servant.bible, baruch, fia-mcp, the `*-rcl` component
+libraries, the Door43 tools), Door43 content (ULT, Translation Notes,
+Translation Words, Translation Academy, versification) and partners' open
+work. Commercial vendors are not candidates. Beget means a uW or partner team
+carries the piece. What we Build is built to be borrowed by the next uW
+project.
+
+**The bar a candidate must meet:** it helps ship software we are proud of,
+with simple UX that works across many languages and scripts. A candidate that
+fits technically but makes the result harder for translators to use fails
+Borrow.
+
 ## The steps
 
 | Step       | Meaning here                                                                                                                                                     |
@@ -46,7 +60,7 @@ Reversibility: forward = low|medium|high; backward = low|medium|high. <one claus
 
 ## Rules
 
-- **Name the artifact.** "Considered biblelib" is not a Borrow; "Clear-Bible/biblelib `pericopes_eng_BSB.tsv` at `<commit>`" is.
+- **Name the artifact.** "Considered the chunk files" is not a Borrow; "Door43-Catalog/versification `bible/ufw/chunks/*.json` at `af14923`" is.
 - **A Break is observed, not imagined.** If nothing has been run, the verdict is `none-yet`, and Build is `not-yet`. Run the cheapest experiment first: if fifteen minutes of measuring would settle it, measuring is required before the concern counts.
 - **A skip needs a named reason.** "I want to understand it" is not one.
 - **A Bide without a tripwire is dropped scope.** Drop it explicitly or set the tripwire.

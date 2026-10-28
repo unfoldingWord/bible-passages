@@ -204,3 +204,12 @@ every test run until they exist.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.
+8. **Authoritative chunk source**: the UFW chunk files or ULT's `\ts\*`
+   markers. They disagree at 1,184 places
+   ([scoping/ts-vs-ufw.tsv](scoping/ts-vs-ufw.tsv)). The content team's call.
+9. **Consensus check in v0.1**: recommended out; BSB titles ship as-is and
+   review flags changes ([scoping/pipeline.md](scoping/pipeline.md#2-consensus-check)).
+10. **Segment title style**: which Translation Academy heading kind
+    (`checking/headings`) segment titles use. Proposed: explanatory comment.
+11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
+    difficulty after v0.1.
