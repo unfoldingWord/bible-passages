@@ -21,8 +21,7 @@ package format v0. Releases will be git tags (`v0.1.0` onward).
 
 ```
 npm ci
-npm run typecheck
-npm test
+npm run verify
 ```
 
 ## Licence

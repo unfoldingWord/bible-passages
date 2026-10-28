@@ -41,7 +41,10 @@ describe("dist/tc-mobile", () => {
   it.each(tableFiles)("title table %s passes against its package", (file) => {
     const table = read(file) as { packageId?: unknown };
     const pkg = packages.get(String(table.packageId));
-    expect(pkg, `no package for packageId ${String(table.packageId)}`).toBeDefined();
+    expect(
+      pkg,
+      `no package for packageId ${String(table.packageId)}`
+    ).toBeDefined();
     parseTemplateTitleTable(table, pkg as TemplatePackage);
   });
 

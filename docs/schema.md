@@ -55,12 +55,12 @@ Keys name a span and nothing else. A key never changes meaning and is never
 reused (tc-mobile contract, "Keys"). The proposed form follows tc-mobile's own
 Bible fixture (`MRK.1.1-8`):
 
-| Unit | Form | Example |
-| --- | --- | --- |
-| Chapter | `<BOOK>.<c>` | `TIT.1` |
-| Segment | `<BOOK>.<c>.<v>-<v>` | `TIT.1.1-4` |
-| Segment across chapters | `<BOOK>.<c>.<v>-<c>.<v>` | `GEN.1.31-2.3` |
-| Pericope | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
+| Unit                    | Form                       | Example        |
+| ----------------------- | -------------------------- | -------------- |
+| Chapter                 | `<BOOK>.<c>`               | `TIT.1`        |
+| Segment                 | `<BOOK>.<c>.<v>-<v>`       | `TIT.1.1-4`    |
+| Segment across chapters | `<BOOK>.<c>.<v>-<c>.<v>`   | `GEN.1.31-2.3` |
+| Pericope                | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
 
 Because the span is in the key, moving a boundary always produces a new key.
 That is the contract's rule ("give the new passage a new key") enforced by the
@@ -79,11 +79,14 @@ letters, digits and `. _ : -`, at most 64 characters).
 {
   "book": "TIT",
   "versification": "ufw",
-  "pericopes": [
-    { "key": "TIT.P.1.1-4", "start": [1, 1], "end": [1, 4] }
-  ],
+  "pericopes": [{ "key": "TIT.P.1.1-4", "start": [1, 1], "end": [1, 4] }],
   "segments": [
-    { "key": "TIT.1.1-4", "pericope": "TIT.P.1.1-4", "start": [1, 1], "end": [1, 4] }
+    {
+      "key": "TIT.1.1-4",
+      "pericope": "TIT.P.1.1-4",
+      "start": [1, 1],
+      "end": [1, 4]
+    }
   ]
 }
 ```
@@ -112,7 +115,7 @@ letters, digits and `. _ : -`, at most 64 characters).
 - `status`, in order: `unreviewed`, `ai-checked`, `human-reviewed`,
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
-- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<name>`.
+- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 
@@ -163,30 +166,41 @@ changes, minor for keys added, major for keys dropped.
 
 Run on every PR (`npm test`):
 
-| Check | Status |
-| --- | --- |
-| Vendored tc-mobile files match their pinned hashes | built |
-| Every package in `dist/tc-mobile/` passes tc-mobile's checker | built |
-| Every title table passes against its package and version | built |
-| Every `sources.json` entry is pinned (URL, revision, hash, licence, attribution) | built |
-| Every verse in exactly one pericope and one segment | not built |
-| Every span valid against the versification | not built |
-| No released key missing, moved or reused | not built |
-| Every key titled in every language marked complete | not built |
-| Title length and script | not built |
+| Check                                                                            | Status    |
+| -------------------------------------------------------------------------------- | --------- |
+| Vendored tc-mobile files match their pinned hashes                               | built     |
+| Every package in `dist/tc-mobile/` passes tc-mobile's checker                    | built     |
+| Every title table passes against its package and version                         | built     |
+| Every `sources.json` entry is pinned (URL, revision, hash, licence, attribution) | built     |
+| Every verse in exactly one pericope and one segment                              | not built |
+| Every span valid against the versification                                       | not built |
+| No released key missing, moved or reused                                         | not built |
+| Every key titled in every language marked complete                               | not built |
+| Title length and script                                                          | not built |
 
 The unbuilt checks are listed as `it.todo` in `tests/`, so they show up in
 every test run until they exist.
 
 ## Open decisions
 
-1. **v0.1 scope**: segment titles in v0.1 (the Slack post) or later
-   (servant.bible#1)?
-2. **Pericope source**: Clear Bible's biblelib file (reported as 2,436 pericopes, CC BY
-   4.0) or BSB headings rebuilt (reported as 3,016)? Neither count is
-   re-verified in this repo yet.
+1. **v0.1 scope**: the dataset request asks for pericope titles and segment
+   titles (segments from UTN), for the whole Bible, in the Top 10 Strategic
+   Languages, by 2026-11-16. servant.bible#1 lists segment titles as later.
+   Which one is v0.1?
+2. **Pericope source**: Clear Bible's biblelib file (reported as 2,436
+   pericopes, CC BY 4.0) or BSB headings rebuilt (reported as 3,016)? Neither
+   count is re-verified in this repo yet.
 3. **Keys**: the span-based keys above, instead of the pilot's order-based
-   ones.
+   ones. An alternative is to embed a Scripture Burrito scope string, which
+   tc-mobile already uses for sections (its ADR 0004): `TIT.1:1-4`,
+   `GEN.1:31-2:3`. Both fit the key rule.
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
+6. **Translation**: which model translates titles, and how key-term
+   consistency is checked across a book and a language. One suggestion is a
+   fast model for translation, with a script that checks key terms and drives
+   review.
+7. **Review viewer**: the request asks for a visual way to review the dataset
+   that can push versioned updates back to this repo. Its form and how it
+   writes back (a PR per change, never a push to `main`) are open.
