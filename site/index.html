@@ -401,8 +401,10 @@ function renderHome() {
     ["Latest CI", run ? (run.conclusion === "success" ? "Pass" : esc(run.conclusion)) : "–", run ? `${esc(run.sha)} on ${esc(run.branch)}` : ""],
   ].map(([k, v, d]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span><span class="d">${d}</span></div>`).join("");
   $("#sprint-mini").innerHTML = SNAP.milestones.map((m) => {
-    const t = m.open_issues + m.closed_issues, p = t ? (m.closed_issues / t) * 100 : 0;
-    return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${m.closed_issues}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
+    // Counts from a live snapshot are coerced: a string here would otherwise reach innerHTML as markup.
+    const openN = Number(m.open_issues) || 0, closedN = Number(m.closed_issues) || 0;
+    const t = openN + closedN, p = t ? (closedN / t) * 100 : 0;
+    return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${closedN}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
   }).join("");
   $("#ci").innerHTML = SNAP.runs.slice(0, 20).reverse().map((r) => `<a class="${r.conclusion === "success" ? "ok" : r.conclusion === "failure" ? "no" : "sk"}" href="${href(r.url)}" target="_blank" rel="noopener" title="${esc(r.sha)} · ${esc(r.branch)} · ${esc(r.conclusion)}">${r.conclusion === "success" ? "✓" : r.conclusion === "failure" ? "✕" : "–"}</a>`).join("");
   $("#commits").innerHTML = `<table><tbody>${SNAP.commits.slice(0, 6).map((c) => `<tr><td class="mono"><a href="${REPO}/commit/${encodeURIComponent(c.sha)}" target="_blank" rel="noopener">${esc(c.sha)}</a></td><td>${esc(c.msg)}</td><td class="n">${day(c.at)}</td></tr>`).join("")}</tbody></table>`;
@@ -563,7 +565,7 @@ setInterval(liveState, 60000);
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
     const d = snap.data();
-    if (!snapshotOk(d) || d.asOf < SNAP.asOf) return;
+    if (!snapshotOk(d) || Date.parse(d.asOf) < Date.parse(SNAP.asOf)) return;
     const prev = [SNAP, SNAP_KIND];
     try { SNAP = d; SNAP_KIND = "live"; renderLive(); }
     catch (e) { [SNAP, SNAP_KIND] = prev; renderLive(); }
