@@ -24,9 +24,12 @@ successor in `data/retired-keys.json` and is never reused.
 ## Cost, accepted
 
 Any boundary change retires a key and orphans the reviewed titles attached
-to it. Titles carry forward to the successor as `unreviewed` drafts. The
-chunk source (open decision 8) must be settled before the first release,
-because changing it later retires thousands of keys.
+to it. Titles carry forward to the successor as `unreviewed` drafts. This
+covers a one-to-one change only. A split (one key, several successors) and a
+merge (several keys, one successor) are not decided here: until they are,
+no tool invents a carry-forward rule for them. The chunk source (open
+decision 8) must be settled before the first release, because changing it
+later retires thousands of keys.
 
 ## Rejected
 
