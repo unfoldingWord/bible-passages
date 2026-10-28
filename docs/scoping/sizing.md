@@ -27,7 +27,8 @@ code, the same pinned sources) on 2026-10-28 and matched.
 ## Derived counts
 
 These use the UFW chunk files. With ULT's `\ts\*` markers as the source
-(schema.md, decision 8) they become 13,773 segments and 16,789 English titles.
+(schema.md, decision 8) they become 13,713 segments (13,548 sections plus 165 splits) and 16,729 English
+titles.
 
 263 pericopes are exactly one segment, so their pericope title and segment
 title describe the same verses. Drafting both is a choice to make (deduped:
