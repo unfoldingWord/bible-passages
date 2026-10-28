@@ -148,6 +148,18 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .final{border-radius:8px;padding:10px 12px;background:var(--good-bg);color:var(--ink)}
 .final b{color:var(--good)}
 .saved{font-size:.84rem;color:var(--muted)}
+.gh{position:relative}
+.gh summary{list-style:none;cursor:pointer;color:var(--mast-ink);font-weight:800;font-size:.92rem;padding:7px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);white-space:nowrap}
+.gh summary::-webkit-details-marker{display:none}
+.gh[open] summary{background:rgba(255,255,255,.1)}
+.gh .drop{position:absolute;right:0;top:calc(100% + 8px);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 12px 30px rgba(1,30,48,.22);padding:8px;min-width:260px;display:grid;gap:2px;z-index:20}
+.gh .drop a{color:var(--ink);text-decoration:none;padding:8px 10px;border-radius:6px;display:flex;justify-content:space-between;gap:12px;font-size:.92rem;font-weight:600}
+.gh .drop a span{color:var(--muted);font-size:.8rem;font-weight:400}
+.gh .drop a:hover{background:var(--sunk)}
+.gh .drop hr{border:0;border-top:1px solid var(--line);margin:4px 2px}
+@media (max-width:900px){.gh .drop{position:static;margin-top:6px;box-shadow:none}.gh summary{display:inline-block;margin-top:4px}}
+.dated{display:inline-flex;gap:6px;align-items:center;font-size:.78rem;font-weight:700;color:var(--muted)}
+.dated.old{color:var(--warn)}
 .foot{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;color:var(--muted);font-size:.84rem;display:grid;gap:4px}
 @media (prefers-reduced-motion:no-preference){section.page{animation:in .2s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
 </style>
@@ -158,7 +170,23 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   <nav class="global" id="global-nav" aria-label="Project pages">
     <a href="#home">Home</a><a href="#plan">Plan</a><a href="#scope">Scope</a><a href="#sizing">Sizing</a>
     <a href="#decisions">Decisions</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
-    <a href="https://github.com/unfoldingWord/bible-passages" target="_blank" rel="noopener">GitHub ↗</a>
+    <details class="gh"><summary>GitHub ▾</summary><div class="drop">
+      <a href="https://github.com/unfoldingWord/bible-passages" target="_blank" rel="noopener">Repository <span>unfoldingWord/bible-passages</span></a>
+      <a href="https://github.com/unfoldingWord/bible-passages/issues" target="_blank" rel="noopener">Issues</a>
+      <a href="https://github.com/unfoldingWord/bible-passages/pulls" target="_blank" rel="noopener">Pull requests</a>
+      <a href="https://github.com/unfoldingWord/bible-passages/milestones" target="_blank" rel="noopener">Milestones <span>sprints</span></a>
+      <a href="https://github.com/unfoldingWord/bible-passages/actions" target="_blank" rel="noopener">Actions <span>CI</span></a>
+      <a href="https://github.com/unfoldingWord/bible-passages/releases" target="_blank" rel="noopener">Releases <span>none yet</span></a>
+      <hr>
+      <a data-doc="docs/scoping/plan.md" target="_blank" rel="noopener">Plan to v0.1</a>
+      <a data-doc="docs/scoping" target="_blank" rel="noopener">Scoping <span>6B, sizing</span></a>
+      <a data-doc="docs/schema.md" target="_blank" rel="noopener">Schema <span>draft</span></a>
+      <a data-doc="AGENTS.md" target="_blank" rel="noopener">AGENTS.md <span>how we work</span></a>
+      <a data-doc="docs/progress_tracker.md" target="_blank" rel="noopener">Progress tracker</a>
+      <hr>
+      <a href="https://github.com/unfoldingWord/servant.bible/issues/1" target="_blank" rel="noopener">servant.bible#1 <span>tracking issue</span></a>
+      <a href="https://github.com/unfoldingWord/tc-mobile/issues/1459" target="_blank" rel="noopener">tc-mobile#1459 <span>reads the dataset</span></a>
+    </div></details>
   </nav>
 </div></header>
 
@@ -176,12 +204,12 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 
 <section class="page" data-page="home" aria-label="Home">
   <div class="callout"><div>
-    <span class="eyebrow">Where it stands · 28 Oct 2026</span>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-28T21:10:00Z"></span></div>
     <ul>
-      <li><b>The repo exists and is scaffolded</b> (PR #1, in review by the review bench). No data yet. tC Mobile's own template checker runs in CI.</li>
-      <li><b>Every base count is measured and independently re-derived:</b> 3,016 pericopes, 13,608 chunks, 162 splits, so 13,770 segments and 16,786 English titles. The pilot's 194 splits came from a Psalms parsing quirk.</li>
-      <li><b>The constraint now is decisions.</b> Scope, keys and which chunk source is authoritative decide what gets built. ULT's chunk markers and the chunk files disagree at 1,184 places. See <a href="#decisions">Decisions</a>.</li>
-      <li><b>Next gate:</b> Titus built end to end by 1 Nov, so the rest of the plan is sized from measured rates, not guesses. See <a href="#plan">Plan</a>.</li>
+      <li><b>The repo is scaffolded; there is no data yet.</b> PR #1 (scaffold, scoping, this site) has a review requested from the review bench and no verdict yet. tC Mobile's own template checker runs in CI.</li>
+      <li><b>Every base count is measured and was re-derived by a second model:</b> 3,016 pericopes, 13,608 chunks, 162 chunks a pericope starts inside, so 13,770 segments and 16,786 English titles. The pilot's 194 came from a Psalms parsing quirk.</li>
+      <li><b>The constraint now is decisions.</b> Scope, keys and the authoritative chunk source decide what gets built. They were posted on <a href="https://github.com/unfoldingWord/servant.bible/issues/1#issuecomment-6480617648" target="_blank" rel="noopener">servant.bible#1</a> on 28 Oct with the list of 162 split chunks the content team asked for. See <a href="#decisions">Decisions</a>.</li>
+      <li><b>Next gate:</b> Titus built end to end by 1 Nov, so the rest of the plan is sized from measured rates. See <a href="#plan">Plan</a>.</li>
     </ul>
   </div></div>
   <div class="kpis" id="kpis"></div>
@@ -197,22 +225,22 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 </section>
 
 <section class="page" data-page="plan" hidden aria-label="Plan">
-  <div class="lead"><span class="eyebrow">Plan · sprints aligned with tC Mobile</span><h2>The road to v0.1 on 16 November</h2>
-  <p>Correctness comes before the date. Each gate passes on evidence or becomes a recorded decision. From <a href="https://github.com/unfoldingWord/bible-passages/blob/chore/scaffold/docs/scoping/plan.md" target="_blank" rel="noopener">docs/scoping/plan.md</a>.</p></div>
+  <div class="lead"><span class="eyebrow">Plan · sprints aligned with tC Mobile</span><h2>The road to v0.1 on 16 November</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <p>Correctness comes before the date. Each gate passes on evidence or becomes a recorded decision. From <a data-doc="docs/scoping/plan.md" target="_blank" rel="noopener">docs/scoping/plan.md</a>.</p></div>
   <div class="tw"><table><thead><tr><th>Date</th><th>Gate</th><th>Passes when</th><th>If it fails</th></tr></thead><tbody id="gates"></tbody></table></div>
   <div class="sprints" id="sprints"></div>
   <p class="src">Issues and milestones from GitHub · <span class="asof"></span></p>
 </section>
 
 <section class="page" data-page="scope" hidden aria-label="Scope">
-  <div class="lead"><span class="eyebrow">Scope · 6B evaluations</span><h2>What we borrow, bend and build</h2>
-  <p>Each component was checked against unfoldingWord and partner work first: Borrow (use as is), Bend (use in a new way), Break (where it actually failed), Beget (someone else carries it), Bide (wait, with a tripwire), Build (only what is left). Full tables, with evidence, are in <a href="https://github.com/unfoldingWord/bible-passages/tree/chore/scaffold/docs/scoping" target="_blank" rel="noopener">docs/scoping</a>.</p></div>
+  <div class="lead"><span class="eyebrow">Scope · 6B evaluations</span><h2>What we borrow, bend and build</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <p>Each component was checked against unfoldingWord and partner work first: Borrow (use as is), Bend (use in a new way), Break (where it actually failed), Beget (someone else carries it), Bide (wait, with a tripwire), Build (only what is left). Full tables, with evidence, are in <a data-doc="docs/scoping" target="_blank" rel="noopener">docs/scoping</a>.</p></div>
   <div class="tw"><table><thead><tr><th>Component</th><th>Borrow</th><th>Bend</th><th>Break</th><th>Beget</th><th>Bide</th><th>Build</th></tr></thead><tbody id="sixb"></tbody></table></div>
   <div class="panel"><h3>The breaks that shape the build</h3><ul class="plain" id="breaks"></ul></div>
 </section>
 
 <section class="page" data-page="sizing" hidden aria-label="Sizing">
-  <div class="lead"><span class="eyebrow">Sizing · measured, then derived</span><h2>How big the dataset is</h2>
+  <div class="lead"><span class="eyebrow">Sizing · measured, then derived</span><h2>How big the dataset is</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
   <p>Every number is labelled measured or estimated. Measured counts come from pinned commits of Door43 sources and were re-derived by a second model with its own code.</p></div>
   <div class="kpis" id="size-kpis"></div>
   <div class="panel"><h3>Pericopes and segments by book</h3>
@@ -245,7 +273,8 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 </section>
 
 <section class="page" data-page="checks" hidden aria-label="Checks">
-  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2></div>
+  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <p>Static text is dated, and flagged once it is more than a week old. Live sections show when their data was last read from GitHub.</p></div>
   <div class="tw"><table><thead><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="checks"></tbody></table></div>
 </section>
 
@@ -254,9 +283,12 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 <div id="tip" hidden></div>
 
 <script>
-const BASE = {"schema":"bp.snapshot","v":1,"asOf":"2026-10-28T20:59:18.980Z","repo":{"pushedAt":"2026-10-28T20:56:11Z","defaultBranch":"main","openIssues":14},"commits":[{"sha":"61abcd0","msg":"Initial commit: README and CC BY-SA 4.0 licence","at":"2026-10-28T19:57:22Z"}],"pulls":[{"number":1,"title":"Scaffold: layout, draft schema, checks, CLAUDE.md","state":"open","draft":false,"merged":false,"at":"2026-10-28T20:56:12Z"}],"issues":[{"number":14,"title":"Servant.Bible registry entry for uw/bible-passages","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":13,"title":"Release v0.1.0 and hand it to tC Mobile (#1459)","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":12,"title":"dist generator, key-stability check and release workflow","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":11,"title":"Review screen and sync to PRs","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":10,"title":"Title translation runner with ported quality gates","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":9,"title":"Glossaries for the 9 v0.1 languages from Translation Words","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":8,"title":"Segment title drafting with a cross-model check","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":7,"title":"Segments: nest chunks in pericopes and split at pericope starts","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":6,"title":"Pericope parser for all 66 books, with the Psalms verse-1 rule","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":5,"title":"Project site for this dataset, with a scheduled snapshot","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":4,"title":"Ask the content team which chunk source is authoritative (1,184 differences)","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":3,"title":"Titus end to end: build one book and measure the real rates","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":2,"title":"Record the v0.1 decisions from servant.bible#1 as ADRs","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null}],"milestones":[{"number":1,"title":"Sprint 5 (10-19 → 11-01)","open_issues":4,"closed_issues":0,"state":"open","due":"2026-11-01T00:00:00Z"},{"number":2,"title":"Sprint 6 (11-02 → 11-15)","open_issues":7,"closed_issues":0,"state":"open","due":"2026-11-15T00:00:00Z"},{"number":3,"title":"Sprint 7 (11-16 → 11-29) — v0.1.0","open_issues":2,"closed_issues":0,"state":"open","due":"2026-11-29T00:00:00Z"}],"runs":[{"sha":"8722d06","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:56:16Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767662951"},{"sha":"52d4616","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:52:29Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767122060"},{"sha":"8ec3c30","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:48:01Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40766473987"},{"sha":"b913544","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:29:47Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40763787295"},{"sha":"43c2760","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:15:08Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761583791"},{"sha":"84ad2b2","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:14:09Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761431068"},{"sha":"64537a6","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:10:58Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40760957052"}],"coverage":{"structure":[],"titles":{"en":[],"ar":[],"fr":[],"hi":[],"id":[],"zh-Hans":[],"pt-BR":[],"ru":[],"es":[],"sw":[]}},"external":{"servant1":{"state":"open","comments":1,"lastCommentAt":"2026-10-28T14:23:42Z","assignees":0},"tcm1459":{"state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v1.3.0"}}};
+const BASE = {"schema":"bp.snapshot","v":1,"asOf":"2026-10-28T21:11:48.134Z","repo":{"pushedAt":"2026-10-28T21:10:12Z","defaultBranch":"main","openIssues":14},"commits":[{"sha":"61abcd0","msg":"Initial commit: README and CC BY-SA 4.0 licence","at":"2026-10-28T19:57:22Z"}],"pulls":[{"number":1,"title":"Scaffold: layout, draft schema, checks, CLAUDE.md","state":"open","draft":false,"merged":false,"at":"2026-10-28T21:10:13Z"}],"issues":[{"number":14,"title":"Servant.Bible registry entry for uw/bible-passages","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":13,"title":"Release v0.1.0 and hand it to tC Mobile (#1459)","state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":12,"title":"dist generator, key-stability check and release workflow","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":11,"title":"Review screen and sync to PRs","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":10,"title":"Title translation runner with ported quality gates","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":9,"title":"Glossaries for the 9 v0.1 languages from Translation Words","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":8,"title":"Segment title drafting with a cross-model check","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":7,"title":"Segments: nest chunks in pericopes and split at pericope starts","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":6,"title":"Pericope parser for all 66 books, with the Psalms verse-1 rule","state":"open","milestone":"Sprint 6 (11-02 → 11-15)","closedAt":null},{"number":5,"title":"Project site for this dataset, with a scheduled snapshot","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":4,"title":"Ask the content team which chunk source is authoritative (1,184 differences)","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":3,"title":"Titus end to end: build one book and measure the real rates","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null},{"number":2,"title":"Record the v0.1 decisions from servant.bible#1 as ADRs","state":"open","milestone":"Sprint 5 (10-19 → 11-01)","closedAt":null}],"milestones":[{"number":1,"title":"Sprint 5 (10-19 → 11-01)","open_issues":4,"closed_issues":0,"state":"open","due":"2026-11-01T00:00:00Z"},{"number":2,"title":"Sprint 6 (11-02 → 11-15)","open_issues":7,"closed_issues":0,"state":"open","due":"2026-11-15T00:00:00Z"},{"number":3,"title":"Sprint 7 (11-16 → 11-29) — v0.1.0","open_issues":2,"closed_issues":0,"state":"open","due":"2026-11-29T00:00:00Z"}],"runs":[{"sha":"0c1925b","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T21:10:18Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40769683067"},{"sha":"0c1925b","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T21:10:17Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40769682957"},{"sha":"aa8be03","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T21:03:11Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40768655321"},{"sha":"38f325a","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T21:02:17Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40768522939"},{"sha":"812b9d3","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T21:00:29Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40768256018"},{"sha":"8722d06","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:56:16Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767662951"},{"sha":"52d4616","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:52:29Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40767122060"},{"sha":"8ec3c30","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:48:01Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40766473987"},{"sha":"b913544","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:29:47Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40763787295"},{"sha":"43c2760","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:15:08Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761583791"},{"sha":"84ad2b2","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:14:09Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40761431068"},{"sha":"64537a6","branch":"chore/scaffold","conclusion":"success","at":"2026-10-28T20:10:58Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40760957052"}],"coverage":{"structure":[],"titles":{"en":[],"ar":[],"fr":[],"hi":[],"id":[],"zh-Hans":[],"pt-BR":[],"ru":[],"es":[],"sw":[]}},"external":{"servant1":{"state":"open","comments":2,"lastCommentAt":"2026-10-28T21:02:49Z","assignees":0},"tcm1459":{"state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v1.3.0"}}};
 const BOOKS = [["GEN",50,135,634,16],["EXO",40,123,470,3],["LEV",27,70,372,0],["NUM",36,113,540,4],["DEU",34,91,480,1],["JOS",24,51,308,1],["JDG",21,52,302,5],["RUT",4,8,38,0],["1SA",31,70,396,4],["2SA",24,64,307,6],["1KI",22,94,358,0],["2KI",25,93,309,7],["1CH",29,84,356,7],["2CH",36,106,357,9],["EZR",10,28,112,3],["NEH",13,28,164,3],["EST",10,20,75,3],["JOB",42,50,433,2],["PSA",150,150,1135,0],["PRO",31,39,441,1],["ECC",12,26,114,6],["SNG",8,9,78,0],["ISA",66,120,690,3],["JER",52,122,570,5],["LAM",5,7,67,0],["EZK",48,114,549,3],["DAN",12,33,175,1],["HOS",14,19,101,0],["JOL",3,9,36,1],["AMO",9,14,77,1],["OBA",1,2,10,0],["JON",4,6,22,0],["MIC",7,15,51,1],["NAM",3,3,25,0],["HAB",3,7,29,0],["ZEP",3,10,24,0],["HAG",2,5,16,0],["ZEC",14,25,94,0],["MAL",4,8,24,0],["MAT",28,153,431,8],["MRK",16,96,269,7],["LUK",24,154,490,3],["JHN",21,84,360,11],["ACT",28,110,400,10],["ROM",16,47,197,4],["1CO",16,45,178,1],["2CO",13,25,110,1],["GAL",6,16,60,2],["EPH",6,17,61,1],["PHP",4,15,37,2],["COL",4,12,35,1],["1TH",5,10,32,0],["2TH",3,7,18,1],["1TI",6,20,45,1],["2TI",4,11,30,2],["TIT",3,8,24,1],["PHM",1,4,8,0],["HEB",13,34,122,2],["JAS",5,15,42,3],["1PE",5,15,43,1],["2PE",3,7,24,0],["1JN",5,15,41,0],["2JN",1,4,5,0],["3JN",1,4,5,0],["JUD",1,4,11,0],["REV",22,61,191,4]]; // [code, chapters, pericopes, chunks, splits]
 const REPO = "https://github.com/unfoldingWord/bible-passages";
+// Docs live on PR #1's branch until it merges; change this to "main" then.
+const DOCS_REF = "chore/scaffold";
+const doc = (path) => `${REPO}/${path.includes(".") ? "blob" : "tree"}/${DOCS_REF}/${path}`;
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const fmt = (n) => Number(n).toLocaleString("en-US");
@@ -289,8 +321,8 @@ const BREAKS = [
   "<b>34 Psalms chapters in BSB have no verse 1 marker.</b> A simple parse starts their first pericope at verse 2 and over-counts splits by 32 (194 instead of 162).",
   "<b>ULT's chunk markers and the chunk files disagree at 1,184 places</b> (622 + 562). Segment boundaries become permanent keys, so the authoritative source is the content team's call first.",
   "<b>No pericope crosses a chapter:</b> BSB opens all 1,189 chapters with a heading at verse 1. A story that runs across a chapter break gets a new pericope there.",
-  "<b>Chinese has no Translation Words on Door43</b> to seed a glossary; the other 8 languages do.",
-  "<b>No uW tool writes reviewed text back to GitHub.</b> The pilot's review tab keeps reviews in its own store, so the one new piece is a sync that opens PRs.",
+  "<b>Chinese has no Translation Words on Door43</b> to seed a glossary; the other 8 languages do (from a survey of the Door43 catalog, not re-run).",
+  "<b>No uW tool writes reviewed text back to GitHub.</b> The pilot's review tab keeps reviews in its own store, so the one new piece is a sync that opens PRs (from a survey of uW repos, not re-run).",
   "<b>tC Mobile's checker can't see a key that moved between releases</b>, so the dataset checks key stability itself.",
 ];
 
@@ -298,7 +330,7 @@ const DECIDE = [
   { id: "d1", n: 1, by: "Requirements owner", q: "What is v0.1?", opts: [["full", "The full request", "Pericope and segment titles, 66 books, 10 languages, by 16 Nov."], ["subset", "A gated subset", "All structure and English titles; languages that pass the gates by 13 Nov; the rest in v0.1.x."], ["issue", "The issue's scope", "Pericope titles and segments; segment titles later."]] },
   { id: "d2", n: 2, by: "Requirements owner", q: "Where do pericopes come from?", opts: [["bsb", "BSB section headings", "3,016 headings, public domain. The build plan's choice. (Proposed.)"], ["other", "Another source", "Say which in your note."]] },
   { id: "d3", n: 3, by: "DRI", q: "What form do keys take?", opts: [["span", "Span keys: TIT.1.1-4", "Matches tC Mobile's own fixture; a moved boundary always gets a new key. (Proposed.)"], ["scope", "Scripture Burrito scope: TIT.1:1-4", "Matches tC Mobile's section addressing (its ADR 0004)."], ["order", "Order keys: TIT.P02", "The pilot's form; inserting one pericope renumbers the rest."]] },
-  { id: "d8", n: 8, by: "Content team", q: "Which chunk source is authoritative?", opts: [["ufw", "The UFW chunk files", "13,608 chunks; the build plan's source."], ["ult", "ULT's \\ts\\* markers", "13,575 markers; 165 splits instead of 162."], ["case", "Case by case", "The content team rules on each of the 1,184 differences."]] },
+  { id: "d8", n: 8, by: "Content team", q: "Which chunk source is authoritative?", opts: [["ufw", "The UFW chunk files", "13,608 chunks; the build plan's source."], ["ult", "ULT's \\ts\\* markers", "13,548 sections by tC 4.0's rule (from 13,575 markers); 165 splits instead of 162."], ["case", "Case by case", "The content team rules on each of the 1,184 differences."]] },
   { id: "d9", n: 9, by: "Requirements owner", q: "Is the consensus check in v0.1?", opts: [["out", "Out of v0.1", "BSB titles ship with their source; review flags changes; overrides can come later. (Proposed.)"], ["in", "In v0.1", "Needs a source for 8 copyrighted Bibles' headings (about 9,500 pages)."]] },
   { id: "d10", n: 10, by: "Requirements owner", q: "Which heading style do segment titles use?", opts: [["explain", "Explanatory comment", "“Jesus heals a paralyzed man.” Short and plain. (Proposed.)"], ["topic", "Topical reference", "“Cure of a paralytic.” Shortest; assumes Bible knowledge."], ["about", "“About” comment", "“About Jesus healing a paralyzed man.” Clearly not Bible text."], ["question", "Question", "“Does Jesus have authority to heal?”"]] },
   { id: "d11", n: 11, by: "Requirements owner", q: "What metadata is in v0.1?", opts: [["kt", "Key terms only", "They also feed the translation glossaries. (Proposed.)"], ["all", "All of it", "Topics, key terms, figures of speech, literary form, difficulty."], ["none", "None", "Spans and titles only; tC Mobile reads nothing else."]] },
@@ -312,11 +344,12 @@ const CHECKS = [
   ["162 chunks contain a pericope start (165 on ULT markers)", "Re-derived", "Each split chunk holds exactly one start. 194 is the count without the Psalms verse-1 rule."],
   ["1,184 places where ULT markers and chunk files disagree", "Re-derived", "Row-for-row identical list from two independent scripts (docs/scoping/ts-vs-ufw.tsv)."],
   ["BSB is public domain", "Read", "en_bsb LICENSE.md: dedicated to the public domain on 30 Apr 2023."],
-  ["BSB uses the same versification as ULT", "Re-derived", "Last verse per chapter matches ufw.vrs in all 66 books; no verse bridges."],
+  ["BSB's verse counts match ULT's versification", "Re-derived", "Last verse per chapter matches ufw.vrs in all 66 books; no verse bridges. Verse contents were not compared."],
   ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Reported", "From a read-only survey of the Door43 catalog; completeness not checked."],
   ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
   ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
-  ["This site's numbers refresh every 3 hours", "Pending", "The routine is being set up; the pill at the top shows when the data was last written."],
+  ["This site's GitHub numbers refresh every 3 hours", "Unresolved", "Not yet. The scheduled refresh ran twice on 28 Oct and wrote nothing: GitHub returned 401 to the cloud sandbox's token and 429 (rate limited) without it. The numbers here were refreshed by hand; the \u201cupdated\u201d time in the masthead shows their age."],
+  ["Document links point at PR #1's branch", "Dated", "The docs are on chore/scaffold until PR #1 merges; the links move to main then."],
 ];
 
 /* ---------- render ---------- */
@@ -324,12 +357,21 @@ function liveState() {
   const el = $("#live"), t = $("#live-text");
   const age = (Date.now() - Date.parse(SNAP.asOf)) / 3.6e6;
   el.className = "live " + (SNAP_KIND === "live" ? (age > 7 ? "stale" : "on") : "");
-  t.textContent = (SNAP_KIND === "live" ? "Live data" : "Baseline snapshot") + " · " + new Date(SNAP.asOf).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
+  const ago = age < 1 ? Math.max(1, Math.round(age * 60)) + " min ago" : age < 48 ? Math.round(age) + " h ago" : Math.round(age / 24) + " days ago";
+  t.textContent = (SNAP_KIND === "live" ? "Live from GitHub" : "Baseline snapshot") + " · updated " + ago;
+  el.title = new Date(SNAP.asOf).toUTCString();
+  document.querySelectorAll(".dated").forEach((d) => {
+    const w = Date.parse(d.dataset.written), old = Date.now() - w > 7 * 864e5;
+    d.className = "dated" + (old ? " old" : "");
+    d.textContent = (old ? "⚠ May be out of date · " : "") + "Written " + new Date(w).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }) + " · static";
+  });
+  document.querySelectorAll("[data-doc]").forEach((a) => (a.href = doc(a.dataset.doc)));
   document.querySelectorAll(".asof").forEach((e) => (e.textContent = "as of " + day(SNAP.asOf)));
 }
 function renderMast() {
   const days = Math.ceil((Date.parse("2026-11-16T00:00:00Z") - Date.now()) / 864e5);
-  $("#mast-meta").innerHTML = `<span>v0.1 target <b>16 Nov 2026</b> (${days > 0 ? days + " days" : "reached"})</span><span>Read by <b>tC Mobile v2</b> (#1459)</span><span>Data <b>CC BY-SA 4.0</b></span>`;
+  const now = Date.now(), cur = SNAP.milestones.find((m) => { const d = Date.parse(m.due); return d >= now && d - 14 * 864e5 < now; });
+  $("#mast-meta").innerHTML = `<span>Release <b>none yet</b> · v0.1.0 due 16 Nov (${days > 0 ? days + " days" : "date reached"})</span><span>Now <b>${esc(cur ? cur.title : "between sprints")}</b></span><span>For <b>tC Mobile v2</b> (#1459, Sprint 7)</span><span>Roles <b>DRI · requirements owner · content team</b></span>`;
   const max = Math.max(...BOOKS.map((b) => b[2]));
   $("#canon").innerHTML = BOOKS.map((b, i) => `<i class="${i >= 39 ? "nt" : ""}" style="height:${Math.max(6, (b[2] / max) * 100)}%" title="${b[0]}: ${b[2]} pericopes"></i>`).join("");
 }
@@ -365,7 +407,7 @@ function renderPlan() {
   }).join("");
 }
 function renderScope() {
-  $("#sixb").innerHTML = SIXB.map((r) => `<tr><td><a href="${REPO}/blob/chore/scaffold/docs/scoping/${r[7]}" target="_blank" rel="noopener"><b>${r[0]}</b></a></td>${r.slice(1, 7).map((v) => `<td><span class="pill ${V[v] ?? ""}">${v}</span></td>`).join("")}</tr>`).join("");
+  $("#sixb").innerHTML = SIXB.map((r) => `<tr><td><a href="${doc("docs/scoping/" + r[7])}" target="_blank" rel="noopener"><b>${r[0]}</b></a></td>${r.slice(1, 7).map((v) => `<td><span class="pill ${V[v] ?? ""}">${v}</span></td>`).join("")}</tr>`).join("");
   $("#breaks").innerHTML = BREAKS.map((b) => `<li>${b}</li>`).join("");
 }
 function renderSizing() {
@@ -406,11 +448,11 @@ function renderCoverage() {
   $("#cov").innerHTML = h;
 }
 function renderChecks() {
-  const cls = { "Re-derived": "good", Read: "good", Reported: "blue", Assumption: "warn", Unresolved: "warn", Pending: "" };
+  const cls = { "Re-derived": "good", Read: "good", Reported: "blue", Assumption: "warn", Unresolved: "warn", Pending: "", Dated: "warn", Observed: "good" };
   $("#checks").innerHTML = CHECKS.map((c) => `<tr><td>${c[0]}</td><td><span class="pill ${cls[c[1]]}">${c[1]}</span></td><td>${c[2]}</td></tr>`).join("");
 }
 function renderFoot() {
-  $("#foot").innerHTML = `<span>Built from <a href="${REPO}" target="_blank" rel="noopener">unfoldingWord/bible-passages</a>. Numbers on GitHub refresh every 3 hours; measured counts are pinned to source commits.</span><span>Snapshot ${esc(SNAP.asOf)}.</span>`;
+  $("#foot").innerHTML = `<span>Built from <a href="${REPO}" target="_blank" rel="noopener">unfoldingWord/bible-passages</a>. GitHub numbers come from a snapshot a scheduled routine writes every 3 hours (the pill at the top shows its age); measured counts are pinned to source commits.</span><span>Snapshot ${esc(SNAP.asOf)}.</span>`;
 }
 function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
 

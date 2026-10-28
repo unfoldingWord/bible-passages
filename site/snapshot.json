@@ -1,9 +1,9 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-10-28T20:59:18.980Z",
+  "asOf": "2026-10-28T21:11:48.134Z",
   "repo": {
-    "pushedAt": "2026-10-28T20:56:11Z",
+    "pushedAt": "2026-10-28T21:10:12Z",
     "defaultBranch": "main",
     "openIssues": 14
   },
@@ -21,7 +21,7 @@
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-28T20:56:12Z"
+      "at": "2026-10-28T21:10:13Z"
     }
   ],
   "issues": [
@@ -145,6 +145,41 @@
   ],
   "runs": [
     {
+      "sha": "0c1925b",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:10:18Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769683067"
+    },
+    {
+      "sha": "0c1925b",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:10:17Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769682957"
+    },
+    {
+      "sha": "aa8be03",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:03:11Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768655321"
+    },
+    {
+      "sha": "38f325a",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:02:17Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768522939"
+    },
+    {
+      "sha": "812b9d3",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:00:29Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768256018"
+    },
+    {
       "sha": "8722d06",
       "branch": "chore/scaffold",
       "conclusion": "success",
@@ -212,8 +247,8 @@
   "external": {
     "servant1": {
       "state": "open",
-      "comments": 1,
-      "lastCommentAt": "2026-10-28T14:23:42Z",
+      "comments": 2,
+      "lastCommentAt": "2026-10-28T21:02:49Z",
       "assignees": 0
     },
     "tcm1459": {
