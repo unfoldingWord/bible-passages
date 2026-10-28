@@ -88,7 +88,7 @@ Reversibility: forward = low; backward = low.
 | Break  | observed | The validator cannot see a key that moved between releases (tc-mobile contract, "Keys"). Listing as "available" on Servant.Bible needs its quality standard (servant.bible ADR 0004; draft in #20, open) _(reported)_.                                    |
 | Beget  | n/a      |                                                                                                                                                                                                                                                           |
 | Bide   | waiting  | The registry entry waits for PR #31 to merge. Tripwire: PR #31 merges, or 2026-11-09 (a week before v0.1), whichever is first. Fallback: the release is still a tag on this repo, which is all tC Mobile needs.                                           |
-| Build  | minimal  | The `data/` → `dist/` generator, the key-stability check against the last tag, and a release workflow that attaches `dist/` to the tag.                                                                                                                   |
+| Build  | minimal  | The `data/` → `dist/` generator; the key-stability check against the last tag (`scripts/lib/keys.ts`, record in `data/retired-keys.json`); the release workflow that attaches `dist/` to a draft release for the tag (`.github/workflows/release.yml`).   |
 
 Reversibility: forward = low; backward = high once released. A package `id`
 and its keys are permanent.
@@ -96,7 +96,12 @@ and its keys are permanent.
 ## Built so far
 
 The Build rows above for pericopes (1), segments (3), versification (4) and
-the `data/` → `dist/` generator (9), for one book first:
+publish (9), for one book first. Publish (9) is built for every book at
+once: the key-stability check reads every `data/structure/` file at the last
+release tag, and the release workflow attaches every package. Neither has run
+against a real tag yet; no tag exists (observed 2026-10-28,
+`git ls-remote --tags origin` empty). Fixture tests cover a moved boundary, a
+dropped key, a changed span and a reused retired key.
 
 | Book | Date       | Result                                                                                                                                                                                                                                                                  |
 | ---- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
