@@ -2,7 +2,7 @@
 // REST API and prints it as JSON. GraphQL is avoided on purpose: cloud
 // routines block it. GITHUB_TOKEN is optional; the repos read are public.
 //
-//   node scripts/site/snapshot.mjs > snapshot.json
+//   node scripts/site/snapshot.mjs > site/snapshot.json
 
 const API = "https://api.github.com";
 const REPO = "unfoldingWord/bible-passages";
