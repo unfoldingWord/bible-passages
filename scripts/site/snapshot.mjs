@@ -27,8 +27,14 @@ const headers = {
     : {}),
 };
 
+// A token the API rejects (401) is dropped and the request retried without
+// it: some sandboxes export a GITHUB_TOKEN that only works through a proxy.
 async function get(path) {
-  const res = await fetch(`${API}/${path}`, { headers });
+  let res = await fetch(`${API}/${path}`, { headers });
+  if (res.status === 401 && headers.Authorization) {
+    const { Authorization, ...anonymous } = headers;
+    res = await fetch(`${API}/${path}`, { headers: anonymous });
+  }
   if (!res.ok) throw new Error(`GET ${path}: ${res.status}`);
   return res.json();
 }
