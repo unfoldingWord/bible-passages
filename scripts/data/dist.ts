@@ -4,6 +4,7 @@
 //
 //   node scripts/data/dist.ts
 import { readFileSync } from "node:fs";
+import { BOOKS } from "../lib/books.ts";
 import { source } from "../lib/sources.ts";
 import type { Structure } from "../lib/structure.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
@@ -15,8 +16,8 @@ const read = (path: string) =>
 /** Set by the release workflow from the tag; unreleased builds say so. */
 const VERSION = (read("package.json") as { version: string }).version;
 const REVISION = process.env.RELEASE_TAG ?? "unreleased";
-const BOOKS = ["TIT"];
 
+// A book dropped from BOOKS leaves no stale package.
 const out = new URL("dist/tc-mobile/", root);
 clearJson(out);
 

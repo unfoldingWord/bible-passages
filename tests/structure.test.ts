@@ -106,12 +106,24 @@ describe("data/structure", () => {
       }
     });
 
-    it("has the same segment keys in dist/tc-mobile as in data", () => {
+    it("has the same segments in dist/tc-mobile as in data", () => {
       const pkg = read(`dist/tc-mobile/${book}.json`) as {
-        chapters: { segments: { key: string }[] }[];
+        chapters: { segments: { key: string; reference: unknown }[] }[];
       };
-      const dist = pkg.chapters.flatMap((c) => c.segments.map((x) => x.key));
-      expect(dist).toEqual(s.segments.map((x) => x.key));
+      const dist = pkg.chapters.flatMap((c) => c.segments);
+      expect(dist).toEqual(
+        s.segments.map((x) => ({
+          key: x.key,
+          reference: {
+            book,
+            startChapter: x.start[0],
+            startVerse: x.start[1],
+            endChapter: x.end[0],
+            endVerse: x.end[1],
+          },
+          thumbnail: null,
+        }))
+      );
     });
   });
 

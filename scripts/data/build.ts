@@ -2,6 +2,7 @@
 // pericope titles for each book, and the verse counts the checks use.
 //
 //   node scripts/data/build.ts
+import { BOOKS } from "../lib/books.ts";
 import { readSource } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 import {
@@ -9,10 +10,8 @@ import {
   parseChunks,
   parseHeadings,
   parseVrs,
+  plain,
 } from "../lib/structure.ts";
-
-/** Books built so far: one book end to end before the next (AGENTS.md). */
-const BOOKS = ["TIT"];
 
 const data = new URL("../../data/", import.meta.url);
 
@@ -38,8 +37,9 @@ for (const book of BOOKS) {
   const structure = buildStructure(book, lastVerses, headings, chunks);
   await write(`structure/${book}.json`, structure);
 
-  const name = /^\\h\s+(.+)$/m.exec(usfm)?.[1]?.trim();
-  if (!name) throw new Error(`${book}: no \\h book name`);
+  const h = /^\\h\s+(.+)$/m.exec(usfm)?.[1];
+  if (!h) throw new Error(`${book}: no \\h book name`);
+  const name = plain(h);
   const source = `bsb-${id}`;
   const titles: Record<
     string,

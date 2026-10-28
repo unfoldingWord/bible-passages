@@ -32,5 +32,7 @@ describe("sources.json", () => {
     expect(s.sha256).toMatch(/^[0-9a-f]{64}$/);
     expect(s.licence.trim()).not.toBe("");
     expect(s.attribution.trim()).not.toBe("");
+    // The revision is the commit the URL reads from, not only a label.
+    expect(s.url).toContain(`/commit/${s.revision}/`);
   });
 });

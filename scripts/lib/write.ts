@@ -1,5 +1,6 @@
-// Writes generated JSON exactly as prettier would format it, so a fresh build
-// matches the committed files byte for byte.
+// Writes generated JSON exactly as `prettier --check` expects it, using the
+// project's .prettierrc, so a fresh build matches the committed files byte
+// for byte.
 import {
   existsSync,
   mkdirSync,
@@ -7,11 +8,16 @@ import {
   rmSync,
   writeFileSync,
 } from "node:fs";
-import { format } from "prettier";
+import { fileURLToPath } from "node:url";
+import { format, resolveConfig } from "prettier";
 
 export async function writeJson(file: URL, value: unknown): Promise<void> {
+  const options = (await resolveConfig(fileURLToPath(file))) ?? {};
   mkdirSync(new URL(".", file), { recursive: true });
-  writeFileSync(file, await format(JSON.stringify(value), { parser: "json" }));
+  writeFileSync(
+    file,
+    await format(JSON.stringify(value), { ...options, parser: "json" })
+  );
 }
 
 /**

@@ -34,7 +34,7 @@ export function parseVrs(text: string): Record<string, number[]> {
 }
 
 /** Inline USFM markers removed, whitespace collapsed. */
-function plain(text: string): string {
+export function plain(text: string): string {
   const out = text
     .replace(/\\w\s+([^|\\]*)(\|[^\\]*)?\\w\*/g, "$1")
     .replace(/\\\+?[a-z0-9-]+\*?/g, "")
