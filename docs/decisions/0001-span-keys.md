@@ -12,16 +12,25 @@ moved boundary always produces a new key; the old key is retired with its
 successor in `data/retired-keys.json`.
 
 A key is always its span. If a later edit makes a retired span live again
-(a boundary moved and then moved back), that same key is live again: the
-retirement stays in the record as history, and the titles on the key come
-back as `unreviewed`. A key is never attached to a different span, because
-its spelling is its span (decided by the DRI on 28 Oct).
+(a boundary moved and then moved back), that same key is live again. A key is
+never attached to a different span, because its spelling is its span (decided
+by the DRI on 28 Oct).
+
+- **Move-back** follows the merge rule: the revived key and the key that
+  just lost the span each keep their own stored titles, with their status.
+  Neither set is copied onto the other automatically. The revived key's
+  live draft starts `unreviewed`, and its reviewer is shown both sets.
+- Its row in `data/retired-keys.json` stays as history. The key-stability
+  check treats a key that is live as present, whatever the record says.
 
 ## Why
 
 - tC Mobile's own Bible fixture uses this form (`MRK.1.1-8`), and its
   contract says a moved passage gets a new key. Here the format enforces
-  that rule instead of memory.
+  that rule instead of memory. The contract forbids reusing a key "for
+  different content" (`docs/contracts/template-package-v0.md`, "Keys", at
+  tc-mobile `373d42b4`); a revived key names the same verses, and devices
+  that kept recordings under it get their title back.
 - The key-stability check (#12) can then refuse a released key whose span
   changed, or one that is missing with no retirement record.
 - Titus is already built this way (`data/structure/TIT.json`, #15), and a
