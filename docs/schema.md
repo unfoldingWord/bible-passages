@@ -191,25 +191,13 @@ every test run until they exist.
 2. **Pericope source**: the requirements owner's build plan uses BSB `\s1`
    headings: 3,016, measured in this repo
    ([scoping/sizing.md](scoping/sizing.md)). Proposed: confirm BSB.
-3. **Keys**: the span-based keys above, instead of the pilot's order-based
-   ones. An alternative is to embed a Scripture Burrito scope string, which
-   tc-mobile already uses for sections (its ADR 0004): `TIT.1:1-4`,
-   `PSA.23:1-6`. Both fit the key rule.
-
-   **The cost of span keys:** any boundary change, even one verse, retires a
-   key, and the reviewed titles in every language attached to it would be
-   orphaned. Rule: a retired key is recorded with its successor in
-   `data/retired-keys.json`, and its titles carry forward to the new key as
-   `unreviewed` drafts. And the chunk source (decision 8) is pinned before
-   the first release, because changing it later retires thousands of keys.
-
+3. **Keys**: decided: span keys. See
+   [decisions/0001](decisions/0001-span-keys.md).
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: which model translates titles, and how key-term
-   consistency is checked across a book and a language. One suggestion is a
-   fast model for translation, with a script that checks key terms and drives
-   review.
+6. **Translation**: decided: measure Gemini and Claude on Titus, then choose.
+   See [decisions/0002](decisions/0002-measure-translation-models.md).
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.

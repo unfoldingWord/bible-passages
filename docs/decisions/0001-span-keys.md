@@ -24,11 +24,22 @@ successor in `data/retired-keys.json` and is never reused.
 ## Cost, accepted
 
 Any boundary change retires a key and orphans the reviewed titles attached
-to it. Titles carry forward to the successor as `unreviewed` drafts. This
-covers a one-to-one change only. A split (one key, several successors) and a
-merge (several keys, one successor) are not decided here: until they are,
-no tool invents a carry-forward rule for them. The chunk source (open
-decision 8) must be settled before the first release, because changing it
+to it. Carried-forward titles always become `unreviewed`
+drafts. Each retired key names one successor in `data/retired-keys.json`
+(accepted on #17), and the DRI set the rule for each kind of change on
+28 Oct:
+
+- **Resize** (one key becomes one key): the old titles carry to the
+  successor.
+- **Split** (one key becomes several): the old titles carry to the one
+  successor the record names; every other new key gets a fresh draft.
+- **Merge** (several keys become one): each old key names the merged key,
+  but no title carries automatically. The merged key gets a fresh draft,
+  and the reviewer sees all the old titles as reference.
+
+So no reviewed title is silently dropped or silently chosen over another.
+
+The chunk source (open decision 8) must be settled before the first release, because changing it
 later retires thousands of keys.
 
 ## Rejected
