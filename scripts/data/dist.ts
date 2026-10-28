@@ -6,7 +6,7 @@
 import { readFileSync } from "node:fs";
 import { source } from "../lib/sources.ts";
 import type { Structure } from "../lib/structure.ts";
-import { writeJson } from "../lib/write.ts";
+import { clearJson, writeJson } from "../lib/write.ts";
 
 const root = new URL("../../", import.meta.url);
 const read = (path: string) =>
@@ -18,6 +18,7 @@ const REVISION = process.env.RELEASE_TAG ?? "unreleased";
 const BOOKS = ["TIT"];
 
 const out = new URL("dist/tc-mobile/", root);
+clearJson(out);
 
 for (const book of BOOKS) {
   const id = book.toLowerCase();

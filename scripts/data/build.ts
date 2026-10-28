@@ -3,7 +3,7 @@
 //
 //   node scripts/data/build.ts
 import { readSource } from "../lib/sources.ts";
-import { writeJson } from "../lib/write.ts";
+import { clearJson, writeJson } from "../lib/write.ts";
 import {
   buildStructure,
   parseChunks,
@@ -20,6 +20,12 @@ const write = (path: string, value: unknown) =>
   writeJson(new URL(path, data), value);
 
 const vrs = parseVrs(await readSource("ufw-vrs"));
+
+// Only what this script writes, so a book dropped from BOOKS leaves no file.
+for (const dir of ["structure/", "titles/en/", "versification/"]) {
+  clearJson(new URL(dir, data));
+}
+
 await write("versification/ufw.json", vrs);
 
 for (const book of BOOKS) {
