@@ -147,6 +147,29 @@ observed Break.
 - A concern that cannot be measured yet is labelled untested and tracked as a
   watch item, not used as a blocker.
 
+### Correctness first
+
+Excellence and correctness outrank speed in this repo, including against the
+v0.1 date. If being right needs more time, take it and say so early; a date
+that cannot be met correctly is raised as a decision, not absorbed as a
+shortcut.
+
+- **Adversarial checks with different models.** Scoping, sizing, decisions
+  and every PR that changes `data/`, `scripts/` or `tests/` get an
+  independent review by at least two models that did not write it (codex and
+  grok; see "Review"). Each finding is FIXED with a commit, REFUTED with
+  evidence, or DEFERRED to an issue.
+- **Re-derive, don't re-read.** A count or claim is checked by producing it
+  again independently (a second script, a second model, a second source), not
+  by reading the first result and agreeing with it.
+- **AI output is checked by a different model than the one that wrote it.**
+  A title drafted by one model is checked by another, and the disagreements
+  go to human review first.
+- **Sample before scale.** Every AI step runs on one book and is checked by a
+  person before it runs on 66.
+- **A known error is never shipped silently.** If a release ships with known
+  issues, they are listed in its notes.
+
 ### Status in three tenses
 
 A status says what **was** (and when it was observed), what **is** (and when
