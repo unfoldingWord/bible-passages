@@ -101,7 +101,7 @@ describe("checkKeys", () => {
     ]);
   });
 
-  it("fails on a retired key used again", () => {
+  it("passes on a retired span that is live again under its own key", () => {
     const previous = release(moved, movedRecord);
     const reused = book(
       ["1-3", "1-3"],
@@ -114,8 +114,24 @@ describe("checkKeys", () => {
       start: [1, 1],
       end: [1, 4],
     });
+    expect(checkKeys(previous, release(reused, movedRecord))).toEqual([]);
+  });
+
+  it("fails on a retired key used for a different span", () => {
+    const previous = release(moved, movedRecord);
+    const reused = book(
+      ["1-3", "1-3"],
+      ["4-9", "4-6", "7-9"],
+      ["10-16", "10-16"]
+    );
+    reused.segments.push({
+      key: "TIT.1.1-4",
+      pericope: "TIT.P.1.1-3",
+      start: [1, 1],
+      end: [1, 5],
+    });
     expect(checkKeys(previous, release(reused, movedRecord))).toEqual([
-      "TIT.1.1-4 is retired and used again",
+      "TIT.1.1-4 is retired and used again for 1:1-1:5, a different span",
     ]);
   });
 

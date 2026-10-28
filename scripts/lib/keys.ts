@@ -1,6 +1,7 @@
 // Key stability across releases. A released key never disappears unless it
-// is recorded as retired, never changes its span, and a retired key is never
-// used again (docs/schema.md, "Keys"; tc-mobile contract, "Keys").
+// is recorded as retired and never changes its span. A retired key may be
+// live again only for the span it spells (docs/decisions/0001; tc-mobile
+// contract, "Keys").
 //
 // checkKeys is pure. The rest reads a release from its git tag: the tag holds
 // data/structure/ (pericopes and segments, with spans) and
@@ -25,6 +26,17 @@ export function spans(structures: Structure[]): Spans {
 }
 
 const same = (a: Ref, b: Ref) => a[0] === b[0] && a[1] === b[1];
+/** Whether `key` (`<BOOK>.<c>.<v>-<v>` or `<BOOK>.P.<c>.<v>-<v>`) spells `s`. */
+const names = (key: string, s: { start: Ref; end: Ref }) => {
+  const m = /\.(\d+)\.(\d+)-(\d+)$/.exec(key);
+  return (
+    !!m &&
+    s.start[0] === Number(m[1]) &&
+    s.end[0] === Number(m[1]) &&
+    s.start[1] === Number(m[2]) &&
+    s.end[1] === Number(m[3])
+  );
+};
 const span = ({ start, end }: { start: Ref; end: Ref }) =>
   `${start.join(":")}-${end.join(":")}`;
 
@@ -45,8 +57,17 @@ export function checkKeys(
   }
 
   for (const [key, successor] of retired) {
-    if (current.spans.has(key)) {
-      problems.push(`${key} is retired and used again`);
+    // A key is its span (docs/decisions/0001): a retired span that is live
+    // again is live under the same key, and its retirement is history. It
+    // must still name that span.
+    const live = current.spans.get(key);
+    if (live) {
+      if (!names(key, live)) {
+        problems.push(
+          `${key} is retired and used again for ${span(live)}, a different span`
+        );
+      }
+      continue;
     }
     // Follow the chain: a successor may itself be retired later.
     const seen = new Set([key]);
