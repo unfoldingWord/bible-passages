@@ -11,20 +11,13 @@ import {
   TW,
   twId,
   twlId,
+  type Glossary,
   type TwRepo,
 } from "../lib/glossaries.ts";
 import { readSource, sources } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 
 const out = new URL("../../data/glossaries/", import.meta.url);
-
-// Only what this script writes: every language directory under glossaries/,
-// so a language or book dropped from the build leaves no file behind.
-if (existsSync(out)) {
-  for (const entry of readdirSync(out, { withFileTypes: true })) {
-    if (entry.isDirectory()) clearJson(new URL(`${entry.name}/`, out));
-  }
-}
 
 const pinned = new Set(sources().map((s) => s.id));
 
@@ -53,6 +46,9 @@ const english = async (article: string) => {
   return md;
 };
 
+// Every glossary is built before anything is deleted, so a failed fetch or
+// a bad pin leaves the committed data/glossaries/ untouched.
+const built: { file: URL; glossary: Glossary }[] = [];
 for (const book of BOOKS) {
   const rows = parseTwl(await readSource(twlId(book)));
   for (const repo of TW) {
@@ -63,9 +59,24 @@ for (const book of BOOKS) {
       english,
       reader(repo)
     );
-    await writeJson(new URL(`${repo.language}/${book}.json`, out), glossary);
-    console.log(
-      `${book} ${repo.language}: ${Object.keys(glossary.terms).length} terms, ${Object.keys(glossary.gaps).length} gaps`
-    );
+    built.push({
+      file: new URL(`${repo.language}/${book}.json`, out),
+      glossary,
+    });
   }
+}
+
+// Only what this script writes: every language directory under glossaries/,
+// so a language or book dropped from the build leaves no file behind.
+if (existsSync(out)) {
+  for (const entry of readdirSync(out, { withFileTypes: true })) {
+    if (entry.isDirectory()) clearJson(new URL(`${entry.name}/`, out));
+  }
+}
+
+for (const { file, glossary } of built) {
+  await writeJson(file, glossary);
+  console.log(
+    `${glossary.book} ${glossary.language}: ${Object.keys(glossary.terms).length} terms, ${Object.keys(glossary.gaps).length} gaps`
+  );
 }

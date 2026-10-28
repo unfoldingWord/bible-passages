@@ -161,7 +161,9 @@ export function parseTwl(tsv: string): TwlRow[] {
 /**
  * The headword of a tW article: its first heading line, without the `#`
  * marks, byte-order marks or extra spaces. Sources differ in how they write
- * that line (`# God`, `#menegur`, `## baik`, `# पौलुस, शाऊल #`).
+ * that line (`# God`, `#menegur`, `## baik`, `# पौलुस, शाऊल #`), and some
+ * repeat the marker (`# # persévérer`), so every leading and trailing run
+ * of `#` is removed, not just the first.
  */
 export function headword(markdown: string): string {
   const first = markdown
@@ -170,8 +172,8 @@ export function headword(markdown: string): string {
     .find((l) => l !== "");
   const text = first?.startsWith("#")
     ? first
-        .replace(/^#+/, "")
-        .replace(/#+$/, "")
+        .replace(/^[#\s]+/, "")
+        .replace(/[#\s]+$/, "")
         .replace(/\s+/g, " ")
         .trim()
         .normalize("NFC")

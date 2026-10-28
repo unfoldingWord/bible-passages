@@ -56,6 +56,9 @@ describe("headword", () => {
     ["## baik, benar\n", "baik, benar"],
     ["# पौलुस, शाऊल #\n", "पौलुस, शाऊल"],
     ["\r\n#  Paul,   Saul \r\n", "Paul, Saul"],
+    // Xenizo/fr_tw other/perseverance repeats the marker.
+    ["# # persévérer, persévérance\n", "persévérer, persévérance"],
+    ["## # word # #\n", "word"],
   ])("reads %j", (md, word) => {
     expect(headword(md)).toBe(word);
   });
