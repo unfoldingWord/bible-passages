@@ -10,9 +10,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": {
-      "@/types/template": ["vendor/tc-mobile/template.ts"]
+      "@/types/template": ["./vendor/tc-mobile/template.ts"]
     }
   },
   "include": ["vendor", "scripts", "tests", "vitest.config.ts"]

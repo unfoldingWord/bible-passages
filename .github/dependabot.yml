@@ -14,6 +14,11 @@ updates:
         update-types:
           - minor
           - patch
+    ignore:
+      # Types track the Node runtime (22, engines in package.json), not the
+      # newest Node. Move this with the runtime, deliberately.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: "/"
