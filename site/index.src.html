@@ -499,14 +499,27 @@ function updateDecisions() {
   }
   $("#rv-status").textContent = RV.db && RV.uid ? "Your picks save to this page and everyone with access sees them." : "Sign in to claude.ai to add a pick. Decisions recorded so far still show.";
 }
-async function savePick(id) {
+// Saves run one at a time, and each writes only its own pick: update()
+// merges nested objects, so a second save cannot drop the first. set() is
+// used only when this viewer's document does not exist yet.
+let saving = Promise.resolve();
+function savePick(id) {
   const el = $("#dec-" + id), msg = el.querySelector("[data-msg]");
   const choice = el.querySelector("input:checked")?.value || "", note = el.querySelector("textarea").value.trim();
-  const cur = RV.resp[RV.uid] || { picks: {} };
-  const doc = { picks: { ...cur.picks, [id]: { choice, note, at: new Date().toISOString() } }, at: new Date().toISOString() };
+  const at = new Date().toISOString(), pick = { choice, note, at };
   msg.textContent = "Saving…";
-  try { await RV.db.doc("resp/" + RV.uid).set(doc); msg.textContent = "Saved"; el.dataset.touched = ""; }
-  catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
+  saving = saving.then(async () => {
+    const ref = RV.db.doc("resp/" + RV.uid);
+    try {
+      try { await ref.update({ picks: { [id]: pick }, at }); }
+      catch (e) {
+        if (e?.code !== "invalid_argument") throw e;
+        await ref.set({ picks: { ...(RV.resp[RV.uid]?.picks || {}), [id]: pick }, at });
+      }
+      msg.textContent = "Saved"; el.dataset.touched = "";
+    } catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
+  });
+  return saving;
 }
 document.addEventListener("change", (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
 async function resolveNames() {
