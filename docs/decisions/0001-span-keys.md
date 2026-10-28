@@ -16,11 +16,14 @@ A key is always its span. If a later edit makes a retired span live again
 never attached to a different span, because its spelling is its span (decided
 by the DRI on 28 Oct).
 
-- **Move-back** follows the merge rule: the revived key and the key that
-  just lost the span each keep their own stored titles, with their status.
-  Neither set is copied onto the other automatically. The revived key's
-  live draft starts `unreviewed`, and its reviewer is shown both sets.
-- Its row in `data/retired-keys.json` stays as history. The key-stability
+- **Move-back** follows the merge rule, and it wins over the resize and
+  split rules below whenever an edit makes a retired key live again. Nothing is
+  copied in either direction. Every key that lost the span, however many,
+  keeps its own stored titles with their status. The revived key's live
+  draft is a separate record: it starts `unreviewed`, is not seeded from
+  any of those sets, and its reviewer is shown all of them.
+- Its row in `data/retired-keys.json` stays as history. While a key is
+  live, no tool follows that row's successor pointer. The key-stability
   check treats a key that is live as present, whatever the record says.
 
 ## Why
@@ -30,7 +33,8 @@ by the DRI on 28 Oct).
   that rule instead of memory. The contract forbids reusing a key "for
   different content" (`docs/contracts/template-package-v0.md`, "Keys", at
   tc-mobile `373d42b4`); a revived key names the same verses, and devices
-  that kept recordings under it get their title back.
+  that kept recordings under it find the same key. Its titles follow the
+  move-back rule above; none is restored automatically.
 - The key-stability check (#12) can then refuse a released key whose span
   changed, or one that is missing with no retirement record.
 - Titus is already built this way (`data/structure/TIT.json`, #15), and a
