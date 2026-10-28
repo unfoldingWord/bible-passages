@@ -64,8 +64,8 @@ export function checkKeys(
 
   if (!previous) return problems;
 
-  // The record is append-only, so it carries every retirement forward and
-  // comparing with the last release alone is enough.
+  // The record is append-only, so every retirement in `previous` must still
+  // be in the current record with the same successor.
   for (const { key, successor } of previous.retired) {
     if (retired.get(key) !== successor) {
       problems.push(
@@ -191,4 +191,23 @@ export function readRelease(cwd: string, tag: string): Release {
     ? (read("data/retired-keys.json") as { retired: Retired }).retired
     : [];
   return { spans: spans(structures), retired };
+}
+
+/**
+ * checkKeys against every release tag (see releaseTags) except `exclude`,
+ * the tag being released; with no release, against none. Every tag, not
+ * only the last: a tag that failed this check can stay on main, and taking
+ * it alone as the baseline would hide the keys it dropped. Each problem
+ * names the tag it was found against.
+ */
+export function checkHistory(
+  cwd: string,
+  current: Release,
+  exclude?: string
+): string[] {
+  const tags = releaseTags(cwd).filter((tag) => tag !== exclude);
+  if (tags.length === 0) return checkKeys(null, current);
+  return tags.flatMap((tag) =>
+    checkKeys(readRelease(cwd, tag), current).map((p) => `${tag}: ${p}`)
+  );
 }

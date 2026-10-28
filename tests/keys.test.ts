@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  checkHistory,
   checkKeys,
   gitTags,
   lastTag,
@@ -281,6 +282,52 @@ describe("reading a release from its tag", () => {
     });
     expect(problems).toHaveLength(1);
     expect(problems[0]).toMatch(/was released and is missing/);
+  });
+
+  it("checks every release tag, so a failed tag left on main hides nothing", () => {
+    const dir = repo();
+    // v0.2.0 moves two segment boundaries with no retirement record: its own
+    // check against v0.1.0 fails, but the tag stays on main.
+    const moved = structuredClone(tit);
+    const [a, b] = moved.segments;
+    if (!a || !b) throw new Error("Titus has fewer than two segments");
+    a.end = [a.end[0], a.end[1] - 1];
+    b.start = [b.start[0], b.start[1] - 1];
+    a.key = `TIT.${a.start[0]}.${a.start[1]}-${a.end[1]}`;
+    b.key = `TIT.${b.start[0]}.${b.start[1]}-${b.end[1]}`;
+    writeFileSync(join(dir, "data/structure/TIT.json"), JSON.stringify(moved));
+    writeFileSync(join(dir, "package.json"), '{ "version": "0.2.0" }');
+    git(dir, "commit", "-q", "-am", "moved, unrecorded");
+    git(dir, "tag", "v0.2.0");
+    const current = { spans: spans([moved]), retired: [] };
+    expect(
+      checkHistory(dir, current, "v0.2.0").filter((p) => /missing/.test(p))
+    ).toHaveLength(2);
+    // v0.3.0 tags the same structure. The last tag alone (v0.2.0) finds
+    // nothing; every tag still finds the two keys v0.1.0 released.
+    writeFileSync(join(dir, "package.json"), '{ "version": "0.3.0" }');
+    git(dir, "commit", "-q", "-am", "same structure");
+    git(dir, "tag", "v0.3.0");
+    expect(lastTag(releaseTags(dir), "v0.3.0")).toBe("v0.2.0");
+    expect(checkKeys(readRelease(dir, "v0.2.0"), current)).toEqual([]);
+    const problems = checkHistory(dir, current, "v0.3.0");
+    expect(problems).toHaveLength(2);
+    for (const p of problems) {
+      expect(p).toMatch(/^v0\.1\.0: TIT\.1\.\S+ was released and is missing/);
+    }
+  });
+
+  it("checks only the retired-keys record with no release tag", () => {
+    const dir = mkdtempSync(join(tmpdir(), "release-keys-none-"));
+    git(dir, "init", "-q", "-b", "main");
+    git(dir, "commit", "-q", "--allow-empty", "-m", "start");
+    const current = {
+      spans: spans([tit]),
+      retired: [{ key: "TIT.1.1-5", successor: "TIT.1.99-99" }],
+    };
+    expect(checkHistory(dir, current)).toEqual([
+      "TIT.1.1-5: successor TIT.1.99-99 is not a current key",
+    ]);
   });
 
   it("refuses a shallow clone", () => {
