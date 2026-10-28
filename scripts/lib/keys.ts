@@ -124,6 +124,49 @@ export function gitTags(cwd: string): string[] {
   return git(cwd, ["tag", "--list"]).split("\n").filter(Boolean);
 }
 
+/** `package.json`'s version at `tag`, or null when there is none. */
+function versionAt(cwd: string, tag: string): string | null {
+  try {
+    const pkg = JSON.parse(
+      git(cwd, ["show", `refs/tags/${tag}:package.json`])
+    ) as { version?: unknown };
+    return typeof pkg.version === "string" ? pkg.version : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * The tags that are releases as the release workflow defines them:
+ * `vX.Y.Z`, in the history of `main` (`origin/main`, or `HEAD` in a clone
+ * without it) and naming the `package.json` version of their commit. A tag
+ * the workflow would refuse is never the baseline. Refuses a shallow clone.
+ */
+export function releaseTags(cwd: string, main?: string): string[] {
+  const all = gitTags(cwd);
+  let ref = main;
+  if (!ref) {
+    try {
+      git(cwd, [
+        "rev-parse",
+        "--verify",
+        "--quiet",
+        "refs/remotes/origin/main",
+      ]);
+      ref = "refs/remotes/origin/main";
+    } catch {
+      ref = "HEAD";
+    }
+  }
+  const merged = new Set(
+    git(cwd, ["tag", "--list", "--merged", ref]).split("\n")
+  );
+  return all.filter(
+    (tag) =>
+      TAG.test(tag) && merged.has(tag) && versionAt(cwd, tag) === tag.slice(1)
+  );
+}
+
 /** data/structure/ and data/retired-keys.json as they were at `tag`. */
 export function readRelease(cwd: string, tag: string): Release {
   const ref = `refs/tags/${tag}`;

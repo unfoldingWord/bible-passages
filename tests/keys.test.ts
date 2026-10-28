@@ -8,6 +8,7 @@ import {
   gitTags,
   lastTag,
   readRelease,
+  releaseTags,
   spans,
   type Release,
 } from "../scripts/lib/keys.ts";
@@ -207,9 +208,10 @@ describe("reading a release from its tag", () => {
 
   function repo(): string {
     const dir = mkdtempSync(join(tmpdir(), "release-keys-"));
-    git(dir, "init", "-q");
+    git(dir, "init", "-q", "-b", "main");
     mkdirSync(join(dir, "data/structure"), { recursive: true });
     writeFileSync(join(dir, "data/structure/TIT.json"), JSON.stringify(tit));
+    writeFileSync(join(dir, "package.json"), '{ "version": "0.1.0" }');
     git(dir, "add", ".");
     git(dir, "commit", "-q", "-m", "release");
     git(dir, "tag", "v0.1.0");
@@ -252,6 +254,33 @@ describe("reading a release from its tag", () => {
     expect(problems[0]).toMatch(
       new RegExp(`^${a.key.replace(/\./g, "\\.")} moved from `)
     );
+  });
+
+  it("takes as baseline only a tag on main naming its package.json version", () => {
+    const dir = repo();
+    // On main, but package.json still says 0.1.0.
+    git(dir, "commit", "-q", "--allow-empty", "-m", "unbumped");
+    git(dir, "tag", "v0.3.0");
+    // Off main, with the structure gone and the version not bumped.
+    git(dir, "checkout", "-q", "-b", "side");
+    git(dir, "rm", "-q", "data/structure/TIT.json");
+    git(dir, "commit", "-q", "-m", "thinner");
+    git(dir, "tag", "v9.9.9");
+    git(dir, "checkout", "-q", "main");
+    expect(lastTag(gitTags(dir))).toBe("v9.9.9");
+    expect(releaseTags(dir)).toEqual(["v0.1.0"]);
+    expect(releaseTags(dir, "side")).toEqual(["v0.1.0"]);
+    // Dropping a v0.1.0 key still fails against the real baseline.
+    const tag = lastTag(releaseTags(dir));
+    expect(tag).toBe("v0.1.0");
+    const dropped = structuredClone(tit);
+    dropped.segments.pop();
+    const problems = checkKeys(readRelease(dir, tag ?? ""), {
+      spans: spans([dropped]),
+      retired: [],
+    });
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/was released and is missing/);
   });
 
   it("refuses a shallow clone", () => {

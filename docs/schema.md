@@ -193,7 +193,8 @@ check the bump yet.
    at a commit on `main`. The committed `dist/` already carries the version,
    so the bump is a reviewed PR and the tag follows its merge.
 2. `npm run verify`, with the key-stability check run against the release tag
-   before this one.
+   before this one. Only a tag that passes step 1's rules (on `main`, naming
+   its commit's `package.json` version) counts as a release there.
 3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
    files exactly, as in CI.
 4. `dist/` is regenerated with `source.revision` set to the tag, and its
