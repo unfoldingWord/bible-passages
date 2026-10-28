@@ -21,7 +21,7 @@ Newest first. One entry per working session.
 ### Open
 
 - Review bench (`uwreview`) requested on PR #1 at `52d4616`; no verdict yet.
-- grok is not signed in here (`grok login --device-code`); codex cannot run sandboxed in this container and was not run locally.
+- The bench has not posted on any bible-passages PR (checked 28 Oct, 21:55 UTC); it posted on tc-mobile the same evening. Whether this repo is enrolled on the review VM is not visible from here. Review is never run locally (AGENTS.md, "Review").
 - Decisions on servant.bible#1; the issue has no assignee.
 
 ### Next

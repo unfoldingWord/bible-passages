@@ -96,9 +96,13 @@ CI (`.github/workflows/ci.yml`) runs a gitleaks scan of full history and
 
 ### Review
 
-External review uses the codex and grok CLIs (Frank and George). A PR that
-changes `data/`, `scripts/`, `tests/` or `.github/` gets both before merge is
-discussed; a docs-only PR may merge on green CI with the maintainer's OK.
+Review is done by the **uwreview bench** on the PR: Frank (Codex, the diff)
+and George (Grok, the rest of the tree). Request `uwreview` as reviewer on a
+ready PR; the bench posts one comment per lens per round. **Nobody runs codex
+or grok locally**, not the author, not an agent. A PR that changes `data/`,
+`scripts/`, `tests/` or `.github/` needs both lenses clean at the current head
+before merge is discussed; a push voids the round. A docs-only PR may merge on
+green CI with the maintainer's OK.
 
 ### Evidence
 
@@ -168,8 +172,8 @@ shortcut.
 
 - **Adversarial checks with different models.** Scoping, sizing, decisions
   and every PR that changes `data/`, `scripts/` or `tests/` get an
-  independent review by at least two models that did not write it (codex and
-  grok; see "Review"). Each finding is FIXED with a commit, REFUTED with
+  independent review by at least two models that did not write it (the
+  uwreview bench; see "Review"). Each finding is FIXED with a commit, REFUTED with
   evidence, or DEFERRED to an issue.
 - **Re-derive, don't re-read.** A count or claim is checked by producing it
   again independently (a second script, a second model, a second source), not
