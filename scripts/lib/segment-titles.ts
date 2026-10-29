@@ -320,6 +320,9 @@ export async function draftSegmentTitles(args: {
   const keys = inputs.map((s) => s.key);
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
   const calls: CallRecord[] = [];
+  // The parsed draft, kept in the ledger so a run that stops before the
+  // check does not lose titles already paid for.
+  let draftTitles: Record<string, string> | null = null;
   const ledger = (outcome: DraftOutcome | "running") =>
     args.write({
       language: "en",
@@ -332,6 +335,7 @@ export async function draftSegmentTitles(args: {
       outcome,
       updatedAt: new Date().toISOString(),
       calls,
+      draftTitles,
       totals: {
         promptTokens: calls.reduce((s, c) => s + c.promptTokens, 0),
         completionTokens: calls.reduce((s, c) => s + c.completionTokens, 0),
@@ -376,6 +380,8 @@ export async function draftSegmentTitles(args: {
       return { record: null, outcome };
     }
     const draft = readDraft(draftReply, keys);
+    draftTitles = draft.titles;
+    await ledger("running");
     const spent = calls[0]?.cost ?? null;
     if (spent === null) {
       outcome = { stopped: "draft cost unknown; check not run" };
@@ -394,14 +400,20 @@ export async function draftSegmentTitles(args: {
       outcome = { stopped: `check: ${checkReply}` };
       return { record: null, outcome };
     }
+    // Two requested ids can resolve to one model. A model never checks its
+    // own drafts, so judge by the models OpenRouter says answered.
+    const draftedBy = calls[0]?.model ?? draftModel;
+    const checkedBy = calls[1]?.model ?? checkModel;
+    if (draftedBy === checkedBy) {
+      outcome = {
+        stopped: `check answered by the drafting model ${draftedBy}`,
+      };
+      return { record: null, outcome };
+    }
     const drafted = keys.filter((k) => draft.titles[k] !== undefined);
     // Labelled with the model OpenRouter says answered, as key-terms.ts does.
-    const check = readCheck(
-      checkReply,
-      drafted,
-      `ai:${calls[1]?.model ?? checkModel}`
-    );
-    const source = `ai:${calls[0]?.model ?? draftModel}`;
+    const check = readCheck(checkReply, drafted, `ai:${checkedBy}`);
+    const source = `ai:${draftedBy}`;
     const titles: Record<string, DraftTitle> = {};
     for (const k of drafted) {
       const text = draft.titles[k]!;

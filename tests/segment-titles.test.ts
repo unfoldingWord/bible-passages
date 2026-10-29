@@ -177,7 +177,9 @@ describe("gateProblems", () => {
 });
 
 /** A model that answers each call in turn with a JSON reply and a cost. */
-function fakeModels(replies: { reply: unknown; cost: number | null }[]) {
+function fakeModels(
+  replies: { reply: unknown; cost: number | null; answeredBy?: string }[]
+) {
   const sent: { model: string; system: string; user: string }[] = [];
   const complete: Complete = async (request) => {
     const next = replies[sent.length];
@@ -189,7 +191,7 @@ function fakeModels(replies: { reply: unknown; cost: number | null }[]) {
     if (!next) throw new Error("no more replies");
     const c: Completion = {
       id: `gen-${sent.length}`,
-      model: request.model,
+      model: next.answeredBy ?? request.model,
       text: JSON.stringify(next.reply),
       usage: {
         promptTokens: 100,
@@ -319,8 +321,34 @@ describe("draftSegmentTitles", () => {
       expect(record).toBeNull();
       expect(outcome).toHaveProperty("stopped");
       expect(sent).toHaveLength(1);
-      expect(ledgers.at(-1)).toMatchObject({ calls: [{ role: "draft" }] });
+      expect(ledgers.at(-1)).toMatchObject({
+        calls: [{ role: "draft" }],
+        // The paid-for draft stays on record for a resumed run.
+        draftTitles: draftReply,
+      });
     }
+  });
+
+  it("refuses a check answered by the model that drafted, whatever ids were requested", async () => {
+    const { complete, sent } = fakeModels([
+      { reply: draftReply, cost: 0.01, answeredBy: "x/same" },
+      {
+        reply: {
+          "XYZ.1.2-3": { verdict: "agree" },
+          "XYZ.1.4-4": { verdict: "agree" },
+        },
+        cost: 0.01,
+        answeredBy: "x/same",
+      },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers);
+    expect(sent.map((s) => s.model)).toEqual(["a/draft", "g/check"]);
+    expect(record).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "check answered by the drafting model x/same",
+    });
+    expect(ledgers.at(-1)).toMatchObject({ draftTitles: draftReply });
   });
 
   it("reports titles the models left out", async () => {
