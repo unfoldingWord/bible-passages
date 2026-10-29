@@ -4,6 +4,41 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-29 (late) — the requirements owner's decisions recorded; key check merged
+
+### Shipped
+
+| What                                                                                                                                                                                                                                       | Evidence                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| The requirements owner's answers recorded: v0.1 a gated subset, BSB pericopes, consensus check out, explanatory-comment titles, single-segment pericopes reuse their title (16,523 English titles), `es-419`, AI-drafted Chinese key terms | ADR 0003; PR #26, merge `20ac202`; `final/` on the project site             |
+| T1–T6 Titus titles settled: 4 drafts kept, 2 in the requirements owner's wording, all `human-reviewed`; the AI draft and its check are kept beside the review                                                                              | `data/drafts/en/TIT.json` `review` entries; `build.ts` applies them; PR #26 |
+| Key-stability check against every release tag, retired keys as an append-only log, release workflow; CI and release fetch tags before the check                                                                                            | PR #17, merge `7ac93e9`; both lenses clean at `e2af010`                     |
+| Project site brought up to date on every page; snapshot refreshed                                                                                                                                                                          | PR #27; site version 14; `live/snapshot` version 11                         |
+| #5 (site) and #9 (glossaries) closed against their Done-when                                                                                                                                                                               | issue comments with evidence                                                |
+
+`main` at `7ac93e9`: `npm run verify` 931 passed, 3 todo; a cold `npm run build` left `data/` and `dist/` unchanged.
+
+### Decisions
+
+- Recording the requirements owner's picks (DRI, 29 Oct): picks are recorded as decisions, except a pick that adds unsized scope (11, all metadata), which is confirmed first, and 8, which is the content team's.
+- Reviewed titles are a `review` entry on the draft, not an edit of the AI record; the build uses the review's status and wording.
+
+### Open
+
+- Decision 11 (metadata in v0.1): asked on Zulip 29 Oct; no reply yet.
+- Decision 8 (chunk source): the content team (#4).
+- #12: the key check is merged; a dry-run release has not been run.
+- #2: ADRs for 8 and 11; moving decided items out of the schema's open list; #24.
+- #21 (Door43 post, needs the maintainer's account); #22, #23 follow-ups.
+- One correction made in the open: an evidence comment on #17 first said a YAML parse passed; no YAML parser is installed here, and the comment now says so.
+
+### Next
+
+- Translate Titus with both models and measure titles per hour, cost per title and review minutes (#10, #3, ADR 0002). This is the constraint.
+- A dry-run release to close #12.
+
+---
+
 ## 2026-10-29 — first Titus data on main; key rules decided
 
 ### Shipped
