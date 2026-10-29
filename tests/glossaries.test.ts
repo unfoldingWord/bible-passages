@@ -471,8 +471,8 @@ describe("data/glossaries", () => {
   });
 
   describe.each(GLOSSARY_BOOKS)("%s", (book) => {
-    // The one network read in the tests: the pinned TWL file, checked
-    // against its SHA-256 by readSource, so each glossary is traced to it.
+    // The pinned TWL file, read through the cache and checked against its
+    // SHA-256 by readSource, so each glossary is traced to it.
     const linked = readSource(twlId(book), { pin: pins.get(twlId(book)) }).then(
       (tsv) => linkedArticles(parseTwl(tsv))
     );
@@ -555,7 +555,10 @@ describe("data/glossaries", () => {
             expect(inScript(word, repo.script)).toBe(false);
           }
         }
-      }
+      },
+      // Re-deriving a gap reads its pinned article: from the cache once
+      // `npm run build` has run, else one by one from Door43 (slow, cold).
+      120_000
     );
 
     it("pins the TWL file at the configured commit", () => {

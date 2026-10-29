@@ -87,13 +87,16 @@ jobs:
       - name: Fetch release tags
         run: git fetch --tags --force origin
 
-      - run: npm run verify
-
       # data/ and dist/ are generated: rebuilding from the pinned sources
       # must reproduce the committed files exactly, none changed, missing or
       # extra. git diff alone misses untracked files, so test the status.
+      # The build runs before the tests: it fetches any pinned input missing
+      # from the cache several at a time, and the tests then read the same
+      # files from the cache instead of one by one from Door43.
       - run: npm run build
       - name: Generated files match a fresh build
         run: |
           git status --porcelain --untracked-files=all -- data dist
           test -z "$(git status --porcelain --untracked-files=all -- data dist)"
+
+      - run: npm run verify
