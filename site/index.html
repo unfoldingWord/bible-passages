@@ -654,7 +654,8 @@ function renderReviewPick() {
 }
 function renderReview(focus) {
   const el = $("#rv-card"), s = rqSet();
-  // While a save is in flight nothing may move the card from under it.
+  // A save in flight owns the card: the book and filter wait for it, so the
+  // card it moves on from is the one it saved.
   for (const id of ["#rv-set", "#rv-open"]) { const c = $(id); if (c) c.disabled = RQ.busy; }
   if (!s || !s.items.length) { el.innerHTML = `<p>There are no titles to review yet.</p>`; return; }
   const total = s.items.length, left = s.items.filter((x) => !rqDone(s, x)).length;
@@ -723,9 +724,8 @@ async function rqSave(s, it, r) {
   if (r.action === "edit") { rec.text = r.text; rec.why = r.why; }
   try {
     await RV.db.doc(`review/${RV.uid}/items/${rqId(s, it)}`).set(rec);
-    // Advance from the title that was saved.
-    RQ.mine[rqId(s, it)] = rec; RQ.busy = false; RQ.draft = null; RQ.key = it.key;
-    rqStep(1);
+    RQ.mine[rqId(s, it)] = rec; RQ.busy = false; RQ.draft = null;
+    RQ.key = it.key; rqStep(1);
     const m = $("#rv-msg"); if (m) m.textContent = "Saved.";
   } catch (e) { RQ.busy = false; RQ.msg = "Couldn't save: " + (e?.message || "try again"); renderReview(); }
 }
