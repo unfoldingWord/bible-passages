@@ -10,8 +10,11 @@
 #                                         creating the release, at HEAD; the
 #                                         tag defaults to v<package.json version>
 #
-# A dry run creates no tag and no release, needs no token, and restores
-# dist/ afterwards (it was checked clean before being rebuilt for the tag).
+# A dry run creates no tag and no release and needs no token. It refuses to
+# start unless data/ and dist/ are clean (the build overwrites them, so an
+# uncommitted edit would be lost without a trace), and restores both when it
+# ends, passed or failed. It does fetch main and the release tags from
+# origin (--force moves local tag refs to match), as the release must.
 set -euo pipefail
 
 dry_run=false
@@ -29,6 +32,19 @@ if [ -z "$TAG" ]; then
   TAG="v$version"
 fi
 $dry_run && echo "Dry run for $TAG at HEAD $(git rev-parse --short HEAD): no tag or release is created."
+
+# Before anything writes: the build below overwrites data/ and dist/, and the
+# check in step 3 can only compare with what is committed.
+dirty=$(git status --porcelain --untracked-files=all -- data dist)
+if [ -n "$dirty" ]; then
+  echo "$dirty"
+  echo "::error::data/ or dist/ has uncommitted changes; commit or stash them first."
+  exit 1
+fi
+if $dry_run; then
+  # Safe to clean: both were just shown to match HEAD, untracked files included.
+  trap 'git checkout -- data dist && git clean -fdq -- data dist && echo "data/ and dist/ restored to the committed files."' EXIT
+fi
 
 # 1. The committed dist/ already carries package.json's version, so the tag
 # must name that version: bump package.json in a reviewed PR, then tag the
@@ -85,21 +101,20 @@ RELEASE_TAG="$TAG" node scripts/data/dist.ts
 # An assignment, not process substitution, so a failed check stops the run.
 assets=$(node scripts/release/assets.ts "$TAG")
 mapfile -t files <<<"$assets"
-grep -H '"revision"' "${files[@]}"
+# A log line only: checkAssets has already decided.
+grep -H '"revision"' "${files[@]}" || true
 echo "::endgroup::"
 
 notes="tc-mobile template packages v0 for $TAG, built from the pinned sources in sources.json at this tag. See docs/schema.md, \"Releases\"."
+# The release needs GITHUB_REPOSITORY (set -u); a local dry run may lack it.
+if $dry_run; then repo=${GITHUB_REPOSITORY:-unfoldingWord/bible-passages}; else repo=$GITHUB_REPOSITORY; fi
+create=(gh release create "$TAG" "${files[@]}" --repo "$repo"
+  --verify-tag --draft --title "$TAG" --notes "$notes")
 if $dry_run; then
   echo "Dry run passed. A release would run:"
-  echo "  gh release create $TAG ${files[*]} --verify-tag --draft --title $TAG"
-  git checkout -- dist
-  echo "dist/ restored to the committed files."
+  printf ' %q' "${create[@]}"
+  echo
   exit 0
 fi
 
-gh release create "$TAG" "${files[@]}" \
-  --repo "$GITHUB_REPOSITORY" \
-  --verify-tag \
-  --draft \
-  --title "$TAG" \
-  --notes "$notes"
+"${create[@]}"

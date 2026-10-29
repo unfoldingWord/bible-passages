@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -72,5 +72,37 @@ describe("release assets", () => {
         stdio: "pipe",
       });
     expect(run).toThrow(/source\.revision is "unreleased", not "v0\.1\.0"/);
+  });
+
+  // The build overwrites data/, so a dry run must stop before it rather than
+  // replace an uncommitted title edit and report success.
+  it("a dry run refuses to start over an uncommitted data/ edit", () => {
+    const repo = mkdtempSync(join(tmpdir(), "release-dirty-"));
+    const git = (...args: string[]) =>
+      execFileSync("git", args, { cwd: repo, stdio: "pipe" });
+    writeFileSync(join(repo, "package.json"), '{"version":"0.0.0"}');
+    mkdirSync(join(repo, "data"));
+    writeFileSync(join(repo, "data/t.json"), '"committed"');
+    git("init", "-q");
+    git("add", ".");
+    git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "t");
+    writeFileSync(join(repo, "data/t.json"), '"local edit"');
+    const script = join(process.cwd(), "scripts/release/run.sh");
+    let out = "";
+    expect(() => {
+      try {
+        execFileSync("bash", [script, "--dry-run"], {
+          cwd: repo,
+          stdio: "pipe",
+        });
+      } catch (e) {
+        out = String((e as { stdout: Buffer }).stdout);
+        throw e;
+      }
+    }).toThrow();
+    expect(out).toMatch(/data\/ or dist\/ has uncommitted changes/);
+    expect(readFileSync(join(repo, "data/t.json"), "utf8")).toBe(
+      '"local edit"'
+    );
   });
 });

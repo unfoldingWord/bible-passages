@@ -246,7 +246,9 @@ and admins create, move or delete `v*` tags.
 **Dry run.** `scripts/release/run.sh --dry-run` runs steps 1 to 4 at `HEAD`
 for the tag `v` + `package.json`'s version (or a tag given after
 `--dry-run`), prints the `gh release create` it would run, and restores
-`dist/`. It creates no tag and no release and needs no token. Run by hand
+`data/` and `dist/`, passed or failed. It refuses to start while `data/` or
+`dist/` has uncommitted changes, since the build overwrites them. It creates
+no tag and no release and needs no token. Run by hand
 from the Actions tab (`workflow_dispatch`), the release workflow does the
 same, with a read-only token:
 `gh workflow run release.yml --repo unfoldingWord/bible-passages --ref main`.
