@@ -25,7 +25,7 @@ Four waves of 3–5 lanes, each a background agent in its own worktree; every PR
 | Decision 11 and T1 recorded; ADR 0001 move-back record; Servant.Bible entry scoped (already listed upstream as planned)                                                                              | #45, #33, #71                                        |
 | Bench follow-ups closed: #22, #23, #38, #39, #41, #42, #43, #46, #50, #54, #55, #61, #66, #85, #89, #94                                                                                              | merged PRs above                                     |
 
-`main` at `9bfc685`: `npm run verify` 9,702 passed, 2 todo. Model spend today about $1.55 on OpenRouter (Titus runs $1.38, zh-Hans terms $0.17, Philippians $0.08, T1 re-translation $0.02).
+`main` at `9bfc685`: `npm run verify` 9,702 passed, 2 todo. Model spend today about $1.66 on OpenRouter, summed from the lanes' ledgers: Titus runs $1.37, smoke tests about $0.02, zh-Hans terms $0.17, Philippians $0.08, T1 re-translation $0.02.
 
 ### Decisions (the maintainer, 29 Oct)
 
