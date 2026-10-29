@@ -34,10 +34,11 @@ It is replaced by the ratio measured on the Titus run.
 
 ## Models
 
-Proposed, as OpenRouter names them (its model list, read 2026-10-29):
+As OpenRouter names them (its model list, read 2026-10-29):
 `google/gemini-3.8-flash` (the newest fast Gemini model) and
 `anthropic/claude-sonnet-5.5` (the model that drafted the English titles).
-To be confirmed on #10, with the comparison rule, before the Titus run.
+Confirmed by the DRI on 2026-10-29, with the rule for choosing between them,
+in [ADR 0002](../decisions/0002-measure-translation-models.md).
 
 ## Output
 
