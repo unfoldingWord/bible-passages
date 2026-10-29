@@ -16,12 +16,21 @@ import {
   type Glossary,
   type TwRepo,
 } from "../lib/glossaries.ts";
-import { readSource, source, sources } from "../lib/sources.ts";
+import { readSource, sources, type Source } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 
 const out = new URL("../../data/glossaries/", import.meta.url);
 
-const pinned = new Set(sources().map((s) => s.id));
+// sources.json is read once: source() re-reads and parses it on every call,
+// which over thousands of pins is most of a build's time.
+const pins = new Map(sources().map((s) => [s.id, s]));
+const pinned = new Set(pins.keys());
+const pinOf = (id: string): Source => {
+  const pin = pins.get(id);
+  if (!pin) throw new Error(`${id} is not pinned in sources.json`);
+  return pin;
+};
+const read = (id: string) => readSource(id, { pin: pinOf(id) });
 
 // Fetch the glossary inputs into the cache a few at a time; the build below
 // then reads them in order. readSource checks every file against its pin.
@@ -29,13 +38,13 @@ const inputs = [...pinned].filter(isGlossaryInput);
 await Promise.all(
   Array.from({ length: 8 }, async () => {
     for (let id = inputs.pop(); id !== undefined; id = inputs.pop()) {
-      await readSource(id);
+      await read(id);
     }
   })
 );
 const reader = (repo: TwRepo) => async (article: string) => {
   const id = twId(repo.language, article);
-  return pinned.has(id) ? readSource(id) : undefined;
+  return pinned.has(id) ? read(id) : undefined;
 };
 const en = TW.find((r) => r.language === "en");
 if (!en) throw new Error("no English Translation Words configured");
@@ -53,7 +62,7 @@ for (const book of GLOSSARY_BOOKS) {
   if (!TWL_BOOKS.includes(book)) {
     throw new Error(`${book}: the pinned TWL release has no file for it`);
   }
-  const rows = parseTwl(await readSource(twlId(book)));
+  const rows = parseTwl(await read(twlId(book)));
   for (const repo of TW) {
     const glossary = await buildGlossary(
       repo,
@@ -61,7 +70,7 @@ for (const book of GLOSSARY_BOOKS) {
       rows,
       english,
       reader(repo),
-      source
+      pinOf
     );
     built.push({
       file: new URL(`${repo.language}/${book}.json`, out),

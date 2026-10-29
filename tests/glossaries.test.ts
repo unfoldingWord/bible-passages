@@ -409,8 +409,8 @@ describe("data/glossaries", () => {
   describe.each(GLOSSARY_BOOKS)("%s", (book) => {
     // The one network read in the tests: the pinned TWL file, checked
     // against its SHA-256 by readSource, so each glossary is traced to it.
-    const linked = readSource(twlId(book)).then((tsv) =>
-      linkedArticles(parseTwl(tsv))
+    const linked = readSource(twlId(book), { pin: pins.get(twlId(book)) }).then(
+      (tsv) => linkedArticles(parseTwl(tsv))
     );
 
     it.each(TW.map((r) => [r.language, r] as const))(
@@ -478,7 +478,8 @@ describe("data/glossaries", () => {
             continue;
           }
           // Otherwise the article is pinned and read: re-derive the gap.
-          const md = await readSource(twId(lang, article));
+          const id = twId(lang, article);
+          const md = await readSource(id, { pin: pins.get(id) });
           const word = headingOf(md);
           if (word === undefined) {
             expect(gap).toBe("no-heading");
