@@ -538,6 +538,10 @@ describe("checker command line", () => {
       [{ glossaries: undefined }, "no glossary hashes"],
       [{ english: undefined }, "no English hash"],
       [{ model: "gemini" }, "cannot tell the model family"],
+      [{ glossaries: [] }, "no glossary hashes"],
+      [{ glossaries: {} }, "no glossary hash for fr"],
+      [{ glossaries: { fr: 7 } }, "no glossary hash for fr"],
+      [{ languages: ["fr", "fr"] }, "lists a language twice"],
     ];
     for (const [ledger, message] of cases) {
       const r = run(["--run", fakeRun(ledger), "--model", MODELS.claude]);
@@ -545,6 +549,45 @@ describe("checker command line", () => {
       expect(r.stderr, message).toContain(`check: `);
       expect(r.stderr, message).toContain(message);
     }
+  });
+
+  it("refuses a run file that is not JSON or has no titles object", () => {
+    for (const [body, message] of [
+      ["{not json", "fr/TIT.json is not JSON"],
+      [
+        '{"language":"fr","book":"TIT","titles":[]}',
+        "fr/TIT.json has no titles object",
+      ],
+    ]) {
+      const dir = fakeRun();
+      writeFileSync(join(dir, "fr", "TIT.json"), body!);
+      const r = run(["--run", dir, "--model", MODELS.claude]);
+      expect(r.status, message).toBe(1);
+      expect(r.stderr, message).toContain(`check: ${message}`);
+    }
+  });
+
+  it("exits 2 when a language in the run has no translations file", () => {
+    // ar is in the run but has no file, and fr has nothing to check, so no
+    // call is made; the run still does not count as complete.
+    const dir = fakeRun({
+      languages: ["fr", "ar"],
+      glossaries: {
+        fr: sha256(read("data/glossaries/fr/TIT.json")),
+        ar: sha256(read("data/glossaries/ar/TIT.json")),
+      },
+    });
+    writeFileSync(
+      join(dir, "fr", "TIT.json"),
+      JSON.stringify(fileOf("fr", {}))
+    );
+    const out = join(mkdtempSync(join(tmpdir(), "check-out-")), "new");
+    const r = run(["--run", dir, "--model", MODELS.claude, "--out", out]);
+    expect(r.status).toBe(2);
+    expect(r.stderr).toContain("no translations to check for ar");
+    const ledger = JSON.parse(readFileSync(join(out, "run.json"), "utf8"));
+    expect(ledger.notInRun).toEqual(["ar"]);
+    expect(ledger.calls).toEqual([]);
   });
 
   it("refuses an --out that exists or is inside data/ or dist/, before any call", () => {

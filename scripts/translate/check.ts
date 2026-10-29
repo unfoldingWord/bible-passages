@@ -11,8 +11,9 @@
 // one `<lang>/<BOOK>.json` of checked titles per language, in the shape of
 // data/drafts/<lang>/<BOOK>.json, and `run.json`, the ledger of calls and
 // totals. Exit 0: every translation has a verdict. Exit 2: the run stopped
-// early or some verdicts are missing, invalid or unreadable. Exit 1: an
-// error; the ledger still holds what was spent.
+// early, some verdicts are missing, invalid or unreadable, or a language in
+// the translation run has no translations file. Exit 1: an error; the
+// ledger still holds what was spent.
 import { existsSync, readFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -90,7 +91,13 @@ const ledger = ((): Ledger => {
     fail("the translation run's languages are not v0.1 language tags");
   if (typeof l.english?.sha256 !== "string")
     fail("the translation run has no English hash");
-  if (typeof l.glossaries !== "object" || l.glossaries === null)
+  if (new Set(l.languages).size !== l.languages?.length)
+    fail("the translation run lists a language twice");
+  if (
+    typeof l.glossaries !== "object" ||
+    l.glossaries === null ||
+    Array.isArray(l.glossaries)
+  )
     fail("the translation run has no glossary hashes");
   return l as Ledger;
 })();
@@ -104,9 +111,22 @@ const translator = (() => {
 if (translator === family(model))
   fail(`${ledger.model} must be checked by another family, not ${model}`);
 const tags = values.lang ? values.lang.split(",") : ledger.languages;
-for (const tag of tags)
+if (new Set(tags).size !== tags.length) fail("--lang lists a language twice");
+// Every language checked needs the translator's glossary hash, or an
+// explicit null (it had no glossary, as zh-Hans): a missing entry is not
+// "no glossary".
+const glossaryHash = (tag: string): string | null => {
+  const hash: unknown = Object.hasOwn(ledger.glossaries, tag)
+    ? ledger.glossaries[tag]
+    : undefined;
+  if (hash === null || typeof hash === "string") return hash;
+  return fail(`the translation run has no glossary hash for ${tag}`);
+};
+for (const tag of tags) {
   if (!ledger.languages.includes(tag))
     fail(`${tag} is not in the translation run`);
+  glossaryHash(tag);
+}
 
 const book = ledger.book;
 const englishPath = `data/titles/en/${book}.json`;
@@ -123,13 +143,28 @@ const promptFile = readFileSync(new URL(promptPath, root), "utf8");
 
 const files: TranslatedFile[] = [];
 const glossaries: Record<string, Glossary | null> = {};
+// Languages in the run with no file: the translator stopped or failed there.
+const notInRun: string[] = [];
 for (const tag of tags) {
   const file = new URL(`${tag}/${book}.json`, runDir);
   if (!existsSync(file)) {
     console.log(`${tag}: no translations in the run; not checked`);
+    notInRun.push(tag);
     continue;
   }
-  const translated = JSON.parse(readFileSync(file, "utf8")) as TranslatedFile;
+  const translated = ((): TranslatedFile => {
+    try {
+      return JSON.parse(readFileSync(file, "utf8")) as TranslatedFile;
+    } catch {
+      return fail(`${tag}/${book}.json is not JSON`);
+    }
+  })();
+  if (
+    typeof translated.titles !== "object" ||
+    translated.titles === null ||
+    Array.isArray(translated.titles)
+  )
+    fail(`${tag}/${book}.json has no titles object`);
   // The language a file says it is decides its glossary and where its
   // output is written, so it must be the directory it was found in.
   if (translated.language !== tag || translated.book !== book)
@@ -139,7 +174,7 @@ for (const tag of tags) {
   files.push(translated);
   // The checker reads the glossary the translator read, or none if it had
   // none (zh-Hans).
-  const hash = ledger.glossaries[tag] ?? null;
+  const hash = glossaryHash(tag);
   if (hash === null) {
     glossaries[tag] = null;
     continue;
@@ -190,9 +225,8 @@ try {
       },
       prompt: { file: promptPath, sha256: sha256(promptFile) },
       english: { file: englishPath, sha256: sha256(englishText) },
-      glossaries: Object.fromEntries(
-        tags.map((t) => [t, ledger.glossaries[t] ?? null])
-      ),
+      notInRun,
+      glossaries: Object.fromEntries(tags.map((t) => [t, glossaryHash(t)])),
     },
     log: (line) => console.log(line),
   });
@@ -200,6 +234,10 @@ try {
   console.log(`written to ${out.pathname}`);
   if (stop !== "done") {
     console.error(`check: stopped early: ${JSON.stringify(stop)}`);
+    process.exit(2);
+  }
+  if (notInRun.length > 0) {
+    console.error(`check: no translations to check for ${notInRun.join(", ")}`);
     process.exit(2);
   }
   if (summary.missing + summary.invalid + summary.unreadable > 0) {
