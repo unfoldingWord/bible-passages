@@ -363,6 +363,15 @@ describe("book lists", () => {
     expect(TWL_BOOKS).toEqual(all.filter((b) => !TWL_UNRELEASED.includes(b)));
     // As measured in en_twl v91's git tree (docs/scoping/glossaries.md).
     expect(TWL_BOOKS).toHaveLength(59);
+    expect(TWL_UNRELEASED).toEqual([
+      "NUM",
+      "1CH",
+      "2CH",
+      "ECC",
+      "ISA",
+      "JER",
+      "EZK",
+    ]);
   });
 
   it("builds glossaries only for books the TWL release has", () => {
@@ -379,6 +388,25 @@ describe("absent lists", () => {
       expect([...repo.absent]).toEqual([...new Set(repo.absent)].sort());
     }
   );
+
+  it("has the lengths measured on 2026-10-29", () => {
+    // A tripwire: CI does not run the pin script that re-derives the lists,
+    // so a dropped or added line must also change this table on purpose.
+    // docs/scoping/glossaries.md, "Every book".
+    expect(
+      Object.fromEntries(TW.map((r) => [r.language, r.absent.length]))
+    ).toEqual({
+      en: 1,
+      ar: 5,
+      "es-419": 39,
+      fr: 69,
+      hi: 41,
+      id: 243,
+      "pt-BR": 70,
+      ru: 41,
+      sw: 41,
+    });
+  });
 
   it("pins no article a language lists as absent", () => {
     for (const repo of TW) {

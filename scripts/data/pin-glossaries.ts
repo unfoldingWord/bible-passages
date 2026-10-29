@@ -146,7 +146,7 @@ await Promise.all(
   Array.from({ length: 8 }, async () => {
     for (let i = next++; i < all.length; i = next++) {
       const job = all[i];
-      if (job === undefined) continue;
+      if (job === undefined) throw new Error(`no pin job at ${i}`);
       pins[i] = {
         id: job.id,
         url: job.url,
@@ -158,6 +158,11 @@ await Promise.all(
     }
   })
 );
+
+// Every slot filled: a hole would be written to sources.json as null.
+for (let i = 0; i < all.length; i++) {
+  if (pins[i] === undefined) throw new Error(`pin ${all[i]?.id} not fetched`);
+}
 
 // Keep every other input; replace the glossary inputs wholesale, where the
 // first of them stood (or at the end), so a re-run moves nothing else.
