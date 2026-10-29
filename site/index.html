@@ -161,6 +161,25 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media (max-width:900px){.gh .drop{position:static;margin-top:6px;box-shadow:none}.gh summary{display:inline-block;margin-top:4px}}
 .dated{display:inline-flex;gap:6px;align-items:center;font-size:.78rem;font-weight:700;color:var(--muted)}
 .dated.old{color:var(--warn)}
+.rv-pick{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:end}
+.rv-pick label{display:grid;gap:4px;font-size:.84rem;color:var(--muted);font-weight:700}
+.rv-pick select,.rv-field input,.rv-field textarea{font:inherit;font-size:1rem;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
+.rv-pick .tog{display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink-2)}
+.rv-card{gap:16px}
+.rv-card:focus{outline:none}
+.rv-meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.rv-passage{background:var(--sunk);border-radius:8px;padding:12px 14px;color:var(--ink);max-width:68ch;text-align:start}
+.rv-passage sup{color:var(--muted);font-weight:700;margin-inline-end:3px}
+.rv-title{font-size:var(--step-2);font-weight:800;color:var(--ink);line-height:1.3;text-align:start;overflow-wrap:anywhere}
+.rv-en{color:var(--ink-2);font-size:.9rem}
+.rv-mine{border-radius:8px;padding:8px 12px;background:var(--good-bg);color:var(--ink);font-size:.9rem}
+.rv-mine.old{background:var(--warn-bg)}
+.rv-actions,.rv-nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn.quiet{background:transparent;color:var(--head);border-color:var(--line)}
+.rv-field{display:grid;gap:6px;max-width:68ch}
+.rv-field label{font-weight:700;font-size:.9rem}
+.rv-field textarea{min-height:64px;resize:vertical}
+.rv-err{color:var(--bad);font-size:.88rem}
 .foot{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;color:var(--muted);font-size:.84rem;display:grid;gap:4px}
 @media (prefers-reduced-motion:no-preference){section.page{animation:in .2s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
 </style>
@@ -170,7 +189,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="global-nav">Menu</button>
   <nav class="global" id="global-nav" aria-label="Project pages">
     <a href="#home">Home</a><a href="#plan">Plan</a><a href="#scope">Scope</a><a href="#sizing">Sizing</a>
-    <a href="#decisions">Decisions</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
+    <a href="#decisions">Decisions</a><a href="#review">Review</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
     <details class="gh"><summary>GitHub ▾</summary><div class="drop">
       <a href="https://github.com/unfoldingWord/bible-passages" target="_blank" rel="noopener">Repository <span>unfoldingWord/bible-passages</span></a>
       <a href="https://github.com/unfoldingWord/bible-passages/issues" target="_blank" rel="noopener">Issues</a>
@@ -265,6 +284,14 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   <div class="grid" id="decs"></div>
 </section>
 
+<section class="page" data-page="review" hidden aria-label="Review">
+  <div class="lead"><span class="eyebrow">Review · one title at a time</span><h2>Does this title fit its passage?</h2>
+  <p>Read the passage, then approve its title, change the wording, or skip it. A maintainer turns reviews into a pull request on the repository, where your reviewer name is public. Your own name is never stored.</p></div>
+  <div class="panel" id="rv-who"></div>
+  <div class="panel rv-pick" id="rv-pick"></div>
+  <div class="panel rv-card" id="rv-card" tabindex="-1" aria-live="polite"></div>
+</section>
+
 <section class="page" data-page="coverage" hidden aria-label="Coverage">
   <div class="lead"><span class="eyebrow">Coverage · books × languages</span><h2>What exists in the repo</h2>
   <p>A cell fills when the default branch has that book's titles in that language. English Titus is the first. Spanish is <code>es-419</code> (decision 13).</p></div>
@@ -286,6 +313,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 <script>
 const BASE = {"schema":"bp.snapshot","v":1,"asOf":"2026-10-29T11:09:34.538Z","repo":{"pushedAt":"2026-10-29T01:50:04Z","defaultBranch":"main","openIssues":15},"commits":[{"sha":"ce92d4a","msg":"Merge pull request #27 from unfoldingWord/feat/site-refresh-29oct","at":"2026-10-29T01:50:04Z"},{"sha":"cae59cd","msg":"Merge pull request #28 from unfoldingWord/docs/eod-2026-10-29-late","at":"2026-10-29T01:49:49Z"},{"sha":"ed9f36a","msg":"docs: progress tracker, late 29 Oct session","at":"2026-10-29T01:49:00Z"},{"sha":"7ac93e9","msg":"Merge pull request #17 from unfoldingWord/feat/release-key-check","at":"2026-10-29T01:48:14Z"},{"sha":"eb8c6c2","msg":"fix(site): cite ADR 0003 for the Chinese key-term decision — bench round 2","at":"2026-10-29T01:38:53Z"},{"sha":"22a43a5","msg":"feat(site): #26 is merged; restore the recorded wording","at":"2026-10-29T01:37:43Z"},{"sha":"e0b3fa9","msg":"Merge remote-tracking branch 'origin/main' into feat/site-refresh-29oct","at":"2026-10-29T01:37:31Z"},{"sha":"20ac202","msg":"Merge pull request #26 from unfoldingWord/feat/record-owner-decisions","at":"2026-10-29T01:37:12Z"},{"sha":"c293c05","msg":"fix(review): the six Titus titles and scope/source ADRs are pending PR #26, not on main — bench round 1","at":"2026-10-29T01:33:08Z"},{"sha":"e2af010","msg":"fix(review): fetch release tags before the key check in CI and release — bench round 6","at":"2026-10-29T01:32:09Z"},{"sha":"17361d5","msg":"feat(site): bring every page up to 29 Oct","at":"2026-10-29T01:21:28Z"},{"sha":"755886d","msg":"feat: record the requirements owner's v0.1 decisions and T1-T6 titles","at":"2026-10-29T01:19:47Z"},{"sha":"a2cdd00","msg":"Merge pull request #25 from unfoldingWord/docs/eod-2026-10-29","at":"2026-10-29T01:14:08Z"},{"sha":"7d19f7c","msg":"docs: progress tracker for 29 Oct","at":"2026-10-29T01:13:02Z"},{"sha":"162ba91","msg":"Merge origin/main into feat/release-key-check","at":"2026-10-29T01:11:39Z"}],"pulls":[{"number":28,"title":"docs: progress tracker, late 29 Oct session","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:49:50Z"},{"number":27,"title":"feat(site): bring every page up to 29 Oct","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:50:05Z"},{"number":26,"title":"feat: record the requirements owner's v0.1 decisions and T1–T6 titles","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:37:13Z"},{"number":25,"title":"docs: progress tracker for 29 Oct","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:14:09Z"},{"number":20,"title":"feat(glossaries): Titus key-term glossaries from Translation Words, with 6B","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:06:55Z"},{"number":19,"title":"feat(site): the 6 disputed Titus titles on the Decisions tab","state":"closed","draft":false,"merged":true,"at":"2026-10-29T00:55:27Z"},{"number":18,"title":"docs(decisions): span keys; measure both translation models","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:11:27Z"},{"number":17,"title":"feat: key-stability check and release workflow","state":"closed","draft":false,"merged":true,"at":"2026-10-29T01:48:14Z"},{"number":16,"title":"feat(data): provisional Titus segment titles, drafted and cross-checked","state":"closed","draft":false,"merged":true,"at":"2026-10-29T00:55:11Z"},{"number":15,"title":"feat(data): Titus structure from pinned sources to dist","state":"closed","draft":false,"merged":true,"at":"2026-10-29T00:54:57Z"},{"number":1,"title":"Scaffold: layout, draft schema, checks, CLAUDE.md","state":"closed","draft":false,"merged":true,"at":"2026-10-29T00:52:26Z"}],"issues":[{"number":24,"title":"ADR 0001: name the one publishable title record after a move-back","state":"open","milestone":null,"closedAt":null},{"number":23,"title":"Release workflow follow-ups from #17 review","state":"open","milestone":null,"closedAt":null},{"number":22,"title":"Glossary hygiene follow-ups from #20 review","state":"open","milestone":null,"closedAt":null},{"number":21,"title":"Ask the Arabic tW team for 16 Titus headwords still in English","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":14,"title":"Servant.Bible registry entry for uw/bible-passages","state":"open","milestone":"Sprint 3 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":13,"title":"Release v0.1.0 and hand it to tC Mobile (#1459)","state":"open","milestone":"Sprint 3 (11-16 → 11-29) — v0.1.0","closedAt":null},{"number":12,"title":"dist generator, key-stability check and release workflow","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":11,"title":"Review screen and sync to PRs","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":10,"title":"Title translation runner with ported quality gates","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":9,"title":"Glossaries for the 9 v0.1 languages from Translation Words","state":"closed","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":"2026-10-29T01:41:56Z"},{"number":8,"title":"Segment title drafting with a cross-model check","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":7,"title":"Segments: nest chunks in pericopes and split at pericope starts","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":6,"title":"Pericope parser for all 66 books, with the Psalms verse-1 rule","state":"open","milestone":"Sprint 2 (11-02 → 11-15)","closedAt":null},{"number":5,"title":"Project site for this dataset, with a snapshot refreshed by hand","state":"closed","milestone":"Sprint 1 (10-19 → 11-01)","closedAt":"2026-10-29T01:41:53Z"},{"number":4,"title":"Ask the content team which chunk source is authoritative (1,184 differences)","state":"open","milestone":"Sprint 1 (10-19 → 11-01)","closedAt":null},{"number":3,"title":"Titus end to end: build one book and measure the real rates","state":"open","milestone":"Sprint 1 (10-19 → 11-01)","closedAt":null},{"number":2,"title":"Record the v0.1 decisions from servant.bible#1 as ADRs","state":"open","milestone":"Sprint 1 (10-19 → 11-01)","closedAt":null}],"milestones":[{"number":1,"title":"Sprint 1 (10-19 → 11-01)","open_issues":3,"closed_issues":1,"state":"open","due":"2026-11-01T00:00:00Z"},{"number":2,"title":"Sprint 2 (11-02 → 11-15)","open_issues":7,"closed_issues":1,"state":"open","due":"2026-11-15T00:00:00Z"},{"number":3,"title":"Sprint 3 (11-16 → 11-29) — v0.1.0","open_issues":2,"closed_issues":0,"state":"open","due":"2026-11-29T00:00:00Z"}],"runs":[{"sha":"ce92d4a","branch":"main","conclusion":"success","at":"2026-10-29T01:50:07Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802784611"},{"sha":"cae59cd","branch":"main","conclusion":"success","at":"2026-10-29T01:49:53Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802760040"},{"sha":"ed9f36a","branch":"docs/eod-2026-10-29-late","conclusion":"success","at":"2026-10-29T01:49:07Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802683761"},{"sha":"ed9f36a","branch":"docs/eod-2026-10-29-late","conclusion":"success","at":"2026-10-29T01:49:06Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802683738"},{"sha":"ed9f36a","branch":"docs/eod-2026-10-29-late","conclusion":"cancelled","at":"2026-10-29T01:49:06Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802683078"},{"sha":"7ac93e9","branch":"main","conclusion":"success","at":"2026-10-29T01:48:17Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40802603252"},{"sha":"eb8c6c2","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:38:58Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801679364"},{"sha":"eb8c6c2","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:38:58Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801679343"},{"sha":"22a43a5","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:37:49Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801563529"},{"sha":"22a43a5","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:37:49Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801563370"},{"sha":"20ac202","branch":"main","conclusion":"success","at":"2026-10-29T01:37:15Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801509889"},{"sha":"c293c05","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:33:35Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801144350"},{"sha":"c293c05","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:33:35Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801144339"},{"sha":"e2af010","branch":"feat/release-key-check","conclusion":"success","at":"2026-10-29T01:32:30Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801036508"},{"sha":"e2af010","branch":"feat/release-key-check","conclusion":"success","at":"2026-10-29T01:32:30Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40801036427"},{"sha":"17361d5","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:21:35Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40799938265"},{"sha":"17361d5","branch":"feat/site-refresh-29oct","conclusion":"success","at":"2026-10-29T01:21:35Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40799938241"},{"sha":"17361d5","branch":"feat/site-refresh-29oct","conclusion":"cancelled","at":"2026-10-29T01:21:35Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40799938216"},{"sha":"755886d","branch":"feat/record-owner-decisions","conclusion":"success","at":"2026-10-29T01:19:53Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40799760893"},{"sha":"755886d","branch":"feat/record-owner-decisions","conclusion":"success","at":"2026-10-29T01:19:53Z","url":"https://github.com/unfoldingWord/bible-passages/actions/runs/40799760255"}],"coverage":{"structure":["TIT"],"titles":{"en":["TIT"],"ar":[],"fr":[],"hi":[],"id":[],"zh-Hans":[],"pt-BR":[],"ru":[],"es-419":[],"sw":[]}},"external":{"servant1":{"state":"open","comments":2,"lastCommentAt":"2026-10-28T21:02:49Z","assignees":0},"tcm1459":{"state":"open","milestone":"Sprint 7 (11-16 → 11-29) — v1.3.0"}}};
 const BOOKS = [["GEN",50,135,634,16],["EXO",40,123,470,3],["LEV",27,70,372,0],["NUM",36,113,540,4],["DEU",34,91,480,1],["JOS",24,51,308,1],["JDG",21,52,302,5],["RUT",4,8,38,0],["1SA",31,70,396,4],["2SA",24,64,307,6],["1KI",22,94,358,0],["2KI",25,93,309,7],["1CH",29,84,356,7],["2CH",36,106,357,9],["EZR",10,28,112,3],["NEH",13,28,164,3],["EST",10,20,75,3],["JOB",42,50,433,2],["PSA",150,150,1135,0],["PRO",31,39,441,1],["ECC",12,26,114,6],["SNG",8,9,78,0],["ISA",66,120,690,3],["JER",52,122,570,5],["LAM",5,7,67,0],["EZK",48,114,549,3],["DAN",12,33,175,1],["HOS",14,19,101,0],["JOL",3,9,36,1],["AMO",9,14,77,1],["OBA",1,2,10,0],["JON",4,6,22,0],["MIC",7,15,51,1],["NAM",3,3,25,0],["HAB",3,7,29,0],["ZEP",3,10,24,0],["HAG",2,5,16,0],["ZEC",14,25,94,0],["MAL",4,8,24,0],["MAT",28,153,431,8],["MRK",16,96,269,7],["LUK",24,154,490,3],["JHN",21,84,360,11],["ACT",28,110,400,10],["ROM",16,47,197,4],["1CO",16,45,178,1],["2CO",13,25,110,1],["GAL",6,16,60,2],["EPH",6,17,61,1],["PHP",4,15,37,2],["COL",4,12,35,1],["1TH",5,10,32,0],["2TH",3,7,18,1],["1TI",6,20,45,1],["2TI",4,11,30,2],["TIT",3,8,24,1],["PHM",1,4,8,0],["HEB",13,34,122,2],["JAS",5,15,42,3],["1PE",5,15,43,1],["2PE",3,7,24,0],["1JN",5,15,41,0],["2JN",1,4,5,0],["3JN",1,4,5,0],["JUD",1,4,11,0],["REV",22,61,191,4]]; // [code, chapters, pericopes, chunks, splits]
+const REVIEW = {"schema":"bp.review-queue","v":1,"passage":"Berean Standard Bible (public domain), as pinned in sources.json","sets":[{"lang":"en","dir":"ltr","book":"TIT","name":"Titus","items":[{"key":"TIT.1.1-3","ref":"1:1–3","pericope":"Paul’s Greeting to Titus","text":"Paul introduces himself as God’s servant and apostle","status":"ai-checked","verses":[["1:1","Paul, a servant of God and an apostle of Jesus Christ for the faith of God’s elect and their knowledge of the truth that leads to godliness,"],["1:2","in the hope of eternal life, which God, who cannot lie, promised before time began."],["1:3","In His own time He has made His word evident in the proclamation entrusted to me by the command of God our Savior."]]},{"key":"TIT.1.4-4","ref":"1:4","pericope":"Paul’s Greeting to Titus","text":"Paul greets Titus, his true child in the faith","status":"ai-checked","verses":[["1:4","To Titus, my true child in our common faith: Grace and peace from God the Father and Christ Jesus our Savior."]]},{"key":"TIT.1.5-5","ref":"1:5","pericope":"Appointing Elders on Crete","text":"Paul left Titus in Crete to appoint elders","status":"ai-checked","verses":[["1:5","The reason I left you in Crete was that you would set in order what was unfinished and appoint elders in every town, as I directed you."]]},{"key":"TIT.1.6-7","ref":"1:6–7","pericope":"Appointing Elders on Crete","text":"Elders must be blameless in family and character","status":"ai-checked","verses":[["1:6","An elder must be blameless, the husband of but one wife, having children who are believers and who are not open to accusation of indiscretion or insubordination."],["1:7","As God’s steward, an overseer must be above reproach—not self-absorbed, not quick-tempered, not given to drunkenness, not violent, not greedy for money."]]},{"key":"TIT.1.8-9","ref":"1:8–9","pericope":"Appointing Elders on Crete","text":"Elders must live well and hold to the true message","status":"ai-checked","verses":[["1:8","Instead, he must be hospitable, a lover of good, self-controlled, upright, holy, and disciplined."],["1:9","He must hold firmly to the faithful word as it was taught, so that he can encourage others by sound teaching and refute those who contradict it."]]},{"key":"TIT.1.10-11","ref":"1:10–11","pericope":"Correcting False Teachers","text":"Rebellious people who mislead households must be silenced","status":"ai-checked","verses":[["1:10","For many are rebellious and full of empty talk and deception, especially those of the circumcision,"],["1:11","who must be silenced. For the sake of dishonorable gain, they undermine entire households and teach things they should not."]]},{"key":"TIT.1.12-13","ref":"1:12–13","pericope":"Correcting False Teachers","text":"Titus must firmly correct them","status":"human-reviewed","verses":[["1:12","As one of their own prophets has said, “Cretans are always liars, evil beasts, lazy gluttons.”"],["1:13","This testimony is true. Therefore rebuke them sternly, so that they will be sound in the faith"]]},{"key":"TIT.1.14-14","ref":"1:14","pericope":"Correcting False Teachers","text":"Do not follow myths or commands of men","status":"human-reviewed","verses":[["1:14","and will pay no attention to Jewish myths or to the commands of men who have rejected the truth."]]},{"key":"TIT.1.15-16","ref":"1:15–16","pericope":"Correcting False Teachers","text":"Some say they know God but their actions deny him","status":"human-reviewed","verses":[["1:15","To the pure, all things are pure; but to the defiled and unbelieving, nothing is pure. Indeed, both their minds and their consciences are defiled."],["1:16","They profess to know God, but by their actions they deny Him. They are detestable, disobedient, and unfit for any good deed."]]},{"key":"TIT.2.1-2","ref":"2:1–2","pericope":"Teaching Sound Doctrine","text":"Titus teaches older men to live with self-control","status":"ai-checked","verses":[["2:1","But as for you, speak the things that are consistent with sound doctrine."],["2:2","Older men are to be temperate, dignified, self-controlled, and sound in faith, love, and perseverance."]]},{"key":"TIT.2.3-5","ref":"2:3–5","pericope":"Teaching Sound Doctrine","text":"Older women are to teach the younger women","status":"ai-checked","verses":[["2:3","Older women, likewise, are to be reverent in their behavior, not slanderers or addicted to much wine, but teachers of good."],["2:4","In this way they can train the young women to love their husbands and children,"],["2:5","to be self-controlled, pure, managers of their households, kind, and submissive to their own husbands, so that the word of God will not be discredited."]]},{"key":"TIT.2.6-8","ref":"2:6–8","pericope":"Teaching Sound Doctrine","text":"Titus instructs younger men","status":"human-reviewed","verses":[["2:6","In the same way, urge the younger men to be self-controlled."],["2:7","In everything, show yourself to be an example by doing good works. In your teaching show integrity, dignity,"],["2:8","and wholesome speech that is above reproach, so that anyone who opposes us will be ashamed to have nothing bad to say about us."]]},{"key":"TIT.2.9-10","ref":"2:9–10","pericope":"Teaching Sound Doctrine","text":"Slaves are to be respectful and honest to their masters","status":"ai-checked","verses":[["2:9","Slaves are to submit to their own masters in everything, to be well-pleasing, not argumentative,"],["2:10","not stealing from them, but showing all good faith, so that in every respect they will adorn the teaching about God our Savior."]]},{"key":"TIT.2.11-13","ref":"2:11–13","pericope":"God’s Grace Brings Salvation","text":"God’s grace teaches us to live well as we wait for Christ","status":"ai-checked","verses":[["2:11","For the grace of God has appeared, bringing salvation to everyone."],["2:12","It instructs us to renounce ungodliness and worldly passions, and to live sensible, upright, and godly lives in the present age,"],["2:13","as we await the blessed hope and glorious appearance of our great God and Savior Jesus Christ."]]},{"key":"TIT.2.14-14","ref":"2:14","pericope":"God’s Grace Brings Salvation","text":"Christ gave himself to make a people for himself","status":"ai-checked","verses":[["2:14","He gave Himself for us to redeem us from all lawlessness and to purify for Himself a people for His own possession, zealous for good deeds."]]},{"key":"TIT.2.15-15","ref":"2:15","pericope":"God’s Grace Brings Salvation","text":"Titus must speak with authority","status":"ai-checked","verses":[["2:15","Speak these things as you encourage and rebuke with all authority. Let no one despise you."]]},{"key":"TIT.3.1-2","ref":"3:1–2","pericope":"Heirs of Grace","text":"Believers should obey rulers and be gentle to everyone","status":"ai-checked","verses":[["3:1","Remind the believers to submit to rulers and authorities, to be obedient and ready for every good work,"],["3:2","to malign no one, and to be peaceable and gentle, showing full consideration to everyone."]]},{"key":"TIT.3.3-3","ref":"3:3","pericope":"Heirs of Grace","text":"Before, we were foolish and slaves to our desires","status":"ai-checked","verses":[["3:3","For at one time we too were foolish, disobedient, misled, and enslaved to all sorts of desires and pleasures—living in malice and envy, being hated and hating one another."]]},{"key":"TIT.3.4-5","ref":"3:4–5","pericope":"Heirs of Grace","text":"God saved us because of his mercy, not our deeds","status":"ai-checked","verses":[["3:4","But when the kindness of God our Savior and His love for mankind appeared,"],["3:5","He saved us, not by the righteous deeds we had done, but according to His mercy, through the washing of new birth and renewal by the Holy Spirit."]]},{"key":"TIT.3.6-7","ref":"3:6–7","pericope":"Heirs of Grace","text":"God poured out the Spirit so we have hope of eternal life","status":"ai-checked","verses":[["3:6","This is the Spirit He poured out on us abundantly through Jesus Christ our Savior,"],["3:7","so that, having been justified by His grace, we would become heirs with the hope of eternal life."]]},{"key":"TIT.3.8-8","ref":"3:8","pericope":"Heirs of Grace","text":"Believers should be devoted to doing good","status":"ai-checked","verses":[["3:8","This saying is trustworthy. And I want you to emphasize these things, so that those who have believed God will take care to devote themselves to good deeds. These things are excellent and profitable for the people."]]},{"key":"TIT.3.9-11","ref":"3:9–11","pericope":"Avoid Divisions","text":"Avoid foolish arguments and reject a divisive person","status":"human-reviewed","verses":[["3:9","But avoid foolish controversies, genealogies, arguments, and quarrels about the law, because these things are pointless and worthless."],["3:10","Reject a divisive man after a first and second admonition,"],["3:11","knowing that such a man is corrupt and sinful; he is self-condemned."]]},{"key":"TIT.3.12-13","ref":"3:12–13","pericope":"Final Remarks and Greetings","text":"Paul asks Titus to come and to help Zenas and Apollos","status":"ai-checked","verses":[["3:12","As soon as I send Artemas or Tychicus to you, make every effort to come to me at Nicopolis, because I have decided to winter there."],["3:13","Do your best to equip Zenas the lawyer and Apollos, so that they will have everything they need."]]},{"key":"TIT.3.14-14","ref":"3:14","pericope":"Final Remarks and Greetings","text":"Believers must work to meet urgent needs","status":"ai-checked","verses":[["3:14","And our people must also learn to devote themselves to good works in order to meet the pressing needs of others, so that they will not be unfruitful."]]},{"key":"TIT.3.15-15","ref":"3:15","pericope":"Final Remarks and Greetings","text":"Final greetings and blessing","status":"human-reviewed","verses":[["3:15","All who are with me send you greetings. Greet those who love us in the faith. Grace be with all of you."]]}]}]}; // site/review.json: the titles the Review page asks about
 const REPO = "https://github.com/unfoldingWord/bible-passages";
 const DOCS_REF = "main";
 const doc = (path) => `${REPO}/${path.includes(".") ? "blob" : "tree"}/${DOCS_REF}/${path}`;
@@ -546,8 +574,168 @@ async function resolveNames() {
   try { const ps = await RV.user.profiles(ids); for (const id of ids) RV.names[id] = ps[id]?.name || ""; } catch (e) { /* names are optional */ }
 }
 
+/* ---------- review: one title at a time ---------- */
+// Each reviewer writes only under review/<their id>: a profile document with
+// the handle they chose, and one document per title they reviewed. A session
+// exports those documents and scripts/review/apply.ts turns them into a PR
+// (docs/scoping/review-screen.md). The handle is the only name stored.
+const HANDLE_RE = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;
+const RQ = { sets: REVIEW && Array.isArray(REVIEW.sets) ? REVIEW.sets : [], set: 0, key: null, open: true, skipped: new Set(), mine: {}, loaded: false, handle: "", changing: false, editing: false, busy: false, msg: "" };
+const rqId = (s, it) => `${s.lang}~${s.book}~${it.key}`;
+const rqSet = () => RQ.sets[RQ.set];
+const rqDir = (s) => (s.dir === "rtl" ? "rtl" : "ltr");
+const rqCan = () => Boolean(RV.db && RV.uid && RQ.handle);
+// Done for this reviewer: they reviewed the wording that is in the queue now.
+const rqDone = (s, it) => RQ.mine[rqId(s, it)]?.seen === it.text;
+const rqOpen = (s, it) => !rqDone(s, it) && !RQ.skipped.has(rqId(s, it));
+function rqFirst() {
+  const s = rqSet();
+  const it = s && (RQ.open ? s.items.find((x) => rqOpen(s, x)) : s.items[0]);
+  RQ.key = it ? it.key : null;
+}
+function rqStep(dir) {
+  const s = rqSet(); if (!s) return;
+  const i = s.items.findIndex((it) => it.key === RQ.key);
+  RQ.editing = false; RQ.msg = "";
+  for (let j = (i < 0 ? (dir > 0 ? -1 : s.items.length) : i) + dir; j >= 0 && j < s.items.length; j += dir) {
+    if (dir < 0 || !RQ.open || rqOpen(s, s.items[j])) { RQ.key = s.items[j].key; return renderReview(true); }
+  }
+  if (dir > 0) RQ.key = null;
+  renderReview(true);
+}
+// Checks a reviewer's own wording before it is saved; scripts/review/apply.ts
+// checks it again, with the translation gates, before it reaches the repo.
+function rqWordingProblem(s, it, text) {
+  if (!text) return "Write the new title.";
+  if (text === it.text) return "The wording is the same as the title.";
+  if (/[\r\n\t{}<>]/.test(text)) return "Use plain text on one line.";
+  if (s.lang === "en" && text.length > 60) return `Keep it to 60 characters (now ${text.length}).`;
+  if (s.lang === "en" && /[.“”"]$|^["“]/.test(text)) return "Leave off the full stop and the quotes.";
+  return "";
+}
+function renderReviewWho() {
+  const el = $("#rv-who");
+  if (!RV.db || !RV.uid) { el.innerHTML = `<p class="saved">Sign in to claude.ai to review. You can read the titles without signing in.</p>`; return; }
+  if (RQ.handle && !RQ.changing) {
+    el.innerHTML = `<div class="rv-actions"><span>Reviewing as <b class="mono">reviewer:${esc(RQ.handle)}</b></span><button class="btn quiet" type="button" id="rv-who-change">Change</button></div>`;
+    $("#rv-who-change").onclick = () => { RQ.changing = true; renderReviewWho(); $("#rv-handle").focus(); };
+    return;
+  }
+  el.innerHTML = `<form class="rv-field" id="rv-who-form" novalidate>
+    <label for="rv-handle">Choose a reviewer name</label>
+    <p class="saved" id="rv-handle-help">It is public: the repository shows it with each title you review. Use lowercase letters, digits and hyphens, such as <span class="mono">reader-7</span>. Use your real name only if you want it public.</p>
+    <div class="rv-actions"><input id="rv-handle" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="39" dir="ltr" aria-describedby="rv-handle-help rv-handle-err" value="${esc(RQ.handle)}">
+    <button class="btn" type="submit">Save</button>${RQ.handle ? `<button class="btn quiet" type="button" id="rv-who-cancel">Cancel</button>` : ""}</div>
+    <span class="rv-err" id="rv-handle-err" role="alert"></span></form>`;
+  $("#rv-who-form").onsubmit = async (e) => {
+    e.preventDefault();
+    const h = $("#rv-handle").value.trim().toLowerCase();
+    if (!HANDLE_RE.test(h)) { $("#rv-handle-err").textContent = "Use 1 to 39 lowercase letters, digits or hyphens, not starting or ending with a hyphen."; return; }
+    try { await RV.db.doc("review/" + RV.uid).set({ v: 1, handle: h, at: new Date().toISOString() }); RQ.handle = h; RQ.changing = false; renderReviewWho(); renderReview(); }
+    catch (err) { $("#rv-handle-err").textContent = "Couldn't save: " + (err?.message || "try again"); }
+  };
+  const c = $("#rv-who-cancel"); if (c) c.onclick = () => { RQ.changing = false; renderReviewWho(); };
+}
+function renderReviewPick() {
+  const el = $("#rv-pick");
+  el.hidden = !RQ.sets.length;
+  if (!RQ.sets.length) return;
+  el.innerHTML = `<label>Language and book<select id="rv-set">${RQ.sets.map((s, i) => `<option value="${i}"${i === RQ.set ? " selected" : ""}>\u2068${esc(s.name)}\u2069 · ${esc(s.lang)} (${Number(s.items.length)} titles)</option>`).join("")}</select></label>
+    <label class="tog"><input type="checkbox" id="rv-open"${RQ.open ? " checked" : ""}> Only titles I have not reviewed</label>`;
+  const reset = () => { RQ.skipped.clear(); RQ.editing = false; RQ.msg = ""; rqFirst(); renderReview(true); };
+  $("#rv-set").onchange = (e) => { RQ.set = Number(e.target.value) || 0; reset(); };
+  $("#rv-open").onchange = (e) => { RQ.open = e.target.checked; reset(); };
+}
+function renderReview(focus) {
+  const el = $("#rv-card"), s = rqSet();
+  if (!s || !s.items.length) { el.innerHTML = `<p>There are no titles to review yet.</p>`; return; }
+  const total = s.items.length, left = s.items.filter((x) => !rqDone(s, x)).length;
+  const it = s.items.find((x) => x.key === RQ.key);
+  if (!it) {
+    const sk = RQ.skipped.size;
+    el.innerHTML = `<h3>${left ? `${left} of ${total} titles left` : `You have reviewed all ${total} titles`}</h3>
+      <p>${sk ? `You skipped ${sk}. ` : ""}Your reviews wait here for a maintainer, who turns them into a pull request on the repository. After it merges, the titles show their reviewed status.</p>
+      <div class="rv-actions">${sk ? `<button class="btn" type="button" id="rv-again">Go back to the ones I skipped</button>` : ""}<button class="btn quiet" type="button" id="rv-all">See every title</button></div>`;
+    const a = $("#rv-again"); if (a) a.onclick = () => { RQ.skipped.clear(); rqFirst(); renderReview(true); };
+    $("#rv-all").onclick = () => { RQ.open = false; RQ.skipped.clear(); renderReviewPick(); rqFirst(); renderReview(true); };
+    if (focus) el.focus({ preventScroll: true });
+    return;
+  }
+  const n = s.items.indexOf(it) + 1, mine = RQ.mine[rqId(s, it)], lang = esc(s.lang), dir = rqDir(s);
+  const statusCls = { "human-reviewed": "good", approved: "good", "ai-checked": "blue", unreviewed: "warn" }[it.status] || "";
+  const fresh = mine && mine.seen === it.text;
+  const mineLine = mine ? `<div class="rv-mine${fresh ? "" : " old"}">${fresh ? "" : "The title changed after your review. "}You ${mine.action === "edit" ? `changed it to <b lang="${lang}" dir="${dir}">${esc(mine.text)}</b>` : "approved it"} on ${esc(day(mine.at))}.</div>` : "";
+  const can = rqCan() && !RQ.busy, off = can ? "" : " disabled";
+  const hint = RQ.msg || (rqCan() ? "" : RV.db && RV.uid ? "Choose a reviewer name above to start." : "Sign in to claude.ai to review.");
+  el.innerHTML = `<div class="rv-meta"><span class="eyebrow"><bdi lang="${lang}" dir="${dir}">${esc(s.name)}</bdi> <bdi dir="ltr">${esc(it.ref)}</bdi></span><span class="saved">Title ${n} of ${total} · ${left} left</span><span class="pill ${statusCls}">${esc(it.status)}</span></div>
+    <p class="saved">In the passage “${esc(it.pericope)}”</p>
+    <div class="rv-passage" lang="en" dir="ltr">${it.verses.map(([r, t]) => `<sup>${esc(String(r).split(":")[1])}</sup>${esc(t)}`).join(" ")}</div>
+    <div style="display:grid;gap:4px"><span class="eyebrow">Title</span>
+    <p class="rv-title" lang="${lang}" dir="${dir}">${esc(it.text)}</p>
+    ${s.lang !== "en" && it.en ? `<p class="rv-en" lang="en" dir="ltr">English: ${esc(it.en)}</p>` : ""}</div>
+    ${mineLine}
+    ${RQ.editing ? `<form class="rv-field" id="rv-edit" novalidate>
+      <label for="rv-text">New title</label>
+      <input id="rv-text" lang="${lang}" dir="${dir}" value="${esc(it.text)}" autocomplete="off" aria-describedby="rv-edit-err">
+      <label for="rv-why">Why change it?</label>
+      <textarea id="rv-why" dir="auto" maxlength="500" aria-describedby="rv-edit-err"></textarea>
+      <span class="rv-err" id="rv-edit-err" role="alert"></span>
+      <div class="rv-actions"><button class="btn" type="submit"${off}>Save the new title</button><button class="btn quiet" type="button" id="rv-cancel">Cancel</button></div></form>`
+    : `<div class="rv-actions"><button class="btn" type="button" id="rv-approve"${off}>Approve</button><button class="btn quiet" type="button" id="rv-change"${off}>Change the wording</button><button class="btn quiet" type="button" id="rv-skip">Skip</button></div>`}
+    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
+  $("#rv-prev").onclick = () => rqStep(-1);
+  if (RQ.editing) {
+    $("#rv-cancel").onclick = () => { RQ.editing = false; renderReview(); };
+    $("#rv-edit").onsubmit = (e) => {
+      e.preventDefault();
+      const text = $("#rv-text").value.trim(), why = $("#rv-why").value.trim();
+      const p = rqWordingProblem(s, it, text) || (why ? "" : "Say why, so the change can be checked.");
+      if (p) { $("#rv-edit-err").textContent = p; return; }
+      rqSave(s, it, { action: "edit", text, why });
+    };
+    $("#rv-text").focus();
+  } else {
+    $("#rv-approve").onclick = () => rqSave(s, it, { action: "approve" });
+    $("#rv-change").onclick = () => { RQ.editing = true; renderReview(); };
+    $("#rv-skip").onclick = () => { if (RQ.open) RQ.skipped.add(rqId(s, it)); rqStep(1); };
+    if (focus) el.focus({ preventScroll: true });
+  }
+}
+// One document per title, under the reviewer's own id; reviewing the same
+// title again replaces it.
+async function rqSave(s, it, r) {
+  if (!rqCan() || RQ.busy) return;
+  RQ.busy = true; RQ.msg = "Saving…"; renderReview();
+  const rec = { v: 1, handle: RQ.handle, lang: s.lang, book: s.book, key: it.key, action: r.action, seen: it.text, at: new Date().toISOString() };
+  if (r.action === "edit") { rec.text = r.text; rec.why = r.why; }
+  try {
+    await RV.db.doc(`review/${RV.uid}/items/${rqId(s, it)}`).set(rec);
+    RQ.mine[rqId(s, it)] = rec; RQ.busy = false;
+    rqStep(1);
+    const m = $("#rv-msg"); if (m) m.textContent = "Saved.";
+  } catch (e) { RQ.busy = false; RQ.msg = "Couldn't save: " + (e?.message || "try again"); renderReview(); }
+}
+function startReview(db) {
+  renderReviewWho(); renderReview();
+  if (!db || !RV.uid) return;
+  db.doc("review/" + RV.uid).onSnapshot((snap) => {
+    const h = snap.exists ? snap.data()?.handle : "";
+    RQ.handle = typeof h === "string" && HANDLE_RE.test(h) ? h : "";
+    if (!RQ.changing) renderReviewWho();
+    if (!RQ.editing) renderReview();
+  }, () => { /* keep what is shown */ });
+  db.collection(`review/${RV.uid}/items`).onSnapshot((qs) => {
+    const next = {}; for (const d of qs.docs) { const v = d.data(); if (v && typeof v.seen === "string") next[d.id] = v; }
+    RQ.mine = next;
+    // The first read starts at this reviewer's first open title; later ones
+    // (their own saves, or another tab's) leave them where they are.
+    if (!RQ.loaded) { RQ.loaded = true; rqFirst(); }
+    if (!RQ.editing && !RQ.busy) renderReview();
+  }, () => { /* keep what is shown */ });
+}
+
 /* ---------- routing ---------- */
-const PAGES = ["home", "plan", "scope", "sizing", "decisions", "coverage", "checks"];
+const PAGES = ["home", "plan", "scope", "sizing", "decisions", "review", "coverage", "checks"];
 function route() {
   const p = PAGES.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
   document.querySelectorAll("section.page").forEach((s) => (s.hidden = s.dataset.page !== p));
@@ -560,7 +748,7 @@ function route() {
 $("#menu-btn").addEventListener("click", () => { const o = $("#global-nav").classList.toggle("open"); $("#menu-btn").setAttribute("aria-expanded", String(o)); });
 addEventListener("hashchange", () => { route(); scrollTo({ top: 0 }); });
 
-renderMast(); renderLive(); renderScope(); renderSizing(); renderChecks(); buildDecisions(); updateDecisions(); route();
+renderMast(); renderLive(); renderScope(); renderSizing(); renderChecks(); buildDecisions(); updateDecisions(); rqFirst(); renderReviewPick(); startReview(null); route();
 setInterval(liveState, 60000);
 
 /* ---------- runtime: live snapshot, picks, decisions ---------- */
@@ -571,6 +759,7 @@ setInterval(liveState, 60000);
   RV.db = db; RV.user = user;
   if (user) { try { RV.uid = await user.id(); } catch (e) { RV.uid = null; } }
   updateDecisions();
+  startReview(db);
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
     const d = snap.data();

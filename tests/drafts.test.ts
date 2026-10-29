@@ -4,7 +4,13 @@ import { describe, expect, it } from "vitest";
 type Title = { text: string; status: string; source: string };
 type Draft = Title & {
   check?: { by: string; verdict: "agree" | "disagree"; suggestion?: string };
-  review?: { by: string; at: string; status: string; text?: string };
+  review?: {
+    by: string;
+    at: string;
+    status: string;
+    text?: string;
+    why?: string;
+  };
 };
 const read = (path: string) =>
   JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
@@ -70,6 +76,11 @@ describe("English Titus segment drafts", () => {
         expect(d.review.text.length).toBeGreaterThan(0);
         expect(d.review.text.length).toBeLessThanOrEqual(MAX);
         expect(d.review.text).toBe(d.review.text.trim());
+      }
+      // A reviewer's reason, kept with the review (scripts/review/apply.ts).
+      if (d.review.why !== undefined) {
+        expect(d.review.why.length).toBeGreaterThan(0);
+        expect(d.review.why).toBe(d.review.why.trim());
       }
     }
   });

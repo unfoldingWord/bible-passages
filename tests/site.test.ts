@@ -31,6 +31,12 @@ function build(): string {
   );
   snapshot.issues = [{ ...snapshot.issues[0], title: hostile }];
   writeFileSync(join(dir, "site/snapshot.json"), JSON.stringify(snapshot));
+  // A reviewer's wording reaches the page through the review queue.
+  const review = JSON.parse(
+    readFileSync(new URL("site/review.json", repo), "utf8")
+  );
+  review.sets[0].items[0].text = hostile;
+  writeFileSync(join(dir, "site/review.json"), JSON.stringify(review));
   execFileSync(process.execPath, [join(dir, "scripts/site/build.mjs")]);
   return readFileSync(join(dir, "site/index.html"), "utf8");
 }
@@ -48,5 +54,10 @@ describe("site build", () => {
   it("keeps the title text exactly, $ patterns included", () => {
     const base = /const BASE = (.*);$/m.exec(html)?.[1] ?? "null";
     expect(JSON.parse(base).issues[0].title).toBe(hostile);
+  });
+
+  it("inlines the review queue as data, text kept exactly", () => {
+    const review = /^const REVIEW = (.*); \/\/ /m.exec(html)?.[1] ?? "null";
+    expect(JSON.parse(review).sets[0].items[0].text).toBe(hostile);
   });
 });

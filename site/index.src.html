@@ -161,6 +161,25 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media (max-width:900px){.gh .drop{position:static;margin-top:6px;box-shadow:none}.gh summary{display:inline-block;margin-top:4px}}
 .dated{display:inline-flex;gap:6px;align-items:center;font-size:.78rem;font-weight:700;color:var(--muted)}
 .dated.old{color:var(--warn)}
+.rv-pick{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:end}
+.rv-pick label{display:grid;gap:4px;font-size:.84rem;color:var(--muted);font-weight:700}
+.rv-pick select,.rv-field input,.rv-field textarea{font:inherit;font-size:1rem;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
+.rv-pick .tog{display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink-2)}
+.rv-card{gap:16px}
+.rv-card:focus{outline:none}
+.rv-meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.rv-passage{background:var(--sunk);border-radius:8px;padding:12px 14px;color:var(--ink);max-width:68ch;text-align:start}
+.rv-passage sup{color:var(--muted);font-weight:700;margin-inline-end:3px}
+.rv-title{font-size:var(--step-2);font-weight:800;color:var(--ink);line-height:1.3;text-align:start;overflow-wrap:anywhere}
+.rv-en{color:var(--ink-2);font-size:.9rem}
+.rv-mine{border-radius:8px;padding:8px 12px;background:var(--good-bg);color:var(--ink);font-size:.9rem}
+.rv-mine.old{background:var(--warn-bg)}
+.rv-actions,.rv-nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn.quiet{background:transparent;color:var(--head);border-color:var(--line)}
+.rv-field{display:grid;gap:6px;max-width:68ch}
+.rv-field label{font-weight:700;font-size:.9rem}
+.rv-field textarea{min-height:64px;resize:vertical}
+.rv-err{color:var(--bad);font-size:.88rem}
 .foot{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;color:var(--muted);font-size:.84rem;display:grid;gap:4px}
 @media (prefers-reduced-motion:no-preference){section.page{animation:in .2s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
 </style>
@@ -170,7 +189,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="global-nav">Menu</button>
   <nav class="global" id="global-nav" aria-label="Project pages">
     <a href="#home">Home</a><a href="#plan">Plan</a><a href="#scope">Scope</a><a href="#sizing">Sizing</a>
-    <a href="#decisions">Decisions</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
+    <a href="#decisions">Decisions</a><a href="#review">Review</a><a href="#coverage">Coverage</a><a href="#checks">Checks</a>
     <details class="gh"><summary>GitHub ▾</summary><div class="drop">
       <a href="https://github.com/unfoldingWord/bible-passages" target="_blank" rel="noopener">Repository <span>unfoldingWord/bible-passages</span></a>
       <a href="https://github.com/unfoldingWord/bible-passages/issues" target="_blank" rel="noopener">Issues</a>
@@ -265,6 +284,14 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   <div class="grid" id="decs"></div>
 </section>
 
+<section class="page" data-page="review" hidden aria-label="Review">
+  <div class="lead"><span class="eyebrow">Review · one title at a time</span><h2>Does this title fit its passage?</h2>
+  <p>Read the passage, then approve its title, change the wording, or skip it. A maintainer turns reviews into a pull request on the repository, where your reviewer name is public. Your own name is never stored.</p></div>
+  <div class="panel" id="rv-who"></div>
+  <div class="panel rv-pick" id="rv-pick"></div>
+  <div class="panel rv-card" id="rv-card" tabindex="-1" aria-live="polite"></div>
+</section>
+
 <section class="page" data-page="coverage" hidden aria-label="Coverage">
   <div class="lead"><span class="eyebrow">Coverage · books × languages</span><h2>What exists in the repo</h2>
   <p>A cell fills when the default branch has that book's titles in that language. English Titus is the first. Spanish is <code>es-419</code> (decision 13).</p></div>
@@ -286,6 +313,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 <script>
 const BASE = /*SNAPSHOT*/null;
 const BOOKS = /*BOOKS*/null; // [code, chapters, pericopes, chunks, splits]
+const REVIEW = /*REVIEW*/null; // site/review.json: the titles the Review page asks about
 const REPO = "https://github.com/unfoldingWord/bible-passages";
 const DOCS_REF = "main";
 const doc = (path) => `${REPO}/${path.includes(".") ? "blob" : "tree"}/${DOCS_REF}/${path}`;
@@ -546,8 +574,168 @@ async function resolveNames() {
   try { const ps = await RV.user.profiles(ids); for (const id of ids) RV.names[id] = ps[id]?.name || ""; } catch (e) { /* names are optional */ }
 }
 
+/* ---------- review: one title at a time ---------- */
+// Each reviewer writes only under review/<their id>: a profile document with
+// the handle they chose, and one document per title they reviewed. A session
+// exports those documents and scripts/review/apply.ts turns them into a PR
+// (docs/scoping/review-screen.md). The handle is the only name stored.
+const HANDLE_RE = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;
+const RQ = { sets: REVIEW && Array.isArray(REVIEW.sets) ? REVIEW.sets : [], set: 0, key: null, open: true, skipped: new Set(), mine: {}, loaded: false, handle: "", changing: false, editing: false, busy: false, msg: "" };
+const rqId = (s, it) => `${s.lang}~${s.book}~${it.key}`;
+const rqSet = () => RQ.sets[RQ.set];
+const rqDir = (s) => (s.dir === "rtl" ? "rtl" : "ltr");
+const rqCan = () => Boolean(RV.db && RV.uid && RQ.handle);
+// Done for this reviewer: they reviewed the wording that is in the queue now.
+const rqDone = (s, it) => RQ.mine[rqId(s, it)]?.seen === it.text;
+const rqOpen = (s, it) => !rqDone(s, it) && !RQ.skipped.has(rqId(s, it));
+function rqFirst() {
+  const s = rqSet();
+  const it = s && (RQ.open ? s.items.find((x) => rqOpen(s, x)) : s.items[0]);
+  RQ.key = it ? it.key : null;
+}
+function rqStep(dir) {
+  const s = rqSet(); if (!s) return;
+  const i = s.items.findIndex((it) => it.key === RQ.key);
+  RQ.editing = false; RQ.msg = "";
+  for (let j = (i < 0 ? (dir > 0 ? -1 : s.items.length) : i) + dir; j >= 0 && j < s.items.length; j += dir) {
+    if (dir < 0 || !RQ.open || rqOpen(s, s.items[j])) { RQ.key = s.items[j].key; return renderReview(true); }
+  }
+  if (dir > 0) RQ.key = null;
+  renderReview(true);
+}
+// Checks a reviewer's own wording before it is saved; scripts/review/apply.ts
+// checks it again, with the translation gates, before it reaches the repo.
+function rqWordingProblem(s, it, text) {
+  if (!text) return "Write the new title.";
+  if (text === it.text) return "The wording is the same as the title.";
+  if (/[\r\n\t{}<>]/.test(text)) return "Use plain text on one line.";
+  if (s.lang === "en" && text.length > 60) return `Keep it to 60 characters (now ${text.length}).`;
+  if (s.lang === "en" && /[.“”"]$|^["“]/.test(text)) return "Leave off the full stop and the quotes.";
+  return "";
+}
+function renderReviewWho() {
+  const el = $("#rv-who");
+  if (!RV.db || !RV.uid) { el.innerHTML = `<p class="saved">Sign in to claude.ai to review. You can read the titles without signing in.</p>`; return; }
+  if (RQ.handle && !RQ.changing) {
+    el.innerHTML = `<div class="rv-actions"><span>Reviewing as <b class="mono">reviewer:${esc(RQ.handle)}</b></span><button class="btn quiet" type="button" id="rv-who-change">Change</button></div>`;
+    $("#rv-who-change").onclick = () => { RQ.changing = true; renderReviewWho(); $("#rv-handle").focus(); };
+    return;
+  }
+  el.innerHTML = `<form class="rv-field" id="rv-who-form" novalidate>
+    <label for="rv-handle">Choose a reviewer name</label>
+    <p class="saved" id="rv-handle-help">It is public: the repository shows it with each title you review. Use lowercase letters, digits and hyphens, such as <span class="mono">reader-7</span>. Use your real name only if you want it public.</p>
+    <div class="rv-actions"><input id="rv-handle" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="39" dir="ltr" aria-describedby="rv-handle-help rv-handle-err" value="${esc(RQ.handle)}">
+    <button class="btn" type="submit">Save</button>${RQ.handle ? `<button class="btn quiet" type="button" id="rv-who-cancel">Cancel</button>` : ""}</div>
+    <span class="rv-err" id="rv-handle-err" role="alert"></span></form>`;
+  $("#rv-who-form").onsubmit = async (e) => {
+    e.preventDefault();
+    const h = $("#rv-handle").value.trim().toLowerCase();
+    if (!HANDLE_RE.test(h)) { $("#rv-handle-err").textContent = "Use 1 to 39 lowercase letters, digits or hyphens, not starting or ending with a hyphen."; return; }
+    try { await RV.db.doc("review/" + RV.uid).set({ v: 1, handle: h, at: new Date().toISOString() }); RQ.handle = h; RQ.changing = false; renderReviewWho(); renderReview(); }
+    catch (err) { $("#rv-handle-err").textContent = "Couldn't save: " + (err?.message || "try again"); }
+  };
+  const c = $("#rv-who-cancel"); if (c) c.onclick = () => { RQ.changing = false; renderReviewWho(); };
+}
+function renderReviewPick() {
+  const el = $("#rv-pick");
+  el.hidden = !RQ.sets.length;
+  if (!RQ.sets.length) return;
+  el.innerHTML = `<label>Language and book<select id="rv-set">${RQ.sets.map((s, i) => `<option value="${i}"${i === RQ.set ? " selected" : ""}>\u2068${esc(s.name)}\u2069 · ${esc(s.lang)} (${Number(s.items.length)} titles)</option>`).join("")}</select></label>
+    <label class="tog"><input type="checkbox" id="rv-open"${RQ.open ? " checked" : ""}> Only titles I have not reviewed</label>`;
+  const reset = () => { RQ.skipped.clear(); RQ.editing = false; RQ.msg = ""; rqFirst(); renderReview(true); };
+  $("#rv-set").onchange = (e) => { RQ.set = Number(e.target.value) || 0; reset(); };
+  $("#rv-open").onchange = (e) => { RQ.open = e.target.checked; reset(); };
+}
+function renderReview(focus) {
+  const el = $("#rv-card"), s = rqSet();
+  if (!s || !s.items.length) { el.innerHTML = `<p>There are no titles to review yet.</p>`; return; }
+  const total = s.items.length, left = s.items.filter((x) => !rqDone(s, x)).length;
+  const it = s.items.find((x) => x.key === RQ.key);
+  if (!it) {
+    const sk = RQ.skipped.size;
+    el.innerHTML = `<h3>${left ? `${left} of ${total} titles left` : `You have reviewed all ${total} titles`}</h3>
+      <p>${sk ? `You skipped ${sk}. ` : ""}Your reviews wait here for a maintainer, who turns them into a pull request on the repository. After it merges, the titles show their reviewed status.</p>
+      <div class="rv-actions">${sk ? `<button class="btn" type="button" id="rv-again">Go back to the ones I skipped</button>` : ""}<button class="btn quiet" type="button" id="rv-all">See every title</button></div>`;
+    const a = $("#rv-again"); if (a) a.onclick = () => { RQ.skipped.clear(); rqFirst(); renderReview(true); };
+    $("#rv-all").onclick = () => { RQ.open = false; RQ.skipped.clear(); renderReviewPick(); rqFirst(); renderReview(true); };
+    if (focus) el.focus({ preventScroll: true });
+    return;
+  }
+  const n = s.items.indexOf(it) + 1, mine = RQ.mine[rqId(s, it)], lang = esc(s.lang), dir = rqDir(s);
+  const statusCls = { "human-reviewed": "good", approved: "good", "ai-checked": "blue", unreviewed: "warn" }[it.status] || "";
+  const fresh = mine && mine.seen === it.text;
+  const mineLine = mine ? `<div class="rv-mine${fresh ? "" : " old"}">${fresh ? "" : "The title changed after your review. "}You ${mine.action === "edit" ? `changed it to <b lang="${lang}" dir="${dir}">${esc(mine.text)}</b>` : "approved it"} on ${esc(day(mine.at))}.</div>` : "";
+  const can = rqCan() && !RQ.busy, off = can ? "" : " disabled";
+  const hint = RQ.msg || (rqCan() ? "" : RV.db && RV.uid ? "Choose a reviewer name above to start." : "Sign in to claude.ai to review.");
+  el.innerHTML = `<div class="rv-meta"><span class="eyebrow"><bdi lang="${lang}" dir="${dir}">${esc(s.name)}</bdi> <bdi dir="ltr">${esc(it.ref)}</bdi></span><span class="saved">Title ${n} of ${total} · ${left} left</span><span class="pill ${statusCls}">${esc(it.status)}</span></div>
+    <p class="saved">In the passage “${esc(it.pericope)}”</p>
+    <div class="rv-passage" lang="en" dir="ltr">${it.verses.map(([r, t]) => `<sup>${esc(String(r).split(":")[1])}</sup>${esc(t)}`).join(" ")}</div>
+    <div style="display:grid;gap:4px"><span class="eyebrow">Title</span>
+    <p class="rv-title" lang="${lang}" dir="${dir}">${esc(it.text)}</p>
+    ${s.lang !== "en" && it.en ? `<p class="rv-en" lang="en" dir="ltr">English: ${esc(it.en)}</p>` : ""}</div>
+    ${mineLine}
+    ${RQ.editing ? `<form class="rv-field" id="rv-edit" novalidate>
+      <label for="rv-text">New title</label>
+      <input id="rv-text" lang="${lang}" dir="${dir}" value="${esc(it.text)}" autocomplete="off" aria-describedby="rv-edit-err">
+      <label for="rv-why">Why change it?</label>
+      <textarea id="rv-why" dir="auto" maxlength="500" aria-describedby="rv-edit-err"></textarea>
+      <span class="rv-err" id="rv-edit-err" role="alert"></span>
+      <div class="rv-actions"><button class="btn" type="submit"${off}>Save the new title</button><button class="btn quiet" type="button" id="rv-cancel">Cancel</button></div></form>`
+    : `<div class="rv-actions"><button class="btn" type="button" id="rv-approve"${off}>Approve</button><button class="btn quiet" type="button" id="rv-change"${off}>Change the wording</button><button class="btn quiet" type="button" id="rv-skip">Skip</button></div>`}
+    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
+  $("#rv-prev").onclick = () => rqStep(-1);
+  if (RQ.editing) {
+    $("#rv-cancel").onclick = () => { RQ.editing = false; renderReview(); };
+    $("#rv-edit").onsubmit = (e) => {
+      e.preventDefault();
+      const text = $("#rv-text").value.trim(), why = $("#rv-why").value.trim();
+      const p = rqWordingProblem(s, it, text) || (why ? "" : "Say why, so the change can be checked.");
+      if (p) { $("#rv-edit-err").textContent = p; return; }
+      rqSave(s, it, { action: "edit", text, why });
+    };
+    $("#rv-text").focus();
+  } else {
+    $("#rv-approve").onclick = () => rqSave(s, it, { action: "approve" });
+    $("#rv-change").onclick = () => { RQ.editing = true; renderReview(); };
+    $("#rv-skip").onclick = () => { if (RQ.open) RQ.skipped.add(rqId(s, it)); rqStep(1); };
+    if (focus) el.focus({ preventScroll: true });
+  }
+}
+// One document per title, under the reviewer's own id; reviewing the same
+// title again replaces it.
+async function rqSave(s, it, r) {
+  if (!rqCan() || RQ.busy) return;
+  RQ.busy = true; RQ.msg = "Saving…"; renderReview();
+  const rec = { v: 1, handle: RQ.handle, lang: s.lang, book: s.book, key: it.key, action: r.action, seen: it.text, at: new Date().toISOString() };
+  if (r.action === "edit") { rec.text = r.text; rec.why = r.why; }
+  try {
+    await RV.db.doc(`review/${RV.uid}/items/${rqId(s, it)}`).set(rec);
+    RQ.mine[rqId(s, it)] = rec; RQ.busy = false;
+    rqStep(1);
+    const m = $("#rv-msg"); if (m) m.textContent = "Saved.";
+  } catch (e) { RQ.busy = false; RQ.msg = "Couldn't save: " + (e?.message || "try again"); renderReview(); }
+}
+function startReview(db) {
+  renderReviewWho(); renderReview();
+  if (!db || !RV.uid) return;
+  db.doc("review/" + RV.uid).onSnapshot((snap) => {
+    const h = snap.exists ? snap.data()?.handle : "";
+    RQ.handle = typeof h === "string" && HANDLE_RE.test(h) ? h : "";
+    if (!RQ.changing) renderReviewWho();
+    if (!RQ.editing) renderReview();
+  }, () => { /* keep what is shown */ });
+  db.collection(`review/${RV.uid}/items`).onSnapshot((qs) => {
+    const next = {}; for (const d of qs.docs) { const v = d.data(); if (v && typeof v.seen === "string") next[d.id] = v; }
+    RQ.mine = next;
+    // The first read starts at this reviewer's first open title; later ones
+    // (their own saves, or another tab's) leave them where they are.
+    if (!RQ.loaded) { RQ.loaded = true; rqFirst(); }
+    if (!RQ.editing && !RQ.busy) renderReview();
+  }, () => { /* keep what is shown */ });
+}
+
 /* ---------- routing ---------- */
-const PAGES = ["home", "plan", "scope", "sizing", "decisions", "coverage", "checks"];
+const PAGES = ["home", "plan", "scope", "sizing", "decisions", "review", "coverage", "checks"];
 function route() {
   const p = PAGES.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
   document.querySelectorAll("section.page").forEach((s) => (s.hidden = s.dataset.page !== p));
@@ -560,7 +748,7 @@ function route() {
 $("#menu-btn").addEventListener("click", () => { const o = $("#global-nav").classList.toggle("open"); $("#menu-btn").setAttribute("aria-expanded", String(o)); });
 addEventListener("hashchange", () => { route(); scrollTo({ top: 0 }); });
 
-renderMast(); renderLive(); renderScope(); renderSizing(); renderChecks(); buildDecisions(); updateDecisions(); route();
+renderMast(); renderLive(); renderScope(); renderSizing(); renderChecks(); buildDecisions(); updateDecisions(); rqFirst(); renderReviewPick(); startReview(null); route();
 setInterval(liveState, 60000);
 
 /* ---------- runtime: live snapshot, picks, decisions ---------- */
@@ -571,6 +759,7 @@ setInterval(liveState, 60000);
   RV.db = db; RV.user = user;
   if (user) { try { RV.uid = await user.id(); } catch (e) { RV.uid = null; } }
   updateDecisions();
+  startReview(db);
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
     const d = snap.data();
