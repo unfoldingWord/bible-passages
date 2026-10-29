@@ -2,6 +2,8 @@
 // Links (TWL) say which Translation Words (tW) article each verse uses; each
 // language's tW gives that article's headword in the language. Why these
 // repos and not others: docs/scoping/glossaries.md.
+import { ALL_BOOKS } from "./books.ts";
+import { ABSENT } from "./glossary-absent.ts";
 
 /** One language's Translation Words, at a released commit on Door43. */
 export type TwRepo = {
@@ -21,11 +23,12 @@ export type TwRepo = {
    */
   script?: RegExp;
   /**
-   * tW articles a book links to that this release does not have, by book,
-   * as measured when they were pinned. The build checks the pins against
-   * this list, so a pin that goes missing is an error, not a silent gap.
+   * tW articles the TWL links (from any book in TWL_BOOKS) that this
+   * release does not have, as measured when they were pinned
+   * (`glossary-absent.ts`). The build checks the pins against this list, so
+   * a pin that goes missing is an error, not a silent gap.
    */
-  absent: Record<string, string[]>;
+  absent: readonly string[];
 };
 
 /** The TWL every language uses: its links are keyed to the Greek and Hebrew. */
@@ -35,6 +38,36 @@ export const TWL = {
   commit: "7cbb3419f79780ce84b92ad7d42bd476cc5d8a64",
 };
 
+/**
+ * Books the pinned TWL release has no file for: `en_twl` v91 publishes 59
+ * books (its git tree, measured 2026-10-29). Each is a book-level gap: no
+ * glossary until a release that has it is pinned.
+ */
+export const TWL_UNRELEASED: readonly string[] = [
+  "NUM",
+  "1CH",
+  "2CH",
+  "ECC",
+  "ISA",
+  "JER",
+  "EZK",
+];
+
+/** The books the pinned TWL release has a file for, in canonical order. */
+export const TWL_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b).filter(
+  (b) => !TWL_UNRELEASED.includes(b)
+);
+
+/**
+ * Books whose glossaries (`data/glossaries/<lang>/<BOOK>.json`) are built:
+ * each must be in TWL_BOOKS. Apart from BOOKS (scripts/lib/books.ts)
+ * because a glossary needs only the book's Translation Word Links, not its
+ * titles, which go one book at a time. Titus only for now; the switch to
+ * TWL_BOOKS is its own change, so the code can be reviewed apart from the
+ * generated data (#30).
+ */
+export const GLOSSARY_BOOKS: readonly string[] = ["TIT"];
+
 export const TW: TwRepo[] = [
   {
     language: "en",
@@ -42,7 +75,7 @@ export const TW: TwRepo[] = [
     repo: "unfoldingWord/en_tw",
     release: "v91",
     commit: "ff5b3852c27c3a0d01b109e482eb26047dcd20e2",
-    absent: { TIT: [] },
+    absent: ABSENT.en,
   },
   {
     language: "ar",
@@ -51,7 +84,7 @@ export const TW: TwRepo[] = [
     release: "v5",
     commit: "7c233628947dee9ad1da0b1d6deddac663e66574",
     script: /\p{Script=Arabic}/u,
-    absent: { TIT: [] },
+    absent: ABSENT.ar,
   },
   {
     // Provisional: the tag for Spanish is an open decision
@@ -61,7 +94,7 @@ export const TW: TwRepo[] = [
     repo: "es-419_gl/es-419_tw",
     release: "v37",
     commit: "7586f4ff1f0483ea40a4a68e5e1f33158e08c208",
-    absent: { TIT: ["other/age-timeperiod"] },
+    absent: ABSENT["es-419"],
   },
   {
     language: "fr",
@@ -69,7 +102,7 @@ export const TW: TwRepo[] = [
     repo: "Xenizo/fr_tw",
     release: "v2.0",
     commit: "06db7f855a0deb302a47a0e4d1b22312833b2ca1",
-    absent: { TIT: ["other/age-timeperiod"] },
+    absent: ABSENT.fr,
   },
   {
     language: "hi",
@@ -78,7 +111,7 @@ export const TW: TwRepo[] = [
     release: "v8",
     commit: "5fa7b590a2e5f99ac6a84de96ee081e751e70b95",
     script: /\p{Script=Devanagari}/u,
-    absent: { TIT: ["other/age-timeperiod"] },
+    absent: ABSENT.hi,
   },
   {
     language: "id",
@@ -86,7 +119,7 @@ export const TW: TwRepo[] = [
     repo: "bahtraku/id_tw",
     release: "v26",
     commit: "31c260398c056748118a5d9184aa1d5327b7dbdd",
-    absent: { TIT: [] },
+    absent: ABSENT.id,
   },
   {
     language: "pt-BR",
@@ -94,9 +127,7 @@ export const TW: TwRepo[] = [
     repo: "Door43-Catalog/pt-br_tw",
     release: "v6.4",
     commit: "879ce3844fa3eadc94f714e45ec50f794d6fb27d",
-    absent: {
-      TIT: ["other/age-timeperiod", "other/strife", "other/subject"],
-    },
+    absent: ABSENT["pt-BR"],
   },
   {
     language: "ru",
@@ -105,7 +136,7 @@ export const TW: TwRepo[] = [
     release: "v14.2",
     commit: "861807f86dc5d532be57248a9225b5f124fc9563",
     script: /\p{Script=Cyrillic}/u,
-    absent: { TIT: ["other/age-timeperiod"] },
+    absent: ABSENT.ru,
   },
   {
     language: "sw",
@@ -113,7 +144,7 @@ export const TW: TwRepo[] = [
     repo: "Door43-Catalog/sw_tw",
     release: "v7.3",
     commit: "82e94cd4a7aad817365190fa5d48960c90a01fc9",
-    absent: { TIT: ["other/age-timeperiod"] },
+    absent: ABSENT.sw,
   },
 ];
 
@@ -123,9 +154,14 @@ export const twlId = (book: string) => `twl-en-${book.toLowerCase()}`;
 export const twlUrl = (book: string) =>
   `${HOST}/${TWL.repo}/raw/commit/${TWL.commit}/twl_${book}.tsv`;
 
-/** `kt/god` in fr → `tw-fr-kt-god`: a plain slug, as sources.ts requires. */
+/**
+ * `kt/god` in fr → `tw-fr-kt-god`: a plain slug, as sources.ts requires.
+ * Two en_tw articles have an underscore (`other/bear-witness_testify`,
+ * `other/house-descendants_nation`); it becomes `--`, which no article
+ * name has, so no two articles share an id.
+ */
 export const twId = (language: string, article: string) =>
-  `tw-${language.toLowerCase()}-${article.replace("/", "-")}`;
+  `tw-${language.toLowerCase()}-${article.replace("/", "-").replaceAll("_", "--")}`;
 export const twUrl = (repo: TwRepo, article: string) =>
   `${HOST}/${repo.repo}/raw/commit/${repo.commit}/bible/${article}.md`;
 
@@ -139,7 +175,7 @@ export const twUrl = (repo: TwRepo, article: string) =>
  */
 export const isGlossaryInput = (id: string) =>
   /^twl-en-[a-z0-9]{3}$/.test(id) ||
-  /^tw-[a-z]{2,3}(?:-[a-z0-9]{2,8})*-(?:kt|names|other)-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(
+  /^tw-[a-z]{2,3}(?:-[a-z0-9]{2,8})*-(?:kt|names|other)-[a-z0-9]+(?:--?[a-z0-9]+)*$/.test(
     id
   );
 
@@ -157,12 +193,24 @@ export function inScript(word: string, script: RegExp): boolean {
   return inside * 2 > letters.length;
 }
 
-/** A tW article path, as TWL links name it: category and file name. */
-export const ARTICLE = /^(kt|names|other)\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
+/**
+ * A tW article path, as TWL links name it: category and file name. Words
+ * are joined by `-`, and in two en_tw names by `_` (see `twId`).
+ */
+export const ARTICLE = /^(kt|names|other)\/[a-z0-9]+(?:[-_][a-z0-9]+)*$/;
 const LINK = /^rc:\/\/\*\/tw\/dict\/bible\/(.+)$/;
-const REF = /^(\d+):(\d+)$/;
+/**
+ * `c:v`, or `c:front` for a psalm's superscription (the text before verse 1,
+ * as the TWL for Psalms writes it).
+ */
+const REF = /^(\d+):(\d+|front)$/;
 
+/** A TWL row. `verse` 0 is the chapter's front (a psalm superscription). */
 export type TwlRow = { chapter: number; verse: number; article: string };
+
+/** A row's reference as a glossary writes it: `c:v`, or `c:front`. */
+export const refOf = (r: { chapter: number; verse: number }) =>
+  `${r.chapter}:${r.verse === 0 ? "front" : r.verse}`;
 
 /** The rows of a TWL book file: which tW article each verse links to. */
 export function parseTwl(tsv: string): TwlRow[] {
@@ -182,7 +230,11 @@ export function parseTwl(tsv: string): TwlRow[] {
     if (!ref || !article || !ARTICLE.test(article)) {
       throw new Error(`TWL line ${i + 2}: cannot read "${line}"`);
     }
-    rows.push({ chapter: Number(ref[1]), verse: Number(ref[2]), article });
+    const verse = ref[2] === "front" ? 0 : Number(ref[2]);
+    if (verse === 0 && ref[2] !== "front") {
+      throw new Error(`TWL line ${i + 2}: verse 0 in "${line}"`);
+    }
+    rows.push({ chapter: Number(ref[1]), verse, article });
   }
   return rows;
 }
@@ -218,7 +270,10 @@ export type Term = {
   headword: string;
   /** The sources.json id the headword was read from. */
   source: string;
-  /** Verses that link the term, `c:v`, in reading order. */
+  /**
+   * Verses that link the term, `c:v`, in reading order; `c:front` (a psalm
+   * superscription) comes before the chapter's verse 1.
+   */
   refs: string[];
 };
 
@@ -255,7 +310,7 @@ export function linkedArticles(rows: TwlRow[]): Map<string, string[]> {
   const byArticle = new Map<string, string[]>();
   for (const r of sorted) {
     const refs = byArticle.get(r.article) ?? [];
-    const ref = `${r.chapter}:${r.verse}`;
+    const ref = refOf(r);
     if (!refs.includes(ref)) refs.push(ref);
     byArticle.set(r.article, refs);
   }
@@ -283,14 +338,8 @@ export async function buildGlossary(
   read: (article: string) => Promise<string | undefined>,
   credit: (id: string) => Credit
 ): Promise<Glossary> {
-  const absent = repo.absent[book];
-  if (!absent) throw new Error(`${repo.language}: no absent list for ${book}`);
+  const absent = repo.absent;
   const linked = linkedArticles(rows);
-  for (const a of absent) {
-    if (!linked.has(a)) {
-      throw new Error(`${repo.language} ${book}: ${a} is absent but unlinked`);
-    }
-  }
   const terms: Record<string, Term> = {};
   const gaps: Record<string, Gap> = {};
   for (const [article, refs] of linked) {

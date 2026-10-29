@@ -4,12 +4,13 @@
 //
 //   node scripts/data/glossaries.ts
 import { existsSync, readdirSync } from "node:fs";
-import { BOOKS } from "../lib/books.ts";
 import {
   buildGlossary,
+  GLOSSARY_BOOKS,
   isGlossaryInput,
   parseTwl,
   TW,
+  TWL_BOOKS,
   twId,
   twlId,
   type Glossary,
@@ -48,7 +49,10 @@ const english = async (article: string) => {
 // Every glossary is built before anything is deleted, so a failed fetch or
 // a bad pin leaves the committed data/glossaries/ untouched.
 const built: { file: URL; glossary: Glossary }[] = [];
-for (const book of BOOKS) {
+for (const book of GLOSSARY_BOOKS) {
+  if (!TWL_BOOKS.includes(book)) {
+    throw new Error(`${book}: the pinned TWL release has no file for it`);
+  }
   const rows = parseTwl(await readSource(twlId(book)));
   for (const repo of TW) {
     const glossary = await buildGlossary(
