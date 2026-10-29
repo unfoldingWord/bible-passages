@@ -114,7 +114,14 @@ export function span(key: string): {
   return { chapter: Number(m[1]), from: Number(m[2]), to: Number(m[3]) };
 }
 
-/** Glossary terms linked from any verse in the key's span. */
+/**
+ * Glossary terms linked from any verse in the key's span. A `c:front` ref (a
+ * psalm superscription, the text before verse 1) belongs to the span that
+ * starts at verse 1 of chapter c, as the Psalms headings start at verse 1:
+ * the chapter's first segment (decided by the maintainer, #54) and the
+ * section heading whose span starts at verse 1, so both are translated with
+ * the same glossary (decided by the maintainer, #91).
+ */
 export function termsFor(
   key: string,
   glossary: Glossary | null
@@ -122,10 +129,13 @@ export function termsFor(
   if (!glossary) return [];
   const { chapter, from, to } = span(key);
   const inSpan = (ref: string) => {
-    const m = /^(\d+):(\d+)$/.exec(ref);
+    const m = /^(\d+):(\d+|front)$/.exec(ref);
     if (!m)
-      throw new Error(`${glossary.language}: glossary ref is not c:v: ${ref}`);
+      throw new Error(
+        `${glossary.language}: glossary ref is not c:v or c:front: ${ref}`
+      );
     const c = Number(m[1]);
+    if (m[2] === "front") return c === chapter && from === 1;
     const v = Number(m[2]);
     return c === chapter && v >= from && v <= to;
   };
