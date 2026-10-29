@@ -16,6 +16,7 @@ pieces around it.
 | 5   | Segment titles  | AI-drafted English titles with an AI check pass           | [ai.md](ai.md#5-segment-titles)              |
 | 6   | Metadata        | topics, key terms, figures of speech, form, difficulty    | [pipeline.md](pipeline.md#6-metadata)        |
 | 7   | Translation     | titles in each language, with per-language glossaries     | [ai.md](ai.md#7-translation)                 |
+| 7a  | Glossaries      | key-term headwords per language from Translation Words    | [glossaries.md](glossaries.md)               |
 | 8   | Review          | people approve, flag or suggest each title                | [review.md](review.md)                       |
 | 9   | Publish         | `dist/tc-mobile/` packages and title tables, release tags | [pipeline.md](pipeline.md#9-publish)         |
 | 10  | Project site    | live scope, sizing, sprints, decisions, coverage          | [site.md](site.md)                           |

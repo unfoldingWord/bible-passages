@@ -29,6 +29,8 @@ sources.json                 every input, pinned
 data/
   structure/<BOOK>.json      pericopes and segments: keys and spans, no text
   titles/<lang>/<BOOK>.json  titles per key, with status and source
+  versification/ufw.json     last verse of each chapter, from ufw.vrs
+  glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
@@ -62,6 +64,10 @@ Bible fixture (`MRK.1.1-8`):
 | Pericope | `<BOOK>.P.<span as above>` | `TIT.P.1.1-16` |
 
 No pericope or segment in this dataset crosses a chapter: BSB opens every one of its 1,189 chapters with a heading at verse 1, and the chunk files are per chapter. So every key is single-chapter. (tc-mobile's format allows cross-chapter spans; this dataset never needs them.)
+
+A one-verse span repeats its verse (`TIT.1.4-4`, not `TIT.1.4`), so every
+key has the same shape and a chapter key is never confused with a verse; 9 of
+Titus's 25 segments are one verse (measured, `data/structure/TIT.json`).
 
 Because the span is in the key, moving a boundary gives the new span its own
 key: a new one, or the same span's earlier key, revived. That is the contract's
@@ -107,6 +113,7 @@ letters, digits and `. _ : -`, at most 64 characters).
 {
   "language": "en",
   "book": "TIT",
+  "name": { "text": "Titus", "status": "unreviewed", "source": "bsb-tit" },
   "titles": {
     "TIT.P.1.1-4": {
       "text": "Paul Greets Titus",
@@ -121,8 +128,34 @@ letters, digits and `. _ : -`, at most 64 characters).
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
 - `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
+- `name` is the book's name in this language; it becomes the package
+  `title`.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
+
+## `data/drafts/<lang>/<BOOK>.json`
+
+A committed input, not generated: AI-drafted titles, `titles` keyed by segment
+key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
+into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
+rebuild cannot wipe a draft. A draft for a key that is not a segment in the
+structure fails the build. The instructions that produced them are in
+`prompts/`. Only English Titus exists so far.
+
+Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
+for a disagreement `criteria`, `why` and a `suggestion`). A draft is
+`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
+and goes to a person first. The check's details stay here; the built table
+gets `text`, `status` and `source`.
+
+## `data/glossaries/<lang>/<BOOK>.json`
+
+The key terms Translation Word Links link from a book, each with its
+headword in the language's Translation Words, the verses that link it, and
+the `sources.json` id it was read from. Linked terms with no headword in the
+language are listed under `gaps`. Shape, sources and gaps:
+[scoping/glossaries.md](scoping/glossaries.md). Not shipped in `dist/`;
+translation reads it.
 
 ## `dist/tc-mobile/`
 
@@ -131,12 +164,14 @@ tc-mobile template package v0:
 
 - `id`: `bible-passages:<BOOK>` (proposed; an id is permanent once released).
 - `kind`: `bible-book`. `bookCode`: the USFM code.
-- `version`: the release tag without the `v`. Title tables carry the same
+- `version`: the release tag without the `v` (`0.0.0`, from `package.json`,
+  until the first release). Title tables carry the same
   version, so every release ships its own tables even when titles did not
   change.
 - `dataLicence`: `CC-BY-SA-4.0`. `recordingLicence`: `CC-BY-SA-4.0` (the only
   value v0 allows).
-- `source.url`: this repo. `source.revision`: the release tag.
+- `source.url`: this repo. `source.revision`: the release tag (`unreleased`
+  until the first release).
 - `attribution`: built from the `sources.json` entries the book used.
 
 ## `sources.json`
@@ -158,7 +193,8 @@ Every input the build reads, pinned so a build can be repeated:
 }
 ```
 
-The list is empty until the first data PR picks its inputs.
+`scripts/lib/sources.ts` downloads each input once into `.cache/sources/`
+(not committed) and refuses it if its SHA-256 does not match the pin.
 
 ## Releases
 
@@ -177,8 +213,12 @@ Run on every PR (`npm test`):
 | Every package in `dist/tc-mobile/` passes tc-mobile's checker                    | built     |
 | Every title table passes against its package and version                         | built     |
 | Every `sources.json` entry is pinned (URL, revision, hash, licence, attribution) | built     |
-| Every verse in exactly one pericope and one segment                              | not built |
-| Every span valid against the versification                                       | not built |
+| Every verse in exactly one pericope and one segment                              | built     |
+| Every span valid against the versification                                       | built     |
+| Every key unique, in the key format and naming its own span                      | built     |
+| Every segment inside the pericope it names                                       | built     |
+| `dist/` segment keys are the same as `data/`'s                                   | built     |
+| `data/` and `dist/` match a fresh build from the pinned sources (CI)             | built     |
 | No released key missing, moved or reused                                         | not built |
 | Every key titled in every language marked complete                               | not built |
 | Title length and script                                                          | not built |
@@ -216,3 +256,14 @@ every test run until they exist.
     (`checking/headings`) segment titles use. Proposed: explanatory comment.
 11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
     difficulty after v0.1.
+
+12. **Single-segment pericopes**: 263 pericopes are exactly one segment
+    (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
+    segment titles describe the same verses. Title both (16,786 English
+    titles) or reuse the pericope title (16,523)?
+13. **Spanish language tag**: every Spanish input is published as `es-419`;
+    the v0.1 list says `es`. Proposed: `es-419` (#20).
+14. **Chinese key terms**: there is no Chinese Translation Words on Door43
+    (checked 2026-10-28). Who carries a zh-Hans key-term list, or the
+    fallback (an AI-drafted list checked by a second model and reviewed by a
+    Chinese reader) if no owner by 2026-11-13?

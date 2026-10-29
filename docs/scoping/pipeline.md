@@ -92,3 +92,12 @@ Reversibility: forward = low; backward = low.
 
 Reversibility: forward = low; backward = high once released. A package `id`
 and its keys are permanent.
+
+## Built so far
+
+The Build rows above for pericopes (1), segments (3), versification (4) and
+the `data/` → `dist/` generator (9), for one book first:
+
+| Book | Date       | Result                                                                                                                                                                                                                                                                  |
+| ---- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TIT  | 2026-10-28 | 8 pericopes, 25 segments: the 24 UFW chunks with 1:4–5 split at 1:5, as `split-chunks.tsv` predicted. No new Break. Keys are provisional until decision 3 is settled. `dist/tc-mobile/TIT.json` passes tc-mobile's checker. Re-derived independently by a second model. |
