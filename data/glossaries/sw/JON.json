@@ -1,0 +1,462 @@
+{
+  "language": "sw",
+  "book": "JON",
+  "links": "twl-en-jon",
+  "words": {
+    "repo": "Door43-Catalog/sw_tw",
+    "release": "v7.3",
+    "commit": "82e94cd4a7aad817365190fa5d48960c90a01fc9"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (sw), Door43-Catalog/sw_tw v7.3, CC BY-SA 4.0. Original work available at https://git.door43.org/Door43-Catalog/sw_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "Kuteua, Kuteuliwa",
+      "source": "tw-sw-kt-appoint",
+      "refs": ["1:17", "4:6", "4:7", "4:8"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "Kuamini, kuamini katika",
+      "source": "tw-sw-kt-believe",
+      "refs": ["3:5"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "Huruma",
+      "source": "tw-sw-kt-compassion",
+      "refs": ["3:9", "4:2"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "Uaminifu wa agano, fadhili, upendo wa kudumu",
+      "source": "tw-sw-kt-covenantfaith",
+      "refs": ["2:8", "4:2"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "milele",
+      "source": "tw-sw-kt-eternity",
+      "refs": ["2:6"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "baya, ovu, uovu",
+      "source": "tw-sw-kt-evil",
+      "refs": ["1:2", "1:7", "1:8", "3:8", "3:10", "4:1", "4:2", "4:6"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "mungu wa uongo, mungu mgeni, mungu, mungu wa kike",
+      "source": "tw-sw-kt-falsegod",
+      "refs": ["1:5"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "woga, hofu, hofu ya Yahwe",
+      "source": "tw-sw-kt-fear",
+      "refs": ["1:5", "1:9", "1:10", "1:16"]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "timiza",
+      "source": "tw-sw-kt-fulfill",
+      "refs": ["2:9"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Mungu",
+      "source": "tw-sw-kt-god",
+      "refs": [
+        "1:6",
+        "1:9",
+        "2:1",
+        "2:6",
+        "3:3",
+        "3:5",
+        "3:8",
+        "3:9",
+        "3:10",
+        "4:2",
+        "4:7",
+        "4:8",
+        "4:9"
+      ]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "wema, uzuri",
+      "source": "tw-sw-kt-good",
+      "refs": ["4:3", "4:4", "4:8", "4:9"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "neema, mwenye neema",
+      "source": "tw-sw-kt-grace",
+      "refs": ["4:2"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "kuzimu",
+      "source": "tw-sw-kt-hades",
+      "refs": ["2:2"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "mbingu, anga, mbinguni",
+      "source": "tw-sw-kt-heaven",
+      "refs": ["1:9"]
+    },
+    "kt/hebrew": {
+      "en": "Hebrew",
+      "headword": "Waebrania",
+      "source": "tw-sw-kt-hebrew",
+      "refs": ["1:9"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "takatifu, utakatifu",
+      "source": "tw-sw-kt-holy",
+      "refs": ["2:4", "2:7"]
+    },
+    "kt/innocent": {
+      "en": "innocent",
+      "headword": "sio na hatia",
+      "source": "tw-sw-kt-innocent",
+      "refs": ["1:14"]
+    },
+    "kt/lordyahweh": {
+      "en": "Lord Yahweh, Yahweh God",
+      "headword": "Bwana Yahwe, Yahwe Mungu",
+      "source": "tw-sw-kt-lordyahweh",
+      "refs": ["4:6"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "Kupotea, kuharibika",
+      "source": "tw-sw-kt-perish",
+      "refs": ["1:6", "1:14", "3:9", "4:10"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "Kuomba, maombi",
+      "source": "tw-sw-kt-pray",
+      "refs": ["2:1", "2:7", "4:2"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "okoa, salama",
+      "source": "tw-sw-kt-save",
+      "refs": ["2:9"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "roho, kiroho",
+      "source": "tw-sw-kt-spirit",
+      "refs": ["4:8"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "hekalu",
+      "source": "tw-sw-kt-temple",
+      "refs": ["2:4", "2:7"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "Neno la Mungu, Neno la Yaweh, Neno la Bwana, maandiko",
+      "source": "tw-sw-kt-wordofgod",
+      "refs": ["1:1", "3:1", "3:3"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yaweh",
+      "source": "tw-sw-kt-yahweh",
+      "refs": [
+        "1:3",
+        "1:4",
+        "1:9",
+        "1:10",
+        "1:14",
+        "1:16",
+        "1:17",
+        "2:1",
+        "2:2",
+        "2:6",
+        "2:7",
+        "2:9",
+        "2:10",
+        "4:2",
+        "4:3",
+        "4:4",
+        "4:10"
+      ]
+    },
+    "names/jonah": {
+      "en": "Jonah",
+      "headword": "Yona",
+      "source": "tw-sw-names-jonah",
+      "refs": [
+        "1:1",
+        "1:3",
+        "1:5",
+        "1:7",
+        "1:15",
+        "1:17",
+        "2:1",
+        "2:10",
+        "3:1",
+        "3:3",
+        "3:4",
+        "4:1",
+        "4:5",
+        "4:6",
+        "4:8",
+        "4:9"
+      ]
+    },
+    "names/joppa": {
+      "en": "Joppa",
+      "headword": "Yafa",
+      "source": "tw-sw-names-joppa",
+      "refs": ["1:3"]
+    },
+    "names/nineveh": {
+      "en": "Nineveh, Ninevite",
+      "headword": "Ninawi, Mninwai",
+      "source": "tw-sw-names-nineveh",
+      "refs": ["1:2", "3:2", "3:3", "3:4", "3:5", "3:6", "3:7", "4:11"]
+    },
+    "names/tarshish": {
+      "en": "Tarshish",
+      "headword": "Tarishishi",
+      "source": "tw-sw-names-tarshish",
+      "refs": ["1:3", "4:2"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "mnyama",
+      "source": "tw-sw-other-beast",
+      "refs": ["3:8"]
+    },
+    "other/beg": {
+      "en": "beg, begging, begged",
+      "headword": "kuomba",
+      "source": "tw-sw-other-beg",
+      "refs": ["4:3"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "siku",
+      "source": "tw-sw-other-biblicaltimeday",
+      "refs": ["1:17", "3:3", "3:4", "4:7"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "mwenzi",
+      "source": "tw-sw-other-companion",
+      "refs": ["1:7"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "Lia, kupiga kelele",
+      "source": "tw-sw-other-cry",
+      "refs": ["1:5", "1:6", "1:14", "2:2", "3:8"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "tamka, tamko",
+      "source": "tw-sw-other-declare",
+      "refs": ["3:5", "3:7"]
+    },
+    "other/decree": {
+      "en": "decree, decreed",
+      "headword": "amri",
+      "source": "tw-sw-other-decree",
+      "refs": ["3:7"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "komboa, mkombozi, ukombozi",
+      "source": "tw-sw-other-deliverer",
+      "refs": ["4:6"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "dunia, kidunia",
+      "source": "tw-sw-other-earth",
+      "refs": ["2:6"]
+    },
+    "other/fast": {
+      "en": "fast, fasting",
+      "headword": "funga",
+      "source": "tw-sw-other-fast",
+      "refs": ["3:5"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "kundi, mifugo",
+      "source": "tw-sw-other-flock",
+      "refs": ["3:7"]
+    },
+    "other/gird": {
+      "en": "gird, girded, wrapped around, tied up, belt, tuck in belt, put belt around",
+      "headword": "funga",
+      "source": "tw-sw-other-gird",
+      "refs": ["2:5"]
+    },
+    "other/hard": {
+      "en": "hard, harder",
+      "headword": "ngumu, ugumu, fanya - gumu",
+      "source": "tw-sw-other-hard",
+      "refs": ["1:13"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "furaha, mwenye furaha",
+      "source": "tw-sw-other-joy",
+      "refs": ["4:6"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "mfalme",
+      "source": "tw-sw-other-king",
+      "refs": ["3:6", "3:7"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "kujua, ufahamu, kufanya kujulikana",
+      "source": "tw-sw-other-know",
+      "refs": ["1:7", "1:10", "1:12", "3:9", "4:2", "4:11"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "kazi, mfanyakazi",
+      "source": "tw-sw-other-labor",
+      "refs": ["4:10"]
+    },
+    "other/livestock": {
+      "en": "livestock, animals",
+      "headword": "mifugo",
+      "source": "tw-sw-other-livestock",
+      "refs": ["3:7", "4:11"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "kura, kupiga kura",
+      "source": "tw-sw-other-lots",
+      "refs": ["1:7"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "uwezo",
+      "source": "tw-sw-other-mighty",
+      "refs": ["2:4"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "waheshima, heshima",
+      "source": "tw-sw-other-noble",
+      "refs": ["3:7"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "kiapo, kuapa,",
+      "source": "tw-sw-other-oath",
+      "refs": ["1:16", "2:9"]
+    },
+    "other/pit": {
+      "en": "pit, pitfall, trench, cistern",
+      "headword": "Shimo",
+      "source": "tw-sw-other-pit",
+      "refs": ["2:6"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "Kusihi, ng'ang'ania",
+      "source": "tw-sw-other-plead",
+      "refs": ["1:14"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "Kuhubiri",
+      "source": "tw-sw-other-preach",
+      "refs": ["3:2"]
+    },
+    "other/rage": {
+      "en": "rage",
+      "headword": "Ghadhabu",
+      "source": "tw-sw-other-rage",
+      "refs": ["1:15"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "Kimbilio, malazi",
+      "source": "tw-sw-other-refuge",
+      "refs": ["4:5"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "Ripoti",
+      "source": "tw-sw-other-report",
+      "refs": ["1:8", "3:2"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "kanzu au vazi",
+      "source": "tw-sw-other-robe",
+      "refs": ["3:6"]
+    },
+    "other/sackcloth": {
+      "en": "sackcloth",
+      "headword": "nguo ya gunia",
+      "source": "tw-sw-other-sackcloth",
+      "refs": ["3:5", "3:6", "3:8"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "dhabihu, sadaka",
+      "source": "tw-sw-other-sacrifice",
+      "refs": ["1:16", "2:9"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "panda, mpandaji, mmea",
+      "source": "tw-sw-other-sow",
+      "refs": ["4:6", "4:7", "4:9", "4:10"]
+    },
+    "other/throne": {
+      "en": "throne, enthroned",
+      "headword": "kiti cha enzi",
+      "source": "tw-sw-other-throne",
+      "refs": ["3:6"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "taabu, mataabiko, taabika",
+      "source": "tw-sw-other-trouble",
+      "refs": ["2:2", "4:10", "4:11"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "fahamu, ufahamu",
+      "source": "tw-sw-other-understand",
+      "refs": ["1:4"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "Bure, ubatili",
+      "source": "tw-sw-other-vain",
+      "refs": ["2:8"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "other/age-timeperiod": "no-article",
+    "other/forsaken": "no-article"
+  }
+}

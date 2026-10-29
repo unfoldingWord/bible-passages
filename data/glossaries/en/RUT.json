@@ -1,0 +1,628 @@
+{
+  "language": "en",
+  "book": "RUT",
+  "links": "twl-en-rut",
+  "words": {
+    "repo": "unfoldingWord/en_tw",
+    "release": "v91",
+    "commit": "ff5b3852c27c3a0d01b109e482eb26047dcd20e2"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/almighty": {
+      "en": "Almighty",
+      "headword": "Almighty",
+      "source": "tw-en-kt-almighty",
+      "refs": ["1:20", "1:21"]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "anoint, anointed, anointing",
+      "source": "tw-en-kt-anoint",
+      "refs": ["3:3"]
+    },
+    "kt/birthright": {
+      "en": "birthright",
+      "headword": "birthright",
+      "source": "tw-en-kt-birthright",
+      "refs": ["4:6"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bless, blessed, blessing",
+      "source": "tw-en-kt-bless",
+      "refs": ["2:4", "2:19", "2:20", "3:10", "4:14"]
+    },
+    "kt/call-toname": {
+      "en": "call, called",
+      "headword": "call, called",
+      "source": "tw-en-kt-call-toname",
+      "refs": ["1:20", "1:21", "4:17"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "covenant faithfulness, covenant loyalty, covenant love",
+      "source": "tw-en-kt-covenantfaith",
+      "refs": ["1:8", "2:20", "3:10"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "evil, wicked, wickedness, unpleasant",
+      "source": "tw-en-kt-evil",
+      "refs": ["1:21"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "source": "tw-en-kt-falsegod",
+      "refs": ["1:15"]
+    },
+    "kt/favor": {
+      "en": "favor, favorable, favoritism",
+      "headword": "favor, favorable, favoritism",
+      "source": "tw-en-kt-favor",
+      "refs": ["2:2", "2:10", "2:13"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "fear, afraid, frighten",
+      "source": "tw-en-kt-fear",
+      "refs": ["3:11"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "God",
+      "source": "tw-en-kt-god",
+      "refs": ["1:16", "2:12"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "good, right, pleasant, better, best, goodness",
+      "source": "tw-en-kt-good",
+      "refs": ["2:22", "3:1", "3:7", "3:10", "3:13", "4:15"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "hope, hoped",
+      "source": "tw-en-kt-hope",
+      "refs": ["1:12"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "inherit, inheritance, heir",
+      "source": "tw-en-kt-inherit",
+      "refs": ["4:5", "4:6", "4:10"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, Israelites",
+      "source": "tw-en-kt-israel",
+      "refs": ["2:12", "4:7", "4:11", "4:14"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "lord, Lord, master, sir",
+      "source": "tw-en-kt-lord",
+      "refs": ["2:13"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "love, beloved",
+      "source": "tw-en-kt-love",
+      "refs": ["4:15"]
+    },
+    "kt/peopleofgod": {
+      "en": "people of God",
+      "headword": "people of God",
+      "source": "tw-en-kt-peopleofgod",
+      "refs": ["1:6"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "redeem, redeemer, redemption",
+      "source": "tw-en-kt-redeem",
+      "refs": [
+        "2:20",
+        "3:9",
+        "3:12",
+        "3:13",
+        "4:1",
+        "4:3",
+        "4:4",
+        "4:6",
+        "4:7",
+        "4:8",
+        "4:14"
+      ]
+    },
+    "kt/restore": {
+      "en": "restore, restoration",
+      "headword": "restore, restoration",
+      "source": "tw-en-kt-restore",
+      "refs": ["4:15"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "testimony, testify, witness, eyewitness, evidence",
+      "source": "tw-en-kt-testimony",
+      "refs": ["1:21", "4:9", "4:10", "4:11"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yahweh, Yah",
+      "source": "tw-en-kt-yahweh",
+      "refs": [
+        "1:6",
+        "1:8",
+        "1:9",
+        "1:13",
+        "1:17",
+        "1:21",
+        "2:4",
+        "2:12",
+        "2:20",
+        "3:10",
+        "3:13",
+        "4:11",
+        "4:12",
+        "4:13",
+        "4:14"
+      ]
+    },
+    "names/bethlehem": {
+      "en": "Bethlehem, Ephrathah",
+      "headword": "Bethlehem, Ephrathah",
+      "source": "tw-en-names-bethlehem",
+      "refs": ["1:1", "1:2", "1:19", "1:22", "2:4", "4:11"]
+    },
+    "names/boaz": {
+      "en": "Boaz",
+      "headword": "Boaz",
+      "source": "tw-en-names-boaz",
+      "refs": [
+        "2:1",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:8",
+        "2:11",
+        "2:14",
+        "2:15",
+        "2:19",
+        "2:23",
+        "3:2",
+        "3:7",
+        "4:1",
+        "4:5",
+        "4:8",
+        "4:9",
+        "4:13",
+        "4:21"
+      ]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "David",
+      "source": "tw-en-names-david",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/ephrathah": {
+      "en": "Ephrath, Ephrathah",
+      "headword": "Ephrath, Ephrathah",
+      "source": "tw-en-names-ephrathah",
+      "refs": ["1:2", "4:11"]
+    },
+    "names/jesse": {
+      "en": "Jesse",
+      "headword": "Jesse",
+      "source": "tw-en-names-jesse",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "Judah",
+      "source": "tw-en-names-judah",
+      "refs": ["4:12"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "Judea, Judah",
+      "source": "tw-en-names-judea",
+      "refs": ["1:1", "1:2", "1:7"]
+    },
+    "names/leah": {
+      "en": "Leah",
+      "headword": "Leah",
+      "source": "tw-en-names-leah",
+      "refs": ["4:11"]
+    },
+    "names/moab": {
+      "en": "Moab, Moabite",
+      "headword": "Moab, Moabite",
+      "source": "tw-en-names-moab",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:4",
+        "1:6",
+        "1:22",
+        "2:2",
+        "2:6",
+        "2:21",
+        "4:3",
+        "4:5",
+        "4:10"
+      ]
+    },
+    "names/rachel": {
+      "en": "Rachel",
+      "headword": "Rachel",
+      "source": "tw-en-names-rachel",
+      "refs": ["4:11"]
+    },
+    "names/ruth": {
+      "en": "Ruth",
+      "headword": "Ruth",
+      "source": "tw-en-names-ruth",
+      "refs": [
+        "1:4",
+        "1:14",
+        "1:16",
+        "1:22",
+        "2:2",
+        "2:8",
+        "2:21",
+        "2:22",
+        "3:9",
+        "4:5",
+        "4:10",
+        "4:13"
+      ]
+    },
+    "names/tamar": {
+      "en": "Tamar",
+      "headword": "Tamar",
+      "source": "tw-en-names-tamar",
+      "refs": ["4:12"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "age, aged, old, old age, years old",
+      "source": "tw-en-other-age",
+      "refs": ["1:12", "4:15"]
+    },
+    "other/barley": {
+      "en": "barley",
+      "headword": "barley",
+      "source": "tw-en-other-barley",
+      "refs": ["1:22", "2:17", "2:23", "3:2", "3:15", "3:17"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "bear, bearer, bore, borne, produce, produced",
+      "source": "tw-en-other-bear",
+      "refs": ["4:12", "4:13", "4:15", "4:17"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "day",
+      "source": "tw-en-other-biblicaltimeday",
+      "refs": ["1:1"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "year",
+      "source": "tw-en-other-biblicaltimeyear",
+      "refs": ["1:4"]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "bow, bow down, kneel, bend, bend the knee",
+      "source": "tw-en-other-bow",
+      "refs": ["2:10"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "bread",
+      "source": "tw-en-other-bread",
+      "refs": ["1:6", "2:14"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "bury, buried, burial",
+      "source": "tw-en-other-bury",
+      "refs": ["1:17"]
+    },
+    "other/clan": {
+      "en": "clan",
+      "headword": "clan",
+      "source": "tw-en-other-clan",
+      "refs": ["2:1", "2:3"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "companion, fellow worker, friend",
+      "source": "tw-en-other-companion",
+      "refs": ["3:14", "4:7"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "conceive, conceived, conception",
+      "source": "tw-en-other-conceive",
+      "refs": ["4:13"]
+    },
+    "other/confirm": {
+      "en": "confirm, confirmation",
+      "headword": "confirm, confirmation",
+      "source": "tw-en-other-confirm",
+      "refs": ["4:7"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "earth, land",
+      "source": "tw-en-other-earth",
+      "refs": ["1:7", "2:6"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "elder",
+      "source": "tw-en-other-elder",
+      "refs": ["4:2", "4:4", "4:9", "4:11"]
+    },
+    "other/famine": {
+      "en": "famine",
+      "headword": "famine",
+      "source": "tw-en-other-famine",
+      "refs": ["1:1"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "alien, foreigner, sojourn",
+      "source": "tw-en-other-foreigner",
+      "refs": ["2:10"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "forsake, forsaken, leave",
+      "source": "tw-en-other-forsaken",
+      "refs": ["1:16", "2:20"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "source": "tw-en-other-gate",
+      "refs": ["3:11", "4:1", "4:10", "4:11"]
+    },
+    "other/generation-groupofdescendants": {
+      "en": "generation",
+      "headword": "generation",
+      "source": "tw-en-other-generation-groupofdescendants",
+      "refs": ["4:18"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "glean, gleaning, gleanings",
+      "source": "tw-en-other-glean",
+      "refs": [
+        "2:2",
+        "2:3",
+        "2:7",
+        "2:8",
+        "2:15",
+        "2:16",
+        "2:17",
+        "2:18",
+        "2:19",
+        "2:23"
+      ]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "grain, grainfields",
+      "source": "tw-en-other-grain",
+      "refs": ["2:2", "2:7", "2:14", "3:7"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "harvest, reap",
+      "source": "tw-en-other-harvest",
+      "refs": [
+        "1:22",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:6",
+        "2:7",
+        "2:9",
+        "2:14",
+        "2:21",
+        "2:23"
+      ]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "house",
+      "source": "tw-en-other-house",
+      "refs": ["2:7"]
+    },
+    "other/house-descendants_nation": {
+      "en": "house, household, house of Israel, house of David",
+      "headword": "house, household, house of Israel, house of David",
+      "source": "tw-en-other-house-descendants--nation",
+      "refs": ["4:11", "4:12"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "household, house",
+      "source": "tw-en-other-household",
+      "refs": ["1:8", "1:9", "4:11"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "instruct, instruction, instructor",
+      "source": "tw-en-other-instruct",
+      "refs": ["2:9", "3:6"]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "judge",
+      "source": "tw-en-other-judgeposition",
+      "refs": ["1:1"]
+    },
+    "other/kin": {
+      "en": "kin, kinfolk, kindred, kinsman",
+      "headword": "kin, kinfolk, kindred, kinsman",
+      "source": "tw-en-other-kin",
+      "refs": ["2:20", "3:9", "3:12", "4:1", "4:3", "4:6", "4:8", "4:14"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "kiss",
+      "source": "tw-en-other-kiss",
+      "refs": ["1:9", "1:14"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "know, knew, knowledge, known, unknown, distinguish",
+      "source": "tw-en-other-know",
+      "refs": ["3:3", "3:4", "3:11", "3:14", "3:18", "4:4"]
+    },
+    "other/know-relationship": {
+      "en": "know, knew, knowledge, unknown",
+      "headword": "know, knew, knowledge, unknown",
+      "source": "tw-en-other-know-relationship",
+      "refs": ["2:11"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "labor, labors, labored, laboring, laborer, work, hard work",
+      "source": "tw-en-other-labor",
+      "refs": ["2:12", "2:19", "3:2"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "neighbor, neighborhood, neighboring",
+      "source": "tw-en-other-neighbor",
+      "refs": ["4:17"]
+    },
+    "other/prosper": {
+      "en": "prosper, prosperity, prosperous",
+      "headword": "prosper, prosperity, prosperous",
+      "source": "tw-en-other-prosper",
+      "refs": ["4:11"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "rebuke, reprove",
+      "source": "tw-en-other-rebuke",
+      "refs": ["2:16"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "refuge, refugee, shelter, sheltered",
+      "source": "tw-en-other-refuge",
+      "refs": ["2:12"]
+    },
+    "other/renown": {
+      "en": "renown, renowned, famous",
+      "headword": "renown, renowned, famous",
+      "source": "tw-en-other-renown",
+      "refs": ["4:11", "4:14"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "report, reported, tell, reputation",
+      "source": "tw-en-other-report",
+      "refs": ["2:11", "2:19", "3:4", "3:16", "4:4"]
+    },
+    "other/reward": {
+      "en": "reward, prize, deserve",
+      "headword": "reward, prize, deserve",
+      "source": "tw-en-other-reward",
+      "refs": ["2:12"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "rule, reign, ruler, prefect, official, leader",
+      "source": "tw-en-other-ruler",
+      "refs": ["1:1"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "sandal",
+      "source": "tw-en-other-sandal",
+      "refs": ["4:7", "4:8"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "seed",
+      "source": "tw-en-other-seed",
+      "refs": ["4:12"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "seek, search, look for",
+      "source": "tw-en-other-seek",
+      "refs": ["3:1"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "servant, serve, maidservant, young man, young women",
+      "source": "tw-en-other-servant",
+      "refs": [
+        "2:5",
+        "2:6",
+        "2:8",
+        "2:9",
+        "2:13",
+        "2:15",
+        "2:21",
+        "2:22",
+        "2:23",
+        "3:2",
+        "3:9"
+      ]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "shame, ashamed, disgrace, humiliate, reproach",
+      "source": "tw-en-other-shame",
+      "refs": ["2:15"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "thresh",
+      "source": "tw-en-other-thresh",
+      "refs": ["3:2", "3:3", "3:6", "3:14"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "watch, guard, take heed, beware",
+      "source": "tw-en-other-watch",
+      "refs": ["2:9"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "wheat",
+      "source": "tw-en-other-wheat",
+      "refs": ["2:23"]
+    },
+    "other/winnow": {
+      "en": "winnow, sift",
+      "headword": "winnow, sift",
+      "source": "tw-en-other-winnow",
+      "refs": ["3:2"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "womb",
+      "source": "tw-en-other-womb",
+      "refs": ["1:11"]
+    }
+  },
+  "gaps": {}
+}

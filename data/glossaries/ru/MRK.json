@@ -1,0 +1,2703 @@
+{
+  "language": "ru",
+  "book": "MRK",
+  "links": "twl-en-mrk",
+  "words": {
+    "repo": "ru_gl/ru_tw",
+    "release": "v14.2",
+    "commit": "861807f86dc5d532be57248a9225b5f124fc9563"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (ru), ru_gl/ru_tw v14.2, CC BY-SA 4.0. Original work available at https://git.door43.org/ru_gl/ru_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/abomination": {
+      "en": "abomination, abominable",
+      "headword": "мерзость, мерзкий, омерзительный",
+      "source": "tw-ru-kt-abomination",
+      "refs": ["13:14"]
+    },
+    "kt/adultery": {
+      "en": "adultery, adulterous, adulterer, adulteress",
+      "headword": "нарушать супружескую верность, разврат",
+      "source": "tw-ru-kt-adultery",
+      "refs": ["7:22", "8:38", "10:11", "10:12", "10:19"]
+    },
+    "kt/amen": {
+      "en": "amen, truly",
+      "headword": "аминь, истинно",
+      "source": "tw-ru-kt-amen",
+      "refs": [
+        "3:28",
+        "8:12",
+        "9:1",
+        "9:41",
+        "10:15",
+        "10:29",
+        "11:23",
+        "12:43",
+        "13:30",
+        "14:9",
+        "14:18",
+        "14:25",
+        "14:30"
+      ]
+    },
+    "kt/angel": {
+      "en": "angel, archangel",
+      "headword": "ангел, ангелы, архангел",
+      "source": "tw-ru-kt-angel",
+      "refs": ["1:13", "8:38", "12:25", "13:27", "13:32"]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "помазывать, помазанник, помазание",
+      "source": "tw-ru-kt-anoint",
+      "refs": ["6:13", "14:8", "16:1"]
+    },
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "апостол",
+      "source": "tw-ru-kt-apostle",
+      "refs": ["3:14", "6:30"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "назначать, поставить, поручать",
+      "source": "tw-ru-kt-appoint",
+      "refs": ["3:16"]
+    },
+    "kt/authority": {
+      "en": "authority",
+      "headword": "власть, власти, владычество, руководство, начальство",
+      "source": "tw-ru-kt-authority",
+      "refs": [
+        "1:22",
+        "1:27",
+        "2:10",
+        "3:15",
+        "6:7",
+        "10:42",
+        "11:28",
+        "11:29",
+        "11:33",
+        "13:34"
+      ]
+    },
+    "kt/baptize": {
+      "en": "baptize, baptized, baptism",
+      "headword": "крестить, крещённый, крещение",
+      "source": "tw-ru-kt-baptize",
+      "refs": [
+        "1:4",
+        "1:5",
+        "1:8",
+        "1:9",
+        "6:14",
+        "6:24",
+        "6:25",
+        "10:38",
+        "10:39",
+        "11:30"
+      ]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "верить, поверить, верующий, неверующий, поверивший",
+      "source": "tw-ru-kt-believe",
+      "refs": [
+        "1:15",
+        "5:36",
+        "6:6",
+        "9:19",
+        "9:23",
+        "9:24",
+        "9:42",
+        "11:23",
+        "11:24",
+        "11:31",
+        "13:21",
+        "15:32"
+      ]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "любимый, возлюбленный, быть любимым",
+      "source": "tw-ru-kt-beloved",
+      "refs": ["1:11", "9:7", "12:6"]
+    },
+    "kt/blasphemy": {
+      "en": "blasphemy, blaspheme, blasphemous",
+      "headword": "оскорблять, злословить, богохульство, злоязычный, оскорбляющий, оскорбительный",
+      "source": "tw-ru-kt-blasphemy",
+      "refs": ["2:7", "3:28", "3:29", "14:64", "15:29"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "благословлять, благословенный, благословен, благословение",
+      "source": "tw-ru-kt-bless",
+      "refs": ["6:41", "8:7", "10:16", "11:9", "11:10", "14:22", "14:61"]
+    },
+    "kt/bond": {
+      "en": "bind, bond, bound",
+      "headword": "оковы, связывать оковами, узы",
+      "source": "tw-ru-kt-bond",
+      "refs": ["3:27", "5:3", "5:4", "6:17", "7:35", "15:1", "15:7"]
+    },
+    "kt/centurion": {
+      "en": "centurion",
+      "headword": "сотник",
+      "source": "tw-ru-kt-centurion",
+      "refs": ["15:39", "15:44", "15:45"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "Христос, Мессия",
+      "source": "tw-ru-kt-christ",
+      "refs": ["1:1", "8:29", "9:41", "12:35", "13:21", "14:61", "15:32"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "милосердие, милосердный, сострадательный",
+      "source": "tw-ru-kt-compassion",
+      "refs": ["1:41", "6:34", "8:2", "9:22"]
+    },
+    "kt/condemn": {
+      "en": "condemn, condemned, condemnation",
+      "headword": "осуждать, осуждённый, осуждение, суд",
+      "source": "tw-ru-kt-condemn",
+      "refs": ["10:33", "12:40", "14:64"]
+    },
+    "kt/confess": {
+      "en": "confess, confession",
+      "headword": "исповедовать, исповедание, признавать",
+      "source": "tw-ru-kt-confess",
+      "refs": ["1:5"]
+    },
+    "kt/cornerstone": {
+      "en": "cornerstone",
+      "headword": "краеугольный камень, краеугольные камни",
+      "source": "tw-ru-kt-cornerstone",
+      "refs": ["12:10"]
+    },
+    "kt/covenant": {
+      "en": "covenant",
+      "headword": "завет, новый завет",
+      "source": "tw-ru-kt-covenant",
+      "refs": ["14:24"]
+    },
+    "kt/cross": {
+      "en": "cross",
+      "headword": "крест",
+      "source": "tw-ru-kt-cross",
+      "refs": ["8:34", "15:21", "15:30", "15:32"]
+    },
+    "kt/crucify": {
+      "en": "crucify, crucified",
+      "headword": "распинать, распять, распятый",
+      "source": "tw-ru-kt-crucify",
+      "refs": [
+        "15:13",
+        "15:14",
+        "15:15",
+        "15:20",
+        "15:24",
+        "15:25",
+        "15:27",
+        "15:32",
+        "16:6"
+      ]
+    },
+    "kt/curse": {
+      "en": "curse, cursed, cursing",
+      "headword": "проклятие, проклинать, проклятый, проклинающий",
+      "source": "tw-ru-kt-curse",
+      "refs": ["11:21"]
+    },
+    "kt/demon": {
+      "en": "demon, evil spirit, unclean spirit",
+      "headword": "демон, бесовский",
+      "source": "tw-ru-kt-demon",
+      "refs": [
+        "1:23",
+        "1:26",
+        "1:27",
+        "1:34",
+        "1:39",
+        "3:11",
+        "3:15",
+        "3:22",
+        "3:30",
+        "5:2",
+        "5:8",
+        "5:13",
+        "6:7",
+        "6:13",
+        "7:25",
+        "7:26",
+        "7:29",
+        "7:30",
+        "9:17",
+        "9:20",
+        "9:25",
+        "9:38"
+      ]
+    },
+    "kt/demonpossessed": {
+      "en": "demon-possessed",
+      "headword": "одержимый демонами",
+      "source": "tw-ru-kt-demonpossessed",
+      "refs": ["1:32", "5:15", "5:16", "5:18"]
+    },
+    "kt/disciple": {
+      "en": "disciple",
+      "headword": "ученик, ученики",
+      "source": "tw-ru-kt-disciple",
+      "refs": [
+        "2:15",
+        "2:16",
+        "2:18",
+        "2:23",
+        "3:7",
+        "3:9",
+        "4:34",
+        "5:31",
+        "6:1",
+        "6:29",
+        "6:35",
+        "6:41",
+        "6:45",
+        "7:2",
+        "7:5",
+        "7:17",
+        "8:1",
+        "8:4",
+        "8:6",
+        "8:10",
+        "8:27",
+        "8:33",
+        "8:34",
+        "9:14",
+        "9:18",
+        "9:28",
+        "9:31",
+        "10:10",
+        "10:13",
+        "10:23",
+        "10:24",
+        "10:46",
+        "11:1",
+        "11:14",
+        "12:43",
+        "13:1",
+        "14:12",
+        "14:13",
+        "14:14",
+        "14:16",
+        "14:32",
+        "16:7"
+      ]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "избранный, избранные, избрание, избирать",
+      "source": "tw-ru-kt-elect",
+      "refs": ["13:20", "13:22", "13:27"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "вечный, навсегда, навек, вовеки, вечность",
+      "source": "tw-ru-kt-eternity",
+      "refs": ["3:29", "10:17", "10:30"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "зло, злоба, злость, злой, плохой, злиться, бедствие, досада, досадный",
+      "source": "tw-ru-kt-evil",
+      "refs": ["7:10", "7:21", "7:22", "7:23", "9:39"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "вера, верность",
+      "source": "tw-ru-kt-faith",
+      "refs": ["2:5", "4:40", "5:34", "10:52", "11:22"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "страх, боязнь, трепет, бояться, испугаться, пугать, боящийся",
+      "source": "tw-ru-kt-fear",
+      "refs": [
+        "4:40",
+        "4:41",
+        "5:15",
+        "5:33",
+        "5:36",
+        "6:20",
+        "6:50",
+        "9:32",
+        "10:32",
+        "11:18",
+        "11:32",
+        "12:12",
+        "16:8"
+      ]
+    },
+    "kt/foolish": {
+      "en": "fool, foolish, folly",
+      "headword": "глупый, неразумный, безумный, безумие",
+      "source": "tw-ru-kt-foolish",
+      "refs": ["7:22"]
+    },
+    "kt/forgive": {
+      "en": "forgive, forgiven, forgiveness, pardon, pardoned",
+      "headword": "прощать",
+      "source": "tw-ru-kt-forgive",
+      "refs": [
+        "1:4",
+        "2:5",
+        "2:7",
+        "2:9",
+        "2:10",
+        "3:28",
+        "3:29",
+        "4:12",
+        "11:25"
+      ]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "исполнять",
+      "source": "tw-ru-kt-fulfill",
+      "refs": ["1:15", "14:49"]
+    },
+    "kt/gentile": {
+      "en": "Gentile",
+      "headword": "язычник, народы",
+      "source": "tw-ru-kt-gentile",
+      "refs": ["10:33", "10:42"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "слава, великолепие, славный",
+      "source": "tw-ru-kt-glory",
+      "refs": ["2:12", "8:38", "10:37", "13:26"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Бог, Божий",
+      "source": "tw-ru-kt-god",
+      "refs": [
+        "1:14",
+        "1:24",
+        "2:7",
+        "2:12",
+        "2:26",
+        "3:35",
+        "5:7",
+        "7:8",
+        "7:9",
+        "8:33",
+        "10:9",
+        "10:15",
+        "10:18",
+        "10:25",
+        "10:27",
+        "11:22",
+        "12:14",
+        "12:17",
+        "12:24",
+        "12:26",
+        "12:27",
+        "12:29",
+        "12:30",
+        "13:19",
+        "15:34"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "Бог Отец, Бог-Отец, Отец",
+      "source": "tw-ru-kt-godthefather",
+      "refs": ["8:38", "11:25", "13:32", "14:36"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "добро, добрый, достойный, хороший, лучше, лучший, приятный, угодный, хорошо",
+      "source": "tw-ru-kt-good",
+      "refs": [
+        "3:4",
+        "4:8",
+        "4:20",
+        "7:27",
+        "7:37",
+        "9:5",
+        "9:42",
+        "9:43",
+        "9:45",
+        "9:47",
+        "9:50",
+        "10:17",
+        "10:18",
+        "14:6",
+        "14:7",
+        "14:21"
+      ]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "доброе послание, Евангелие, благовестие",
+      "source": "tw-ru-kt-goodnews",
+      "refs": ["1:1", "1:14", "1:15", "8:35", "10:29", "13:10", "14:9"]
+    },
+    "kt/guilt": {
+      "en": "guilt, guilty",
+      "headword": "вина, виновный",
+      "source": "tw-ru-kt-guilt",
+      "refs": ["3:29"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "небеса, небо, Небесный",
+      "source": "tw-ru-kt-heaven",
+      "refs": [
+        "1:10",
+        "1:11",
+        "4:32",
+        "6:41",
+        "7:34",
+        "8:11",
+        "10:21",
+        "11:25",
+        "11:30",
+        "11:31",
+        "12:25",
+        "13:25",
+        "13:27",
+        "13:31",
+        "13:32",
+        "14:62"
+      ]
+    },
+    "kt/hell": {
+      "en": "hell, lake of fire",
+      "headword": "ад, геенна",
+      "source": "tw-ru-kt-hell",
+      "refs": ["9:43", "9:45", "9:47"]
+    },
+    "kt/highpriest": {
+      "en": "high priest, chief priest",
+      "headword": "первосвященник, великий священник",
+      "source": "tw-ru-kt-highpriest",
+      "refs": [
+        "2:26",
+        "8:31",
+        "10:33",
+        "11:18",
+        "11:27",
+        "14:1",
+        "14:10",
+        "14:43",
+        "14:47",
+        "14:53",
+        "14:54",
+        "14:55",
+        "14:60",
+        "14:61",
+        "14:63",
+        "14:66",
+        "15:1",
+        "15:3",
+        "15:10",
+        "15:11",
+        "15:31"
+      ]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "святость, святой, освящение, святыня",
+      "source": "tw-ru-kt-holy",
+      "refs": ["1:24", "6:20", "8:38"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "Святой Дух, Божий Дух, Дух, Дух Святой",
+      "source": "tw-ru-kt-holyspirit",
+      "refs": ["1:8", "1:10", "1:12", "3:29", "12:36", "13:11"]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "честь, почёт, почитать, благородный",
+      "source": "tw-ru-kt-honor",
+      "refs": ["7:6", "7:10", "10:19"]
+    },
+    "kt/houseofgod": {
+      "en": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "headword": "дом Бога, дом Яхве",
+      "source": "tw-ru-kt-houseofgod",
+      "refs": ["2:26"]
+    },
+    "kt/hypocrite": {
+      "en": "hypocrite, hypocrisy",
+      "headword": "лицемерие, лицемер",
+      "source": "tw-ru-kt-hypocrite",
+      "refs": ["7:6", "12:15"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "владеть, наследовать, наследство, наследие, наследник, оставлять в наследство",
+      "source": "tw-ru-kt-inherit",
+      "refs": ["10:17", "12:7"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Израиль, израильтяне, израильский народ",
+      "source": "tw-ru-kt-israel",
+      "refs": ["12:29", "15:32"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "Иисус, Иисус Христос, Христос Иисус",
+      "source": "tw-ru-kt-jesus",
+      "refs": [
+        "1:1",
+        "1:9",
+        "1:14",
+        "1:17",
+        "1:24",
+        "1:25",
+        "2:5",
+        "2:8",
+        "2:15",
+        "2:17",
+        "2:19",
+        "3:7",
+        "5:6",
+        "5:7",
+        "5:15",
+        "5:20",
+        "5:21",
+        "5:27",
+        "5:30",
+        "5:36",
+        "6:4",
+        "6:30",
+        "8:17",
+        "8:27",
+        "9:2",
+        "9:4",
+        "9:5",
+        "9:8",
+        "9:23",
+        "9:25",
+        "9:27",
+        "9:39",
+        "10:5",
+        "10:14",
+        "10:18",
+        "10:21",
+        "10:23",
+        "10:24",
+        "10:27",
+        "10:29",
+        "10:32",
+        "10:38",
+        "10:39",
+        "10:42",
+        "10:47",
+        "10:49",
+        "10:50",
+        "10:51",
+        "10:52",
+        "11:6",
+        "11:7",
+        "11:22",
+        "11:29",
+        "11:33",
+        "12:17",
+        "12:24",
+        "12:29",
+        "12:34",
+        "12:35",
+        "13:2",
+        "13:5",
+        "14:6",
+        "14:18",
+        "14:27",
+        "14:30",
+        "14:48",
+        "14:53",
+        "14:55",
+        "14:60",
+        "14:62",
+        "14:67",
+        "14:72",
+        "15:1",
+        "15:5",
+        "15:15",
+        "15:34",
+        "15:37",
+        "15:43",
+        "16:6"
+      ]
+    },
+    "kt/jew": {
+      "en": "Jew, Jewish",
+      "headword": "еврей, еврейский, иудей, иудейский",
+      "source": "tw-ru-kt-jew",
+      "refs": ["7:3", "15:2", "15:9", "15:12", "15:18", "15:26"]
+    },
+    "kt/kingdomofgod": {
+      "en": "kingdom of God, kingdom of heaven",
+      "headword": "Божье царство, Небесное царство, царство Господа, Царство",
+      "source": "tw-ru-kt-kingdomofgod",
+      "refs": [
+        "1:15",
+        "4:11",
+        "4:26",
+        "4:30",
+        "9:1",
+        "9:47",
+        "10:14",
+        "10:15",
+        "10:23",
+        "10:24",
+        "10:25",
+        "12:34",
+        "14:25",
+        "15:43"
+      ]
+    },
+    "kt/kingofthejews": {
+      "en": "King of the Jews",
+      "headword": "Царь иудеев",
+      "source": "tw-ru-kt-kingofthejews",
+      "refs": ["15:2", "15:9", "15:12", "15:18", "15:26"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "господин, хозяин, Господь, Господин, Хозяин, Правитель",
+      "source": "tw-ru-kt-lord",
+      "refs": [
+        "1:3",
+        "2:28",
+        "5:19",
+        "7:28",
+        "11:3",
+        "11:9",
+        "12:9",
+        "12:11",
+        "12:29",
+        "12:30",
+        "12:36",
+        "12:37",
+        "13:20",
+        "13:35"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "любовь, любить, любящий, полюбить, человеколюбие, братолюбие",
+      "source": "tw-ru-kt-love",
+      "refs": ["10:21", "12:30", "12:31", "12:33"]
+    },
+    "kt/mercy": {
+      "en": "mercy, merciful",
+      "headword": "милость, быть помилованным, милостивый, милосердие, сострадание",
+      "source": "tw-ru-kt-mercy",
+      "refs": ["5:19", "10:47", "10:48"]
+    },
+    "kt/minister": {
+      "en": "to minister, ministry",
+      "headword": "служить, служитель, служение",
+      "source": "tw-ru-kt-minister",
+      "refs": ["1:13", "1:31", "9:35", "10:43", "10:45", "15:41"]
+    },
+    "kt/miracle": {
+      "en": "miracle, wonder, sign",
+      "headword": "чудо, чудеса, знамение, знак",
+      "source": "tw-ru-kt-miracle",
+      "refs": ["6:2", "6:5", "6:14", "9:39"]
+    },
+    "kt/mosthigh": {
+      "en": "Most High",
+      "headword": "Всевышний",
+      "source": "tw-ru-kt-mosthigh",
+      "refs": ["5:7"]
+    },
+    "kt/parable": {
+      "en": "parable",
+      "headword": "притча, притчи",
+      "source": "tw-ru-kt-parable",
+      "refs": [
+        "3:23",
+        "4:2",
+        "4:10",
+        "4:11",
+        "4:13",
+        "4:30",
+        "4:33",
+        "4:34",
+        "7:17",
+        "12:1",
+        "12:12",
+        "13:28"
+      ]
+    },
+    "kt/passover": {
+      "en": "Passover",
+      "headword": "праздник Пасхи, Пасха",
+      "source": "tw-ru-kt-passover",
+      "refs": ["14:1", "14:12", "14:14", "14:16"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "погибать, гибель",
+      "source": "tw-ru-kt-perish",
+      "refs": ["2:22", "4:38", "8:35", "9:22", "9:41"]
+    },
+    "kt/pharisee": {
+      "en": "Pharisee",
+      "headword": "фарисей, фарисеи",
+      "source": "tw-ru-kt-pharisee",
+      "refs": [
+        "2:16",
+        "2:18",
+        "2:24",
+        "3:6",
+        "7:1",
+        "7:3",
+        "7:5",
+        "8:11",
+        "8:15",
+        "10:2",
+        "12:13"
+      ]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "молитва, молиться",
+      "source": "tw-ru-kt-pray",
+      "refs": [
+        "1:35",
+        "6:46",
+        "9:29",
+        "11:17",
+        "11:24",
+        "11:25",
+        "12:40",
+        "13:18",
+        "13:33",
+        "14:32",
+        "14:35",
+        "14:38",
+        "14:39"
+      ]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "священник, священство, священнический",
+      "source": "tw-ru-kt-priest",
+      "refs": ["1:44", "2:26"]
+    },
+    "kt/promise": {
+      "en": "promise, promised",
+      "headword": "обещание, обещать",
+      "source": "tw-ru-kt-promise",
+      "refs": ["14:11"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "пророк, пророчица, пророчество, пророчествовать",
+      "source": "tw-ru-kt-prophet",
+      "refs": ["1:2", "6:4", "6:15", "7:6", "8:28", "11:32", "14:65"]
+    },
+    "kt/rabbi": {
+      "en": "Rabbi",
+      "headword": "Равви",
+      "source": "tw-ru-kt-rabbi",
+      "refs": ["9:5", "11:21", "14:45"]
+    },
+    "kt/ransom": {
+      "en": "ransom, ransomed",
+      "headword": "выкуп, выкупать, выкупленный, искупление",
+      "source": "tw-ru-kt-ransom",
+      "refs": ["10:45"]
+    },
+    "kt/repent": {
+      "en": "repent, repentance",
+      "headword": "каяться, покаяние",
+      "source": "tw-ru-kt-repent",
+      "refs": ["1:4", "1:15", "6:12"]
+    },
+    "kt/resurrection": {
+      "en": "resurrection",
+      "headword": "воскрешать, воскресение, воскресший",
+      "source": "tw-ru-kt-resurrection",
+      "refs": ["12:18", "12:23"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "праведность, праведный, правильный праведник, неправедность, оправдывать, оправдание",
+      "source": "tw-ru-kt-righteous",
+      "refs": ["2:17", "6:20"]
+    },
+    "kt/sabbath": {
+      "en": "Sabbath",
+      "headword": "суббота, субботний",
+      "source": "tw-ru-kt-sabbath",
+      "refs": [
+        "1:21",
+        "2:23",
+        "2:24",
+        "2:27",
+        "2:28",
+        "3:2",
+        "3:4",
+        "6:2",
+        "15:42",
+        "16:1"
+      ]
+    },
+    "kt/sadducee": {
+      "en": "Sadducee",
+      "headword": "саддукей, саддукеи",
+      "source": "tw-ru-kt-sadducee",
+      "refs": ["12:18"]
+    },
+    "kt/satan": {
+      "en": "Satan, devil, evil one",
+      "headword": "сатана, дьявол, Злой",
+      "source": "tw-ru-kt-satan",
+      "refs": ["1:13", "3:23", "3:26", "4:15", "8:33"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "спасать, спасение, избавлять, спасительный, спасший",
+      "source": "tw-ru-kt-save",
+      "refs": [
+        "3:4",
+        "5:28",
+        "5:34",
+        "8:35",
+        "10:26",
+        "10:52",
+        "13:13",
+        "13:20",
+        "15:30",
+        "15:31"
+      ]
+    },
+    "kt/scribe": {
+      "en": "scribe",
+      "headword": "писарь, учитель, книжник",
+      "source": "tw-ru-kt-scribe",
+      "refs": [
+        "1:22",
+        "2:6",
+        "2:16",
+        "3:22",
+        "7:1",
+        "7:5",
+        "8:31",
+        "9:11",
+        "9:14",
+        "10:33",
+        "11:18",
+        "11:27",
+        "12:28",
+        "12:32",
+        "12:35",
+        "12:38",
+        "14:1",
+        "14:43",
+        "14:53",
+        "15:1",
+        "15:31"
+      ]
+    },
+    "kt/sign": {
+      "en": "sign, proof, reminder",
+      "headword": "знамение, знак, знаки, доказательство, напоминание",
+      "source": "tw-ru-kt-sign",
+      "refs": ["8:11", "8:12", "13:4", "13:22", "14:44"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "грех, грешить, согрешать, грехи, грешник",
+      "source": "tw-ru-kt-sin",
+      "refs": [
+        "1:4",
+        "1:5",
+        "2:5",
+        "2:7",
+        "2:9",
+        "2:10",
+        "2:15",
+        "2:16",
+        "2:17",
+        "3:28",
+        "3:29",
+        "8:38",
+        "14:41"
+      ]
+    },
+    "kt/sonofgod": {
+      "en": "Son of God, the Son",
+      "headword": "Божий Сын, Сын Всевышнего Бога, Сын",
+      "source": "tw-ru-kt-sonofgod",
+      "refs": ["1:1", "1:11", "3:11", "5:7", "9:7", "13:32", "14:61", "15:39"]
+    },
+    "kt/sonofman": {
+      "en": "Son of Man, son of man",
+      "headword": "Сын Человеческий, сын человека",
+      "source": "tw-ru-kt-sonofman",
+      "refs": [
+        "2:10",
+        "2:28",
+        "8:31",
+        "8:38",
+        "9:9",
+        "9:12",
+        "9:31",
+        "10:33",
+        "10:45",
+        "13:26",
+        "14:21",
+        "14:41",
+        "14:62"
+      ]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "душа",
+      "source": "tw-ru-kt-soul",
+      "refs": ["8:35", "8:36", "8:37", "9:45", "12:30", "14:34"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "дух, Дух",
+      "source": "tw-ru-kt-spirit",
+      "refs": ["2:8", "6:49", "8:12", "14:38"]
+    },
+    "kt/synagogue": {
+      "en": "synagogue",
+      "headword": "синагога",
+      "source": "tw-ru-kt-synagogue",
+      "refs": ["1:21", "1:23", "1:29", "1:39", "3:1", "6:2", "12:39", "13:9"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "Храм, храм, дом",
+      "source": "tw-ru-kt-temple",
+      "refs": [
+        "11:11",
+        "11:15",
+        "11:16",
+        "11:27",
+        "12:35",
+        "13:1",
+        "13:3",
+        "14:49",
+        "14:58",
+        "15:29",
+        "15:38"
+      ]
+    },
+    "kt/tempt": {
+      "en": "tempt, temptation",
+      "headword": "искушать",
+      "source": "tw-ru-kt-tempt",
+      "refs": ["1:13", "14:38"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "испытывать, проверять, проверка",
+      "source": "tw-ru-kt-test",
+      "refs": ["8:11", "10:2", "12:15"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "свидетель, свидетельствовать, признавать, призывать",
+      "source": "tw-ru-kt-testimony",
+      "refs": [
+        "1:44",
+        "6:11",
+        "13:9",
+        "14:55",
+        "14:56",
+        "14:59",
+        "14:60",
+        "14:63"
+      ]
+    },
+    "kt/thetwelve": {
+      "en": "the twelve, the eleven",
+      "headword": "двенадцать, одиннадцать",
+      "source": "tw-ru-kt-thetwelve",
+      "refs": [
+        "3:14",
+        "3:16",
+        "4:10",
+        "6:7",
+        "9:35",
+        "10:32",
+        "11:11",
+        "14:10",
+        "14:17",
+        "14:20",
+        "14:43"
+      ]
+    },
+    "kt/trespass": {
+      "en": "trespass",
+      "headword": "нарушать, проступок",
+      "source": "tw-ru-kt-trespass",
+      "refs": ["11:25"]
+    },
+    "kt/unleavenedbread": {
+      "en": "unleavened bread",
+      "headword": "пресные лепёшки",
+      "source": "tw-ru-kt-unleavenedbread",
+      "refs": ["14:1", "14:12"]
+    },
+    "kt/willofgod": {
+      "en": "will of God",
+      "headword": "воля Божья, воля Бога, Его воля",
+      "source": "tw-ru-kt-willofgod",
+      "refs": ["3:35"]
+    },
+    "kt/wise": {
+      "en": "wise, wisdom",
+      "headword": "мудрый, мудрость",
+      "source": "tw-ru-kt-wise",
+      "refs": ["6:2"]
+    },
+    "kt/woe": {
+      "en": "woe",
+      "headword": "горе",
+      "source": "tw-ru-kt-woe",
+      "refs": ["13:17", "14:21"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "Божье слово, слово Яхве, Слово, Писание, Слово Божье, Слово истины, Священные Писания",
+      "source": "tw-ru-kt-wordofgod",
+      "refs": [
+        "4:15",
+        "4:16",
+        "4:17",
+        "4:18",
+        "4:19",
+        "4:20",
+        "4:33",
+        "7:13",
+        "12:10",
+        "12:24",
+        "13:31",
+        "14:49"
+      ]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "мир, мирской, негодный, по-мирски",
+      "source": "tw-ru-kt-world",
+      "refs": ["8:36", "14:9"]
+    },
+    "kt/worship": {
+      "en": "prostrate, bow down, worship",
+      "headword": "падать ниц, поклоняться, склоняться",
+      "source": "tw-ru-kt-worship",
+      "refs": ["7:7"]
+    },
+    "names/abiathar": {
+      "en": "Abiathar",
+      "headword": "Авиафар",
+      "source": "tw-ru-names-abiathar",
+      "refs": ["2:26"]
+    },
+    "names/abraham": {
+      "en": "Abraham, Abram",
+      "headword": "Авраам, Аврам",
+      "source": "tw-ru-names-abraham",
+      "refs": ["12:26"]
+    },
+    "names/andrew": {
+      "en": "Andrew",
+      "headword": "Андрей",
+      "source": "tw-ru-names-andrew",
+      "refs": ["1:16", "1:29", "3:18", "13:3"]
+    },
+    "names/barabbas": {
+      "en": "Barabbas",
+      "headword": "Варрава",
+      "source": "tw-ru-names-barabbas",
+      "refs": ["15:7", "15:11", "15:15"]
+    },
+    "names/bartholomew": {
+      "en": "Bartholomew",
+      "headword": "Варфоломей",
+      "source": "tw-ru-names-bartholomew",
+      "refs": ["3:18"]
+    },
+    "names/beelzebul": {
+      "en": "Beelzebul",
+      "headword": "Веельзевул",
+      "source": "tw-ru-names-beelzebul",
+      "refs": ["3:22"]
+    },
+    "names/bethany": {
+      "en": "Bethany",
+      "headword": "Вифания",
+      "source": "tw-ru-names-bethany",
+      "refs": ["11:1", "11:11", "11:12", "14:3"]
+    },
+    "names/caesar": {
+      "en": "Caesar",
+      "headword": "Кесарь",
+      "source": "tw-ru-names-caesar",
+      "refs": ["12:14", "12:16", "12:17"]
+    },
+    "names/caesarea": {
+      "en": "Caesarea, Caesarea Philippi",
+      "headword": "Кесария, Кесария Филиппова",
+      "source": "tw-ru-names-caesarea",
+      "refs": ["8:27"]
+    },
+    "names/capernaum": {
+      "en": "Capernaum",
+      "headword": "Капернаум",
+      "source": "tw-ru-names-capernaum",
+      "refs": ["1:21", "2:1", "9:33"]
+    },
+    "names/cyrene": {
+      "en": "Cyrene",
+      "headword": "Кирена",
+      "source": "tw-ru-names-cyrene",
+      "refs": ["15:21"]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "Давид",
+      "source": "tw-ru-names-david",
+      "refs": ["2:25", "10:47", "10:48", "11:10", "12:35", "12:36", "12:37"]
+    },
+    "names/edom": {
+      "en": "Edom, Edomite, Idumea",
+      "headword": "Едом",
+      "source": "tw-ru-names-edom",
+      "refs": ["3:8"]
+    },
+    "names/elijah": {
+      "en": "Elijah",
+      "headword": "Илия",
+      "source": "tw-ru-names-elijah",
+      "refs": [
+        "6:15",
+        "8:28",
+        "9:4",
+        "9:5",
+        "9:11",
+        "9:12",
+        "9:13",
+        "15:35",
+        "15:36"
+      ]
+    },
+    "names/galilee": {
+      "en": "Galilee, Galilean",
+      "headword": "Галилея",
+      "source": "tw-ru-names-galilee",
+      "refs": [
+        "1:9",
+        "1:14",
+        "1:16",
+        "1:28",
+        "1:39",
+        "3:7",
+        "6:21",
+        "7:31",
+        "9:30",
+        "14:28",
+        "14:70",
+        "15:41",
+        "16:7"
+      ]
+    },
+    "names/gethsemane": {
+      "en": "Gethsemane",
+      "headword": "Гефсимания",
+      "source": "tw-ru-names-gethsemane",
+      "refs": ["14:32"]
+    },
+    "names/golgotha": {
+      "en": "Golgotha",
+      "headword": "Голгофа",
+      "source": "tw-ru-names-golgotha",
+      "refs": ["15:22"]
+    },
+    "names/greek": {
+      "en": "Greek, Grecian, Hellenist",
+      "headword": "Греческий язык, древнегреческий, эллинистический",
+      "source": "tw-ru-names-greek",
+      "refs": ["7:26"]
+    },
+    "names/herodantipas": {
+      "en": "Herod, Herod Antipas",
+      "headword": "Ирод Антипа",
+      "source": "tw-ru-names-herodantipas",
+      "refs": ["6:14", "6:16", "6:17", "6:18", "6:20", "6:21", "6:22", "8:15"]
+    },
+    "names/herodias": {
+      "en": "Herodias",
+      "headword": "Иродиада",
+      "source": "tw-ru-names-herodias",
+      "refs": ["6:17", "6:19", "6:22"]
+    },
+    "names/isaac": {
+      "en": "Isaac",
+      "headword": "Исаак",
+      "source": "tw-ru-names-isaac",
+      "refs": ["12:26"]
+    },
+    "names/isaiah": {
+      "en": "Isaiah",
+      "headword": "Исаия",
+      "source": "tw-ru-names-isaiah",
+      "refs": ["1:2", "7:6"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "Иаков, Израиль",
+      "source": "tw-ru-names-jacob",
+      "refs": ["12:26"]
+    },
+    "names/jamessonofalphaeus": {
+      "en": "James (son of Alphaeus)",
+      "headword": "Иаков (сын Алфея)",
+      "source": "tw-ru-names-jamessonofalphaeus",
+      "refs": ["3:18"]
+    },
+    "names/jamessonofzebedee": {
+      "en": "James (son of Zebedee)",
+      "headword": "Иаков (сын Зеведея)",
+      "source": "tw-ru-names-jamessonofzebedee",
+      "refs": [
+        "1:19",
+        "1:29",
+        "3:17",
+        "5:37",
+        "9:2",
+        "10:35",
+        "10:41",
+        "13:3",
+        "14:33"
+      ]
+    },
+    "names/jericho": {
+      "en": "Jericho",
+      "headword": "Иерихон",
+      "source": "tw-ru-names-jericho",
+      "refs": ["10:46"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Иерусалим",
+      "source": "tw-ru-names-jerusalem",
+      "refs": [
+        "1:5",
+        "3:8",
+        "3:22",
+        "7:1",
+        "10:32",
+        "10:33",
+        "11:1",
+        "11:11",
+        "11:15",
+        "11:27",
+        "15:41"
+      ]
+    },
+    "names/johntheapostle": {
+      "en": "John (the apostle)",
+      "headword": "Иоанн (Апостол)",
+      "source": "tw-ru-names-johntheapostle",
+      "refs": [
+        "1:19",
+        "1:29",
+        "3:17",
+        "5:37",
+        "9:2",
+        "9:38",
+        "10:35",
+        "10:41",
+        "13:3",
+        "14:33"
+      ]
+    },
+    "names/johnthebaptist": {
+      "en": "John (the Baptist)",
+      "headword": "Иоанн (Креститель)",
+      "source": "tw-ru-names-johnthebaptist",
+      "refs": [
+        "1:4",
+        "1:6",
+        "1:9",
+        "1:14",
+        "2:18",
+        "6:14",
+        "6:16",
+        "6:17",
+        "6:18",
+        "6:20",
+        "6:24",
+        "6:25",
+        "8:28",
+        "11:30",
+        "11:32"
+      ]
+    },
+    "names/jordanriver": {
+      "en": "Jordan River, Jordan",
+      "headword": "река Иордан",
+      "source": "tw-ru-names-jordanriver",
+      "refs": ["1:5", "1:9", "3:8", "10:1"]
+    },
+    "names/judasiscariot": {
+      "en": "Judas Iscariot",
+      "headword": "Иуда Искариот",
+      "source": "tw-ru-names-judasiscariot",
+      "refs": ["3:19", "14:10", "14:43"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "Иудея, земля Иуды",
+      "source": "tw-ru-names-judea",
+      "refs": ["1:5", "3:7", "10:1", "13:14"]
+    },
+    "names/mary": {
+      "en": "Mary (the mother of Jesus)",
+      "headword": "Мария, мать Иисуса",
+      "source": "tw-ru-names-mary",
+      "refs": ["6:3"]
+    },
+    "names/marymagdalene": {
+      "en": "Mary Magdalene",
+      "headword": "Мария Магдалина",
+      "source": "tw-ru-names-marymagdalene",
+      "refs": ["15:40", "15:47", "16:1"]
+    },
+    "names/matthew": {
+      "en": "Matthew, Levi",
+      "headword": "Матфей, Левий",
+      "source": "tw-ru-names-matthew",
+      "refs": ["2:14", "3:18"]
+    },
+    "names/moses": {
+      "en": "Moses",
+      "headword": "Моисей",
+      "source": "tw-ru-names-moses",
+      "refs": ["1:44", "7:10", "9:4", "9:5", "10:3", "10:4", "12:19", "12:26"]
+    },
+    "names/mountofolives": {
+      "en": "Mount of Olives",
+      "headword": "Елеонская гора",
+      "source": "tw-ru-names-mountofolives",
+      "refs": ["11:1", "13:3", "14:26"]
+    },
+    "names/nazareth": {
+      "en": "Nazareth, Nazarene",
+      "headword": "Назарет",
+      "source": "tw-ru-names-nazareth",
+      "refs": ["1:9", "1:24", "10:47", "14:67", "16:6"]
+    },
+    "names/peter": {
+      "en": "Peter, Simon Peter, Cephas",
+      "headword": "Пётр, Симон Пётр, Кифа",
+      "source": "tw-ru-names-peter",
+      "refs": [
+        "1:16",
+        "1:29",
+        "1:30",
+        "1:36",
+        "3:16",
+        "5:37",
+        "8:29",
+        "8:32",
+        "8:33",
+        "9:2",
+        "9:5",
+        "10:28",
+        "11:21",
+        "13:3",
+        "14:29",
+        "14:33",
+        "14:37",
+        "14:54",
+        "14:66",
+        "14:67",
+        "14:70",
+        "14:72",
+        "16:7"
+      ]
+    },
+    "names/philiptheapostle": {
+      "en": "Philip (the apostle)",
+      "headword": "Филипп (апостол)",
+      "source": "tw-ru-names-philiptheapostle",
+      "refs": ["3:18"]
+    },
+    "names/pilate": {
+      "en": "Pilate",
+      "headword": "Понтий Пилат",
+      "source": "tw-ru-names-pilate",
+      "refs": [
+        "15:1",
+        "15:2",
+        "15:4",
+        "15:5",
+        "15:9",
+        "15:12",
+        "15:14",
+        "15:15",
+        "15:43",
+        "15:44"
+      ]
+    },
+    "names/seaofgalilee": {
+      "en": "Sea of Galilee, Sea of Kinnereth, lake of Gennesaret, Sea of Tiberias",
+      "headword": "Галилейское море, Генисаретское озеро",
+      "source": "tw-ru-names-seaofgalilee",
+      "refs": [
+        "1:16",
+        "2:13",
+        "3:7",
+        "4:1",
+        "4:39",
+        "4:41",
+        "5:1",
+        "5:13",
+        "5:21",
+        "6:47",
+        "6:48",
+        "6:49",
+        "7:31"
+      ]
+    },
+    "names/sidon": {
+      "en": "Sidon, Sidonians",
+      "headword": "сидоняне",
+      "source": "tw-ru-names-sidon",
+      "refs": ["3:8", "7:24", "7:31"]
+    },
+    "names/simonthezealot": {
+      "en": "Simon the Zealot",
+      "headword": "Симон Зилот",
+      "source": "tw-ru-names-simonthezealot",
+      "refs": ["3:18"]
+    },
+    "names/thomas": {
+      "en": "Thomas",
+      "headword": "Фома",
+      "source": "tw-ru-names-thomas",
+      "refs": ["3:18"]
+    },
+    "names/tyre": {
+      "en": "Tyre, Tyrians",
+      "headword": "тиряне",
+      "source": "tw-ru-names-tyre",
+      "refs": ["3:8", "7:24", "7:31"]
+    },
+    "names/zebedee": {
+      "en": "Zebedee",
+      "headword": "Зеведей",
+      "source": "tw-ru-names-zebedee",
+      "refs": ["1:19", "1:20", "3:17", "10:35"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "враг, противник, вражда",
+      "source": "tw-ru-other-adversary",
+      "refs": ["12:36"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "век",
+      "source": "tw-ru-other-age",
+      "refs": ["4:19", "10:30"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "собираться, собрание, общество, торжественное собрание, синагога",
+      "source": "tw-ru-other-assembly",
+      "refs": [
+        "1:33",
+        "2:2",
+        "3:20",
+        "4:1",
+        "5:21",
+        "6:30",
+        "7:1",
+        "13:27",
+        "14:53"
+      ]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "носить, нести",
+      "source": "tw-ru-other-bear",
+      "refs": ["9:19", "14:13"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "зверь",
+      "source": "tw-ru-other-beast",
+      "refs": ["1:13"]
+    },
+    "other/beg": {
+      "en": "beg, begging, begged",
+      "headword": "умолять",
+      "source": "tw-ru-other-beg",
+      "refs": [
+        "1:40",
+        "5:10",
+        "5:12",
+        "5:17",
+        "5:18",
+        "5:23",
+        "6:56",
+        "7:32",
+        "8:22",
+        "10:46"
+      ]
+    },
+    "other/betray": {
+      "en": "betray, betrayer",
+      "headword": "предавать, предательство, предатель",
+      "source": "tw-ru-other-betray",
+      "refs": [
+        "3:19",
+        "14:10",
+        "14:11",
+        "14:18",
+        "14:21",
+        "14:41",
+        "14:42",
+        "14:44"
+      ]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "день",
+      "source": "tw-ru-other-biblicaltimeday",
+      "refs": [
+        "1:9",
+        "1:13",
+        "2:1",
+        "2:20",
+        "4:27",
+        "4:35",
+        "5:5",
+        "6:21",
+        "8:1",
+        "8:2",
+        "8:31",
+        "9:2",
+        "9:31",
+        "10:34",
+        "13:17",
+        "13:19",
+        "13:20",
+        "13:24",
+        "13:32",
+        "14:1",
+        "14:12",
+        "14:25",
+        "14:49",
+        "14:58",
+        "15:29"
+      ]
+    },
+    "other/biblicaltimehour": {
+      "en": "hour, moment",
+      "headword": "час",
+      "source": "tw-ru-other-biblicaltimehour",
+      "refs": [
+        "6:35",
+        "11:11",
+        "13:11",
+        "13:32",
+        "14:35",
+        "14:37",
+        "14:41",
+        "15:25",
+        "15:33",
+        "15:34"
+      ]
+    },
+    "other/biblicaltimewatch": {
+      "en": "watch (biblical time)",
+      "headword": "стража (отрезок времени, существовавший в библейские времена)",
+      "source": "tw-ru-other-biblicaltimewatch",
+      "refs": ["6:48"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "год, тысяча лет",
+      "source": "tw-ru-other-biblicaltimeyear",
+      "refs": ["5:25", "5:42"]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "кланяться, поклониться, склонить колени, поклоняться",
+      "source": "tw-ru-other-bow",
+      "refs": ["3:11", "5:6", "5:22", "5:33", "7:25", "14:35", "15:19"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "хлеб",
+      "source": "tw-ru-other-bread",
+      "refs": [
+        "2:26",
+        "3:20",
+        "6:8",
+        "6:37",
+        "6:38",
+        "6:41",
+        "6:44",
+        "6:52",
+        "7:2",
+        "7:5",
+        "7:27",
+        "8:4",
+        "8:5",
+        "8:6",
+        "8:14",
+        "8:16",
+        "8:17",
+        "8:19",
+        "14:22"
+      ]
+    },
+    "other/bridegroom": {
+      "en": "bridegroom, groom",
+      "headword": "жених",
+      "source": "tw-ru-other-bridegroom",
+      "refs": ["2:19", "2:20"]
+    },
+    "other/burntoffering": {
+      "en": "burnt offering, offering by fire",
+      "headword": "всесожжение",
+      "source": "tw-ru-other-burntoffering",
+      "refs": ["12:33"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "хоронить, погребать, погребение",
+      "source": "tw-ru-other-bury",
+      "refs": ["14:8"]
+    },
+    "other/camel": {
+      "en": "camel",
+      "headword": "верблюд",
+      "source": "tw-ru-other-camel",
+      "refs": ["1:6", "10:25"]
+    },
+    "other/castout": {
+      "en": "cast out, driving out, throw out",
+      "headword": "выгонять",
+      "source": "tw-ru-other-castout",
+      "refs": [
+        "1:34",
+        "1:39",
+        "3:15",
+        "3:22",
+        "3:23",
+        "5:40",
+        "6:13",
+        "7:26",
+        "9:18",
+        "9:28",
+        "9:38",
+        "11:15",
+        "12:8"
+      ]
+    },
+    "other/commander": {
+      "en": "commander",
+      "headword": "командующий, начальник",
+      "source": "tw-ru-other-commander",
+      "refs": ["6:21"]
+    },
+    "other/council": {
+      "en": "council",
+      "headword": "совет",
+      "source": "tw-ru-other-council",
+      "refs": ["13:9", "14:55", "15:1", "15:43"]
+    },
+    "other/counselor": {
+      "en": "advice, advise, advisor, counsel, counselor, counsels",
+      "headword": "совет, советовать, советник, решение",
+      "source": "tw-ru-other-counselor",
+      "refs": ["3:6"]
+    },
+    "other/courage": {
+      "en": "courage, courageous, valor",
+      "headword": "наставлять",
+      "source": "tw-ru-other-courage",
+      "refs": ["6:50", "10:49"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "творить, творение, создание",
+      "source": "tw-ru-other-creation",
+      "refs": ["10:6", "13:19"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "корона, венец, венок",
+      "source": "tw-ru-other-crown",
+      "refs": ["15:17"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "кричать, крик, взывать, вопить",
+      "source": "tw-ru-other-cry",
+      "refs": [
+        "1:23",
+        "1:26",
+        "3:11",
+        "5:5",
+        "5:7",
+        "6:49",
+        "9:24",
+        "9:26",
+        "10:47",
+        "10:48",
+        "11:9",
+        "15:13",
+        "15:14"
+      ]
+    },
+    "other/curtain": {
+      "en": "curtain",
+      "headword": "завеса",
+      "source": "tw-ru-other-curtain",
+      "refs": ["15:38"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "обманывать, обманщик, заблуждение",
+      "source": "tw-ru-other-deceive",
+      "refs": ["4:19", "7:22", "13:22"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "осквернять, осквернённый, скверный, обесчестить",
+      "source": "tw-ru-other-defile",
+      "refs": ["7:15", "7:18", "7:20", "7:23"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "восторг, восхищение, удовольствие, наслаждаться",
+      "source": "tw-ru-other-delight",
+      "refs": ["1:11"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "пустыня, пустошь",
+      "source": "tw-ru-other-desert",
+      "refs": [
+        "1:3",
+        "1:4",
+        "1:12",
+        "1:13",
+        "1:35",
+        "1:45",
+        "6:31",
+        "6:32",
+        "6:35",
+        "8:4"
+      ]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "опустошение, опустошённый",
+      "source": "tw-ru-other-desolate",
+      "refs": ["13:14"]
+    },
+    "other/devour": {
+      "en": "devour",
+      "headword": "пожирать, поедать",
+      "source": "tw-ru-other-devour",
+      "refs": ["4:4", "12:40"]
+    },
+    "other/doctrine": {
+      "en": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "headword": "учение, учительство",
+      "source": "tw-ru-other-doctrine",
+      "refs": ["7:7"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "голубь, горлица",
+      "source": "tw-ru-other-dove",
+      "refs": ["1:10", "11:15"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "земля, прах, земной",
+      "source": "tw-ru-other-earth",
+      "refs": ["2:10", "4:28", "4:31", "9:3", "13:27", "13:31"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "старейшина, пожилой, старец, старица, пресвитер",
+      "source": "tw-ru-other-elder",
+      "refs": ["7:3", "7:5", "8:31", "11:27", "14:43", "14:53", "15:1"]
+    },
+    "other/endure": {
+      "en": "endure, endurance",
+      "headword": "терпеть, терпение, стойкость, переносить страдание, выносить, переносить, выдерживать",
+      "source": "tw-ru-other-endure",
+      "refs": ["13:13"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "зависть, завидовать",
+      "source": "tw-ru-other-envy",
+      "refs": ["7:22", "15:10"]
+    },
+    "other/falseprophet": {
+      "en": "false prophet",
+      "headword": "лжепророк, ложный пророк",
+      "source": "tw-ru-other-falseprophet",
+      "refs": ["13:22"]
+    },
+    "other/falsewitness": {
+      "en": "corrupt witness, false report, false testimony, false witness",
+      "headword": "лжесвидетель, лжесвидетельство, лжесвидетельствовать",
+      "source": "tw-ru-other-falsewitness",
+      "refs": ["10:19", "14:56", "14:57"]
+    },
+    "other/famine": {
+      "en": "famine",
+      "headword": "голод",
+      "source": "tw-ru-other-famine",
+      "refs": ["13:8"]
+    },
+    "other/fast": {
+      "en": "fast, fasting",
+      "headword": "пост, поститься",
+      "source": "tw-ru-other-fast",
+      "refs": ["2:18", "2:19", "2:20", "9:29"]
+    },
+    "other/feast": {
+      "en": "feast, feasting",
+      "headword": "пир, пировать, праздник, пиршествующие",
+      "source": "tw-ru-other-feast",
+      "refs": ["12:39"]
+    },
+    "other/festival": {
+      "en": "festival, feast, celebrate",
+      "headword": "праздник",
+      "source": "tw-ru-other-festival",
+      "refs": ["14:2", "15:6"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "смоква, инжир",
+      "source": "tw-ru-other-fig",
+      "refs": ["11:13", "11:20", "11:21", "13:28"]
+    },
+    "other/fisherman": {
+      "en": "fisherman, fishermen, fisher",
+      "headword": "рыбак, рыболов",
+      "source": "tw-ru-other-fisherman",
+      "refs": ["1:16", "1:17"]
+    },
+    "other/fornication": {
+      "en": "sexual immorality, immorality, immoral, fornication",
+      "headword": "развратник, развратничать",
+      "source": "tw-ru-other-fornication",
+      "refs": ["7:21"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "оставлять, лишать",
+      "source": "tw-ru-other-forsaken",
+      "refs": ["15:34"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "плод, бесплодный",
+      "source": "tw-ru-other-fruit",
+      "refs": ["4:7", "4:8", "4:19", "4:20", "4:29", "11:14", "12:2", "14:25"]
+    },
+    "other/governor": {
+      "en": "govern, governor, proconsul, Tirshatha",
+      "headword": "правитель, начальник, начальник областей, начальствующий, тиршафа, править",
+      "source": "tw-ru-other-governor",
+      "refs": ["13:9"]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "колос, зерно",
+      "source": "tw-ru-other-grain",
+      "refs": ["2:23", "4:28"]
+    },
+    "other/hard": {
+      "en": "hard, harder",
+      "headword": "жестокий, ожесточение",
+      "source": "tw-ru-other-hard",
+      "refs": ["3:5", "6:52", "8:17", "10:5", "10:24"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "жатва, жнец, жать",
+      "source": "tw-ru-other-harvest",
+      "refs": ["4:29"]
+    },
+    "other/heir": {
+      "en": "heir",
+      "headword": "наследник",
+      "source": "tw-ru-other-heir",
+      "refs": ["12:7"]
+    },
+    "other/honey": {
+      "en": "honey, honeycomb",
+      "headword": "мёд, медовые соты",
+      "source": "tw-ru-other-honey",
+      "refs": ["1:6"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "дом",
+      "source": "tw-ru-other-house",
+      "refs": [
+        "1:29",
+        "2:1",
+        "2:11",
+        "2:15",
+        "2:26",
+        "3:20",
+        "3:25",
+        "3:27",
+        "5:19",
+        "5:38",
+        "6:10",
+        "7:17",
+        "7:24",
+        "7:30",
+        "8:3",
+        "8:26",
+        "9:28",
+        "9:33",
+        "10:10",
+        "10:29",
+        "10:30",
+        "11:17",
+        "12:40",
+        "13:15",
+        "13:34",
+        "13:35",
+        "14:3"
+      ]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "семья, семейство, дом, домашние",
+      "source": "tw-ru-other-household",
+      "refs": ["6:4"]
+    },
+    "other/image": {
+      "en": "image, carved image, cast metal image, figure, carved figure, statue",
+      "headword": "образ, резное изображение, литое изображение",
+      "source": "tw-ru-other-image",
+      "refs": ["12:16"]
+    },
+    "other/interpret": {
+      "en": "interpret, interpretation, interpreter",
+      "headword": "смысл",
+      "source": "tw-ru-other-interpret",
+      "refs": ["5:41", "15:22", "15:34"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "радость, веселье, радоваться, обрадовать",
+      "source": "tw-ru-other-joy",
+      "refs": ["4:16", "14:11"]
+    },
+    "other/kin": {
+      "en": "kin, kinfolk, kindred, kinsman",
+      "headword": "родство, родственник",
+      "source": "tw-ru-other-kin",
+      "refs": ["6:4"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "царь, царствующие, царский",
+      "source": "tw-ru-other-king",
+      "refs": [
+        "6:14",
+        "6:22",
+        "6:25",
+        "6:26",
+        "6:27",
+        "13:9",
+        "15:2",
+        "15:9",
+        "15:12",
+        "15:18",
+        "15:26",
+        "15:32"
+      ]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "царство",
+      "source": "tw-ru-other-kingdom",
+      "refs": ["3:24", "6:23", "10:15", "10:25", "11:10", "13:8"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "поцелуй, целовать, целование",
+      "source": "tw-ru-other-kiss",
+      "refs": ["14:44", "14:45"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "знать, узнать, знание, познание, понимать, известно, знающий, разуметь",
+      "source": "tw-ru-other-know",
+      "refs": [
+        "1:24",
+        "1:34",
+        "2:8",
+        "2:10",
+        "4:27",
+        "5:29",
+        "5:30",
+        "5:33",
+        "5:43",
+        "6:20",
+        "6:33",
+        "6:38",
+        "6:54",
+        "7:24",
+        "8:17",
+        "9:6",
+        "9:30",
+        "10:19",
+        "10:38",
+        "10:42",
+        "11:33",
+        "12:12",
+        "12:14",
+        "12:15",
+        "12:24",
+        "13:28",
+        "13:29",
+        "13:32",
+        "13:33",
+        "13:35",
+        "14:40",
+        "14:68",
+        "14:71",
+        "15:10",
+        "15:45"
+      ]
+    },
+    "other/lamp": {
+      "en": "lamp",
+      "headword": "лампада, светильник",
+      "source": "tw-ru-other-lamp",
+      "refs": ["4:21"]
+    },
+    "other/lampstand": {
+      "en": "lampstand",
+      "headword": "подсвечник",
+      "source": "tw-ru-other-lampstand",
+      "refs": ["4:21"]
+    },
+    "other/lawful": {
+      "en": "lawful, unlawful, not lawful, lawless, lawlessness",
+      "headword": "законный, беззаконие, законно, беззаконник, беззаконный",
+      "source": "tw-ru-other-lawful",
+      "refs": ["2:24", "2:26", "3:4", "6:18", "10:2", "12:14"]
+    },
+    "other/leprosy": {
+      "en": "skin disease, leper, leprosy",
+      "headword": "проказа, прокажённый",
+      "source": "tw-ru-other-leprosy",
+      "refs": ["1:40", "1:42", "14:3"]
+    },
+    "other/locust": {
+      "en": "locust",
+      "headword": "саранча",
+      "source": "tw-ru-other-locust",
+      "refs": ["1:6"]
+    },
+    "other/loins": {
+      "en": "loins",
+      "headword": "пояс",
+      "source": "tw-ru-other-loins",
+      "refs": ["1:6"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "жребий, бросать жребий",
+      "source": "tw-ru-other-lots",
+      "refs": ["15:24"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "страсть, вожделение, желание, желать",
+      "source": "tw-ru-other-lust",
+      "refs": ["4:19"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "посланник, посол",
+      "source": "tw-ru-other-messenger",
+      "refs": ["1:2"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "могущественный, могущество, сильный, сила",
+      "source": "tw-ru-other-mighty",
+      "refs": ["1:7"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "ум, разум",
+      "source": "tw-ru-other-mind",
+      "refs": ["3:21", "5:15", "8:33", "12:30"]
+    },
+    "other/mock": {
+      "en": "mock, mocker, mockery, ridicule, scoff at, laughingstock",
+      "headword": "насмехаться, насмешники, язвительность",
+      "source": "tw-ru-other-mock",
+      "refs": ["10:34", "15:20", "15:31"]
+    },
+    "other/mourn": {
+      "en": "mourn, mourner, weeping",
+      "headword": "скорбь, скорбеть, печалиться",
+      "source": "tw-ru-other-mourn",
+      "refs": ["5:38", "5:39", "14:72"]
+    },
+    "other/mystery": {
+      "en": "mystery, hidden truth",
+      "headword": "тайна",
+      "source": "tw-ru-other-mystery",
+      "refs": ["4:11"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "народ",
+      "source": "tw-ru-other-nation",
+      "refs": ["11:17", "13:8", "13:10"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "ближний",
+      "source": "tw-ru-other-neighbor",
+      "refs": ["12:31", "12:33"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "клятва, клясться, давать клятву",
+      "source": "tw-ru-other-oath",
+      "refs": ["6:23", "6:26", "14:71"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "масло, оливковое масло",
+      "source": "tw-ru-other-oil",
+      "refs": ["6:13"]
+    },
+    "other/olive": {
+      "en": "olive",
+      "headword": "маслина, масличный сад, оливки",
+      "source": "tw-ru-other-olive",
+      "refs": ["11:1", "13:3", "14:26"]
+    },
+    "other/palace": {
+      "en": "palace, house",
+      "headword": "дворец, дом",
+      "source": "tw-ru-other-palace",
+      "refs": ["15:16"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "мир, мирный, тихий, миролюбивый",
+      "source": "tw-ru-other-peace",
+      "refs": ["5:34", "9:50"]
+    },
+    "other/persecute": {
+      "en": "persecute",
+      "headword": "гнать, гонитель, гонения, быть гонимым",
+      "source": "tw-ru-other-persecute",
+      "refs": ["4:17", "10:30"]
+    },
+    "other/pig": {
+      "en": "pig, pork, swine",
+      "headword": "свинья, боров, кабан, хряк, свинина",
+      "source": "tw-ru-other-pig",
+      "refs": ["5:11", "5:12", "5:13", "5:16"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "владеть, владение, собственность",
+      "source": "tw-ru-other-possess",
+      "refs": ["3:27", "10:22"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "проповедовать",
+      "source": "tw-ru-other-preach",
+      "refs": [
+        "1:4",
+        "1:7",
+        "1:14",
+        "1:38",
+        "1:39",
+        "1:45",
+        "3:14",
+        "5:20",
+        "6:12",
+        "7:36",
+        "13:10",
+        "14:9"
+      ]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "польза, нажива, выгода, полезный, воспользоваться",
+      "source": "tw-ru-other-profit",
+      "refs": ["7:11", "8:36"]
+    },
+    "other/proud": {
+      "en": "proud, pride, prideful, boast, boastful, boasting",
+      "headword": "гордый, гордиться, возгордиться, возноситься умом, поступать надменно, надменность",
+      "source": "tw-ru-other-proud",
+      "refs": ["7:22"]
+    },
+    "other/purple": {
+      "en": "purple",
+      "headword": "фиолетовый",
+      "source": "tw-ru-other-purple",
+      "refs": ["15:17", "15:20"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "подавлять, гасить, погашать, тушить, утолять",
+      "source": "tw-ru-other-quench",
+      "refs": ["9:48"]
+    },
+    "other/rebel": {
+      "en": "rebel, rebellion, rebellious, rebelliousness",
+      "headword": "восставать, непокорность, мятеж, восстание, непокорный, мятежный",
+      "source": "tw-ru-other-rebel",
+      "refs": ["15:7"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "обличать, отчитывать, разоблачать, укорять, обличение",
+      "source": "tw-ru-other-rebuke",
+      "refs": ["1:25", "3:12", "4:39", "8:32", "8:33", "9:25", "10:13", "10:48"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "принимать, получать, обретать",
+      "source": "tw-ru-other-receive",
+      "refs": [
+        "4:16",
+        "4:20",
+        "6:11",
+        "7:4",
+        "9:37",
+        "10:15",
+        "10:30",
+        "11:24",
+        "12:2",
+        "12:40"
+      ]
+    },
+    "other/reed": {
+      "en": "reed",
+      "headword": "тростник, камыш",
+      "source": "tw-ru-other-reed",
+      "refs": ["15:19", "15:36"]
+    },
+    "other/reject": {
+      "en": "reject, rejected, rejection",
+      "headword": "избегать, отвергать",
+      "source": "tw-ru-other-reject",
+      "refs": ["7:9", "8:31", "12:10"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "сообщать, сообщение(устар. — молва), отчёт, давать отчёт, отчитываться",
+      "source": "tw-ru-other-report",
+      "refs": ["5:14", "5:16", "6:30"]
+    },
+    "other/reward": {
+      "en": "reward, prize, deserve",
+      "headword": "награда",
+      "source": "tw-ru-other-reward",
+      "refs": ["9:41"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "мантия",
+      "source": "tw-ru-other-robe",
+      "refs": ["12:38", "16:5"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "управляющий, начальства, правитель, глава, начальствующий, править, руководить, господствовать",
+      "source": "tw-ru-other-ruler",
+      "refs": ["3:22", "10:42"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "жертва, жертвоприношение, приносить жертву",
+      "source": "tw-ru-other-sacrifice",
+      "refs": ["12:33", "14:12"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "сандалия",
+      "source": "tw-ru-other-sandal",
+      "refs": ["1:7", "6:9"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "семя",
+      "source": "tw-ru-other-seed",
+      "refs": ["4:26", "4:27", "4:31"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "искать, исследовать, расследовать, поиск",
+      "source": "tw-ru-other-seek",
+      "refs": [
+        "1:37",
+        "3:32",
+        "8:11",
+        "8:12",
+        "11:18",
+        "12:12",
+        "14:1",
+        "14:11",
+        "14:55",
+        "16:6"
+      ]
+    },
+    "other/seize": {
+      "en": "seize, seizure, capture",
+      "headword": "схватить, захватить, охватить, схватки",
+      "source": "tw-ru-other-seize",
+      "refs": [
+        "3:21",
+        "6:17",
+        "9:18",
+        "12:12",
+        "14:1",
+        "14:44",
+        "14:46",
+        "14:49",
+        "14:51"
+      ]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "слуга, раб, рабыня, юноша, молодой человек, служить, служение, служба, рабство",
+      "source": "tw-ru-other-servant",
+      "refs": [
+        "1:20",
+        "10:44",
+        "12:2",
+        "12:4",
+        "13:34",
+        "14:47",
+        "14:66",
+        "14:69"
+      ]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "стыд, позор, позорить, постыдный, стыдиться, постыдиться, непостыдный, нарекание",
+      "source": "tw-ru-other-shame",
+      "refs": ["8:38", "12:4"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "овца, баран, Овечьи ворота",
+      "source": "tw-ru-other-sheep",
+      "refs": ["6:34", "14:27"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "пастух, пасти",
+      "source": "tw-ru-other-shepherd",
+      "refs": ["6:34", "14:27"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "серебро, серебряный",
+      "source": "tw-ru-other-silver",
+      "refs": ["14:11"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "сеять, посеянный, посев, сеяние, сеятель, сажать, посаженный, саженцы, пересаживать",
+      "source": "tw-ru-other-sow",
+      "refs": [
+        "4:3",
+        "4:4",
+        "4:14",
+        "4:15",
+        "4:16",
+        "4:18",
+        "4:20",
+        "4:26",
+        "4:31",
+        "4:32"
+      ]
+    },
+    "other/staff": {
+      "en": "staff, clubs",
+      "headword": "посох",
+      "source": "tw-ru-other-staff",
+      "refs": ["6:8"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "претыкаться, спотыкаться, оступаться, запинаться, запинающий",
+      "source": "tw-ru-other-stumble",
+      "refs": ["9:42", "9:43", "9:45", "9:47"]
+    },
+    "other/suffer": {
+      "en": "suffer, suffering",
+      "headword": "страдать, страдания, терпеть страдания",
+      "source": "tw-ru-other-suffer",
+      "refs": ["5:26", "8:31", "9:12"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "меч",
+      "source": "tw-ru-other-sword",
+      "refs": ["14:43", "14:47", "14:48"]
+    },
+    "other/tax": {
+      "en": "tax, tribute, taxation, taxpayer, tax collector",
+      "headword": "налог, подать",
+      "source": "tw-ru-other-tax",
+      "refs": ["2:14", "2:15", "2:16"]
+    },
+    "other/teacher": {
+      "en": "teacher, Teacher",
+      "headword": "учитель, Учитель",
+      "source": "tw-ru-other-teacher",
+      "refs": [
+        "4:38",
+        "5:35",
+        "9:17",
+        "9:38",
+        "10:17",
+        "10:20",
+        "10:35",
+        "12:14",
+        "12:19",
+        "12:32",
+        "13:1",
+        "14:14"
+      ]
+    },
+    "other/thief": {
+      "en": "thief, thieves, rob, robber, robbery, bandit",
+      "headword": "вор, грабитель",
+      "source": "tw-ru-other-thief",
+      "refs": ["11:17", "14:48", "15:27"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "терновник, тернии, колючка, чертополох",
+      "source": "tw-ru-other-thorn",
+      "refs": ["4:7", "4:18", "15:17"]
+    },
+    "other/tomb": {
+      "en": "grave, gravedigger, tomb, burial place",
+      "headword": "могила, гробница",
+      "source": "tw-ru-other-tomb",
+      "refs": [
+        "5:2",
+        "5:3",
+        "5:5",
+        "6:29",
+        "15:46",
+        "16:2",
+        "16:3",
+        "16:5",
+        "16:8"
+      ]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "язык, языки",
+      "source": "tw-ru-other-tongue",
+      "refs": ["7:33", "7:35"]
+    },
+    "other/torment": {
+      "en": "torment, tormented, tormentor",
+      "headword": "мука, мучение, мучить, мучитель, мученик, мучаться",
+      "source": "tw-ru-other-torment",
+      "refs": ["5:7"]
+    },
+    "other/tradition": {
+      "en": "tradition",
+      "headword": "традиция, обычай, предание",
+      "source": "tw-ru-other-tradition",
+      "refs": ["7:3", "7:5", "7:8", "7:9", "7:13"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "трепетать, трепет",
+      "source": "tw-ru-other-tremble",
+      "refs": ["5:33", "16:8"]
+    },
+    "other/tribulation": {
+      "en": "tribulation, distress, distresses, trouble",
+      "headword": "скорбь, бедствие",
+      "source": "tw-ru-other-tribulation",
+      "refs": ["4:17", "13:19", "13:24"]
+    },
+    "other/tribute": {
+      "en": "tribute, contribution",
+      "headword": "налог",
+      "source": "tw-ru-other-tribute",
+      "refs": ["12:14"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "беда, стеснение, теснота, страдание",
+      "source": "tw-ru-other-trouble",
+      "refs": ["5:35", "6:50", "14:6"]
+    },
+    "other/tunic": {
+      "en": "tunic",
+      "headword": "туника, хитон",
+      "source": "tw-ru-other-tunic",
+      "refs": ["6:9", "14:63"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "осознавать, понимать, понимание, понимающий, разум",
+      "source": "tw-ru-other-understand",
+      "refs": [
+        "4:12",
+        "4:13",
+        "6:52",
+        "7:14",
+        "7:18",
+        "8:17",
+        "8:21",
+        "9:32",
+        "12:33",
+        "13:14",
+        "14:68"
+      ]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "суета, пустой, лживый, пустота, бесполезный",
+      "source": "tw-ru-other-vain",
+      "refs": ["7:7"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "лоза",
+      "source": "tw-ru-other-vine",
+      "refs": ["14:25"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "виноградник",
+      "source": "tw-ru-other-vineyard",
+      "refs": ["12:1", "12:2", "12:8", "12:9"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "воин, солдат, соратник",
+      "source": "tw-ru-other-warrior",
+      "refs": ["15:16"]
+    },
+    "other/waste": {
+      "en": "waste, wasted, wasteland, becomes weak",
+      "headword": "пустырь, пустошь, пустыня, опустошать",
+      "source": "tw-ru-other-waste",
+      "refs": ["14:4"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "страж, стражник, стража, стеречь, оберегать, охранять, смотреть за, бодрствовать",
+      "source": "tw-ru-other-watch",
+      "refs": [
+        "3:2",
+        "13:33",
+        "13:34",
+        "13:35",
+        "13:37",
+        "14:34",
+        "14:37",
+        "14:38"
+      ]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "башня, сторожевая башня",
+      "source": "tw-ru-other-watchtower",
+      "refs": ["12:1"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "вино",
+      "source": "tw-ru-other-wine",
+      "refs": ["2:22", "15:23"]
+    },
+    "other/winepress": {
+      "en": "winepress",
+      "headword": "давильня",
+      "source": "tw-ru-other-winepress",
+      "refs": ["12:1"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "чрево, утроба",
+      "source": "tw-ru-other-womb",
+      "refs": ["13:17"]
+    },
+    "other/wrong": {
+      "en": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "headword": "неправильно, неправильный",
+      "source": "tw-ru-other-wrong",
+      "refs": ["15:14"]
+    },
+    "other/yeast": {
+      "en": "yeast, leaven, unleavened",
+      "headword": "закваска, дрожжи, дрожжевой",
+      "source": "tw-ru-other-yeast",
+      "refs": ["8:15"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/call-toname": "no-article",
+    "kt/call-tosummon": "no-article",
+    "other/age-timeperiod": "no-article",
+    "other/generation-lifetime": "no-article"
+  }
+}

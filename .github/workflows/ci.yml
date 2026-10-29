@@ -65,21 +65,39 @@ jobs:
 
       - run: npm ci
 
+      # Pinned inputs downloaded by the tests and the build, cached so CI
+      # fetches from Door43 only when sources.json changes (about 8,000
+      # files once every book's glossary inputs are pinned). A stale cache
+      # cannot change the data: each file is named by its id and pinned
+      # SHA-256, so a file from an older pin is never read, and every read
+      # is hash-checked (scripts/lib/sources.ts), so a file that does not
+      # match its pin is deleted and the run fails rather than use it. A
+      # miss, or a partial restore from an older sources.json, fetches only
+      # what is missing.
+      - name: Cache pinned sources
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/sources
+          key: sources-${{ hashFiles('sources.json') }}
+          restore-keys: sources-
+
       # The release tags are the key check's baseline. Fetch them explicitly
       # rather than rely on actions/checkout's defaults: an empty tag list
       # reads as "never released" and skips every span comparison.
       - name: Fetch release tags
         run: git fetch --tags --force origin
 
-      - run: npm run verify
-
       # data/, dist/, the site's review queue and the page built from it
-      # are generated: rebuilding
-      # from the pinned sources must reproduce the committed files exactly,
-      # none changed, missing or extra. git diff alone misses untracked
-      # files, so test the status.
+      # are generated: rebuilding from the pinned sources must reproduce the
+      # committed files exactly, none changed, missing or extra. git diff
+      # alone misses untracked files, so test the status.
+      # The build runs before the tests: it fetches any pinned input missing
+      # from the cache several at a time, and the tests then read the same
+      # files from the cache instead of one by one from Door43.
       - run: npm run build
       - name: Generated files match a fresh build
         run: |
           git status --porcelain --untracked-files=all -- data dist site/review.json site/index.html
           test -z "$(git status --porcelain --untracked-files=all -- data dist site/review.json site/index.html)"
+
+      - run: npm run verify

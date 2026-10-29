@@ -1,0 +1,467 @@
+{
+  "language": "es-419",
+  "book": "JON",
+  "links": "twl-en-jon",
+  "words": {
+    "repo": "es-419_gl/es-419_tw",
+    "release": "v37",
+    "commit": "7586f4ff1f0483ea40a4a68e5e1f33158e08c208"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (es-419), es-419_gl/es-419_tw v37, CC BY-SA 4.0. Original work available at https://git.door43.org/es-419_gl/es-419_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "Nombrar, nombrado",
+      "source": "tw-es-419-kt-appoint",
+      "refs": ["1:17", "4:6", "4:7", "4:8"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "creer, creyente, creencia, incrédulo, incredulidad",
+      "source": "tw-es-419-kt-believe",
+      "refs": ["3:5"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "compasión, compasivo",
+      "source": "tw-es-419-kt-compassion",
+      "refs": ["3:9", "4:2"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "Fidelidad de pacto, lealtad de pacto, misericordia, amor infalible",
+      "source": "tw-es-419-kt-covenantfaith",
+      "refs": ["2:8", "4:2"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "eternidad, eterno, perpetuo, por siempre",
+      "source": "tw-es-419-kt-eternity",
+      "refs": ["2:6"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "maldad, malvado, malicia, desagradable",
+      "source": "tw-es-419-kt-evil",
+      "refs": ["1:2", "1:7", "1:8", "3:8", "3:10", "4:1", "4:2", "4:6"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "dios, dios falso, diosa, ídolo, idólatra, idolátrico, idolatría",
+      "source": "tw-es-419-kt-falsegod",
+      "refs": ["1:5"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "temer, temor, temor de Jehová",
+      "source": "tw-es-419-kt-fear",
+      "refs": ["1:5", "1:9", "1:10", "1:16"]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "cumplir, realizado, llevado a cabo",
+      "source": "tw-es-419-kt-fulfill",
+      "refs": ["2:9"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Dios",
+      "source": "tw-es-419-kt-god",
+      "refs": [
+        "1:6",
+        "1:9",
+        "2:1",
+        "2:6",
+        "3:3",
+        "3:5",
+        "3:8",
+        "3:9",
+        "3:10",
+        "4:2",
+        "4:7",
+        "4:8",
+        "4:9"
+      ]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "bueno, bien, correcto, agradable, mejor",
+      "source": "tw-es-419-kt-good",
+      "refs": ["4:3", "4:4", "4:8", "4:9"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "gracia, amable",
+      "source": "tw-es-419-kt-grace",
+      "refs": ["4:2"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "Hades, Seol",
+      "source": "tw-es-419-kt-hades",
+      "refs": ["2:2"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "cielo, lo alto, cielos, celestial",
+      "source": "tw-es-419-kt-heaven",
+      "refs": ["1:9"]
+    },
+    "kt/hebrew": {
+      "en": "Hebrew",
+      "headword": "Hebreo",
+      "source": "tw-es-419-kt-hebrew",
+      "refs": ["1:9"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "santo, santidad, impío, sagrado",
+      "source": "tw-es-419-kt-holy",
+      "refs": ["2:4", "2:7"]
+    },
+    "kt/innocent": {
+      "en": "innocent",
+      "headword": "inocente",
+      "source": "tw-es-419-kt-innocent",
+      "refs": ["1:14"]
+    },
+    "kt/lordyahweh": {
+      "en": "Lord Yahweh, Yahweh God",
+      "headword": "Señor Jehová, Jehová Dios",
+      "source": "tw-es-419-kt-lordyahweh",
+      "refs": ["4:6"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "Perecer, pereciendo, perecedero",
+      "source": "tw-es-419-kt-perish",
+      "refs": ["1:6", "1:14", "3:9", "4:10"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "orar, oración",
+      "source": "tw-es-419-kt-pray",
+      "refs": ["2:1", "2:7", "4:2"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "salvar, salvo, a salvo, salvación",
+      "source": "tw-es-419-kt-save",
+      "refs": ["2:9"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "Espíritu, espiritual",
+      "source": "tw-es-419-kt-spirit",
+      "refs": ["4:8"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "templo",
+      "source": "tw-es-419-kt-temple",
+      "refs": ["2:4", "2:7"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "Palabra de Dios, Palabra de Jehová, Palabra del Señor, Palabra de Verdad, Escritura",
+      "source": "tw-es-419-kt-wordofgod",
+      "refs": ["1:1", "3:1", "3:3"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Jehová",
+      "source": "tw-es-419-kt-yahweh",
+      "refs": [
+        "1:3",
+        "1:4",
+        "1:9",
+        "1:10",
+        "1:14",
+        "1:16",
+        "1:17",
+        "2:1",
+        "2:2",
+        "2:6",
+        "2:7",
+        "2:9",
+        "2:10",
+        "4:2",
+        "4:3",
+        "4:4",
+        "4:10"
+      ]
+    },
+    "names/jonah": {
+      "en": "Jonah",
+      "headword": "Jonás",
+      "source": "tw-es-419-names-jonah",
+      "refs": [
+        "1:1",
+        "1:3",
+        "1:5",
+        "1:7",
+        "1:15",
+        "1:17",
+        "2:1",
+        "2:10",
+        "3:1",
+        "3:3",
+        "3:4",
+        "4:1",
+        "4:5",
+        "4:6",
+        "4:8",
+        "4:9"
+      ]
+    },
+    "names/joppa": {
+      "en": "Joppa",
+      "headword": "Jope",
+      "source": "tw-es-419-names-joppa",
+      "refs": ["1:3"]
+    },
+    "names/nineveh": {
+      "en": "Nineveh, Ninevite",
+      "headword": "Nínive, Ninivita",
+      "source": "tw-es-419-names-nineveh",
+      "refs": ["1:2", "3:2", "3:3", "3:4", "3:5", "3:6", "3:7", "4:11"]
+    },
+    "names/tarshish": {
+      "en": "Tarshish",
+      "headword": "Tarsis",
+      "source": "tw-es-419-names-tarshish",
+      "refs": ["1:3", "4:2"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "bestia",
+      "source": "tw-es-419-other-beast",
+      "refs": ["3:8"]
+    },
+    "other/beg": {
+      "en": "beg, begging, begged",
+      "headword": "mendigar, rogar, suplicar, mendigo, necesitado",
+      "source": "tw-es-419-other-beg",
+      "refs": ["4:3"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "Tiempo Bíblico: día",
+      "source": "tw-es-419-other-biblicaltimeday",
+      "refs": ["1:17", "3:3", "3:4", "4:7"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "Compañero, compañero de trabajo, amigo",
+      "source": "tw-es-419-other-companion",
+      "refs": ["1:7"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "Llorar, clamar, llorar o clamar a gritos",
+      "source": "tw-es-419-other-cry",
+      "refs": ["1:5", "1:6", "1:14", "2:2", "3:8"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "Declarar, proclamar, anunciar",
+      "source": "tw-es-419-other-declare",
+      "refs": ["3:5", "3:7"]
+    },
+    "other/decree": {
+      "en": "decree, decreed",
+      "headword": "decreto, decretado",
+      "source": "tw-es-419-other-decree",
+      "refs": ["3:7"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "liberar, entregar, librar, rescatar",
+      "source": "tw-es-419-other-deliverer",
+      "refs": ["4:6"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "Tierra",
+      "source": "tw-es-419-other-earth",
+      "refs": ["2:6"]
+    },
+    "other/fast": {
+      "en": "fast, fasting",
+      "headword": "ayunar, ayuno",
+      "source": "tw-es-419-other-fast",
+      "refs": ["3:5"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "Rebaño, manada",
+      "source": "tw-es-419-other-flock",
+      "refs": ["3:7"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "abandonar, desamparar, dejar",
+      "source": "tw-es-419-other-forsaken",
+      "refs": ["2:8"]
+    },
+    "other/gird": {
+      "en": "gird, girded, wrapped around, tied up, belt, tuck in belt, put belt around",
+      "headword": "Ceñir",
+      "source": "tw-es-419-other-gird",
+      "refs": ["2:5"]
+    },
+    "other/hard": {
+      "en": "hard, harder",
+      "headword": "Duro, difícil, dureza, endurecer",
+      "source": "tw-es-419-other-hard",
+      "refs": ["1:13"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "Gozo, gozoso, alegría, alegre, regocijo, deleite",
+      "source": "tw-es-419-other-joy",
+      "refs": ["4:6"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "rey, realeza, reinado",
+      "source": "tw-es-419-other-king",
+      "refs": ["3:6", "3:7"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "conocer, conocimiento, desconocido, distinguir",
+      "source": "tw-es-419-other-know",
+      "refs": ["1:7", "1:10", "1:12", "3:9", "4:2", "4:11"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "Laborar, trabajo, obra, obrero",
+      "source": "tw-es-419-other-labor",
+      "refs": ["4:10"]
+    },
+    "other/livestock": {
+      "en": "livestock, animals",
+      "headword": "Ganado, animales",
+      "source": "tw-es-419-other-livestock",
+      "refs": ["3:7", "4:11"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "Suerte, echar suertes",
+      "source": "tw-es-419-other-lots",
+      "refs": ["1:7"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "Poderoso, poder",
+      "source": "tw-es-419-other-mighty",
+      "refs": ["2:4"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "Noble, Hombre noble",
+      "source": "tw-es-419-other-noble",
+      "refs": ["3:7"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "juramento, jurar, jurar por",
+      "source": "tw-es-419-other-oath",
+      "refs": ["1:16", "2:9"]
+    },
+    "other/pit": {
+      "en": "pit, pitfall, trench, cistern",
+      "headword": "Hoyo",
+      "source": "tw-es-419-other-pit",
+      "refs": ["2:6"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "Suplicar, suplicando, súplica",
+      "source": "tw-es-419-other-plead",
+      "refs": ["1:14"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "predicar, predicación, predicador, proclamar, proclamación",
+      "source": "tw-es-419-other-preach",
+      "refs": ["3:2"]
+    },
+    "other/rage": {
+      "en": "rage",
+      "headword": "Ira",
+      "source": "tw-es-419-other-rage",
+      "refs": ["1:15"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "refugio, refugiado, albergue, albergado",
+      "source": "tw-es-419-other-refuge",
+      "refs": ["4:5"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "Reportar",
+      "source": "tw-es-419-other-report",
+      "refs": ["1:8", "3:2"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "Túnica",
+      "source": "tw-es-419-other-robe",
+      "refs": ["3:6"]
+    },
+    "other/sackcloth": {
+      "en": "sackcloth",
+      "headword": "cilicio",
+      "source": "tw-es-419-other-sackcloth",
+      "refs": ["3:5", "3:6", "3:8"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "sacrificio, sacrificios, ofrenda",
+      "source": "tw-es-419-other-sacrifice",
+      "refs": ["1:16", "2:9"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "Sembrar, sembrador",
+      "source": "tw-es-419-other-sow",
+      "refs": ["4:6", "4:7", "4:9", "4:10"]
+    },
+    "other/throne": {
+      "en": "throne, enthroned",
+      "headword": "trono, entronizado",
+      "source": "tw-es-419-other-throne",
+      "refs": ["3:6"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "Dificultad, dificultades, turbado",
+      "source": "tw-es-419-other-trouble",
+      "refs": ["2:2", "4:10", "4:11"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "Entender, entendimiento",
+      "source": "tw-es-419-other-understand",
+      "refs": ["1:4"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "vano, vanidad, palabras vacías, sin valor",
+      "source": "tw-es-419-other-vain",
+      "refs": ["2:8"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "other/age-timeperiod": "no-article"
+  }
+}

@@ -1,0 +1,869 @@
+{
+  "language": "ar",
+  "book": "1TI",
+  "links": "twl-en-1ti",
+  "words": {
+    "repo": "BSOJ/ar_tw",
+    "release": "v5",
+    "commit": "7c233628947dee9ad1da0b1d6deddac663e66574"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (ar), BSOJ/ar_tw v5, CC BY-SA 4.0. Original work available at https://git.door43.org/BSOJ/ar_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/amen": {
+      "en": "amen, truly",
+      "headword": "آمين، حقًّا",
+      "source": "tw-ar-kt-amen",
+      "refs": ["1:17", "6:16"]
+    },
+    "kt/angel": {
+      "en": "angel, archangel",
+      "headword": "ملاك، رئيس الملائكة",
+      "source": "tw-ar-kt-angel",
+      "refs": ["3:16", "5:21"]
+    },
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "رسول، رسوليّ",
+      "source": "tw-ar-kt-apostle",
+      "refs": ["1:1", "2:7"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "يعيّن، عيّن، معيّن",
+      "source": "tw-ar-kt-appoint",
+      "refs": ["1:12", "2:7"]
+    },
+    "kt/authority": {
+      "en": "authority",
+      "headword": "سُلطة، سُلطان، سلاطين",
+      "source": "tw-ar-kt-authority",
+      "refs": ["2:2", "2:12"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "آمن، مؤمن، إيمان، غير مؤمن، عدم الإيمان",
+      "source": "tw-ar-kt-believe",
+      "refs": ["3:16", "4:10", "4:12", "5:8", "5:16", "6:2"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "حبيب، أحبَّاء",
+      "source": "tw-ar-kt-beloved",
+      "refs": ["6:2"]
+    },
+    "kt/blameless": {
+      "en": "blameless",
+      "headword": "بلا لوم، كامل",
+      "source": "tw-ar-kt-blameless",
+      "refs": ["3:10", "5:7"]
+    },
+    "kt/blasphemy": {
+      "en": "blasphemy, blaspheme, blasphemous",
+      "headword": "تجديف، يجدّف، مُجدِّف",
+      "source": "tw-ar-kt-blasphemy",
+      "refs": ["1:13", "1:20", "6:1"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "يُبارك، مُبَارَك، بَرَكة، طوبى، مغبوط",
+      "source": "tw-ar-kt-bless",
+      "refs": ["1:11", "6:15"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "المسيح، المسيّا",
+      "source": "tw-ar-kt-christ",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:12",
+        "1:14",
+        "1:15",
+        "1:16",
+        "2:5",
+        "2:7",
+        "3:13",
+        "4:6",
+        "5:11",
+        "5:21",
+        "6:3",
+        "6:13",
+        "6:14"
+      ]
+    },
+    "kt/church": {
+      "en": "church, Church",
+      "headword": "الكنيسة",
+      "source": "tw-ar-kt-church",
+      "refs": ["3:5", "3:15", "5:16"]
+    },
+    "kt/confess": {
+      "en": "confess, confession",
+      "headword": "يعترف، اعتراف",
+      "source": "tw-ar-kt-confess",
+      "refs": ["6:12", "6:13"]
+    },
+    "kt/conscience": {
+      "en": "conscience",
+      "headword": "ضمير",
+      "source": "tw-ar-kt-conscience",
+      "refs": ["1:5", "1:19", "3:9", "4:2"]
+    },
+    "kt/deacon": {
+      "en": "deacon",
+      "headword": "الشمَّاس",
+      "source": "tw-ar-kt-deacon",
+      "refs": ["3:8", "3:12"]
+    },
+    "kt/demon": {
+      "en": "demon, evil spirit, unclean spirit",
+      "headword": "شيطان، روحٌ شرِّير، روحٌ نجسٌ",
+      "source": "tw-ar-kt-demon",
+      "refs": ["4:1"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "مُختار، اختار، شعب مُختار، المُختار أو المُعَيّن، انتخبَ أو المُنتَخَبْ",
+      "source": "tw-ar-kt-elect",
+      "refs": ["5:21"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "الأبديّة، إلى الدهر، الأزل، أبديّ، أزليّ، سرمديّ، إلى الأبد",
+      "source": "tw-ar-kt-eternity",
+      "refs": ["1:16", "6:12", "6:16"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "الشرُّ، شرِّير",
+      "source": "tw-ar-kt-evil",
+      "refs": ["6:4", "6:10"]
+    },
+    "kt/exhort": {
+      "en": "exhort, exhortation",
+      "headword": "تشجيع، وعظ، تعزية",
+      "source": "tw-ar-kt-exhort",
+      "refs": ["2:1", "4:13", "5:1", "6:2"]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "أمانة، أمين، وفاء، إخلاص، مُخلِص",
+      "source": "tw-ar-kt-faithful",
+      "refs": ["1:13", "4:3"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "خوف، يرهب، خائف، مخيف، مخافة",
+      "source": "tw-ar-kt-fear",
+      "refs": ["5:20"]
+    },
+    "kt/foolish": {
+      "en": "fool, foolish, folly",
+      "headword": "أحمق، جاهل، غبيّ، حماقة، غباء، جهالة",
+      "source": "tw-ar-kt-foolish",
+      "refs": ["6:9"]
+    },
+    "kt/gentile": {
+      "en": "Gentile",
+      "headword": "أمميٌّ، أمم، الأمم",
+      "source": "tw-ar-kt-gentile",
+      "refs": ["2:7"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "مجد، مُمجَّد، يُمجِّد، مجيد",
+      "source": "tw-ar-kt-glory",
+      "refs": ["1:11", "1:17", "3:16"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "الله، إله",
+      "source": "tw-ar-kt-god",
+      "refs": [
+        "1:1",
+        "1:4",
+        "1:11",
+        "1:17",
+        "2:3",
+        "2:5",
+        "3:5",
+        "3:15",
+        "4:3",
+        "4:4",
+        "4:10",
+        "5:4",
+        "5:5",
+        "5:21",
+        "6:1",
+        "6:11",
+        "6:13",
+        "6:17"
+      ]
+    },
+    "kt/godly": {
+      "en": "godly, godliness, ungodly, godless, ungodliness, godlessness",
+      "headword": "تقيّ، تقوى",
+      "source": "tw-ar-kt-godly",
+      "refs": [
+        "1:9",
+        "2:2",
+        "2:10",
+        "3:16",
+        "4:7",
+        "4:8",
+        "6:3",
+        "6:5",
+        "6:6",
+        "6:11"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "الله الآب، الآب السماويّ، الآب",
+      "source": "tw-ar-kt-godthefather",
+      "refs": ["1:2"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "الخير، حسن، طيِّب، جيِّد، صالِحٌ، أفضل",
+      "source": "tw-ar-kt-good",
+      "refs": [
+        "1:5",
+        "1:8",
+        "1:18",
+        "1:19",
+        "2:3",
+        "2:10",
+        "3:1",
+        "3:7",
+        "3:13",
+        "4:4",
+        "4:6",
+        "5:10",
+        "5:25",
+        "6:12",
+        "6:13",
+        "6:18",
+        "6:19"
+      ]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "الخبر السارّ، الإنجيل، بشارة الملكوت",
+      "source": "tw-ar-kt-goodnews",
+      "refs": ["1:11"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "نعمة",
+      "source": "tw-ar-kt-grace",
+      "refs": ["1:2", "1:14", "6:21"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "قدّوس، قداسة، مقدَّس، قدّيس، تقديس",
+      "source": "tw-ar-kt-holy",
+      "refs": ["2:8", "2:15"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "الروح القدس، روح الله، روح الربّ، الروح",
+      "source": "tw-ar-kt-holyspirit",
+      "refs": ["3:16", "4:1"]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "إكرام، كرامة، يُكرم، مُكرَّم",
+      "source": "tw-ar-kt-honor",
+      "refs": ["1:17", "5:3", "5:4", "5:17", "6:1", "6:16"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "يَرجو، رجاء",
+      "source": "tw-ar-kt-hope",
+      "refs": ["1:1", "3:14", "4:10", "5:5", "6:17"]
+    },
+    "kt/hypocrite": {
+      "en": "hypocrite, hypocrisy",
+      "headword": "مرائي، رياء، نفاق",
+      "source": "tw-ar-kt-hypocrite",
+      "refs": ["4:2"]
+    },
+    "kt/inchrist": {
+      "en": "in Christ, in Jesus, in the Lord, in him",
+      "headword": "في المسيح، في يسوع، في الربِّ، فيه",
+      "source": "tw-ar-kt-inchrist",
+      "refs": ["1:14", "2:7", "3:13"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "يسوع، يسوع المسيح، المسيح يسوع",
+      "source": "tw-ar-kt-jesus",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:12",
+        "1:14",
+        "1:15",
+        "1:16",
+        "2:5",
+        "3:13",
+        "4:6",
+        "5:21",
+        "6:3",
+        "6:13",
+        "6:14"
+      ]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "يحكم، يدين، يقضي، قضاء، دينونة",
+      "source": "tw-ar-kt-judge",
+      "refs": ["3:6", "5:12", "5:24"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "عدل، عدالة، غير عادل، ظالم، ظُلم",
+      "source": "tw-ar-kt-justice",
+      "refs": ["3:16"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "ناموس، ناموس موسى، ناموس الرّب (يهوه)، ناموس الله",
+      "source": "tw-ar-kt-lawofmoses",
+      "refs": ["1:8", "1:9"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "ربّ، الربّ، سيّد، السيّد",
+      "source": "tw-ar-kt-lord",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:12",
+        "1:14",
+        "6:1",
+        "6:2",
+        "6:3",
+        "6:14",
+        "6:15"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "محبَّة، حُبٌّ",
+      "source": "tw-ar-kt-love",
+      "refs": ["1:5", "1:14", "2:15", "4:12", "6:11"]
+    },
+    "kt/mercy": {
+      "en": "mercy, merciful",
+      "headword": "رحمة، رحيم",
+      "source": "tw-ar-kt-mercy",
+      "refs": ["1:2", "1:13", "1:16"]
+    },
+    "kt/minister": {
+      "en": "to minister, ministry",
+      "headword": "خدمة",
+      "source": "tw-ar-kt-minister",
+      "refs": ["1:12", "3:10", "3:13", "4:6"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "يصلّي، صلاة",
+      "source": "tw-ar-kt-pray",
+      "refs": ["2:1", "2:8", "4:5", "5:5"]
+    },
+    "kt/promise": {
+      "en": "promise, promised",
+      "headword": "وَعد، موعد، وَعَدَ، ميثاق",
+      "source": "tw-ar-kt-promise",
+      "refs": ["4:8"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "نبيّ، نبوءة ، يتنبّأ، رائي، نبيّة",
+      "source": "tw-ar-kt-prophet",
+      "refs": ["1:18", "4:14"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "بارّ، برّ، تبرّر، صِدّيق، مُستقيم/استقامة",
+      "source": "tw-ar-kt-righteous",
+      "refs": ["1:9", "6:11"]
+    },
+    "kt/saint": {
+      "en": "saint",
+      "headword": "قدّيس",
+      "source": "tw-ar-kt-saint",
+      "refs": ["5:10"]
+    },
+    "kt/satan": {
+      "en": "Satan, devil, evil one",
+      "headword": "إبليس، الشيطان، الشرّير",
+      "source": "tw-ar-kt-satan",
+      "refs": ["1:20", "3:6", "3:7", "5:15"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "خلاص، يخلِّص، يُنقذ",
+      "source": "tw-ar-kt-save",
+      "refs": ["1:15", "2:4", "2:15", "4:16"]
+    },
+    "kt/savior": {
+      "en": "Savior, savior",
+      "headword": "المُخلِّص، مُخلِّص",
+      "source": "tw-ar-kt-savior",
+      "refs": ["1:1", "2:3", "4:10"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "خطيئة، خاطئ، يُخطئ، آثم، زلّة",
+      "source": "tw-ar-kt-sin",
+      "refs": ["1:9", "1:15", "5:20", "5:22", "5:24"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "روح، ريح، نسمة، نَفس",
+      "source": "tw-ar-kt-spirit",
+      "refs": ["4:1"]
+    },
+    "kt/tempt": {
+      "en": "tempt, temptation",
+      "headword": "يجرّب، تجربة",
+      "source": "tw-ar-kt-tempt",
+      "refs": ["6:9"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "اختبار، امتحان، يمتحن، يفحص، يُمتَحن في النار",
+      "source": "tw-ar-kt-test",
+      "refs": ["3:10"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "يشهد، شاهِدٌ، شهادة، عاين، معاين",
+      "source": "tw-ar-kt-testimony",
+      "refs": ["2:6", "3:7", "5:10", "5:19", "5:21", "6:12", "6:13"]
+    },
+    "kt/transgression": {
+      "en": "transgress, transgression",
+      "headword": "يتعدّى، يتطاول، تعدّي، معصية، زلّة، إثم",
+      "source": "tw-ar-kt-transgression",
+      "refs": ["2:14"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "كلمة الله، كلمة يهوه، كلام الله، كلام الربّ، كلام الحقّ، الكُتُب، الكتاب",
+      "source": "tw-ar-kt-wordofgod",
+      "refs": ["4:5", "5:18"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "العالم، دنيويّ",
+      "source": "tw-ar-kt-world",
+      "refs": ["1:15", "3:16", "4:7", "6:7", "6:20"]
+    },
+    "names/adam": {
+      "en": "Adam",
+      "headword": "آدم",
+      "source": "tw-ar-names-adam",
+      "refs": ["2:13", "2:14"]
+    },
+    "names/ephesus": {
+      "en": "Ephesus, Ephesian",
+      "headword": "أفسس، أفسسيِّون",
+      "source": "tw-ar-names-ephesus",
+      "refs": ["1:3"]
+    },
+    "names/eve": {
+      "en": "Eve",
+      "headword": "حوّاء",
+      "source": "tw-ar-names-eve",
+      "refs": ["2:13"]
+    },
+    "names/macedonia": {
+      "en": "Macedonia",
+      "headword": "مكدونيّة",
+      "source": "tw-ar-names-macedonia",
+      "refs": ["1:3"]
+    },
+    "names/manofgod": {
+      "en": "man of God",
+      "headword": "رجل الله، إنسان الله",
+      "source": "tw-ar-names-manofgod",
+      "refs": ["6:11"]
+    },
+    "names/paul": {
+      "en": "Paul, Saul",
+      "headword": "بولس، شاول",
+      "source": "tw-ar-names-paul",
+      "refs": ["1:1"]
+    },
+    "names/pilate": {
+      "en": "Pilate",
+      "headword": "بيلاطُس البُنطيّ",
+      "source": "tw-ar-names-pilate",
+      "refs": ["6:13"]
+    },
+    "names/timothy": {
+      "en": "Timothy",
+      "headword": "تيموثاوس",
+      "source": "tw-ar-names-timothy",
+      "refs": ["1:2", "1:18", "6:20"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "يحمل",
+      "source": "tw-ar-other-bear",
+      "refs": ["5:14"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "يَوم، الأيّام، نهار",
+      "source": "tw-ar-other-biblicaltimeday",
+      "refs": ["5:5"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "فَسَد، فاسد، فساد",
+      "source": "tw-ar-other-corrupt",
+      "refs": ["6:5"]
+    },
+    "other/cow": {
+      "en": "cow, bull, calf, cattle, heifer, ox",
+      "headword": "بقرة، ثور، عِجل، بهائم، ماشية",
+      "source": "tw-ar-other-cow",
+      "refs": ["5:18"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "يخلِق، خَلَقَ، خليقة، خالق",
+      "source": "tw-ar-other-creation",
+      "refs": ["4:3", "4:4"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "يخدع، يكذب، خداع، ضلال",
+      "source": "tw-ar-other-deceive",
+      "refs": ["2:14", "4:1"]
+    },
+    "other/doctrine": {
+      "en": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "headword": "تعليم، تعاليم، معتقدات، تعليمات، معرفة",
+      "source": "tw-ar-other-doctrine",
+      "refs": ["1:3", "4:1", "4:16", "6:3"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "شيخ، شيوخ، أشياخ",
+      "source": "tw-ar-other-elder",
+      "refs": ["4:14", "5:1", "5:2", "5:17", "5:19"]
+    },
+    "other/endure": {
+      "en": "endure, endurance",
+      "headword": "صبرَ، صبْر، تحمُّل",
+      "source": "tw-ar-other-endure",
+      "refs": ["6:11"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "حَسد، حسود، غيرة",
+      "source": "tw-ar-other-envy",
+      "refs": ["6:4"]
+    },
+    "other/fornication": {
+      "en": "sexual immorality, immorality, immoral, fornication",
+      "headword": "العهارة، فسق",
+      "source": "tw-ar-other-fornication",
+      "refs": ["1:10"]
+    },
+    "other/foundation": {
+      "en": "foundation, founder, founded",
+      "headword": "أسّس، أساس، تأسيس",
+      "source": "tw-ar-other-foundation",
+      "refs": ["6:19"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "ذهب، ذهبيّ",
+      "source": "tw-ar-other-gold",
+      "refs": ["2:9"]
+    },
+    "other/gossip": {
+      "en": "gossip, gossips, talk nonsense",
+      "headword": "نميمة، نميمات، مهذار، ساعي بالوشاية",
+      "source": "tw-ar-other-gossip",
+      "refs": ["5:13"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "بيت",
+      "source": "tw-ar-other-house",
+      "refs": ["5:13"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "أهل البيت، بيت",
+      "source": "tw-ar-other-household",
+      "refs": ["3:4", "3:5", "3:12", "3:15", "5:4", "5:8"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "يُرشد، يعلّم، يوصي، إرشاد، تعليمات",
+      "source": "tw-ar-other-instruct",
+      "refs": ["1:10"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "ملك، ملوكيَّة، مَلكيَّة",
+      "source": "tw-ar-other-king",
+      "refs": ["1:17", "2:2", "6:15"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "يعرف، يعلم، معرفة، عِلم",
+      "source": "tw-ar-other-know",
+      "refs": ["1:8", "1:9", "2:4", "3:5", "3:15", "4:3", "6:4", "6:20"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "يتعب، تَعَبْ، عمل، يشتغل، الفاعل، العامل",
+      "source": "tw-ar-other-labor",
+      "refs": ["4:10", "5:17", "5:18"]
+    },
+    "other/lawful": {
+      "en": "lawful, unlawful, not lawful, lawless, lawlessness",
+      "headword": "قانونيّ، ناموسيّ، يحلّ، مُحرّم، ما لا يحلّ، أثيم، إثم",
+      "source": "tw-ar-other-lawful",
+      "refs": ["1:8", "1:9"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "شهوة، اشتهى، لذّة",
+      "source": "tw-ar-other-lust",
+      "refs": ["6:9"]
+    },
+    "other/manager": {
+      "en": "manager, steward, stewardship",
+      "headword": "مُدَبّر، وكيل، وكالة",
+      "source": "tw-ar-other-manager",
+      "refs": ["1:4", "3:4", "3:5", "3:12", "5:14"]
+    },
+    "other/mediator": {
+      "en": "mediator",
+      "headword": "وسيط",
+      "source": "tw-ar-other-mediator",
+      "refs": ["2:5"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "قوّة، قدرة، قدير، شديد، جبّار، قويّ، أعمال شديدة، قوّات",
+      "source": "tw-ar-other-mighty",
+      "refs": ["6:16"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "فِكْر، رأي، ذهن",
+      "source": "tw-ar-other-mind",
+      "refs": ["6:5"]
+    },
+    "other/mystery": {
+      "en": "mystery, hidden truth",
+      "headword": "سرّ، أسرار",
+      "source": "tw-ar-other-mystery",
+      "refs": ["3:9", "3:16"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "أمّة، شعب، أمم، شعوب",
+      "source": "tw-ar-other-nation",
+      "refs": ["3:16"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "يُوكِل، يُناظر، نُظّار، أسقف، حارس، حافِظْ، وكيل على، مؤتَمَن على...",
+      "source": "tw-ar-other-overseer",
+      "refs": ["3:1", "3:2"]
+    },
+    "other/partial": {
+      "en": "partial, partiality",
+      "headword": "محاباة",
+      "source": "tw-ar-other-partial",
+      "refs": ["5:21"]
+    },
+    "other/patient": {
+      "en": "patient, patience, impatient",
+      "headword": "صَبر، طول أناة، تحمّل، غير صبور",
+      "source": "tw-ar-other-patient",
+      "refs": ["1:16"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "سلام، سَالَمَ، صَالَحَ",
+      "source": "tw-ar-other-peace",
+      "refs": ["1:2", "2:2", "3:3"]
+    },
+    "other/persecute": {
+      "en": "persecute",
+      "headword": "يضطهد، اضطهاد",
+      "source": "tw-ar-other-persecute",
+      "refs": ["1:13", "6:11"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "عمود",
+      "source": "tw-ar-other-pillar",
+      "refs": ["3:15"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "استرحم، يسأل، يتضرّع، يتوسّل، طِلبة، يطلب إلى",
+      "source": "tw-ar-other-plead",
+      "refs": ["1:3"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "يكرز، كرازة، كارز، يُنادي، مناداة، يُخبر، إخبار",
+      "source": "tw-ar-other-preach",
+      "refs": ["3:16"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "منفعة، نافع، رَبح",
+      "source": "tw-ar-other-profit",
+      "refs": ["4:8"]
+    },
+    "other/proud": {
+      "en": "proud, pride, prideful, boast, boastful, boasting",
+      "headword": "مستكبر، مستعلي، منتفخ، تفاخر/افتخار، كبرياء، متصلّف، متبجّح، متعظّم",
+      "source": "tw-ar-other-proud",
+      "refs": ["3:6", "6:4", "6:17"]
+    },
+    "other/rebel": {
+      "en": "rebel, rebellion, rebellious, rebelliousness",
+      "headword": "يتمرّد، تمرُّد، متمرّد",
+      "source": "tw-ar-other-rebel",
+      "refs": ["1:9"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "يزجُر، يوبّخ، ينتهر",
+      "source": "tw-ar-other-rebuke",
+      "refs": ["5:1", "5:20"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "قَبِلَ، نال، أخذ",
+      "source": "tw-ar-other-receive",
+      "refs": ["4:4"]
+    },
+    "other/reject": {
+      "en": "reject, rejected, rejection",
+      "headword": "يرفُض، رَفَضَ، رَفْض",
+      "source": "tw-ar-other-reject",
+      "refs": ["1:19", "4:4", "4:7", "5:11"]
+    },
+    "other/ruin": {
+      "en": "ruin, ruins, ruined",
+      "headword": "يُخرّب، خَرِبَة، يعطب",
+      "source": "tw-ar-other-ruin",
+      "refs": ["6:9"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "رئيس، يحكُم، يَملِك، مُدبّر، أرباب، قائد",
+      "source": "tw-ar-other-ruler",
+      "refs": ["5:17", "6:15"]
+    },
+    "other/selfcontrol": {
+      "en": "self-control, self-controlled",
+      "headword": "التعقُّل، عاقل، التعفّف، ضبط النفس",
+      "source": "tw-ar-other-selfcontrol",
+      "refs": ["2:9", "3:2"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "خادم، جارية، فتيان، فتيات، استعباد، عبد، عبوديَّة، مستعبد",
+      "source": "tw-ar-other-servant",
+      "refs": ["6:1", "6:2"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "خَزِيَ، خِزِي، خزى، خاب، خجل، عار، عيَّر",
+      "source": "tw-ar-other-shame",
+      "refs": ["3:2", "3:7", "6:14"]
+    },
+    "other/slander": {
+      "en": "slander, slanderer, revile, insult",
+      "headword": "مذمَّة، مجدِّف، واشٍ، شتَّام، شَتَم، سبَّ",
+      "source": "tw-ar-other-slander",
+      "refs": ["3:11"]
+    },
+    "other/snare": {
+      "en": "snare, ensnare, entrap, trap, trapped, pitfall",
+      "headword": "فخّ، شَرَك، مصيدة",
+      "source": "tw-ar-other-snare",
+      "refs": ["3:7", "6:9"]
+    },
+    "other/strife": {
+      "en": "strife, disputes, quarrel, arguing, conflict",
+      "headword": "نزاع، مماحكات، خصام، خصومة، مخاصمة، خصومات، مجادلة، يحاجج",
+      "source": "tw-ar-other-strife",
+      "refs": ["6:4"]
+    },
+    "other/submit": {
+      "en": "submit, submitted, submitting, submission, in submission",
+      "headword": "خَضع، خضوع، في خضوع",
+      "source": "tw-ar-other-submit",
+      "refs": ["2:11", "3:4"]
+    },
+    "other/teacher": {
+      "en": "teacher, Teacher",
+      "headword": "مُعَلّم، المُعَلّم",
+      "source": "tw-ar-other-teacher",
+      "refs": ["1:7", "2:7"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "درس (الحبوب أو الحنطة)",
+      "source": "tw-ar-other-thresh",
+      "refs": ["5:18"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "يفهم، فِهمْ، تفكير",
+      "source": "tw-ar-other-understand",
+      "refs": ["1:7"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "خمر (نبيذ)، زقّ الخمر (زقاق الخمر)، الخمر الجديدة",
+      "source": "tw-ar-other-wine",
+      "refs": ["3:8", "5:23"]
+    },
+    "other/yoke": {
+      "en": "yoke, yoked, tied",
+      "headword": "نير، رُبط",
+      "source": "tw-ar-other-yoke",
+      "refs": ["6:1"]
+    }
+  },
+  "gaps": {
+    "kt/call-toname": "english-headword",
+    "kt/call-tosummon": "english-headword",
+    "kt/faith": "english-headword",
+    "kt/purify": "english-headword",
+    "kt/sanctify": "english-headword",
+    "kt/trust": "english-headword",
+    "other/age-timeperiod": "english-headword",
+    "other/commit": "english-headword",
+    "other/enslave": "english-headword",
+    "other/generation-lifetime": "no-article",
+    "other/profane": "english-headword"
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "language": "pt-BR",
+  "book": "SNG",
+  "links": "twl-en-sng",
+  "words": {
+    "repo": "Door43-Catalog/pt-br_tw",
+    "release": "v6.4",
+    "commit": "879ce3844fa3eadc94f714e45ec50f794d6fb27d"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (pt-br), Door43-Catalog/pt-br_tw v6.4, CC BY-SA 4.0. Original work available at https://git.door43.org/Door43-Catalog/pt-br_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "Nomear, Nomeado",
+      "source": "tw-pt-br-kt-appoint",
+      "refs": ["1:6"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "amado",
+      "source": "tw-pt-br-kt-beloved",
+      "refs": [
+        "1:13",
+        "1:14",
+        "1:16",
+        "2:3",
+        "2:8",
+        "2:9",
+        "2:10",
+        "2:16",
+        "2:17",
+        "4:16",
+        "5:1",
+        "5:2",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:8",
+        "5:9",
+        "5:10",
+        "5:16",
+        "6:1",
+        "6:2",
+        "6:3",
+        "7:9",
+        "7:10",
+        "7:11",
+        "7:13",
+        "8:5",
+        "8:14"
+      ]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "benção, abençoado, abençoando",
+      "source": "tw-pt-br-kt-bless",
+      "refs": ["6:9"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "Bom, bondade",
+      "source": "tw-pt-br-kt-good",
+      "refs": ["1:2", "1:3", "1:16", "4:10", "4:14", "7:9"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "Profundezas, Sepultura",
+      "source": "tw-pt-br-kt-hades",
+      "refs": ["8:6"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, israelitas, nação de Israel",
+      "source": "tw-pt-br-kt-israel",
+      "refs": ["3:7"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amor",
+      "source": "tw-pt-br-kt-love",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:7",
+        "2:4",
+        "2:5",
+        "2:7",
+        "3:1",
+        "3:2",
+        "3:3",
+        "3:4",
+        "3:5",
+        "3:10",
+        "4:10",
+        "5:8",
+        "7:6",
+        "7:12",
+        "8:4",
+        "8:6",
+        "8:7"
+      ]
+    },
+    "kt/myrrh": {
+      "en": "myrrh",
+      "headword": "mirra",
+      "source": "tw-pt-br-kt-myrrh",
+      "refs": ["1:13", "3:6", "4:6", "4:14", "5:1", "5:5", "5:13"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "puro, purificar, purificação",
+      "source": "tw-pt-br-kt-purify",
+      "refs": ["6:9", "6:10"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yahweh",
+      "source": "tw-pt-br-kt-yahweh",
+      "refs": ["8:6"]
+    },
+    "kt/zealous": {
+      "en": "zeal, zealous",
+      "headword": "zelo, zeloso",
+      "source": "tw-pt-br-kt-zealous",
+      "refs": ["8:6"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "Sião ou Monte Sião",
+      "source": "tw-pt-br-kt-zion",
+      "refs": ["3:11"]
+    },
+    "names/carmel": {
+      "en": "Carmel, Mount Carmel",
+      "headword": "Carmelo , Monte Carmelo",
+      "source": "tw-pt-br-names-carmel",
+      "refs": ["7:5"]
+    },
+    "names/damascus": {
+      "en": "Damascus",
+      "headword": "Damasco",
+      "source": "tw-pt-br-names-damascus",
+      "refs": ["7:4"]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "Davi",
+      "source": "tw-pt-br-names-david",
+      "refs": ["4:4"]
+    },
+    "names/engedi": {
+      "en": "En Gedi",
+      "headword": "En - Gedi",
+      "source": "tw-pt-br-names-engedi",
+      "refs": ["1:14"]
+    },
+    "names/gilead": {
+      "en": "Gilead, Gileadite",
+      "headword": "Gileade",
+      "source": "tw-pt-br-names-gilead",
+      "refs": ["4:1", "6:5"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Jerusalém",
+      "source": "tw-pt-br-names-jerusalem",
+      "refs": ["1:5", "2:7", "3:5", "3:10", "5:8", "5:16", "6:4", "8:4"]
+    },
+    "names/kedar": {
+      "en": "Kedar",
+      "headword": "Quedar",
+      "source": "tw-pt-br-names-kedar",
+      "refs": ["1:5"]
+    },
+    "names/lebanon": {
+      "en": "Lebanon",
+      "headword": "Líbano",
+      "source": "tw-pt-br-names-lebanon",
+      "refs": ["3:9", "4:8", "4:11", "4:15", "5:15", "7:4"]
+    },
+    "names/pharaoh": {
+      "en": "Pharaoh, king of Egypt",
+      "headword": "Faraó, Rei do Egito",
+      "source": "tw-pt-br-names-pharaoh",
+      "refs": ["1:9"]
+    },
+    "names/sharon": {
+      "en": "Sharon, Plain of Sharon",
+      "headword": "sarom, planície de sarom",
+      "source": "tw-pt-br-names-sharon",
+      "refs": ["2:1"]
+    },
+    "names/tirzah": {
+      "en": "Tirzah",
+      "headword": "Tirza",
+      "source": "tw-pt-br-names-tirzah",
+      "refs": ["6:4"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "idade",
+      "source": "tw-pt-br-other-age",
+      "refs": ["7:13"]
+    },
+    "other/awe": {
+      "en": "awe, awesome",
+      "headword": "Temor, pavoroso",
+      "source": "tw-pt-br-other-awe",
+      "refs": ["6:4", "6:10"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "suportar",
+      "source": "tw-pt-br-other-bear",
+      "refs": ["4:2", "6:6", "6:9"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "tempo bíblico: dia",
+      "source": "tw-pt-br-other-biblicaltimeday",
+      "refs": ["2:17", "3:11", "4:6", "8:8"]
+    },
+    "other/blemish": {
+      "en": "blemish, unblemished, defect",
+      "headword": "defeito",
+      "source": "tw-pt-br-other-blemish",
+      "refs": ["4:7"]
+    },
+    "other/bride": {
+      "en": "bride, bridal",
+      "headword": "noiva",
+      "source": "tw-pt-br-other-bride",
+      "refs": ["4:8", "4:9", "4:10", "4:11", "4:12", "5:1"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "Cativo , capturado.",
+      "source": "tw-pt-br-other-captive",
+      "refs": ["2:15", "7:5"]
+    },
+    "other/cedar": {
+      "en": "cedar, cedarwood",
+      "headword": "Cedro",
+      "source": "tw-pt-br-other-cedar",
+      "refs": ["1:17", "5:15", "8:9"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "Carruagem",
+      "source": "tw-pt-br-other-chariot",
+      "refs": ["1:9", "6:12"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "Companheiro",
+      "source": "tw-pt-br-other-companion",
+      "refs": ["1:7", "5:1", "5:16", "8:13"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "Conceber, concepção",
+      "source": "tw-pt-br-other-conceive",
+      "refs": ["3:4"]
+    },
+    "other/concubine": {
+      "en": "concubine",
+      "headword": "Concubina",
+      "source": "tw-pt-br-other-concubine",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "coroa, coroar",
+      "source": "tw-pt-br-other-crown",
+      "refs": ["3:11"]
+    },
+    "other/curtain": {
+      "en": "curtain",
+      "headword": "cortina",
+      "source": "tw-pt-br-other-curtain",
+      "refs": ["1:5"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "declarar, declaração",
+      "source": "tw-pt-br-other-declare",
+      "refs": ["1:7", "5:8"]
+    },
+    "other/deer": {
+      "en": "deer, doe, fawn, roebuck, stag",
+      "headword": "veado, corça ou gazela, cervo/veado macho, corço, filhote de veado/corça",
+      "source": "tw-pt-br-other-deer",
+      "refs": ["2:9", "2:17", "4:5", "7:3", "8:14"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "deleite",
+      "source": "tw-pt-br-other-delight",
+      "refs": ["2:3", "7:6"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "Deserto, região desabitada",
+      "source": "tw-pt-br-other-desert",
+      "refs": ["3:6", "8:5"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "Destruidor",
+      "source": "tw-pt-br-other-destroyer",
+      "refs": ["2:15"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "Pomba, pombo",
+      "source": "tw-pt-br-other-dove",
+      "refs": ["1:15", "2:12", "2:14", "4:1", "5:2", "5:12", "6:9"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "bêbado, beberrão",
+      "source": "tw-pt-br-other-drunk",
+      "refs": ["5:1"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "Figo",
+      "source": "tw-pt-br-other-fig",
+      "refs": ["2:13"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "rebanho, bando",
+      "source": "tw-pt-br-other-flock",
+      "refs": ["1:7", "1:8", "4:1", "4:2", "6:5", "6:6"]
+    },
+    "other/fountain": {
+      "en": "fountain, source, spring",
+      "headword": "fonte, nascente",
+      "source": "tw-pt-br-other-fountain",
+      "refs": ["4:12", "4:15"]
+    },
+    "other/frankincense": {
+      "en": "frankincense",
+      "headword": "mirra",
+      "source": "tw-pt-br-other-frankincense",
+      "refs": ["3:6", "4:6", "4:14"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "fruto, frutífero",
+      "source": "tw-pt-br-other-fruit",
+      "refs": ["2:3", "4:13", "4:16", "7:8", "7:13", "8:11", "8:12"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "Portão, Portão bar",
+      "source": "tw-pt-br-other-gate",
+      "refs": ["7:4"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "Colhêr, colhendo",
+      "source": "tw-pt-br-other-glean",
+      "refs": ["6:2"]
+    },
+    "other/goat": {
+      "en": "goat, goatskin, scapegoat, kid",
+      "headword": "Bode, cabrito",
+      "source": "tw-pt-br-other-goat",
+      "refs": ["1:8", "4:1", "6:5"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "Ouro",
+      "source": "tw-pt-br-other-gold",
+      "refs": ["1:11", "3:10", "5:11", "5:14", "5:15"]
+    },
+    "other/honey": {
+      "en": "honey, honeycomb",
+      "headword": "mel, favo de mel",
+      "source": "tw-pt-br-other-honey",
+      "refs": ["4:11", "5:1"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "cavalo",
+      "source": "tw-pt-br-other-horse",
+      "refs": ["1:9"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "casa",
+      "source": "tw-pt-br-other-house",
+      "refs": ["1:17", "2:4", "3:4", "8:2", "8:7"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "Alegria, alegre",
+      "source": "tw-pt-br-other-joy",
+      "refs": ["1:4", "3:11"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "Rei",
+      "source": "tw-pt-br-other-king",
+      "refs": ["1:4", "1:12", "3:9", "3:11", "7:5"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "Beijo",
+      "source": "tw-pt-br-other-kiss",
+      "refs": ["1:2", "8:1"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "Saber, Conhecimento, Dar a conhecer",
+      "source": "tw-pt-br-other-know",
+      "refs": ["1:8", "6:12"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "labuta, labutador",
+      "source": "tw-pt-br-other-labor",
+      "refs": ["7:1", "8:5"]
+    },
+    "other/leopard": {
+      "en": "leopard",
+      "headword": "leopardo",
+      "source": "tw-pt-br-other-leopard",
+      "refs": ["4:8"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "leão",
+      "source": "tw-pt-br-other-lion",
+      "refs": ["4:8"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "nobre, homem nobre",
+      "source": "tw-pt-br-other-noble",
+      "refs": ["6:12", "7:1"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "óleo",
+      "source": "tw-pt-br-other-oil",
+      "refs": ["1:3", "4:10"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "supervisor",
+      "source": "tw-pt-br-other-overseer",
+      "refs": ["1:6", "8:11", "8:12"]
+    },
+    "other/palm": {
+      "en": "palm",
+      "headword": "palmeira",
+      "source": "tw-pt-br-other-palm",
+      "refs": ["7:7", "7:8"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "paz, pacífico",
+      "source": "tw-pt-br-other-peace",
+      "refs": ["8:10"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "perfeito",
+      "source": "tw-pt-br-other-perfect",
+      "refs": ["5:2", "6:9"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "pilar, coluna",
+      "source": "tw-pt-br-other-pillar",
+      "refs": ["3:6", "5:15"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "suplicar, suplicante, súplica",
+      "source": "tw-pt-br-other-plead",
+      "refs": ["7:8"]
+    },
+    "other/pomegranate": {
+      "en": "pomegranate",
+      "headword": "romã",
+      "source": "tw-pt-br-other-pomegranate",
+      "refs": ["4:3", "4:13", "6:7", "6:11", "7:12", "8:2"]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "louvar",
+      "source": "tw-pt-br-other-praise",
+      "refs": ["6:9"]
+    },
+    "other/purple": {
+      "en": "purple",
+      "headword": "roxo",
+      "source": "tw-pt-br-other-purple",
+      "refs": ["3:10", "7:5"]
+    },
+    "other/queen": {
+      "en": "queen",
+      "headword": "Rainha",
+      "source": "tw-pt-br-other-queen",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "Têmpera",
+      "source": "tw-pt-br-other-quench",
+      "refs": ["8:7"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "Manto",
+      "source": "tw-pt-br-other-robe",
+      "refs": ["5:3"]
+    },
+    "other/rod": {
+      "en": "rod",
+      "headword": "haste, vara, cajado",
+      "source": "tw-pt-br-other-rod",
+      "refs": ["5:14"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "sandália",
+      "source": "tw-pt-br-other-sandal",
+      "refs": ["7:1"]
+    },
+    "other/seal": {
+      "en": "seal, sealed, unsealed",
+      "headword": "selar, para selar",
+      "source": "tw-pt-br-other-seal",
+      "refs": ["4:12", "8:6"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "procurar, buscar",
+      "source": "tw-pt-br-other-seek",
+      "refs": ["3:1", "3:2", "5:6", "6:1"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "ovelha, carneiro, ovelha",
+      "source": "tw-pt-br-other-sheep",
+      "refs": ["4:2", "6:6"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "pastor, pastorear",
+      "source": "tw-pt-br-other-shepherd",
+      "refs": ["1:8"]
+    },
+    "other/shield": {
+      "en": "shield",
+      "headword": "escudo",
+      "source": "tw-pt-br-other-shield",
+      "refs": ["4:4"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "prata",
+      "source": "tw-pt-br-other-silver",
+      "refs": ["1:11", "3:10", "8:9", "8:11"]
+    },
+    "other/tent": {
+      "en": "tent, tentmaker",
+      "headword": "tenda",
+      "source": "tw-pt-br-other-tent",
+      "refs": ["1:5", "1:8"]
+    },
+    "other/terror": {
+      "en": "terror, terrorize, terrify, dread, panic",
+      "headword": "pavor, aterrorizar",
+      "source": "tw-pt-br-other-terror",
+      "refs": ["3:8"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "espinho, cardo",
+      "source": "tw-pt-br-other-thorn",
+      "refs": ["2:2"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "língua",
+      "source": "tw-pt-br-other-tongue",
+      "refs": ["4:11"]
+    },
+    "other/veil": {
+      "en": "veil, veiled, unveiled",
+      "headword": "Véu",
+      "source": "tw-pt-br-other-veil",
+      "refs": ["4:1", "4:3", "6:7"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "Videira",
+      "source": "tw-pt-br-other-vine",
+      "refs": ["2:13", "6:11", "7:8", "7:12"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "Vinhedo",
+      "source": "tw-pt-br-other-vineyard",
+      "refs": ["1:6", "1:14", "2:15", "7:12", "8:11", "8:12"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "guerreiro, soldado",
+      "source": "tw-pt-br-other-warrior",
+      "refs": ["3:7", "4:4"]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "torre de vigia, torre",
+      "source": "tw-pt-br-other-watchtower",
+      "refs": ["4:4", "5:13", "7:4", "8:10"]
+    },
+    "other/well": {
+      "en": "cistern, well",
+      "headword": "poço, cisterna",
+      "source": "tw-pt-br-other-well",
+      "refs": ["4:15"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "trigo",
+      "source": "tw-pt-br-other-wheat",
+      "refs": ["7:2"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "vinho, odre, vinho novo",
+      "source": "tw-pt-br-other-wine",
+      "refs": ["1:2", "1:4", "2:4", "4:10", "5:1", "7:2", "7:9", "8:2"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/call-toname": "no-article",
+    "kt/soul": "no-article",
+    "names/heshbon": "no-article",
+    "names/solomon": "no-article",
+    "other/labor-birthing": "no-article",
+    "other/marriage": "no-article",
+    "other/sword": "no-article"
+  }
+}

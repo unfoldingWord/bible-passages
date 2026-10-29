@@ -1,0 +1,675 @@
+{
+  "language": "sw",
+  "book": "SNG",
+  "links": "twl-en-sng",
+  "words": {
+    "repo": "Door43-Catalog/sw_tw",
+    "release": "v7.3",
+    "commit": "82e94cd4a7aad817365190fa5d48960c90a01fc9"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (sw), Door43-Catalog/sw_tw v7.3, CC BY-SA 4.0. Original work available at https://git.door43.org/Door43-Catalog/sw_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "Kuteua, Kuteuliwa",
+      "source": "tw-sw-kt-appoint",
+      "refs": ["1:6"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "mpendwa",
+      "source": "tw-sw-kt-beloved",
+      "refs": [
+        "1:13",
+        "1:14",
+        "1:16",
+        "2:3",
+        "2:8",
+        "2:9",
+        "2:10",
+        "2:16",
+        "2:17",
+        "4:16",
+        "5:1",
+        "5:2",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:8",
+        "5:9",
+        "5:10",
+        "5:16",
+        "6:1",
+        "6:2",
+        "6:3",
+        "7:9",
+        "7:10",
+        "7:11",
+        "7:13",
+        "8:5",
+        "8:14"
+      ]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "Kubariki",
+      "source": "tw-sw-kt-bless",
+      "refs": ["6:9"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "wema, uzuri",
+      "source": "tw-sw-kt-good",
+      "refs": ["1:2", "1:3", "1:16", "4:10", "4:14", "7:9"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "kuzimu",
+      "source": "tw-sw-kt-hades",
+      "refs": ["8:6"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israeli, Waisraeli, taifa la Israeli",
+      "source": "tw-sw-kt-israel",
+      "refs": ["3:7"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "upendo",
+      "source": "tw-sw-kt-love",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:7",
+        "2:4",
+        "2:5",
+        "2:7",
+        "3:1",
+        "3:2",
+        "3:3",
+        "3:4",
+        "3:5",
+        "3:10",
+        "4:10",
+        "5:8",
+        "7:6",
+        "7:12",
+        "8:4",
+        "8:6",
+        "8:7"
+      ]
+    },
+    "kt/myrrh": {
+      "en": "myrrh",
+      "headword": "manemane",
+      "source": "tw-sw-kt-myrrh",
+      "refs": ["1:13", "3:6", "4:6", "4:14", "5:1", "5:5", "5:13"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "safi, kusafisha",
+      "source": "tw-sw-kt-purify",
+      "refs": ["6:9", "6:10"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "nafsi",
+      "source": "tw-sw-kt-soul",
+      "refs": ["1:7", "3:1", "3:2", "3:3", "3:4", "5:6", "6:12"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yaweh",
+      "source": "tw-sw-kt-yahweh",
+      "refs": ["8:6"]
+    },
+    "kt/zealous": {
+      "en": "zeal, zealous",
+      "headword": "kicho, uchaji",
+      "source": "tw-sw-kt-zealous",
+      "refs": ["8:6"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "Sayuni, Mlima Sayuni",
+      "source": "tw-sw-kt-zion",
+      "refs": ["3:11"]
+    },
+    "names/carmel": {
+      "en": "Carmel, Mount Carmel",
+      "headword": "Karmeli, Mlima Karmeli",
+      "source": "tw-sw-names-carmel",
+      "refs": ["7:5"]
+    },
+    "names/damascus": {
+      "en": "Damascus",
+      "headword": "Dameski",
+      "source": "tw-sw-names-damascus",
+      "refs": ["7:4"]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "Daudi",
+      "source": "tw-sw-names-david",
+      "refs": ["4:4"]
+    },
+    "names/engedi": {
+      "en": "En Gedi",
+      "headword": "Engedi",
+      "source": "tw-sw-names-engedi",
+      "refs": ["1:14"]
+    },
+    "names/gilead": {
+      "en": "Gilead, Gileadite",
+      "headword": "Gileadi",
+      "source": "tw-sw-names-gilead",
+      "refs": ["4:1", "6:5"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Yerusalemu",
+      "source": "tw-sw-names-jerusalem",
+      "refs": ["1:5", "2:7", "3:5", "3:10", "5:8", "5:16", "6:4", "8:4"]
+    },
+    "names/kedar": {
+      "en": "Kedar",
+      "headword": "Kedari",
+      "source": "tw-sw-names-kedar",
+      "refs": ["1:5"]
+    },
+    "names/lebanon": {
+      "en": "Lebanon",
+      "headword": "Lebanoni",
+      "source": "tw-sw-names-lebanon",
+      "refs": ["3:9", "4:8", "4:11", "4:15", "5:15", "7:4"]
+    },
+    "names/pharaoh": {
+      "en": "Pharaoh, king of Egypt",
+      "headword": "Farao, mfalme wa Misri.",
+      "source": "tw-sw-names-pharaoh",
+      "refs": ["1:9"]
+    },
+    "names/sharon": {
+      "en": "Sharon, Plain of Sharon",
+      "headword": "Sharoni, Milima ya Sharoni",
+      "source": "tw-sw-names-sharon",
+      "refs": ["2:1"]
+    },
+    "names/solomon": {
+      "en": "Solomon",
+      "headword": "Sulemani",
+      "source": "tw-sw-names-solomon",
+      "refs": ["1:1", "1:5", "3:7", "3:9", "3:11", "8:11", "8:12"]
+    },
+    "names/tirzah": {
+      "en": "Tirzah",
+      "headword": "Tirza",
+      "source": "tw-sw-names-tirzah",
+      "refs": ["6:4"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "Umri",
+      "source": "tw-sw-other-age",
+      "refs": ["7:13"]
+    },
+    "other/awe": {
+      "en": "awe, awesome",
+      "headword": "Kushangaa, kushangaza",
+      "source": "tw-sw-other-awe",
+      "refs": ["6:4", "6:10"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "kubeba",
+      "source": "tw-sw-other-bear",
+      "refs": ["4:2", "6:6", "6:9"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "siku",
+      "source": "tw-sw-other-biblicaltimeday",
+      "refs": ["2:17", "3:11", "4:6", "8:8"]
+    },
+    "other/blemish": {
+      "en": "blemish, unblemished, defect",
+      "headword": "mawaa",
+      "source": "tw-sw-other-blemish",
+      "refs": ["4:7"]
+    },
+    "other/bride": {
+      "en": "bride, bridal",
+      "headword": "Bibi harusi",
+      "source": "tw-sw-other-bride",
+      "refs": ["4:8", "4:9", "4:10", "4:11", "4:12", "5:1"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "mateka, kifungo",
+      "source": "tw-sw-other-captive",
+      "refs": ["2:15", "7:5"]
+    },
+    "other/cedar": {
+      "en": "cedar, cedarwood",
+      "headword": "mwerezi",
+      "source": "tw-sw-other-cedar",
+      "refs": ["1:17", "5:15", "8:9"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "Gari",
+      "source": "tw-sw-other-chariot",
+      "refs": ["1:9", "6:12"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "mwenzi",
+      "source": "tw-sw-other-companion",
+      "refs": ["1:7", "5:1", "5:16", "8:13"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "Tunga mimba",
+      "source": "tw-sw-other-conceive",
+      "refs": ["3:4"]
+    },
+    "other/concubine": {
+      "en": "concubine",
+      "headword": "Suria",
+      "source": "tw-sw-other-concubine",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "Taji, kuvalisha taji",
+      "source": "tw-sw-other-crown",
+      "refs": ["3:11"]
+    },
+    "other/curtain": {
+      "en": "curtain",
+      "headword": "Pazia",
+      "source": "tw-sw-other-curtain",
+      "refs": ["1:5"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "tamka, tamko",
+      "source": "tw-sw-other-declare",
+      "refs": ["1:7", "5:8"]
+    },
+    "other/deer": {
+      "en": "deer, doe, fawn, roebuck, stag",
+      "headword": "mbawala, paa, paa dume, paa mdogo",
+      "source": "tw-sw-other-deer",
+      "refs": ["2:9", "2:17", "4:5", "7:3", "8:14"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "Furaha",
+      "source": "tw-sw-other-delight",
+      "refs": ["2:3", "7:6"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "jangwa, njika",
+      "source": "tw-sw-other-desert",
+      "refs": ["3:6", "8:5"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "Mwangamizi",
+      "source": "tw-sw-other-destroyer",
+      "refs": ["2:15"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "njiwa, ninga",
+      "source": "tw-sw-other-dove",
+      "refs": ["1:15", "2:12", "2:14", "4:1", "5:2", "5:12", "6:9"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "kulewa, mlevi",
+      "source": "tw-sw-other-drunk",
+      "refs": ["5:1"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "mtini",
+      "source": "tw-sw-other-fig",
+      "refs": ["2:13"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "kundi, mifugo",
+      "source": "tw-sw-other-flock",
+      "refs": ["1:7", "1:8", "4:1", "4:2", "6:5", "6:6"]
+    },
+    "other/fountain": {
+      "en": "fountain, source, spring",
+      "headword": "chemchem, kisima",
+      "source": "tw-sw-other-fountain",
+      "refs": ["4:12", "4:15"]
+    },
+    "other/frankincense": {
+      "en": "frankincense",
+      "headword": "ubani",
+      "source": "tw-sw-other-frankincense",
+      "refs": ["3:6", "4:6", "4:14"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "tunda, kuzaa",
+      "source": "tw-sw-other-fruit",
+      "refs": ["2:3", "4:13", "4:16", "7:8", "7:13", "8:11", "8:12"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "lango, nguzo ya lango",
+      "source": "tw-sw-other-gate",
+      "refs": ["7:4"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "kusanya, kukusanya",
+      "source": "tw-sw-other-glean",
+      "refs": ["6:2"]
+    },
+    "other/goat": {
+      "en": "goat, goatskin, scapegoat, kid",
+      "headword": "mbuzi, mwanakibuzi",
+      "source": "tw-sw-other-goat",
+      "refs": ["1:8", "4:1", "6:5"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "dhahabu",
+      "source": "tw-sw-other-gold",
+      "refs": ["1:11", "3:10", "5:11", "5:14", "5:15"]
+    },
+    "other/honey": {
+      "en": "honey, honeycomb",
+      "headword": "Asali, sega la asali",
+      "source": "tw-sw-other-honey",
+      "refs": ["4:11", "5:1"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "Farasi",
+      "source": "tw-sw-other-horse",
+      "refs": ["1:9"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "Nyumba",
+      "source": "tw-sw-other-house",
+      "refs": ["1:17", "2:4", "3:4", "8:2", "8:7"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "furaha, mwenye furaha",
+      "source": "tw-sw-other-joy",
+      "refs": ["1:4", "3:11"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "mfalme",
+      "source": "tw-sw-other-king",
+      "refs": ["1:4", "1:12", "3:9", "3:11", "7:5"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "Busu",
+      "source": "tw-sw-other-kiss",
+      "refs": ["1:2", "8:1"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "kujua, ufahamu, kufanya kujulikana",
+      "source": "tw-sw-other-know",
+      "refs": ["1:8", "6:12"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "kazi, mfanyakazi",
+      "source": "tw-sw-other-labor",
+      "refs": ["7:1", "8:5"]
+    },
+    "other/leopard": {
+      "en": "leopard",
+      "headword": "chui",
+      "source": "tw-sw-other-leopard",
+      "refs": ["4:8"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "simba",
+      "source": "tw-sw-other-lion",
+      "refs": ["4:8"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "waheshima, heshima",
+      "source": "tw-sw-other-noble",
+      "refs": ["6:12", "7:1"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "mafuta",
+      "source": "tw-sw-other-oil",
+      "refs": ["1:3", "4:10"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "msimamizi",
+      "source": "tw-sw-other-overseer",
+      "refs": ["1:6", "8:11", "8:12"]
+    },
+    "other/palm": {
+      "en": "palm",
+      "headword": "Mtende",
+      "source": "tw-sw-other-palm",
+      "refs": ["7:7", "7:8"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "Amani",
+      "source": "tw-sw-other-peace",
+      "refs": ["8:10"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "Kamili",
+      "source": "tw-sw-other-perfect",
+      "refs": ["5:2", "6:9"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "nguzo, safu",
+      "source": "tw-sw-other-pillar",
+      "refs": ["3:6", "5:15"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "Kusihi, ng'ang'ania",
+      "source": "tw-sw-other-plead",
+      "refs": ["7:8"]
+    },
+    "other/pomegranate": {
+      "en": "pomegranate",
+      "headword": "Komamanga",
+      "source": "tw-sw-other-pomegranate",
+      "refs": ["4:3", "4:13", "6:7", "6:11", "7:12", "8:2"]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "Kusifu",
+      "source": "tw-sw-other-praise",
+      "refs": ["6:9"]
+    },
+    "other/purple": {
+      "en": "purple",
+      "headword": "Zambarau",
+      "source": "tw-sw-other-purple",
+      "refs": ["3:10", "7:5"]
+    },
+    "other/queen": {
+      "en": "queen",
+      "headword": "Malkia",
+      "source": "tw-sw-other-queen",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "Kuzima",
+      "source": "tw-sw-other-quench",
+      "refs": ["8:7"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "kanzu au vazi",
+      "source": "tw-sw-other-robe",
+      "refs": ["5:3"]
+    },
+    "other/rod": {
+      "en": "rod",
+      "headword": "Fimbo",
+      "source": "tw-sw-other-rod",
+      "refs": ["5:14"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "ndara",
+      "source": "tw-sw-other-sandal",
+      "refs": ["7:1"]
+    },
+    "other/seal": {
+      "en": "seal, sealed, unsealed",
+      "headword": "muhuri, kutia muhuri",
+      "source": "tw-sw-other-seal",
+      "refs": ["4:12", "8:6"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "tafuta",
+      "source": "tw-sw-other-seek",
+      "refs": ["3:1", "3:2", "5:6", "6:1"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "kondoo, kondoo dume, kondoo jike",
+      "source": "tw-sw-other-sheep",
+      "refs": ["4:2", "6:6"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "mchungaji, kuchunga",
+      "source": "tw-sw-other-shepherd",
+      "refs": ["1:8"]
+    },
+    "other/shield": {
+      "en": "shield",
+      "headword": "ngao",
+      "source": "tw-sw-other-shield",
+      "refs": ["4:4"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "fedha",
+      "source": "tw-sw-other-silver",
+      "refs": ["1:11", "3:10", "8:9", "8:11"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "upanga",
+      "source": "tw-sw-other-sword",
+      "refs": ["3:8"]
+    },
+    "other/tent": {
+      "en": "tent, tentmaker",
+      "headword": "hema",
+      "source": "tw-sw-other-tent",
+      "refs": ["1:5", "1:8"]
+    },
+    "other/terror": {
+      "en": "terror, terrorize, terrify, dread, panic",
+      "headword": "woga, kuogopesha",
+      "source": "tw-sw-other-terror",
+      "refs": ["3:8"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "mwiba, mbaruti",
+      "source": "tw-sw-other-thorn",
+      "refs": ["2:2"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "ulimi",
+      "source": "tw-sw-other-tongue",
+      "refs": ["4:11"]
+    },
+    "other/veil": {
+      "en": "veil, veiled, unveiled",
+      "headword": "Utaji",
+      "source": "tw-sw-other-veil",
+      "refs": ["4:1", "4:3", "6:7"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "Mzabibu",
+      "source": "tw-sw-other-vine",
+      "refs": ["2:13", "6:11", "7:8", "7:12"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "Mizabibu",
+      "source": "tw-sw-other-vineyard",
+      "refs": ["1:6", "1:14", "2:15", "7:12", "8:11", "8:12"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "Shujaa, askari",
+      "source": "tw-sw-other-warrior",
+      "refs": ["3:7", "4:4"]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "Mnara",
+      "source": "tw-sw-other-watchtower",
+      "refs": ["4:4", "5:13", "7:4", "8:10"]
+    },
+    "other/well": {
+      "en": "cistern, well",
+      "headword": "Kisima,birika",
+      "source": "tw-sw-other-well",
+      "refs": ["4:15"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "Ngano",
+      "source": "tw-sw-other-wheat",
+      "refs": ["7:2"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "Divai, kiriba, divai mpya",
+      "source": "tw-sw-other-wine",
+      "refs": ["1:2", "1:4", "2:4", "4:10", "5:1", "7:2", "7:9", "8:2"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/call-toname": "no-article",
+    "names/heshbon": "no-article",
+    "other/labor-birthing": "no-article",
+    "other/marriage": "no-article"
+  }
+}

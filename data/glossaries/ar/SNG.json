@@ -1,0 +1,405 @@
+{
+  "language": "ar",
+  "book": "SNG",
+  "links": "twl-en-sng",
+  "words": {
+    "repo": "BSOJ/ar_tw",
+    "release": "v5",
+    "commit": "7c233628947dee9ad1da0b1d6deddac663e66574"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (ar), BSOJ/ar_tw v5, CC BY-SA 4.0. Original work available at https://git.door43.org/BSOJ/ar_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "يعيّن، عيّن، معيّن",
+      "source": "tw-ar-kt-appoint",
+      "refs": ["1:6"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "حبيب، أحبَّاء",
+      "source": "tw-ar-kt-beloved",
+      "refs": [
+        "1:13",
+        "1:14",
+        "1:16",
+        "2:3",
+        "2:8",
+        "2:9",
+        "2:10",
+        "2:16",
+        "2:17",
+        "4:16",
+        "5:1",
+        "5:2",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:8",
+        "5:9",
+        "5:10",
+        "5:16",
+        "6:1",
+        "6:2",
+        "6:3",
+        "7:9",
+        "7:10",
+        "7:11",
+        "7:13",
+        "8:5",
+        "8:14"
+      ]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "يُبارك، مُبَارَك، بَرَكة، طوبى، مغبوط",
+      "source": "tw-ar-kt-bless",
+      "refs": ["6:9"]
+    },
+    "kt/call-speakloudly": {
+      "en": "call, called, call out, called out",
+      "headword": "دعوة، دعا، يدعو",
+      "source": "tw-ar-kt-call-speakloudly",
+      "refs": ["5:6"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "الخير، حسن، طيِّب، جيِّد، صالِحٌ، أفضل",
+      "source": "tw-ar-kt-good",
+      "refs": ["1:2", "1:3", "1:16", "4:10", "4:14", "7:9"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "محبَّة، حُبٌّ",
+      "source": "tw-ar-kt-love",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:7",
+        "2:4",
+        "2:5",
+        "2:7",
+        "3:1",
+        "3:2",
+        "3:3",
+        "3:4",
+        "3:5",
+        "3:10",
+        "4:10",
+        "5:8",
+        "7:6",
+        "7:12",
+        "8:4",
+        "8:6",
+        "8:7"
+      ]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "نفس",
+      "source": "tw-ar-kt-soul",
+      "refs": ["1:7", "3:1", "3:2", "3:3", "3:4", "5:6", "6:12"]
+    },
+    "kt/zealous": {
+      "en": "zeal, zealous",
+      "headword": "حماسة، متحمِّس",
+      "source": "tw-ar-kt-zealous",
+      "refs": ["8:6"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "صهيون، جبل صهيون",
+      "source": "tw-ar-kt-zion",
+      "refs": ["3:11"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "شيخوخة، شَيبة، أيَّام السنين",
+      "source": "tw-ar-other-age",
+      "refs": ["7:13"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "يحمل",
+      "source": "tw-ar-other-bear",
+      "refs": ["4:2", "6:6", "6:9"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "يَوم، الأيّام، نهار",
+      "source": "tw-ar-other-biblicaltimeday",
+      "refs": ["2:17", "3:11", "4:6", "8:8"]
+    },
+    "other/blemish": {
+      "en": "blemish, unblemished, defect",
+      "headword": "عيب، بلا عيب",
+      "source": "tw-ar-other-blemish",
+      "refs": ["4:7"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "أسرَ، أسير، يأسر، سبي، مسبيّ، صَيد",
+      "source": "tw-ar-other-captive",
+      "refs": ["2:15", "7:5"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "شريك، رفيق، عامل مع",
+      "source": "tw-ar-other-companion",
+      "refs": ["1:7", "5:1", "5:16", "8:13"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "إكليل، تاج، مُكلّل",
+      "source": "tw-ar-other-crown",
+      "refs": ["3:11"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "سُرَّ، فَرِح، بهجة، تلذّذ",
+      "source": "tw-ar-other-delight",
+      "refs": ["2:3", "7:6"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "سكران، سِكّير، شِرّيب خمر",
+      "source": "tw-ar-other-drunk",
+      "refs": ["5:1"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "تينٌ",
+      "source": "tw-ar-other-fig",
+      "refs": ["2:13"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "غنم، قطيع/ قطعان",
+      "source": "tw-ar-other-flock",
+      "refs": ["1:7", "1:8", "4:1", "4:2", "6:5", "6:6"]
+    },
+    "other/fountain": {
+      "en": "fountain, source, spring",
+      "headword": "ينبوع، نبع، عين ماء",
+      "source": "tw-ar-other-fountain",
+      "refs": ["4:12", "4:15"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "ثمر، ثمار، أثمار، ثمرة، يُثمر، مُثمر، غير مثمر",
+      "source": "tw-ar-other-fruit",
+      "refs": ["2:3", "4:13", "4:16", "7:8", "7:13", "8:11", "8:12"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "ذهب، ذهبيّ",
+      "source": "tw-ar-other-gold",
+      "refs": ["1:11", "3:10", "5:11", "5:14", "5:15"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "الخيل، الفرس",
+      "source": "tw-ar-other-horse",
+      "refs": ["1:9"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "بيت",
+      "source": "tw-ar-other-house",
+      "refs": ["1:17", "2:4", "3:4", "8:2", "8:7"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "فرح، ابتهاج، سرور، مسرور",
+      "source": "tw-ar-other-joy",
+      "refs": ["1:4", "3:11"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "ملك، ملوكيَّة، مَلكيَّة",
+      "source": "tw-ar-other-king",
+      "refs": ["1:4", "1:12", "3:9", "3:11", "7:5"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "قُبْلة",
+      "source": "tw-ar-other-kiss",
+      "refs": ["1:2", "8:1"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "يعرف، يعلم، معرفة، عِلم",
+      "source": "tw-ar-other-know",
+      "refs": ["1:8", "6:12"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "يتعب، تَعَبْ، عمل، يشتغل، الفاعل، العامل",
+      "source": "tw-ar-other-labor",
+      "refs": ["7:1", "8:5"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "أسد، لبؤة",
+      "source": "tw-ar-other-lion",
+      "refs": ["4:8"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "زيت، دُهن",
+      "source": "tw-ar-other-oil",
+      "refs": ["1:3", "4:10"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "يُوكِل، يُناظر، نُظّار، أسقف، حارس، حافِظْ، وكيل على، مؤتَمَن على...",
+      "source": "tw-ar-other-overseer",
+      "refs": ["1:6", "8:11", "8:12"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "سلام، سَالَمَ، صَالَحَ",
+      "source": "tw-ar-other-peace",
+      "refs": ["8:10"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "تامٌّ، كاملٌ",
+      "source": "tw-ar-other-perfect",
+      "refs": ["5:2", "6:9"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "عمود",
+      "source": "tw-ar-other-pillar",
+      "refs": ["3:6", "5:15"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "استرحم، يسأل، يتضرّع، يتوسّل، طِلبة، يطلب إلى",
+      "source": "tw-ar-other-plead",
+      "refs": ["7:8"]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "يسبّح، يحمد، يمدح، مستحقٌّ للمدح",
+      "source": "tw-ar-other-praise",
+      "refs": ["6:9"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "فتَّش، طلب، بحثَ، التمس، سعى",
+      "source": "tw-ar-other-seek",
+      "refs": ["3:1", "3:2", "5:6", "6:1"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "نعجة/شاة، كبش، خروف/خراف، حظيرة الخراف، جزّازون، جزّة صوف",
+      "source": "tw-ar-other-sheep",
+      "refs": ["4:2", "6:6"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "راعٍ، قسٌّ",
+      "source": "tw-ar-other-shepherd",
+      "refs": ["1:8"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "فضّة",
+      "source": "tw-ar-other-silver",
+      "refs": ["1:11", "3:10", "8:9", "8:11"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "لسان، لغة",
+      "source": "tw-ar-other-tongue",
+      "refs": ["4:11"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "كرمة، كروم",
+      "source": "tw-ar-other-vine",
+      "refs": ["2:13", "6:11", "7:8", "7:12"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "جنديّ، محارب",
+      "source": "tw-ar-other-warrior",
+      "refs": ["3:7", "4:4"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "خمر (نبيذ)، زقّ الخمر (زقاق الخمر)، الخمر الجديدة",
+      "source": "tw-ar-other-wine",
+      "refs": ["1:2", "1:4", "2:4", "4:10", "5:1", "7:2", "7:9", "8:2"]
+    }
+  },
+  "gaps": {
+    "kt/call-toname": "english-headword",
+    "kt/hades": "english-headword",
+    "kt/israel": "english-headword",
+    "kt/myrrh": "english-headword",
+    "kt/purify": "english-headword",
+    "kt/yahweh": "english-headword",
+    "names/carmel": "english-headword",
+    "names/damascus": "english-headword",
+    "names/david": "english-headword",
+    "names/engedi": "english-headword",
+    "names/gilead": "english-headword",
+    "names/heshbon": "english-headword",
+    "names/jerusalem": "english-headword",
+    "names/kedar": "english-headword",
+    "names/lebanon": "english-headword",
+    "names/pharaoh": "english-headword",
+    "names/sharon": "english-headword",
+    "names/solomon": "english-headword",
+    "names/tirzah": "english-headword",
+    "other/awe": "english-headword",
+    "other/bride": "english-headword",
+    "other/cedar": "english-headword",
+    "other/chariot": "english-headword",
+    "other/conceive": "english-headword",
+    "other/concubine": "english-headword",
+    "other/curtain": "english-headword",
+    "other/declare": "english-headword",
+    "other/deer": "english-headword",
+    "other/desert": "english-headword",
+    "other/destroyer": "english-headword",
+    "other/dove": "english-headword",
+    "other/frankincense": "english-headword",
+    "other/gate": "english-headword",
+    "other/glean": "english-headword",
+    "other/goat": "english-headword",
+    "other/honey": "english-headword",
+    "other/labor-birthing": "english-headword",
+    "other/leopard": "english-headword",
+    "other/marriage": "english-headword",
+    "other/noble": "english-headword",
+    "other/palm": "english-headword",
+    "other/pomegranate": "english-headword",
+    "other/purple": "english-headword",
+    "other/queen": "english-headword",
+    "other/quench": "english-headword",
+    "other/robe": "english-headword",
+    "other/rod": "english-headword",
+    "other/sandal": "english-headword",
+    "other/seal": "english-headword",
+    "other/shield": "english-headword",
+    "other/sword": "english-headword",
+    "other/tent": "english-headword",
+    "other/terror": "english-headword",
+    "other/thorn": "english-headword",
+    "other/veil": "english-headword",
+    "other/vineyard": "english-headword",
+    "other/watchtower": "english-headword",
+    "other/well": "english-headword",
+    "other/wheat": "english-headword"
+  }
+}
