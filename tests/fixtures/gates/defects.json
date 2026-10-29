@@ -119,6 +119,195 @@
       "en": "Heirs of Grace",
       "value": "Héritiers undefined",
       "problem": "leaked null-ish text"
+    },
+    {
+      "why": "(e) a final full stop in ar",
+      "tag": "ar",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "بولس يُحيّي تيطس، ابنه الحقيقي في الإيمان.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in es-419",
+      "tag": "es-419",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Pablo saluda a Tito, su verdadero hijo en la fe.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in fr",
+      "tag": "fr",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paul salue Tite, son vrai enfant dans la foi.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in hi",
+      "tag": "hi",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "पौलुस तीतुस को नमस्कार करता है, जो विश्वास में उसका सच्चा पुत्र है।",
+      "problem": "final full stop \"।\""
+    },
+    {
+      "why": "(e) a final full stop in id",
+      "tag": "id",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paulus menyapa Titus, anaknya yang sejati dalam iman.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in pt-BR",
+      "tag": "pt-BR",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paulo saúda Tito, seu verdadeiro filho na fé.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in ru",
+      "tag": "ru",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Павел приветствует Тита, истинного сына по вере.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in sw",
+      "tag": "sw",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paulo anamsalimu Tito, mwana wake halisi katika imani.",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a final full stop in zh-Hans",
+      "tag": "zh-Hans",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "保罗问候提多，他在信仰上的真儿子。",
+      "problem": "final full stop \"。\""
+    },
+    {
+      "why": "(e) a Devanagari double danda",
+      "tag": "hi",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "पौलुस तीतुस को नमस्कार करता है, जो विश्वास में उसका सच्चा पुत्र है॥",
+      "problem": "final full stop \"॥\""
+    },
+    {
+      "why": "(e) an Arabic full stop (U+06D4)",
+      "tag": "ar",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "بولس يُحيّي تيطس، ابنه الحقيقي في الإيمان۔",
+      "problem": "final full stop \"۔\""
+    },
+    {
+      "why": "(e) a fullwidth full stop in Chinese",
+      "tag": "zh-Hans",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "保罗问候提多，他在信仰上的真儿子．",
+      "problem": "final full stop \"．\""
+    },
+    {
+      "why": "(e) a full stop inside a closing bracket",
+      "tag": "fr",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paul salue Tite (son vrai enfant.)",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a full stop, a space, then a closing bracket",
+      "tag": "fr",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paul salue Tite (son vrai enfant. )",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a full stop, a narrow no-break space, then a guillemet",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers de la grâce. \u202f»",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a full stop, then a right-to-left mark",
+      "tag": "ar",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "بولس يُحيّي تيطس، ابنه الحقيقي في الإيمان.\u200f",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) an ellipsis",
+      "tag": "es-419",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Pablo saluda a Tito…",
+      "problem": "final full stop \"…\""
+    },
+    {
+      "why": "(f) guillemets in French",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "« Héritiers de la grâce »",
+      "problem": "quotation mark \"«\""
+    },
+    {
+      "why": "(f) low-high quotes in Russian",
+      "tag": "ru",
+      "en": "Heirs of Grace",
+      "value": "„Наследники благодати“",
+      "problem": "quotation mark \"„\""
+    },
+    {
+      "why": "(f) curly double quotes in Spanish",
+      "tag": "es-419",
+      "en": "Heirs of Grace",
+      "value": "“Herederos de la gracia”",
+      "problem": "quotation mark \"“\""
+    },
+    {
+      "why": "(f) ASCII double quotes in Swahili",
+      "tag": "sw",
+      "en": "Heirs of Grace",
+      "value": "\"Warithi wa neema\"",
+      "problem": "quotation mark \"\\\"\""
+    },
+    {
+      "why": "(f) single quotes around a word in Indonesian",
+      "tag": "id",
+      "en": "Heirs of Grace",
+      "value": "Ahli waris ‘kasih karunia’",
+      "problem": "quotation mark \"‘\""
+    },
+    {
+      "why": "(f) a right single quote after a word, not inside it",
+      "tag": "pt-BR",
+      "en": "Heirs of Grace",
+      "value": "Herdeiros da ‘graça’",
+      "problem": "quotation mark \"’\""
+    },
+    {
+      "why": "(f) ASCII single quotes in Hindi",
+      "tag": "hi",
+      "en": "Heirs of Grace",
+      "value": "'अनुग्रह' के वारिस",
+      "problem": "quotation mark \"'\""
+    },
+    {
+      "why": "(f) curly quotes in Arabic",
+      "tag": "ar",
+      "en": "Heirs of Grace",
+      "value": "ورثة «النعمة»",
+      "problem": "quotation mark \"«\""
+    },
+    {
+      "why": "(f) corner brackets in Chinese",
+      "tag": "zh-Hans",
+      "en": "Heirs of Grace",
+      "value": "「恩典」的后嗣",
+      "problem": "quotation mark \"「\""
+    },
+    {
+      "why": "(f) white corner brackets in Chinese",
+      "tag": "zh-Hans",
+      "en": "Heirs of Grace",
+      "value": "『恩典』的后嗣",
+      "problem": "quotation mark \"『\""
     }
   ]
 }

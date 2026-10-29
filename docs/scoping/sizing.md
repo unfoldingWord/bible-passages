@@ -47,13 +47,36 @@ title describe the same verses. Drafting both is a choice to make (deduped:
 | Title strings, 26 languages (RL 3 and 4; the 26 listed in the build plan's language table) | 436,436              | derived from measured | 16,786 × 26                          |
 | Evocative alternates, if translated                                                        | +13,770 per language | derived from measured | one per segment                      |
 
+## Measured: English segment titles, Philippians (#32)
+
+One run of `scripts/translate/segment-titles.ts` on 2026-10-29: Claude
+Sonnet (`anthropic/claude-sonnet-5.5`) drafted, Gemini Flash
+(`google/gemini-3.8-flash`) checked, one call each, through OpenRouter.
+Ledger: `calls` in `data/drafts/en/PHP.json`. Derived twice, from the
+record with `jq` and from the run's own `run.json` with Python; both gave
+the numbers below.
+
+| Quantity                     | Value                                     | Label               | Source and method                                                                                                    |
+| ---------------------------- | ----------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Segments drafted             | 37 of 39                                  | measured 2026-10-29 | the 2 others are their pericope's only segment and reuse its title (decision 12)                                     |
+| Cost                         | $0.0771 ($0.0241 draft, $0.0531 check)    | measured 2026-10-29 | OpenRouter's billed `cost` per call                                                                                  |
+| Cost per drafted title       | $0.0021                                   | measured 2026-10-29 | $0.0771 / 37                                                                                                         |
+| Tokens                       | 25,978 (11,769 prompt, 14,209 completion) | measured 2026-10-29 | 11,297 of the completion tokens are the checker's reasoning                                                          |
+| Model time                   | 65.7 s (8.1 s draft, 57.5 s check)        | measured 2026-10-29 | `ms` per call, summed; the calls run one after the other                                                             |
+| Titles per hour (model time) | about 2,000                               | measured 2026-10-29 | 37 / 65.7 s; excludes the person's review                                                                            |
+| Checker agreed               | 23 of 37 (`ai-checked`)                   | measured 2026-10-29 | 14 disagreements: 11 `style`, all over 60 characters, and 3 `plain`, an unclear "them" or "this view"                |
+| Drafts over 60 characters    | 11 of 37 (longest 78)                     | measured 2026-10-29 | the `length` gate; every one also disputed by the checker                                                            |
+| Drafting cost, all 66 books  | about $28                                 | estimated           | 13,507 drafted titles (13,770 segments − 263 single-segment pericopes) × $0.0021; a second book's rate would test it |
+
+Review minutes per title: not yet measured; a person reviews every
+Philippians title next (#32).
+
 ## Not measured yet
 
-| Quantity                                         | Why it matters                                       | How it gets measured                                       |
-| ------------------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------- |
-| AI drafting cost and time per title              | model spend and wall-clock for 13,770 segment titles | one full book end to end, timed and costed                 |
-| Translation cost and time per title per language | 151,074 strings for v0.1                             | the same book, translated into each v0.1 language          |
-| Review minutes per title                         | the human-hours on the critical path                 | timed review of the first book's titles by a real reviewer |
+| Quantity                                         | Why it matters                       | How it gets measured                                       |
+| ------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------- |
+| Translation cost and time per title per language | 151,074 strings for v0.1             | the same book, translated into each v0.1 language          |
+| Review minutes per title                         | the human-hours on the critical path | timed review of the first book's titles by a real reviewer |
 
 Measured re-runs replace these rows; the estimate they replace stays in git
 history.

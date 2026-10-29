@@ -1,5 +1,6 @@
 // Builds data/ from the pinned sources: the structure of every book, the
-// English titles of the books in BOOKS (the book name only for the others),
+// English titles of the books in BOOKS (the book name only for the others;
+// two names come from ULT, see NAME_OVERRIDES),
 // and the verse counts the checks use.
 //
 //   node scripts/data/build.ts
@@ -22,6 +23,39 @@ const write = (path: string, value: unknown) =>
 
 const vrs = parseVrs(await readSource("ufw-vrs"));
 
+/**
+ * Book names taken from unfoldingWord's ULT instead of BSB, decided by the
+ * maintainer on #39 (2026-10-29): BSB's `\h` reads "Psalm" and "Song". The
+ * name is ULT's `\toc2` in `ult-<book>`, and it must be the decided text, so
+ * a new ULT pin that changes it stops the build rather than shipping an
+ * undecided name. Being a person's decision, not a draft, it is `approved`.
+ */
+const NAME_OVERRIDES: Record<string, string> = {
+  PSA: "Psalms",
+  SNG: "Song of Songs",
+};
+
+/** The book name, its source and status: BSB `\h`, or a decided override. */
+async function bookName(book: string, bsb: string) {
+  const id = book.toLowerCase();
+  const decided = NAME_OVERRIDES[book];
+  if (decided !== undefined) {
+    const source = `ult-${id}`;
+    const toc2 = /^\\toc2\s+(.+)$/m.exec(await readSource(source))?.[1];
+    if (!toc2) throw new Error(`${book}: no \\toc2 book name in ${source}`);
+    const text = plain(toc2);
+    if (text !== decided) {
+      throw new Error(
+        `${book}: ${source} \\toc2 is "${text}", not the decided "${decided}"`
+      );
+    }
+    return { text, status: "approved", source };
+  }
+  const h = /^\\h\s+(.+)$/m.exec(bsb)?.[1];
+  if (!h) throw new Error(`${book}: no \\h book name`);
+  return { text: plain(h), status: "unreviewed", source: `bsb-${id}` };
+}
+
 // Only what this script writes, so a book dropped from the build leaves no
 // file.
 for (const dir of ["structure/", "titles/en/", "versification/"]) {
@@ -40,9 +74,7 @@ for (const book of STRUCTURE_BOOKS) {
   const structure = buildStructure(book, lastVerses, headings, chunks);
   await write(`structure/${book}.json`, structure);
 
-  const h = /^\\h\s+(.+)$/m.exec(usfm)?.[1];
-  if (!h) throw new Error(`${book}: no \\h book name`);
-  const name = plain(h);
+  const name = await bookName(book, usfm);
   const source = `bsb-${id}`;
   const titles: Record<
     string,
@@ -98,11 +130,24 @@ for (const book of STRUCTURE_BOOKS) {
         : { text: draft.text, status: draft.status, source: draft.source };
     }
   }
+  // Decision 12 (docs/decisions/0003): a segment that is its pericope's only
+  // segment reuses the pericope title, unless a draft gives it its own
+  // (Titus 3:9-11 was drafted before the decision). Pericope titles first,
+  // then segment titles, each in reading order.
+  const ordered: typeof titles = {};
+  for (const p of structure.pericopes)
+    if (titles[p.key]) ordered[p.key] = titles[p.key]!;
+  for (const s of structure.segments) {
+    const only =
+      structure.segments.filter((t) => t.pericope === s.pericope).length === 1;
+    const title = titles[s.key] ?? (only ? titles[s.pericope] : undefined);
+    if (title) ordered[s.key] = { ...title };
+  }
   await write(`titles/en/${book}.json`, {
     language: "en",
     book,
-    name: { text: name, status: "unreviewed", source },
-    titles,
+    name,
+    titles: ordered,
   });
   console.log(
     `${book}: ${structure.pericopes.length} pericopes, ${structure.segments.length} segments`

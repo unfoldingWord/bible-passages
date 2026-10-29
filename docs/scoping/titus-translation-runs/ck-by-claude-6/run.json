@@ -1,0 +1,57 @@
+{
+  "book": "TIT",
+  "startedAt": "2026-10-29T14:17:16.688Z",
+  "translation": {
+    "run": "/root/.claude/jobs/ce8d563e/lanes/b/.cache/titus-4d92376/tr-gemini/",
+    "model": "google/gemini-3.8-flash",
+    "sha256": "31f428b3e32413f74b4f2c2c95f5528ea17a1b3b8258d7e3f280e1c83daec9a0"
+  },
+  "prompt": {
+    "file": "prompts/check-translations.md",
+    "sha256": "3838c35d385ee23e707477fffc4c47e751f187e544a3484d425652a721fe1c3f"
+  },
+  "english": {
+    "file": "data/titles/en/TIT.json",
+    "sha256": "f1f3c262fba047e64a09354441f7ede2bf421058a6abefd3d8de4231d15e8893"
+  },
+  "notInRun": [],
+  "glossaries": {
+    "sw": "876a7e347e9f36f8009181f829e43a0a0d4cd6fd8b7c789aad3cb0e3e08d5c2c",
+    "zh-Hans": null
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "languages": ["sw", "zh-Hans"],
+  "maxCost": 0.2,
+  "stop": {
+    "error": "OpenRouter 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.\",\"code\":402,\"metadata\":{\"reason\":\"in_flight_budget_exhausted\",\"limit_source\":\"openrouter_in_flight_budget\",\"remedy_hint\":\"Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.\",\"headers\":{\"Retry-After\":\"120",
+    "language": "sw"
+  },
+  "updatedAt": "2026-10-29T14:17:16.973Z",
+  "results": {},
+  "calls": [],
+  "summary": {
+    "calls": 0,
+    "titles": 0,
+    "checked": 0,
+    "agree": 0,
+    "disagree": 0,
+    "byCriterion": {
+      "accurate": 0,
+      "terms": 0,
+      "names": 0,
+      "plain": 0,
+      "style": 0
+    },
+    "aiChecked": 0,
+    "missing": 0,
+    "invalid": 0,
+    "unreadable": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "reasoningTokens": 0,
+    "cost": 0,
+    "costPerCheck": null,
+    "modelSeconds": 0,
+    "checksPerHour": null
+  }
+}

@@ -143,12 +143,23 @@ letters, digits and `. _ : -`, at most 64 characters).
 - `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<handle>`, a
   handle the reviewer chose or the maintainer assigned, never a display name.
 - `name` is the book's name in this language; it becomes the package
-  `title`.
+  `title`. In English it is BSB's `\h` (`bsb-<book>`, `unreviewed`), except
+  for two books whose BSB name reads wrong ("Psalm", "Song"): Psalms and
+  Song of Songs take ULT's `\toc2` (`ult-psa`, `ult-sng`: unfoldingWord/en_ult
+  v91), as the maintainer decided on #39. Those two are `approved`, because a
+  person chose the exact words; the build stops if the pinned ULT `\toc2` is
+  not that text (`NAME_OVERRIDES` in `scripts/data/build.ts`). A package
+  whose name is not from BSB credits its source in `attribution` too.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 - Every book with structure has a table, because its package takes `name`
-  as its title. A book whose titles are not built yet (all but Titus so far,
-  `BOOKS` in `scripts/lib/books.ts`) has `name` and an empty `titles`.
+  as its title. A book whose titles are not built yet (all but Philippians
+  and Titus so far, `BOOKS` in `scripts/lib/books.ts`) has `name` and an
+  empty `titles`.
+- A segment that is its pericope's only segment has the pericope's title,
+  `text`, `status` and `source` alike, unless a draft gives it its own
+  (decision 12, [decisions/0003](decisions/0003-v0.1-scope-and-titles.md);
+  Titus 3:9–11 was drafted before that decision). The build fills it in.
 
 ## `data/drafts/<lang>/<BOOK>.json`
 
@@ -157,7 +168,28 @@ key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
 into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
 rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
-`prompts/`. Only English Titus exists so far.
+`prompts/`. English Titus and Philippians exist so far. A pericope's only
+segment has no draft (decision 12): it takes the pericope title in the build.
+
+Titus was drafted by an agent following `prompts/segment-titles.md`, before a
+script existed. From Philippians on, the file is a recorded AI output:
+`scripts/translate/segment-titles.ts` writes it under `.cache/` and it is
+copied here unchanged, as `data/glossary-drafts/` records are. The build
+never calls a model. Such a record also has:
+
+- `bible`: the `sources.json` id of the BSB text both models were given.
+- `prompt`: the instructions file and its SHA-256; a test holds it equal to
+  the committed `prompts/segment-titles.md`.
+- `calls`: the draft and the check call, each with its OpenRouter generation
+  id, model, tokens and cost in US dollars.
+- per title, `gates`: the mechanical rules it breaks (`length` over 60
+  characters, `full-stop`, `quotes`, `straight-apostrophe`, `line-break`,
+  `markup`), absent when it breaks none. A gated title stays `unreviewed`
+  even when the checker agreed.
+
+An English check's `criteria` are `accurate`, `covers`, `plain` and `style`.
+A person's review is recorded by a later change as `review` (`by`, `at`,
+`status`, and `text` when the reviewer reworded the title).
 
 A translated draft (`<lang>` other than `en`) has the same record, keyed by
 every titled key in the English table (pericopes and segments), plus `from`,
@@ -246,7 +278,8 @@ tc-mobile template package v0:
 
 A tc-mobile v0 title table, one per package per language in its
 `titleLanguages` whose `data/titles/<lang>/<BOOK>.json` has a title to ship.
-Built by `scripts/lib/title-table.ts`. Today that is English Titus only.
+Built by `scripts/lib/title-table.ts`. Today that is English Philippians
+and Titus.
 
 ```json
 {
@@ -275,7 +308,11 @@ Built by `scripts/lib/title-table.ts`. Today that is English Titus only.
   phone cannot tell an `ai-checked` title from a `human-reviewed` one. Carrying
   status needs a tc-mobile `formatVersion` change (tc-mobile#1450, open
   question O4).
-- An unknown status, or an empty or whitespace-padded title, stops the build.
+- An unknown status, or an empty or whitespace-padded title, for a package
+  segment key stops the build. The build does not read the entries for other
+  keys (pericope keys); `npm run verify` holds every entry in
+  `data/titles/<lang>/<BOOK>.json`, pericope keys included, to the same rule
+  (`tests/structure.test.ts`).
 
 ## `sources.json`
 
@@ -318,15 +355,30 @@ check the bump yet.
    (on `main`, naming its commit's `package.json` version) counts as a
    release there.
 3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
-   files exactly, as in CI.
+   files exactly, as in CI. On a mismatch the step prints `git diff HEAD` of
+   both before it stops, so a dry run's output keeps the difference to a
+   tracked file after the files are restored; an untracked file is named,
+   not shown.
 4. `dist/` is regenerated with `source.revision` set to the tag. The release
-   stops unless every top-level file in `dist/tc-mobile/` has
-   `"revision": "<tag>"` (`scripts/lib/release.ts`). Title tables under
-   `dist/tc-mobile/titles/` share their package's file name, so until their
-   asset names are decided a nested file stops the release too. Since English
-   Titus has a table, no release can be cut until that is decided.
-5. The top-level files are attached to a **draft** release, published by
-   hand.
+   stops unless every top-level `.json` package in `dist/tc-mobile/` has
+   `"revision": "<tag>"` (`scripts/lib/release.ts`). The empty `.gitkeep`
+   that keeps the directory in git is exempt and is not attached. Any other
+   top-level entry stops the release unless it is a regular `.json` file or a
+   directory whose name does not end in `.json` (a symlink stops it).
+   Title tables `dist/tc-mobile/titles/<lang>/<BOOK>.json` are checked too.
+   A table has no `source` block, so it carries no revision; it is tied to
+   the release through its package instead: its `packageId` and `version`
+   must equal the `id` and `version` of `<BOOK>.json` in the same release
+   (whose revision was just checked), and its `language` must be the
+   `<lang>` it sits under. Any other nested file, or a nested entry that is
+   not a regular file, stops the release.
+5. The packages and title tables are attached to a **draft** release,
+   published by hand. Release assets are flat and a table shares its
+   package's file name, so each table is attached as
+   `titles.<lang>.<BOOK>.json` (for example `titles.en.TIT.json`,
+   `titles.es-419.TIT.json`); a package keeps its own name (`TIT.json`).
+   The script copies each file under its asset name into a temporary
+   directory and attaches the copies.
 
 **A failed release.** A tag that passes step 1 and then fails a later step
 stays in the key check's baseline for every later release (step 2), and its

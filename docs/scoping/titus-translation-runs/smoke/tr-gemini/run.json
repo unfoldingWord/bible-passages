@@ -1,0 +1,65 @@
+{
+  "book": "TIT",
+  "startedAt": "2026-10-29T13:10:00.949Z",
+  "prompt": {
+    "file": "prompts/translate-titles.md",
+    "sha256": "4887f0d8850fdca3bc8591f0df03cc14259afaf0f9c2c8d158e46179193a304e"
+  },
+  "english": {
+    "file": "data/titles/en/TIT.json",
+    "sha256": "f1f3c262fba047e64a09354441f7ede2bf421058a6abefd3d8de4231d15e8893"
+  },
+  "glossaries": {
+    "fr": "78ab6b5c78393cfc3dff4df4e3f2855609c2cc82a32aaf8af8d0a6880394d51d",
+    "ar": "68daab2bc4afaa973f51db36d95ad0aea64fd4e20c835c52b84782c0c3d2e350"
+  },
+  "model": "google/gemini-3.8-flash",
+  "languages": ["fr", "ar"],
+  "maxCost": 0.05,
+  "stop": "done",
+  "updatedAt": "2026-10-29T13:10:07.173Z",
+  "results": {
+    "fr": { "missing": [], "invalid": [] },
+    "ar": { "missing": [], "invalid": [] }
+  },
+  "calls": [
+    {
+      "language": "fr",
+      "keys": ["TIT.P.3.9-11", "TIT.3.15-15"],
+      "id": "gen-1793279401-rD8pKRpYD2erIupMzVbS",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 798,
+      "completionTokens": 330,
+      "reasoningTokens": 285,
+      "cost": 0.001836,
+      "ms": 2766
+    },
+    {
+      "language": "ar",
+      "keys": ["TIT.P.3.9-11", "TIT.3.15-15"],
+      "id": "gen-1793279403-AfgWUZfAoxXY9gibC3Wd",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 838,
+      "completionTokens": 439,
+      "reasoningTokens": 391,
+      "cost": 0.00227475,
+      "ms": 3411
+    }
+  ],
+  "summary": {
+    "calls": 2,
+    "requested": 4,
+    "titles": 4,
+    "missing": 0,
+    "invalid": 0,
+    "unreadable": 0,
+    "gateFailures": 0,
+    "promptTokens": 1636,
+    "completionTokens": 769,
+    "reasoningTokens": 676,
+    "cost": 0.00411075,
+    "costPerTitle": 0.0010276875,
+    "modelSeconds": 6.177,
+    "titlesPerHour": 2331.2287518212725
+  }
+}

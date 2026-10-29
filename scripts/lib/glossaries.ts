@@ -187,8 +187,11 @@ export const isGlossaryInput = (id: string) =>
  * and half not, is a gap. A headword with no letters is not in any script.
  */
 export function inScript(word: string, script: RegExp): boolean {
+  // A copy without `g` or `y`: either flag makes `test` resume from the
+  // last match's `lastIndex`, so it would skip letters between calls.
+  const re = new RegExp(script.source, script.flags.replace(/[gy]/g, ""));
   const letters = [...word].filter((c) => /\p{L}/u.test(c));
-  const inside = letters.filter((c) => script.test(c)).length;
+  const inside = letters.filter((c) => re.test(c)).length;
   return inside * 2 > letters.length;
 }
 
@@ -340,8 +343,9 @@ export type Credit = { licence: string; attribution: string };
  * markdown in that language, or undefined if it is not pinned; `english`
  * returns the English article; `credit` returns a pinned source's licence
  * and attribution. Every linked article must be either pinned or listed as
- * absent, never both. The sources a glossary draws on must share one
- * licence; a mix would need a decision, so it is refused.
+ * absent, never both. Every source a glossary draws on must have a
+ * licence and an attribution, and all must share one licence; a mix would
+ * need a decision, so it is refused, naming the pins under each licence.
  */
 export async function buildGlossary(
   repo: TwRepo,
@@ -387,12 +391,30 @@ export async function buildGlossary(
     twlId(book),
     ...Object.entries(terms).flatMap(([a, t]) => [t.source, twId("en", a)]),
   ];
-  const credits = used.map(credit);
-  const licences = [...new Set(credits.map((c) => c.licence))];
-  const [licence] = licences;
-  if (licence === undefined || licences.length !== 1) {
+  const pins = used.map((id) => ({ id, ...credit(id) }));
+  const blank = [
+    ...new Set(
+      pins
+        .filter((p) => p.licence.trim() === "" || p.attribution.trim() === "")
+        .map((p) => p.id)
+    ),
+  ];
+  if (blank.length > 0) {
     throw new Error(
-      `${repo.language} ${book}: sources under ${licences.length} licences (${licences.join(", ")}), not one`
+      `${repo.language} ${book}: blank licence or attribution in sources.json for ${blank.join(", ")}`
+    );
+  }
+  const byLicence = new Map<string, Set<string>>();
+  for (const p of pins) {
+    byLicence.set(p.licence, (byLicence.get(p.licence) ?? new Set()).add(p.id));
+  }
+  const [licence] = byLicence.keys();
+  if (licence === undefined || byLicence.size !== 1) {
+    const groups = [...byLicence].map(
+      ([l, ids]) => `${l}: ${[...ids].join(", ")}`
+    );
+    throw new Error(
+      `${repo.language} ${book}: sources under ${byLicence.size} licences, not one (${groups.join("; ")})`
     );
   }
   return {
@@ -401,7 +423,7 @@ export async function buildGlossary(
     links: twlId(book),
     words: { repo: repo.repo, release: repo.release, commit: repo.commit },
     licence,
-    attribution: [...new Set(credits.map((c) => c.attribution))],
+    attribution: [...new Set(pins.map((p) => p.attribution))],
     terms,
     gaps,
   };

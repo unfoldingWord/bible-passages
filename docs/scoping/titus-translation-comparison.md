@@ -55,8 +55,9 @@ largest completion on the run was 5,503 tokens.
 call per language, run one after another.
 
 For the choice rule, before review: the disagreement counts differ by
-|10 − 5| / 10 = 50%, far outside "about 10%", so on the early signal alone
-the cost tie-break would not come into play (the exact tie test is #50).
+|10 − 5| / 10 = 0.50, above the tie line of 0.10 (ADR 0002, choice-rule
+details, decided after this run and before any human review), so on the
+early signal alone the cost tie-break would not come into play.
 This page does not choose; the DRI does (ADR 0002, rule 4), with the
 caveats below.
 
@@ -122,4 +123,11 @@ for each model, under the 2.2 gate.
 $1.37962 in all on 2026-10-29 for this lane, summed from every ledger: the
 Titus run $1.36968 ($0.21382 + $0.41961 translating, $0.52524 Claude
 checking, $0.21101 Gemini checking) and a 4-title smoke test $0.00994. Each
-figure is rounded from the unrounded ledger sum. The spending cap was $5.
+figure is rounded from the unrounded ledger sum.[^ledgers] The spending cap was $5.
+
+[^ledgers]:
+    Unrounded, from the committed ledgers in
+    [titus-translation-runs/](titus-translation-runs/README.md): the Titus
+    run $1.36967825 (36 calls in 15 ledgers) and the smoke test $0.00994075
+    (4 calls in 2 ledgers). The per-language files those ledgers point to
+    are withheld until the blind review (#64) closes.

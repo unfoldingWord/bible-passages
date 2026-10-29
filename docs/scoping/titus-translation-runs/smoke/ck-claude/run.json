@@ -1,0 +1,79 @@
+{
+  "book": "TIT",
+  "startedAt": "2026-10-29T13:10:07.259Z",
+  "translation": {
+    "run": "/root/.claude/jobs/ce8d563e/lanes/b/.cache/smoke/tr-gemini/",
+    "model": "google/gemini-3.8-flash",
+    "sha256": "cf764383f13db7251fb00dcc5f5c8905dc8c12ee66f21f7e17a0a0223ce31b80"
+  },
+  "prompt": {
+    "file": "prompts/check-translations.md",
+    "sha256": "3838c35d385ee23e707477fffc4c47e751f187e544a3484d425652a721fe1c3f"
+  },
+  "english": {
+    "file": "data/titles/en/TIT.json",
+    "sha256": "f1f3c262fba047e64a09354441f7ede2bf421058a6abefd3d8de4231d15e8893"
+  },
+  "glossaries": {
+    "fr": "78ab6b5c78393cfc3dff4df4e3f2855609c2cc82a32aaf8af8d0a6880394d51d",
+    "ar": "68daab2bc4afaa973f51db36d95ad0aea64fd4e20c835c52b84782c0c3d2e350"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "languages": ["fr", "ar"],
+  "maxCost": 0.05,
+  "stop": "done",
+  "updatedAt": "2026-10-29T13:10:09.750Z",
+  "results": {
+    "fr": { "missing": [], "invalid": [] },
+    "ar": { "missing": [], "invalid": [] }
+  },
+  "calls": [
+    {
+      "language": "fr",
+      "keys": ["TIT.P.3.9-11", "TIT.3.15-15"],
+      "id": "gen-1793279407-UfxJfsZHBrYoC92ZWaOM",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 1146,
+      "completionTokens": 51,
+      "reasoningTokens": 0,
+      "cost": 0.002802,
+      "ms": 1135
+    },
+    {
+      "language": "ar",
+      "keys": ["TIT.P.3.9-11", "TIT.3.15-15"],
+      "id": "gen-1793279408-xR09r7w3F6UepbMTsvSi",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 1259,
+      "completionTokens": 51,
+      "reasoningTokens": 0,
+      "cost": 0.003028,
+      "ms": 1297
+    }
+  ],
+  "summary": {
+    "calls": 2,
+    "titles": 4,
+    "checked": 4,
+    "agree": 4,
+    "disagree": 0,
+    "byCriterion": {
+      "accurate": 0,
+      "terms": 0,
+      "names": 0,
+      "plain": 0,
+      "style": 0
+    },
+    "aiChecked": 4,
+    "missing": 0,
+    "invalid": 0,
+    "unreadable": 0,
+    "promptTokens": 2405,
+    "completionTokens": 102,
+    "reasoningTokens": 0,
+    "cost": 0.00583,
+    "costPerCheck": 0.0014575,
+    "modelSeconds": 2.432,
+    "checksPerHour": 5921.0526315789475
+  }
+}
