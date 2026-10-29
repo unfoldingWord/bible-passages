@@ -592,7 +592,10 @@ const rqDir = (s) => (s.dir === "rtl" ? "rtl" : "ltr");
 // save can never replace a review the page has not shown them.
 const rqCan = () => Boolean(RV.db && RV.uid && RQ.handle && RQ.loaded && !RQ.loadError);
 // Done for this reviewer: they reviewed the wording that is in the queue now.
-const rqDone = (s, it) => RQ.mine[rqId(s, it)]?.seen === it.text;
+// A review is current while the queue shows the wording it saw or, for an
+// edit, the wording it produced (once the edit is merged and republished).
+const rqMatches = (mine, text) => !!mine && (mine.seen === text || (mine.action === "edit" && mine.text === text));
+const rqDone = (s, it) => rqMatches(RQ.mine[rqId(s, it)], it.text);
 const rqOpen = (s, it) => !rqDone(s, it) && !RQ.skipped.has(rqId(s, it));
 function rqFirst() {
   const s = rqSet();
@@ -672,7 +675,7 @@ function renderReview(focus) {
   }
   const n = s.items.indexOf(it) + 1, mine = RQ.mine[rqId(s, it)], lang = esc(s.lang), dir = rqDir(s);
   const statusCls = { "human-reviewed": "good", approved: "good", "ai-checked": "blue", unreviewed: "warn" }[it.status] || "";
-  const fresh = mine && mine.seen === it.text;
+  const fresh = rqMatches(mine, it.text);
   const mineLine = mine ? `<div class="rv-mine${fresh ? "" : " old"}">${fresh ? "" : "The title changed after your review. "}You ${mine.action === "edit" ? `changed it to <b lang="${lang}" dir="${dir}">${esc(mine.text)}</b>` : "approved it"} on ${esc(day(mine.at))}.</div>` : "";
   const can = rqCan() && !RQ.busy, off = can ? "" : " disabled";
   const hint = RQ.msg || (rqCan() ? "" : !(RV.db && RV.uid) ? "Sign in to claude.ai to review." : !RQ.handle ? "Choose a reviewer name above to start."

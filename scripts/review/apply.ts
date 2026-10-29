@@ -86,6 +86,11 @@ console.log(
   (dry ? "Dry run; nothing written.\n\n" : "") +
     summary(applied) +
     (skipped.length
-      ? `\n\n${skipped.length} saved no later than a review already applied (applied or overtaken by an earlier batch), passed over.`
+      ? `\n\n${skipped.length} saved no later than a review already applied (applied or overtaken by an earlier batch), passed over:\n` +
+        skipped
+          .map(
+            (r) => `- ${r.lang}/${r.book} ${r.key} reviewer:${r.handle} ${r.at}`
+          )
+          .join("\n")
       : "")
 );
