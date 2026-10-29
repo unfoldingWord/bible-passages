@@ -119,7 +119,9 @@ for (const repo of TW) {
   }
   console.log(`${repo.language}: ${measured.length} linked articles absent`);
   for (const book of GLOSSARY_BOOKS) {
-    for (const article of linkedBy.get(book) ?? []) {
+    const linked = linkedBy.get(book);
+    if (linked === undefined) throw new Error(`${book}: TWL not read`);
+    for (const article of linked) {
       if (repo.absent.includes(article)) continue;
       queue({
         id: twId(repo.language, article),
@@ -170,6 +172,12 @@ const before = sources();
 const first = before.findIndex((s) => isGlossaryInput(s.id));
 const at = first < 0 ? before.length : first;
 const rest = (list: Source[]) => list.filter((s) => !isGlossaryInput(s.id));
+// Say which glossary pins this run drops, so a run from a tree with fewer
+// books or languages is visible, not silent.
+const kept = new Set(pins.map((p) => p.id));
+const dropped = before.filter((s) => isGlossaryInput(s.id) && !kept.has(s.id));
+for (const s of dropped) console.log(`removed ${s.id}`);
+console.log(`${dropped.length} glossary inputs removed`);
 await writeJson(new URL("../../sources.json", import.meta.url), {
   sources: [...rest(before.slice(0, at)), ...pins, ...rest(before.slice(at))],
 });

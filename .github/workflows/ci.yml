@@ -65,6 +65,22 @@ jobs:
 
       - run: npm ci
 
+      # Pinned inputs downloaded by the tests and the build, cached so CI
+      # fetches from Door43 only when sources.json changes (about 8,000
+      # files once every book's glossary inputs are pinned). A stale cache
+      # cannot change the data: each file is named by its id and pinned
+      # SHA-256, so a file from an older pin is never read, and every read
+      # is hash-checked (scripts/lib/sources.ts), so a file that does not
+      # match its pin is deleted and the run fails rather than use it. A
+      # miss, or a partial restore from an older sources.json, fetches only
+      # what is missing.
+      - name: Cache pinned sources
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/sources
+          key: sources-${{ hashFiles('sources.json') }}
+          restore-keys: sources-
+
       # The release tags are the key check's baseline. Fetch them explicitly
       # rather than rely on actions/checkout's defaults: an empty tag list
       # reads as "never released" and skips every span comparison.

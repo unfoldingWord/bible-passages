@@ -17,3 +17,16 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
 - Glossary code for every book (#30): `GLOSSARY_BOOKS` apart from `BOOKS`;
   `TWL_BOOKS`, the 59 books `en_twl` v91 has; Psalms `c:front` references;
   per-release absent lists; a `no-heading` gap. Still Titus only.
+- Glossaries for the 59 books `en_twl` v91 has, in the nine languages with
+  Translation Words (#30): 531 files, 7,951 pinned inputs. CI caches the
+  pinned downloads, keyed on `sources.json`.
+
+### Known issues
+
+- No glossary for Numbers, 1 and 2 Chronicles, Ecclesiastes, Isaiah,
+  Jeremiah or Ezekiel: the pinned `en_twl` v91 has no Translation Word
+  Links for them. Waiting for a release (#57).
+- Glossary gaps (`gaps` in each file), summed over 59 books: Arabic 5,371
+  headwords still in English (638 articles); Indonesian 2,501 linked
+  articles missing (243); smaller counts per language in
+  `docs/scoping/glossaries.md`, "Every book".

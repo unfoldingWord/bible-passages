@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { ALL_BOOKS } from "../scripts/lib/books.ts";
@@ -408,6 +409,29 @@ describe("absent lists", () => {
     });
   });
 
+  it("has the lists measured on 2026-10-29, each in its language", () => {
+    // Lengths miss two lists of one length swapped (hi, ru and sw have 41
+    // each), so each list is also checked by its SHA-256 (the articles
+    // joined by newlines). hi and ru lack the same 41 articles.
+    const digest = (list: readonly string[]) =>
+      createHash("sha256").update(list.join("\n")).digest("hex");
+    expect(
+      Object.fromEntries(TW.map((r) => [r.language, digest(r.absent)]))
+    ).toEqual({
+      en: "c6d07fe737584b13ed3c11987bc5ad7211f2d3777cab399d500acfaf8382ffc2",
+      ar: "9a9bb21e99e474999cd1a38c00e77277c7ba118101b82708c2f3f9c1c2c18859",
+      "es-419":
+        "eee963d599bda91a1189e966f2a929b36ec9c15fd471f8721b70204d0da8454c",
+      fr: "791dd7017a0134d2259a8cf9e5e36ede886a7843337e53f3415dafda400e652c",
+      hi: "3c0a9a43ade5e4a60e41c6ef2f1d91315217e7c11db05c2867ac926cea1daa08",
+      id: "f52fc46dc6ab5ca234a56323e732e23ec07b1088874c465f1367d34a8f84ab58",
+      "pt-BR":
+        "24668a0ea30a70e2c0cb6a50fd65108a7e1c4114925d454bb609c8820bfa3bc1",
+      ru: "3c0a9a43ade5e4a60e41c6ef2f1d91315217e7c11db05c2867ac926cea1daa08",
+      sw: "1a0e7e94978497d4e347f57075086d791589b9e96e50591e2240b2b2fda0da61",
+    });
+  });
+
   it("pins no article a language lists as absent", () => {
     for (const repo of TW) {
       for (const a of repo.absent) {
@@ -434,9 +458,14 @@ describe("data/glossaries", () => {
       (l) => DRAFT_LANGUAGES[l] !== undefined
     );
     expect(langs).toEqual([...TW.map((r) => r.language), ...drafted].sort());
+    // Every glossary book for a Translation Words language; for an
+    // AI-drafted one, the books it has a record for.
     for (const lang of langs) {
+      const books = drafted.includes(lang)
+        ? readdirSync(new URL(`${lang}/`, drafts))
+        : GLOSSARY_BOOKS.map((b) => `${b}.json`);
       expect(readdirSync(new URL(`${lang}/`, dir)).sort()).toEqual(
-        GLOSSARY_BOOKS.map((b) => `${b}.json`).sort()
+        books.sort()
       );
     }
   });
