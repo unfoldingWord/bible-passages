@@ -65,7 +65,12 @@ for (const book of BOOKS) {
       JSON.parse(readFileSync(draftFile, "utf8")) as {
         titles: Record<
           string,
-          { text: string; status: string; source: string }
+          {
+            text: string;
+            status: string;
+            source: string;
+            review?: { by: string; status: string; text?: string };
+          }
         >;
       }
     ).titles;
@@ -74,11 +79,16 @@ for (const book of BOOKS) {
       if (!segmentKeys.has(key))
         throw new Error(`${book}: draft for unknown segment key ${key}`);
       // The check's details stay in data/drafts/; the table gets the title.
-      titles[key] = {
-        text: draft.text,
-        status: draft.status,
-        source: draft.source,
-      };
+      // A person's review, when there is one, decides the title: its status,
+      // and its own wording (with the reviewer as source) if it gave one.
+      const { review } = draft;
+      titles[key] = review
+        ? {
+            text: review.text ?? draft.text,
+            status: review.status,
+            source: review.text ? review.by : draft.source,
+          }
+        : { text: draft.text, status: draft.status, source: draft.source };
     }
   }
   await write(`titles/en/${book}.json`, {
