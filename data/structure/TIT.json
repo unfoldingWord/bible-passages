@@ -1,0 +1,166 @@
+{
+  "book": "TIT",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "TIT.P.1.1-4", "start": [1, 1], "end": [1, 4] },
+    { "key": "TIT.P.1.5-9", "start": [1, 5], "end": [1, 9] },
+    { "key": "TIT.P.1.10-16", "start": [1, 10], "end": [1, 16] },
+    { "key": "TIT.P.2.1-10", "start": [2, 1], "end": [2, 10] },
+    { "key": "TIT.P.2.11-15", "start": [2, 11], "end": [2, 15] },
+    { "key": "TIT.P.3.1-8", "start": [3, 1], "end": [3, 8] },
+    { "key": "TIT.P.3.9-11", "start": [3, 9], "end": [3, 11] },
+    { "key": "TIT.P.3.12-15", "start": [3, 12], "end": [3, 15] }
+  ],
+  "segments": [
+    {
+      "key": "TIT.1.1-3",
+      "pericope": "TIT.P.1.1-4",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "TIT.1.4-4",
+      "pericope": "TIT.P.1.1-4",
+      "start": [1, 4],
+      "end": [1, 4]
+    },
+    {
+      "key": "TIT.1.5-5",
+      "pericope": "TIT.P.1.5-9",
+      "start": [1, 5],
+      "end": [1, 5]
+    },
+    {
+      "key": "TIT.1.6-7",
+      "pericope": "TIT.P.1.5-9",
+      "start": [1, 6],
+      "end": [1, 7]
+    },
+    {
+      "key": "TIT.1.8-9",
+      "pericope": "TIT.P.1.5-9",
+      "start": [1, 8],
+      "end": [1, 9]
+    },
+    {
+      "key": "TIT.1.10-11",
+      "pericope": "TIT.P.1.10-16",
+      "start": [1, 10],
+      "end": [1, 11]
+    },
+    {
+      "key": "TIT.1.12-13",
+      "pericope": "TIT.P.1.10-16",
+      "start": [1, 12],
+      "end": [1, 13]
+    },
+    {
+      "key": "TIT.1.14-14",
+      "pericope": "TIT.P.1.10-16",
+      "start": [1, 14],
+      "end": [1, 14]
+    },
+    {
+      "key": "TIT.1.15-16",
+      "pericope": "TIT.P.1.10-16",
+      "start": [1, 15],
+      "end": [1, 16]
+    },
+    {
+      "key": "TIT.2.1-2",
+      "pericope": "TIT.P.2.1-10",
+      "start": [2, 1],
+      "end": [2, 2]
+    },
+    {
+      "key": "TIT.2.3-5",
+      "pericope": "TIT.P.2.1-10",
+      "start": [2, 3],
+      "end": [2, 5]
+    },
+    {
+      "key": "TIT.2.6-8",
+      "pericope": "TIT.P.2.1-10",
+      "start": [2, 6],
+      "end": [2, 8]
+    },
+    {
+      "key": "TIT.2.9-10",
+      "pericope": "TIT.P.2.1-10",
+      "start": [2, 9],
+      "end": [2, 10]
+    },
+    {
+      "key": "TIT.2.11-13",
+      "pericope": "TIT.P.2.11-15",
+      "start": [2, 11],
+      "end": [2, 13]
+    },
+    {
+      "key": "TIT.2.14-14",
+      "pericope": "TIT.P.2.11-15",
+      "start": [2, 14],
+      "end": [2, 14]
+    },
+    {
+      "key": "TIT.2.15-15",
+      "pericope": "TIT.P.2.11-15",
+      "start": [2, 15],
+      "end": [2, 15]
+    },
+    {
+      "key": "TIT.3.1-2",
+      "pericope": "TIT.P.3.1-8",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "TIT.3.3-3",
+      "pericope": "TIT.P.3.1-8",
+      "start": [3, 3],
+      "end": [3, 3]
+    },
+    {
+      "key": "TIT.3.4-5",
+      "pericope": "TIT.P.3.1-8",
+      "start": [3, 4],
+      "end": [3, 5]
+    },
+    {
+      "key": "TIT.3.6-7",
+      "pericope": "TIT.P.3.1-8",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "TIT.3.8-8",
+      "pericope": "TIT.P.3.1-8",
+      "start": [3, 8],
+      "end": [3, 8]
+    },
+    {
+      "key": "TIT.3.9-11",
+      "pericope": "TIT.P.3.9-11",
+      "start": [3, 9],
+      "end": [3, 11]
+    },
+    {
+      "key": "TIT.3.12-13",
+      "pericope": "TIT.P.3.12-15",
+      "start": [3, 12],
+      "end": [3, 13]
+    },
+    {
+      "key": "TIT.3.14-14",
+      "pericope": "TIT.P.3.12-15",
+      "start": [3, 14],
+      "end": [3, 14]
+    },
+    {
+      "key": "TIT.3.15-15",
+      "pericope": "TIT.P.3.12-15",
+      "start": [3, 15],
+      "end": [3, 15]
+    }
+  ]
+}
