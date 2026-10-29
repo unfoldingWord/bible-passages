@@ -1,0 +1,236 @@
+{
+  "book": "COL",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "COL.P.1.1-2", "start": [1, 1], "end": [1, 2] },
+    { "key": "COL.P.1.3-14", "start": [1, 3], "end": [1, 14] },
+    { "key": "COL.P.1.15-23", "start": [1, 15], "end": [1, 23] },
+    { "key": "COL.P.1.24-29", "start": [1, 24], "end": [1, 29] },
+    { "key": "COL.P.2.1-5", "start": [2, 1], "end": [2, 5] },
+    { "key": "COL.P.2.6-23", "start": [2, 6], "end": [2, 23] },
+    { "key": "COL.P.3.1-17", "start": [3, 1], "end": [3, 17] },
+    { "key": "COL.P.3.18-21", "start": [3, 18], "end": [3, 21] },
+    { "key": "COL.P.3.22-25", "start": [3, 22], "end": [3, 25] },
+    { "key": "COL.P.4.1-6", "start": [4, 1], "end": [4, 6] },
+    { "key": "COL.P.4.7-14", "start": [4, 7], "end": [4, 14] },
+    { "key": "COL.P.4.15-18", "start": [4, 15], "end": [4, 18] }
+  ],
+  "segments": [
+    {
+      "key": "COL.1.1-2",
+      "pericope": "COL.P.1.1-2",
+      "start": [1, 1],
+      "end": [1, 2]
+    },
+    {
+      "key": "COL.1.3-3",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 3],
+      "end": [1, 3]
+    },
+    {
+      "key": "COL.1.4-6",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 4],
+      "end": [1, 6]
+    },
+    {
+      "key": "COL.1.7-8",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 7],
+      "end": [1, 8]
+    },
+    {
+      "key": "COL.1.9-10",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 9],
+      "end": [1, 10]
+    },
+    {
+      "key": "COL.1.11-12",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 11],
+      "end": [1, 12]
+    },
+    {
+      "key": "COL.1.13-14",
+      "pericope": "COL.P.1.3-14",
+      "start": [1, 13],
+      "end": [1, 14]
+    },
+    {
+      "key": "COL.1.15-17",
+      "pericope": "COL.P.1.15-23",
+      "start": [1, 15],
+      "end": [1, 17]
+    },
+    {
+      "key": "COL.1.18-20",
+      "pericope": "COL.P.1.15-23",
+      "start": [1, 18],
+      "end": [1, 20]
+    },
+    {
+      "key": "COL.1.21-23",
+      "pericope": "COL.P.1.15-23",
+      "start": [1, 21],
+      "end": [1, 23]
+    },
+    {
+      "key": "COL.1.24-27",
+      "pericope": "COL.P.1.24-29",
+      "start": [1, 24],
+      "end": [1, 27]
+    },
+    {
+      "key": "COL.1.28-29",
+      "pericope": "COL.P.1.24-29",
+      "start": [1, 28],
+      "end": [1, 29]
+    },
+    {
+      "key": "COL.2.1-3",
+      "pericope": "COL.P.2.1-5",
+      "start": [2, 1],
+      "end": [2, 3]
+    },
+    {
+      "key": "COL.2.4-5",
+      "pericope": "COL.P.2.1-5",
+      "start": [2, 4],
+      "end": [2, 5]
+    },
+    {
+      "key": "COL.2.6-7",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 6],
+      "end": [2, 7]
+    },
+    {
+      "key": "COL.2.8-9",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 8],
+      "end": [2, 9]
+    },
+    {
+      "key": "COL.2.10-12",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 10],
+      "end": [2, 12]
+    },
+    {
+      "key": "COL.2.13-15",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 13],
+      "end": [2, 15]
+    },
+    {
+      "key": "COL.2.16-17",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 16],
+      "end": [2, 17]
+    },
+    {
+      "key": "COL.2.18-19",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 18],
+      "end": [2, 19]
+    },
+    {
+      "key": "COL.2.20-23",
+      "pericope": "COL.P.2.6-23",
+      "start": [2, 20],
+      "end": [2, 23]
+    },
+    {
+      "key": "COL.3.1-4",
+      "pericope": "COL.P.3.1-17",
+      "start": [3, 1],
+      "end": [3, 4]
+    },
+    {
+      "key": "COL.3.5-8",
+      "pericope": "COL.P.3.1-17",
+      "start": [3, 5],
+      "end": [3, 8]
+    },
+    {
+      "key": "COL.3.9-11",
+      "pericope": "COL.P.3.1-17",
+      "start": [3, 9],
+      "end": [3, 11]
+    },
+    {
+      "key": "COL.3.12-14",
+      "pericope": "COL.P.3.1-17",
+      "start": [3, 12],
+      "end": [3, 14]
+    },
+    {
+      "key": "COL.3.15-17",
+      "pericope": "COL.P.3.1-17",
+      "start": [3, 15],
+      "end": [3, 17]
+    },
+    {
+      "key": "COL.3.18-21",
+      "pericope": "COL.P.3.18-21",
+      "start": [3, 18],
+      "end": [3, 21]
+    },
+    {
+      "key": "COL.3.22-25",
+      "pericope": "COL.P.3.22-25",
+      "start": [3, 22],
+      "end": [3, 25]
+    },
+    {
+      "key": "COL.4.1-1",
+      "pericope": "COL.P.4.1-6",
+      "start": [4, 1],
+      "end": [4, 1]
+    },
+    {
+      "key": "COL.4.2-4",
+      "pericope": "COL.P.4.1-6",
+      "start": [4, 2],
+      "end": [4, 4]
+    },
+    {
+      "key": "COL.4.5-6",
+      "pericope": "COL.P.4.1-6",
+      "start": [4, 5],
+      "end": [4, 6]
+    },
+    {
+      "key": "COL.4.7-9",
+      "pericope": "COL.P.4.7-14",
+      "start": [4, 7],
+      "end": [4, 9]
+    },
+    {
+      "key": "COL.4.10-11",
+      "pericope": "COL.P.4.7-14",
+      "start": [4, 10],
+      "end": [4, 11]
+    },
+    {
+      "key": "COL.4.12-14",
+      "pericope": "COL.P.4.7-14",
+      "start": [4, 12],
+      "end": [4, 14]
+    },
+    {
+      "key": "COL.4.15-17",
+      "pericope": "COL.P.4.15-18",
+      "start": [4, 15],
+      "end": [4, 17]
+    },
+    {
+      "key": "COL.4.18-18",
+      "pericope": "COL.P.4.15-18",
+      "start": [4, 18],
+      "end": [4, 18]
+    }
+  ]
+}

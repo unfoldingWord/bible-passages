@@ -1,0 +1,2668 @@
+{
+  "book": "JOB",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "JOB.P.1.1-5", "start": [1, 1], "end": [1, 5] },
+    { "key": "JOB.P.1.6-12", "start": [1, 6], "end": [1, 12] },
+    { "key": "JOB.P.1.13-22", "start": [1, 13], "end": [1, 22] },
+    { "key": "JOB.P.2.1-10", "start": [2, 1], "end": [2, 10] },
+    { "key": "JOB.P.2.11-13", "start": [2, 11], "end": [2, 13] },
+    { "key": "JOB.P.3.1-26", "start": [3, 1], "end": [3, 26] },
+    { "key": "JOB.P.4.1-21", "start": [4, 1], "end": [4, 21] },
+    { "key": "JOB.P.5.1-27", "start": [5, 1], "end": [5, 27] },
+    { "key": "JOB.P.6.1-30", "start": [6, 1], "end": [6, 30] },
+    { "key": "JOB.P.7.1-21", "start": [7, 1], "end": [7, 21] },
+    { "key": "JOB.P.8.1-22", "start": [8, 1], "end": [8, 22] },
+    { "key": "JOB.P.9.1-35", "start": [9, 1], "end": [9, 35] },
+    { "key": "JOB.P.10.1-22", "start": [10, 1], "end": [10, 22] },
+    { "key": "JOB.P.11.1-20", "start": [11, 1], "end": [11, 20] },
+    { "key": "JOB.P.12.1-25", "start": [12, 1], "end": [12, 25] },
+    { "key": "JOB.P.13.1-28", "start": [13, 1], "end": [13, 28] },
+    { "key": "JOB.P.14.1-22", "start": [14, 1], "end": [14, 22] },
+    { "key": "JOB.P.15.1-35", "start": [15, 1], "end": [15, 35] },
+    { "key": "JOB.P.16.1-22", "start": [16, 1], "end": [16, 22] },
+    { "key": "JOB.P.17.1-16", "start": [17, 1], "end": [17, 16] },
+    { "key": "JOB.P.18.1-21", "start": [18, 1], "end": [18, 21] },
+    { "key": "JOB.P.19.1-29", "start": [19, 1], "end": [19, 29] },
+    { "key": "JOB.P.20.1-29", "start": [20, 1], "end": [20, 29] },
+    { "key": "JOB.P.21.1-34", "start": [21, 1], "end": [21, 34] },
+    { "key": "JOB.P.22.1-30", "start": [22, 1], "end": [22, 30] },
+    { "key": "JOB.P.23.1-17", "start": [23, 1], "end": [23, 17] },
+    { "key": "JOB.P.24.1-25", "start": [24, 1], "end": [24, 25] },
+    { "key": "JOB.P.25.1-6", "start": [25, 1], "end": [25, 6] },
+    { "key": "JOB.P.26.1-14", "start": [26, 1], "end": [26, 14] },
+    { "key": "JOB.P.27.1-6", "start": [27, 1], "end": [27, 6] },
+    { "key": "JOB.P.27.7-23", "start": [27, 7], "end": [27, 23] },
+    { "key": "JOB.P.28.1-28", "start": [28, 1], "end": [28, 28] },
+    { "key": "JOB.P.29.1-25", "start": [29, 1], "end": [29, 25] },
+    { "key": "JOB.P.30.1-14", "start": [30, 1], "end": [30, 14] },
+    { "key": "JOB.P.30.15-31", "start": [30, 15], "end": [30, 31] },
+    { "key": "JOB.P.31.1-40", "start": [31, 1], "end": [31, 40] },
+    { "key": "JOB.P.32.1-22", "start": [32, 1], "end": [32, 22] },
+    { "key": "JOB.P.33.1-33", "start": [33, 1], "end": [33, 33] },
+    { "key": "JOB.P.34.1-37", "start": [34, 1], "end": [34, 37] },
+    { "key": "JOB.P.35.1-16", "start": [35, 1], "end": [35, 16] },
+    { "key": "JOB.P.36.1-33", "start": [36, 1], "end": [36, 33] },
+    { "key": "JOB.P.37.1-24", "start": [37, 1], "end": [37, 24] },
+    { "key": "JOB.P.38.1-41", "start": [38, 1], "end": [38, 41] },
+    { "key": "JOB.P.39.1-30", "start": [39, 1], "end": [39, 30] },
+    { "key": "JOB.P.40.1-5", "start": [40, 1], "end": [40, 5] },
+    { "key": "JOB.P.40.6-24", "start": [40, 6], "end": [40, 24] },
+    { "key": "JOB.P.41.1-34", "start": [41, 1], "end": [41, 34] },
+    { "key": "JOB.P.42.1-6", "start": [42, 1], "end": [42, 6] },
+    { "key": "JOB.P.42.7-9", "start": [42, 7], "end": [42, 9] },
+    { "key": "JOB.P.42.10-17", "start": [42, 10], "end": [42, 17] }
+  ],
+  "segments": [
+    {
+      "key": "JOB.1.1-3",
+      "pericope": "JOB.P.1.1-5",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "JOB.1.4-5",
+      "pericope": "JOB.P.1.1-5",
+      "start": [1, 4],
+      "end": [1, 5]
+    },
+    {
+      "key": "JOB.1.6-8",
+      "pericope": "JOB.P.1.6-12",
+      "start": [1, 6],
+      "end": [1, 8]
+    },
+    {
+      "key": "JOB.1.9-12",
+      "pericope": "JOB.P.1.6-12",
+      "start": [1, 9],
+      "end": [1, 12]
+    },
+    {
+      "key": "JOB.1.13-15",
+      "pericope": "JOB.P.1.13-22",
+      "start": [1, 13],
+      "end": [1, 15]
+    },
+    {
+      "key": "JOB.1.16-17",
+      "pericope": "JOB.P.1.13-22",
+      "start": [1, 16],
+      "end": [1, 17]
+    },
+    {
+      "key": "JOB.1.18-19",
+      "pericope": "JOB.P.1.13-22",
+      "start": [1, 18],
+      "end": [1, 19]
+    },
+    {
+      "key": "JOB.1.20-22",
+      "pericope": "JOB.P.1.13-22",
+      "start": [1, 20],
+      "end": [1, 22]
+    },
+    {
+      "key": "JOB.2.1-2",
+      "pericope": "JOB.P.2.1-10",
+      "start": [2, 1],
+      "end": [2, 2]
+    },
+    {
+      "key": "JOB.2.3-3",
+      "pericope": "JOB.P.2.1-10",
+      "start": [2, 3],
+      "end": [2, 3]
+    },
+    {
+      "key": "JOB.2.4-6",
+      "pericope": "JOB.P.2.1-10",
+      "start": [2, 4],
+      "end": [2, 6]
+    },
+    {
+      "key": "JOB.2.7-8",
+      "pericope": "JOB.P.2.1-10",
+      "start": [2, 7],
+      "end": [2, 8]
+    },
+    {
+      "key": "JOB.2.9-10",
+      "pericope": "JOB.P.2.1-10",
+      "start": [2, 9],
+      "end": [2, 10]
+    },
+    {
+      "key": "JOB.2.11-11",
+      "pericope": "JOB.P.2.11-13",
+      "start": [2, 11],
+      "end": [2, 11]
+    },
+    {
+      "key": "JOB.2.12-13",
+      "pericope": "JOB.P.2.11-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "JOB.3.1-3",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 1],
+      "end": [3, 3]
+    },
+    {
+      "key": "JOB.3.4-5",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 4],
+      "end": [3, 5]
+    },
+    {
+      "key": "JOB.3.6-7",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "JOB.3.8-10",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 8],
+      "end": [3, 10]
+    },
+    {
+      "key": "JOB.3.11-12",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "JOB.3.13-14",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 13],
+      "end": [3, 14]
+    },
+    {
+      "key": "JOB.3.15-16",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 15],
+      "end": [3, 16]
+    },
+    {
+      "key": "JOB.3.17-19",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 17],
+      "end": [3, 19]
+    },
+    {
+      "key": "JOB.3.20-22",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 20],
+      "end": [3, 22]
+    },
+    {
+      "key": "JOB.3.23-24",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 23],
+      "end": [3, 24]
+    },
+    {
+      "key": "JOB.3.25-26",
+      "pericope": "JOB.P.3.1-26",
+      "start": [3, 25],
+      "end": [3, 26]
+    },
+    {
+      "key": "JOB.4.1-3",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "JOB.4.4-6",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 4],
+      "end": [4, 6]
+    },
+    {
+      "key": "JOB.4.7-9",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 7],
+      "end": [4, 9]
+    },
+    {
+      "key": "JOB.4.10-11",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 10],
+      "end": [4, 11]
+    },
+    {
+      "key": "JOB.4.12-13",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 12],
+      "end": [4, 13]
+    },
+    {
+      "key": "JOB.4.14-15",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 14],
+      "end": [4, 15]
+    },
+    {
+      "key": "JOB.4.16-17",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 16],
+      "end": [4, 17]
+    },
+    {
+      "key": "JOB.4.18-19",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 18],
+      "end": [4, 19]
+    },
+    {
+      "key": "JOB.4.20-21",
+      "pericope": "JOB.P.4.1-21",
+      "start": [4, 20],
+      "end": [4, 21]
+    },
+    {
+      "key": "JOB.5.1-3",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 1],
+      "end": [5, 3]
+    },
+    {
+      "key": "JOB.5.4-5",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 4],
+      "end": [5, 5]
+    },
+    {
+      "key": "JOB.5.6-7",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 6],
+      "end": [5, 7]
+    },
+    {
+      "key": "JOB.5.8-10",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 8],
+      "end": [5, 10]
+    },
+    {
+      "key": "JOB.5.11-13",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 11],
+      "end": [5, 13]
+    },
+    {
+      "key": "JOB.5.14-16",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 14],
+      "end": [5, 16]
+    },
+    {
+      "key": "JOB.5.17-19",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 17],
+      "end": [5, 19]
+    },
+    {
+      "key": "JOB.5.20-22",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 20],
+      "end": [5, 22]
+    },
+    {
+      "key": "JOB.5.23-25",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 23],
+      "end": [5, 25]
+    },
+    {
+      "key": "JOB.5.26-27",
+      "pericope": "JOB.P.5.1-27",
+      "start": [5, 26],
+      "end": [5, 27]
+    },
+    {
+      "key": "JOB.6.1-3",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 1],
+      "end": [6, 3]
+    },
+    {
+      "key": "JOB.6.4-6",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 4],
+      "end": [6, 6]
+    },
+    {
+      "key": "JOB.6.7-9",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 7],
+      "end": [6, 9]
+    },
+    {
+      "key": "JOB.6.10-11",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 10],
+      "end": [6, 11]
+    },
+    {
+      "key": "JOB.6.12-13",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 12],
+      "end": [6, 13]
+    },
+    {
+      "key": "JOB.6.14-17",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 14],
+      "end": [6, 17]
+    },
+    {
+      "key": "JOB.6.18-20",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 18],
+      "end": [6, 20]
+    },
+    {
+      "key": "JOB.6.21-23",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 21],
+      "end": [6, 23]
+    },
+    {
+      "key": "JOB.6.24-25",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 24],
+      "end": [6, 25]
+    },
+    {
+      "key": "JOB.6.26-27",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 26],
+      "end": [6, 27]
+    },
+    {
+      "key": "JOB.6.28-30",
+      "pericope": "JOB.P.6.1-30",
+      "start": [6, 28],
+      "end": [6, 30]
+    },
+    {
+      "key": "JOB.7.1-3",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 1],
+      "end": [7, 3]
+    },
+    {
+      "key": "JOB.7.4-5",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 4],
+      "end": [7, 5]
+    },
+    {
+      "key": "JOB.7.6-7",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 6],
+      "end": [7, 7]
+    },
+    {
+      "key": "JOB.7.8-10",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 8],
+      "end": [7, 10]
+    },
+    {
+      "key": "JOB.7.11-12",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 11],
+      "end": [7, 12]
+    },
+    {
+      "key": "JOB.7.13-15",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 13],
+      "end": [7, 15]
+    },
+    {
+      "key": "JOB.7.16-18",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 16],
+      "end": [7, 18]
+    },
+    {
+      "key": "JOB.7.19-20",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 19],
+      "end": [7, 20]
+    },
+    {
+      "key": "JOB.7.21-21",
+      "pericope": "JOB.P.7.1-21",
+      "start": [7, 21],
+      "end": [7, 21]
+    },
+    {
+      "key": "JOB.8.1-3",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 1],
+      "end": [8, 3]
+    },
+    {
+      "key": "JOB.8.4-5",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 4],
+      "end": [8, 5]
+    },
+    {
+      "key": "JOB.8.6-7",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 6],
+      "end": [8, 7]
+    },
+    {
+      "key": "JOB.8.8-10",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 8],
+      "end": [8, 10]
+    },
+    {
+      "key": "JOB.8.11-12",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 11],
+      "end": [8, 12]
+    },
+    {
+      "key": "JOB.8.13-15",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 13],
+      "end": [8, 15]
+    },
+    {
+      "key": "JOB.8.16-18",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 16],
+      "end": [8, 18]
+    },
+    {
+      "key": "JOB.8.19-20",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 19],
+      "end": [8, 20]
+    },
+    {
+      "key": "JOB.8.21-22",
+      "pericope": "JOB.P.8.1-22",
+      "start": [8, 21],
+      "end": [8, 22]
+    },
+    {
+      "key": "JOB.9.1-3",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 1],
+      "end": [9, 3]
+    },
+    {
+      "key": "JOB.9.4-6",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 4],
+      "end": [9, 6]
+    },
+    {
+      "key": "JOB.9.7-9",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 7],
+      "end": [9, 9]
+    },
+    {
+      "key": "JOB.9.10-12",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 10],
+      "end": [9, 12]
+    },
+    {
+      "key": "JOB.9.13-15",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 13],
+      "end": [9, 15]
+    },
+    {
+      "key": "JOB.9.16-18",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 16],
+      "end": [9, 18]
+    },
+    {
+      "key": "JOB.9.19-20",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 19],
+      "end": [9, 20]
+    },
+    {
+      "key": "JOB.9.21-24",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 21],
+      "end": [9, 24]
+    },
+    {
+      "key": "JOB.9.25-26",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 25],
+      "end": [9, 26]
+    },
+    {
+      "key": "JOB.9.27-29",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 27],
+      "end": [9, 29]
+    },
+    {
+      "key": "JOB.9.30-31",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 30],
+      "end": [9, 31]
+    },
+    {
+      "key": "JOB.9.32-33",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 32],
+      "end": [9, 33]
+    },
+    {
+      "key": "JOB.9.34-35",
+      "pericope": "JOB.P.9.1-35",
+      "start": [9, 34],
+      "end": [9, 35]
+    },
+    {
+      "key": "JOB.10.1-3",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 1],
+      "end": [10, 3]
+    },
+    {
+      "key": "JOB.10.4-7",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 4],
+      "end": [10, 7]
+    },
+    {
+      "key": "JOB.10.8-9",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 8],
+      "end": [10, 9]
+    },
+    {
+      "key": "JOB.10.10-11",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 10],
+      "end": [10, 11]
+    },
+    {
+      "key": "JOB.10.12-14",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 12],
+      "end": [10, 14]
+    },
+    {
+      "key": "JOB.10.15-16",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 15],
+      "end": [10, 16]
+    },
+    {
+      "key": "JOB.10.17-17",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 17],
+      "end": [10, 17]
+    },
+    {
+      "key": "JOB.10.18-19",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 18],
+      "end": [10, 19]
+    },
+    {
+      "key": "JOB.10.20-22",
+      "pericope": "JOB.P.10.1-22",
+      "start": [10, 20],
+      "end": [10, 22]
+    },
+    {
+      "key": "JOB.11.1-3",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 1],
+      "end": [11, 3]
+    },
+    {
+      "key": "JOB.11.4-6",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 4],
+      "end": [11, 6]
+    },
+    {
+      "key": "JOB.11.7-9",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 7],
+      "end": [11, 9]
+    },
+    {
+      "key": "JOB.11.10-12",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 10],
+      "end": [11, 12]
+    },
+    {
+      "key": "JOB.11.13-14",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 13],
+      "end": [11, 14]
+    },
+    {
+      "key": "JOB.11.15-17",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 15],
+      "end": [11, 17]
+    },
+    {
+      "key": "JOB.11.18-19",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 18],
+      "end": [11, 19]
+    },
+    {
+      "key": "JOB.11.20-20",
+      "pericope": "JOB.P.11.1-20",
+      "start": [11, 20],
+      "end": [11, 20]
+    },
+    {
+      "key": "JOB.12.1-3",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 1],
+      "end": [12, 3]
+    },
+    {
+      "key": "JOB.12.4-6",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 4],
+      "end": [12, 6]
+    },
+    {
+      "key": "JOB.12.7-8",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 7],
+      "end": [12, 8]
+    },
+    {
+      "key": "JOB.12.9-10",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 9],
+      "end": [12, 10]
+    },
+    {
+      "key": "JOB.12.11-12",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 11],
+      "end": [12, 12]
+    },
+    {
+      "key": "JOB.12.13-15",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 13],
+      "end": [12, 15]
+    },
+    {
+      "key": "JOB.12.16-18",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 16],
+      "end": [12, 18]
+    },
+    {
+      "key": "JOB.12.19-21",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 19],
+      "end": [12, 21]
+    },
+    {
+      "key": "JOB.12.22-23",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 22],
+      "end": [12, 23]
+    },
+    {
+      "key": "JOB.12.24-25",
+      "pericope": "JOB.P.12.1-25",
+      "start": [12, 24],
+      "end": [12, 25]
+    },
+    {
+      "key": "JOB.13.1-2",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 1],
+      "end": [13, 2]
+    },
+    {
+      "key": "JOB.13.3-5",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 3],
+      "end": [13, 5]
+    },
+    {
+      "key": "JOB.13.6-8",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 6],
+      "end": [13, 8]
+    },
+    {
+      "key": "JOB.13.9-10",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 9],
+      "end": [13, 10]
+    },
+    {
+      "key": "JOB.13.11-12",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 11],
+      "end": [13, 12]
+    },
+    {
+      "key": "JOB.13.13-15",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 13],
+      "end": [13, 15]
+    },
+    {
+      "key": "JOB.13.16-17",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 16],
+      "end": [13, 17]
+    },
+    {
+      "key": "JOB.13.18-19",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 18],
+      "end": [13, 19]
+    },
+    {
+      "key": "JOB.13.20-22",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 20],
+      "end": [13, 22]
+    },
+    {
+      "key": "JOB.13.23-25",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 23],
+      "end": [13, 25]
+    },
+    {
+      "key": "JOB.13.26-28",
+      "pericope": "JOB.P.13.1-28",
+      "start": [13, 26],
+      "end": [13, 28]
+    },
+    {
+      "key": "JOB.14.1-3",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 1],
+      "end": [14, 3]
+    },
+    {
+      "key": "JOB.14.4-6",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 4],
+      "end": [14, 6]
+    },
+    {
+      "key": "JOB.14.7-9",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 7],
+      "end": [14, 9]
+    },
+    {
+      "key": "JOB.14.10-12",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 10],
+      "end": [14, 12]
+    },
+    {
+      "key": "JOB.14.13-14",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 13],
+      "end": [14, 14]
+    },
+    {
+      "key": "JOB.14.15-17",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 15],
+      "end": [14, 17]
+    },
+    {
+      "key": "JOB.14.18-19",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 18],
+      "end": [14, 19]
+    },
+    {
+      "key": "JOB.14.20-22",
+      "pericope": "JOB.P.14.1-22",
+      "start": [14, 20],
+      "end": [14, 22]
+    },
+    {
+      "key": "JOB.15.1-3",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 1],
+      "end": [15, 3]
+    },
+    {
+      "key": "JOB.15.4-6",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 4],
+      "end": [15, 6]
+    },
+    {
+      "key": "JOB.15.7-9",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 7],
+      "end": [15, 9]
+    },
+    {
+      "key": "JOB.15.10-11",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 10],
+      "end": [15, 11]
+    },
+    {
+      "key": "JOB.15.12-14",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 12],
+      "end": [15, 14]
+    },
+    {
+      "key": "JOB.15.15-16",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 15],
+      "end": [15, 16]
+    },
+    {
+      "key": "JOB.15.17-18",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 17],
+      "end": [15, 18]
+    },
+    {
+      "key": "JOB.15.19-21",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 19],
+      "end": [15, 21]
+    },
+    {
+      "key": "JOB.15.22-24",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 22],
+      "end": [15, 24]
+    },
+    {
+      "key": "JOB.15.25-26",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 25],
+      "end": [15, 26]
+    },
+    {
+      "key": "JOB.15.27-28",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 27],
+      "end": [15, 28]
+    },
+    {
+      "key": "JOB.15.29-30",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 29],
+      "end": [15, 30]
+    },
+    {
+      "key": "JOB.15.31-33",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 31],
+      "end": [15, 33]
+    },
+    {
+      "key": "JOB.15.34-35",
+      "pericope": "JOB.P.15.1-35",
+      "start": [15, 34],
+      "end": [15, 35]
+    },
+    {
+      "key": "JOB.16.1-3",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 1],
+      "end": [16, 3]
+    },
+    {
+      "key": "JOB.16.4-5",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 4],
+      "end": [16, 5]
+    },
+    {
+      "key": "JOB.16.6-8",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 6],
+      "end": [16, 8]
+    },
+    {
+      "key": "JOB.16.9-10",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 9],
+      "end": [16, 10]
+    },
+    {
+      "key": "JOB.16.11-12",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 11],
+      "end": [16, 12]
+    },
+    {
+      "key": "JOB.16.13-14",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 13],
+      "end": [16, 14]
+    },
+    {
+      "key": "JOB.16.15-17",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 15],
+      "end": [16, 17]
+    },
+    {
+      "key": "JOB.16.18-19",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 18],
+      "end": [16, 19]
+    },
+    {
+      "key": "JOB.16.20-22",
+      "pericope": "JOB.P.16.1-22",
+      "start": [16, 20],
+      "end": [16, 22]
+    },
+    {
+      "key": "JOB.17.1-3",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 1],
+      "end": [17, 3]
+    },
+    {
+      "key": "JOB.17.4-5",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 4],
+      "end": [17, 5]
+    },
+    {
+      "key": "JOB.17.6-8",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 6],
+      "end": [17, 8]
+    },
+    {
+      "key": "JOB.17.9-10",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 9],
+      "end": [17, 10]
+    },
+    {
+      "key": "JOB.17.11-12",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 11],
+      "end": [17, 12]
+    },
+    {
+      "key": "JOB.17.13-16",
+      "pericope": "JOB.P.17.1-16",
+      "start": [17, 13],
+      "end": [17, 16]
+    },
+    {
+      "key": "JOB.18.1-2",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 1],
+      "end": [18, 2]
+    },
+    {
+      "key": "JOB.18.3-4",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 3],
+      "end": [18, 4]
+    },
+    {
+      "key": "JOB.18.5-6",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 5],
+      "end": [18, 6]
+    },
+    {
+      "key": "JOB.18.7-8",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 7],
+      "end": [18, 8]
+    },
+    {
+      "key": "JOB.18.9-11",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 9],
+      "end": [18, 11]
+    },
+    {
+      "key": "JOB.18.12-13",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 12],
+      "end": [18, 13]
+    },
+    {
+      "key": "JOB.18.14-15",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 14],
+      "end": [18, 15]
+    },
+    {
+      "key": "JOB.18.16-17",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 16],
+      "end": [18, 17]
+    },
+    {
+      "key": "JOB.18.18-20",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 18],
+      "end": [18, 20]
+    },
+    {
+      "key": "JOB.18.21-21",
+      "pericope": "JOB.P.18.1-21",
+      "start": [18, 21],
+      "end": [18, 21]
+    },
+    {
+      "key": "JOB.19.1-2",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 1],
+      "end": [19, 2]
+    },
+    {
+      "key": "JOB.19.3-4",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 3],
+      "end": [19, 4]
+    },
+    {
+      "key": "JOB.19.5-6",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 5],
+      "end": [19, 6]
+    },
+    {
+      "key": "JOB.19.7-9",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 7],
+      "end": [19, 9]
+    },
+    {
+      "key": "JOB.19.10-12",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 10],
+      "end": [19, 12]
+    },
+    {
+      "key": "JOB.19.13-14",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 13],
+      "end": [19, 14]
+    },
+    {
+      "key": "JOB.19.15-16",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 15],
+      "end": [19, 16]
+    },
+    {
+      "key": "JOB.19.17-19",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 17],
+      "end": [19, 19]
+    },
+    {
+      "key": "JOB.19.20-22",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 20],
+      "end": [19, 22]
+    },
+    {
+      "key": "JOB.19.23-24",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 23],
+      "end": [19, 24]
+    },
+    {
+      "key": "JOB.19.25-27",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 25],
+      "end": [19, 27]
+    },
+    {
+      "key": "JOB.19.28-29",
+      "pericope": "JOB.P.19.1-29",
+      "start": [19, 28],
+      "end": [19, 29]
+    },
+    {
+      "key": "JOB.20.1-3",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 1],
+      "end": [20, 3]
+    },
+    {
+      "key": "JOB.20.4-5",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 4],
+      "end": [20, 5]
+    },
+    {
+      "key": "JOB.20.6-7",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 6],
+      "end": [20, 7]
+    },
+    {
+      "key": "JOB.20.8-9",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 8],
+      "end": [20, 9]
+    },
+    {
+      "key": "JOB.20.10-11",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 10],
+      "end": [20, 11]
+    },
+    {
+      "key": "JOB.20.12-14",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 12],
+      "end": [20, 14]
+    },
+    {
+      "key": "JOB.20.15-16",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 15],
+      "end": [20, 16]
+    },
+    {
+      "key": "JOB.20.17-19",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 17],
+      "end": [20, 19]
+    },
+    {
+      "key": "JOB.20.20-22",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 20],
+      "end": [20, 22]
+    },
+    {
+      "key": "JOB.20.23-25",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 23],
+      "end": [20, 25]
+    },
+    {
+      "key": "JOB.20.26-27",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 26],
+      "end": [20, 27]
+    },
+    {
+      "key": "JOB.20.28-29",
+      "pericope": "JOB.P.20.1-29",
+      "start": [20, 28],
+      "end": [20, 29]
+    },
+    {
+      "key": "JOB.21.1-3",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 1],
+      "end": [21, 3]
+    },
+    {
+      "key": "JOB.21.4-6",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 4],
+      "end": [21, 6]
+    },
+    {
+      "key": "JOB.21.7-9",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 7],
+      "end": [21, 9]
+    },
+    {
+      "key": "JOB.21.10-12",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 10],
+      "end": [21, 12]
+    },
+    {
+      "key": "JOB.21.13-15",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 13],
+      "end": [21, 15]
+    },
+    {
+      "key": "JOB.21.16-18",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 16],
+      "end": [21, 18]
+    },
+    {
+      "key": "JOB.21.19-21",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 19],
+      "end": [21, 21]
+    },
+    {
+      "key": "JOB.21.22-24",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 22],
+      "end": [21, 24]
+    },
+    {
+      "key": "JOB.21.25-26",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 25],
+      "end": [21, 26]
+    },
+    {
+      "key": "JOB.21.27-28",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 27],
+      "end": [21, 28]
+    },
+    {
+      "key": "JOB.21.29-30",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 29],
+      "end": [21, 30]
+    },
+    {
+      "key": "JOB.21.31-33",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 31],
+      "end": [21, 33]
+    },
+    {
+      "key": "JOB.21.34-34",
+      "pericope": "JOB.P.21.1-34",
+      "start": [21, 34],
+      "end": [21, 34]
+    },
+    {
+      "key": "JOB.22.1-3",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 1],
+      "end": [22, 3]
+    },
+    {
+      "key": "JOB.22.4-5",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 4],
+      "end": [22, 5]
+    },
+    {
+      "key": "JOB.22.6-8",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 6],
+      "end": [22, 8]
+    },
+    {
+      "key": "JOB.22.9-11",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 9],
+      "end": [22, 11]
+    },
+    {
+      "key": "JOB.22.12-14",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 12],
+      "end": [22, 14]
+    },
+    {
+      "key": "JOB.22.15-17",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 15],
+      "end": [22, 17]
+    },
+    {
+      "key": "JOB.22.18-20",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 18],
+      "end": [22, 20]
+    },
+    {
+      "key": "JOB.22.21-22",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 21],
+      "end": [22, 22]
+    },
+    {
+      "key": "JOB.22.23-25",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 23],
+      "end": [22, 25]
+    },
+    {
+      "key": "JOB.22.26-28",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 26],
+      "end": [22, 28]
+    },
+    {
+      "key": "JOB.22.29-30",
+      "pericope": "JOB.P.22.1-30",
+      "start": [22, 29],
+      "end": [22, 30]
+    },
+    {
+      "key": "JOB.23.1-2",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 1],
+      "end": [23, 2]
+    },
+    {
+      "key": "JOB.23.3-5",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 3],
+      "end": [23, 5]
+    },
+    {
+      "key": "JOB.23.6-7",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 6],
+      "end": [23, 7]
+    },
+    {
+      "key": "JOB.23.8-9",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 8],
+      "end": [23, 9]
+    },
+    {
+      "key": "JOB.23.10-12",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 10],
+      "end": [23, 12]
+    },
+    {
+      "key": "JOB.23.13-14",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 13],
+      "end": [23, 14]
+    },
+    {
+      "key": "JOB.23.15-17",
+      "pericope": "JOB.P.23.1-17",
+      "start": [23, 15],
+      "end": [23, 17]
+    },
+    {
+      "key": "JOB.24.1-1",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 1],
+      "end": [24, 1]
+    },
+    {
+      "key": "JOB.24.2-4",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 2],
+      "end": [24, 4]
+    },
+    {
+      "key": "JOB.24.5-7",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 5],
+      "end": [24, 7]
+    },
+    {
+      "key": "JOB.24.8-10",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 8],
+      "end": [24, 10]
+    },
+    {
+      "key": "JOB.24.11-12",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 11],
+      "end": [24, 12]
+    },
+    {
+      "key": "JOB.24.13-14",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 13],
+      "end": [24, 14]
+    },
+    {
+      "key": "JOB.24.15-17",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 15],
+      "end": [24, 17]
+    },
+    {
+      "key": "JOB.24.18-19",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 18],
+      "end": [24, 19]
+    },
+    {
+      "key": "JOB.24.20-21",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 20],
+      "end": [24, 21]
+    },
+    {
+      "key": "JOB.24.22-23",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 22],
+      "end": [24, 23]
+    },
+    {
+      "key": "JOB.24.24-25",
+      "pericope": "JOB.P.24.1-25",
+      "start": [24, 24],
+      "end": [24, 25]
+    },
+    {
+      "key": "JOB.25.1-3",
+      "pericope": "JOB.P.25.1-6",
+      "start": [25, 1],
+      "end": [25, 3]
+    },
+    {
+      "key": "JOB.25.4-6",
+      "pericope": "JOB.P.25.1-6",
+      "start": [25, 4],
+      "end": [25, 6]
+    },
+    {
+      "key": "JOB.26.1-4",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 1],
+      "end": [26, 4]
+    },
+    {
+      "key": "JOB.26.5-6",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 5],
+      "end": [26, 6]
+    },
+    {
+      "key": "JOB.26.7-8",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 7],
+      "end": [26, 8]
+    },
+    {
+      "key": "JOB.26.9-10",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 9],
+      "end": [26, 10]
+    },
+    {
+      "key": "JOB.26.11-12",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 11],
+      "end": [26, 12]
+    },
+    {
+      "key": "JOB.26.13-14",
+      "pericope": "JOB.P.26.1-14",
+      "start": [26, 13],
+      "end": [26, 14]
+    },
+    {
+      "key": "JOB.27.1-3",
+      "pericope": "JOB.P.27.1-6",
+      "start": [27, 1],
+      "end": [27, 3]
+    },
+    {
+      "key": "JOB.27.4-5",
+      "pericope": "JOB.P.27.1-6",
+      "start": [27, 4],
+      "end": [27, 5]
+    },
+    {
+      "key": "JOB.27.6-6",
+      "pericope": "JOB.P.27.1-6",
+      "start": [27, 6],
+      "end": [27, 6]
+    },
+    {
+      "key": "JOB.27.7-7",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 7],
+      "end": [27, 7]
+    },
+    {
+      "key": "JOB.27.8-10",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 8],
+      "end": [27, 10]
+    },
+    {
+      "key": "JOB.27.11-12",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 11],
+      "end": [27, 12]
+    },
+    {
+      "key": "JOB.27.13-14",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 13],
+      "end": [27, 14]
+    },
+    {
+      "key": "JOB.27.15-17",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 15],
+      "end": [27, 17]
+    },
+    {
+      "key": "JOB.27.18-19",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 18],
+      "end": [27, 19]
+    },
+    {
+      "key": "JOB.27.20-21",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 20],
+      "end": [27, 21]
+    },
+    {
+      "key": "JOB.27.22-23",
+      "pericope": "JOB.P.27.7-23",
+      "start": [27, 22],
+      "end": [27, 23]
+    },
+    {
+      "key": "JOB.28.1-2",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 1],
+      "end": [28, 2]
+    },
+    {
+      "key": "JOB.28.3-4",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 3],
+      "end": [28, 4]
+    },
+    {
+      "key": "JOB.28.5-6",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 5],
+      "end": [28, 6]
+    },
+    {
+      "key": "JOB.28.7-8",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 7],
+      "end": [28, 8]
+    },
+    {
+      "key": "JOB.28.9-11",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 9],
+      "end": [28, 11]
+    },
+    {
+      "key": "JOB.28.12-14",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 12],
+      "end": [28, 14]
+    },
+    {
+      "key": "JOB.28.15-17",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 15],
+      "end": [28, 17]
+    },
+    {
+      "key": "JOB.28.18-19",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 18],
+      "end": [28, 19]
+    },
+    {
+      "key": "JOB.28.20-22",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 20],
+      "end": [28, 22]
+    },
+    {
+      "key": "JOB.28.23-25",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 23],
+      "end": [28, 25]
+    },
+    {
+      "key": "JOB.28.26-28",
+      "pericope": "JOB.P.28.1-28",
+      "start": [28, 26],
+      "end": [28, 28]
+    },
+    {
+      "key": "JOB.29.1-3",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 1],
+      "end": [29, 3]
+    },
+    {
+      "key": "JOB.29.4-6",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 4],
+      "end": [29, 6]
+    },
+    {
+      "key": "JOB.29.7-8",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 7],
+      "end": [29, 8]
+    },
+    {
+      "key": "JOB.29.9-10",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 9],
+      "end": [29, 10]
+    },
+    {
+      "key": "JOB.29.11-13",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 11],
+      "end": [29, 13]
+    },
+    {
+      "key": "JOB.29.14-16",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 14],
+      "end": [29, 16]
+    },
+    {
+      "key": "JOB.29.17-19",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 17],
+      "end": [29, 19]
+    },
+    {
+      "key": "JOB.29.20-22",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 20],
+      "end": [29, 22]
+    },
+    {
+      "key": "JOB.29.23-24",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 23],
+      "end": [29, 24]
+    },
+    {
+      "key": "JOB.29.25-25",
+      "pericope": "JOB.P.29.1-25",
+      "start": [29, 25],
+      "end": [29, 25]
+    },
+    {
+      "key": "JOB.30.1-3",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 1],
+      "end": [30, 3]
+    },
+    {
+      "key": "JOB.30.4-6",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 4],
+      "end": [30, 6]
+    },
+    {
+      "key": "JOB.30.7-8",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 7],
+      "end": [30, 8]
+    },
+    {
+      "key": "JOB.30.9-11",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 9],
+      "end": [30, 11]
+    },
+    {
+      "key": "JOB.30.12-13",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 12],
+      "end": [30, 13]
+    },
+    {
+      "key": "JOB.30.14-14",
+      "pericope": "JOB.P.30.1-14",
+      "start": [30, 14],
+      "end": [30, 14]
+    },
+    {
+      "key": "JOB.30.15-15",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 15],
+      "end": [30, 15]
+    },
+    {
+      "key": "JOB.30.16-17",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 16],
+      "end": [30, 17]
+    },
+    {
+      "key": "JOB.30.18-19",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 18],
+      "end": [30, 19]
+    },
+    {
+      "key": "JOB.30.20-21",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 20],
+      "end": [30, 21]
+    },
+    {
+      "key": "JOB.30.22-23",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 22],
+      "end": [30, 23]
+    },
+    {
+      "key": "JOB.30.24-26",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 24],
+      "end": [30, 26]
+    },
+    {
+      "key": "JOB.30.27-29",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 27],
+      "end": [30, 29]
+    },
+    {
+      "key": "JOB.30.30-31",
+      "pericope": "JOB.P.30.15-31",
+      "start": [30, 30],
+      "end": [30, 31]
+    },
+    {
+      "key": "JOB.31.1-2",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 1],
+      "end": [31, 2]
+    },
+    {
+      "key": "JOB.31.3-4",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 3],
+      "end": [31, 4]
+    },
+    {
+      "key": "JOB.31.5-6",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 5],
+      "end": [31, 6]
+    },
+    {
+      "key": "JOB.31.7-8",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 7],
+      "end": [31, 8]
+    },
+    {
+      "key": "JOB.31.9-10",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 9],
+      "end": [31, 10]
+    },
+    {
+      "key": "JOB.31.11-12",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 11],
+      "end": [31, 12]
+    },
+    {
+      "key": "JOB.31.13-15",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 13],
+      "end": [31, 15]
+    },
+    {
+      "key": "JOB.31.16-18",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 16],
+      "end": [31, 18]
+    },
+    {
+      "key": "JOB.31.19-21",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 19],
+      "end": [31, 21]
+    },
+    {
+      "key": "JOB.31.22-23",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 22],
+      "end": [31, 23]
+    },
+    {
+      "key": "JOB.31.24-25",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 24],
+      "end": [31, 25]
+    },
+    {
+      "key": "JOB.31.26-28",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 26],
+      "end": [31, 28]
+    },
+    {
+      "key": "JOB.31.29-30",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 29],
+      "end": [31, 30]
+    },
+    {
+      "key": "JOB.31.31-32",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 31],
+      "end": [31, 32]
+    },
+    {
+      "key": "JOB.31.33-34",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 33],
+      "end": [31, 34]
+    },
+    {
+      "key": "JOB.31.35-37",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 35],
+      "end": [31, 37]
+    },
+    {
+      "key": "JOB.31.38-40",
+      "pericope": "JOB.P.31.1-40",
+      "start": [31, 38],
+      "end": [31, 40]
+    },
+    {
+      "key": "JOB.32.1-2",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 1],
+      "end": [32, 2]
+    },
+    {
+      "key": "JOB.32.3-5",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 3],
+      "end": [32, 5]
+    },
+    {
+      "key": "JOB.32.6-7",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 6],
+      "end": [32, 7]
+    },
+    {
+      "key": "JOB.32.8-10",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 8],
+      "end": [32, 10]
+    },
+    {
+      "key": "JOB.32.11-12",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 11],
+      "end": [32, 12]
+    },
+    {
+      "key": "JOB.32.13-14",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 13],
+      "end": [32, 14]
+    },
+    {
+      "key": "JOB.32.15-16",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 15],
+      "end": [32, 16]
+    },
+    {
+      "key": "JOB.32.17-19",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 17],
+      "end": [32, 19]
+    },
+    {
+      "key": "JOB.32.20-22",
+      "pericope": "JOB.P.32.1-22",
+      "start": [32, 20],
+      "end": [32, 22]
+    },
+    {
+      "key": "JOB.33.1-3",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 1],
+      "end": [33, 3]
+    },
+    {
+      "key": "JOB.33.4-5",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 4],
+      "end": [33, 5]
+    },
+    {
+      "key": "JOB.33.6-7",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 6],
+      "end": [33, 7]
+    },
+    {
+      "key": "JOB.33.8-9",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 8],
+      "end": [33, 9]
+    },
+    {
+      "key": "JOB.33.10-12",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 10],
+      "end": [33, 12]
+    },
+    {
+      "key": "JOB.33.13-15",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 13],
+      "end": [33, 15]
+    },
+    {
+      "key": "JOB.33.16-18",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 16],
+      "end": [33, 18]
+    },
+    {
+      "key": "JOB.33.19-20",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 19],
+      "end": [33, 20]
+    },
+    {
+      "key": "JOB.33.21-22",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 21],
+      "end": [33, 22]
+    },
+    {
+      "key": "JOB.33.23-24",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 23],
+      "end": [33, 24]
+    },
+    {
+      "key": "JOB.33.25-26",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 25],
+      "end": [33, 26]
+    },
+    {
+      "key": "JOB.33.27-28",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 27],
+      "end": [33, 28]
+    },
+    {
+      "key": "JOB.33.29-30",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 29],
+      "end": [33, 30]
+    },
+    {
+      "key": "JOB.33.31-33",
+      "pericope": "JOB.P.33.1-33",
+      "start": [33, 31],
+      "end": [33, 33]
+    },
+    {
+      "key": "JOB.34.1-3",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 1],
+      "end": [34, 3]
+    },
+    {
+      "key": "JOB.34.4-6",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 4],
+      "end": [34, 6]
+    },
+    {
+      "key": "JOB.34.7-9",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 7],
+      "end": [34, 9]
+    },
+    {
+      "key": "JOB.34.10-12",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 10],
+      "end": [34, 12]
+    },
+    {
+      "key": "JOB.34.13-15",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 13],
+      "end": [34, 15]
+    },
+    {
+      "key": "JOB.34.16-17",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 16],
+      "end": [34, 17]
+    },
+    {
+      "key": "JOB.34.18-20",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 18],
+      "end": [34, 20]
+    },
+    {
+      "key": "JOB.34.21-23",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 21],
+      "end": [34, 23]
+    },
+    {
+      "key": "JOB.34.24-25",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 24],
+      "end": [34, 25]
+    },
+    {
+      "key": "JOB.34.26-28",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 26],
+      "end": [34, 28]
+    },
+    {
+      "key": "JOB.34.29-30",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 29],
+      "end": [34, 30]
+    },
+    {
+      "key": "JOB.34.31-33",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 31],
+      "end": [34, 33]
+    },
+    {
+      "key": "JOB.34.34-35",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 34],
+      "end": [34, 35]
+    },
+    {
+      "key": "JOB.34.36-37",
+      "pericope": "JOB.P.34.1-37",
+      "start": [34, 36],
+      "end": [34, 37]
+    },
+    {
+      "key": "JOB.35.1-3",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 1],
+      "end": [35, 3]
+    },
+    {
+      "key": "JOB.35.4-5",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 4],
+      "end": [35, 5]
+    },
+    {
+      "key": "JOB.35.6-8",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 6],
+      "end": [35, 8]
+    },
+    {
+      "key": "JOB.35.9-11",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 9],
+      "end": [35, 11]
+    },
+    {
+      "key": "JOB.35.12-14",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 12],
+      "end": [35, 14]
+    },
+    {
+      "key": "JOB.35.15-16",
+      "pericope": "JOB.P.35.1-16",
+      "start": [35, 15],
+      "end": [35, 16]
+    },
+    {
+      "key": "JOB.36.1-3",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 1],
+      "end": [36, 3]
+    },
+    {
+      "key": "JOB.36.4-5",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 4],
+      "end": [36, 5]
+    },
+    {
+      "key": "JOB.36.6-7",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 6],
+      "end": [36, 7]
+    },
+    {
+      "key": "JOB.36.8-9",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 8],
+      "end": [36, 9]
+    },
+    {
+      "key": "JOB.36.10-12",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 10],
+      "end": [36, 12]
+    },
+    {
+      "key": "JOB.36.13-14",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 13],
+      "end": [36, 14]
+    },
+    {
+      "key": "JOB.36.15-16",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 15],
+      "end": [36, 16]
+    },
+    {
+      "key": "JOB.36.17-18",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 17],
+      "end": [36, 18]
+    },
+    {
+      "key": "JOB.36.19-21",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 19],
+      "end": [36, 21]
+    },
+    {
+      "key": "JOB.36.22-24",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 22],
+      "end": [36, 24]
+    },
+    {
+      "key": "JOB.36.25-26",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 25],
+      "end": [36, 26]
+    },
+    {
+      "key": "JOB.36.27-29",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 27],
+      "end": [36, 29]
+    },
+    {
+      "key": "JOB.36.30-31",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 30],
+      "end": [36, 31]
+    },
+    {
+      "key": "JOB.36.32-33",
+      "pericope": "JOB.P.36.1-33",
+      "start": [36, 32],
+      "end": [36, 33]
+    },
+    {
+      "key": "JOB.37.1-3",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 1],
+      "end": [37, 3]
+    },
+    {
+      "key": "JOB.37.4-6",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 4],
+      "end": [37, 6]
+    },
+    {
+      "key": "JOB.37.7-9",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 7],
+      "end": [37, 9]
+    },
+    {
+      "key": "JOB.37.10-11",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 10],
+      "end": [37, 11]
+    },
+    {
+      "key": "JOB.37.12-13",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 12],
+      "end": [37, 13]
+    },
+    {
+      "key": "JOB.37.14-15",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 14],
+      "end": [37, 15]
+    },
+    {
+      "key": "JOB.37.16-17",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 16],
+      "end": [37, 17]
+    },
+    {
+      "key": "JOB.37.18-20",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 18],
+      "end": [37, 20]
+    },
+    {
+      "key": "JOB.37.21-22",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 21],
+      "end": [37, 22]
+    },
+    {
+      "key": "JOB.37.23-24",
+      "pericope": "JOB.P.37.1-24",
+      "start": [37, 23],
+      "end": [37, 24]
+    },
+    {
+      "key": "JOB.38.1-3",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 1],
+      "end": [38, 3]
+    },
+    {
+      "key": "JOB.38.4-5",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 4],
+      "end": [38, 5]
+    },
+    {
+      "key": "JOB.38.6-7",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 6],
+      "end": [38, 7]
+    },
+    {
+      "key": "JOB.38.8-9",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 8],
+      "end": [38, 9]
+    },
+    {
+      "key": "JOB.38.10-11",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 10],
+      "end": [38, 11]
+    },
+    {
+      "key": "JOB.38.12-13",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 12],
+      "end": [38, 13]
+    },
+    {
+      "key": "JOB.38.14-15",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 14],
+      "end": [38, 15]
+    },
+    {
+      "key": "JOB.38.16-18",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 16],
+      "end": [38, 18]
+    },
+    {
+      "key": "JOB.38.19-21",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 19],
+      "end": [38, 21]
+    },
+    {
+      "key": "JOB.38.22-24",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 22],
+      "end": [38, 24]
+    },
+    {
+      "key": "JOB.38.25-27",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 25],
+      "end": [38, 27]
+    },
+    {
+      "key": "JOB.38.28-30",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 28],
+      "end": [38, 30]
+    },
+    {
+      "key": "JOB.38.31-33",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 31],
+      "end": [38, 33]
+    },
+    {
+      "key": "JOB.38.34-35",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 34],
+      "end": [38, 35]
+    },
+    {
+      "key": "JOB.38.36-38",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 36],
+      "end": [38, 38]
+    },
+    {
+      "key": "JOB.38.39-40",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 39],
+      "end": [38, 40]
+    },
+    {
+      "key": "JOB.38.41-41",
+      "pericope": "JOB.P.38.1-41",
+      "start": [38, 41],
+      "end": [38, 41]
+    },
+    {
+      "key": "JOB.39.1-2",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 1],
+      "end": [39, 2]
+    },
+    {
+      "key": "JOB.39.3-4",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 3],
+      "end": [39, 4]
+    },
+    {
+      "key": "JOB.39.5-6",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 5],
+      "end": [39, 6]
+    },
+    {
+      "key": "JOB.39.7-8",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 7],
+      "end": [39, 8]
+    },
+    {
+      "key": "JOB.39.9-10",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 9],
+      "end": [39, 10]
+    },
+    {
+      "key": "JOB.39.11-12",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 11],
+      "end": [39, 12]
+    },
+    {
+      "key": "JOB.39.13-15",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 13],
+      "end": [39, 15]
+    },
+    {
+      "key": "JOB.39.16-18",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 16],
+      "end": [39, 18]
+    },
+    {
+      "key": "JOB.39.19-20",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 19],
+      "end": [39, 20]
+    },
+    {
+      "key": "JOB.39.21-23",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 21],
+      "end": [39, 23]
+    },
+    {
+      "key": "JOB.39.24-25",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 24],
+      "end": [39, 25]
+    },
+    {
+      "key": "JOB.39.26-26",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 26],
+      "end": [39, 26]
+    },
+    {
+      "key": "JOB.39.27-28",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 27],
+      "end": [39, 28]
+    },
+    {
+      "key": "JOB.39.29-30",
+      "pericope": "JOB.P.39.1-30",
+      "start": [39, 29],
+      "end": [39, 30]
+    },
+    {
+      "key": "JOB.40.1-2",
+      "pericope": "JOB.P.40.1-5",
+      "start": [40, 1],
+      "end": [40, 2]
+    },
+    {
+      "key": "JOB.40.3-5",
+      "pericope": "JOB.P.40.1-5",
+      "start": [40, 3],
+      "end": [40, 5]
+    },
+    {
+      "key": "JOB.40.6-7",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 6],
+      "end": [40, 7]
+    },
+    {
+      "key": "JOB.40.8-9",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 8],
+      "end": [40, 9]
+    },
+    {
+      "key": "JOB.40.10-11",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 10],
+      "end": [40, 11]
+    },
+    {
+      "key": "JOB.40.12-14",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 12],
+      "end": [40, 14]
+    },
+    {
+      "key": "JOB.40.15-16",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 15],
+      "end": [40, 16]
+    },
+    {
+      "key": "JOB.40.17-18",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 17],
+      "end": [40, 18]
+    },
+    {
+      "key": "JOB.40.19-21",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 19],
+      "end": [40, 21]
+    },
+    {
+      "key": "JOB.40.22-24",
+      "pericope": "JOB.P.40.6-24",
+      "start": [40, 22],
+      "end": [40, 24]
+    },
+    {
+      "key": "JOB.41.1-3",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 1],
+      "end": [41, 3]
+    },
+    {
+      "key": "JOB.41.4-6",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 4],
+      "end": [41, 6]
+    },
+    {
+      "key": "JOB.41.7-9",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 7],
+      "end": [41, 9]
+    },
+    {
+      "key": "JOB.41.10-12",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 10],
+      "end": [41, 12]
+    },
+    {
+      "key": "JOB.41.13-15",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 13],
+      "end": [41, 15]
+    },
+    {
+      "key": "JOB.41.16-18",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 16],
+      "end": [41, 18]
+    },
+    {
+      "key": "JOB.41.19-21",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 19],
+      "end": [41, 21]
+    },
+    {
+      "key": "JOB.41.22-24",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 22],
+      "end": [41, 24]
+    },
+    {
+      "key": "JOB.41.25-27",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 25],
+      "end": [41, 27]
+    },
+    {
+      "key": "JOB.41.28-30",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 28],
+      "end": [41, 30]
+    },
+    {
+      "key": "JOB.41.31-32",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 31],
+      "end": [41, 32]
+    },
+    {
+      "key": "JOB.41.33-34",
+      "pericope": "JOB.P.41.1-34",
+      "start": [41, 33],
+      "end": [41, 34]
+    },
+    {
+      "key": "JOB.42.1-3",
+      "pericope": "JOB.P.42.1-6",
+      "start": [42, 1],
+      "end": [42, 3]
+    },
+    {
+      "key": "JOB.42.4-6",
+      "pericope": "JOB.P.42.1-6",
+      "start": [42, 4],
+      "end": [42, 6]
+    },
+    {
+      "key": "JOB.42.7-9",
+      "pericope": "JOB.P.42.7-9",
+      "start": [42, 7],
+      "end": [42, 9]
+    },
+    {
+      "key": "JOB.42.10-11",
+      "pericope": "JOB.P.42.10-17",
+      "start": [42, 10],
+      "end": [42, 11]
+    },
+    {
+      "key": "JOB.42.12-14",
+      "pericope": "JOB.P.42.10-17",
+      "start": [42, 12],
+      "end": [42, 14]
+    },
+    {
+      "key": "JOB.42.15-17",
+      "pericope": "JOB.P.42.10-17",
+      "start": [42, 15],
+      "end": [42, 17]
+    }
+  ]
+}

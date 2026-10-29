@@ -3,8 +3,8 @@
 // from the injected `complete`, so tests run it with a fake model.
 //
 // Everything it returns is AI output: `source: "ai:<model>"` and status
-// `unreviewed` (AGENTS.md, "Label AI output"). A cross-model check, which
-// could raise a title to `ai-checked`, is a separate step.
+// `unreviewed` (AGENTS.md, "Label AI output"). The cross-model check, which
+// can raise a title to `ai-checked`, is a separate step (./check.ts).
 import { createHash } from "node:crypto";
 import { titleProblems, SCRIPT_BY_TAG } from "./gates.ts";
 import type { Completion, Message } from "./openrouter.ts";
@@ -25,8 +25,8 @@ export const LANGUAGES: Readonly<Record<string, string>> = {
 /**
  * The two models ADR 0002 measures, as OpenRouter names them (checked against
  * https://openrouter.ai/api/v1/models on 2026-10-29): the newest fast Gemini
- * model and the Claude model that drafted the English titles. Proposed for the
- * Titus run; confirmed on #10 before it.
+ * model and the Claude model that drafted the English titles. Confirmed by
+ * the DRI on 2026-10-29 for the Titus run (docs/decisions/0002).
  */
 export const MODELS = {
   gemini: "google/gemini-3.8-flash",
@@ -41,8 +41,22 @@ export type EnglishTitles = {
 
 export type Glossary = {
   language: string;
-  terms: Record<string, { en: string; headword: string; refs: string[] }>;
+  terms: Record<
+    string,
+    { en: string; headword: string; refs: string[]; status?: string }
+  >;
 };
+
+/**
+ * Whether titles may use a glossary term: a Translation Words headword (no
+ * status: a published resource) or an AI-drafted term a person has reviewed.
+ * An AI term that is only `unreviewed` or `ai-checked` waits for its reader
+ * (docs/scoping/glossaries.md, "Chinese (zh-Hans)").
+ */
+export const usableTerm = (t: { status?: string }): boolean =>
+  t.status === undefined ||
+  t.status === "human-reviewed" ||
+  t.status === "approved";
 
 export type Translation = {
   text: string;
@@ -116,7 +130,7 @@ export function termsFor(
     return c === chapter && v >= from && v <= to;
   };
   return Object.values(glossary.terms)
-    .filter((t) => t.refs.some(inSpan))
+    .filter((t) => usableTerm(t) && t.refs.some(inSpan))
     .map(({ en, headword }) => ({ en, headword }));
 }
 
@@ -251,6 +265,16 @@ export async function translateLanguage(args: {
   return { titles, call, missing, invalid };
 }
 
+/**
+ * Reasoning tokens over calls (already inside the completion tokens), or null
+ * when any call did not report them: a partial sum would read as the whole.
+ */
+export function reasoningTotal(calls: Call[]): number | null {
+  return calls.every((c) => c.reasoningTokens !== null)
+    ? calls.reduce((s, c) => s + (c.reasoningTokens ?? 0), 0)
+    : null;
+}
+
 /** Totals for a run: what the Titus run compares between the two models. */
 export function summarise(calls: Call[], results: LanguageResult[]) {
   const titles = results.reduce((n, r) => n + Object.keys(r.titles).length, 0);
@@ -271,6 +295,7 @@ export function summarise(calls: Call[], results: LanguageResult[]) {
     ),
     promptTokens: calls.reduce((s, c) => s + c.promptTokens, 0),
     completionTokens: calls.reduce((s, c) => s + c.completionTokens, 0),
+    reasoningTokens: reasoningTotal(calls),
     cost,
     /** Per title delivered: what a usable title cost. */
     costPerTitle: cost === null || titles === 0 ? null : cost / titles,
@@ -286,11 +311,58 @@ export type StopReason =
   | { error: string; language: string };
 
 /**
- * Runs `tags` in order, one call each, and writes the ledger (`run.json`)
- * after every call and before any throw, so money spent is always on record.
- * The spend fuse fails closed: a call whose cost is unknown stops the run
+ * One model call per language, in order, under a spend fuse, with the ledger
+ * written after every call and before any throw, so money spent is always on
+ * record. The fuse fails closed: a call whose cost is unknown stops the run
  * before the next call, and the run stops before a call once `maxCost` is
- * spent (the call in flight can still go over it).
+ * spent (the call in flight can still go over it). A result with no `call`
+ * (nothing to send for that language) costs nothing. Shared by the
+ * translation runner and the cross-model check.
+ */
+export async function runLanguages<R extends { call?: Call }>(args: {
+  tags: string[];
+  maxCost: number;
+  /** Makes the language's one call; must not throw after it is billed. */
+  run: (tag: string) => Promise<R>;
+  /** Writes the language's output and logs it; may throw. */
+  record: (result: R) => Promise<void>;
+  /** Writes the ledger from the results so far. */
+  ledger: (stop: StopReason | "running", results: R[]) => Promise<void>;
+}): Promise<{ stop: StopReason; results: R[] }> {
+  const results: R[] = [];
+  let spent = 0;
+  let stop: StopReason = "done";
+  let current = "";
+  try {
+    for (const tag of args.tags) {
+      current = tag;
+      if (spent >= args.maxCost) {
+        stop = { maxCost: args.maxCost, spent, before: tag };
+        break;
+      }
+      const result = await args.run(tag);
+      results.push(result);
+      await args.record(result);
+      const cost = result.call ? result.call.cost : 0;
+      if (cost === null) {
+        stop = { unknownCost: tag };
+        break;
+      }
+      spent += cost;
+      await args.ledger("running", results);
+    }
+  } catch (e) {
+    stop = { error: (e as Error).message, language: current };
+    throw e;
+  } finally {
+    await args.ledger(stop, results);
+  }
+  return { stop, results };
+}
+
+/**
+ * Runs `tags` in order, one call each (see `runLanguages` for the ledger and
+ * the spend fuse), writing `<tag>/<BOOK>.json` after each call.
  */
 export async function runBook(args: {
   english: EnglishTitles;
@@ -308,40 +380,11 @@ export async function runBook(args: {
   log?: (line: string) => void;
 }): Promise<{ stop: StopReason; summary: ReturnType<typeof summarise> }> {
   const log = args.log ?? (() => {});
-  const calls: Call[] = [];
-  const results: LanguageResult[] = [];
-  const ledger = (stop: StopReason | "running") =>
-    args.write("run.json", {
-      ...args.meta,
-      model: args.model,
-      languages: args.tags,
-      maxCost: args.maxCost,
-      stop,
-      updatedAt: new Date().toISOString(),
-      results: Object.fromEntries(
-        results.map((r) => [
-          r.call.language,
-          {
-            missing: r.missing,
-            invalid: r.invalid,
-            ...(r.error ? { error: r.error } : {}),
-          },
-        ])
-      ),
-      calls,
-      summary: summarise(calls, results),
-    });
-  let spent = 0;
-  let stop: StopReason = "done";
-  let current = "";
-  try {
-    for (const tag of args.tags) {
-      current = tag;
-      if (spent >= args.maxCost) {
-        stop = { maxCost: args.maxCost, spent, before: tag };
-        break;
-      }
-      const result = await translateLanguage({
+  const { stop, results } = await runLanguages<LanguageResult>({
+    tags: args.tags,
+    maxCost: args.maxCost,
+    run: (tag) =>
+      translateLanguage({
         english: args.english,
         tag,
         glossary: args.glossaries[tag] ?? null,
@@ -349,9 +392,9 @@ export async function runBook(args: {
         model: args.model,
         complete: args.complete,
         keys: args.keys,
-      });
-      calls.push(result.call);
-      results.push(result);
+      }),
+    record: async (result) => {
+      const tag = result.call.language;
       await args.write(`${tag}/${args.english.book}.json`, {
         language: tag,
         book: args.english.book,
@@ -366,18 +409,37 @@ export async function runBook(args: {
           `${call.promptTokens}+${call.completionTokens} tokens, ` +
           `$${call.cost?.toFixed(6) ?? "unknown"}, ${call.ms} ms`
       );
-      if (call.cost === null) {
-        stop = { unknownCost: tag };
-        break;
-      }
-      spent += call.cost;
-      await ledger("running");
-    }
-  } catch (e) {
-    stop = { error: (e as Error).message, language: current };
-    throw e;
-  } finally {
-    await ledger(stop);
-  }
-  return { stop, summary: summarise(calls, results) };
+    },
+    ledger: (stop, results) =>
+      args.write("run.json", {
+        ...args.meta,
+        model: args.model,
+        languages: args.tags,
+        maxCost: args.maxCost,
+        stop,
+        updatedAt: new Date().toISOString(),
+        results: Object.fromEntries(
+          results.map((r) => [
+            r.call.language,
+            {
+              missing: r.missing,
+              invalid: r.invalid,
+              ...(r.error ? { error: r.error } : {}),
+            },
+          ])
+        ),
+        calls: results.map((r) => r.call),
+        summary: summarise(
+          results.map((r) => r.call),
+          results
+        ),
+      }),
+  });
+  return {
+    stop,
+    summary: summarise(
+      results.map((r) => r.call),
+      results
+    ),
+  };
 }

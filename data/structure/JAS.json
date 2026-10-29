@@ -1,0 +1,293 @@
+{
+  "book": "JAS",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "JAS.P.1.1-1", "start": [1, 1], "end": [1, 1] },
+    { "key": "JAS.P.1.2-12", "start": [1, 2], "end": [1, 12] },
+    { "key": "JAS.P.1.13-18", "start": [1, 13], "end": [1, 18] },
+    { "key": "JAS.P.1.19-27", "start": [1, 19], "end": [1, 27] },
+    { "key": "JAS.P.2.1-13", "start": [2, 1], "end": [2, 13] },
+    { "key": "JAS.P.2.14-26", "start": [2, 14], "end": [2, 26] },
+    { "key": "JAS.P.3.1-12", "start": [3, 1], "end": [3, 12] },
+    { "key": "JAS.P.3.13-18", "start": [3, 13], "end": [3, 18] },
+    { "key": "JAS.P.4.1-6", "start": [4, 1], "end": [4, 6] },
+    { "key": "JAS.P.4.7-12", "start": [4, 7], "end": [4, 12] },
+    { "key": "JAS.P.4.13-17", "start": [4, 13], "end": [4, 17] },
+    { "key": "JAS.P.5.1-6", "start": [5, 1], "end": [5, 6] },
+    { "key": "JAS.P.5.7-12", "start": [5, 7], "end": [5, 12] },
+    { "key": "JAS.P.5.13-18", "start": [5, 13], "end": [5, 18] },
+    { "key": "JAS.P.5.19-20", "start": [5, 19], "end": [5, 20] }
+  ],
+  "segments": [
+    {
+      "key": "JAS.1.1-1",
+      "pericope": "JAS.P.1.1-1",
+      "start": [1, 1],
+      "end": [1, 1]
+    },
+    {
+      "key": "JAS.1.2-3",
+      "pericope": "JAS.P.1.2-12",
+      "start": [1, 2],
+      "end": [1, 3]
+    },
+    {
+      "key": "JAS.1.4-5",
+      "pericope": "JAS.P.1.2-12",
+      "start": [1, 4],
+      "end": [1, 5]
+    },
+    {
+      "key": "JAS.1.6-8",
+      "pericope": "JAS.P.1.2-12",
+      "start": [1, 6],
+      "end": [1, 8]
+    },
+    {
+      "key": "JAS.1.9-11",
+      "pericope": "JAS.P.1.2-12",
+      "start": [1, 9],
+      "end": [1, 11]
+    },
+    {
+      "key": "JAS.1.12-12",
+      "pericope": "JAS.P.1.2-12",
+      "start": [1, 12],
+      "end": [1, 12]
+    },
+    {
+      "key": "JAS.1.13-13",
+      "pericope": "JAS.P.1.13-18",
+      "start": [1, 13],
+      "end": [1, 13]
+    },
+    {
+      "key": "JAS.1.14-16",
+      "pericope": "JAS.P.1.13-18",
+      "start": [1, 14],
+      "end": [1, 16]
+    },
+    {
+      "key": "JAS.1.17-18",
+      "pericope": "JAS.P.1.13-18",
+      "start": [1, 17],
+      "end": [1, 18]
+    },
+    {
+      "key": "JAS.1.19-21",
+      "pericope": "JAS.P.1.19-27",
+      "start": [1, 19],
+      "end": [1, 21]
+    },
+    {
+      "key": "JAS.1.22-25",
+      "pericope": "JAS.P.1.19-27",
+      "start": [1, 22],
+      "end": [1, 25]
+    },
+    {
+      "key": "JAS.1.26-27",
+      "pericope": "JAS.P.1.19-27",
+      "start": [1, 26],
+      "end": [1, 27]
+    },
+    {
+      "key": "JAS.2.1-4",
+      "pericope": "JAS.P.2.1-13",
+      "start": [2, 1],
+      "end": [2, 4]
+    },
+    {
+      "key": "JAS.2.5-7",
+      "pericope": "JAS.P.2.1-13",
+      "start": [2, 5],
+      "end": [2, 7]
+    },
+    {
+      "key": "JAS.2.8-9",
+      "pericope": "JAS.P.2.1-13",
+      "start": [2, 8],
+      "end": [2, 9]
+    },
+    {
+      "key": "JAS.2.10-11",
+      "pericope": "JAS.P.2.1-13",
+      "start": [2, 10],
+      "end": [2, 11]
+    },
+    {
+      "key": "JAS.2.12-13",
+      "pericope": "JAS.P.2.1-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "JAS.2.14-17",
+      "pericope": "JAS.P.2.14-26",
+      "start": [2, 14],
+      "end": [2, 17]
+    },
+    {
+      "key": "JAS.2.18-20",
+      "pericope": "JAS.P.2.14-26",
+      "start": [2, 18],
+      "end": [2, 20]
+    },
+    {
+      "key": "JAS.2.21-24",
+      "pericope": "JAS.P.2.14-26",
+      "start": [2, 21],
+      "end": [2, 24]
+    },
+    {
+      "key": "JAS.2.25-26",
+      "pericope": "JAS.P.2.14-26",
+      "start": [2, 25],
+      "end": [2, 26]
+    },
+    {
+      "key": "JAS.3.1-2",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "JAS.3.3-4",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 3],
+      "end": [3, 4]
+    },
+    {
+      "key": "JAS.3.5-6",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 5],
+      "end": [3, 6]
+    },
+    {
+      "key": "JAS.3.7-8",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 7],
+      "end": [3, 8]
+    },
+    {
+      "key": "JAS.3.9-10",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 9],
+      "end": [3, 10]
+    },
+    {
+      "key": "JAS.3.11-12",
+      "pericope": "JAS.P.3.1-12",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "JAS.3.13-14",
+      "pericope": "JAS.P.3.13-18",
+      "start": [3, 13],
+      "end": [3, 14]
+    },
+    {
+      "key": "JAS.3.15-18",
+      "pericope": "JAS.P.3.13-18",
+      "start": [3, 15],
+      "end": [3, 18]
+    },
+    {
+      "key": "JAS.4.1-3",
+      "pericope": "JAS.P.4.1-6",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "JAS.4.4-5",
+      "pericope": "JAS.P.4.1-6",
+      "start": [4, 4],
+      "end": [4, 5]
+    },
+    {
+      "key": "JAS.4.6-6",
+      "pericope": "JAS.P.4.1-6",
+      "start": [4, 6],
+      "end": [4, 6]
+    },
+    {
+      "key": "JAS.4.7-7",
+      "pericope": "JAS.P.4.7-12",
+      "start": [4, 7],
+      "end": [4, 7]
+    },
+    {
+      "key": "JAS.4.8-10",
+      "pericope": "JAS.P.4.7-12",
+      "start": [4, 8],
+      "end": [4, 10]
+    },
+    {
+      "key": "JAS.4.11-12",
+      "pericope": "JAS.P.4.7-12",
+      "start": [4, 11],
+      "end": [4, 12]
+    },
+    {
+      "key": "JAS.4.13-14",
+      "pericope": "JAS.P.4.13-17",
+      "start": [4, 13],
+      "end": [4, 14]
+    },
+    {
+      "key": "JAS.4.15-17",
+      "pericope": "JAS.P.4.13-17",
+      "start": [4, 15],
+      "end": [4, 17]
+    },
+    {
+      "key": "JAS.5.1-3",
+      "pericope": "JAS.P.5.1-6",
+      "start": [5, 1],
+      "end": [5, 3]
+    },
+    {
+      "key": "JAS.5.4-6",
+      "pericope": "JAS.P.5.1-6",
+      "start": [5, 4],
+      "end": [5, 6]
+    },
+    {
+      "key": "JAS.5.7-8",
+      "pericope": "JAS.P.5.7-12",
+      "start": [5, 7],
+      "end": [5, 8]
+    },
+    {
+      "key": "JAS.5.9-11",
+      "pericope": "JAS.P.5.7-12",
+      "start": [5, 9],
+      "end": [5, 11]
+    },
+    {
+      "key": "JAS.5.12-12",
+      "pericope": "JAS.P.5.7-12",
+      "start": [5, 12],
+      "end": [5, 12]
+    },
+    {
+      "key": "JAS.5.13-15",
+      "pericope": "JAS.P.5.13-18",
+      "start": [5, 13],
+      "end": [5, 15]
+    },
+    {
+      "key": "JAS.5.16-18",
+      "pericope": "JAS.P.5.13-18",
+      "start": [5, 16],
+      "end": [5, 18]
+    },
+    {
+      "key": "JAS.5.19-20",
+      "pericope": "JAS.P.5.19-20",
+      "start": [5, 19],
+      "end": [5, 20]
+    }
+  ]
+}

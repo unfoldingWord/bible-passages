@@ -23,6 +23,7 @@ import {
   LANGUAGES,
   runBook,
   sha256,
+  usableTerm,
   type EnglishTitles,
   type Glossary,
 } from "../lib/translate.ts";
@@ -76,16 +77,24 @@ const glossaries: Record<string, Glossary | null> = {};
 const glossaryHashes: Record<string, string | null> = {};
 for (const tag of tags) {
   const file = new URL(`data/glossaries/${tag}/${book}.json`, root);
-  if (existsSync(file)) {
-    const text = readFileSync(file, "utf8");
-    glossaries[tag] = JSON.parse(text) as Glossary;
+  const text = existsSync(file) ? readFileSync(file, "utf8") : undefined;
+  const glossary =
+    text === undefined ? undefined : (JSON.parse(text) as Glossary);
+  // A glossary whose terms all wait for review (AI-drafted, not yet read by
+  // a person) gives titles nothing, so it counts as no glossary.
+  if (
+    text !== undefined &&
+    glossary &&
+    Object.values(glossary.terms).some(usableTerm)
+  ) {
+    glossaries[tag] = glossary;
     glossaryHashes[tag] = sha256(text);
   } else if (values["allow-no-glossary"]) {
     glossaries[tag] = null;
     glossaryHashes[tag] = null;
   } else {
     fail(
-      `no glossary for ${tag} ${book}; pass --allow-no-glossary to run without`
+      `no glossary${text === undefined ? "" : " with reviewed terms"} for ${tag} ${book}; pass --allow-no-glossary to run without`
     );
   }
 }

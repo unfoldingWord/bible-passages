@@ -76,7 +76,7 @@ earlier copies of `en_twl`, not language-specific work, so this build uses
 | Break  | observed | (1) **Chinese has no Translation Words** on Door43 (catalog and repository search above). (2) **`ar_gt/ar_tw` is Persian**, though tagged `ar`; the "final yeh" difference reported in [ai.md](ai.md#7-translation) is this. `BSOJ/ar_tw` uses Arabic yeh only, so no normalising is needed. (3) **16 of 93 Arabic headwords for Titus are English** in `BSOJ/ar_tw` (`kt/faith`, `names/titus`, and 14 more; listed as gaps in `data/glossaries/ar/TIT.json`). (4) Releases lack 1 to 3 of the 93 Titus articles (table). (5) Headings are written in at least four ways (`# x`, `#x`, `## x`, `# x #`), some with byte-order marks. |
 | Beget  | skipped  | No owner yet, so nothing is delegated. To ask: Chinese (zh-Hans): a Chinese team that works with unfoldingWord to carry a Translation Words key-term list, starting with Titus's 93 terms. No owner yet. Fallback if no owner by go/no-go 2 in [plan.md](plan.md) (13 Nov): an AI-drafted zh-Hans term list from the English headwords and articles, every entry `source: "ai:<model>"`, checked by a second model and reviewed by a Chinese reader before titles use it. The 16 English Arabic headwords go to the Arabic tW team the same way, with the same fallback.                                                              |
 | Bide   | n/a      | Nothing in the field is converging on a Chinese tW that we observed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Build  | minimal  | For Titus: `scripts/data/glossaries.ts` writes `data/glossaries/<lang>/TIT.json` for the 9 languages above from pinned files only; `scripts/data/pin-glossaries.ts` pins them. Traced to Breaks 2 to 5: the repo per language, the gaps and the heading parse are what the code adds. No Chinese glossary is built (Break 1).                                                                                                                                                                                                                                                                                                         |
+| Build  | minimal  | For Titus: `scripts/data/glossaries.ts` writes `data/glossaries/<lang>/TIT.json` for the 9 languages above from pinned files only; `scripts/data/pin-glossaries.ts` pins them. Traced to Breaks 2 to 5: the repo per language, the gaps and the heading parse are what the code adds. No Chinese glossary is built from tW (Break 1); see "Chinese (zh-Hans)" below.                                                                                                                                                                                                                                                                  |
 
 Reversibility: forward = low; backward = low. Glossaries are generated from
 pins; changing a repo is a new pin and a rebuild.
@@ -131,6 +131,122 @@ pins; changing a repo is a new pin and a rebuild.
 Titus, built: en 93 terms; id 93; es-419, fr, hi, ru, sw 92 each with 1 gap;
 pt-BR 90 with 3; ar 77 with 16.
 
+## Chinese (zh-Hans)
+
+Decision 14 ([decisions/0003](../decisions/0003-v0.1-scope-and-titles.md)):
+one model drafts a zh-Hans key-term list for the terms a book links, a second
+model checks it, and a Chinese reader reviews it. Issue #31. Measured on
+2026-10-29 unless labelled otherwise; commands at the end of this section.
+
+### 6B
+
+| Step   | Verdict  | Evidence / justification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Borrow | applied  | **FIA Key Terms (zhs)**, `cistern/zhs_fiakt-raw` on Door43 at `e08f9c5f` (a BibleAquifer mirror): 155 Simplified Chinese key terms, all `reviewLevel: Professional`, © SRV Partners 2023, CC BY-SA 4.0 (the file's `licenseInfo` and the repo's `metadata.json`), MD5 matching the metadata. Pinned as `fia-kt-zhs`. 15 of its terms are associated with Titus passages. Also used unchanged: `en_twl` v91 (which articles), `en_tw` v91 (English headwords and definitions), the OpenRouter client from #36.                                                                                                                                                                                |
+| Bend   | applied  | FIA is a reference list, not a glossary of tW articles: both models get it and the drafter names the FIA term it follows (24 of 93 do), so the reader sees which renderings rest on a reviewed source. The title runner's record-a-run pattern (ledger, `.cache/` output, spend fuse) is reused for a draft-then-check pair.                                                                                                                                                                                                                                                                                                                                                                 |
+| Break  | observed | (1) No Chinese Translation Words or TWL in the Door43 catalog: the production stage for `zh`, `zh-Hans`, `zh-hans`, `zh-CN`, `zh-cn`, `cmn`, `zh-tw`, `zh-Hant` has only `zh_cuv`, OBS and `zh-hant` OBS; the latest stage for `zh`, `zh-hans`, `cmn` adds personal Bible, OBS-notes, Translation Notes and Questions repos, none Translation Words. The three `zh_tw` repositories have no articles (above). (2) FIA covers 155 concepts and none of the tW article ids; it cannot fill 93 tW terms by itself. (3) `cistern/zhs_bsnkt-raw` (Biblica key terms, zhs) holds one term. (4) The build clears and regenerates `data/glossaries/`, so a committed AI file there would be deleted. |
+| Beget  | skipped  | Still no Chinese team named to carry a Chinese tW (same as above); decision 14 took the fallback.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Bide   | n/a      | Nothing observed converging on a Chinese tW.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Build  | minimal  | `scripts/lib/key-terms.ts` and `scripts/translate/key-terms.ts` (Breaks 1–3: one draft call, one check call, gates, a ledger), `prompts/key-terms.md`, and a build step that turns the committed record in `data/glossary-drafts/` into `data/glossaries/zh-Hans/` offline (Break 4). The title runner leaves out AI terms until a person has reviewed them.                                                                                                                                                                                                                                                                                                                                 |
+
+Reversibility: forward = low; backward = low. The record is one committed
+file; a new run replaces it in a new commit, and nothing in `dist/` reads it.
+
+### Recorded, not rebuilt
+
+A model's answer cannot be reproduced byte for byte, and CI must not call a
+model. So the run writes a record (`.cache/key-terms/<run>/zh-Hans/TIT.json`)
+that is committed unchanged to `data/glossary-drafts/zh-Hans/TIT.json`, with
+both OpenRouter generation ids, tokens, cost and the prompt's SHA-256. `npm
+run build` reads only that file and the pins, so the rebuild gate stays
+offline apart from Door43 pins and stays clean. The build refuses a record
+whose articles differ from the TWL's, whose English headword differs from
+the pinned `en_tw` (stale), or whose status breaks the rule; a test holds the
+recorded prompt hash to the committed prompt file. Changing the prompt or
+the inputs means a new run.
+
+### Models
+
+Drafted by `google/gemini-3.8-flash`, checked by
+`anthropic/claude-sonnet-5.5` (the two models the maintainer chose for #10).
+Why this way round (a judgement, not measured): the draft is the longer
+output (93 terms with notes), and Gemini Flash costs less per output token
+($4.125 per million against $10, OpenRouter's model list, read 2026-10-29);
+Claude Sonnet is the model this repo already uses for judging wording, and
+the check decides the status. Either way the check is cross-family, as ADR
+0002 asks.
+
+### Titus run (measured)
+
+| Call  | Model                         | Prompt tokens | Completion tokens (reasoning) | Cost (USD) | Time   |
+| ----- | ----------------------------- | ------------- | ----------------------------- | ---------- | ------ |
+| draft | `google/gemini-3.8-flash`     | 13,205        | 8,792 (6,270)                 | 0.042874   | 51.1 s |
+| check | `anthropic/claude-sonnet-5.5` | 18,546        | 3,410 (1,726)                 | 0.071192   | 18.0 s |
+|       | total                         | 31,751        | 12,202                        | 0.114066   |        |
+
+Source: `data/glossary-drafts/zh-Hans/TIT.json`, `calls`. Result: 93 of 93
+linked articles drafted, 0 gate failures, the checker agreed with all 93
+(so all are `ai-checked` and `review` is empty), 24 follow an FIA term, 1
+carries a note (`kt/god`: 神 first, 上帝 named). Re-derived with `jq` over the
+record and the TWL file fetched with `curl` (93 articles, the same set).
+
+### Checker calibration (measured)
+
+Agreement on all 93 says little unless the checker can disagree. One more
+check call, same prompt and inputs, with six terms of the draft replaced by
+seeded errors (not committed; $0.05686, 18,535 + 1,979 tokens):
+
+| Seeded error                                       | Caught |
+| -------------------------------------------------- | ------ |
+| `kt/glory` 榮耀 (traditional character)            | yes    |
+| `other/elder` 老人 (old people, not the office)    | yes    |
+| `kt/holyspirit` 圣神 (the Catholic term)           | yes    |
+| `kt/savior` 救世军 (the Salvation Army)            | yes    |
+| `other/wine` with 烈酒 and 啤酒 added              | yes    |
+| `names/crete` 克里特 (meant as not the CUV 革哩底) | no     |
+
+It raised no disagreement on the 87 unchanged terms. The sixth seed turned
+out not to be an error: `Door43-Catalog/zh_cuv` (新标点和合本, the revised
+punctuation edition of the Chinese Union Version; its manifest says public
+domain) writes 克里特 at Titus 1:5 and 1:12; 革哩底 is, as far as known here, the original 1919 spelling (not checked against a copy).
+So the checker caught 5 of 5 real errors (wrong sense, wrong tradition,
+traditional characters, padding), and the Crete spelling is a real choice
+between two editions, which the draft did not note. The other Titus names in
+the draft (提多, 保罗, 亚波罗, 推基古) are spelled as `zh_cuv` writes them
+(`grep` over its `57-TIT.usfm`). One calibration run of six seeds is a
+small sample, so every term still needs the reader: `ai-checked` is not a
+review.
+
+### Not done
+
+- A Chinese reader is not yet named (the maintainer names one on #31). Their
+  review is recorded as a later change to the record.
+- Names are not checked against a pinned Chinese Bible. `zh_cuv` on Door43
+  could be pinned for that; it would have flagged 革哩底 against 克里特.
+- Traditional characters are not gated mechanically (no reliable offline
+  test); the checker caught one in calibration.
+- Other books: one run per book, after the reader has seen Titus.
+
+### Commands
+
+```sh
+# Catalog and repository search (Break 1, 3)
+for l in zh zh-Hans zh-hans zh-CN zh-cn cmn zh-tw zh-Hant; do   # and stage=latest for zh, zh-hans, cmn
+  curl -s "https://git.door43.org/api/v1/catalog/search?lang=$l&limit=100" \
+    | jq -r '.data[] | [.language,.full_name,.subject] | @tsv'; done
+curl -s "https://git.door43.org/api/v1/repos/search?q=zhs&limit=50" | jq -r '.data[].full_name'
+
+# FIA licence, checksum and Titus terms
+curl -s https://git.door43.org/cistern/zhs_fiakt-raw/raw/commit/e08f9c5f87a09f78c8c3c5cdfcc4964cdd0965c1/metadata.json \
+  | jq '.copyright, .ingredients'
+jq -r '.[] | select([.associations[]? | select(.startBookCode=="TIT")] | length > 0) | .name' fia.json
+
+# The run (key from the environment only)
+node scripts/translate/key-terms.ts --book TIT --lang zh-Hans \
+  --draft-model google/gemini-3.8-flash --check-model anthropic/claude-sonnet-5.5 \
+  --max-cost 0.60
+```
+
 ## Spanish tag (open)
 
 Translation Words for Spanish is published as `es-419` (Latin American
@@ -159,15 +275,101 @@ labels Latin American Spanish as Spanish in general. The maintainer decides.
 Related, not a decision: the dataset writes BCP 47 tags in their usual case,
 `pt-BR`, where Door43 writes `pt-br`. Tags compare case-insensitively.
 
+## Every book (#30)
+
+Measured on 2026-10-29 at the pinned commits above, unless labelled. The
+code for every book lands first with the build still Titus-only
+(`GLOSSARY_BOOKS = ["TIT"]` in `scripts/lib/glossaries.ts`); the switch to
+`TWL_BOOKS` and the generated data follow as their own change.
+
+### What running it over every book broke
+
+1. **`en_twl` v91 has 59 books, not 66.** Its git tree has no
+   `twl_NUM.tsv`, `1CH`, `2CH`, `ECC`, `ISA`, `JER` or `EZK` (404 at the
+   pinned commit). `en_twl` master (unreleased) has them; so do older
+   copies such as `ru_gl/ru_twl` v6 and `BSOJ/ar_twl` v5.1. These seven
+   books are `TWL_UNRELEASED`: no glossary until a release that has them is
+   pinned. Which source to use for them is open (below).
+2. **Psalms references.** 155 Psalms rows use `c:front`, the superscription
+   before verse 1. Read as verse 0, written back as `c:front`, sorted
+   before verse 1. Refs are in the TWL's versification (the ULT's), not
+   necessarily the structure's; untested beyond Titus, a watch item.
+3. **Two article names have an underscore**: `other/bear-witness_testify`
+   and `other/house-descendants_nation` (en_tw v91 tree; 180 TWL rows).
+   `ARTICLE` allows `_`; `twId` writes it as `--`, which no name has.
+4. **Absent lists per book did not scale**: 11,957 book-article pairs, and
+   2,501 gaps for Indonesian alone. An absent article is a fact about the
+   release, so `absent` is one list per language
+   (`scripts/lib/glossary-absent.ts`), measured over all 59 books by a
+   separate Python script and re-derived by `pin-glossaries.ts`, which
+   refuses to pin if they disagree. They agreed.
+5. **Nine articles have no heading line** (hi `kt/church`, `names/greek`,
+   `names/jamesbrotherofjesus`, `names/marysisterofmartha`,
+   `other/shepherd`; id `names/redsea`, `other/partial`, `other/report`,
+   `other/rod`): the `#` is missing or has text before it
+   (`mendukung# pilih kasih`). They are `no-heading` gaps; guessing the
+   headword is not ours to do.
+6. **`kt/arcofthecovenant`** is linked once (2 Samuel) and exists in no
+   release, English included; `kt/arkofthecovenant` does. Inference: a typo
+   in `en_twl`. A `no-article` gap in every language.
+7. **The build re-parsed `sources.json` for every read**, fine at 484 KB,
+   not at 4.1 MB. It now reads it once.
+
+### Sizes and gaps, all 59 books (measured on a local branch)
+
+| Measure                   | Value                                             |
+| ------------------------- | ------------------------------------------------- |
+| Distinct articles linked  | 938 (of 953 in `en_tw` v91)                       |
+| Glossary pins             | 7,951 (59 TWL + 7,892 tW), up from 830: 7,121 new |
+| `sources.json`            | 4,148,228 bytes, up from 484,048                  |
+| `data/glossaries/`        | 531 files, 26,632,415 bytes                       |
+| `pin-glossaries.ts`, cold | 3 min 37 s; the build with a warm cache 7 s       |
+
+Per language, summed over the 59 books (distinct articles in brackets):
+
+| Language | Terms  | no-article  | no-heading | english-headword |
+| -------- | ------ | ----------- | ---------- | ---------------- |
+| en       | 11,956 | 1 (1)       | 0          | 0                |
+| ar       | 6,542  | 44 (5)      | 0          | 5,371 (638)      |
+| es-419   | 11,617 | 340 (39)    | 0          | 0                |
+| fr       | 11,393 | 564 (69)    | 0          | 0                |
+| hi       | 11,551 | 349 (41)    | 57 (5)     | 0                |
+| id       | 9,400  | 2,501 (243) | 56 (4)     | 0                |
+| pt-BR    | 11,137 | 820 (70)    | 0          | 0                |
+| ru       | 11,608 | 349 (41)    | 0          | 0                |
+| sw       | 11,584 | 373 (41)    | 0          | 0                |
+
+Each count was produced twice: by the build, and by a separate Python
+script from the TWL files, the release trees and the cached articles. They
+agree. Arabic is the large gap: 638 of the 938 articles in `BSOJ/ar_tw` v5
+still have an English headword.
+
+### 6B: every book
+
+| Step   | Verdict  | Evidence / justification                                                                                                                       |
+| ------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Borrow | applied  | The same pins as Titus: `unfoldingWord/en_twl` v91 (59 books) and the nine tW releases in the table at the top.                                |
+| Bend   | applied  | Unchanged from Titus: the English TWL for every language.                                                                                      |
+| Break  | observed | The seven above, each from running the pin script and the build over all 59 books.                                                             |
+| Beget  | skipped  | No owner yet. To ask: the `en_twl` team (seven unreleased books, the `arc` link), the Arabic tW team (638 English headwords), hi and id teams. |
+| Bide   | waiting  | The seven books: tripwire is an `en_twl` release with them, or the maintainer's choice of another source (below), whichever is first.          |
+| Build  | minimal  | `TWL_BOOKS`, `c:front`, `_` in ids, per-release absent lists, the `no-heading` gap, one read of `sources.json`: one per Break, nothing else.   |
+
+Reversibility: forward = low; backward = low. All generated from pins.
+
+### Open for the maintainer
+
+- **The seven books without a released TWL.** Wait for an `en_twl` release
+  (current behaviour: no glossary), pin `en_twl` master at a commit
+  (unreleased work), or use an older full copy (`ru_gl/ru_twl` v6). Not
+  measured: how those copies differ from `en_twl` for those books.
+- **Size.** 26.6 MB of generated glossaries and a 4.1 MB `sources.json` go
+  into git. A CI build fetches all 7,951 glossary pins from Door43 each run
+  (no cache); measured cold 3 min 37 s for the pin script, which fetches
+  the same files.
+
 ## Not done
 
-- The other 65 books: each needs its TWL pinned and its absent lists measured
-  (`node scripts/data/pin-glossaries.ts` after adding the book to `BOOKS`).
-  Titus pins 830 files. A pin is per language and article, shared by every
-  book, so the whole Bible needs at most about 8,600 _(estimated: 953
-  articles in `en_tw` v91 × 9 languages, plus 66 TWL files; an upper bound,
-  since releases lack some articles)_. Pinning whole releases instead of
-  files is a choice to make before the second book.
 - How complete or reviewed each translation is beyond its headwords was not
   measured.
 - How the translation step uses a glossary (prompt, check) is part of

@@ -1,0 +1,810 @@
+{
+  "language": "zh-Hans",
+  "book": "TIT",
+  "links": "twl-en-tit",
+  "drafts": "data/glossary-drafts/zh-Hans/TIT.json",
+  "models": {
+    "draft": "ai:google/gemini-3.8-flash",
+    "check": "ai:anthropic/claude-sonnet-5.5"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw",
+    "Familiarization, Internalization, Articulation (FIA) Key Terms (Simplified Chinese), © SRV Partners 2023, CC BY-SA 4.0, from BibleAquifer as mirrored at cistern/zhs_fiakt-raw. Original work available at https://git.door43.org/cistern/zhs_fiakt-raw"
+  ],
+  "terms": {
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "使徒、使徒职分",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "apostle",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1"]
+    },
+    "kt/authority": {
+      "en": "authority",
+      "headword": "权柄",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "authority",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:15", "3:1"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "信、相信、信徒、不信",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "belief",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:15", "3:8"]
+    },
+    "kt/blameless": {
+      "en": "blameless",
+      "headword": "无可指责",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:6", "1:7"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "祝福、赐福、福",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "bless",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:13"]
+    },
+    "kt/bornagain": {
+      "en": "born again, born of God, new birth",
+      "headword": "重生、从神生",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:5"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "基督、弥赛亚",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "Christ",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "1:4", "2:13", "3:6"]
+    },
+    "kt/circumcise": {
+      "en": "circumcise, circumcised, circumcision, uncircumcised, uncircumcision",
+      "headword": "割礼、受割礼、未受割礼",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:10"]
+    },
+    "kt/conscience": {
+      "en": "conscience",
+      "headword": "良心",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:15"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "拣选、选民",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "永远、永恒、永生",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:2", "3:7"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "邪恶、恶",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "evil",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:12", "2:8", "3:3"]
+    },
+    "kt/exhort": {
+      "en": "exhort, exhortation",
+      "headword": "劝勉、劝",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:6", "2:15"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "信心、信",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "faith",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "1:4", "1:13", "2:2", "2:10", "3:15"]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "忠心、信实、可信的",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:6", "1:9", "3:8"]
+    },
+    "kt/foolish": {
+      "en": "fool, foolish, folly",
+      "headword": "愚拙、愚昧",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:3", "3:9"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "荣耀",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "glory",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:13"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "神、上帝",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "God",
+      "note": "神 is the more widely used term in Simplified Chinese Protestant churches, while 上帝 is also widely accepted.",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:7",
+        "1:16",
+        "2:10",
+        "2:11",
+        "2:13",
+        "3:4",
+        "3:8"
+      ]
+    },
+    "kt/godly": {
+      "en": "godly, godliness, ungodly, godless, ungodliness, godlessness",
+      "headword": "敬虔、不敬虔",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "2:12"]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "父神、天父、父",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:4"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "良善、善、好",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": [
+        "1:8",
+        "1:16",
+        "2:5",
+        "2:7",
+        "2:10",
+        "2:14",
+        "3:1",
+        "3:8",
+        "3:14"
+      ]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "恩典、恩惠",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:4", "2:11", "3:7", "3:15"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "圣洁、圣",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "holy",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:8"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "圣灵",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "Holy Spirit",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:5"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "盼望",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:2", "2:13", "3:7"]
+    },
+    "kt/humble": {
+      "en": "humble, humbled, humility",
+      "headword": "谦卑、谦逊",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:2"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "耶稣、耶稣基督、基督耶稣",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "1:4", "2:13", "3:6"]
+    },
+    "kt/jew": {
+      "en": "Jew, Jewish",
+      "headword": "犹太人、犹太的",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:14"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "称义、公义",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:7"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "律法、摩西的律法",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "law",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:9"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "主、主人",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "Lord",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:9"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "爱、亲爱的",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:2", "2:4", "3:4", "3:15"]
+    },
+    "kt/mercy": {
+      "en": "mercy, merciful",
+      "headword": "怜悯、怜恤",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "mercy",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:5"]
+    },
+    "kt/promise": {
+      "en": "promise, promised",
+      "headword": "应许",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:2"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "先知、预言",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "prophet",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:12"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "洁净、纯洁",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:15", "2:5", "2:14"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "救赎、救赎主",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:14"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "公义、正直",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "righteousness",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:8", "2:12", "3:5"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "拯救、得救、救恩",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "salvation",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:11", "3:5"]
+    },
+    "kt/savior": {
+      "en": "Savior, savior",
+      "headword": "救主",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:3", "1:4", "2:10", "2:13", "3:4", "3:6"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "罪、犯罪、罪人",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "sin",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:11"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "见证、作见证",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:13"]
+    },
+    "kt/trust": {
+      "en": "trust, trusted, trustworthy, trustworthiness",
+      "headword": "信靠、托付、可信的",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:3"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "神的道、神的话",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:3", "2:5"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "世界、世俗的",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:12"]
+    },
+    "kt/zealous": {
+      "en": "zeal, zealous",
+      "headword": "热心",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:14"]
+    },
+    "names/apollos": {
+      "en": "Apollos",
+      "headword": "亚波罗",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:13"]
+    },
+    "names/crete": {
+      "en": "Crete, Cretan",
+      "headword": "革哩底、革哩底人",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:5", "1:12"]
+    },
+    "names/paul": {
+      "en": "Paul, Saul",
+      "headword": "保罗、扫罗",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1"]
+    },
+    "names/titus": {
+      "en": "Titus",
+      "headword": "提多",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:4"]
+    },
+    "names/tychicus": {
+      "en": "Tychicus",
+      "headword": "推基古",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:12"]
+    },
+    "other/admonish": {
+      "en": "admonish, warned, aware",
+      "headword": "警戒、劝诫",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:10"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "年老、年纪、年龄",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:12"]
+    },
+    "other/age-timeperiod": {
+      "en": "age, era, time",
+      "headword": "世代、时代",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:2", "1:3"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "兽、野兽",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:12"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "败坏、污秽",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:15"]
+    },
+    "other/courage": {
+      "en": "courage, courageous, valor",
+      "headword": "勇气、勇敢",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:9"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "欺哄、欺骗、迷惑",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:10"]
+    },
+    "other/detestable": {
+      "en": "detest, detested, detestable",
+      "headword": "可憎的、厌恶",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:16"]
+    },
+    "other/doctrine": {
+      "en": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "headword": "教训、教义、道理",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:9", "2:1", "2:7", "2:10"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "长老",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "elder",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:5", "2:2"]
+    },
+    "other/enslave": {
+      "en": "enslave, slave, bondservant, bondage, bound, bond, bonds, young man, young men, young woman, young women",
+      "headword": "奴役、作奴仆、捆绑",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:3", "3:3"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "嫉妒",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:3"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "果子、结果子、不结果子",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:14"]
+    },
+    "other/heir": {
+      "en": "heir",
+      "headword": "后嗣",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "heir",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:7"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "家中的人、全家",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "household",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:11"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "知道、认识",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "1:16", "3:11"]
+    },
+    "other/law": {
+      "en": "law, principle",
+      "headword": "律法、规条",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "law",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:13"]
+    },
+    "other/lawful": {
+      "en": "lawful, unlawful, not lawful, lawless, lawlessness",
+      "headword": "合法、不法",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:14"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "私欲、情欲",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:12", "3:3"]
+    },
+    "other/manager": {
+      "en": "manager, steward, stewardship",
+      "headword": "管家",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:7"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "心思、意念、心意",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "mind",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:15"]
+    },
+    "other/ordain": {
+      "en": "ordain, ordained, ordination, planned long ago, set up, prepared",
+      "headword": "设立、立",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:5"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "监督",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:7"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "平安、和平、和睦",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:4", "3:2"]
+    },
+    "other/perseverance": {
+      "en": "persevere, perseverance",
+      "headword": "忍耐、坚忍",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:2"]
+    },
+    "other/perverse": {
+      "en": "perverse, perversion, pervert, depraved, malicious, devious, dishonest, distortion",
+      "headword": "乖谬、背道",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:11"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "传讲、传道、宣讲",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:3"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "益处、有益、得利",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:11", "3:8"]
+    },
+    "other/rebel": {
+      "en": "rebel, rebellion, rebellious, rebelliousness",
+      "headword": "悖逆、不服",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:6", "1:10"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "责备",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:9", "1:13", "2:15"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "领受、接受、接待",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:13"]
+    },
+    "other/reject": {
+      "en": "reject, rejected, rejection",
+      "headword": "弃绝、拒绝",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:10"]
+    },
+    "other/reverence": {
+      "en": "revere, revered, reverence, reverent",
+      "headword": "恭敬、敬畏",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:3"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "掌权的、作官的、统治者",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:1"]
+    },
+    "other/selfcontrol": {
+      "en": "self-control, self-controlled",
+      "headword": "节制、自守",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:8"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "仆人",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "reference": "servant",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:1", "2:9"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "羞愧、羞耻",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:11", "2:8"]
+    },
+    "other/slander": {
+      "en": "slander, slanderer, revile, insult",
+      "headword": "毁谤、谗言、说谗言",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:3", "2:5", "3:2"]
+    },
+    "other/strife": {
+      "en": "strife, disputes, quarrel, arguing, conflict",
+      "headword": "争竞、分争",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["3:9"]
+    },
+    "other/subject": {
+      "en": "subject, be subject to, subjected, subjecting, subjection",
+      "headword": "顺服、服从",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["2:5", "2:9", "3:1"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "虚妄、虚空",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:10", "3:9"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "酒",
+      "source": "ai:google/gemini-3.8-flash",
+      "status": "ai-checked",
+      "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+      "refs": ["1:7", "2:3"]
+    }
+  },
+  "gaps": {},
+  "review": []
+}

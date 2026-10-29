@@ -1,0 +1,597 @@
+{
+  "book": "ZEC",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "ZEC.P.1.1-6", "start": [1, 1], "end": [1, 6] },
+    { "key": "ZEC.P.1.7-17", "start": [1, 7], "end": [1, 17] },
+    { "key": "ZEC.P.1.18-21", "start": [1, 18], "end": [1, 21] },
+    { "key": "ZEC.P.2.1-5", "start": [2, 1], "end": [2, 5] },
+    { "key": "ZEC.P.2.6-13", "start": [2, 6], "end": [2, 13] },
+    { "key": "ZEC.P.3.1-10", "start": [3, 1], "end": [3, 10] },
+    { "key": "ZEC.P.4.1-14", "start": [4, 1], "end": [4, 14] },
+    { "key": "ZEC.P.5.1-4", "start": [5, 1], "end": [5, 4] },
+    { "key": "ZEC.P.5.5-11", "start": [5, 5], "end": [5, 11] },
+    { "key": "ZEC.P.6.1-8", "start": [6, 1], "end": [6, 8] },
+    { "key": "ZEC.P.6.9-15", "start": [6, 9], "end": [6, 15] },
+    { "key": "ZEC.P.7.1-14", "start": [7, 1], "end": [7, 14] },
+    { "key": "ZEC.P.8.1-23", "start": [8, 1], "end": [8, 23] },
+    { "key": "ZEC.P.9.1-8", "start": [9, 1], "end": [9, 8] },
+    { "key": "ZEC.P.9.9-13", "start": [9, 9], "end": [9, 13] },
+    { "key": "ZEC.P.9.14-17", "start": [9, 14], "end": [9, 17] },
+    { "key": "ZEC.P.10.1-12", "start": [10, 1], "end": [10, 12] },
+    { "key": "ZEC.P.11.1-9", "start": [11, 1], "end": [11, 9] },
+    { "key": "ZEC.P.11.10-17", "start": [11, 10], "end": [11, 17] },
+    { "key": "ZEC.P.12.1-9", "start": [12, 1], "end": [12, 9] },
+    { "key": "ZEC.P.12.10-14", "start": [12, 10], "end": [12, 14] },
+    { "key": "ZEC.P.13.1-6", "start": [13, 1], "end": [13, 6] },
+    { "key": "ZEC.P.13.7-9", "start": [13, 7], "end": [13, 9] },
+    { "key": "ZEC.P.14.1-15", "start": [14, 1], "end": [14, 15] },
+    { "key": "ZEC.P.14.16-21", "start": [14, 16], "end": [14, 21] }
+  ],
+  "segments": [
+    {
+      "key": "ZEC.1.1-3",
+      "pericope": "ZEC.P.1.1-6",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "ZEC.1.4-6",
+      "pericope": "ZEC.P.1.1-6",
+      "start": [1, 4],
+      "end": [1, 6]
+    },
+    {
+      "key": "ZEC.1.7-9",
+      "pericope": "ZEC.P.1.7-17",
+      "start": [1, 7],
+      "end": [1, 9]
+    },
+    {
+      "key": "ZEC.1.10-11",
+      "pericope": "ZEC.P.1.7-17",
+      "start": [1, 10],
+      "end": [1, 11]
+    },
+    {
+      "key": "ZEC.1.12-13",
+      "pericope": "ZEC.P.1.7-17",
+      "start": [1, 12],
+      "end": [1, 13]
+    },
+    {
+      "key": "ZEC.1.14-15",
+      "pericope": "ZEC.P.1.7-17",
+      "start": [1, 14],
+      "end": [1, 15]
+    },
+    {
+      "key": "ZEC.1.16-17",
+      "pericope": "ZEC.P.1.7-17",
+      "start": [1, 16],
+      "end": [1, 17]
+    },
+    {
+      "key": "ZEC.1.18-19",
+      "pericope": "ZEC.P.1.18-21",
+      "start": [1, 18],
+      "end": [1, 19]
+    },
+    {
+      "key": "ZEC.1.20-21",
+      "pericope": "ZEC.P.1.18-21",
+      "start": [1, 20],
+      "end": [1, 21]
+    },
+    {
+      "key": "ZEC.2.1-2",
+      "pericope": "ZEC.P.2.1-5",
+      "start": [2, 1],
+      "end": [2, 2]
+    },
+    {
+      "key": "ZEC.2.3-5",
+      "pericope": "ZEC.P.2.1-5",
+      "start": [2, 3],
+      "end": [2, 5]
+    },
+    {
+      "key": "ZEC.2.6-7",
+      "pericope": "ZEC.P.2.6-13",
+      "start": [2, 6],
+      "end": [2, 7]
+    },
+    {
+      "key": "ZEC.2.8-9",
+      "pericope": "ZEC.P.2.6-13",
+      "start": [2, 8],
+      "end": [2, 9]
+    },
+    {
+      "key": "ZEC.2.10-11",
+      "pericope": "ZEC.P.2.6-13",
+      "start": [2, 10],
+      "end": [2, 11]
+    },
+    {
+      "key": "ZEC.2.12-13",
+      "pericope": "ZEC.P.2.6-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "ZEC.3.1-3",
+      "pericope": "ZEC.P.3.1-10",
+      "start": [3, 1],
+      "end": [3, 3]
+    },
+    {
+      "key": "ZEC.3.4-5",
+      "pericope": "ZEC.P.3.1-10",
+      "start": [3, 4],
+      "end": [3, 5]
+    },
+    {
+      "key": "ZEC.3.6-7",
+      "pericope": "ZEC.P.3.1-10",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "ZEC.3.8-9",
+      "pericope": "ZEC.P.3.1-10",
+      "start": [3, 8],
+      "end": [3, 9]
+    },
+    {
+      "key": "ZEC.3.10-10",
+      "pericope": "ZEC.P.3.1-10",
+      "start": [3, 10],
+      "end": [3, 10]
+    },
+    {
+      "key": "ZEC.4.1-3",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "ZEC.4.4-5",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 4],
+      "end": [4, 5]
+    },
+    {
+      "key": "ZEC.4.6-7",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 6],
+      "end": [4, 7]
+    },
+    {
+      "key": "ZEC.4.8-11",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 8],
+      "end": [4, 11]
+    },
+    {
+      "key": "ZEC.4.12-13",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 12],
+      "end": [4, 13]
+    },
+    {
+      "key": "ZEC.4.14-14",
+      "pericope": "ZEC.P.4.1-14",
+      "start": [4, 14],
+      "end": [4, 14]
+    },
+    {
+      "key": "ZEC.5.1-2",
+      "pericope": "ZEC.P.5.1-4",
+      "start": [5, 1],
+      "end": [5, 2]
+    },
+    {
+      "key": "ZEC.5.3-4",
+      "pericope": "ZEC.P.5.1-4",
+      "start": [5, 3],
+      "end": [5, 4]
+    },
+    {
+      "key": "ZEC.5.5-7",
+      "pericope": "ZEC.P.5.5-11",
+      "start": [5, 5],
+      "end": [5, 7]
+    },
+    {
+      "key": "ZEC.5.8-9",
+      "pericope": "ZEC.P.5.5-11",
+      "start": [5, 8],
+      "end": [5, 9]
+    },
+    {
+      "key": "ZEC.5.10-11",
+      "pericope": "ZEC.P.5.5-11",
+      "start": [5, 10],
+      "end": [5, 11]
+    },
+    {
+      "key": "ZEC.6.1-4",
+      "pericope": "ZEC.P.6.1-8",
+      "start": [6, 1],
+      "end": [6, 4]
+    },
+    {
+      "key": "ZEC.6.5-6",
+      "pericope": "ZEC.P.6.1-8",
+      "start": [6, 5],
+      "end": [6, 6]
+    },
+    {
+      "key": "ZEC.6.7-8",
+      "pericope": "ZEC.P.6.1-8",
+      "start": [6, 7],
+      "end": [6, 8]
+    },
+    {
+      "key": "ZEC.6.9-11",
+      "pericope": "ZEC.P.6.9-15",
+      "start": [6, 9],
+      "end": [6, 11]
+    },
+    {
+      "key": "ZEC.6.12-13",
+      "pericope": "ZEC.P.6.9-15",
+      "start": [6, 12],
+      "end": [6, 13]
+    },
+    {
+      "key": "ZEC.6.14-15",
+      "pericope": "ZEC.P.6.9-15",
+      "start": [6, 14],
+      "end": [6, 15]
+    },
+    {
+      "key": "ZEC.7.1-3",
+      "pericope": "ZEC.P.7.1-14",
+      "start": [7, 1],
+      "end": [7, 3]
+    },
+    {
+      "key": "ZEC.7.4-7",
+      "pericope": "ZEC.P.7.1-14",
+      "start": [7, 4],
+      "end": [7, 7]
+    },
+    {
+      "key": "ZEC.7.8-10",
+      "pericope": "ZEC.P.7.1-14",
+      "start": [7, 8],
+      "end": [7, 10]
+    },
+    {
+      "key": "ZEC.7.11-12",
+      "pericope": "ZEC.P.7.1-14",
+      "start": [7, 11],
+      "end": [7, 12]
+    },
+    {
+      "key": "ZEC.7.13-14",
+      "pericope": "ZEC.P.7.1-14",
+      "start": [7, 13],
+      "end": [7, 14]
+    },
+    {
+      "key": "ZEC.8.1-3",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 1],
+      "end": [8, 3]
+    },
+    {
+      "key": "ZEC.8.4-5",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 4],
+      "end": [8, 5]
+    },
+    {
+      "key": "ZEC.8.6-8",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 6],
+      "end": [8, 8]
+    },
+    {
+      "key": "ZEC.8.9-10",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 9],
+      "end": [8, 10]
+    },
+    {
+      "key": "ZEC.8.11-12",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 11],
+      "end": [8, 12]
+    },
+    {
+      "key": "ZEC.8.13-15",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 13],
+      "end": [8, 15]
+    },
+    {
+      "key": "ZEC.8.16-17",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 16],
+      "end": [8, 17]
+    },
+    {
+      "key": "ZEC.8.18-19",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 18],
+      "end": [8, 19]
+    },
+    {
+      "key": "ZEC.8.20-22",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 20],
+      "end": [8, 22]
+    },
+    {
+      "key": "ZEC.8.23-23",
+      "pericope": "ZEC.P.8.1-23",
+      "start": [8, 23],
+      "end": [8, 23]
+    },
+    {
+      "key": "ZEC.9.1-2",
+      "pericope": "ZEC.P.9.1-8",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "ZEC.9.3-4",
+      "pericope": "ZEC.P.9.1-8",
+      "start": [9, 3],
+      "end": [9, 4]
+    },
+    {
+      "key": "ZEC.9.5-7",
+      "pericope": "ZEC.P.9.1-8",
+      "start": [9, 5],
+      "end": [9, 7]
+    },
+    {
+      "key": "ZEC.9.8-8",
+      "pericope": "ZEC.P.9.1-8",
+      "start": [9, 8],
+      "end": [9, 8]
+    },
+    {
+      "key": "ZEC.9.9-10",
+      "pericope": "ZEC.P.9.9-13",
+      "start": [9, 9],
+      "end": [9, 10]
+    },
+    {
+      "key": "ZEC.9.11-13",
+      "pericope": "ZEC.P.9.9-13",
+      "start": [9, 11],
+      "end": [9, 13]
+    },
+    {
+      "key": "ZEC.9.14-15",
+      "pericope": "ZEC.P.9.14-17",
+      "start": [9, 14],
+      "end": [9, 15]
+    },
+    {
+      "key": "ZEC.9.16-17",
+      "pericope": "ZEC.P.9.14-17",
+      "start": [9, 16],
+      "end": [9, 17]
+    },
+    {
+      "key": "ZEC.10.1-2",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 1],
+      "end": [10, 2]
+    },
+    {
+      "key": "ZEC.10.3-3",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 3],
+      "end": [10, 3]
+    },
+    {
+      "key": "ZEC.10.4-5",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 4],
+      "end": [10, 5]
+    },
+    {
+      "key": "ZEC.10.6-7",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 6],
+      "end": [10, 7]
+    },
+    {
+      "key": "ZEC.10.8-10",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 8],
+      "end": [10, 10]
+    },
+    {
+      "key": "ZEC.10.11-12",
+      "pericope": "ZEC.P.10.1-12",
+      "start": [10, 11],
+      "end": [10, 12]
+    },
+    {
+      "key": "ZEC.11.1-3",
+      "pericope": "ZEC.P.11.1-9",
+      "start": [11, 1],
+      "end": [11, 3]
+    },
+    {
+      "key": "ZEC.11.4-6",
+      "pericope": "ZEC.P.11.1-9",
+      "start": [11, 4],
+      "end": [11, 6]
+    },
+    {
+      "key": "ZEC.11.7-9",
+      "pericope": "ZEC.P.11.1-9",
+      "start": [11, 7],
+      "end": [11, 9]
+    },
+    {
+      "key": "ZEC.11.10-12",
+      "pericope": "ZEC.P.11.10-17",
+      "start": [11, 10],
+      "end": [11, 12]
+    },
+    {
+      "key": "ZEC.11.13-14",
+      "pericope": "ZEC.P.11.10-17",
+      "start": [11, 13],
+      "end": [11, 14]
+    },
+    {
+      "key": "ZEC.11.15-16",
+      "pericope": "ZEC.P.11.10-17",
+      "start": [11, 15],
+      "end": [11, 16]
+    },
+    {
+      "key": "ZEC.11.17-17",
+      "pericope": "ZEC.P.11.10-17",
+      "start": [11, 17],
+      "end": [11, 17]
+    },
+    {
+      "key": "ZEC.12.1-3",
+      "pericope": "ZEC.P.12.1-9",
+      "start": [12, 1],
+      "end": [12, 3]
+    },
+    {
+      "key": "ZEC.12.4-5",
+      "pericope": "ZEC.P.12.1-9",
+      "start": [12, 4],
+      "end": [12, 5]
+    },
+    {
+      "key": "ZEC.12.6-6",
+      "pericope": "ZEC.P.12.1-9",
+      "start": [12, 6],
+      "end": [12, 6]
+    },
+    {
+      "key": "ZEC.12.7-9",
+      "pericope": "ZEC.P.12.1-9",
+      "start": [12, 7],
+      "end": [12, 9]
+    },
+    {
+      "key": "ZEC.12.10-11",
+      "pericope": "ZEC.P.12.10-14",
+      "start": [12, 10],
+      "end": [12, 11]
+    },
+    {
+      "key": "ZEC.12.12-14",
+      "pericope": "ZEC.P.12.10-14",
+      "start": [12, 12],
+      "end": [12, 14]
+    },
+    {
+      "key": "ZEC.13.1-2",
+      "pericope": "ZEC.P.13.1-6",
+      "start": [13, 1],
+      "end": [13, 2]
+    },
+    {
+      "key": "ZEC.13.3-3",
+      "pericope": "ZEC.P.13.1-6",
+      "start": [13, 3],
+      "end": [13, 3]
+    },
+    {
+      "key": "ZEC.13.4-6",
+      "pericope": "ZEC.P.13.1-6",
+      "start": [13, 4],
+      "end": [13, 6]
+    },
+    {
+      "key": "ZEC.13.7-7",
+      "pericope": "ZEC.P.13.7-9",
+      "start": [13, 7],
+      "end": [13, 7]
+    },
+    {
+      "key": "ZEC.13.8-9",
+      "pericope": "ZEC.P.13.7-9",
+      "start": [13, 8],
+      "end": [13, 9]
+    },
+    {
+      "key": "ZEC.14.1-2",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 1],
+      "end": [14, 2]
+    },
+    {
+      "key": "ZEC.14.3-4",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 3],
+      "end": [14, 4]
+    },
+    {
+      "key": "ZEC.14.5-5",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 5],
+      "end": [14, 5]
+    },
+    {
+      "key": "ZEC.14.6-8",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 6],
+      "end": [14, 8]
+    },
+    {
+      "key": "ZEC.14.9-11",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 9],
+      "end": [14, 11]
+    },
+    {
+      "key": "ZEC.14.12-13",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 12],
+      "end": [14, 13]
+    },
+    {
+      "key": "ZEC.14.14-15",
+      "pericope": "ZEC.P.14.1-15",
+      "start": [14, 14],
+      "end": [14, 15]
+    },
+    {
+      "key": "ZEC.14.16-18",
+      "pericope": "ZEC.P.14.16-21",
+      "start": [14, 16],
+      "end": [14, 18]
+    },
+    {
+      "key": "ZEC.14.19-19",
+      "pericope": "ZEC.P.14.16-21",
+      "start": [14, 19],
+      "end": [14, 19]
+    },
+    {
+      "key": "ZEC.14.20-21",
+      "pericope": "ZEC.P.14.16-21",
+      "start": [14, 20],
+      "end": [14, 21]
+    }
+  ]
+}

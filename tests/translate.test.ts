@@ -4,7 +4,12 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it, vi } from "vitest";
-import { ENDPOINT, complete, type Fetch } from "../scripts/lib/openrouter.ts";
+import {
+  ENDPOINT,
+  MAX_TOKENS,
+  complete,
+  type Fetch,
+} from "../scripts/lib/openrouter.ts";
 import {
   LANGUAGES,
   MODELS,
@@ -14,6 +19,7 @@ import {
   systemPrompt,
   termsFor,
   translateLanguage,
+  usableTerm,
   userMessage,
   type Complete,
   type EnglishTitles,
@@ -72,6 +78,8 @@ describe("OpenRouter client (fetch mocked; no network)", () => {
     expect(JSON.parse(body)).toMatchObject({
       model: "google/gemini-3.8-flash",
       usage: { include: true },
+      // Bounds the credit reserved for, and the cost of, one call.
+      max_tokens: MAX_TOKENS,
     });
     expect(c).toEqual({
       id: "gen-1",
@@ -204,6 +212,28 @@ describe("translation runner", () => {
       terms: { "kt/x": { en: "x", headword: "x", refs: ["1:4-5"] } },
     };
     expect(() => termsFor("TIT.1.4-4", bad)).toThrow("not c:v: 1:4-5");
+  });
+
+  it("leaves out AI-drafted terms no person has reviewed", () => {
+    const term = (status?: string) => ({
+      en: "grace",
+      headword: "恩典",
+      refs: ["1:4"],
+      ...(status ? { status } : {}),
+    });
+    const g = (status?: string): Glossary => ({
+      language: "zh-Hans",
+      terms: { "kt/grace": term(status) },
+    });
+    expect(termsFor("TIT.1.4-4", g("unreviewed"))).toEqual([]);
+    expect(termsFor("TIT.1.4-4", g("ai-checked"))).toEqual([]);
+    for (const status of [undefined, "human-reviewed", "approved"])
+      expect(termsFor("TIT.1.4-4", g(status)), status).toEqual([
+        { en: "grace", headword: "恩典" },
+      ]);
+    // Today's zh-Hans glossary has no reviewed term, so titles get none.
+    const zh = glossary("zh-Hans");
+    expect(Object.values(zh.terms).some(usableTerm)).toBe(false);
   });
 
   it("builds a user message with key, kind, verses and English", () => {
@@ -351,12 +381,17 @@ describe("translation runner", () => {
       gateFailures: 2,
       promptTokens: 200,
       completionTokens: 20,
+      reasoningTokens: null,
       cost: 0.02,
       costPerTitle: 0.005,
       modelSeconds: 3.6,
       titlesPerHour: 4000,
     });
     expect(summarise([{ ...call, cost: null }], [result]).cost).toBeNull();
+    // Reasoning tokens: summed when every call reports them, else unknown.
+    const r7 = { ...call, reasoningTokens: 7 };
+    expect(summarise([r7, r7], [result, result]).reasoningTokens).toBe(14);
+    expect(summarise([call, r7], [result, result]).reasoningTokens).toBeNull();
   });
 
   it("covers every v0.1 language", () => {
@@ -543,7 +578,7 @@ describe("runner command line", () => {
     expect(r.stderr).toContain("OPENROUTER_API_KEY is not set");
   });
 
-  it("fails before any call for zh-Hans without --allow-no-glossary", () => {
+  it("fails before any call for zh-Hans, whose AI terms wait for a reader, without --allow-no-glossary", () => {
     const r = spawnSync(
       process.execPath,
       [script, "--book", "TIT", "--model", "m", "--lang", "zh-Hans"],
@@ -553,7 +588,9 @@ describe("runner command line", () => {
       }
     );
     expect(r.status).toBe(1);
-    expect(r.stderr).toContain("no glossary for zh-Hans TIT");
+    expect(r.stderr).toContain(
+      "no glossary with reviewed terms for zh-Hans TIT"
+    );
     expect(r.stderr + r.stdout).not.toContain(KEY);
   });
 
