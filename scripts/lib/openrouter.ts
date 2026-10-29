@@ -28,6 +28,11 @@ export type Completion = {
   usage: Usage;
   /** Wall-clock milliseconds for the request. */
   ms: number;
+  /**
+   * Set when the response was billed (it carries usage) but has no usable
+   * reply: an error body or no message content. `text` is then empty.
+   */
+  problem?: string;
 };
 
 export type Fetch = (url: string, init: RequestInit) => Promise<Response>;
@@ -86,34 +91,55 @@ export async function complete(
       redact(`OpenRouter returned non-JSON: ${body.slice(0, 200)}`, apiKey)
     );
   }
-  if (raw.error)
-    throw new Error(
-      redact(`OpenRouter error: ${raw.error.message ?? "unknown"}`, apiKey)
-    );
+  const usage = readUsage(raw);
   const text = raw.choices?.[0]?.message?.content;
-  if (typeof text !== "string")
-    throw new Error("OpenRouter response has no message content");
+  const problem = raw.error
+    ? redact(`OpenRouter error: ${raw.error.message ?? "unknown"}`, apiKey)
+    : typeof text !== "string"
+      ? "OpenRouter response has no message content"
+      : undefined;
+  if (problem !== undefined || typeof text !== "string") {
+    // A body that carries usage was billed: return it so the call reaches
+    // the ledger, with the problem, rather than throwing the cost away.
+    if (usage)
+      return {
+        id: raw.id ?? "",
+        model: raw.model ?? request.model,
+        text: "",
+        usage,
+        ms,
+        problem: problem ?? "OpenRouter response has no message content",
+      };
+    throw new Error(problem ?? "OpenRouter response has no message content");
+  }
+  if (!usage)
+    throw new Error("OpenRouter response has no usage block with token counts");
+  return {
+    id: raw.id ?? "",
+    model: raw.model ?? request.model,
+    text,
+    usage,
+    ms,
+  };
+}
+
+/** The usage block, or null when its token counts are missing. */
+function readUsage(raw: Raw): Usage | null {
   const u = raw.usage;
   if (
     !u ||
     typeof u.prompt_tokens !== "number" ||
     typeof u.completion_tokens !== "number"
   )
-    throw new Error("OpenRouter response has no usage block with token counts");
+    return null;
   return {
-    id: raw.id ?? "",
-    model: raw.model ?? request.model,
-    text,
-    usage: {
-      promptTokens: u.prompt_tokens,
-      completionTokens: u.completion_tokens,
-      reasoningTokens: u.completion_tokens_details?.reasoning_tokens ?? null,
-      // A cost that is not a usable dollar amount is unknown, not zero.
-      cost:
-        typeof u.cost === "number" && Number.isFinite(u.cost) && u.cost >= 0
-          ? u.cost
-          : null,
-    },
-    ms,
+    promptTokens: u.prompt_tokens,
+    completionTokens: u.completion_tokens,
+    reasoningTokens: u.completion_tokens_details?.reasoning_tokens ?? null,
+    // A cost that is not a usable dollar amount is unknown, not zero.
+    cost:
+      typeof u.cost === "number" && Number.isFinite(u.cost) && u.cost >= 0
+        ? u.cost
+        : null,
   };
 }

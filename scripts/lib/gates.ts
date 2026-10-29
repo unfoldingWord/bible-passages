@@ -68,12 +68,86 @@ export const LENGTH_FLOOR_CHARS = 12;
 export type Reasons = Readonly<Record<string, string>>;
 export const ALLOW_LATIN: Readonly<Record<string, Reasons>> = {};
 
+/** The 66 USFM book codes of the Protestant canon. */
+export const BOOK_CODES = [
+  "GEN",
+  "EXO",
+  "LEV",
+  "NUM",
+  "DEU",
+  "JOS",
+  "JDG",
+  "RUT",
+  "1SA",
+  "2SA",
+  "1KI",
+  "2KI",
+  "1CH",
+  "2CH",
+  "EZR",
+  "NEH",
+  "EST",
+  "JOB",
+  "PSA",
+  "PRO",
+  "ECC",
+  "SNG",
+  "ISA",
+  "JER",
+  "LAM",
+  "EZK",
+  "DAN",
+  "HOS",
+  "JOL",
+  "AMO",
+  "OBA",
+  "JON",
+  "MIC",
+  "NAM",
+  "HAB",
+  "ZEP",
+  "HAG",
+  "ZEC",
+  "MAL",
+  "MAT",
+  "MRK",
+  "LUK",
+  "JHN",
+  "ACT",
+  "ROM",
+  "1CO",
+  "2CO",
+  "GAL",
+  "EPH",
+  "PHP",
+  "COL",
+  "1TH",
+  "2TH",
+  "1TI",
+  "2TI",
+  "TIT",
+  "PHM",
+  "HEB",
+  "JAS",
+  "1PE",
+  "2PE",
+  "1JN",
+  "2JN",
+  "3JN",
+  "JUD",
+  "REV",
+];
+
 /**
- * Exempt by rule, not by listing: a scripture reference written with its USFM
- * book code ("TIT 1:5", "1CO 13:4-7"). Chapter and verse numbers carry no
- * letters, so only the code needs exempting.
+ * Exempt by rule, not by listing: a scripture reference written with one of
+ * those codes ("TIT 1:5", "1CO 13:4-7"). Chapter and verse numbers carry no
+ * letters, so only the code needs exempting; any other capitalised word
+ * ("GOD 1") is still checked.
  */
-const REFERENCE = /\b[1-4A-Z][A-Z0-9]{2} \d+(?::\d+(?:[-–]\d+)?)?\b/g;
+const REFERENCE = new RegExp(
+  `(?<![\\p{L}\\p{N}])(?:${BOOK_CODES.join("|")}) \\d+(?::\\d+(?:[-–]\\d+)?)?(?!\\p{N})`,
+  "gu"
+);
 
 const exempt = (text: string): string => text.replace(REFERENCE, " ");
 

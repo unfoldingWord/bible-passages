@@ -116,6 +116,30 @@ describe("OpenRouter client (fetch mocked; no network)", () => {
     ).rejects.toThrow("no usage block");
   });
 
+  it("returns a billed reply with no content as a problem, keeping its usage", async () => {
+    const body = okBody("{}", 0.125);
+    for (const raw of [
+      { ...body, choices: [{ message: { content: null } }] },
+      { ...body, error: { message: `filtered ${KEY}` } },
+    ]) {
+      const { f } = fakeFetch(raw);
+      const c = await complete(
+        { model: "m", messages: [] },
+        { apiKey: KEY, fetch: f }
+      );
+      expect(c.text).toBe("");
+      expect(c.usage.cost).toBe(0.125);
+      expect(c.id).toBe("gen-1");
+      expect(c.problem).toMatch(/no message content|OpenRouter error/);
+      expect(c.problem).not.toContain(KEY);
+    }
+    // With no usage there is nothing billed to keep: it throws.
+    const { f } = fakeFetch({ choices: [{ message: { content: null } }] });
+    await expect(
+      complete({ model: "m", messages: [] }, { apiKey: KEY, fetch: f })
+    ).rejects.toThrow("no message content");
+  });
+
   it("throws on an HTTP error, with the key removed from the message", async () => {
     const { f } = fakeFetch({ error: { message: `bad key ${KEY}` } }, 401);
     const err = await complete(
@@ -431,6 +455,33 @@ describe("run ledger and spend fuse", () => {
     expect(written.has("es-419/TIT.json")).toBe(true);
     // Written after the first call too, not only at the end.
     expect(ledgers.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("puts a billed call with no content on the ledger and goes on", async () => {
+    const body = okBody("{}", 0.125);
+    const replies = [
+      { ...body, choices: [{ message: { content: null } }] },
+      okBody('{"TIT.P.3.9-11": "Éviter les divisions"}', 0.001),
+      okBody('{"TIT.P.3.9-11": "Hindari perpecahan"}', 0.001),
+    ];
+    let n = 0;
+    const f: Fetch = async () =>
+      new Response(JSON.stringify(replies[n++]), { status: 200 });
+    const { written, run } = setup((request) =>
+      complete(request, { apiKey: KEY, fetch: f })
+    );
+    const { stop, summary } = await run();
+    expect(stop).toBe("done");
+    const l = written.get("run.json") as {
+      calls: { language: string; cost: number | null }[];
+      results: Record<string, { error?: string }>;
+    };
+    expect(l.calls[0]).toMatchObject({ language: "es-419", cost: 0.125 });
+    expect(l.results["es-419"]?.error).toBe(
+      "no reply: OpenRouter response has no message content"
+    );
+    expect(summary.cost).toBeCloseTo(0.127, 10);
+    expect(summary.unreadable).toBe(1);
   });
 
   it("records an unreadable reply and a non-text value with their call", async () => {

@@ -205,6 +205,14 @@ export async function translateLanguage(args: {
     cost: completion.usage.cost,
     ms: completion.ms,
   };
+  if (completion.problem !== undefined)
+    return {
+      titles: {},
+      call,
+      missing: [],
+      invalid: [],
+      error: `no reply: ${completion.problem}`,
+    };
   let reply: Record<string, unknown>;
   try {
     reply = parseReply(completion.text);

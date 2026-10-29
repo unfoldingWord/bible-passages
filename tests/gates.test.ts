@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
+  BOOK_CODES,
   LENGTH_FLOOR_CHARS,
   LENGTH_RATIO_MAX,
   SCRIPT_BY_TAG,
@@ -52,6 +53,20 @@ describe("title translation gates (ported from tc-mobile)", () => {
   it("(b) exempts a scripture reference by its USFM book code", () => {
     expect(scriptProblems("ar", "تحيات بولس TIT 1:4")).toEqual([]);
     expect(scriptProblems("ru", "Приветствие (1CO 13:4–7)")).toEqual([]);
+    expect(new Set(BOOK_CODES).size).toBe(66);
+    for (const code of BOOK_CODES)
+      expect(scriptProblems("ar", `تحيات ${code} 1:4`), code).toEqual([]);
+    // Any other capitalised word with a number is still checked.
+    expect(scriptProblems("ar", "تحيات GOD 1")).toEqual([
+      'stray "GOD" outside Arabic',
+    ]);
+    expect(scriptProblems("ru", "Приветствие ALL 12")).toEqual([
+      'stray "ALL" outside Cyrillic',
+    ]);
+    // A code inside a longer token is not a reference.
+    expect(scriptProblems("ar", "تحيات XTIT 1:4")).toEqual([
+      'stray "XTIT" outside Arabic',
+    ]);
     // A lower-case or longer word is not a book code.
     expect(scriptProblems("ar", "تحيات Tit 1:4")).toEqual([
       'stray "Tit" outside Arabic',
