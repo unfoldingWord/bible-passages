@@ -1,5 +1,11 @@
 import { execFileSync, spawnSync } from "node:child_process";
-import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  symlinkSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -59,6 +65,22 @@ describe("release assets", () => {
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
       "README.txt: top-level file is not a .json package",
     ]);
+  });
+
+  // Neither is a regular file, so neither would be checked or attached.
+  it("fails on a top-level symlink or directory named .json", () => {
+    const dir = dist([["TIT.json", "v0.1.0"]]);
+    symlinkSync(join(dir, "TIT.json"), join(dir, "link.json"));
+    mkdirSync(join(dir, "x.json"));
+    symlinkSync(join(dir, "TIT.json"), join(dir, "link"));
+    expect(checkAssets(dir, "v0.1.0")).toEqual({
+      files: [join(dir, "TIT.json")],
+      problems: [
+        "link: top-level symlink is not a regular file",
+        "link.json: top-level symlink is not a regular file",
+        "x.json: top-level directory is not a regular file",
+      ],
+    });
   });
 
   it("fails on a nested file and on no packages", () => {

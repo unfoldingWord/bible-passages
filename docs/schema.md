@@ -336,13 +336,19 @@ check the bump yet.
    (on `main`, naming its commit's `package.json` version) counts as a
    release there.
 3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
-   files exactly, as in CI.
+   files exactly, as in CI. On a mismatch the step prints `git diff` of both
+   before it stops, so a dry run's output keeps the difference after the
+   files are restored.
 4. `dist/` is regenerated with `source.revision` set to the tag. The release
-   stops unless every top-level file in `dist/tc-mobile/` has
-   `"revision": "<tag>"` (`scripts/lib/release.ts`). Title tables under
-   `dist/tc-mobile/titles/` share their package's file name, so until their
-   asset names are decided a nested file stops the release too. Since English
-   Titus has a table, no release can be cut until that is decided.
+   stops unless every top-level `.json` package in `dist/tc-mobile/` has
+   `"revision": "<tag>"` (`scripts/lib/release.ts`). The empty `.gitkeep`
+   that keeps the directory in git is exempt and is not attached. Any other
+   top-level entry stops the release unless it is a regular `.json` file or a
+   directory whose name does not end in `.json` (a symlink stops it). Title
+   tables under `dist/tc-mobile/titles/` share their package's file name, so
+   until their asset names are decided a nested file stops the release too.
+   Since English Titus has a table, no release can be cut until that is
+   decided.
 5. The top-level files are attached to a **draft** release, published by
    hand.
 
