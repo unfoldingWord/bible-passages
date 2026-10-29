@@ -1,59 +1,200 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-10-28T22:36:04.924Z",
+  "asOf": "2026-10-29T01:37:32.376Z",
   "repo": {
-    "pushedAt": "2026-10-28T22:29:33Z",
+    "pushedAt": "2026-10-29T01:37:13Z",
     "defaultBranch": "main",
-    "openIssues": 17
+    "openIssues": 19
   },
   "commits": [
     {
-      "sha": "5f7f3e7",
-      "msg": "Update README.md",
-      "at": "2026-10-28T21:21:08Z"
+      "sha": "20ac202",
+      "msg": "Merge pull request #26 from unfoldingWord/feat/record-owner-decisions",
+      "at": "2026-10-29T01:37:12Z"
     },
     {
-      "sha": "61abcd0",
-      "msg": "Initial commit: README and CC BY-SA 4.0 licence",
-      "at": "2026-10-28T19:57:22Z"
+      "sha": "755886d",
+      "msg": "feat: record the requirements owner's v0.1 decisions and T1-T6 titles",
+      "at": "2026-10-29T01:19:47Z"
+    },
+    {
+      "sha": "a2cdd00",
+      "msg": "Merge pull request #25 from unfoldingWord/docs/eod-2026-10-29",
+      "at": "2026-10-29T01:14:08Z"
+    },
+    {
+      "sha": "7d19f7c",
+      "msg": "docs: progress tracker for 29 Oct",
+      "at": "2026-10-29T01:13:02Z"
+    },
+    {
+      "sha": "2cda75f",
+      "msg": "Merge pull request #18 from unfoldingWord/docs/adr-keys-translation",
+      "at": "2026-10-29T01:10:20Z"
+    },
+    {
+      "sha": "415869f",
+      "msg": "Merge origin/main into docs/adr-keys-translation",
+      "at": "2026-10-29T01:08:32Z"
+    },
+    {
+      "sha": "5590624",
+      "msg": "docs: answer round-7 questions; 0002 header names its half",
+      "at": "2026-10-29T01:08:22Z"
+    },
+    {
+      "sha": "507dcab",
+      "msg": "Merge pull request #20 from unfoldingWord/feat/glossaries",
+      "at": "2026-10-29T01:06:54Z"
+    },
+    {
+      "sha": "37568ae",
+      "msg": "fix(review): a live key ignores every retirement row; only resize and split copy — bench round 7",
+      "at": "2026-10-29T01:06:52Z"
+    },
+    {
+      "sha": "8e59a68",
+      "msg": "Merge remote-tracking branch 'origin/main' into feat/glossaries",
+      "at": "2026-10-29T00:55:48Z"
+    },
+    {
+      "sha": "657a708",
+      "msg": "Merge pull request #19 from unfoldingWord/feat/site-title-review",
+      "at": "2026-10-29T00:55:26Z"
+    },
+    {
+      "sha": "9a74632",
+      "msg": "Merge pull request #16 from unfoldingWord/feat/tit-segment-titles",
+      "at": "2026-10-29T00:55:10Z"
+    },
+    {
+      "sha": "6b62feb",
+      "msg": "Merge pull request #15 from unfoldingWord/feat/tit-structure",
+      "at": "2026-10-29T00:54:56Z"
+    },
+    {
+      "sha": "1148acc",
+      "msg": "fix(review): retirement is an append-only log; resize keeps the old set — bench round 6",
+      "at": "2026-10-29T00:54:11Z"
+    },
+    {
+      "sha": "52ed344",
+      "msg": "Merge pull request #1 from unfoldingWord/chore/scaffold",
+      "at": "2026-10-29T00:52:25Z"
     }
   ],
   "pulls": [
+    {
+      "number": 27,
+      "title": "feat(site): bring every page up to 29 Oct",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "at": "2026-10-29T01:34:31Z"
+    },
+    {
+      "number": 26,
+      "title": "feat: record the requirements owner's v0.1 decisions and T1–T6 titles",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T01:37:13Z"
+    },
+    {
+      "number": 25,
+      "title": "docs: progress tracker for 29 Oct",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T01:14:09Z"
+    },
+    {
+      "number": 20,
+      "title": "feat(glossaries): Titus key-term glossaries from Translation Words, with 6B",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T01:06:55Z"
+    },
+    {
+      "number": 19,
+      "title": "feat(site): the 6 disputed Titus titles on the Decisions tab",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T00:55:27Z"
+    },
+    {
+      "number": 18,
+      "title": "docs(decisions): span keys; measure both translation models",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T01:11:27Z"
+    },
     {
       "number": 17,
       "title": "feat: key-stability check and release workflow",
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-28T22:30:01Z"
+      "at": "2026-10-29T01:33:49Z"
     },
     {
       "number": 16,
       "title": "feat(data): provisional Titus segment titles, drafted and cross-checked",
-      "state": "open",
+      "state": "closed",
       "draft": false,
-      "merged": false,
-      "at": "2026-10-28T22:29:20Z"
+      "merged": true,
+      "at": "2026-10-29T00:55:11Z"
     },
     {
       "number": 15,
       "title": "feat(data): Titus structure from pinned sources to dist",
-      "state": "open",
+      "state": "closed",
       "draft": false,
-      "merged": false,
-      "at": "2026-10-28T22:30:21Z"
+      "merged": true,
+      "at": "2026-10-29T00:54:57Z"
     },
     {
       "number": 1,
       "title": "Scaffold: layout, draft schema, checks, CLAUDE.md",
-      "state": "open",
+      "state": "closed",
       "draft": false,
-      "merged": false,
-      "at": "2026-10-28T22:32:28Z"
+      "merged": true,
+      "at": "2026-10-29T00:52:26Z"
     }
   ],
   "issues": [
+    {
+      "number": 24,
+      "title": "ADR 0001: name the one publishable title record after a move-back",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 23,
+      "title": "Release workflow follow-ups from #17 review",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 22,
+      "title": "Glossary hygiene follow-ups from #20 review",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 21,
+      "title": "Ask the Arabic tW team for 16 Titus headwords still in English",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
     {
       "number": 14,
       "title": "Servant.Bible registry entry for uw/bible-passages",
@@ -158,7 +299,7 @@
     {
       "number": 2,
       "title": "Sprint 2 (11-02 → 11-15)",
-      "open_issues": 7,
+      "open_issues": 8,
       "closed_issues": 0,
       "state": "open",
       "due": "2026-11-15T00:00:00Z"
@@ -174,150 +315,154 @@
   ],
   "runs": [
     {
-      "sha": "2b5875d",
-      "branch": "feat/release-key-check",
-      "conclusion": "success",
-      "at": "2026-10-28T22:30:03Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780423343"
+      "sha": "20ac202",
+      "branch": "main",
+      "conclusion": "in_progress",
+      "at": "2026-10-29T01:37:15Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801509889"
     },
     {
-      "sha": "2b5875d",
-      "branch": "feat/release-key-check",
+      "sha": "c293c05",
+      "branch": "feat/site-refresh-29oct",
       "conclusion": "success",
-      "at": "2026-10-28T22:30:03Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780423331"
+      "at": "2026-10-29T01:33:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144350"
     },
     {
-      "sha": "2b5875d",
+      "sha": "c293c05",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:33:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144339"
+    },
+    {
+      "sha": "e2af010",
       "branch": "feat/release-key-check",
+      "conclusion": "success",
+      "at": "2026-10-29T01:32:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036508"
+    },
+    {
+      "sha": "e2af010",
+      "branch": "feat/release-key-check",
+      "conclusion": "success",
+      "at": "2026-10-29T01:32:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036427"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938265"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938241"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
       "conclusion": "cancelled",
-      "at": "2026-10-28T22:30:02Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780421823"
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938216"
     },
     {
-      "sha": "22855f0",
-      "branch": "feat/tit-segment-titles",
+      "sha": "755886d",
+      "branch": "feat/record-owner-decisions",
       "conclusion": "success",
-      "at": "2026-10-28T22:29:23Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780342755"
+      "at": "2026-10-29T01:19:53Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799760893"
     },
     {
-      "sha": "22855f0",
-      "branch": "feat/tit-segment-titles",
+      "sha": "755886d",
+      "branch": "feat/record-owner-decisions",
       "conclusion": "success",
-      "at": "2026-10-28T22:29:10Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780317653"
+      "at": "2026-10-29T01:19:53Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799760255"
     },
     {
-      "sha": "22855f0",
-      "branch": "feat/tit-segment-titles",
-      "conclusion": "success",
-      "at": "2026-10-28T22:29:10Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780316804"
-    },
-    {
-      "sha": "22855f0",
-      "branch": "feat/tit-segment-titles",
+      "sha": "755886d",
+      "branch": "feat/record-owner-decisions",
       "conclusion": "cancelled",
-      "at": "2026-10-28T22:29:10Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40780316765"
+      "at": "2026-10-29T01:19:53Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799760185"
     },
     {
-      "sha": "e283b9a",
-      "branch": "chore/scaffold",
+      "sha": "a2cdd00",
+      "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-28T22:25:56Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40779916579"
+      "at": "2026-10-29T01:14:11Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799166529"
     },
     {
-      "sha": "e283b9a",
-      "branch": "chore/scaffold",
+      "sha": "7d19f7c",
+      "branch": "docs/eod-2026-10-29",
       "conclusion": "success",
-      "at": "2026-10-28T22:25:56Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40779916578"
+      "at": "2026-10-29T01:13:08Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799057937"
     },
     {
-      "sha": "54469d4",
-      "branch": "feat/tit-structure",
-      "conclusion": "success",
-      "at": "2026-10-28T22:15:10Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778509257"
+      "sha": "7d19f7c",
+      "branch": "docs/eod-2026-10-29",
+      "conclusion": "cancelled",
+      "at": "2026-10-29T01:13:08Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799057766"
     },
     {
-      "sha": "54469d4",
-      "branch": "feat/tit-structure",
+      "sha": "7d19f7c",
+      "branch": "docs/eod-2026-10-29",
       "conclusion": "success",
-      "at": "2026-10-28T22:15:10Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778509243"
+      "at": "2026-10-29T01:13:08Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799057690"
     },
     {
-      "sha": "1ae3ef7",
-      "branch": "feat/tit-structure",
+      "sha": "162ba91",
+      "branch": "feat/release-key-check",
       "conclusion": "success",
-      "at": "2026-10-28T22:13:25Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778278649"
+      "at": "2026-10-29T01:11:47Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798917462"
     },
     {
-      "sha": "1ae3ef7",
-      "branch": "feat/tit-structure",
+      "sha": "162ba91",
+      "branch": "feat/release-key-check",
       "conclusion": "success",
-      "at": "2026-10-28T22:13:25Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778278597"
+      "at": "2026-10-29T01:11:47Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798917460"
     },
     {
-      "sha": "5c730f6",
-      "branch": "chore/scaffold",
+      "sha": "2cda75f",
+      "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-28T22:12:39Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778181290"
+      "at": "2026-10-29T01:10:23Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798768161"
     },
     {
-      "sha": "5c730f6",
-      "branch": "chore/scaffold",
+      "sha": "415869f",
+      "branch": "docs/adr-keys-translation",
       "conclusion": "success",
-      "at": "2026-10-28T22:12:39Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778181224"
+      "at": "2026-10-29T01:08:38Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798585781"
     },
     {
-      "sha": "b5eec60",
-      "branch": "chore/scaffold",
+      "sha": "415869f",
+      "branch": "docs/adr-keys-translation",
       "conclusion": "success",
-      "at": "2026-10-28T22:11:45Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778061817"
-    },
-    {
-      "sha": "b5eec60",
-      "branch": "chore/scaffold",
-      "conclusion": "success",
-      "at": "2026-10-28T22:11:45Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40778061799"
-    },
-    {
-      "sha": "93d4f93",
-      "branch": "chore/scaffold",
-      "conclusion": "success",
-      "at": "2026-10-28T22:04:31Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777097841"
-    },
-    {
-      "sha": "93d4f93",
-      "branch": "chore/scaffold",
-      "conclusion": "success",
-      "at": "2026-10-28T22:04:30Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777095247"
-    },
-    {
-      "sha": "9301a0d",
-      "branch": "feat/tit-structure",
-      "conclusion": "success",
-      "at": "2026-10-28T21:52:33Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775513904"
+      "at": "2026-10-29T01:08:38Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798585744"
     }
   ],
   "coverage": {
-    "structure": [],
+    "structure": [
+      "TIT"
+    ],
     "titles": {
-      "en": [],
+      "en": [
+        "TIT"
+      ],
       "ar": [],
       "fr": [],
       "hi": [],
@@ -325,7 +470,7 @@
       "zh-Hans": [],
       "pt-BR": [],
       "ru": [],
-      "es": [],
+      "es-419": [],
       "sw": []
     }
   },

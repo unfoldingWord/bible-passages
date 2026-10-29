@@ -15,7 +15,7 @@ const LANGS = [
   "zh-Hans",
   "pt-BR",
   "ru",
-  "es",
+  "es-419",
   "sw",
 ];
 

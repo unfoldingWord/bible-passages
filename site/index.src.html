@@ -205,12 +205,12 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 
 <section class="page" data-page="home" aria-label="Home">
   <div class="callout"><div>
-    <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-28T21:10:00Z"></span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-29T01:45:00Z"></span></div>
     <ul>
-      <li><b>The repo is scaffolded; there is no data yet.</b> PR #1 (scaffold, scoping, this site) has a review requested from the review bench and no verdict yet. tC Mobile's own template checker runs in CI.</li>
-      <li><b>Every base count is measured and was re-derived by a second model:</b> 3,016 pericopes, 13,608 chunks, 162 chunks a pericope starts inside, so 13,770 segments and 16,786 English titles. The pilot's 194 came from a Psalms parsing quirk.</li>
-      <li><b>The constraint now is decisions.</b> Scope, keys and the authoritative chunk source decide what gets built. They were posted on <a href="https://github.com/unfoldingWord/servant.bible/issues/1#issuecomment-6480617648" target="_blank" rel="noopener">servant.bible#1</a> on 28 Oct with the list of 162 split chunks the content team asked for. See <a href="#decisions">Decisions</a>.</li>
-      <li><b>Next gate:</b> Titus built end to end by 1 Nov, so the rest of the plan is sized from measured rates. See <a href="#plan">Plan</a>.</li>
+      <li><b>Titus is the first book on <code>main</code>.</b> Its structure (8 pericopes, 25 segments), its English segment titles and its key-term glossaries in 9 languages merged on 29 Oct; each PR passed both review-bench lenses (Frank on Codex, George on Grok). tC Mobile's own template checker runs in CI.</li>
+      <li><b>The requirements owner answered the open questions on 28 Oct, and they are recorded</b> (<a data-doc="docs/decisions/0003-v0.1-scope-and-titles.md" target="_blank" rel="noopener">ADR 0003</a>): v0.1 is a gated subset; pericopes come from BSB; segment titles are explanatory comments; single-segment pericopes reuse their title (16,523 English titles). The six disputed Titus titles are settled in the data. Two remain: decision 11 (metadata), being confirmed with them, and decision 8 (chunk source), the content team's call. See <a href="#decisions">Decisions</a>.</li>
+      <li><b>Keys are decided:</b> a key is its span, a span that comes back keeps its key, and retired keys are an append-only record (<a data-doc="docs/decisions/0001-span-keys.md" target="_blank" rel="noopener">ADR 0001</a>). The release check that enforces this is PR #17, in review.</li>
+      <li><b>The constraint now is measurement.</b> Titles per hour, cost per title and review minutes per title are not measured yet; translating Titus with both models (<a data-doc="docs/decisions/0002-measure-translation-models.md" target="_blank" rel="noopener">ADR 0002</a>) measures them. Next gate: Titus measured by 1 Nov. See <a href="#plan">Plan</a>.</li>
     </ul>
   </div></div>
   <div class="kpis" id="kpis"></div>
@@ -226,7 +226,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 </section>
 
 <section class="page" data-page="plan" hidden aria-label="Plan">
-  <div class="lead"><span class="eyebrow">Plan · sprints aligned with tC Mobile</span><h2>The road to v0.1 on 16 November</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <div class="lead"><span class="eyebrow">Plan · sprints aligned with tC Mobile</span><h2>The road to v0.1 on 16 November</h2><span class="dated" data-written="2026-10-29T01:45:00Z"></span>
   <p>Correctness comes before the date. Each gate passes on evidence or becomes a recorded decision. From <a data-doc="docs/scoping/plan.md" target="_blank" rel="noopener">docs/scoping/plan.md</a>.</p></div>
   <div class="tw"><table><thead><tr><th>Date</th><th>Gate</th><th>Passes when</th><th>If it fails</th></tr></thead><tbody id="gates"></tbody></table></div>
   <div class="sprints" id="sprints"></div>
@@ -234,14 +234,14 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 </section>
 
 <section class="page" data-page="scope" hidden aria-label="Scope">
-  <div class="lead"><span class="eyebrow">Scope · 6B evaluations</span><h2>What we borrow, bend and build</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <div class="lead"><span class="eyebrow">Scope · 6B evaluations</span><h2>What we borrow, bend and build</h2><span class="dated" data-written="2026-10-29T01:45:00Z"></span>
   <p>Each component was checked against unfoldingWord and partner work first: Borrow (use as is), Bend (use in a new way), Break (where it actually failed), Beget (someone else carries it), Bide (wait, with a tripwire), Build (only what is left). Full tables, with evidence, are in <a data-doc="docs/scoping" target="_blank" rel="noopener">docs/scoping</a>.</p></div>
   <div class="tw"><table><thead><tr><th>Component</th><th>Borrow</th><th>Bend</th><th>Break</th><th>Beget</th><th>Bide</th><th>Build</th></tr></thead><tbody id="sixb"></tbody></table></div>
   <div class="panel"><h3>The breaks that shape the build</h3><ul class="plain" id="breaks"></ul></div>
 </section>
 
 <section class="page" data-page="sizing" hidden aria-label="Sizing">
-  <div class="lead"><span class="eyebrow">Sizing · measured, then derived</span><h2>How big the dataset is</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <div class="lead"><span class="eyebrow">Sizing · measured, then derived</span><h2>How big the dataset is</h2><span class="dated" data-written="2026-10-29T01:45:00Z"></span>
   <p>Every number is labelled measured or estimated. Measured counts come from pinned commits of Door43 sources and were re-derived by a second model with its own code.</p></div>
   <div class="kpis" id="size-kpis"></div>
   <div class="panel"><h3>Pericopes and segments by book</h3>
@@ -252,29 +252,29 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
     <div class="panel"><h3>Derived totals</h3><div class="tw"><table><tbody id="derived"></tbody></table></div></div>
     <div class="panel"><h3>Not measured yet</h3><ul class="plain">
       <li><b>Drafting cost and time per title.</b> Measured on Titus (#3).</li>
-      <li><b>Translation cost and time</b> for 151,074 strings.</li>
-      <li><b>Review minutes per title.</b> At an assumed 10 seconds, all of v0.1 is about 466 hours (47 per language). The assumption is labelled; Titus replaces it.</li>
+      <li><b>Translation cost and time</b> for 148,707 strings (16,523 English titles × 9 languages).</li>
+      <li><b>Review minutes per title.</b> At an assumed 10 seconds, all of v0.1 is about 459 hours (46 per language). The assumption is labelled; Titus replaces it.</li>
     </ul></div>
   </div>
 </section>
 
 <section class="page" data-page="decisions" hidden aria-label="Decisions">
   <div class="lead"><span class="eyebrow">Decisions · pick, say why, and the decider records it</span><h2>Decisions before data</h2>
-  <p>Pick the option you'd choose and add a reason. A pick is input; only a recorded decision counts. The requirements owner decides product questions, the content team decides the chunk source, and the DRI decides delivery questions. T1–T6 are Titus segment titles where the checking model disagreed with the drafting model (<a href="https://github.com/unfoldingWord/bible-passages/pull/16" target="_blank" rel="noopener">PR #16</a>); the other 19 passed the check.</p></div>
+  <p>Pick the option you'd choose and add a reason. A pick is input; only a recorded decision counts. The requirements owner decides product questions, the content team decides the chunk source, and the DRI decides delivery questions. T1–T6 are Titus segment titles where the checking model disagreed with the drafting model (<a href="https://github.com/unfoldingWord/bible-passages/pull/16" target="_blank" rel="noopener">PR #16</a>); the other 19 passed the check. The requirements owner answered every card on 28 Oct; recorded decisions are in <a data-doc="docs/decisions" target="_blank" rel="noopener">docs/decisions</a>. Still open: 8 (the content team's) and 11 (being confirmed).</p></div>
   <div class="panel" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><span class="saved" id="rv-status">Sign in to claude.ai to add a pick.</span></div>
   <div class="grid" id="decs"></div>
 </section>
 
 <section class="page" data-page="coverage" hidden aria-label="Coverage">
   <div class="lead"><span class="eyebrow">Coverage · books × languages</span><h2>What exists in the repo</h2>
-  <p>A cell fills when the default branch has that book's titles in that language. Empty until the first data PR merges.</p></div>
+  <p>A cell fills when the default branch has that book's titles in that language. English Titus is the first. Spanish is <code>es-419</code> (decision 13).</p></div>
   <div class="kpis" id="cov-kpis"></div>
   <div class="panel"><div class="chart"><div class="cov" id="cov"></div></div>
   <p class="src">Source: the repo tree on the default branch · <span class="asof"></span></p></div>
 </section>
 
 <section class="page" data-page="checks" hidden aria-label="Checks">
-  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2><span class="dated" data-written="2026-10-28T21:10:00Z"></span>
+  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2><span class="dated" data-written="2026-10-29T01:45:00Z"></span>
   <p>Static text is dated, and flagged once it is more than a week old. Live sections show when their data was last read from GitHub.</p></div>
   <div class="tw"><table><thead><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="checks"></tbody></table></div>
 </section>
@@ -287,8 +287,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 const BASE = /*SNAPSHOT*/null;
 const BOOKS = /*BOOKS*/null; // [code, chapters, pericopes, chunks, splits]
 const REPO = "https://github.com/unfoldingWord/bible-passages";
-// Docs live on PR #1's branch until it merges; change this to "main" then.
-const DOCS_REF = "chore/scaffold";
+const DOCS_REF = "main";
 const doc = (path) => `${REPO}/${path.includes(".") ? "blob" : "tree"}/${DOCS_REF}/${path}`;
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -306,7 +305,7 @@ let SNAP = BASE, SNAP_KIND = "base";
 
 const GATES = [
   ["Sun 1 Nov", "Titus measured (#3)", "Titus built end to end, with time and cost per title and review minutes from one real reviewer", "Sprint 2 sizing stays an estimate, flagged here"],
-  ["Sun 1 Nov", "Decisions (#2)", "Scope, pericope source, keys and chunk source answered on servant.bible#1", "Build on the proposals, marked provisional; no keys released"],
+  ["Sun 1 Nov", "Decisions (#2)", "Scope, pericope source, keys and chunk source decided. Scope, source and keys passed: recorded in ADRs 0001 and 0003; the chunk source is with the content team", "Build on the UFW chunk files, marked provisional; no keys released"],
   ["Wed 4 Nov", "Go/no-go 1: scope", "Titus rates × 66 books × 10 languages fit before 13 Nov, cross-model checks included", "Choose the v0.1 subset now and say so"],
   ["Sun 8 Nov", "English complete", "66 books: structure, pericope and segment titles, cross-model check, checks green", "Cut to the books done; the rest in v0.1.x"],
   ["Fri 13 Nov", "Go/no-go 2: release", "Every v0.1 language through the gates; dist passes tC Mobile's checker; notes list review status", "Slip, or ship the subset that passes, as a decision"],
@@ -319,8 +318,8 @@ const SIXB = [
   ["Consensus check", "skipped", "skipped", "observed", "skipped", "n/a", "none", "pipeline.md#2-consensus-check"],
   ["Segments", "applied", "applied", "observed", "delegated", "n/a", "minimal", "pipeline.md#3-segments"],
   ["Versification", "applied", "applied", "observed", "n/a", "n/a", "minimal", "pipeline.md#4-versification"],
-  ["Segment titles", "applied", "applied", "none-yet", "skipped", "n/a", "not-yet", "ai.md#5-segment-titles"],
-  ["Metadata", "applied", "applied", "none-yet", "n/a", "n/a", "not-yet", "pipeline.md#6-metadata"],
+  ["Segment titles", "applied", "applied", "none-yet", "skipped", "n/a", "minimal", "ai.md#5-segment-titles"],
+  ["Metadata", "applied", "applied", "observed", "n/a", "n/a", "minimal", "pipeline.md#6-metadata"],
   ["Translation", "applied", "applied", "observed", "skipped", "n/a", "not-yet", "ai.md#7-translation"],
   ["Review", "applied", "applied", "observed", "skipped", "n/a", "minimal", "review.md"],
   ["Publish", "applied", "applied", "observed", "n/a", "waiting", "minimal", "pipeline.md#9-publish"],
@@ -330,7 +329,7 @@ const BREAKS = [
   "<b>34 Psalms chapters in BSB have no verse 1 marker.</b> A simple parse starts their first pericope at verse 2 and over-counts splits by 32 (194 instead of 162).",
   "<b>ULT's chunk markers and the chunk files disagree at 1,184 places</b> (622 + 562). Segment boundaries become permanent keys, so the authoritative source is the content team's call first.",
   "<b>No pericope crosses a chapter:</b> BSB opens all 1,189 chapters with a heading at verse 1. A story that runs across a chapter break gets a new pericope there.",
-  "<b>Chinese has no Translation Words on Door43</b> to seed a glossary; the other 8 languages do (from a survey of the Door43 catalog, not re-run).",
+  "<b>Chinese has no Translation Words on Door43</b> to seed a glossary (checked 28 Oct); the other 8 languages do, and their Titus glossaries are built. Decided (ADR 0003, decision 14): an AI-drafted Chinese list, checked by a second model and reviewed by a Chinese reader.",
   "<b>No uW tool writes reviewed text back to GitHub.</b> The pilot's review tab keeps reviews in its own store, so the one new piece is a sync that opens PRs (from a survey of uW repos, not re-run).",
   "<b>tC Mobile's checker can't see a key that moved between releases</b>, so the dataset checks key stability itself.",
 ];
@@ -362,11 +361,13 @@ const CHECKS = [
   ["1,184 places where ULT markers and chunk files disagree", "Re-derived", "Row-for-row identical list from two independent scripts (docs/scoping/ts-vs-ufw.tsv)."],
   ["BSB is public domain", "Read", "en_bsb LICENSE.md: dedicated to the public domain on 30 Apr 2023."],
   ["BSB's verse counts match ULT's versification", "Re-derived", "Last verse per chapter matches ufw.vrs in all 66 books; no verse bridges. Verse contents were not compared."],
-  ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Reported", "From a read-only survey of the Door43 catalog; completeness not checked."],
+  ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Observed", "Titus glossaries built from pinned Door43 releases for ar, es-419, fr, hi, id, pt-BR, ru and sw (PR #20). Arabic has 16 headwords still in English (#21). No Chinese Translation Words (checked 28 Oct)."],
+  ["Titus: 8 pericopes and 25 segments", "Re-derived", "data/structure/TIT.json (PR #15); a second model re-derived the same 25 keys from the raw sources."],
+  ["19 of 25 English Titus segment titles passed a second model's check", "Observed", "data/drafts/en/TIT.json (PR #16): Sonnet drafted, Opus checked. The 6 it disputed were decided by the requirements owner on 28 Oct and are in the data as reviewed titles (PR #26, ADR 0003)."],
+  ["A released key is never missing, moved or reused for other verses", "Pending", "The check runs against every release tag and the append-only retired-keys record (PR #17, in review). No release exists yet."],
   ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
   ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
   ["This site's GitHub numbers are refreshed by hand", "Dated", "They are refreshed in work sessions, not on a schedule; the pill at the top shows their age. A scheduled cloud refresh was tried on 28 Oct and paused: GitHub returned 401 to the cloud sandbox's token and 429 (rate limited) without it."],
-  ["Document links point at PR #1's branch", "Dated", "The docs are on chore/scaffold until PR #1 merges; the links move to main then."],
 ];
 
 /* ---------- render ---------- */
@@ -453,12 +454,13 @@ function renderSizing() {
     tip.style.left = Math.min(e.clientX + 12, innerWidth - 220) + "px"; tip.style.top = e.clientY + 12 + "px";
   });
   $("#chart-books").addEventListener("mouseleave", () => (tip.hidden = true));
-  const seg = tot[1] + tot[2], en = tot[0] + seg;
-  $("#derived").innerHTML = [["Segments", seg, "chunks + splits"], ["English titles", en, "pericopes + segments"], ["Strings at v0.1 (10 languages)", en * 10, ""], ["To translate for v0.1 (9 languages)", en * 9, ""], ["Strings at 26 languages", en * 26, "later"], ["If single-segment pericopes reuse their title", en - 263, "decision 12"]]
+  // Decision 12: the 263 single-segment pericopes reuse their pericope title.
+  const seg = tot[1] + tot[2], en = tot[0] + seg - 263;
+  $("#derived").innerHTML = [["Segments", seg, "chunks + splits"], ["English titles", en, "pericopes + segments, less the 263 single-segment pericopes (decision 12)"], ["Strings at v0.1 (10 languages)", en * 10, ""], ["To translate for v0.1 (9 languages)", en * 9, ""], ["Strings at 26 languages", en * 26, "later"], ["If every segment had its own title", en + 263, "the option decision 12 did not take"]]
     .map(([k, v, n]) => `<tr><td>${k}<br><span class="saved">${n}</span></td><td class="n"><b>${fmt(v)}</b></td></tr>`).join("");
 }
 function renderCoverage() {
-  const L = ["en", "ar", "fr", "hi", "id", "zh-Hans", "pt-BR", "ru", "es", "sw"], C = SNAP.coverage;
+  const L = ["en", "ar", "fr", "hi", "id", "zh-Hans", "pt-BR", "ru", "es-419", "sw"], C = SNAP.coverage;
   const built = C.structure.length, tables = L.reduce((a, l) => a + (C.titles[l] || []).length, 0);
   $("#cov-kpis").innerHTML = [["Books with structure", `${built} / 66`], ["Title tables", `${tables} / 660`], ["Languages started", L.filter((l) => (C.titles[l] || []).length).length + " / 10"]]
     .map(([k, v]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span></div>`).join("");
