@@ -22,6 +22,7 @@ pieces around it.
 | 8   | Review             | people approve, flag or suggest each title                 | [review.md](review.md)                                                        |
 | 9   | Publish            | `dist/tc-mobile/` packages and title tables, release tags  | [pipeline.md](pipeline.md#9-publish)                                          |
 | 10  | Project site       | live scope, sizing, sprints, decisions, coverage           | [site.md](site.md)                                                            |
+| 11  | Registry entry     | the `uw/bible-passages` entry on Servant.Bible             | [servant-bible-entry.md](servant-bible-entry.md)                              |
 
 The dated critical path and go/no-go gates: [plan.md](plan.md).
 
