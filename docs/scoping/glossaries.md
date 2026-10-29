@@ -196,25 +196,33 @@ Agreement on all 93 says little unless the checker can disagree. One more
 check call, same prompt and inputs, with six terms of the draft replaced by
 seeded errors (not committed; $0.05686, 18,535 + 1,979 tokens):
 
-| Seeded error                                    | Caught |
-| ----------------------------------------------- | ------ |
-| `kt/glory` 榮耀 (traditional character)         | yes    |
-| `other/elder` 老人 (old people, not the office) | yes    |
-| `kt/holyspirit` 圣神 (the Catholic term)        | yes    |
-| `kt/savior` 救世军 (the Salvation Army)         | yes    |
-| `other/wine` with 烈酒 and 啤酒 added           | yes    |
-| `names/crete` 克里特 (not the CUV 革哩底)       | **no** |
+| Seeded error                                       | Caught |
+| -------------------------------------------------- | ------ |
+| `kt/glory` 榮耀 (traditional character)            | yes    |
+| `other/elder` 老人 (old people, not the office)    | yes    |
+| `kt/holyspirit` 圣神 (the Catholic term)           | yes    |
+| `kt/savior` 救世军 (the Salvation Army)            | yes    |
+| `other/wine` with 烈酒 and 啤酒 added              | yes    |
+| `names/crete` 克里特 (meant as not the CUV 革哩底) | no     |
 
-It raised no disagreement on the 87 unchanged terms. So the check catches
-wrong senses, wrong traditions, traditional characters and padding, and
-missed a name spelled the modern way rather than as the Chinese Union
-Version. The reader should check the five names (`names/*`) first, and every
-term, since `ai-checked` is not a review.
+It raised no disagreement on the 87 unchanged terms. The sixth seed turned
+out not to be an error: `Door43-Catalog/zh_cuv` (新标点和合本, the revised
+punctuation edition of the Chinese Union Version; its manifest says public
+domain) writes 克里特 at Titus 1:5 and 1:12; 革哩底 is, as far as known here, the original 1919 spelling (not checked against a copy).
+So the checker caught 5 of 5 real errors (wrong sense, wrong tradition,
+traditional characters, padding), and the Crete spelling is a real choice
+between two editions, which the draft did not note. The other Titus names in
+the draft (提多, 保罗, 亚波罗, 推基古) are spelled as `zh_cuv` writes them
+(`grep` over its `57-TIT.usfm`). One calibration run of six seeds is a
+small sample, so every term still needs the reader: `ai-checked` is not a
+review.
 
 ### Not done
 
 - A Chinese reader is not yet named (the maintainer names one on #31). Their
   review is recorded as a later change to the record.
+- Names are not checked against a pinned Chinese Bible. `zh_cuv` on Door43
+  could be pinned for that; it would have flagged 革哩底 against 克里特.
 - Traditional characters are not gated mechanically (no reliable offline
   test); the checker caught one in calibration.
 - Other books: one run per book, after the reader has seen Titus.
