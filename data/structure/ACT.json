@@ -1,0 +1,2578 @@
+{
+  "book": "ACT",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "ACT.P.1.1-5", "start": [1, 1], "end": [1, 5] },
+    { "key": "ACT.P.1.6-11", "start": [1, 6], "end": [1, 11] },
+    { "key": "ACT.P.1.12-26", "start": [1, 12], "end": [1, 26] },
+    { "key": "ACT.P.2.1-13", "start": [2, 1], "end": [2, 13] },
+    { "key": "ACT.P.2.14-36", "start": [2, 14], "end": [2, 36] },
+    { "key": "ACT.P.2.37-41", "start": [2, 37], "end": [2, 41] },
+    { "key": "ACT.P.2.42-47", "start": [2, 42], "end": [2, 47] },
+    { "key": "ACT.P.3.1-10", "start": [3, 1], "end": [3, 10] },
+    { "key": "ACT.P.3.11-26", "start": [3, 11], "end": [3, 26] },
+    { "key": "ACT.P.4.1-12", "start": [4, 1], "end": [4, 12] },
+    { "key": "ACT.P.4.13-22", "start": [4, 13], "end": [4, 22] },
+    { "key": "ACT.P.4.23-31", "start": [4, 23], "end": [4, 31] },
+    { "key": "ACT.P.4.32-37", "start": [4, 32], "end": [4, 37] },
+    { "key": "ACT.P.5.1-11", "start": [5, 1], "end": [5, 11] },
+    { "key": "ACT.P.5.12-16", "start": [5, 12], "end": [5, 16] },
+    { "key": "ACT.P.5.17-23", "start": [5, 17], "end": [5, 23] },
+    { "key": "ACT.P.5.24-32", "start": [5, 24], "end": [5, 32] },
+    { "key": "ACT.P.5.33-42", "start": [5, 33], "end": [5, 42] },
+    { "key": "ACT.P.6.1-7", "start": [6, 1], "end": [6, 7] },
+    { "key": "ACT.P.6.8-15", "start": [6, 8], "end": [6, 15] },
+    { "key": "ACT.P.7.1-8", "start": [7, 1], "end": [7, 8] },
+    { "key": "ACT.P.7.9-14", "start": [7, 9], "end": [7, 14] },
+    { "key": "ACT.P.7.15-19", "start": [7, 15], "end": [7, 19] },
+    { "key": "ACT.P.7.20-22", "start": [7, 20], "end": [7, 22] },
+    { "key": "ACT.P.7.23-29", "start": [7, 23], "end": [7, 29] },
+    { "key": "ACT.P.7.30-38", "start": [7, 30], "end": [7, 38] },
+    { "key": "ACT.P.7.39-43", "start": [7, 39], "end": [7, 43] },
+    { "key": "ACT.P.7.44-53", "start": [7, 44], "end": [7, 53] },
+    { "key": "ACT.P.7.54-60", "start": [7, 54], "end": [7, 60] },
+    { "key": "ACT.P.8.1-3", "start": [8, 1], "end": [8, 3] },
+    { "key": "ACT.P.8.4-8", "start": [8, 4], "end": [8, 8] },
+    { "key": "ACT.P.8.9-25", "start": [8, 9], "end": [8, 25] },
+    { "key": "ACT.P.8.26-40", "start": [8, 26], "end": [8, 40] },
+    { "key": "ACT.P.9.1-9", "start": [9, 1], "end": [9, 9] },
+    { "key": "ACT.P.9.10-19", "start": [9, 10], "end": [9, 19] },
+    { "key": "ACT.P.9.20-22", "start": [9, 20], "end": [9, 22] },
+    { "key": "ACT.P.9.23-25", "start": [9, 23], "end": [9, 25] },
+    { "key": "ACT.P.9.26-30", "start": [9, 26], "end": [9, 30] },
+    { "key": "ACT.P.9.31-35", "start": [9, 31], "end": [9, 35] },
+    { "key": "ACT.P.9.36-43", "start": [9, 36], "end": [9, 43] },
+    { "key": "ACT.P.10.1-8", "start": [10, 1], "end": [10, 8] },
+    { "key": "ACT.P.10.9-16", "start": [10, 9], "end": [10, 16] },
+    { "key": "ACT.P.10.17-23", "start": [10, 17], "end": [10, 23] },
+    { "key": "ACT.P.10.24-33", "start": [10, 24], "end": [10, 33] },
+    { "key": "ACT.P.10.34-43", "start": [10, 34], "end": [10, 43] },
+    { "key": "ACT.P.10.44-48", "start": [10, 44], "end": [10, 48] },
+    { "key": "ACT.P.11.1-18", "start": [11, 1], "end": [11, 18] },
+    { "key": "ACT.P.11.19-30", "start": [11, 19], "end": [11, 30] },
+    { "key": "ACT.P.12.1-4", "start": [12, 1], "end": [12, 4] },
+    { "key": "ACT.P.12.5-19", "start": [12, 5], "end": [12, 19] },
+    { "key": "ACT.P.12.20-25", "start": [12, 20], "end": [12, 25] },
+    { "key": "ACT.P.13.1-3", "start": [13, 1], "end": [13, 3] },
+    { "key": "ACT.P.13.4-12", "start": [13, 4], "end": [13, 12] },
+    { "key": "ACT.P.13.13-41", "start": [13, 13], "end": [13, 41] },
+    { "key": "ACT.P.13.42-52", "start": [13, 42], "end": [13, 52] },
+    { "key": "ACT.P.14.1-7", "start": [14, 1], "end": [14, 7] },
+    { "key": "ACT.P.14.8-20", "start": [14, 8], "end": [14, 20] },
+    { "key": "ACT.P.14.21-28", "start": [14, 21], "end": [14, 28] },
+    { "key": "ACT.P.15.1-4", "start": [15, 1], "end": [15, 4] },
+    { "key": "ACT.P.15.5-21", "start": [15, 5], "end": [15, 21] },
+    { "key": "ACT.P.15.22-29", "start": [15, 22], "end": [15, 29] },
+    { "key": "ACT.P.15.30-35", "start": [15, 30], "end": [15, 35] },
+    { "key": "ACT.P.15.36-41", "start": [15, 36], "end": [15, 41] },
+    { "key": "ACT.P.16.1-5", "start": [16, 1], "end": [16, 5] },
+    { "key": "ACT.P.16.6-10", "start": [16, 6], "end": [16, 10] },
+    { "key": "ACT.P.16.11-15", "start": [16, 11], "end": [16, 15] },
+    { "key": "ACT.P.16.16-24", "start": [16, 16], "end": [16, 24] },
+    { "key": "ACT.P.16.25-34", "start": [16, 25], "end": [16, 34] },
+    { "key": "ACT.P.16.35-40", "start": [16, 35], "end": [16, 40] },
+    { "key": "ACT.P.17.1-9", "start": [17, 1], "end": [17, 9] },
+    { "key": "ACT.P.17.10-15", "start": [17, 10], "end": [17, 15] },
+    { "key": "ACT.P.17.16-21", "start": [17, 16], "end": [17, 21] },
+    { "key": "ACT.P.17.22-34", "start": [17, 22], "end": [17, 34] },
+    { "key": "ACT.P.18.1-11", "start": [18, 1], "end": [18, 11] },
+    { "key": "ACT.P.18.12-17", "start": [18, 12], "end": [18, 17] },
+    { "key": "ACT.P.18.18-22", "start": [18, 18], "end": [18, 22] },
+    { "key": "ACT.P.18.23-28", "start": [18, 23], "end": [18, 28] },
+    { "key": "ACT.P.19.1-7", "start": [19, 1], "end": [19, 7] },
+    { "key": "ACT.P.19.8-12", "start": [19, 8], "end": [19, 12] },
+    { "key": "ACT.P.19.13-20", "start": [19, 13], "end": [19, 20] },
+    { "key": "ACT.P.19.21-41", "start": [19, 21], "end": [19, 41] },
+    { "key": "ACT.P.20.1-6", "start": [20, 1], "end": [20, 6] },
+    { "key": "ACT.P.20.7-12", "start": [20, 7], "end": [20, 12] },
+    { "key": "ACT.P.20.13-16", "start": [20, 13], "end": [20, 16] },
+    { "key": "ACT.P.20.17-38", "start": [20, 17], "end": [20, 38] },
+    { "key": "ACT.P.21.1-7", "start": [21, 1], "end": [21, 7] },
+    { "key": "ACT.P.21.8-16", "start": [21, 8], "end": [21, 16] },
+    { "key": "ACT.P.21.17-26", "start": [21, 17], "end": [21, 26] },
+    { "key": "ACT.P.21.27-36", "start": [21, 27], "end": [21, 36] },
+    { "key": "ACT.P.21.37-40", "start": [21, 37], "end": [21, 40] },
+    { "key": "ACT.P.22.1-21", "start": [22, 1], "end": [22, 21] },
+    { "key": "ACT.P.22.22-30", "start": [22, 22], "end": [22, 30] },
+    { "key": "ACT.P.23.1-11", "start": [23, 1], "end": [23, 11] },
+    { "key": "ACT.P.23.12-22", "start": [23, 12], "end": [23, 22] },
+    { "key": "ACT.P.23.23-35", "start": [23, 23], "end": [23, 35] },
+    { "key": "ACT.P.24.1-9", "start": [24, 1], "end": [24, 9] },
+    { "key": "ACT.P.24.10-21", "start": [24, 10], "end": [24, 21] },
+    { "key": "ACT.P.24.22-27", "start": [24, 22], "end": [24, 27] },
+    { "key": "ACT.P.25.1-9", "start": [25, 1], "end": [25, 9] },
+    { "key": "ACT.P.25.10-12", "start": [25, 10], "end": [25, 12] },
+    { "key": "ACT.P.25.13-22", "start": [25, 13], "end": [25, 22] },
+    { "key": "ACT.P.25.23-27", "start": [25, 23], "end": [25, 27] },
+    { "key": "ACT.P.26.1-23", "start": [26, 1], "end": [26, 23] },
+    { "key": "ACT.P.26.24-32", "start": [26, 24], "end": [26, 32] },
+    { "key": "ACT.P.27.1-12", "start": [27, 1], "end": [27, 12] },
+    { "key": "ACT.P.27.13-26", "start": [27, 13], "end": [27, 26] },
+    { "key": "ACT.P.27.27-44", "start": [27, 27], "end": [27, 44] },
+    { "key": "ACT.P.28.1-10", "start": [28, 1], "end": [28, 10] },
+    { "key": "ACT.P.28.11-15", "start": [28, 11], "end": [28, 15] },
+    { "key": "ACT.P.28.16-31", "start": [28, 16], "end": [28, 31] }
+  ],
+  "segments": [
+    {
+      "key": "ACT.1.1-3",
+      "pericope": "ACT.P.1.1-5",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "ACT.1.4-5",
+      "pericope": "ACT.P.1.1-5",
+      "start": [1, 4],
+      "end": [1, 5]
+    },
+    {
+      "key": "ACT.1.6-8",
+      "pericope": "ACT.P.1.6-11",
+      "start": [1, 6],
+      "end": [1, 8]
+    },
+    {
+      "key": "ACT.1.9-11",
+      "pericope": "ACT.P.1.6-11",
+      "start": [1, 9],
+      "end": [1, 11]
+    },
+    {
+      "key": "ACT.1.12-14",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 12],
+      "end": [1, 14]
+    },
+    {
+      "key": "ACT.1.15-16",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 15],
+      "end": [1, 16]
+    },
+    {
+      "key": "ACT.1.17-19",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 17],
+      "end": [1, 19]
+    },
+    {
+      "key": "ACT.1.20-20",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 20],
+      "end": [1, 20]
+    },
+    {
+      "key": "ACT.1.21-23",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 21],
+      "end": [1, 23]
+    },
+    {
+      "key": "ACT.1.24-26",
+      "pericope": "ACT.P.1.12-26",
+      "start": [1, 24],
+      "end": [1, 26]
+    },
+    {
+      "key": "ACT.2.1-4",
+      "pericope": "ACT.P.2.1-13",
+      "start": [2, 1],
+      "end": [2, 4]
+    },
+    {
+      "key": "ACT.2.5-7",
+      "pericope": "ACT.P.2.1-13",
+      "start": [2, 5],
+      "end": [2, 7]
+    },
+    {
+      "key": "ACT.2.8-11",
+      "pericope": "ACT.P.2.1-13",
+      "start": [2, 8],
+      "end": [2, 11]
+    },
+    {
+      "key": "ACT.2.12-13",
+      "pericope": "ACT.P.2.1-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "ACT.2.14-15",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 14],
+      "end": [2, 15]
+    },
+    {
+      "key": "ACT.2.16-17",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 16],
+      "end": [2, 17]
+    },
+    {
+      "key": "ACT.2.18-19",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 18],
+      "end": [2, 19]
+    },
+    {
+      "key": "ACT.2.20-21",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 20],
+      "end": [2, 21]
+    },
+    {
+      "key": "ACT.2.22-24",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 22],
+      "end": [2, 24]
+    },
+    {
+      "key": "ACT.2.25-26",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 25],
+      "end": [2, 26]
+    },
+    {
+      "key": "ACT.2.27-28",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 27],
+      "end": [2, 28]
+    },
+    {
+      "key": "ACT.2.29-31",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 29],
+      "end": [2, 31]
+    },
+    {
+      "key": "ACT.2.32-33",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 32],
+      "end": [2, 33]
+    },
+    {
+      "key": "ACT.2.34-36",
+      "pericope": "ACT.P.2.14-36",
+      "start": [2, 34],
+      "end": [2, 36]
+    },
+    {
+      "key": "ACT.2.37-39",
+      "pericope": "ACT.P.2.37-41",
+      "start": [2, 37],
+      "end": [2, 39]
+    },
+    {
+      "key": "ACT.2.40-41",
+      "pericope": "ACT.P.2.37-41",
+      "start": [2, 40],
+      "end": [2, 41]
+    },
+    {
+      "key": "ACT.2.42-42",
+      "pericope": "ACT.P.2.42-47",
+      "start": [2, 42],
+      "end": [2, 42]
+    },
+    {
+      "key": "ACT.2.43-45",
+      "pericope": "ACT.P.2.42-47",
+      "start": [2, 43],
+      "end": [2, 45]
+    },
+    {
+      "key": "ACT.2.46-47",
+      "pericope": "ACT.P.2.42-47",
+      "start": [2, 46],
+      "end": [2, 47]
+    },
+    {
+      "key": "ACT.3.1-3",
+      "pericope": "ACT.P.3.1-10",
+      "start": [3, 1],
+      "end": [3, 3]
+    },
+    {
+      "key": "ACT.3.4-6",
+      "pericope": "ACT.P.3.1-10",
+      "start": [3, 4],
+      "end": [3, 6]
+    },
+    {
+      "key": "ACT.3.7-8",
+      "pericope": "ACT.P.3.1-10",
+      "start": [3, 7],
+      "end": [3, 8]
+    },
+    {
+      "key": "ACT.3.9-10",
+      "pericope": "ACT.P.3.1-10",
+      "start": [3, 9],
+      "end": [3, 10]
+    },
+    {
+      "key": "ACT.3.11-12",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "ACT.3.13-14",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 13],
+      "end": [3, 14]
+    },
+    {
+      "key": "ACT.3.15-16",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 15],
+      "end": [3, 16]
+    },
+    {
+      "key": "ACT.3.17-18",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 17],
+      "end": [3, 18]
+    },
+    {
+      "key": "ACT.3.19-20",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 19],
+      "end": [3, 20]
+    },
+    {
+      "key": "ACT.3.21-23",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 21],
+      "end": [3, 23]
+    },
+    {
+      "key": "ACT.3.24-26",
+      "pericope": "ACT.P.3.11-26",
+      "start": [3, 24],
+      "end": [3, 26]
+    },
+    {
+      "key": "ACT.4.1-4",
+      "pericope": "ACT.P.4.1-12",
+      "start": [4, 1],
+      "end": [4, 4]
+    },
+    {
+      "key": "ACT.4.5-7",
+      "pericope": "ACT.P.4.1-12",
+      "start": [4, 5],
+      "end": [4, 7]
+    },
+    {
+      "key": "ACT.4.8-10",
+      "pericope": "ACT.P.4.1-12",
+      "start": [4, 8],
+      "end": [4, 10]
+    },
+    {
+      "key": "ACT.4.11-12",
+      "pericope": "ACT.P.4.1-12",
+      "start": [4, 11],
+      "end": [4, 12]
+    },
+    {
+      "key": "ACT.4.13-14",
+      "pericope": "ACT.P.4.13-22",
+      "start": [4, 13],
+      "end": [4, 14]
+    },
+    {
+      "key": "ACT.4.15-18",
+      "pericope": "ACT.P.4.13-22",
+      "start": [4, 15],
+      "end": [4, 18]
+    },
+    {
+      "key": "ACT.4.19-20",
+      "pericope": "ACT.P.4.13-22",
+      "start": [4, 19],
+      "end": [4, 20]
+    },
+    {
+      "key": "ACT.4.21-22",
+      "pericope": "ACT.P.4.13-22",
+      "start": [4, 21],
+      "end": [4, 22]
+    },
+    {
+      "key": "ACT.4.23-25",
+      "pericope": "ACT.P.4.23-31",
+      "start": [4, 23],
+      "end": [4, 25]
+    },
+    {
+      "key": "ACT.4.26-26",
+      "pericope": "ACT.P.4.23-31",
+      "start": [4, 26],
+      "end": [4, 26]
+    },
+    {
+      "key": "ACT.4.27-28",
+      "pericope": "ACT.P.4.23-31",
+      "start": [4, 27],
+      "end": [4, 28]
+    },
+    {
+      "key": "ACT.4.29-31",
+      "pericope": "ACT.P.4.23-31",
+      "start": [4, 29],
+      "end": [4, 31]
+    },
+    {
+      "key": "ACT.4.32-33",
+      "pericope": "ACT.P.4.32-37",
+      "start": [4, 32],
+      "end": [4, 33]
+    },
+    {
+      "key": "ACT.4.34-35",
+      "pericope": "ACT.P.4.32-37",
+      "start": [4, 34],
+      "end": [4, 35]
+    },
+    {
+      "key": "ACT.4.36-37",
+      "pericope": "ACT.P.4.32-37",
+      "start": [4, 36],
+      "end": [4, 37]
+    },
+    {
+      "key": "ACT.5.1-2",
+      "pericope": "ACT.P.5.1-11",
+      "start": [5, 1],
+      "end": [5, 2]
+    },
+    {
+      "key": "ACT.5.3-6",
+      "pericope": "ACT.P.5.1-11",
+      "start": [5, 3],
+      "end": [5, 6]
+    },
+    {
+      "key": "ACT.5.7-8",
+      "pericope": "ACT.P.5.1-11",
+      "start": [5, 7],
+      "end": [5, 8]
+    },
+    {
+      "key": "ACT.5.9-11",
+      "pericope": "ACT.P.5.1-11",
+      "start": [5, 9],
+      "end": [5, 11]
+    },
+    {
+      "key": "ACT.5.12-13",
+      "pericope": "ACT.P.5.12-16",
+      "start": [5, 12],
+      "end": [5, 13]
+    },
+    {
+      "key": "ACT.5.14-16",
+      "pericope": "ACT.P.5.12-16",
+      "start": [5, 14],
+      "end": [5, 16]
+    },
+    {
+      "key": "ACT.5.17-18",
+      "pericope": "ACT.P.5.17-23",
+      "start": [5, 17],
+      "end": [5, 18]
+    },
+    {
+      "key": "ACT.5.19-21",
+      "pericope": "ACT.P.5.17-23",
+      "start": [5, 19],
+      "end": [5, 21]
+    },
+    {
+      "key": "ACT.5.22-23",
+      "pericope": "ACT.P.5.17-23",
+      "start": [5, 22],
+      "end": [5, 23]
+    },
+    {
+      "key": "ACT.5.24-25",
+      "pericope": "ACT.P.5.24-32",
+      "start": [5, 24],
+      "end": [5, 25]
+    },
+    {
+      "key": "ACT.5.26-28",
+      "pericope": "ACT.P.5.24-32",
+      "start": [5, 26],
+      "end": [5, 28]
+    },
+    {
+      "key": "ACT.5.29-32",
+      "pericope": "ACT.P.5.24-32",
+      "start": [5, 29],
+      "end": [5, 32]
+    },
+    {
+      "key": "ACT.5.33-34",
+      "pericope": "ACT.P.5.33-42",
+      "start": [5, 33],
+      "end": [5, 34]
+    },
+    {
+      "key": "ACT.5.35-37",
+      "pericope": "ACT.P.5.33-42",
+      "start": [5, 35],
+      "end": [5, 37]
+    },
+    {
+      "key": "ACT.5.38-39",
+      "pericope": "ACT.P.5.33-42",
+      "start": [5, 38],
+      "end": [5, 39]
+    },
+    {
+      "key": "ACT.5.40-42",
+      "pericope": "ACT.P.5.33-42",
+      "start": [5, 40],
+      "end": [5, 42]
+    },
+    {
+      "key": "ACT.6.1-1",
+      "pericope": "ACT.P.6.1-7",
+      "start": [6, 1],
+      "end": [6, 1]
+    },
+    {
+      "key": "ACT.6.2-4",
+      "pericope": "ACT.P.6.1-7",
+      "start": [6, 2],
+      "end": [6, 4]
+    },
+    {
+      "key": "ACT.6.5-6",
+      "pericope": "ACT.P.6.1-7",
+      "start": [6, 5],
+      "end": [6, 6]
+    },
+    {
+      "key": "ACT.6.7-7",
+      "pericope": "ACT.P.6.1-7",
+      "start": [6, 7],
+      "end": [6, 7]
+    },
+    {
+      "key": "ACT.6.8-9",
+      "pericope": "ACT.P.6.8-15",
+      "start": [6, 8],
+      "end": [6, 9]
+    },
+    {
+      "key": "ACT.6.10-11",
+      "pericope": "ACT.P.6.8-15",
+      "start": [6, 10],
+      "end": [6, 11]
+    },
+    {
+      "key": "ACT.6.12-15",
+      "pericope": "ACT.P.6.8-15",
+      "start": [6, 12],
+      "end": [6, 15]
+    },
+    {
+      "key": "ACT.7.1-3",
+      "pericope": "ACT.P.7.1-8",
+      "start": [7, 1],
+      "end": [7, 3]
+    },
+    {
+      "key": "ACT.7.4-5",
+      "pericope": "ACT.P.7.1-8",
+      "start": [7, 4],
+      "end": [7, 5]
+    },
+    {
+      "key": "ACT.7.6-8",
+      "pericope": "ACT.P.7.1-8",
+      "start": [7, 6],
+      "end": [7, 8]
+    },
+    {
+      "key": "ACT.7.9-10",
+      "pericope": "ACT.P.7.9-14",
+      "start": [7, 9],
+      "end": [7, 10]
+    },
+    {
+      "key": "ACT.7.11-13",
+      "pericope": "ACT.P.7.9-14",
+      "start": [7, 11],
+      "end": [7, 13]
+    },
+    {
+      "key": "ACT.7.14-14",
+      "pericope": "ACT.P.7.9-14",
+      "start": [7, 14],
+      "end": [7, 14]
+    },
+    {
+      "key": "ACT.7.15-16",
+      "pericope": "ACT.P.7.15-19",
+      "start": [7, 15],
+      "end": [7, 16]
+    },
+    {
+      "key": "ACT.7.17-19",
+      "pericope": "ACT.P.7.15-19",
+      "start": [7, 17],
+      "end": [7, 19]
+    },
+    {
+      "key": "ACT.7.20-21",
+      "pericope": "ACT.P.7.20-22",
+      "start": [7, 20],
+      "end": [7, 21]
+    },
+    {
+      "key": "ACT.7.22-22",
+      "pericope": "ACT.P.7.20-22",
+      "start": [7, 22],
+      "end": [7, 22]
+    },
+    {
+      "key": "ACT.7.23-25",
+      "pericope": "ACT.P.7.23-29",
+      "start": [7, 23],
+      "end": [7, 25]
+    },
+    {
+      "key": "ACT.7.26-28",
+      "pericope": "ACT.P.7.23-29",
+      "start": [7, 26],
+      "end": [7, 28]
+    },
+    {
+      "key": "ACT.7.29-29",
+      "pericope": "ACT.P.7.23-29",
+      "start": [7, 29],
+      "end": [7, 29]
+    },
+    {
+      "key": "ACT.7.30-30",
+      "pericope": "ACT.P.7.30-38",
+      "start": [7, 30],
+      "end": [7, 30]
+    },
+    {
+      "key": "ACT.7.31-32",
+      "pericope": "ACT.P.7.30-38",
+      "start": [7, 31],
+      "end": [7, 32]
+    },
+    {
+      "key": "ACT.7.33-34",
+      "pericope": "ACT.P.7.30-38",
+      "start": [7, 33],
+      "end": [7, 34]
+    },
+    {
+      "key": "ACT.7.35-37",
+      "pericope": "ACT.P.7.30-38",
+      "start": [7, 35],
+      "end": [7, 37]
+    },
+    {
+      "key": "ACT.7.38-38",
+      "pericope": "ACT.P.7.30-38",
+      "start": [7, 38],
+      "end": [7, 38]
+    },
+    {
+      "key": "ACT.7.39-40",
+      "pericope": "ACT.P.7.39-43",
+      "start": [7, 39],
+      "end": [7, 40]
+    },
+    {
+      "key": "ACT.7.41-42",
+      "pericope": "ACT.P.7.39-43",
+      "start": [7, 41],
+      "end": [7, 42]
+    },
+    {
+      "key": "ACT.7.43-43",
+      "pericope": "ACT.P.7.39-43",
+      "start": [7, 43],
+      "end": [7, 43]
+    },
+    {
+      "key": "ACT.7.44-46",
+      "pericope": "ACT.P.7.44-53",
+      "start": [7, 44],
+      "end": [7, 46]
+    },
+    {
+      "key": "ACT.7.47-50",
+      "pericope": "ACT.P.7.44-53",
+      "start": [7, 47],
+      "end": [7, 50]
+    },
+    {
+      "key": "ACT.7.51-53",
+      "pericope": "ACT.P.7.44-53",
+      "start": [7, 51],
+      "end": [7, 53]
+    },
+    {
+      "key": "ACT.7.54-56",
+      "pericope": "ACT.P.7.54-60",
+      "start": [7, 54],
+      "end": [7, 56]
+    },
+    {
+      "key": "ACT.7.57-58",
+      "pericope": "ACT.P.7.54-60",
+      "start": [7, 57],
+      "end": [7, 58]
+    },
+    {
+      "key": "ACT.7.59-60",
+      "pericope": "ACT.P.7.54-60",
+      "start": [7, 59],
+      "end": [7, 60]
+    },
+    {
+      "key": "ACT.8.1-3",
+      "pericope": "ACT.P.8.1-3",
+      "start": [8, 1],
+      "end": [8, 3]
+    },
+    {
+      "key": "ACT.8.4-5",
+      "pericope": "ACT.P.8.4-8",
+      "start": [8, 4],
+      "end": [8, 5]
+    },
+    {
+      "key": "ACT.8.6-8",
+      "pericope": "ACT.P.8.4-8",
+      "start": [8, 6],
+      "end": [8, 8]
+    },
+    {
+      "key": "ACT.8.9-11",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 9],
+      "end": [8, 11]
+    },
+    {
+      "key": "ACT.8.12-13",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 12],
+      "end": [8, 13]
+    },
+    {
+      "key": "ACT.8.14-17",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 14],
+      "end": [8, 17]
+    },
+    {
+      "key": "ACT.8.18-19",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 18],
+      "end": [8, 19]
+    },
+    {
+      "key": "ACT.8.20-23",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 20],
+      "end": [8, 23]
+    },
+    {
+      "key": "ACT.8.24-24",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 24],
+      "end": [8, 24]
+    },
+    {
+      "key": "ACT.8.25-25",
+      "pericope": "ACT.P.8.9-25",
+      "start": [8, 25],
+      "end": [8, 25]
+    },
+    {
+      "key": "ACT.8.26-28",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 26],
+      "end": [8, 28]
+    },
+    {
+      "key": "ACT.8.29-31",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 29],
+      "end": [8, 31]
+    },
+    {
+      "key": "ACT.8.32-33",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 32],
+      "end": [8, 33]
+    },
+    {
+      "key": "ACT.8.34-35",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 34],
+      "end": [8, 35]
+    },
+    {
+      "key": "ACT.8.36-38",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 36],
+      "end": [8, 38]
+    },
+    {
+      "key": "ACT.8.39-40",
+      "pericope": "ACT.P.8.26-40",
+      "start": [8, 39],
+      "end": [8, 40]
+    },
+    {
+      "key": "ACT.9.1-2",
+      "pericope": "ACT.P.9.1-9",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "ACT.9.3-4",
+      "pericope": "ACT.P.9.1-9",
+      "start": [9, 3],
+      "end": [9, 4]
+    },
+    {
+      "key": "ACT.9.5-7",
+      "pericope": "ACT.P.9.1-9",
+      "start": [9, 5],
+      "end": [9, 7]
+    },
+    {
+      "key": "ACT.9.8-9",
+      "pericope": "ACT.P.9.1-9",
+      "start": [9, 8],
+      "end": [9, 9]
+    },
+    {
+      "key": "ACT.9.10-12",
+      "pericope": "ACT.P.9.10-19",
+      "start": [9, 10],
+      "end": [9, 12]
+    },
+    {
+      "key": "ACT.9.13-16",
+      "pericope": "ACT.P.9.10-19",
+      "start": [9, 13],
+      "end": [9, 16]
+    },
+    {
+      "key": "ACT.9.17-19",
+      "pericope": "ACT.P.9.10-19",
+      "start": [9, 17],
+      "end": [9, 19]
+    },
+    {
+      "key": "ACT.9.20-22",
+      "pericope": "ACT.P.9.20-22",
+      "start": [9, 20],
+      "end": [9, 22]
+    },
+    {
+      "key": "ACT.9.23-25",
+      "pericope": "ACT.P.9.23-25",
+      "start": [9, 23],
+      "end": [9, 25]
+    },
+    {
+      "key": "ACT.9.26-27",
+      "pericope": "ACT.P.9.26-30",
+      "start": [9, 26],
+      "end": [9, 27]
+    },
+    {
+      "key": "ACT.9.28-30",
+      "pericope": "ACT.P.9.26-30",
+      "start": [9, 28],
+      "end": [9, 30]
+    },
+    {
+      "key": "ACT.9.31-32",
+      "pericope": "ACT.P.9.31-35",
+      "start": [9, 31],
+      "end": [9, 32]
+    },
+    {
+      "key": "ACT.9.33-35",
+      "pericope": "ACT.P.9.31-35",
+      "start": [9, 33],
+      "end": [9, 35]
+    },
+    {
+      "key": "ACT.9.36-37",
+      "pericope": "ACT.P.9.36-43",
+      "start": [9, 36],
+      "end": [9, 37]
+    },
+    {
+      "key": "ACT.9.38-39",
+      "pericope": "ACT.P.9.36-43",
+      "start": [9, 38],
+      "end": [9, 39]
+    },
+    {
+      "key": "ACT.9.40-43",
+      "pericope": "ACT.P.9.36-43",
+      "start": [9, 40],
+      "end": [9, 43]
+    },
+    {
+      "key": "ACT.10.1-2",
+      "pericope": "ACT.P.10.1-8",
+      "start": [10, 1],
+      "end": [10, 2]
+    },
+    {
+      "key": "ACT.10.3-6",
+      "pericope": "ACT.P.10.1-8",
+      "start": [10, 3],
+      "end": [10, 6]
+    },
+    {
+      "key": "ACT.10.7-8",
+      "pericope": "ACT.P.10.1-8",
+      "start": [10, 7],
+      "end": [10, 8]
+    },
+    {
+      "key": "ACT.10.9-12",
+      "pericope": "ACT.P.10.9-16",
+      "start": [10, 9],
+      "end": [10, 12]
+    },
+    {
+      "key": "ACT.10.13-16",
+      "pericope": "ACT.P.10.9-16",
+      "start": [10, 13],
+      "end": [10, 16]
+    },
+    {
+      "key": "ACT.10.17-18",
+      "pericope": "ACT.P.10.17-23",
+      "start": [10, 17],
+      "end": [10, 18]
+    },
+    {
+      "key": "ACT.10.19-21",
+      "pericope": "ACT.P.10.17-23",
+      "start": [10, 19],
+      "end": [10, 21]
+    },
+    {
+      "key": "ACT.10.22-23",
+      "pericope": "ACT.P.10.17-23",
+      "start": [10, 22],
+      "end": [10, 23]
+    },
+    {
+      "key": "ACT.10.24-24",
+      "pericope": "ACT.P.10.24-33",
+      "start": [10, 24],
+      "end": [10, 24]
+    },
+    {
+      "key": "ACT.10.25-26",
+      "pericope": "ACT.P.10.24-33",
+      "start": [10, 25],
+      "end": [10, 26]
+    },
+    {
+      "key": "ACT.10.27-29",
+      "pericope": "ACT.P.10.24-33",
+      "start": [10, 27],
+      "end": [10, 29]
+    },
+    {
+      "key": "ACT.10.30-33",
+      "pericope": "ACT.P.10.24-33",
+      "start": [10, 30],
+      "end": [10, 33]
+    },
+    {
+      "key": "ACT.10.34-35",
+      "pericope": "ACT.P.10.34-43",
+      "start": [10, 34],
+      "end": [10, 35]
+    },
+    {
+      "key": "ACT.10.36-38",
+      "pericope": "ACT.P.10.34-43",
+      "start": [10, 36],
+      "end": [10, 38]
+    },
+    {
+      "key": "ACT.10.39-41",
+      "pericope": "ACT.P.10.34-43",
+      "start": [10, 39],
+      "end": [10, 41]
+    },
+    {
+      "key": "ACT.10.42-43",
+      "pericope": "ACT.P.10.34-43",
+      "start": [10, 42],
+      "end": [10, 43]
+    },
+    {
+      "key": "ACT.10.44-45",
+      "pericope": "ACT.P.10.44-48",
+      "start": [10, 44],
+      "end": [10, 45]
+    },
+    {
+      "key": "ACT.10.46-48",
+      "pericope": "ACT.P.10.44-48",
+      "start": [10, 46],
+      "end": [10, 48]
+    },
+    {
+      "key": "ACT.11.1-3",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 1],
+      "end": [11, 3]
+    },
+    {
+      "key": "ACT.11.4-6",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 4],
+      "end": [11, 6]
+    },
+    {
+      "key": "ACT.11.7-10",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 7],
+      "end": [11, 10]
+    },
+    {
+      "key": "ACT.11.11-14",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 11],
+      "end": [11, 14]
+    },
+    {
+      "key": "ACT.11.15-16",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 15],
+      "end": [11, 16]
+    },
+    {
+      "key": "ACT.11.17-18",
+      "pericope": "ACT.P.11.1-18",
+      "start": [11, 17],
+      "end": [11, 18]
+    },
+    {
+      "key": "ACT.11.19-21",
+      "pericope": "ACT.P.11.19-30",
+      "start": [11, 19],
+      "end": [11, 21]
+    },
+    {
+      "key": "ACT.11.22-24",
+      "pericope": "ACT.P.11.19-30",
+      "start": [11, 22],
+      "end": [11, 24]
+    },
+    {
+      "key": "ACT.11.25-26",
+      "pericope": "ACT.P.11.19-30",
+      "start": [11, 25],
+      "end": [11, 26]
+    },
+    {
+      "key": "ACT.11.27-28",
+      "pericope": "ACT.P.11.19-30",
+      "start": [11, 27],
+      "end": [11, 28]
+    },
+    {
+      "key": "ACT.11.29-30",
+      "pericope": "ACT.P.11.19-30",
+      "start": [11, 29],
+      "end": [11, 30]
+    },
+    {
+      "key": "ACT.12.1-2",
+      "pericope": "ACT.P.12.1-4",
+      "start": [12, 1],
+      "end": [12, 2]
+    },
+    {
+      "key": "ACT.12.3-4",
+      "pericope": "ACT.P.12.1-4",
+      "start": [12, 3],
+      "end": [12, 4]
+    },
+    {
+      "key": "ACT.12.5-6",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 5],
+      "end": [12, 6]
+    },
+    {
+      "key": "ACT.12.7-8",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 7],
+      "end": [12, 8]
+    },
+    {
+      "key": "ACT.12.9-10",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 9],
+      "end": [12, 10]
+    },
+    {
+      "key": "ACT.12.11-12",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 11],
+      "end": [12, 12]
+    },
+    {
+      "key": "ACT.12.13-15",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 13],
+      "end": [12, 15]
+    },
+    {
+      "key": "ACT.12.16-17",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 16],
+      "end": [12, 17]
+    },
+    {
+      "key": "ACT.12.18-19",
+      "pericope": "ACT.P.12.5-19",
+      "start": [12, 18],
+      "end": [12, 19]
+    },
+    {
+      "key": "ACT.12.20-21",
+      "pericope": "ACT.P.12.20-25",
+      "start": [12, 20],
+      "end": [12, 21]
+    },
+    {
+      "key": "ACT.12.22-23",
+      "pericope": "ACT.P.12.20-25",
+      "start": [12, 22],
+      "end": [12, 23]
+    },
+    {
+      "key": "ACT.12.24-25",
+      "pericope": "ACT.P.12.20-25",
+      "start": [12, 24],
+      "end": [12, 25]
+    },
+    {
+      "key": "ACT.13.1-3",
+      "pericope": "ACT.P.13.1-3",
+      "start": [13, 1],
+      "end": [13, 3]
+    },
+    {
+      "key": "ACT.13.4-5",
+      "pericope": "ACT.P.13.4-12",
+      "start": [13, 4],
+      "end": [13, 5]
+    },
+    {
+      "key": "ACT.13.6-8",
+      "pericope": "ACT.P.13.4-12",
+      "start": [13, 6],
+      "end": [13, 8]
+    },
+    {
+      "key": "ACT.13.9-10",
+      "pericope": "ACT.P.13.4-12",
+      "start": [13, 9],
+      "end": [13, 10]
+    },
+    {
+      "key": "ACT.13.11-12",
+      "pericope": "ACT.P.13.4-12",
+      "start": [13, 11],
+      "end": [13, 12]
+    },
+    {
+      "key": "ACT.13.13-15",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 13],
+      "end": [13, 15]
+    },
+    {
+      "key": "ACT.13.16-18",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 16],
+      "end": [13, 18]
+    },
+    {
+      "key": "ACT.13.19-20",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 19],
+      "end": [13, 20]
+    },
+    {
+      "key": "ACT.13.21-22",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 21],
+      "end": [13, 22]
+    },
+    {
+      "key": "ACT.13.23-25",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 23],
+      "end": [13, 25]
+    },
+    {
+      "key": "ACT.13.26-27",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 26],
+      "end": [13, 27]
+    },
+    {
+      "key": "ACT.13.28-29",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 28],
+      "end": [13, 29]
+    },
+    {
+      "key": "ACT.13.30-31",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 30],
+      "end": [13, 31]
+    },
+    {
+      "key": "ACT.13.32-34",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 32],
+      "end": [13, 34]
+    },
+    {
+      "key": "ACT.13.35-37",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 35],
+      "end": [13, 37]
+    },
+    {
+      "key": "ACT.13.38-39",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 38],
+      "end": [13, 39]
+    },
+    {
+      "key": "ACT.13.40-41",
+      "pericope": "ACT.P.13.13-41",
+      "start": [13, 40],
+      "end": [13, 41]
+    },
+    {
+      "key": "ACT.13.42-43",
+      "pericope": "ACT.P.13.42-52",
+      "start": [13, 42],
+      "end": [13, 43]
+    },
+    {
+      "key": "ACT.13.44-45",
+      "pericope": "ACT.P.13.42-52",
+      "start": [13, 44],
+      "end": [13, 45]
+    },
+    {
+      "key": "ACT.13.46-47",
+      "pericope": "ACT.P.13.42-52",
+      "start": [13, 46],
+      "end": [13, 47]
+    },
+    {
+      "key": "ACT.13.48-49",
+      "pericope": "ACT.P.13.42-52",
+      "start": [13, 48],
+      "end": [13, 49]
+    },
+    {
+      "key": "ACT.13.50-52",
+      "pericope": "ACT.P.13.42-52",
+      "start": [13, 50],
+      "end": [13, 52]
+    },
+    {
+      "key": "ACT.14.1-2",
+      "pericope": "ACT.P.14.1-7",
+      "start": [14, 1],
+      "end": [14, 2]
+    },
+    {
+      "key": "ACT.14.3-4",
+      "pericope": "ACT.P.14.1-7",
+      "start": [14, 3],
+      "end": [14, 4]
+    },
+    {
+      "key": "ACT.14.5-7",
+      "pericope": "ACT.P.14.1-7",
+      "start": [14, 5],
+      "end": [14, 7]
+    },
+    {
+      "key": "ACT.14.8-10",
+      "pericope": "ACT.P.14.8-20",
+      "start": [14, 8],
+      "end": [14, 10]
+    },
+    {
+      "key": "ACT.14.11-13",
+      "pericope": "ACT.P.14.8-20",
+      "start": [14, 11],
+      "end": [14, 13]
+    },
+    {
+      "key": "ACT.14.14-16",
+      "pericope": "ACT.P.14.8-20",
+      "start": [14, 14],
+      "end": [14, 16]
+    },
+    {
+      "key": "ACT.14.17-18",
+      "pericope": "ACT.P.14.8-20",
+      "start": [14, 17],
+      "end": [14, 18]
+    },
+    {
+      "key": "ACT.14.19-20",
+      "pericope": "ACT.P.14.8-20",
+      "start": [14, 19],
+      "end": [14, 20]
+    },
+    {
+      "key": "ACT.14.21-22",
+      "pericope": "ACT.P.14.21-28",
+      "start": [14, 21],
+      "end": [14, 22]
+    },
+    {
+      "key": "ACT.14.23-26",
+      "pericope": "ACT.P.14.21-28",
+      "start": [14, 23],
+      "end": [14, 26]
+    },
+    {
+      "key": "ACT.14.27-28",
+      "pericope": "ACT.P.14.21-28",
+      "start": [14, 27],
+      "end": [14, 28]
+    },
+    {
+      "key": "ACT.15.1-2",
+      "pericope": "ACT.P.15.1-4",
+      "start": [15, 1],
+      "end": [15, 2]
+    },
+    {
+      "key": "ACT.15.3-4",
+      "pericope": "ACT.P.15.1-4",
+      "start": [15, 3],
+      "end": [15, 4]
+    },
+    {
+      "key": "ACT.15.5-6",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 5],
+      "end": [15, 6]
+    },
+    {
+      "key": "ACT.15.7-9",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 7],
+      "end": [15, 9]
+    },
+    {
+      "key": "ACT.15.10-11",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 10],
+      "end": [15, 11]
+    },
+    {
+      "key": "ACT.15.12-12",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 12],
+      "end": [15, 12]
+    },
+    {
+      "key": "ACT.15.13-14",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 13],
+      "end": [15, 14]
+    },
+    {
+      "key": "ACT.15.15-18",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 15],
+      "end": [15, 18]
+    },
+    {
+      "key": "ACT.15.19-21",
+      "pericope": "ACT.P.15.5-21",
+      "start": [15, 19],
+      "end": [15, 21]
+    },
+    {
+      "key": "ACT.15.22-23",
+      "pericope": "ACT.P.15.22-29",
+      "start": [15, 22],
+      "end": [15, 23]
+    },
+    {
+      "key": "ACT.15.24-26",
+      "pericope": "ACT.P.15.22-29",
+      "start": [15, 24],
+      "end": [15, 26]
+    },
+    {
+      "key": "ACT.15.27-29",
+      "pericope": "ACT.P.15.22-29",
+      "start": [15, 27],
+      "end": [15, 29]
+    },
+    {
+      "key": "ACT.15.30-32",
+      "pericope": "ACT.P.15.30-35",
+      "start": [15, 30],
+      "end": [15, 32]
+    },
+    {
+      "key": "ACT.15.33-35",
+      "pericope": "ACT.P.15.30-35",
+      "start": [15, 33],
+      "end": [15, 35]
+    },
+    {
+      "key": "ACT.15.36-38",
+      "pericope": "ACT.P.15.36-41",
+      "start": [15, 36],
+      "end": [15, 38]
+    },
+    {
+      "key": "ACT.15.39-41",
+      "pericope": "ACT.P.15.36-41",
+      "start": [15, 39],
+      "end": [15, 41]
+    },
+    {
+      "key": "ACT.16.1-3",
+      "pericope": "ACT.P.16.1-5",
+      "start": [16, 1],
+      "end": [16, 3]
+    },
+    {
+      "key": "ACT.16.4-5",
+      "pericope": "ACT.P.16.1-5",
+      "start": [16, 4],
+      "end": [16, 5]
+    },
+    {
+      "key": "ACT.16.6-8",
+      "pericope": "ACT.P.16.6-10",
+      "start": [16, 6],
+      "end": [16, 8]
+    },
+    {
+      "key": "ACT.16.9-10",
+      "pericope": "ACT.P.16.6-10",
+      "start": [16, 9],
+      "end": [16, 10]
+    },
+    {
+      "key": "ACT.16.11-13",
+      "pericope": "ACT.P.16.11-15",
+      "start": [16, 11],
+      "end": [16, 13]
+    },
+    {
+      "key": "ACT.16.14-15",
+      "pericope": "ACT.P.16.11-15",
+      "start": [16, 14],
+      "end": [16, 15]
+    },
+    {
+      "key": "ACT.16.16-18",
+      "pericope": "ACT.P.16.16-24",
+      "start": [16, 16],
+      "end": [16, 18]
+    },
+    {
+      "key": "ACT.16.19-21",
+      "pericope": "ACT.P.16.16-24",
+      "start": [16, 19],
+      "end": [16, 21]
+    },
+    {
+      "key": "ACT.16.22-24",
+      "pericope": "ACT.P.16.16-24",
+      "start": [16, 22],
+      "end": [16, 24]
+    },
+    {
+      "key": "ACT.16.25-26",
+      "pericope": "ACT.P.16.25-34",
+      "start": [16, 25],
+      "end": [16, 26]
+    },
+    {
+      "key": "ACT.16.27-28",
+      "pericope": "ACT.P.16.25-34",
+      "start": [16, 27],
+      "end": [16, 28]
+    },
+    {
+      "key": "ACT.16.29-31",
+      "pericope": "ACT.P.16.25-34",
+      "start": [16, 29],
+      "end": [16, 31]
+    },
+    {
+      "key": "ACT.16.32-34",
+      "pericope": "ACT.P.16.25-34",
+      "start": [16, 32],
+      "end": [16, 34]
+    },
+    {
+      "key": "ACT.16.35-36",
+      "pericope": "ACT.P.16.35-40",
+      "start": [16, 35],
+      "end": [16, 36]
+    },
+    {
+      "key": "ACT.16.37-39",
+      "pericope": "ACT.P.16.35-40",
+      "start": [16, 37],
+      "end": [16, 39]
+    },
+    {
+      "key": "ACT.16.40-40",
+      "pericope": "ACT.P.16.35-40",
+      "start": [16, 40],
+      "end": [16, 40]
+    },
+    {
+      "key": "ACT.17.1-2",
+      "pericope": "ACT.P.17.1-9",
+      "start": [17, 1],
+      "end": [17, 2]
+    },
+    {
+      "key": "ACT.17.3-4",
+      "pericope": "ACT.P.17.1-9",
+      "start": [17, 3],
+      "end": [17, 4]
+    },
+    {
+      "key": "ACT.17.5-7",
+      "pericope": "ACT.P.17.1-9",
+      "start": [17, 5],
+      "end": [17, 7]
+    },
+    {
+      "key": "ACT.17.8-9",
+      "pericope": "ACT.P.17.1-9",
+      "start": [17, 8],
+      "end": [17, 9]
+    },
+    {
+      "key": "ACT.17.10-12",
+      "pericope": "ACT.P.17.10-15",
+      "start": [17, 10],
+      "end": [17, 12]
+    },
+    {
+      "key": "ACT.17.13-15",
+      "pericope": "ACT.P.17.10-15",
+      "start": [17, 13],
+      "end": [17, 15]
+    },
+    {
+      "key": "ACT.17.16-17",
+      "pericope": "ACT.P.17.16-21",
+      "start": [17, 16],
+      "end": [17, 17]
+    },
+    {
+      "key": "ACT.17.18-18",
+      "pericope": "ACT.P.17.16-21",
+      "start": [17, 18],
+      "end": [17, 18]
+    },
+    {
+      "key": "ACT.17.19-21",
+      "pericope": "ACT.P.17.16-21",
+      "start": [17, 19],
+      "end": [17, 21]
+    },
+    {
+      "key": "ACT.17.22-23",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 22],
+      "end": [17, 23]
+    },
+    {
+      "key": "ACT.17.24-25",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 24],
+      "end": [17, 25]
+    },
+    {
+      "key": "ACT.17.26-27",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 26],
+      "end": [17, 27]
+    },
+    {
+      "key": "ACT.17.28-29",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 28],
+      "end": [17, 29]
+    },
+    {
+      "key": "ACT.17.30-31",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 30],
+      "end": [17, 31]
+    },
+    {
+      "key": "ACT.17.32-34",
+      "pericope": "ACT.P.17.22-34",
+      "start": [17, 32],
+      "end": [17, 34]
+    },
+    {
+      "key": "ACT.18.1-3",
+      "pericope": "ACT.P.18.1-11",
+      "start": [18, 1],
+      "end": [18, 3]
+    },
+    {
+      "key": "ACT.18.4-6",
+      "pericope": "ACT.P.18.1-11",
+      "start": [18, 4],
+      "end": [18, 6]
+    },
+    {
+      "key": "ACT.18.7-8",
+      "pericope": "ACT.P.18.1-11",
+      "start": [18, 7],
+      "end": [18, 8]
+    },
+    {
+      "key": "ACT.18.9-11",
+      "pericope": "ACT.P.18.1-11",
+      "start": [18, 9],
+      "end": [18, 11]
+    },
+    {
+      "key": "ACT.18.12-13",
+      "pericope": "ACT.P.18.12-17",
+      "start": [18, 12],
+      "end": [18, 13]
+    },
+    {
+      "key": "ACT.18.14-15",
+      "pericope": "ACT.P.18.12-17",
+      "start": [18, 14],
+      "end": [18, 15]
+    },
+    {
+      "key": "ACT.18.16-17",
+      "pericope": "ACT.P.18.12-17",
+      "start": [18, 16],
+      "end": [18, 17]
+    },
+    {
+      "key": "ACT.18.18-19",
+      "pericope": "ACT.P.18.18-22",
+      "start": [18, 18],
+      "end": [18, 19]
+    },
+    {
+      "key": "ACT.18.20-21",
+      "pericope": "ACT.P.18.18-22",
+      "start": [18, 20],
+      "end": [18, 21]
+    },
+    {
+      "key": "ACT.18.22-22",
+      "pericope": "ACT.P.18.18-22",
+      "start": [18, 22],
+      "end": [18, 22]
+    },
+    {
+      "key": "ACT.18.23-23",
+      "pericope": "ACT.P.18.23-28",
+      "start": [18, 23],
+      "end": [18, 23]
+    },
+    {
+      "key": "ACT.18.24-26",
+      "pericope": "ACT.P.18.23-28",
+      "start": [18, 24],
+      "end": [18, 26]
+    },
+    {
+      "key": "ACT.18.27-28",
+      "pericope": "ACT.P.18.23-28",
+      "start": [18, 27],
+      "end": [18, 28]
+    },
+    {
+      "key": "ACT.19.1-2",
+      "pericope": "ACT.P.19.1-7",
+      "start": [19, 1],
+      "end": [19, 2]
+    },
+    {
+      "key": "ACT.19.3-4",
+      "pericope": "ACT.P.19.1-7",
+      "start": [19, 3],
+      "end": [19, 4]
+    },
+    {
+      "key": "ACT.19.5-7",
+      "pericope": "ACT.P.19.1-7",
+      "start": [19, 5],
+      "end": [19, 7]
+    },
+    {
+      "key": "ACT.19.8-10",
+      "pericope": "ACT.P.19.8-12",
+      "start": [19, 8],
+      "end": [19, 10]
+    },
+    {
+      "key": "ACT.19.11-12",
+      "pericope": "ACT.P.19.8-12",
+      "start": [19, 11],
+      "end": [19, 12]
+    },
+    {
+      "key": "ACT.19.13-14",
+      "pericope": "ACT.P.19.13-20",
+      "start": [19, 13],
+      "end": [19, 14]
+    },
+    {
+      "key": "ACT.19.15-17",
+      "pericope": "ACT.P.19.13-20",
+      "start": [19, 15],
+      "end": [19, 17]
+    },
+    {
+      "key": "ACT.19.18-20",
+      "pericope": "ACT.P.19.13-20",
+      "start": [19, 18],
+      "end": [19, 20]
+    },
+    {
+      "key": "ACT.19.21-22",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 21],
+      "end": [19, 22]
+    },
+    {
+      "key": "ACT.19.23-25",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 23],
+      "end": [19, 25]
+    },
+    {
+      "key": "ACT.19.26-27",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 26],
+      "end": [19, 27]
+    },
+    {
+      "key": "ACT.19.28-29",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 28],
+      "end": [19, 29]
+    },
+    {
+      "key": "ACT.19.30-32",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 30],
+      "end": [19, 32]
+    },
+    {
+      "key": "ACT.19.33-34",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 33],
+      "end": [19, 34]
+    },
+    {
+      "key": "ACT.19.35-37",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 35],
+      "end": [19, 37]
+    },
+    {
+      "key": "ACT.19.38-41",
+      "pericope": "ACT.P.19.21-41",
+      "start": [19, 38],
+      "end": [19, 41]
+    },
+    {
+      "key": "ACT.20.1-3",
+      "pericope": "ACT.P.20.1-6",
+      "start": [20, 1],
+      "end": [20, 3]
+    },
+    {
+      "key": "ACT.20.4-6",
+      "pericope": "ACT.P.20.1-6",
+      "start": [20, 4],
+      "end": [20, 6]
+    },
+    {
+      "key": "ACT.20.7-8",
+      "pericope": "ACT.P.20.7-12",
+      "start": [20, 7],
+      "end": [20, 8]
+    },
+    {
+      "key": "ACT.20.9-10",
+      "pericope": "ACT.P.20.7-12",
+      "start": [20, 9],
+      "end": [20, 10]
+    },
+    {
+      "key": "ACT.20.11-12",
+      "pericope": "ACT.P.20.7-12",
+      "start": [20, 11],
+      "end": [20, 12]
+    },
+    {
+      "key": "ACT.20.13-14",
+      "pericope": "ACT.P.20.13-16",
+      "start": [20, 13],
+      "end": [20, 14]
+    },
+    {
+      "key": "ACT.20.15-16",
+      "pericope": "ACT.P.20.13-16",
+      "start": [20, 15],
+      "end": [20, 16]
+    },
+    {
+      "key": "ACT.20.17-21",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 17],
+      "end": [20, 21]
+    },
+    {
+      "key": "ACT.20.22-24",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 22],
+      "end": [20, 24]
+    },
+    {
+      "key": "ACT.20.25-27",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 25],
+      "end": [20, 27]
+    },
+    {
+      "key": "ACT.20.28-30",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 28],
+      "end": [20, 30]
+    },
+    {
+      "key": "ACT.20.31-32",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 31],
+      "end": [20, 32]
+    },
+    {
+      "key": "ACT.20.33-35",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 33],
+      "end": [20, 35]
+    },
+    {
+      "key": "ACT.20.36-38",
+      "pericope": "ACT.P.20.17-38",
+      "start": [20, 36],
+      "end": [20, 38]
+    },
+    {
+      "key": "ACT.21.1-2",
+      "pericope": "ACT.P.21.1-7",
+      "start": [21, 1],
+      "end": [21, 2]
+    },
+    {
+      "key": "ACT.21.3-4",
+      "pericope": "ACT.P.21.1-7",
+      "start": [21, 3],
+      "end": [21, 4]
+    },
+    {
+      "key": "ACT.21.5-6",
+      "pericope": "ACT.P.21.1-7",
+      "start": [21, 5],
+      "end": [21, 6]
+    },
+    {
+      "key": "ACT.21.7-7",
+      "pericope": "ACT.P.21.1-7",
+      "start": [21, 7],
+      "end": [21, 7]
+    },
+    {
+      "key": "ACT.21.8-9",
+      "pericope": "ACT.P.21.8-16",
+      "start": [21, 8],
+      "end": [21, 9]
+    },
+    {
+      "key": "ACT.21.10-11",
+      "pericope": "ACT.P.21.8-16",
+      "start": [21, 10],
+      "end": [21, 11]
+    },
+    {
+      "key": "ACT.21.12-14",
+      "pericope": "ACT.P.21.8-16",
+      "start": [21, 12],
+      "end": [21, 14]
+    },
+    {
+      "key": "ACT.21.15-16",
+      "pericope": "ACT.P.21.8-16",
+      "start": [21, 15],
+      "end": [21, 16]
+    },
+    {
+      "key": "ACT.21.17-19",
+      "pericope": "ACT.P.21.17-26",
+      "start": [21, 17],
+      "end": [21, 19]
+    },
+    {
+      "key": "ACT.21.20-21",
+      "pericope": "ACT.P.21.17-26",
+      "start": [21, 20],
+      "end": [21, 21]
+    },
+    {
+      "key": "ACT.21.22-24",
+      "pericope": "ACT.P.21.17-26",
+      "start": [21, 22],
+      "end": [21, 24]
+    },
+    {
+      "key": "ACT.21.25-26",
+      "pericope": "ACT.P.21.17-26",
+      "start": [21, 25],
+      "end": [21, 26]
+    },
+    {
+      "key": "ACT.21.27-29",
+      "pericope": "ACT.P.21.27-36",
+      "start": [21, 27],
+      "end": [21, 29]
+    },
+    {
+      "key": "ACT.21.30-31",
+      "pericope": "ACT.P.21.27-36",
+      "start": [21, 30],
+      "end": [21, 31]
+    },
+    {
+      "key": "ACT.21.32-33",
+      "pericope": "ACT.P.21.27-36",
+      "start": [21, 32],
+      "end": [21, 33]
+    },
+    {
+      "key": "ACT.21.34-36",
+      "pericope": "ACT.P.21.27-36",
+      "start": [21, 34],
+      "end": [21, 36]
+    },
+    {
+      "key": "ACT.21.37-38",
+      "pericope": "ACT.P.21.37-40",
+      "start": [21, 37],
+      "end": [21, 38]
+    },
+    {
+      "key": "ACT.21.39-40",
+      "pericope": "ACT.P.21.37-40",
+      "start": [21, 39],
+      "end": [21, 40]
+    },
+    {
+      "key": "ACT.22.1-2",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 1],
+      "end": [22, 2]
+    },
+    {
+      "key": "ACT.22.3-5",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 3],
+      "end": [22, 5]
+    },
+    {
+      "key": "ACT.22.6-8",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 6],
+      "end": [22, 8]
+    },
+    {
+      "key": "ACT.22.9-11",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 9],
+      "end": [22, 11]
+    },
+    {
+      "key": "ACT.22.12-13",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 12],
+      "end": [22, 13]
+    },
+    {
+      "key": "ACT.22.14-16",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 14],
+      "end": [22, 16]
+    },
+    {
+      "key": "ACT.22.17-18",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 17],
+      "end": [22, 18]
+    },
+    {
+      "key": "ACT.22.19-21",
+      "pericope": "ACT.P.22.1-21",
+      "start": [22, 19],
+      "end": [22, 21]
+    },
+    {
+      "key": "ACT.22.22-24",
+      "pericope": "ACT.P.22.22-30",
+      "start": [22, 22],
+      "end": [22, 24]
+    },
+    {
+      "key": "ACT.22.25-26",
+      "pericope": "ACT.P.22.22-30",
+      "start": [22, 25],
+      "end": [22, 26]
+    },
+    {
+      "key": "ACT.22.27-29",
+      "pericope": "ACT.P.22.22-30",
+      "start": [22, 27],
+      "end": [22, 29]
+    },
+    {
+      "key": "ACT.22.30-30",
+      "pericope": "ACT.P.22.22-30",
+      "start": [22, 30],
+      "end": [22, 30]
+    },
+    {
+      "key": "ACT.23.1-3",
+      "pericope": "ACT.P.23.1-11",
+      "start": [23, 1],
+      "end": [23, 3]
+    },
+    {
+      "key": "ACT.23.4-5",
+      "pericope": "ACT.P.23.1-11",
+      "start": [23, 4],
+      "end": [23, 5]
+    },
+    {
+      "key": "ACT.23.6-8",
+      "pericope": "ACT.P.23.1-11",
+      "start": [23, 6],
+      "end": [23, 8]
+    },
+    {
+      "key": "ACT.23.9-10",
+      "pericope": "ACT.P.23.1-11",
+      "start": [23, 9],
+      "end": [23, 10]
+    },
+    {
+      "key": "ACT.23.11-11",
+      "pericope": "ACT.P.23.1-11",
+      "start": [23, 11],
+      "end": [23, 11]
+    },
+    {
+      "key": "ACT.23.12-13",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 12],
+      "end": [23, 13]
+    },
+    {
+      "key": "ACT.23.14-15",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 14],
+      "end": [23, 15]
+    },
+    {
+      "key": "ACT.23.16-17",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 16],
+      "end": [23, 17]
+    },
+    {
+      "key": "ACT.23.18-19",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 18],
+      "end": [23, 19]
+    },
+    {
+      "key": "ACT.23.20-21",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 20],
+      "end": [23, 21]
+    },
+    {
+      "key": "ACT.23.22-22",
+      "pericope": "ACT.P.23.12-22",
+      "start": [23, 22],
+      "end": [23, 22]
+    },
+    {
+      "key": "ACT.23.23-24",
+      "pericope": "ACT.P.23.23-35",
+      "start": [23, 23],
+      "end": [23, 24]
+    },
+    {
+      "key": "ACT.23.25-27",
+      "pericope": "ACT.P.23.23-35",
+      "start": [23, 25],
+      "end": [23, 27]
+    },
+    {
+      "key": "ACT.23.28-30",
+      "pericope": "ACT.P.23.23-35",
+      "start": [23, 28],
+      "end": [23, 30]
+    },
+    {
+      "key": "ACT.23.31-33",
+      "pericope": "ACT.P.23.23-35",
+      "start": [23, 31],
+      "end": [23, 33]
+    },
+    {
+      "key": "ACT.23.34-35",
+      "pericope": "ACT.P.23.23-35",
+      "start": [23, 34],
+      "end": [23, 35]
+    },
+    {
+      "key": "ACT.24.1-3",
+      "pericope": "ACT.P.24.1-9",
+      "start": [24, 1],
+      "end": [24, 3]
+    },
+    {
+      "key": "ACT.24.4-6",
+      "pericope": "ACT.P.24.1-9",
+      "start": [24, 4],
+      "end": [24, 6]
+    },
+    {
+      "key": "ACT.24.7-9",
+      "pericope": "ACT.P.24.1-9",
+      "start": [24, 7],
+      "end": [24, 9]
+    },
+    {
+      "key": "ACT.24.10-13",
+      "pericope": "ACT.P.24.10-21",
+      "start": [24, 10],
+      "end": [24, 13]
+    },
+    {
+      "key": "ACT.24.14-16",
+      "pericope": "ACT.P.24.10-21",
+      "start": [24, 14],
+      "end": [24, 16]
+    },
+    {
+      "key": "ACT.24.17-19",
+      "pericope": "ACT.P.24.10-21",
+      "start": [24, 17],
+      "end": [24, 19]
+    },
+    {
+      "key": "ACT.24.20-21",
+      "pericope": "ACT.P.24.10-21",
+      "start": [24, 20],
+      "end": [24, 21]
+    },
+    {
+      "key": "ACT.24.22-23",
+      "pericope": "ACT.P.24.22-27",
+      "start": [24, 22],
+      "end": [24, 23]
+    },
+    {
+      "key": "ACT.24.24-25",
+      "pericope": "ACT.P.24.22-27",
+      "start": [24, 24],
+      "end": [24, 25]
+    },
+    {
+      "key": "ACT.24.26-27",
+      "pericope": "ACT.P.24.22-27",
+      "start": [24, 26],
+      "end": [24, 27]
+    },
+    {
+      "key": "ACT.25.1-3",
+      "pericope": "ACT.P.25.1-9",
+      "start": [25, 1],
+      "end": [25, 3]
+    },
+    {
+      "key": "ACT.25.4-5",
+      "pericope": "ACT.P.25.1-9",
+      "start": [25, 4],
+      "end": [25, 5]
+    },
+    {
+      "key": "ACT.25.6-8",
+      "pericope": "ACT.P.25.1-9",
+      "start": [25, 6],
+      "end": [25, 8]
+    },
+    {
+      "key": "ACT.25.9-9",
+      "pericope": "ACT.P.25.1-9",
+      "start": [25, 9],
+      "end": [25, 9]
+    },
+    {
+      "key": "ACT.25.10-10",
+      "pericope": "ACT.P.25.10-12",
+      "start": [25, 10],
+      "end": [25, 10]
+    },
+    {
+      "key": "ACT.25.11-12",
+      "pericope": "ACT.P.25.10-12",
+      "start": [25, 11],
+      "end": [25, 12]
+    },
+    {
+      "key": "ACT.25.13-16",
+      "pericope": "ACT.P.25.13-22",
+      "start": [25, 13],
+      "end": [25, 16]
+    },
+    {
+      "key": "ACT.25.17-20",
+      "pericope": "ACT.P.25.13-22",
+      "start": [25, 17],
+      "end": [25, 20]
+    },
+    {
+      "key": "ACT.25.21-22",
+      "pericope": "ACT.P.25.13-22",
+      "start": [25, 21],
+      "end": [25, 22]
+    },
+    {
+      "key": "ACT.25.23-24",
+      "pericope": "ACT.P.25.23-27",
+      "start": [25, 23],
+      "end": [25, 24]
+    },
+    {
+      "key": "ACT.25.25-27",
+      "pericope": "ACT.P.25.23-27",
+      "start": [25, 25],
+      "end": [25, 27]
+    },
+    {
+      "key": "ACT.26.1-3",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 1],
+      "end": [26, 3]
+    },
+    {
+      "key": "ACT.26.4-5",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 4],
+      "end": [26, 5]
+    },
+    {
+      "key": "ACT.26.6-8",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 6],
+      "end": [26, 8]
+    },
+    {
+      "key": "ACT.26.9-11",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 9],
+      "end": [26, 11]
+    },
+    {
+      "key": "ACT.26.12-14",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 12],
+      "end": [26, 14]
+    },
+    {
+      "key": "ACT.26.15-18",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 15],
+      "end": [26, 18]
+    },
+    {
+      "key": "ACT.26.19-21",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 19],
+      "end": [26, 21]
+    },
+    {
+      "key": "ACT.26.22-23",
+      "pericope": "ACT.P.26.1-23",
+      "start": [26, 22],
+      "end": [26, 23]
+    },
+    {
+      "key": "ACT.26.24-26",
+      "pericope": "ACT.P.26.24-32",
+      "start": [26, 24],
+      "end": [26, 26]
+    },
+    {
+      "key": "ACT.26.27-29",
+      "pericope": "ACT.P.26.24-32",
+      "start": [26, 27],
+      "end": [26, 29]
+    },
+    {
+      "key": "ACT.26.30-32",
+      "pericope": "ACT.P.26.24-32",
+      "start": [26, 30],
+      "end": [26, 32]
+    },
+    {
+      "key": "ACT.27.1-2",
+      "pericope": "ACT.P.27.1-12",
+      "start": [27, 1],
+      "end": [27, 2]
+    },
+    {
+      "key": "ACT.27.3-6",
+      "pericope": "ACT.P.27.1-12",
+      "start": [27, 3],
+      "end": [27, 6]
+    },
+    {
+      "key": "ACT.27.7-8",
+      "pericope": "ACT.P.27.1-12",
+      "start": [27, 7],
+      "end": [27, 8]
+    },
+    {
+      "key": "ACT.27.9-11",
+      "pericope": "ACT.P.27.1-12",
+      "start": [27, 9],
+      "end": [27, 11]
+    },
+    {
+      "key": "ACT.27.12-12",
+      "pericope": "ACT.P.27.1-12",
+      "start": [27, 12],
+      "end": [27, 12]
+    },
+    {
+      "key": "ACT.27.13-13",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 13],
+      "end": [27, 13]
+    },
+    {
+      "key": "ACT.27.14-16",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 14],
+      "end": [27, 16]
+    },
+    {
+      "key": "ACT.27.17-18",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 17],
+      "end": [27, 18]
+    },
+    {
+      "key": "ACT.27.19-20",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 19],
+      "end": [27, 20]
+    },
+    {
+      "key": "ACT.27.21-22",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 21],
+      "end": [27, 22]
+    },
+    {
+      "key": "ACT.27.23-26",
+      "pericope": "ACT.P.27.13-26",
+      "start": [27, 23],
+      "end": [27, 26]
+    },
+    {
+      "key": "ACT.27.27-29",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 27],
+      "end": [27, 29]
+    },
+    {
+      "key": "ACT.27.30-32",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 30],
+      "end": [27, 32]
+    },
+    {
+      "key": "ACT.27.33-35",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 33],
+      "end": [27, 35]
+    },
+    {
+      "key": "ACT.27.36-38",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 36],
+      "end": [27, 38]
+    },
+    {
+      "key": "ACT.27.39-41",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 39],
+      "end": [27, 41]
+    },
+    {
+      "key": "ACT.27.42-44",
+      "pericope": "ACT.P.27.27-44",
+      "start": [27, 42],
+      "end": [27, 44]
+    },
+    {
+      "key": "ACT.28.1-2",
+      "pericope": "ACT.P.28.1-10",
+      "start": [28, 1],
+      "end": [28, 2]
+    },
+    {
+      "key": "ACT.28.3-4",
+      "pericope": "ACT.P.28.1-10",
+      "start": [28, 3],
+      "end": [28, 4]
+    },
+    {
+      "key": "ACT.28.5-6",
+      "pericope": "ACT.P.28.1-10",
+      "start": [28, 5],
+      "end": [28, 6]
+    },
+    {
+      "key": "ACT.28.7-10",
+      "pericope": "ACT.P.28.1-10",
+      "start": [28, 7],
+      "end": [28, 10]
+    },
+    {
+      "key": "ACT.28.11-12",
+      "pericope": "ACT.P.28.11-15",
+      "start": [28, 11],
+      "end": [28, 12]
+    },
+    {
+      "key": "ACT.28.13-15",
+      "pericope": "ACT.P.28.11-15",
+      "start": [28, 13],
+      "end": [28, 15]
+    },
+    {
+      "key": "ACT.28.16-18",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 16],
+      "end": [28, 18]
+    },
+    {
+      "key": "ACT.28.19-20",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 19],
+      "end": [28, 20]
+    },
+    {
+      "key": "ACT.28.21-22",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 21],
+      "end": [28, 22]
+    },
+    {
+      "key": "ACT.28.23-24",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 23],
+      "end": [28, 24]
+    },
+    {
+      "key": "ACT.28.25-26",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 25],
+      "end": [28, 26]
+    },
+    {
+      "key": "ACT.28.27-27",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 27],
+      "end": [28, 27]
+    },
+    {
+      "key": "ACT.28.28-29",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 28],
+      "end": [28, 29]
+    },
+    {
+      "key": "ACT.28.30-31",
+      "pericope": "ACT.P.28.16-31",
+      "start": [28, 30],
+      "end": [28, 31]
+    }
+  ]
+}

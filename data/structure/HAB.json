@@ -1,0 +1,189 @@
+{
+  "book": "HAB",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "HAB.P.1.1-4", "start": [1, 1], "end": [1, 4] },
+    { "key": "HAB.P.1.5-11", "start": [1, 5], "end": [1, 11] },
+    { "key": "HAB.P.1.12-17", "start": [1, 12], "end": [1, 17] },
+    { "key": "HAB.P.2.1-5", "start": [2, 1], "end": [2, 5] },
+    { "key": "HAB.P.2.6-20", "start": [2, 6], "end": [2, 20] },
+    { "key": "HAB.P.3.1-16", "start": [3, 1], "end": [3, 16] },
+    { "key": "HAB.P.3.17-19", "start": [3, 17], "end": [3, 19] }
+  ],
+  "segments": [
+    {
+      "key": "HAB.1.1-2",
+      "pericope": "HAB.P.1.1-4",
+      "start": [1, 1],
+      "end": [1, 2]
+    },
+    {
+      "key": "HAB.1.3-4",
+      "pericope": "HAB.P.1.1-4",
+      "start": [1, 3],
+      "end": [1, 4]
+    },
+    {
+      "key": "HAB.1.5-7",
+      "pericope": "HAB.P.1.5-11",
+      "start": [1, 5],
+      "end": [1, 7]
+    },
+    {
+      "key": "HAB.1.8-9",
+      "pericope": "HAB.P.1.5-11",
+      "start": [1, 8],
+      "end": [1, 9]
+    },
+    {
+      "key": "HAB.1.10-11",
+      "pericope": "HAB.P.1.5-11",
+      "start": [1, 10],
+      "end": [1, 11]
+    },
+    {
+      "key": "HAB.1.12-12",
+      "pericope": "HAB.P.1.12-17",
+      "start": [1, 12],
+      "end": [1, 12]
+    },
+    {
+      "key": "HAB.1.13-14",
+      "pericope": "HAB.P.1.12-17",
+      "start": [1, 13],
+      "end": [1, 14]
+    },
+    {
+      "key": "HAB.1.15-17",
+      "pericope": "HAB.P.1.12-17",
+      "start": [1, 15],
+      "end": [1, 17]
+    },
+    {
+      "key": "HAB.2.1-1",
+      "pericope": "HAB.P.2.1-5",
+      "start": [2, 1],
+      "end": [2, 1]
+    },
+    {
+      "key": "HAB.2.2-3",
+      "pericope": "HAB.P.2.1-5",
+      "start": [2, 2],
+      "end": [2, 3]
+    },
+    {
+      "key": "HAB.2.4-5",
+      "pericope": "HAB.P.2.1-5",
+      "start": [2, 4],
+      "end": [2, 5]
+    },
+    {
+      "key": "HAB.2.6-8",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 6],
+      "end": [2, 8]
+    },
+    {
+      "key": "HAB.2.9-11",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 9],
+      "end": [2, 11]
+    },
+    {
+      "key": "HAB.2.12-14",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 12],
+      "end": [2, 14]
+    },
+    {
+      "key": "HAB.2.15-16",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 15],
+      "end": [2, 16]
+    },
+    {
+      "key": "HAB.2.17-17",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 17],
+      "end": [2, 17]
+    },
+    {
+      "key": "HAB.2.18-20",
+      "pericope": "HAB.P.2.6-20",
+      "start": [2, 18],
+      "end": [2, 20]
+    },
+    {
+      "key": "HAB.3.1-2",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "HAB.3.3-3",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 3],
+      "end": [3, 3]
+    },
+    {
+      "key": "HAB.3.4-5",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 4],
+      "end": [3, 5]
+    },
+    {
+      "key": "HAB.3.6-6",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 6],
+      "end": [3, 6]
+    },
+    {
+      "key": "HAB.3.7-8",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 7],
+      "end": [3, 8]
+    },
+    {
+      "key": "HAB.3.9-10",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 9],
+      "end": [3, 10]
+    },
+    {
+      "key": "HAB.3.11-12",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "HAB.3.13-13",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 13],
+      "end": [3, 13]
+    },
+    {
+      "key": "HAB.3.14-15",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 14],
+      "end": [3, 15]
+    },
+    {
+      "key": "HAB.3.16-16",
+      "pericope": "HAB.P.3.1-16",
+      "start": [3, 16],
+      "end": [3, 16]
+    },
+    {
+      "key": "HAB.3.17-17",
+      "pericope": "HAB.P.3.17-19",
+      "start": [3, 17],
+      "end": [3, 17]
+    },
+    {
+      "key": "HAB.3.18-19",
+      "pericope": "HAB.P.3.17-19",
+      "start": [3, 18],
+      "end": [3, 19]
+    }
+  ]
+}

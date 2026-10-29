@@ -1,0 +1,60 @@
+{
+  "book": "PHM",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "PHM.P.1.1-3", "start": [1, 1], "end": [1, 3] },
+    { "key": "PHM.P.1.4-7", "start": [1, 4], "end": [1, 7] },
+    { "key": "PHM.P.1.8-22", "start": [1, 8], "end": [1, 22] },
+    { "key": "PHM.P.1.23-25", "start": [1, 23], "end": [1, 25] }
+  ],
+  "segments": [
+    {
+      "key": "PHM.1.1-3",
+      "pericope": "PHM.P.1.1-3",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "PHM.1.4-7",
+      "pericope": "PHM.P.1.4-7",
+      "start": [1, 4],
+      "end": [1, 7]
+    },
+    {
+      "key": "PHM.1.8-9",
+      "pericope": "PHM.P.1.8-22",
+      "start": [1, 8],
+      "end": [1, 9]
+    },
+    {
+      "key": "PHM.1.10-13",
+      "pericope": "PHM.P.1.8-22",
+      "start": [1, 10],
+      "end": [1, 13]
+    },
+    {
+      "key": "PHM.1.14-16",
+      "pericope": "PHM.P.1.8-22",
+      "start": [1, 14],
+      "end": [1, 16]
+    },
+    {
+      "key": "PHM.1.17-20",
+      "pericope": "PHM.P.1.8-22",
+      "start": [1, 17],
+      "end": [1, 20]
+    },
+    {
+      "key": "PHM.1.21-22",
+      "pericope": "PHM.P.1.8-22",
+      "start": [1, 21],
+      "end": [1, 22]
+    },
+    {
+      "key": "PHM.1.23-25",
+      "pericope": "PHM.P.1.23-25",
+      "start": [1, 23],
+      "end": [1, 25]
+    }
+  ]
+}

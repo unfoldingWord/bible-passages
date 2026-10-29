@@ -103,9 +103,10 @@ against a real tag yet; no tag exists (observed 2026-10-28,
 `git ls-remote --tags origin` empty). Fixture tests cover a moved boundary, a
 dropped key, a changed span and a reused retired key.
 
-| Book | Date       | Result                                                                                                                                                                                                                                                                  |
-| ---- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TIT  | 2026-10-28 | 8 pericopes, 25 segments: the 24 UFW chunks with 1:4–5 split at 1:5, as `split-chunks.tsv` predicted. No new Break. Keys are provisional until decision 3 is settled. `dist/tc-mobile/TIT.json` passes tc-mobile's checker. Re-derived independently by a second model. |
+| Book   | Date       | Result                                                                                                                                                                                                                                                                                                                  |
+| ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TIT    | 2026-10-28 | 8 pericopes, 25 segments: the 24 UFW chunks with 1:4–5 split at 1:5, as `split-chunks.tsv` predicted. No new Break. Keys are provisional until decision 3 is settled. `dist/tc-mobile/TIT.json` passes tc-mobile's checker. Re-derived independently by a second model.                                                 |
+| All 66 | 2026-10-29 | 3,016 pericopes, 13,770 segments (13,608 chunks, 162 split at a pericope start), every key identical to an independent re-derivation from the raw pinned files. Titus unchanged byte for byte. Structure only: titles and glossaries are still Titus only. The segment count follows the chunk source, still open (#4). |
 
 ### All 66 books (#6, #7)
 
