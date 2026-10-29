@@ -1,0 +1,438 @@
+{
+  "language": "en",
+  "book": "HAG",
+  "links": "twl-en-hag",
+  "words": {
+    "repo": "unfoldingWord/en_tw",
+    "release": "v91",
+    "commit": "ff5b3852c27c3a0d01b109e482eb26047dcd20e2"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bless, blessed, blessing",
+      "source": "tw-en-kt-bless",
+      "refs": ["2:19"]
+    },
+    "kt/covenant": {
+      "en": "covenant",
+      "headword": "covenant",
+      "source": "tw-en-kt-covenant",
+      "refs": ["2:5"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "chosen, choose, chosen people, Chosen One, elect",
+      "source": "tw-en-kt-elect",
+      "refs": ["2:23"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "fear, afraid, frighten",
+      "source": "tw-en-kt-fear",
+      "refs": ["1:12", "2:5"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "glory, glorious, glorify",
+      "source": "tw-en-kt-glory",
+      "refs": ["2:3", "2:7", "2:9"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "God",
+      "source": "tw-en-kt-god",
+      "refs": ["1:12", "1:14"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "heaven, sky, heavens, heavenly",
+      "source": "tw-en-kt-heaven",
+      "refs": ["1:10", "2:6", "2:21"]
+    },
+    "kt/highpriest": {
+      "en": "high priest, chief priest",
+      "headword": "high priest, chief priest",
+      "source": "tw-en-kt-highpriest",
+      "refs": ["1:1", "1:12", "1:14", "2:2", "2:4"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "holy, holiness, unholy, sacred",
+      "source": "tw-en-kt-holy",
+      "refs": ["2:12"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "source": "tw-en-kt-holyspirit",
+      "refs": ["2:5"]
+    },
+    "kt/houseofgod": {
+      "en": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "headword": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "source": "tw-en-kt-houseofgod",
+      "refs": ["1:14"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "law, law of Moses, law of Yahweh, law of God",
+      "source": "tw-en-kt-lawofmoses",
+      "refs": ["2:11"]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "priest, priesthood",
+      "source": "tw-en-kt-priest",
+      "refs": ["2:11", "2:12", "2:13"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "prophet, prophecy, prophesy, seer, prophetess",
+      "source": "tw-en-kt-prophet",
+      "refs": ["1:1", "1:3", "1:12", "2:1", "2:10"]
+    },
+    "kt/remnant": {
+      "en": "remnant",
+      "headword": "remnant",
+      "source": "tw-en-kt-remnant",
+      "refs": ["1:12", "1:14", "2:2"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "spirit, wind, breath",
+      "source": "tw-en-kt-spirit",
+      "refs": ["1:14"]
+    },
+    "kt/stone": {
+      "en": "stone, stoning",
+      "headword": "stone, stoning",
+      "source": "tw-en-kt-stone",
+      "refs": ["2:15"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "temple, house, house of God",
+      "source": "tw-en-kt-temple",
+      "refs": ["1:2", "1:4", "1:8", "1:9", "2:3", "2:7", "2:9", "2:15", "2:18"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "source": "tw-en-kt-wordofgod",
+      "refs": ["1:1", "1:3", "2:1", "2:10", "2:20"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yahweh, Yah",
+      "source": "tw-en-kt-yahweh",
+      "refs": [
+        "1:2",
+        "1:5",
+        "1:7",
+        "1:8",
+        "1:9",
+        "1:12",
+        "1:13",
+        "1:14",
+        "2:4",
+        "2:6",
+        "2:7",
+        "2:8",
+        "2:9",
+        "2:11",
+        "2:14",
+        "2:15",
+        "2:17",
+        "2:18",
+        "2:23"
+      ]
+    },
+    "names/darius": {
+      "en": "Darius",
+      "headword": "Darius",
+      "source": "tw-en-names-darius",
+      "refs": ["1:1", "1:15", "2:10"]
+    },
+    "names/egypt": {
+      "en": "Egypt, Egyptian",
+      "headword": "Egypt, Egyptian",
+      "source": "tw-en-names-egypt",
+      "refs": ["2:5"]
+    },
+    "names/haggai": {
+      "en": "Haggai",
+      "headword": "Haggai",
+      "source": "tw-en-names-haggai",
+      "refs": [
+        "1:1",
+        "1:3",
+        "1:12",
+        "1:13",
+        "2:1",
+        "2:10",
+        "2:13",
+        "2:14",
+        "2:20"
+      ]
+    },
+    "names/joshua": {
+      "en": "Joshua",
+      "headword": "Joshua",
+      "source": "tw-en-names-joshua",
+      "refs": ["1:1", "1:12", "1:14", "2:2", "2:4"]
+    },
+    "names/kingdomofjudah": {
+      "en": "Judah, kingdom of Judah",
+      "headword": "Judah, kingdom of Judah",
+      "source": "tw-en-names-kingdomofjudah",
+      "refs": ["1:1", "1:14", "2:2", "2:21"]
+    },
+    "names/zerubbabel": {
+      "en": "Zerubbabel",
+      "headword": "Zerubbabel",
+      "source": "tw-en-names-zerubbabel",
+      "refs": ["1:1", "1:12", "1:14", "2:2", "2:4", "2:21", "2:23"]
+    },
+    "other/age-timeperiod": {
+      "en": "age, era, time",
+      "headword": "age, era, time",
+      "source": "tw-en-other-age-timeperiod",
+      "refs": ["1:2", "1:4"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "bear, bearer, bore, borne, produce, produced",
+      "source": "tw-en-other-bear",
+      "refs": ["1:11", "2:19"]
+    },
+    "other/bear-carryburden": {
+      "en": "bear, bears, bore, borne, bearer, bearing, carry",
+      "headword": "bear, bears, bore, borne, bearer, bearing, carry",
+      "source": "tw-en-other-bear-carryburden",
+      "refs": ["2:12"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "beast",
+      "source": "tw-en-other-beast",
+      "refs": ["1:11"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "day",
+      "source": "tw-en-other-biblicaltimeday",
+      "refs": ["1:1", "1:15", "2:15", "2:18", "2:19", "2:23"]
+    },
+    "other/biblicaltimemonth": {
+      "en": "month, monthly",
+      "headword": "month, monthly",
+      "source": "tw-en-other-biblicaltimemonth",
+      "refs": ["1:1", "1:15", "2:1", "2:20"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "year",
+      "source": "tw-en-other-biblicaltimeyear",
+      "refs": ["1:1", "1:15", "2:10"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "bread",
+      "source": "tw-en-other-bread",
+      "refs": ["2:12"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "chariot, charioteer",
+      "source": "tw-en-other-chariot",
+      "refs": ["2:22"]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "desolate, desolated, desolation, deserted, desolator",
+      "source": "tw-en-other-desolate",
+      "refs": ["1:4", "1:9", "1:11"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "destroy, destruction, annihilate",
+      "source": "tw-en-other-destroyer",
+      "refs": ["2:22"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "drunk, drunkard",
+      "source": "tw-en-other-drunk",
+      "refs": ["1:6"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "earth, land",
+      "source": "tw-en-other-earth",
+      "refs": ["1:10", "1:11", "2:6", "2:21"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "fig",
+      "source": "tw-en-other-fig",
+      "refs": ["2:19"]
+    },
+    "other/foundation": {
+      "en": "foundation, founder, founded",
+      "headword": "foundation, founder, founded",
+      "source": "tw-en-other-foundation",
+      "refs": ["2:18"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "gold, golden",
+      "source": "tw-en-other-gold",
+      "refs": ["2:8"]
+    },
+    "other/governor": {
+      "en": "govern, governor, proconsul, Tirshatha",
+      "headword": "govern, governor, proconsul, Tirshatha",
+      "source": "tw-en-other-governor",
+      "refs": ["1:1", "1:14", "2:2", "2:21"]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "grain, grainfields",
+      "source": "tw-en-other-grain",
+      "refs": ["1:11"]
+    },
+    "other/hail": {
+      "en": "hail, hailstone, hailstorm",
+      "headword": "hail, hailstone, hailstorm",
+      "source": "tw-en-other-hail",
+      "refs": ["2:17"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "horse, warhorse, horseback, stallion, steed, mare",
+      "source": "tw-en-other-horse",
+      "refs": ["2:22"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "house",
+      "source": "tw-en-other-house",
+      "refs": ["1:4", "1:9"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "king, kingship",
+      "source": "tw-en-other-king",
+      "refs": ["1:1", "1:15"]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "kingdom",
+      "source": "tw-en-other-kingdom",
+      "refs": ["2:22"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "labor, labors, labored, laboring, laborer, work, hard work",
+      "source": "tw-en-other-labor",
+      "refs": ["1:11", "1:14", "2:4", "2:14", "2:17"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "messenger",
+      "source": "tw-en-other-messenger",
+      "refs": ["1:13"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "nation",
+      "source": "tw-en-other-nation",
+      "refs": ["2:7", "2:14", "2:22"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "oil",
+      "source": "tw-en-other-oil",
+      "refs": ["1:11"]
+    },
+    "other/olive": {
+      "en": "olive",
+      "headword": "olive",
+      "source": "tw-en-other-olive",
+      "refs": ["2:12", "2:19"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "peace, peaceful, peacemaker",
+      "source": "tw-en-other-peace",
+      "refs": ["2:9"]
+    },
+    "other/pomegranate": {
+      "en": "pomegranate",
+      "headword": "pomegranate",
+      "source": "tw-en-other-pomegranate",
+      "refs": ["2:19"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "seed",
+      "source": "tw-en-other-seed",
+      "refs": ["2:19"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "servant, serve, maidservant, young man, young women",
+      "source": "tw-en-other-servant",
+      "refs": ["2:23"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "silver",
+      "source": "tw-en-other-silver",
+      "refs": ["2:8"]
+    },
+    "other/storehouse": {
+      "en": "storehouse",
+      "headword": "storehouse",
+      "source": "tw-en-other-storehouse",
+      "refs": ["2:19"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "sword, swordsmen",
+      "source": "tw-en-other-sword",
+      "refs": ["2:22"]
+    },
+    "other/throne": {
+      "en": "throne, enthroned",
+      "headword": "throne, enthroned",
+      "source": "tw-en-other-throne",
+      "refs": ["2:22"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "tremble, shake, shaken, quake",
+      "source": "tw-en-other-tremble",
+      "refs": ["2:6", "2:7", "2:21"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "vine",
+      "source": "tw-en-other-vine",
+      "refs": ["2:19"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "wine, wineskin, new wine",
+      "source": "tw-en-other-wine",
+      "refs": ["1:11", "2:12"]
+    }
+  },
+  "gaps": {}
+}

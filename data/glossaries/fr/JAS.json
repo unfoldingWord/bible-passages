@@ -1,0 +1,885 @@
+{
+  "language": "fr",
+  "book": "JAS",
+  "links": "twl-en-jas",
+  "words": {
+    "repo": "Xenizo/fr_tw",
+    "release": "v2.0",
+    "commit": "06db7f855a0deb302a47a0e4d1b22312833b2ca1"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (fr), Xenizo/fr_tw v2.0, CC BY-SA 4.0. Original work available at https://git.door43.org/Xenizo/fr_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/adultery": {
+      "en": "adultery, adulterous, adulterer, adulteress",
+      "headword": "l’adultère, adultère",
+      "source": "tw-fr-kt-adultery",
+      "refs": ["2:11", "4:4"]
+    },
+    "kt/altar": {
+      "en": "altar",
+      "headword": "Autel",
+      "source": "tw-fr-kt-altar",
+      "refs": ["2:21"]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "oindre, onction",
+      "source": "tw-fr-kt-anoint",
+      "refs": ["5:14"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "nommer, établir, désigner",
+      "source": "tw-fr-kt-appoint",
+      "refs": ["3:6", "4:4"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "croire, croyance, croyant, non-croyant, incrédulité",
+      "source": "tw-fr-kt-believe",
+      "refs": ["2:19", "2:23"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "bien-aimé",
+      "source": "tw-fr-kt-beloved",
+      "refs": ["1:16", "1:19", "2:5"]
+    },
+    "kt/blasphemy": {
+      "en": "blasphemy, blaspheme, blasphemous",
+      "headword": "blasphème, blasphémer",
+      "source": "tw-fr-kt-blasphemy",
+      "refs": ["2:7"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bénir, béni, bénédiction",
+      "source": "tw-fr-kt-bless",
+      "refs": ["1:12", "1:25", "3:9", "3:10", "5:11"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "Christ, Messie, l'Oint",
+      "source": "tw-fr-kt-christ",
+      "refs": ["1:1", "2:1"]
+    },
+    "kt/church": {
+      "en": "church, Church",
+      "headword": "église, Église",
+      "source": "tw-fr-kt-church",
+      "refs": ["5:14"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "compassion, compatissant",
+      "source": "tw-fr-kt-compassion",
+      "refs": ["5:11"]
+    },
+    "kt/condemn": {
+      "en": "condemn, condemned, condemnation",
+      "headword": "condamner, condamnation",
+      "source": "tw-fr-kt-condemn",
+      "refs": ["5:6"]
+    },
+    "kt/confess": {
+      "en": "confess, confession",
+      "headword": "Confesser, confession, avouer, aveu",
+      "source": "tw-fr-kt-confess",
+      "refs": ["5:16"]
+    },
+    "kt/curse": {
+      "en": "curse, cursed, cursing",
+      "headword": "maudire, malédiction, maudit",
+      "source": "tw-fr-kt-curse",
+      "refs": ["3:9", "3:10"]
+    },
+    "kt/demon": {
+      "en": "demon, evil spirit, unclean spirit",
+      "headword": "démon, mauvais esprit, esprit impur, démoniaque",
+      "source": "tw-fr-kt-demon",
+      "refs": ["2:19", "3:15"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "élu, les élus, choisi, le peuple choisi, choisir",
+      "source": "tw-fr-kt-elect",
+      "refs": ["2:5"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "le mal, mauvais, méchant, méchanceté, malveillance",
+      "source": "tw-fr-kt-evil",
+      "refs": ["1:13", "1:21", "2:4", "3:8", "3:16", "4:16"]
+    },
+    "kt/exalt": {
+      "en": "exalt, exalted, exaltation",
+      "headword": "exalt, exalté, exaltation, élever",
+      "source": "tw-fr-kt-exalt",
+      "refs": ["4:10"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "la foi, avoir foi, croyance",
+      "source": "tw-fr-kt-faith",
+      "refs": [
+        "1:3",
+        "1:6",
+        "2:1",
+        "2:5",
+        "2:14",
+        "2:17",
+        "2:18",
+        "2:20",
+        "2:22",
+        "2:24",
+        "2:26",
+        "5:15"
+      ]
+    },
+    "kt/favor": {
+      "en": "favor, favorable, favoritism",
+      "headword": "Faveur, favorable, le favoritisme",
+      "source": "tw-fr-kt-favor",
+      "refs": ["2:9"]
+    },
+    "kt/foolish": {
+      "en": "fool, foolish, folly",
+      "headword": "fou, folie",
+      "source": "tw-fr-kt-foolish",
+      "refs": ["2:20"]
+    },
+    "kt/forgive": {
+      "en": "forgive, forgiven, forgiveness, pardon, pardoned",
+      "headword": "pardonner, le pardon",
+      "source": "tw-fr-kt-forgive",
+      "refs": ["5:15"]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "réaliser, accomplir, remplir",
+      "source": "tw-fr-kt-fulfill",
+      "refs": ["2:23"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "gloire, glorieux, glorifier",
+      "source": "tw-fr-kt-glory",
+      "refs": ["2:1"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Dieu",
+      "source": "tw-fr-kt-god",
+      "refs": [
+        "1:1",
+        "1:5",
+        "1:13",
+        "1:20",
+        "2:5",
+        "2:19",
+        "2:23",
+        "3:9",
+        "4:4",
+        "4:6",
+        "4:7",
+        "4:8"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "Dieu le Père, Père céleste, Père",
+      "source": "tw-fr-kt-godthefather",
+      "refs": ["1:17", "1:27", "3:9"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "bon, bien, la bonté, le bien",
+      "source": "tw-fr-kt-good",
+      "refs": ["1:17", "2:7", "3:13", "3:17", "4:17"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "grâce, gracieux",
+      "source": "tw-fr-kt-grace",
+      "refs": ["4:6"]
+    },
+    "kt/guilt": {
+      "en": "guilt, guilty",
+      "headword": "culpabilité, coupable",
+      "source": "tw-fr-kt-guilt",
+      "refs": ["2:10"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "ciel, cieux, céleste",
+      "source": "tw-fr-kt-heaven",
+      "refs": ["5:12", "5:18"]
+    },
+    "kt/hell": {
+      "en": "hell, lake of fire",
+      "headword": "enfer, lac enflammé",
+      "source": "tw-fr-kt-hell",
+      "refs": ["3:6"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "Saint-Esprit, Esprit saint, Esprit de Dieu, Esprit du Seigneur",
+      "source": "tw-fr-kt-holyspirit",
+      "refs": ["4:5"]
+    },
+    "kt/humble": {
+      "en": "humble, humbled, humility",
+      "headword": "humble, humilité, humilié",
+      "source": "tw-fr-kt-humble",
+      "refs": ["4:6", "4:10"]
+    },
+    "kt/jealous": {
+      "en": "jealous, jealousy",
+      "headword": "jaloux, jalousie",
+      "source": "tw-fr-kt-jealous",
+      "refs": ["3:14", "3:16"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "Jésus, Jésus-Christ, le Christ",
+      "source": "tw-fr-kt-jesus",
+      "refs": ["1:1", "2:1"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "juger, jugement",
+      "source": "tw-fr-kt-judge",
+      "refs": ["2:12", "2:13", "3:1", "4:11", "4:12", "5:9", "5:12"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "juste, justice, injuste, injustice, justifier, justification",
+      "source": "tw-fr-kt-justice",
+      "refs": ["2:21", "2:24", "2:25", "3:6"]
+    },
+    "kt/kingdomofgod": {
+      "en": "kingdom of God, kingdom of heaven",
+      "headword": "royaume de Dieu, royaume des cieux",
+      "source": "tw-fr-kt-kingdomofgod",
+      "refs": ["2:5"]
+    },
+    "kt/lastday": {
+      "en": "last day, last days, latter days",
+      "headword": "derniers jours,",
+      "source": "tw-fr-kt-lastday",
+      "refs": ["5:3"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "loi, loi de Moïse, loi de Dieu, loi de l'Éternel",
+      "source": "tw-fr-kt-lawofmoses",
+      "refs": ["2:9", "2:10", "2:11", "4:11"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "Seigneur, Maître",
+      "source": "tw-fr-kt-lord",
+      "refs": [
+        "1:1",
+        "1:7",
+        "2:1",
+        "3:9",
+        "4:10",
+        "4:15",
+        "5:7",
+        "5:8",
+        "5:10",
+        "5:11",
+        "5:14",
+        "5:15"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amour, aimer",
+      "source": "tw-fr-kt-love",
+      "refs": ["1:12", "2:5", "2:8"]
+    },
+    "kt/mercy": {
+      "en": "mercy, merciful",
+      "headword": "miséricorde, miséricordieux",
+      "source": "tw-fr-kt-mercy",
+      "refs": ["2:13", "3:17", "5:11"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "périssent",
+      "source": "tw-fr-kt-perish",
+      "refs": ["1:11"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "prier, prière",
+      "source": "tw-fr-kt-pray",
+      "refs": ["5:13", "5:14", "5:15", "5:16", "5:17", "5:18"]
+    },
+    "kt/promise": {
+      "en": "promise, promised",
+      "headword": "promesse, promettre, promis",
+      "source": "tw-fr-kt-promise",
+      "refs": ["1:12", "2:5"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "prophète, prophétie, prophétiser, voyant, prophétesse",
+      "source": "tw-fr-kt-prophet",
+      "refs": ["5:10"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "purifier, pur, purification",
+      "source": "tw-fr-kt-purify",
+      "refs": ["1:27", "3:17", "4:8"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "juste, justice, injuste, injustice, droit, droiture",
+      "source": "tw-fr-kt-righteous",
+      "refs": ["1:20", "2:23", "3:18", "5:6", "5:16"]
+    },
+    "kt/satan": {
+      "en": "Satan, devil, evil one",
+      "headword": "Satan, diable, malin",
+      "source": "tw-fr-kt-satan",
+      "refs": ["4:7"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "sauver, sauvé, en sécurité, salut",
+      "source": "tw-fr-kt-save",
+      "refs": ["1:21", "2:14", "4:12", "5:20"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "péché, pécheur, pécher",
+      "source": "tw-fr-kt-sin",
+      "refs": ["1:15", "2:9", "4:8", "4:17", "5:15", "5:16", "5:20"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "âme",
+      "source": "tw-fr-kt-soul",
+      "refs": ["1:21", "5:20"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "esprit, spirituel",
+      "source": "tw-fr-kt-spirit",
+      "refs": ["2:26"]
+    },
+    "kt/tempt": {
+      "en": "tempt, temptation",
+      "headword": "tenter, tentation, inciter",
+      "source": "tw-fr-kt-tempt",
+      "refs": ["1:13", "1:14"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "tester, éprouver, épreuves",
+      "source": "tw-fr-kt-test",
+      "refs": ["1:3"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "témoignage, témoigner, témoin",
+      "source": "tw-fr-kt-testimony",
+      "refs": ["5:3"]
+    },
+    "kt/transgression": {
+      "en": "transgress, transgression",
+      "headword": "transgresser, transgression",
+      "source": "tw-fr-kt-transgression",
+      "refs": ["2:9", "2:11"]
+    },
+    "kt/wise": {
+      "en": "wise, wisdom",
+      "headword": "sage, sagesse",
+      "source": "tw-fr-kt-wise",
+      "refs": ["1:5", "3:13", "3:15", "3:17"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "la parole de Dieu, parole de Yahvé, parole du Seigneur, parole de vérité, les Écritures",
+      "source": "tw-fr-kt-wordofgod",
+      "refs": ["1:21", "1:22", "1:23", "2:8", "2:23", "4:5"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "monde, mondain",
+      "source": "tw-fr-kt-world",
+      "refs": ["1:27", "2:5", "3:6", "4:4"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "Colère, fureur",
+      "source": "tw-fr-kt-wrath",
+      "refs": ["1:19", "1:20"]
+    },
+    "kt/yahwehofhosts": {
+      "en": "Yahweh of hosts, Yahweh of armies, God of armies, God of hosts, host of heaven, host of the heavens, Lord of hosts",
+      "headword": "Yahweh des armées, Dieu des armées, armée du ciel, armée des cieux, Seigneur des armées.",
+      "source": "tw-fr-kt-yahwehofhosts",
+      "refs": ["5:4"]
+    },
+    "names/abraham": {
+      "en": "Abraham, Abram",
+      "headword": "Abraham, Abram",
+      "source": "tw-fr-names-abraham",
+      "refs": ["2:21", "2:23"]
+    },
+    "names/elijah": {
+      "en": "Elijah",
+      "headword": "Élie",
+      "source": "tw-fr-names-elijah",
+      "refs": ["5:17"]
+    },
+    "names/isaac": {
+      "en": "Isaac",
+      "headword": "Isaac",
+      "source": "tw-fr-names-isaac",
+      "refs": ["2:21"]
+    },
+    "names/jamesbrotherofjesus": {
+      "en": "James (brother of Jesus)",
+      "headword": "Jacques (frère de Jésus)",
+      "source": "tw-fr-names-jamesbrotherofjesus",
+      "refs": ["1:1"]
+    },
+    "names/job": {
+      "en": "Job",
+      "headword": "Job",
+      "source": "tw-fr-names-job",
+      "refs": ["5:11"]
+    },
+    "names/rahab": {
+      "en": "Rahab",
+      "headword": "Rahab",
+      "source": "tw-fr-names-rahab",
+      "refs": ["2:25"]
+    },
+    "other/12tribesofisrael": {
+      "en": "twelve tribes of Israel, twelve tribes",
+      "headword": "douze tribus d'Israël, douze tribus",
+      "source": "tw-fr-other-12tribesofisrael",
+      "refs": ["1:1"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "adversaire, ennemi",
+      "source": "tw-fr-other-adversary",
+      "refs": ["4:4"]
+    },
+    "other/arrogant": {
+      "en": "arrogant, presumptuous",
+      "headword": "arrogant",
+      "source": "tw-fr-other-arrogant",
+      "refs": ["4:16"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "assemblage, assemblee",
+      "source": "tw-fr-other-assembly",
+      "refs": ["2:2"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "bête",
+      "source": "tw-fr-other-beast",
+      "refs": ["3:7"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "temps biblique",
+      "source": "tw-fr-other-biblicaltimeday",
+      "refs": ["5:3", "5:5"]
+    },
+    "other/biblicaltimemonth": {
+      "en": "month, monthly",
+      "headword": "temps biblique, mois",
+      "source": "tw-fr-other-biblicaltimemonth",
+      "refs": ["5:17"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "temps biblique, annéé",
+      "source": "tw-fr-other-biblicaltimeyear",
+      "refs": ["4:13"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "creer ,creation ,createur",
+      "source": "tw-fr-other-creation",
+      "refs": ["1:18"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "couronne ,couronner",
+      "source": "tw-fr-other-crown",
+      "refs": ["1:12"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "crier , pleurer",
+      "source": "tw-fr-other-cry",
+      "refs": ["5:4"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "tromper, tromperie, trompeur, mentir, mensonge",
+      "source": "tw-fr-other-deceive",
+      "refs": ["1:22", "1:26"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "salir se salir",
+      "source": "tw-fr-other-defile",
+      "refs": ["3:6"]
+    },
+    "other/disperse": {
+      "en": "disperse, dispersion, scatter, distributed",
+      "headword": "disperser ,dispersion",
+      "source": "tw-fr-other-disperse",
+      "refs": ["1:1"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "terre, sol, terres, terrestre",
+      "source": "tw-fr-other-earth",
+      "refs": ["3:15", "5:5", "5:7", "5:12", "5:17", "5:18"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "Aîné",
+      "source": "tw-fr-other-elder",
+      "refs": ["5:14"]
+    },
+    "other/endure": {
+      "en": "endure, endurance",
+      "headword": "subir ,endurance",
+      "source": "tw-fr-other-endure",
+      "refs": ["1:3", "1:4", "1:12", "5:11"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "envie, envier, convoitise, convoiter",
+      "source": "tw-fr-other-envy",
+      "refs": ["4:2", "4:5"]
+    },
+    "other/firstfruit": {
+      "en": "firstfruit, firstfruits",
+      "headword": "premiers fruits",
+      "source": "tw-fr-other-firstfruit",
+      "refs": ["1:18"]
+    },
+    "other/footstool": {
+      "en": "footstool",
+      "headword": "escabeau",
+      "source": "tw-fr-other-footstool",
+      "refs": ["2:3"]
+    },
+    "other/fountain": {
+      "en": "fountain, source, spring",
+      "headword": "fontaine, source",
+      "source": "tw-fr-other-fountain",
+      "refs": ["3:11"]
+    },
+    "other/free": {
+      "en": "free, freed, freedom, freeman, freewill, liberty",
+      "headword": "libre, la liberté, la liberté",
+      "source": "tw-fr-other-free",
+      "refs": ["1:25", "2:12"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "fruits, fructueux, sans fruits",
+      "source": "tw-fr-other-fruit",
+      "refs": ["3:17", "3:18", "5:7", "5:18"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "or",
+      "source": "tw-fr-other-gold",
+      "refs": ["2:2", "5:3"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "récolte",
+      "source": "tw-fr-other-harvest",
+      "refs": ["5:4"]
+    },
+    "other/heir": {
+      "en": "heir",
+      "headword": "héritier, cohéritier, héritage, hériter",
+      "source": "tw-fr-other-heir",
+      "refs": ["2:5"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "Cheval",
+      "source": "tw-fr-other-horse",
+      "refs": ["3:3"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "joie, joyeux, se réjouir",
+      "source": "tw-fr-other-joy",
+      "refs": ["1:2", "4:9"]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "juge",
+      "source": "tw-fr-other-judgeposition",
+      "refs": ["2:4", "4:11", "4:12", "5:9"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "connaître, connaissance",
+      "source": "tw-fr-other-know",
+      "refs": ["1:3", "1:19", "2:20", "3:1", "4:4", "4:14", "4:17", "5:20"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "travail, ouvrier, labeur, travailler",
+      "source": "tw-fr-other-labor",
+      "refs": ["1:20", "5:4"]
+    },
+    "other/law": {
+      "en": "law, principle",
+      "headword": "loi, principe",
+      "source": "tw-fr-other-law",
+      "refs": ["1:25", "2:8", "2:12"]
+    },
+    "other/lowly": {
+      "en": "lowly, lowliness",
+      "headword": "humble, humilité, humilier",
+      "source": "tw-fr-other-lowly",
+      "refs": ["1:9"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "luxure, convoitise, passion, désir",
+      "source": "tw-fr-other-lust",
+      "refs": ["1:14", "1:15", "4:1", "4:2"]
+    },
+    "other/meek": {
+      "en": "meek, meekness",
+      "headword": "doux, douceur",
+      "source": "tw-fr-other-meek",
+      "refs": ["1:10", "3:13"]
+    },
+    "other/member": {
+      "en": "member, body part",
+      "headword": "membre",
+      "source": "tw-fr-other-member",
+      "refs": ["3:5", "3:6", "4:1"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "messager, message",
+      "source": "tw-fr-other-messenger",
+      "refs": ["2:25"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "esprit, conscient de",
+      "source": "tw-fr-other-mind",
+      "refs": ["1:8", "4:8"]
+    },
+    "other/mourn": {
+      "en": "mourn, mourner, weeping",
+      "headword": "deuil, être en deuil",
+      "source": "tw-fr-other-mourn",
+      "refs": ["4:9"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "voisin",
+      "source": "tw-fr-other-neighbor",
+      "refs": ["2:8", "4:12"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "serment, jurer, jurer par\"",
+      "source": "tw-fr-other-oath",
+      "refs": ["5:12"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "Huile",
+      "source": "tw-fr-other-oil",
+      "refs": ["5:14"]
+    },
+    "other/olive": {
+      "en": "olive",
+      "headword": "olive,",
+      "source": "tw-fr-other-olive",
+      "refs": ["3:12"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "paix, paisible, conciliateur",
+      "source": "tw-fr-other-peace",
+      "refs": ["2:16", "3:17", "3:18"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "parfait, complet, perfection",
+      "source": "tw-fr-other-perfect",
+      "refs": ["1:4", "1:17", "1:25", "2:22", "3:2"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "profit, profitable, désavantageux",
+      "source": "tw-fr-other-profit",
+      "refs": ["2:14", "2:16", "4:13"]
+    },
+    "other/prostitute": {
+      "en": "prostitute, harlot, whored",
+      "headword": "prostitué, prostituée",
+      "source": "tw-fr-other-prostitute",
+      "refs": ["2:25"]
+    },
+    "other/proud": {
+      "en": "proud, pride, prideful, boast, boastful, boasting",
+      "headword": "fier, fierté, orgueilleux",
+      "source": "tw-fr-other-proud",
+      "refs": ["4:6"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "recevoir, accueillir, accepter",
+      "source": "tw-fr-other-receive",
+      "refs": ["1:7", "1:12", "1:21", "2:25", "3:1", "4:3", "5:7"]
+    },
+    "other/royal": {
+      "en": "royal, royalty, king’s, queen’s",
+      "headword": "Royal",
+      "source": "tw-fr-other-royal",
+      "refs": ["2:8"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "serviteur, service, servir, esclave, esclavage",
+      "source": "tw-fr-other-servant",
+      "refs": ["1:1"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "argent",
+      "source": "tw-fr-other-silver",
+      "refs": ["5:3"]
+    },
+    "other/slaughter": {
+      "en": "slaughter, slaughtered",
+      "headword": "abattage",
+      "source": "tw-fr-other-slaughter",
+      "refs": ["5:5"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "Semer, semeur",
+      "source": "tw-fr-other-sow",
+      "refs": ["3:18"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "trébucher",
+      "source": "tw-fr-other-stumble",
+      "refs": ["2:10", "3:2"]
+    },
+    "other/submit": {
+      "en": "submit, submitted, submitting, submission, in submission",
+      "headword": "présenter, dans la soumission",
+      "source": "tw-fr-other-submit",
+      "refs": ["4:7"]
+    },
+    "other/suffer": {
+      "en": "suffer, suffering",
+      "headword": "souffrir, souffrance",
+      "source": "tw-fr-other-suffer",
+      "refs": ["5:13"]
+    },
+    "other/teacher": {
+      "en": "teacher, Teacher",
+      "headword": "professeur, enseignant",
+      "source": "tw-fr-other-teacher",
+      "refs": ["3:1"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "langue",
+      "source": "tw-fr-other-tongue",
+      "refs": ["1:26", "3:5", "3:6", "3:8"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "trembler",
+      "source": "tw-fr-other-tremble",
+      "refs": ["2:19"]
+    },
+    "other/trial": {
+      "en": "trial, proving",
+      "headword": "procès",
+      "source": "tw-fr-other-trial",
+      "refs": ["1:2", "1:12"]
+    },
+    "other/tribe": {
+      "en": "tribe, tribal, tribesmen",
+      "headword": "tribu, membre d'une tribu",
+      "source": "tw-fr-other-tribe",
+      "refs": ["1:1"]
+    },
+    "other/tribulation": {
+      "en": "tribulation, distress, distresses, trouble",
+      "headword": "Tribulation",
+      "source": "tw-fr-other-tribulation",
+      "refs": ["1:27"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "comprendre, compréhension",
+      "source": "tw-fr-other-understand",
+      "refs": ["3:13"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "Vain, vanité",
+      "source": "tw-fr-other-vain",
+      "refs": ["1:26"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "vigne, vignes",
+      "source": "tw-fr-other-vine",
+      "refs": ["3:12"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "guerrier, soldat",
+      "source": "tw-fr-other-warrior",
+      "refs": ["4:1"]
+    },
+    "other/wrong": {
+      "en": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "headword": "faux, Données Wfaux, mauvais, offensé, à tort, à tort, malfaiteur, faute, maltraitance, maltraité, blessé, mal, blesser, blessant",
+      "source": "tw-fr-other-wrong",
+      "refs": ["4:3"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "other/fig": "no-article",
+    "other/partial": "no-article",
+    "other/patient": "no-article"
+  }
+}
