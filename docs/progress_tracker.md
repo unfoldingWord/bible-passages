@@ -4,6 +4,24 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-29 (evening) — Open Bible Stories questions to the requirements owner
+
+### Shipped
+
+| What                                                                                                                                                                                                                           | Evidence     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| Open Bible Stories questions O1–O5 on the site's Decisions tab, each with a proposed option; site republished (v18)                                                                                                            | #97          |
+| Counted for those questions: en_obs v9 has 50 stories and 598 frames (7–18 per story), one image per frame (artwork © Sweet Publishing, CC BY-SA 3.0); the Door43 catalog lists OBS in all 9 v0.1 languages                    | #97 body     |
+| Plan and questions posted to the requirements owner on Zulip; two clause-level datasets from the bible-story-builder author recorded on #78 as a watch item for O3 (licences CC BY-SA 4.0 and CC BY 4.0; contents not checked) | #78 comments |
+
+`main` at `4260d91`: `npm run verify` 9,702 passed, 2 todo (run on the #97 branch).
+
+### Open
+
+- O1–O5 answers from the requirements owner (#78); the #44 questions are not yet on the Decisions tab.
+
+---
+
 ## 2026-10-29 (day) — 66 books of structure, translation measured on Titus, release path ready
 
 Four waves of 3–5 lanes, each a background agent in its own worktree; every PR reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 34 PRs merged, #29 to #95.
