@@ -4,6 +4,52 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-29 (day) — 66 books of structure, translation measured on Titus, release path ready
+
+Four waves of 3–5 lanes, each a background agent in its own worktree; every PR reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 34 PRs merged, #29 to #95.
+
+### Shipped
+
+| What                                                                                                                                                                                                 | Evidence                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Structure for all 66 books: 3,016 pericopes, 13,770 segments, re-derived key by key by a second script; Titus byte-identical                                                                         | #40 (code + 130 pins), #37; `npm run verify` on main |
+| Glossaries for the 59 books with a released TWL; the 7 without (NUM, 1CH, 2CH, ECC, ISA, JER, EZK) wait for a release (#57); CI caches downloads by `sources.json` hash                              | #52, #62                                             |
+| Chinese (zh-Hans) key terms for Titus: 93 terms drafted by one model, checked by another, `ai-checked`; FIA key terms pinned as reference                                                            | #51, #76                                             |
+| Translation runner, its gates, and the cross-model check; full-stop and quotation-mark gates in 9 languages                                                                                          | #36, #48, #74, #81                                   |
+| Titus translated by both models (297 titles each): 10 checker disagreements for Gemini 3.8 Flash, 5 for Sonnet 5.5; run ledgers committed, translated texts withheld until the blind review ends     | #58, #77                                             |
+| Model choice rule and its details recorded before any review results                                                                                                                                 | ADR 0002 via #47, #79, #93, #95                      |
+| English title tables for tC Mobile (`dist/tc-mobile/titles/en/`), attached to releases as `titles.<lang>.<BOOK>.json`; dry-run release passed on GitHub                                              | #60, #87, #35 (run 40871047613)                      |
+| Philippians English segment titles drafted (Sonnet) and checked (Gemini): 23 agree, 14 disagree (11 over 60 characters)                                                                              | #67                                                  |
+| Psalms and Song of Songs book names from ULT v91                                                                                                                                                     | #80                                                  |
+| Metadata sized for decision 11: figures of speech from Translation Notes v91 (20 kinds; names missing in pt-BR, sw, zh-Hans), literary form, parallels and book-level difficulty already in the data | #75                                                  |
+| Decision 11 and T1 recorded; ADR 0001 move-back record; Servant.Bible entry scoped (already listed upstream as planned)                                                                              | #45, #33, #71                                        |
+| Bench follow-ups closed: #22, #23, #38, #39, #41, #42, #43, #46, #50, #54, #55, #61, #66, #85, #89, #94                                                                                              | merged PRs above                                     |
+
+`main` at `9bfc685`: `npm run verify` 9,702 passed, 2 todo. Model spend today about $1.66 on OpenRouter, summed from the lanes' ledgers: Titus runs $1.37, smoke tests about $0.02, zh-Hans terms $0.17, Philippians $0.08, T1 re-translation $0.02.
+
+### Decisions (the maintainer, 29 Oct)
+
+- Models `google/gemini-3.8-flash` and `anthropic/claude-sonnet-5.5`, each checked by the other; quality first, cost only within 0.10.
+- A sample human review, blind, before choosing the model (#64), on a review page with per-reviewer answers.
+- Release asset names for title tables; psalm superscription terms; Psalms and Song of Songs names; the two new gates.
+- OBS template dataset goes in this repo, after v0.1 (#78).
+
+### Open
+
+- Reviewers for the blind Titus review (#64); a Philippians reviewer (#32); a Chinese reader (#31) and where a person's review of a key term is recorded (#53).
+- Chunk source (#4, content team); `en_twl` release for 7 books (#57); Arabic headwords (#21).
+- The review-screen PR #49 is parked as a draft after the 5-round cap.
+- Servant.Bible description update upstream; five questions in `docs/scoping/servant-bible-entry.md`.
+- The requirements owner's questions on #44 (book-level difficulty; literary form and parallels in v0.1).
+
+### Next
+
+- Collect the blind review answers and decide the translation model (ADR).
+- Review Philippians and record minutes per title (#32), then scale English titles.
+- Release v0.1.0 when its gates pass (#13).
+
+---
+
 ## 2026-10-29 (late) — the requirements owner's decisions recorded; key check merged
 
 ### Shipped
