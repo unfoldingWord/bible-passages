@@ -144,6 +144,9 @@ describe("cross-model check: pieces", () => {
       { ...disagree, why: "" },
       { ...disagree, suggestion: " Evitar" },
       { verdict: "disagree", criteria: ["terms"], why: "x" },
+      // An agreement that names criteria or a suggestion contradicts itself.
+      { verdict: "agree", criteria: ["accurate"] },
+      { verdict: "agree", suggestion: "Evitar las divisiones" },
     ];
     for (const v of bad)
       expect(readVerdict(v, "ai:x/y"), JSON.stringify(v)).toBeNull();
@@ -278,6 +281,60 @@ describe("cross-model check: one language", () => {
         complete,
       })
     ).rejects.toThrow("glossary is for fr");
+    expect(complete).not.toHaveBeenCalled();
+  });
+
+  it("records, not throws, a billed reply from a model whose family cannot be told", async () => {
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        {
+          text: JSON.stringify({ [A]: { verdict: "agree" } }),
+          cost: 0.25,
+          model: "claude-sonnet-5.5",
+        },
+      ]),
+    });
+    expect(r.error).toContain("cannot tell the model family");
+    expect(r.call?.cost).toBe(0.25);
+    expect(r.titles[A]?.status).toBe("unreviewed");
+    expect(r.titles[A]?.check).toBeUndefined();
+  });
+
+  it("drops a check already on the input, so a re-check never keeps a stale verdict", async () => {
+    const stale = {
+      ...translation(A, "Evitar las divisiones"),
+      status: "ai-checked",
+      check: { by: "ai:x/y", verdict: "agree" },
+    } as unknown as Translation;
+    const r = await checkLanguage({
+      ...base,
+      file: fileOf("es-419", { [A]: stale }),
+      complete: scripted([{ text: "{}", cost: 0.001 }]),
+    });
+    expect(r.missing).toEqual([A]);
+    expect(r.titles[A]).toEqual({
+      ...translation(A, "Evitar las divisiones"),
+      status: "unreviewed",
+    });
+  });
+
+  it("refuses a language that is not a v0.1 tag, so it can never name a path", async () => {
+    const complete = vi.fn(scripted([]));
+    for (const language of ["../../data/drafts/en", "toString", "en"])
+      await expect(
+        checkLanguage({
+          ...base,
+          glossary: null,
+          file: fileOf(language, {}),
+          complete,
+        }),
+        language
+      ).rejects.toThrow("not a v0.1 language");
     expect(complete).not.toHaveBeenCalled();
   });
 
@@ -453,6 +510,41 @@ describe("checker command line", () => {
     ]);
     expect(r.status).toBe(1);
     expect(r.stderr).toContain("fr glossary has changed");
+  });
+
+  it("refuses a run file whose language or book is not its directory's, writing nothing", () => {
+    const dir = fakeRun();
+    writeFileSync(
+      join(dir, "fr", "TIT.json"),
+      JSON.stringify(
+        fileOf("../../data/drafts/en", {
+          [A]: translation(A, "Éviter les divisions"),
+        })
+      )
+    );
+    const before = read("data/drafts/en/TIT.json");
+    const out = join(mkdtempSync(join(tmpdir(), "check-out-")), "new");
+    const r = run(["--run", dir, "--model", MODELS.claude, "--out", out]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("fr/TIT.json is for ../../data/drafts/en TIT");
+    expect(read("data/drafts/en/TIT.json")).toBe(before);
+  });
+
+  it("refuses a ledger with an unknown book or language, or missing fields, with a clear message", () => {
+    const cases: [Record<string, unknown>, string][] = [
+      [{ book: "../TIT" }, "not a USFM book code"],
+      [{ languages: ["fr", "../x"] }, "not v0.1 language tags"],
+      [{ languages: ["fr", "toString"] }, "not v0.1 language tags"],
+      [{ glossaries: undefined }, "no glossary hashes"],
+      [{ english: undefined }, "no English hash"],
+      [{ model: "gemini" }, "cannot tell the model family"],
+    ];
+    for (const [ledger, message] of cases) {
+      const r = run(["--run", fakeRun(ledger), "--model", MODELS.claude]);
+      expect(r.status, message).toBe(1);
+      expect(r.stderr, message).toContain(`check: `);
+      expect(r.stderr, message).toContain(message);
+    }
   });
 
   it("refuses an --out that exists or is inside data/ or dist/, before any call", () => {

@@ -9,6 +9,7 @@
 // gate passed; anything else stays `unreviewed` and goes to a person first.
 // Nothing here goes above `ai-checked` (AGENTS.md, "Label AI output").
 import {
+  LANGUAGES,
   parseReply,
   runLanguages,
   span,
@@ -87,6 +88,20 @@ export function checkMessage(
   return JSON.stringify(items, null, 2);
 }
 
+/**
+ * The translation's own fields only, so a `check` or `review` already on the
+ * input (a re-check of checker output) never survives beside a new status.
+ */
+function translationOf(t: Translation): Translation {
+  return {
+    text: t.text,
+    source: t.source,
+    status: t.status,
+    from: t.from,
+    ...(t.gates ? { gates: t.gates } : {}),
+  };
+}
+
 const text = (v: unknown): v is string =>
   typeof v === "string" && v.trim() !== "" && v === v.trim();
 
@@ -94,7 +109,12 @@ const text = (v: unknown): v is string =>
 export function readVerdict(value: unknown, by: string): Check | null {
   if (typeof value !== "object" || value === null) return null;
   const v = value as Record<string, unknown>;
-  if (v.verdict === "agree") return { by, verdict: "agree" };
+  // An agreement that also names criteria or a suggestion contradicts
+  // itself; it is not read as an agreement.
+  if (v.verdict === "agree")
+    return v.criteria === undefined && v.suggestion === undefined
+      ? { by, verdict: "agree" }
+      : null;
   if (v.verdict !== "disagree") return null;
   const { criteria, why, suggestion } = v;
   if (
@@ -144,6 +164,9 @@ export async function checkLanguage(args: {
 }): Promise<CheckResult> {
   const { english, file, glossary, model } = args;
   const tag = file.language;
+  // The tag and book name output paths: only known values get that far.
+  if (typeof tag !== "string" || !Object.hasOwn(LANGUAGES, tag))
+    throw new Error(`not a v0.1 language: ${String(tag)}`);
   if (file.book !== english.book)
     throw new Error(
       `${tag}: translations are for ${file.book}, not ${english.book}`
@@ -166,7 +189,10 @@ export async function checkLanguage(args: {
   const keys = Object.keys(file.titles);
   const unchecked = (): Record<string, CheckedTitle> =>
     Object.fromEntries(
-      keys.map((k) => [k, { ...file.titles[k]!, status: "unreviewed" }])
+      keys.map((k) => [
+        k,
+        { ...translationOf(file.titles[k]!), status: "unreviewed" },
+      ])
     );
   if (keys.length === 0)
     return { language: tag, titles: {}, missing: [], invalid: [] };
@@ -199,8 +225,16 @@ export async function checkLanguage(args: {
   });
   if (completion.problem !== undefined)
     return fail(`no reply: ${completion.problem}`);
-  // The model that answered must still be of another family.
-  if (family(completion.model) !== family(model))
+  // The model that answered must still be of another family. The call is
+  // billed by now, so an answering model whose family cannot be told is a
+  // recorded failure too, never a throw that would lose the call.
+  let answered: string;
+  try {
+    answered = family(completion.model);
+  } catch (e) {
+    return fail((e as Error).message);
+  }
+  if (answered !== family(model))
     return fail(`answered by ${completion.model}, not the ${model} family`);
   let reply: Record<string, unknown>;
   try {
@@ -219,7 +253,7 @@ export async function checkLanguage(args: {
     if (value === undefined) missing.push(key);
     else if (check === null) invalid.push(key);
     titles[key] = {
-      ...t,
+      ...translationOf(t),
       status:
         check?.verdict === "agree" && t.gates === undefined
           ? "ai-checked"

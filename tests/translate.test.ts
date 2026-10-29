@@ -358,11 +358,10 @@ describe("translation runner", () => {
       titlesPerHour: 4000,
     });
     expect(summarise([{ ...call, cost: null }], [result]).cost).toBeNull();
-    // Reasoning tokens: summed over the calls that report them, else unknown.
-    expect(
-      summarise([call, { ...call, reasoningTokens: 7 }], [result, result])
-        .reasoningTokens
-    ).toBe(7);
+    // Reasoning tokens: summed when every call reports them, else unknown.
+    const r7 = { ...call, reasoningTokens: 7 };
+    expect(summarise([r7, r7], [result, result]).reasoningTokens).toBe(14);
+    expect(summarise([call, r7], [result, result]).reasoningTokens).toBeNull();
   });
 
   it("covers every v0.1 language", () => {

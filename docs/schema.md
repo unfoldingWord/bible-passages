@@ -169,8 +169,8 @@ Titus measurement first ([decisions/0002](decisions/0002-measure-translation-mod
 
 Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
 for a disagreement `criteria`, `why` and a `suggestion`). A draft is
-`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
-and goes to a person first. The check's details stay here; the built table
+`ai-checked` only when the checker agreed (and, for a translation, every
+gate passed); anything else stays `unreviewed` and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
 
 ## `data/glossaries/<lang>/<BOOK>.json`

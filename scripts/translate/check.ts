@@ -19,7 +19,13 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { checkBook, family, type TranslatedFile } from "../lib/check.ts";
 import { complete } from "../lib/openrouter.ts";
-import { sha256, type EnglishTitles, type Glossary } from "../lib/translate.ts";
+import { BOOK_CODES } from "../lib/gates.ts";
+import {
+  LANGUAGES,
+  sha256,
+  type EnglishTitles,
+  type Glossary,
+} from "../lib/translate.ts";
 import { writeJson } from "../lib/write.ts";
 
 const root = new URL("../../", import.meta.url);
@@ -55,14 +61,47 @@ const runDir = pathToFileURL(`${resolve(runArg)}/`);
 const ledgerFile = new URL("run.json", runDir);
 if (!existsSync(ledgerFile)) fail(`no run.json in ${fileURLToPath(runDir)}`);
 const ledgerText = readFileSync(ledgerFile, "utf8");
-const ledger = JSON.parse(ledgerText) as {
+type Ledger = {
   book: string;
   model: string;
   languages: string[];
   english: { file: string; sha256: string };
   glossaries: Record<string, string | null>;
 };
-if (family(ledger.model) === family(model))
+// The ledger's book and languages name paths that are read and written, so
+// only known values are accepted: a USFM book code and v0.1 language tags.
+const ledger = ((): Ledger => {
+  let v: unknown;
+  try {
+    v = JSON.parse(ledgerText);
+  } catch {
+    return fail("the translation run's run.json is not JSON");
+  }
+  const l = (typeof v === "object" && v !== null ? v : {}) as Partial<Ledger>;
+  if (typeof l.book !== "string" || !BOOK_CODES.includes(l.book))
+    fail("the translation run's book is not a USFM book code");
+  if (typeof l.model !== "string") fail("the translation run names no model");
+  if (
+    !Array.isArray(l.languages) ||
+    !l.languages.every(
+      (t) => typeof t === "string" && Object.hasOwn(LANGUAGES, t)
+    )
+  )
+    fail("the translation run's languages are not v0.1 language tags");
+  if (typeof l.english?.sha256 !== "string")
+    fail("the translation run has no English hash");
+  if (typeof l.glossaries !== "object" || l.glossaries === null)
+    fail("the translation run has no glossary hashes");
+  return l as Ledger;
+})();
+const translator = (() => {
+  try {
+    return family(ledger.model);
+  } catch (e) {
+    return fail((e as Error).message);
+  }
+})();
+if (translator === family(model))
   fail(`${ledger.model} must be checked by another family, not ${model}`);
 const tags = values.lang ? values.lang.split(",") : ledger.languages;
 for (const tag of tags)
@@ -77,6 +116,7 @@ const englishText = readFileSync(englishFile, "utf8");
 if (sha256(englishText) !== ledger.english.sha256)
   fail(`${englishPath} has changed since the translation run`);
 const english = JSON.parse(englishText) as EnglishTitles;
+if (english.book !== book) fail(`${englishPath} is not for ${book}`);
 
 const promptPath = "prompts/check-translations.md";
 const promptFile = readFileSync(new URL(promptPath, root), "utf8");
@@ -89,7 +129,14 @@ for (const tag of tags) {
     console.log(`${tag}: no translations in the run; not checked`);
     continue;
   }
-  files.push(JSON.parse(readFileSync(file, "utf8")) as TranslatedFile);
+  const translated = JSON.parse(readFileSync(file, "utf8")) as TranslatedFile;
+  // The language a file says it is decides its glossary and where its
+  // output is written, so it must be the directory it was found in.
+  if (translated.language !== tag || translated.book !== book)
+    fail(
+      `${tag}/${book}.json is for ${translated.language} ${translated.book}`
+    );
+  files.push(translated);
   // The checker reads the glossary the translator read, or none if it had
   // none (zh-Hans).
   const hash = ledger.glossaries[tag] ?? null;
@@ -127,7 +174,12 @@ try {
     model,
     maxCost,
     complete: (request) => complete(request, { apiKey }),
-    write: (path, value) => writeJson(new URL(path, out), value),
+    write: (path, value) => {
+      const file = new URL(path, out);
+      if (!file.href.startsWith(out.href))
+        throw new Error(`refusing to write outside --out: ${path}`);
+      return writeJson(file, value);
+    },
     meta: {
       book,
       startedAt: startedAt.toISOString(),

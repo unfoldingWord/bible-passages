@@ -253,13 +253,12 @@ export async function translateLanguage(args: {
 
 /**
  * Reasoning tokens over calls (already inside the completion tokens), or null
- * when no call reported them: unknown, not zero.
+ * when any call did not report them: a partial sum would read as the whole.
  */
 export function reasoningTotal(calls: Call[]): number | null {
-  const known = calls.filter((c) => c.reasoningTokens !== null);
-  return known.length === 0
-    ? null
-    : known.reduce((s, c) => s + (c.reasoningTokens ?? 0), 0);
+  return calls.every((c) => c.reasoningTokens !== null)
+    ? calls.reduce((s, c) => s + (c.reasoningTokens ?? 0), 0)
+    : null;
 }
 
 /** Totals for a run: what the Titus run compares between the two models. */
