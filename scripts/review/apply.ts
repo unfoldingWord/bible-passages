@@ -6,10 +6,18 @@
 //   node scripts/review/apply.ts <export.json> [--dry-run]
 //
 // The export is {"schema": "bp.review-export", "v": 1, "records": [...]},
-// one record per review document (docs/scoping/review-screen.md).
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+// one record per item document, never a profile (docs/scoping/review-screen.md).
+import {
+  existsSync,
+  readdirSync,
+  readFileSync,
+  renameSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
 import { applyReviews, summary, type DraftFile } from "../lib/review.ts";
-import { writeJson } from "../lib/write.ts";
+import { fileURLToPath } from "node:url";
+import { format, resolveConfig } from "prettier";
 
 const args = process.argv.slice(2);
 const dry = args.includes("--dry-run");
@@ -33,6 +41,7 @@ if (exported.schema !== "bp.review-export" || exported.v !== 1) {
 const drafts = new URL("../../data/drafts/", import.meta.url);
 const files = new Map<string, DraftFile>();
 for (const lang of existsSync(drafts) ? readdirSync(drafts) : []) {
+  if (!statSync(new URL(lang, drafts)).isDirectory()) continue;
   for (const name of readdirSync(new URL(`${lang}/`, drafts))) {
     if (!name.endsWith(".json")) continue;
     const id = `${lang}/${name.slice(0, -5)}`;
@@ -52,9 +61,27 @@ if (problems.length) {
   for (const p of problems) console.error(`- ${p}`);
   process.exit(1);
 }
-if (!dry)
-  for (const [id, value] of changed)
-    await writeJson(new URL(`${id}.json`, drafts), value);
+// Every file is written beside its target first and renamed only when all
+// are written, so an interrupted run leaves no book half applied.
+if (!dry) {
+  const staged: [URL, URL][] = [];
+  for (const [id, value] of changed) {
+    const target = new URL(`${id}.json`, drafts);
+    const temp = new URL(`${id}.json.review-tmp`, drafts);
+    // Indented before prettier, which keeps an object expanded when its
+    // source is: the diff shows the reviews, not a reflowed file.
+    const options = (await resolveConfig(fileURLToPath(target))) ?? {};
+    writeFileSync(
+      temp,
+      await format(JSON.stringify(value, null, 2), {
+        ...options,
+        parser: "json",
+      })
+    );
+    staged.push([temp, target]);
+  }
+  for (const [temp, target] of staged) renameSync(temp, target);
+}
 console.log(
   (dry ? "Dry run; nothing written.\n\n" : "") +
     summary(applied) +

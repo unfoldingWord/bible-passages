@@ -176,6 +176,67 @@ describe("applyReviews", () => {
     expect(again.skipped).toHaveLength(2);
   });
 
+  it("passes over a title's whole history on a re-run, and applies what is new", () => {
+    const later = "2026-10-29T11:00:00.000Z";
+    const latest = "2026-10-30T09:00:00.000Z";
+    // One reviewer edits, a second approves that edit: both applied.
+    const history = [
+      edit("Paul greets his son"),
+      rec({ handle: "second", seen: "Paul greets his son", at: later }),
+    ];
+    const first = applyReviews(files(), history);
+    expect(first.problems).toEqual([]);
+    const merged = new Map([...files(), ...first.changed]);
+    // The next export holds both again, and a new review on another title.
+    const fresh = rec({
+      key: "TIT.1.1-3",
+      seen: "Paul introduces himself",
+      at: latest,
+    });
+    const again = applyReviews(merged, [...history, fresh]);
+    expect(again.problems).toEqual([]);
+    expect(again.skipped).toEqual(history);
+    expect(again.applied.map((a) => a.record)).toEqual([fresh]);
+    // And a newer review of the same title builds on the stored one.
+    const third = rec({
+      handle: "third",
+      seen: "Paul greets his son",
+      at: latest,
+    });
+    const next = applyReviews(merged, [...history, third]);
+    expect(next.problems).toEqual([]);
+    expect(next.skipped).toEqual(history);
+    expect(next.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.by).toBe(
+      "reviewer:third"
+    );
+  });
+
+  it("names a profile document copied into the records", () => {
+    const r = applyReviews(files(), [
+      { v: 1, handle: "reader-7", at: "2026-10-29T10:00:00.000Z" },
+    ]);
+    expect(r.problems).toEqual([
+      "record 0: a profile document; records are item documents only",
+    ]);
+  });
+
+  it("keeps an approved title approved on approval; an edit is human-reviewed", () => {
+    const f = files();
+    f.get("en/TIT")!.titles["TIT.1.4-4"]!.review = {
+      by: "reviewer:owner",
+      at: "2026-10-28",
+      status: "approved",
+    };
+    const approve = applyReviews(f, [rec()]);
+    expect(
+      approve.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.status
+    ).toBe("approved");
+    const changed = applyReviews(f, [edit("Paul greets his son")]);
+    expect(
+      changed.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.status
+    ).toBe("human-reviewed");
+  });
+
   it("checks a person's own wording like any title", () => {
     const bad = (text: string, lang = "en", seen = "Paul greets Titus") =>
       applyReviews(files(), [edit(text, { lang, seen })]).problems;
@@ -199,6 +260,10 @@ describe("applyReviews", () => {
     expect(summary(applied)).toContain(
       "| en | TIT.1.4-4 | edit | reviewer:reader-7 | Paul greets Titus | Paul greets his son | a \\| b |"
     );
+    const { applied: bidi } = applyReviews(files(), [
+      edit("Paul greets his son", { why: "a\u202Eb\u001B[31m" }),
+    ]);
+    expect(summary(bidi)).toMatch(/\| ab\[31m \|$/);
   });
 });
 
@@ -268,15 +333,20 @@ describe("site/review.json", () => {
   });
 
   it("shows each title's whole passage, verse by verse", () => {
+    const vrs = read("data/versification/ufw.json") as Record<string, number[]>;
     for (const s of queue.sets) {
       const structure = read(`data/structure/${s.book}.json`) as {
         segments: { key: string; start: number[]; end: number[] }[];
       };
       for (const i of s.items) {
         const seg = structure.segments.find((g) => g.key === i.key)!;
+        const last = vrs[s.book]!;
         const want: string[] = [];
-        for (let v = seg.start[1]!; v <= seg.end[1]!; v++)
-          want.push(`${seg.start[0]}:${v}`);
+        for (let c = seg.start[0]!; c <= seg.end[0]!; c++) {
+          const from = c === seg.start[0] ? seg.start[1]! : 1;
+          const to = c === seg.end[0] ? seg.end[1]! : last[c - 1]!;
+          for (let v = from; v <= to; v++) want.push(`${c}:${v}`);
+        }
         expect(i.verses.map(([r]) => r)).toEqual(want);
         for (const [, t] of i.verses) expect(t).not.toMatch(/\\|^$/);
       }

@@ -88,7 +88,9 @@ reviewer never needs git).
 | Signed in, first visit     | Choose a reviewer name; the buttons stay disabled until it is saved.                                            |
 | Returning                  | Starts at the first title they have not reviewed; their name on one line.                                       |
 | Already reviewed           | "You approved it on 29 Oct" or "You changed it to …"; marked if the title changed since.                        |
-| Saving / save failed       | "Saving…"; on failure "Couldn't save: …" and the title stays.                                                   |
+| Loading their reviews      | Titles show; Approve and Change stay disabled until the reviewer's earlier reviews have loaded.                 |
+| Their reviews fail to load | "Couldn't load your earlier reviews, so reviewing is paused"; nothing can be saved.                             |
+| Saving / save failed       | "Saving…"; on failure "Couldn't save: …", and the title, the typed wording and the reason stay.                 |
 | Bad wording                | One message under the field (empty, unchanged, over 60 characters, a full stop or quotes, markup).              |
 | All done / skipped some    | The count, what happens next, "Go back to the ones I skipped", "See every title".                               |
 | No titles                  | "There are no titles to review yet."                                                                            |
@@ -155,11 +157,15 @@ list and state inventory (the parent session publishes after merge).
      `seen` is the wording the reviewer was shown; `text` and `why` are only
      on an edit, and `why` is required there.
 
-3. A work session lists the `review` collection and each
-   `review/<id>/items` collection and writes their documents, unchanged,
-   to a file outside the repo:
-   `{ "schema": "bp.review-export", "v": 1, "records": [ … ] }`. The ids in
-   the paths are account identifiers and stay out of the repo and the export.
+3. A work session lists the `review` collection to find the reviewers' ids,
+   then each `review/<id>/items` collection, and writes the **item
+   documents** only, unchanged, to a file outside the repo:
+   `{ "schema": "bp.review-export", "v": 1, "records": [ … ] }`. The profile
+   documents (`review/<id>`) are not records; one copied in is refused by
+   name. The ids in the paths are account identifiers and stay out of the
+   repo and the export. Every export holds every review ever saved: records
+   an earlier batch applied are recognised and passed over (for each title,
+   the run of its records that ends in the review stored now).
 4. On a new branch: `node scripts/review/apply.ts <export.json>`, then
    `npm run build` and `npm run verify`. The script writes
    `review: { by: "reviewer:<handle>", at: "<date>", status: "human-reviewed", text?, why? }`
@@ -175,6 +181,13 @@ of the full rule set, which must restate the rules already declared for
 { path: "review", read: "admin", write: "owner" },
 { path: "review/{self}", read: "interact", write: "interact" }
 ```
+
+A rule applies to its path and everything below it, and a `{self}` rule
+covers "their id, or documents below it" (runtime contract 0.2.92,
+`db.d.ts`, "ACCESS RULES"), so `review/{self}` covers
+`review/<id>/items/<item>`. Not yet exercised against the published
+artifact: the first publish checks it with one read and one write at a
+Contributor's level.
 
 Each Contributor reads and writes only their own reviews; Editors and the
 owner read all of them (the export needs that); only the owner can correct
@@ -193,5 +206,8 @@ another person's.
 - **Approving someone else's wording** credits the approver as `source` (the
   `review` entry holds one reviewer). Fine for v0.1; revisit if two-person
   review is required.
+- **Status**: an approval never lowers a status (an `approved` title stays
+  `approved`); an edit is new wording, so it is `human-reviewed`. Nothing
+  grants `approved` yet.
 - **Review minutes per title** are still not measured (plan gate, #3). The
   `at` times of one reviewer's consecutive records give a first measure.

@@ -32,6 +32,7 @@ const ref = (s: { start: number[]; end: number[] }) =>
       : `${s.start[0]}:${s.start[1]}–${s.end[1]}`
     : `${s.start[0]}:${s.start[1]}–${s.end[0]}:${s.end[1]}`;
 
+const vrs = read<Record<string, number[]>>("data/versification/ufw.json");
 const langs = readdirSync(new URL("data/drafts/", root)).sort((a, b) =>
   a === "en" ? -1 : b === "en" ? 1 : a.localeCompare(b)
 );
@@ -48,20 +49,22 @@ for (const lang of langs) {
     const enTable = read<Table>(`data/titles/en/${book}.json`);
     const table = read<Table>(`data/titles/${lang}/${book}.json`);
     const verses = verseText(await readSource(`bsb-${book.toLowerCase()}`));
+    const lastVerses = vrs[book] ?? [];
     const items = [];
     for (const s of structure.segments) {
       const d = drafts.titles[s.key];
       if (!d) continue;
+      // Every verse of the span, to the end of each chapter it crosses
+      // (ufw.vrs), so a missing verse fails rather than shortens a passage.
       const passage: [string, string][] = [];
       for (let c = s.start[0]; c <= s.end[0]; c++) {
         const from = c === s.start[0] ? s.start[1] : 1;
-        for (let v = from; ; v++) {
-          if (c === s.end[0] && v > s.end[1]) break;
+        const to = c === s.end[0] ? s.end[1] : lastVerses[c - 1];
+        if (to === undefined) throw new Error(`${book} ${c}: not in ufw.vrs`);
+        for (let v = from; v <= to; v++) {
           const t = verses.get(`${c}:${v}`);
-          if (t === undefined) {
-            if (c < s.end[0]) break;
+          if (t === undefined)
             throw new Error(`${book} ${c}:${v}: no verse text`);
-          }
           passage.push([`${c}:${v}`, t]);
         }
       }

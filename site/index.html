@@ -166,7 +166,6 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .rv-pick select,.rv-field input,.rv-field textarea{font:inherit;font-size:1rem;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-width:0;max-width:100%}
 .rv-pick .tog{display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink-2)}
 .rv-card{gap:16px}
-.rv-card:focus{outline:none}
 .rv-meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
 .rv-passage{background:var(--sunk);border-radius:8px;padding:12px 14px;color:var(--ink);max-width:68ch;text-align:start}
 .rv-passage sup{color:var(--muted);font-weight:700;margin-inline-end:3px}
@@ -580,11 +579,13 @@ async function resolveNames() {
 // exports those documents and scripts/review/apply.ts turns them into a PR
 // (docs/scoping/review-screen.md). The handle is the only name stored.
 const HANDLE_RE = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;
-const RQ = { sets: REVIEW && Array.isArray(REVIEW.sets) ? REVIEW.sets : [], set: 0, key: null, open: true, skipped: new Set(), mine: {}, loaded: false, handle: "", changing: false, editing: false, busy: false, msg: "" };
+const RQ = { sets: REVIEW && Array.isArray(REVIEW.sets) ? REVIEW.sets : [], set: 0, key: null, open: true, skipped: new Set(), mine: {}, loaded: false, loadError: false, draft: null, handle: "", changing: false, editing: false, busy: false, msg: "" };
 const rqId = (s, it) => `${s.lang}~${s.book}~${it.key}`;
 const rqSet = () => RQ.sets[RQ.set];
 const rqDir = (s) => (s.dir === "rtl" ? "rtl" : "ltr");
-const rqCan = () => Boolean(RV.db && RV.uid && RQ.handle);
+// Nothing is written until this reviewer's own reviews have loaded, so a
+// save can never replace a review the page has not shown them.
+const rqCan = () => Boolean(RV.db && RV.uid && RQ.handle && RQ.loaded && !RQ.loadError);
 // Done for this reviewer: they reviewed the wording that is in the queue now.
 const rqDone = (s, it) => RQ.mine[rqId(s, it)]?.seen === it.text;
 const rqOpen = (s, it) => !rqDone(s, it) && !RQ.skipped.has(rqId(s, it));
@@ -596,7 +597,7 @@ function rqFirst() {
 function rqStep(dir) {
   const s = rqSet(); if (!s) return;
   const i = s.items.findIndex((it) => it.key === RQ.key);
-  RQ.editing = false; RQ.msg = "";
+  RQ.editing = false; RQ.draft = null; RQ.msg = "";
   for (let j = (i < 0 ? (dir > 0 ? -1 : s.items.length) : i) + dir; j >= 0 && j < s.items.length; j += dir) {
     if (dir < 0 || !RQ.open || rqOpen(s, s.items[j])) { RQ.key = s.items[j].key; return renderReview(true); }
   }
@@ -642,7 +643,7 @@ function renderReviewPick() {
   if (!RQ.sets.length) return;
   el.innerHTML = `<label>Language and book<select id="rv-set">${RQ.sets.map((s, i) => `<option value="${i}"${i === RQ.set ? " selected" : ""}>\u2068${esc(s.name)}\u2069 · ${esc(s.lang)} (${Number(s.items.length)} titles)</option>`).join("")}</select></label>
     <label class="tog"><input type="checkbox" id="rv-open"${RQ.open ? " checked" : ""}> Only titles I have not reviewed</label>`;
-  const reset = () => { RQ.skipped.clear(); RQ.editing = false; RQ.msg = ""; rqFirst(); renderReview(true); };
+  const reset = () => { RQ.skipped.clear(); RQ.editing = false; RQ.draft = null; RQ.msg = ""; rqFirst(); renderReview(true); };
   $("#rv-set").onchange = (e) => { RQ.set = Number(e.target.value) || 0; reset(); };
   $("#rv-open").onchange = (e) => { RQ.open = e.target.checked; reset(); };
 }
@@ -666,7 +667,10 @@ function renderReview(focus) {
   const fresh = mine && mine.seen === it.text;
   const mineLine = mine ? `<div class="rv-mine${fresh ? "" : " old"}">${fresh ? "" : "The title changed after your review. "}You ${mine.action === "edit" ? `changed it to <b lang="${lang}" dir="${dir}">${esc(mine.text)}</b>` : "approved it"} on ${esc(day(mine.at))}.</div>` : "";
   const can = rqCan() && !RQ.busy, off = can ? "" : " disabled";
-  const hint = RQ.msg || (rqCan() ? "" : RV.db && RV.uid ? "Choose a reviewer name above to start." : "Sign in to claude.ai to review.");
+  const hint = RQ.msg || (rqCan() ? "" : !(RV.db && RV.uid) ? "Sign in to claude.ai to review." : !RQ.handle ? "Choose a reviewer name above to start."
+    : RQ.loadError ? "Couldn't load your earlier reviews, so reviewing is paused. Reload the page to try again." : "Loading your earlier reviews…");
+  // What the reviewer typed survives a re-render (a failed save, a snapshot).
+  const typed = RQ.draft && RQ.draft.key === it.key ? RQ.draft : { text: it.text, why: "" };
   el.innerHTML = `<div class="rv-meta"><span class="eyebrow"><bdi lang="${lang}" dir="${dir}">${esc(s.name)}</bdi> <bdi dir="ltr">${esc(it.ref)}</bdi></span><span class="saved">Title ${n} of ${total} · ${left} left</span><span class="pill ${statusCls}">${esc(it.status)}</span></div>
     <p class="saved">In the passage “${esc(it.pericope)}”</p>
     <div class="rv-passage" lang="en" dir="ltr">${it.verses.map(([r, t]) => `<sup>${esc(String(r).split(":")[1])}</sup>${esc(t)}`).join(" ")}</div>
@@ -676,19 +680,21 @@ function renderReview(focus) {
     ${mineLine}
     ${RQ.editing ? `<form class="rv-field" id="rv-edit" novalidate>
       <label for="rv-text">New title</label>
-      <input id="rv-text" lang="${lang}" dir="${dir}" value="${esc(it.text)}" autocomplete="off" aria-describedby="rv-edit-err">
+      <input id="rv-text" lang="${lang}" dir="${dir}" value="${esc(typed.text)}" autocomplete="off" aria-describedby="rv-edit-err">
       <label for="rv-why">Why change it?</label>
-      <textarea id="rv-why" dir="auto" maxlength="500" aria-describedby="rv-edit-err"></textarea>
+      <textarea id="rv-why" dir="auto" maxlength="500" aria-describedby="rv-edit-err">${esc(typed.why)}</textarea>
       <span class="rv-err" id="rv-edit-err" role="alert"></span>
       <div class="rv-actions"><button class="btn" type="submit"${off}>Save the new title</button><button class="btn quiet" type="button" id="rv-cancel">Cancel</button></div></form>`
-    : `<div class="rv-actions"><button class="btn" type="button" id="rv-approve"${off}>Approve</button><button class="btn quiet" type="button" id="rv-change"${off}>Change the wording</button><button class="btn quiet" type="button" id="rv-skip">Skip</button></div>`}
-    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
+    : `<div class="rv-actions"><button class="btn" type="button" id="rv-approve"${off}>Approve</button><button class="btn quiet" type="button" id="rv-change"${off}>Change the wording</button><button class="btn quiet" type="button" id="rv-skip"${RQ.busy ? " disabled" : ""}>Skip</button></div>`}
+    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 && !RQ.busy ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
   $("#rv-prev").onclick = () => rqStep(-1);
   if (RQ.editing) {
-    $("#rv-cancel").onclick = () => { RQ.editing = false; renderReview(); };
+    $("#rv-cancel").onclick = () => { RQ.editing = false; RQ.draft = null; renderReview(); };
+    for (const id of ["#rv-text", "#rv-why"]) $(id).addEventListener("input", () => { RQ.draft = { key: it.key, text: $("#rv-text").value, why: $("#rv-why").value }; });
     $("#rv-edit").onsubmit = (e) => {
       e.preventDefault();
       const text = $("#rv-text").value.trim(), why = $("#rv-why").value.trim();
+      RQ.draft = { key: it.key, text: $("#rv-text").value, why: $("#rv-why").value };
       const p = rqWordingProblem(s, it, text) || (why ? "" : "Say why, so the change can be checked.");
       if (p) { $("#rv-edit-err").textContent = p; return; }
       rqSave(s, it, { action: "edit", text, why });
@@ -710,7 +716,7 @@ async function rqSave(s, it, r) {
   if (r.action === "edit") { rec.text = r.text; rec.why = r.why; }
   try {
     await RV.db.doc(`review/${RV.uid}/items/${rqId(s, it)}`).set(rec);
-    RQ.mine[rqId(s, it)] = rec; RQ.busy = false;
+    RQ.mine[rqId(s, it)] = rec; RQ.busy = false; RQ.draft = null;
     rqStep(1);
     const m = $("#rv-msg"); if (m) m.textContent = "Saved.";
   } catch (e) { RQ.busy = false; RQ.msg = "Couldn't save: " + (e?.message || "try again"); renderReview(); }
@@ -726,12 +732,17 @@ function startReview(db) {
   }, () => { /* keep what is shown */ });
   db.collection(`review/${RV.uid}/items`).onSnapshot((qs) => {
     const next = {}; for (const d of qs.docs) { const v = d.data(); if (v && typeof v.seen === "string") next[d.id] = v; }
-    RQ.mine = next;
+    RQ.mine = next; RQ.loadError = false;
     // The first read starts at this reviewer's first open title; later ones
     // (their own saves, or another tab's) leave them where they are.
-    if (!RQ.loaded) { RQ.loaded = true; rqFirst(); }
+    if (!RQ.loaded) { RQ.loaded = true; RQ.loadError = false; rqFirst(); }
     if (!RQ.editing && !RQ.busy) renderReview();
-  }, () => { /* keep what is shown */ });
+  }, () => {
+    // Without this reviewer's history a save could replace a review they
+    // made earlier: stop saving and say so.
+    RQ.loadError = true;
+    if (!RQ.editing && !RQ.busy) renderReview();
+  });
 }
 
 /* ---------- routing ---------- */

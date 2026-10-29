@@ -76,6 +76,7 @@ const FIELDS = new Set([
   "why",
   "at",
 ]);
+const PROFILE = new Set(["v", "handle", "at"]);
 const BOOK_CODES = new Set(ALL_BOOKS.map(([code]) => code));
 const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 
@@ -84,6 +85,10 @@ export function recordProblems(r: unknown): string[] {
   if (typeof r !== "object" || r === null || Array.isArray(r))
     return ["not an object"];
   const o = r as Record<string, unknown>;
+  // The reviewer's profile document (review/<id>) sits beside their items;
+  // an export that copied it in gets told so, not a list of missing fields.
+  if (!("key" in o) && Object.keys(o).every((f) => PROFILE.has(f)))
+    return ["a profile document; records are item documents only"];
   const p: string[] = [];
   for (const f of Object.keys(o)) if (!FIELDS.has(f)) p.push(`field "${f}"`);
   const str = (v: unknown): v is string => typeof v === "string";
@@ -144,6 +149,63 @@ export type Batch = {
   problems: string[];
 };
 
+const STATUS = ["unreviewed", "ai-checked", "human-reviewed", "approved"];
+
+/**
+ * The review a record leaves on a title. An approval never lowers a status
+ * (an `approved` title stays approved); an edit is new wording, so it is
+ * `human-reviewed` whatever the title was.
+ */
+function reviewFor(r: ReviewRecord, draft: Draft, prior: Review | undefined) {
+  const after = r.action === "edit" ? (r.text ?? "") : r.seen;
+  const kept =
+    r.action === "approve" &&
+    prior &&
+    STATUS.indexOf(prior.status) > STATUS.indexOf("human-reviewed")
+      ? prior.status
+      : "human-reviewed";
+  const review: Review = {
+    by: `reviewer:${r.handle}`,
+    at: r.at.slice(0, 10),
+    status: kept,
+    // The draft keeps its own wording in `text`; the review carries one
+    // only when the person's title differs from it.
+    ...(after !== draft.text ? { text: after } : {}),
+    ...(r.why !== undefined ? { why: r.why } : {}),
+  };
+  return { after, review };
+}
+
+const sameReview = (a: Review | undefined, b: Review) =>
+  a !== undefined &&
+  a.by === b.by &&
+  a.at === b.at &&
+  a.status === b.status &&
+  a.text === b.text &&
+  a.why === b.why;
+
+/**
+ * An export holds every review ever saved, so a batch meets records an
+ * earlier batch applied. For one title's records, oldest first: the longest
+ * run from the first that chains (each saw what the one before it left) and
+ * ends in exactly the review stored now was applied before. Those are
+ * passed over; the rest are applied.
+ */
+function appliedBefore(draft: Draft, chain: ReviewRecord[]): number {
+  let done = 0;
+  let prior: Review | undefined;
+  let text: string | undefined;
+  for (let i = 0; i < chain.length; i++) {
+    const r = chain[i]!;
+    if (text !== undefined && r.seen !== text) break;
+    const { after, review } = reviewFor(r, draft, prior);
+    if (sameReview(draft.review, review)) done = i + 1;
+    prior = review;
+    text = after;
+  }
+  return done;
+}
+
 /**
  * Applies records to draft files, oldest first, each against the wording
  * the ones before it left. Returns the files it changed, or every problem
@@ -178,6 +240,21 @@ export function applyReviews(
       a.book.localeCompare(b.book) ||
       a.key.localeCompare(b.key)
   );
+  // Each title's records, oldest first, against the files as given.
+  const chains = new Map<string, ReviewRecord[]>();
+  for (const r of ordered) {
+    const t = `${r.lang}/${r.book}/${r.key}`;
+    chains.set(t, [...(chains.get(t) ?? []), r]);
+  }
+  const passOver = new Set<ReviewRecord>();
+  for (const chain of chains.values()) {
+    const r = chain[0]!;
+    const draft = files.get(`${r.lang}/${r.book}`)?.titles;
+    const d = draft && Object.hasOwn(draft, r.key) ? draft[r.key] : undefined;
+    if (d)
+      for (const x of chain.slice(0, appliedBefore(d, chain))) passOver.add(x);
+  }
+
   const changed = new Map<string, DraftFile>();
   const applied: Applied[] = [];
   const skipped: ReviewRecord[] = [];
@@ -196,20 +273,12 @@ export function applyReviews(
       problems.push(`${where}: unknown key`);
       continue;
     }
-    const before = current(draft);
-    const by = `reviewer:${r.handle}`;
-    const after = r.action === "edit" ? (r.text ?? "") : r.seen;
-    // Exports hold every review ever saved, so a batch meets records an
-    // earlier PR already applied: those are passed over, not refused.
-    if (
-      draft.review?.by === by &&
-      draft.review.at === r.at.slice(0, 10) &&
-      draft.review.why === r.why &&
-      before === after
-    ) {
+    if (passOver.has(r)) {
       skipped.push(r);
       continue;
     }
+    const before = current(draft);
+    const { after, review } = reviewFor(r, draft, draft.review);
     if (r.seen !== before) {
       problems.push(
         `${where}: stale, reviewed "${r.seen}" but the title is now "${before}"`
@@ -229,15 +298,6 @@ export function applyReviews(
         continue;
       }
     }
-    const review: Review = {
-      by,
-      at: r.at.slice(0, 10),
-      status: "human-reviewed",
-      // The draft keeps its own wording in `text`; the review carries one
-      // only when the person's title differs from it.
-      ...(after !== draft.text ? { text: after } : {}),
-      ...(r.why !== undefined ? { why: r.why } : {}),
-    };
     changed.set(id, {
       ...file,
       titles: { ...file.titles, [r.key]: { ...draft, review } },
@@ -250,7 +310,10 @@ export function applyReviews(
 
 /** A Markdown summary of a batch, for the PR body. */
 export function summary(applied: Applied[]): string {
-  const cell = (s: string) => s.replace(/\|/g, "\\|").replace(/\s+/g, " ");
+  // Control and format characters (bidi overrides, escapes) are dropped:
+  // the reason is free text pasted into a PR body.
+  const cell = (s: string) =>
+    s.replace(/\s+/g, " ").replace(/\p{C}/gu, "").replace(/\|/g, "\\|");
   return [
     `${applied.length} review${applied.length === 1 ? "" : "s"} applied.`,
     "",
