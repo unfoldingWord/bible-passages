@@ -4,6 +4,45 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-29 — first Titus data on main; key rules decided
+
+### Shipped
+
+| What                                                                                                                                                         | Evidence                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Scaffold, rules, site source and scoping merged (on one bench lens: George failed 3 times on the head, the maintainer chose to merge on Frank's clean round) | PR #1, merge `52ed344`; exception recorded on the PR                            |
+| Titus structure: 8 pericopes, 25 segments, pinned sources, CI rebuild gate                                                                                   | PR #15, merge `6b62feb`                                                         |
+| 25 English segment-title drafts (Sonnet), checked by Opus: 19 `ai-checked`, 6 `unreviewed`                                                                   | PR #16, merge `9a74632`                                                         |
+| Site: the 6 disputed titles (T1–T6) and decisions 13–14 on the Decisions tab                                                                                 | PR #19, merge `657a708`                                                         |
+| Titus glossaries in 9 languages from pinned Door43 Translation Words                                                                                         | PR #20, merge `507dcab`                                                         |
+| ADR 0001 (span keys; resize, split, merge, move-back; retired keys as an append-only log) and ADR 0002 (measure both translation models on Titus)            | PR #18, merge `2cda75f`; merged past the bench cap by the maintainer's decision |
+| `v*` tag ruleset: only maintainers create, move or delete release tags                                                                                       | ruleset `release tags` (id 26084543), read back via the API; #23                |
+| Follow-ups filed                                                                                                                                             | #22 (glossaries), #23 (release workflow), #24 (move-back title record)          |
+
+`main` at `657a708` (before #20 and #18): `npm run verify` 42 passed, 4 todo; a cold `npm run build` left `data/` and `dist/` unchanged; CI green on each merge commit.
+
+### Decisions
+
+- Keys (DRI, 28 Oct): a key is always its span. A span that comes back revives its key; a key is never attached to a different span. This matches the tC Mobile contract ("A key is not reused for different content", `template-package-v0.md` at tc-mobile `373d42b4`).
+- Split and merge: the named successor carries the titles; others get fresh drafts; nothing is deleted.
+- Release defaults: one successor per retired key, draft releases, tags on `main` only; the tag ruleset is in place.
+
+### Open
+
+- PR #17 (key check against every release tag, release workflow): `main` merged in at `162ba91`, 930 tests pass; the bench is re-reviewing. The gate held the earlier clean rounds on a merge conflict.
+- The requirements owner's answers on T1–T6 and decisions 1, 2, 9–14 (Decisions tab; Zulip pinged 28 Oct, no reply seen).
+- #21: post the Arabic headwords request on Door43 (needs the maintainer's account).
+- The bench treated a triage comment that quoted the grant phrase as a grant (#18, 00:55 UTC). Triage comments no longer quote it.
+- Not measured yet: titles per hour, cost per title, review minutes per title (#3).
+
+### Next
+
+- Merge #17 once both lenses are clean at its head, with the maintainer's OK.
+- #24: name the one publishable title record after a move-back (docs only).
+- Translation runner on Titus (#10), measuring both models per ADR 0002.
+
+---
+
 ## 2026-10-28 (evening) — scoping, sizing, sprints, project site
 
 ### Shipped
