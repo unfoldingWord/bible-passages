@@ -144,6 +144,9 @@ letters, digits and `. _ : -`, at most 64 characters).
   `title`.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
+- Every book with structure has a table, because its package takes `name`
+  as its title. A book whose titles are not built yet (all but Titus so far,
+  `BOOKS` in `scripts/lib/books.ts`) has `name` and an empty `titles`.
 
 ## `data/drafts/<lang>/<BOOK>.json`
 

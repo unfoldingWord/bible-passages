@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { ALL_BOOKS } from "../scripts/lib/books.ts";
 
 // Every input the build reads is pinned here. See docs/schema.md, "sources.json".
 type Source = {
@@ -35,4 +36,64 @@ describe("sources.json", () => {
     // The revision is the commit the URL reads from, not only a label.
     expect(s.url).toContain(`/commit/${s.revision}/`);
   });
+});
+
+// The structure inputs scripts/data/pin-structure.ts writes: one BSB file and
+// one chunk file per book, at the same commits as Titus's and with the same
+// licence and attribution.
+describe("structure inputs", () => {
+  const byId = new Map(sources.map((s) => [s.id, s]));
+  const vrs = JSON.parse(
+    readFileSync(
+      new URL("../data/versification/ufw.json", import.meta.url),
+      "utf8"
+    )
+  ) as Record<string, number[]>;
+
+  it("lists the 66 books of ufw.vrs in its order", () => {
+    expect(ALL_BOOKS.map(([b]) => b)).toEqual(Object.keys(vrs).slice(0, 66));
+    expect(Object.keys(vrs)[65]).toBe("REV");
+  });
+
+  it("pins nothing for a book not in ALL_BOOKS", () => {
+    const ids = new Set(
+      ALL_BOOKS.flatMap(([b]) => [
+        `bsb-${b.toLowerCase()}`,
+        `ufw-chunks-${b.toLowerCase()}`,
+      ])
+    );
+    const structure = sources.filter(
+      (s) => s.id.startsWith("bsb-") || s.id.startsWith("ufw-chunks-")
+    );
+    expect(structure.map((s) => s.id).sort()).toEqual([...ids].sort());
+  });
+
+  it.each(ALL_BOOKS.map(([b, n]) => [b, n] as const))(
+    "%s: BSB and chunk files pinned like Titus's",
+    (book, file) => {
+      const id = book.toLowerCase();
+      const tit = {
+        bsb: byId.get("bsb-tit"),
+        chunks: byId.get("ufw-chunks-tit"),
+      };
+      const bsb = byId.get(`bsb-${id}`);
+      const chunks = byId.get(`ufw-chunks-${id}`);
+      expect(bsb?.url).toBe(
+        `https://git.door43.org/Worldview/en_bsb/raw/commit/${tit.bsb?.revision}/${file}-${book}.usfm`
+      );
+      expect([bsb?.revision, bsb?.licence, bsb?.attribution]).toEqual([
+        tit.bsb?.revision,
+        tit.bsb?.licence,
+        tit.bsb?.attribution,
+      ]);
+      expect(chunks?.url).toBe(
+        `https://git.door43.org/Door43-Catalog/versification/raw/commit/${tit.chunks?.revision}/bible/ufw/chunks/${id}.json`
+      );
+      expect([chunks?.revision, chunks?.licence, chunks?.attribution]).toEqual([
+        tit.chunks?.revision,
+        tit.chunks?.licence,
+        tit.chunks?.attribution,
+      ]);
+    }
+  );
 });

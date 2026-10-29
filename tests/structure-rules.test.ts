@@ -29,6 +29,28 @@ describe("parseHeadings", () => {
     ]);
   });
 
+  it("starts at the next verse when the heading ends the previous verse", () => {
+    // A tree parser such as usfm-js files this heading under verse 2; the
+    // pericope still starts at verse 3. A cross-reference line (\\r) and a
+    // minor heading (\\s2) between them change nothing.
+    const usfm =
+      "\\c 1\n\\s1 One\n\\p\n\\v 1 a\n\\v 2 b,\n\\s1 Two\n\\r (Mark 1:1)\n\\s2 Minor\n\\p\n\\v 3 c";
+    expect(parseHeadings(usfm)).toEqual([
+      { chapter: 1, verse: 1, text: "One" },
+      { chapter: 1, verse: 3, text: "Two" },
+    ]);
+  });
+
+  it("applies the verse-1 rule per chapter, not only to the first", () => {
+    const usfm =
+      "\\c 1\n\\s1 A\n\\v 1 a\n\\c 2\n\\s1 B\n\\d Of David.\n\\q1 \\v 2 b\n\\s1 C\n\\v 3 c";
+    expect(parseHeadings(usfm)).toEqual([
+      { chapter: 1, verse: 1, text: "A" },
+      { chapter: 2, verse: 1, text: "B" },
+      { chapter: 2, verse: 3, text: "C" },
+    ]);
+  });
+
   it("refuses a heading with no verse after it", () => {
     expect(() =>
       parseHeadings("\\c 1\n\\v 1 a\n\\s1 Lost\n\\c 2\n\\v 1 b")
