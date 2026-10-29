@@ -159,11 +159,18 @@ model. So the run writes a record (`.cache/key-terms/<run>/zh-Hans/TIT.json`)
 that is committed unchanged to `data/glossary-drafts/zh-Hans/TIT.json`, with
 both OpenRouter generation ids, tokens, cost and the prompt's SHA-256. `npm
 run build` reads only that file and the pins, so the rebuild gate stays
-offline apart from Door43 pins and stays clean. The build refuses a record
-whose articles differ from the TWL's, whose English headword differs from
-the pinned `en_tw` (stale), or whose status breaks the rule; a test holds the
-recorded prompt hash to the committed prompt file. Changing the prompt or
-the inputs means a new run.
+offline apart from Door43 pins and stays clean. The build
+(`buildDraftGlossary`) is the one check every record passes, whatever its
+language or book. It refuses a record whose prompt SHA-256 is not the
+committed prompt file's, whose drafting and checking models are of one
+family (also refused before any call), whose articles differ from the
+TWL's, whose English headword differs from the pinned `en_tw` (stale), that
+names a reference term the pinned FIA list does not have, or whose gates or
+status break the rules; and it checks that the built terms and verses are
+the record's and the TWL's. A headword that names an FIA term but uses none
+of its renderings (compared on the `、`-separated renderings) gets the
+`reference` gate, so the mismatch is recorded and the term goes to the
+reader. Changing the prompt or the inputs means a new run.
 
 ### Models
 

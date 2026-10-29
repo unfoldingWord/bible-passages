@@ -22,6 +22,8 @@ import {
 import {
   buildDraftGlossary,
   DRAFT_LANGUAGES,
+  parseFia,
+  PROMPT_FILE,
   type DraftGlossary,
   type DraftRecord,
 } from "../lib/key-terms.ts";
@@ -103,6 +105,11 @@ for (const book of GLOSSARY_BOOKS) {
       record,
       file: path,
       rows,
+      prompt: readFileSync(
+        new URL(`../../${PROMPT_FILE}`, import.meta.url),
+        "utf8"
+      ),
+      reference: parseFia(await read(DRAFT_LANGUAGES[language]!.reference)),
       english: (a) => {
         const word = englishHeadwords.get(a);
         if (word === undefined) throw new Error(`en: no headword for ${a}`);

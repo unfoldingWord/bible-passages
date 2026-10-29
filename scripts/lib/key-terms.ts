@@ -17,6 +17,8 @@
 // Status follows docs/schema.md: a term is `ai-checked` only when the
 // checker agreed and every gate passed; anything else stays `unreviewed` and
 // is listed under `review` for the reader. Nothing here sets a higher status.
+import { STRUCTURE_BOOKS } from "./books.ts";
+import { family } from "./check.ts";
 import {
   inScript,
   linkedArticles,
@@ -45,9 +47,14 @@ export const DRAFT_LANGUAGES: Readonly<
 /** One reference term: its English name and its rendering in the language. */
 export type ReferenceTerm = { en: string; term: string };
 
+/** The prompt both models are given; a record names it with its SHA-256. */
+export const PROMPT_FILE = "prompts/key-terms.md";
+
 /**
  * The terms of an FIA Key Terms file from BibleAquifer (an object of
  * resources, each with `name` and `localizedName`), sorted, each pair once.
+ * A resource with a blank name or rendering is an error, not skipped: the
+ * pinned list is the reference a draft is checked against.
  */
 export function parseFia(json: string): ReferenceTerm[] {
   const raw = JSON.parse(json) as Record<
@@ -60,8 +67,10 @@ export function parseFia(json: string): ReferenceTerm[] {
     if (typeof r.name !== "string" || typeof r.localizedName !== "string")
       throw new Error("FIA: a resource has no name or localizedName");
     const t = { en: r.name.trim(), term: r.localizedName.trim() };
+    if (t.en === "" || t.term === "")
+      throw new Error("FIA: a resource has a blank name or localizedName");
     const id = `${t.en}\t${t.term}`;
-    if (t.en === "" || t.term === "" || seen.has(id)) continue;
+    if (seen.has(id)) continue;
     seen.add(id);
     terms.push(t);
   }
@@ -282,17 +291,62 @@ export function readCheck(
   return { checks, missing, invalid };
 }
 
+/** The renderings a headword or an FIA term lists (`使徒、使徒职分`). */
+const renderings = (text: string): string[] =>
+  text
+    .split(/[、，,;；/]/)
+    .map((r) => r.trim())
+    .filter((r) => r !== "");
+
 /**
- * Mechanical checks on a drafted headword: written mostly in the language's
- * script (`inScript`), with no Latin letters (a name left in English), on
- * one line.
+ * Whether a headword uses the rendering of the reference term it says it
+ * follows: one of its renderings is one of that FIA term's renderings.
+ * True when it names no reference.
  */
-export function gateProblems(headword: string, script: RegExp): string[] {
+export function usesReference(
+  t: { headword: string; reference?: string },
+  reference: ReferenceTerm[]
+): boolean {
+  if (t.reference === undefined) return true;
+  const fia = new Set(
+    reference
+      .filter((r) => r.en === t.reference)
+      .flatMap((r) => renderings(r.term))
+  );
+  return renderings(t.headword).some((r) => fia.has(r));
+}
+
+/**
+ * Mechanical checks on a drafted term: its headword written mostly in the
+ * language's script (`inScript`), with no Latin letters (a name left in
+ * English), on one line; and, when it names a reference term, using that
+ * term's rendering (`reference`), so a mismatch is recorded and the term goes
+ * to the reader.
+ */
+export function gateProblems(
+  t: { headword: string; reference?: string },
+  script: RegExp,
+  reference: ReferenceTerm[]
+): string[] {
+  const { headword } = t;
   const problems: string[] = [];
   if (!inScript(headword, script)) problems.push("script");
   if (/\p{Script=Latin}/u.test(headword)) problems.push("latin-letters");
   if (/[\r\n]/.test(headword)) problems.push("line-break");
+  if (!usesReference(t, reference)) problems.push("reference");
   return problems;
+}
+
+/**
+ * Refuses a drafting and a checking model of one family (ADR 0002): a model
+ * never checks its own family's drafts. Run before any call and again on the
+ * models a record says answered.
+ */
+export function assertFamilies(draftModel: string, checkModel: string): void {
+  if (family(draftModel) === family(checkModel))
+    throw new Error(
+      `the checking model (${checkModel}) must be of a different family from the drafting model (${draftModel})`
+    );
 }
 
 /** The status the rules give a term: see the comment at the top. */
@@ -350,8 +404,8 @@ export async function draftKeyTerms(args: {
   const { tag, book, inputs, draftModel, checkModel } = args;
   const lang = DRAFT_LANGUAGES[tag];
   if (!lang) throw new Error(`not a draft language: ${tag}`);
-  if (draftModel === checkModel)
-    throw new Error("the checking model must differ from the drafting model");
+  if (!STRUCTURE_BOOKS.includes(book)) throw new Error(`not a book: ${book}`);
+  assertFamilies(draftModel, checkModel);
   const articles = inputs.map((t) => t.article);
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
   const calls: CallRecord[] = [];
@@ -409,8 +463,9 @@ export async function draftKeyTerms(args: {
       return { record: null, outcome };
     }
     const draft = readDraft(draftReply, articles, args.reference.terms);
+    // A cost that is not a finite dollar amount of zero or more is unknown.
     const spent = calls[0]?.cost ?? null;
-    if (spent === null) {
+    if (spent === null || !Number.isFinite(spent) || spent < 0) {
       outcome = { stopped: "draft cost unknown; check not run" };
       return { record: null, outcome };
     }
@@ -439,7 +494,7 @@ export async function draftKeyTerms(args: {
     for (const input of inputs) {
       const d = draft.terms[input.article];
       if (!d) continue;
-      const problems = gateProblems(d.headword, lang.script);
+      const problems = gateProblems(d, lang.script, args.reference.terms);
       const gates = problems.length > 0 ? problems : undefined;
       const c = check.checks[input.article];
       terms[input.article] = {
@@ -496,12 +551,16 @@ export type DraftGlossary = {
 };
 
 /**
- * Builds a language's glossary from its committed AI record, offline. The
- * record must name every article the book's TWL links, once, with the
- * English headword the pinned English tW has now (so an English change makes
- * the record stale, not silently wrong), and keep the status rules. Verses
- * come from the TWL, not the record. Credits: the TWL file, the English
- * articles and the reference list, which must share one licence.
+ * Builds a language's glossary from its committed AI record, offline, and is
+ * the one check every record passes, whatever its language or book. The
+ * record must have been made with the committed prompt (by SHA-256), by a
+ * drafting and a checking model of different families; name every article
+ * the book's TWL links, once, with the English headword the pinned English
+ * tW has now (so an English change makes the record stale, not silently
+ * wrong); name only reference terms the pinned list has, with any headword
+ * that does not use its reference's rendering gated; and keep the status
+ * rules. Verses come from the TWL, not the record. Credits: the TWL file, the
+ * English articles and the reference list, which must share one licence.
  */
 export function buildDraftGlossary(args: {
   record: DraftRecord;
@@ -509,6 +568,10 @@ export function buildDraftGlossary(args: {
   rows: TwlRow[];
   english: (article: string) => string;
   credit: (id: string) => Credit;
+  /** The committed prompts/key-terms.md. */
+  prompt: string;
+  /** The pinned reference list the record names, parsed with parseFia. */
+  reference: ReferenceTerm[];
 }): DraftGlossary {
   const { record } = args;
   const where = `${record.language} ${record.book}`;
@@ -520,6 +583,13 @@ export function buildDraftGlossary(args: {
     );
   if (record.reference !== lang.reference)
     throw new Error(`${where}: reference ${record.reference}`);
+  if (
+    record.prompt.file !== PROMPT_FILE ||
+    record.prompt.sha256 !== sha256(args.prompt)
+  )
+    throw new Error(
+      `${where}: made with a prompt other than the committed ${PROMPT_FILE}`
+    );
   const roles = record.calls.map((c) => c.role).join(",");
   const [draftCall, checkCall] = record.calls;
   if (roles !== "draft,check" || !draftCall || !checkCall)
@@ -530,6 +600,12 @@ export function buildDraftGlossary(args: {
   };
   if (models.draft === models.check)
     throw new Error(`${where}: drafted and checked by the same model`);
+  try {
+    assertFamilies(draftCall.model, checkCall.model);
+  } catch (e) {
+    throw new Error(`${where}: ${(e as Error).message}`);
+  }
+  const names = new Set(args.reference.map((r) => r.en));
 
   const linked = linkedArticles(args.rows);
   const extra = Object.keys(record.terms).filter((a) => !linked.has(a));
@@ -552,7 +628,11 @@ export function buildDraftGlossary(args: {
       throw new Error(`${where} ${article}: source ${t.source}`);
     if (t.check && t.check.by !== models.check)
       throw new Error(`${where} ${article}: checked by ${t.check.by}`);
-    const gates = gateProblems(t.headword, lang.script);
+    if (t.reference !== undefined && !names.has(t.reference))
+      throw new Error(
+        `${where} ${article}: reference "${t.reference}" is not in ${record.reference}`
+      );
+    const gates = gateProblems(t, lang.script, args.reference);
     if (JSON.stringify(gates) !== JSON.stringify(t.gates ?? []))
       throw new Error(`${where} ${article}: gates do not match the headword`);
     if (t.status !== statusOf(t))
@@ -561,6 +641,18 @@ export function buildDraftGlossary(args: {
       );
     terms[article] = { ...t, refs };
   }
+  // The built terms are the record's and the TWL's, with the TWL's verses.
+  const keys = JSON.stringify(Object.keys(terms).sort());
+  if (
+    keys !== JSON.stringify(Object.keys(record.terms).sort()) ||
+    keys !== JSON.stringify([...linked.keys()].sort()) ||
+    [...linked].some(
+      ([a, refs]) => JSON.stringify(terms[a]?.refs) !== JSON.stringify(refs)
+    )
+  )
+    throw new Error(
+      `${where}: the built terms do not match the record and TWL`
+    );
   const ids = [
     twlId(record.book),
     ...Object.keys(terms).map((a) => twId("en", a)),
