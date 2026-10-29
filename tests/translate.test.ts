@@ -1,5 +1,7 @@
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it, vi } from "vitest";
 import { ENDPOINT, complete, type Fetch } from "../scripts/lib/openrouter.ts";
@@ -103,6 +105,20 @@ describe("OpenRouter client (fetch mocked; no network)", () => {
         { apiKey: KEY, fetch: f }
       );
       expect(c.usage.cost, String(cost)).toBeNull();
+    }
+  });
+
+  it("rejects a token count that is not a whole non-negative number", async () => {
+    for (const prompt_tokens of [-1, 1.5, "3"]) {
+      const body = okBody("{}");
+      const { f } = fakeFetch({
+        ...body,
+        usage: { ...body.usage, prompt_tokens },
+      });
+      await expect(
+        complete({ model: "m", messages: [] }, { apiKey: KEY, fetch: f }),
+        String(prompt_tokens)
+      ).rejects.toThrow("no usage block");
     }
   });
 
@@ -539,5 +555,35 @@ describe("runner command line", () => {
     expect(r.status).toBe(1);
     expect(r.stderr).toContain("no glossary for zh-Hans TIT");
     expect(r.stderr + r.stdout).not.toContain(KEY);
+  });
+
+  const runWith = (args: string[]) =>
+    spawnSync(
+      process.execPath,
+      [script, "--book", "TIT", "--model", "m", "--lang", "fr", ...args],
+      {
+        env: { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY },
+        encoding: "utf8",
+      }
+    );
+
+  it("refuses an --out that already exists, before any call, keeping the earlier ledger", () => {
+    const dir = mkdtempSync(join(tmpdir(), "translate-"));
+    writeFileSync(join(dir, "run.json"), '{"calls":[{"cost":0.125}]}');
+    const r = runWith(["--out", dir]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("--out already exists");
+    expect(readdirSync(dir)).toEqual(["run.json"]);
+    expect(readFileSync(join(dir, "run.json"), "utf8")).toBe(
+      '{"calls":[{"cost":0.125}]}'
+    );
+  });
+
+  it("refuses an --out inside data/ or dist/, before any call", () => {
+    for (const out of ["data/titles", "dist", "./data/x/../drafts"]) {
+      const r = runWith(["--out", out]);
+      expect(r.status, out).toBe(1);
+      expect(r.stderr, out).toContain("must not be inside data/ or dist/");
+    }
   });
 });

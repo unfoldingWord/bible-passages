@@ -15,6 +15,8 @@
 // (spend limit or unknown cost) or some titles are missing, invalid or
 // unreadable. Exit 1: an error; the ledger still holds what was spent.
 import { existsSync, readFileSync } from "node:fs";
+import { relative } from "node:path";
+import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { complete } from "../lib/openrouter.ts";
 import {
@@ -94,6 +96,15 @@ const out = new URL(
   `${values.out ?? `.cache/translate/${runId}`}/`.replace(/\/+$/, "/"),
   root
 );
+// A run never writes into the dataset: its output is AI drafts for review,
+// and data/ and dist/ are inputs and generated files.
+const inRepo = relative(fileURLToPath(root), fileURLToPath(out));
+if (/^(data|dist)(\/|$)/.test(inRepo))
+  fail(`--out must not be inside data/ or dist/: ${inRepo}`);
+// One directory per run: a second run there would replace the first run's
+// ledger and leave its translations unaccounted for.
+if (existsSync(out))
+  fail(`--out already exists: ${fileURLToPath(out)}; choose a new directory`);
 
 try {
   const { stop, summary } = await runBook({

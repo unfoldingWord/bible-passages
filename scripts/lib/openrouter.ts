@@ -126,16 +126,15 @@ export async function complete(
 /** The usage block, or null when its token counts are missing. */
 function readUsage(raw: Raw): Usage | null {
   const u = raw.usage;
-  if (
-    !u ||
-    typeof u.prompt_tokens !== "number" ||
-    typeof u.completion_tokens !== "number"
-  )
-    return null;
+  const count = (n: unknown): n is number =>
+    typeof n === "number" && Number.isSafeInteger(n) && n >= 0;
+  if (!u || !count(u.prompt_tokens) || !count(u.completion_tokens)) return null;
   return {
     promptTokens: u.prompt_tokens,
     completionTokens: u.completion_tokens,
-    reasoningTokens: u.completion_tokens_details?.reasoning_tokens ?? null,
+    reasoningTokens: count(u.completion_tokens_details?.reasoning_tokens)
+      ? u.completion_tokens_details.reasoning_tokens
+      : null,
     // A cost that is not a usable dollar amount is unknown, not zero.
     cost:
       typeof u.cost === "number" && Number.isFinite(u.cost) && u.cost >= 0

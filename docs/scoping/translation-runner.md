@@ -17,7 +17,8 @@ result and records what each call cost. Issue #10. 6B per
 | Build  | minimal  | `scripts/lib/gates.ts` (Breaks 1 to 3), `scripts/lib/openrouter.ts` and `scripts/lib/translate.ts` (Break 5: every call's model, tokens, cost and time), `scripts/translate/titles.ts` (the command; runs zh-Hans without a glossary only when told to, Break 4), `prompts/translate-titles.md`. No retry, no check pass, no write into `data/`: none has a Break yet.                                                                                                                                                                                                                                                           |
 
 Reversibility: forward = low; backward = low. The runner writes under
-`.cache/` (not committed); nothing in `data/` or `dist/` changes.
+`.cache/` (not committed) by default, refuses an `--out` inside `data/` or
+`dist/` or one that already exists; nothing in `data/` or `dist/` changes.
 
 ## Length ratio (estimated)
 
