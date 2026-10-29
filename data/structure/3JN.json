@@ -1,0 +1,42 @@
+{
+  "book": "3JN",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "3JN.P.1.1-4", "start": [1, 1], "end": [1, 4] },
+    { "key": "3JN.P.1.5-8", "start": [1, 5], "end": [1, 8] },
+    { "key": "3JN.P.1.9-12", "start": [1, 9], "end": [1, 12] },
+    { "key": "3JN.P.1.13-15", "start": [1, 13], "end": [1, 15] }
+  ],
+  "segments": [
+    {
+      "key": "3JN.1.1-4",
+      "pericope": "3JN.P.1.1-4",
+      "start": [1, 1],
+      "end": [1, 4]
+    },
+    {
+      "key": "3JN.1.5-8",
+      "pericope": "3JN.P.1.5-8",
+      "start": [1, 5],
+      "end": [1, 8]
+    },
+    {
+      "key": "3JN.1.9-10",
+      "pericope": "3JN.P.1.9-12",
+      "start": [1, 9],
+      "end": [1, 10]
+    },
+    {
+      "key": "3JN.1.11-12",
+      "pericope": "3JN.P.1.9-12",
+      "start": [1, 11],
+      "end": [1, 12]
+    },
+    {
+      "key": "3JN.1.13-15",
+      "pericope": "3JN.P.1.13-15",
+      "start": [1, 13],
+      "end": [1, 15]
+    }
+  ]
+}

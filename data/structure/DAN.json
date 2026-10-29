@@ -1,0 +1,1097 @@
+{
+  "book": "DAN",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "DAN.P.1.1-7", "start": [1, 1], "end": [1, 7] },
+    { "key": "DAN.P.1.8-16", "start": [1, 8], "end": [1, 16] },
+    { "key": "DAN.P.1.17-21", "start": [1, 17], "end": [1, 21] },
+    { "key": "DAN.P.2.1-13", "start": [2, 1], "end": [2, 13] },
+    { "key": "DAN.P.2.14-23", "start": [2, 14], "end": [2, 23] },
+    { "key": "DAN.P.2.24-45", "start": [2, 24], "end": [2, 45] },
+    { "key": "DAN.P.2.46-49", "start": [2, 46], "end": [2, 49] },
+    { "key": "DAN.P.3.1-7", "start": [3, 1], "end": [3, 7] },
+    { "key": "DAN.P.3.8-18", "start": [3, 8], "end": [3, 18] },
+    { "key": "DAN.P.3.19-30", "start": [3, 19], "end": [3, 30] },
+    { "key": "DAN.P.4.1-3", "start": [4, 1], "end": [4, 3] },
+    { "key": "DAN.P.4.4-18", "start": [4, 4], "end": [4, 18] },
+    { "key": "DAN.P.4.19-27", "start": [4, 19], "end": [4, 27] },
+    { "key": "DAN.P.4.28-33", "start": [4, 28], "end": [4, 33] },
+    { "key": "DAN.P.4.34-37", "start": [4, 34], "end": [4, 37] },
+    { "key": "DAN.P.5.1-4", "start": [5, 1], "end": [5, 4] },
+    { "key": "DAN.P.5.5-12", "start": [5, 5], "end": [5, 12] },
+    { "key": "DAN.P.5.13-31", "start": [5, 13], "end": [5, 31] },
+    { "key": "DAN.P.6.1-9", "start": [6, 1], "end": [6, 9] },
+    { "key": "DAN.P.6.10-24", "start": [6, 10], "end": [6, 24] },
+    { "key": "DAN.P.6.25-28", "start": [6, 25], "end": [6, 28] },
+    { "key": "DAN.P.7.1-8", "start": [7, 1], "end": [7, 8] },
+    { "key": "DAN.P.7.9-12", "start": [7, 9], "end": [7, 12] },
+    { "key": "DAN.P.7.13-14", "start": [7, 13], "end": [7, 14] },
+    { "key": "DAN.P.7.15-28", "start": [7, 15], "end": [7, 28] },
+    { "key": "DAN.P.8.1-14", "start": [8, 1], "end": [8, 14] },
+    { "key": "DAN.P.8.15-27", "start": [8, 15], "end": [8, 27] },
+    { "key": "DAN.P.9.1-19", "start": [9, 1], "end": [9, 19] },
+    { "key": "DAN.P.9.20-27", "start": [9, 20], "end": [9, 27] },
+    { "key": "DAN.P.10.1-21", "start": [10, 1], "end": [10, 21] },
+    { "key": "DAN.P.11.1-35", "start": [11, 1], "end": [11, 35] },
+    { "key": "DAN.P.11.36-45", "start": [11, 36], "end": [11, 45] },
+    { "key": "DAN.P.12.1-13", "start": [12, 1], "end": [12, 13] }
+  ],
+  "segments": [
+    {
+      "key": "DAN.1.1-2",
+      "pericope": "DAN.P.1.1-7",
+      "start": [1, 1],
+      "end": [1, 2]
+    },
+    {
+      "key": "DAN.1.3-5",
+      "pericope": "DAN.P.1.1-7",
+      "start": [1, 3],
+      "end": [1, 5]
+    },
+    {
+      "key": "DAN.1.6-7",
+      "pericope": "DAN.P.1.1-7",
+      "start": [1, 6],
+      "end": [1, 7]
+    },
+    {
+      "key": "DAN.1.8-10",
+      "pericope": "DAN.P.1.8-16",
+      "start": [1, 8],
+      "end": [1, 10]
+    },
+    {
+      "key": "DAN.1.11-13",
+      "pericope": "DAN.P.1.8-16",
+      "start": [1, 11],
+      "end": [1, 13]
+    },
+    {
+      "key": "DAN.1.14-16",
+      "pericope": "DAN.P.1.8-16",
+      "start": [1, 14],
+      "end": [1, 16]
+    },
+    {
+      "key": "DAN.1.17-18",
+      "pericope": "DAN.P.1.17-21",
+      "start": [1, 17],
+      "end": [1, 18]
+    },
+    {
+      "key": "DAN.1.19-21",
+      "pericope": "DAN.P.1.17-21",
+      "start": [1, 19],
+      "end": [1, 21]
+    },
+    {
+      "key": "DAN.2.1-2",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 1],
+      "end": [2, 2]
+    },
+    {
+      "key": "DAN.2.3-4",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 3],
+      "end": [2, 4]
+    },
+    {
+      "key": "DAN.2.5-6",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 5],
+      "end": [2, 6]
+    },
+    {
+      "key": "DAN.2.7-9",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 7],
+      "end": [2, 9]
+    },
+    {
+      "key": "DAN.2.10-11",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 10],
+      "end": [2, 11]
+    },
+    {
+      "key": "DAN.2.12-13",
+      "pericope": "DAN.P.2.1-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "DAN.2.14-16",
+      "pericope": "DAN.P.2.14-23",
+      "start": [2, 14],
+      "end": [2, 16]
+    },
+    {
+      "key": "DAN.2.17-18",
+      "pericope": "DAN.P.2.14-23",
+      "start": [2, 17],
+      "end": [2, 18]
+    },
+    {
+      "key": "DAN.2.19-20",
+      "pericope": "DAN.P.2.14-23",
+      "start": [2, 19],
+      "end": [2, 20]
+    },
+    {
+      "key": "DAN.2.21-22",
+      "pericope": "DAN.P.2.14-23",
+      "start": [2, 21],
+      "end": [2, 22]
+    },
+    {
+      "key": "DAN.2.23-23",
+      "pericope": "DAN.P.2.14-23",
+      "start": [2, 23],
+      "end": [2, 23]
+    },
+    {
+      "key": "DAN.2.24-24",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 24],
+      "end": [2, 24]
+    },
+    {
+      "key": "DAN.2.25-26",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 25],
+      "end": [2, 26]
+    },
+    {
+      "key": "DAN.2.27-28",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 27],
+      "end": [2, 28]
+    },
+    {
+      "key": "DAN.2.29-30",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 29],
+      "end": [2, 30]
+    },
+    {
+      "key": "DAN.2.31-33",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 31],
+      "end": [2, 33]
+    },
+    {
+      "key": "DAN.2.34-35",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 34],
+      "end": [2, 35]
+    },
+    {
+      "key": "DAN.2.36-38",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 36],
+      "end": [2, 38]
+    },
+    {
+      "key": "DAN.2.39-39",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 39],
+      "end": [2, 39]
+    },
+    {
+      "key": "DAN.2.40-40",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 40],
+      "end": [2, 40]
+    },
+    {
+      "key": "DAN.2.41-43",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 41],
+      "end": [2, 43]
+    },
+    {
+      "key": "DAN.2.44-45",
+      "pericope": "DAN.P.2.24-45",
+      "start": [2, 44],
+      "end": [2, 45]
+    },
+    {
+      "key": "DAN.2.46-47",
+      "pericope": "DAN.P.2.46-49",
+      "start": [2, 46],
+      "end": [2, 47]
+    },
+    {
+      "key": "DAN.2.48-49",
+      "pericope": "DAN.P.2.46-49",
+      "start": [2, 48],
+      "end": [2, 49]
+    },
+    {
+      "key": "DAN.3.1-2",
+      "pericope": "DAN.P.3.1-7",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "DAN.3.3-5",
+      "pericope": "DAN.P.3.1-7",
+      "start": [3, 3],
+      "end": [3, 5]
+    },
+    {
+      "key": "DAN.3.6-7",
+      "pericope": "DAN.P.3.1-7",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "DAN.3.8-10",
+      "pericope": "DAN.P.3.8-18",
+      "start": [3, 8],
+      "end": [3, 10]
+    },
+    {
+      "key": "DAN.3.11-12",
+      "pericope": "DAN.P.3.8-18",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "DAN.3.13-14",
+      "pericope": "DAN.P.3.8-18",
+      "start": [3, 13],
+      "end": [3, 14]
+    },
+    {
+      "key": "DAN.3.15-15",
+      "pericope": "DAN.P.3.8-18",
+      "start": [3, 15],
+      "end": [3, 15]
+    },
+    {
+      "key": "DAN.3.16-18",
+      "pericope": "DAN.P.3.8-18",
+      "start": [3, 16],
+      "end": [3, 18]
+    },
+    {
+      "key": "DAN.3.19-20",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 19],
+      "end": [3, 20]
+    },
+    {
+      "key": "DAN.3.21-23",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 21],
+      "end": [3, 23]
+    },
+    {
+      "key": "DAN.3.24-25",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 24],
+      "end": [3, 25]
+    },
+    {
+      "key": "DAN.3.26-27",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 26],
+      "end": [3, 27]
+    },
+    {
+      "key": "DAN.3.28-28",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 28],
+      "end": [3, 28]
+    },
+    {
+      "key": "DAN.3.29-30",
+      "pericope": "DAN.P.3.19-30",
+      "start": [3, 29],
+      "end": [3, 30]
+    },
+    {
+      "key": "DAN.4.1-3",
+      "pericope": "DAN.P.4.1-3",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "DAN.4.4-6",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 4],
+      "end": [4, 6]
+    },
+    {
+      "key": "DAN.4.7-9",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 7],
+      "end": [4, 9]
+    },
+    {
+      "key": "DAN.4.10-12",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 10],
+      "end": [4, 12]
+    },
+    {
+      "key": "DAN.4.13-14",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 13],
+      "end": [4, 14]
+    },
+    {
+      "key": "DAN.4.15-16",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 15],
+      "end": [4, 16]
+    },
+    {
+      "key": "DAN.4.17-18",
+      "pericope": "DAN.P.4.4-18",
+      "start": [4, 17],
+      "end": [4, 18]
+    },
+    {
+      "key": "DAN.4.19-19",
+      "pericope": "DAN.P.4.19-27",
+      "start": [4, 19],
+      "end": [4, 19]
+    },
+    {
+      "key": "DAN.4.20-22",
+      "pericope": "DAN.P.4.19-27",
+      "start": [4, 20],
+      "end": [4, 22]
+    },
+    {
+      "key": "DAN.4.23-23",
+      "pericope": "DAN.P.4.19-27",
+      "start": [4, 23],
+      "end": [4, 23]
+    },
+    {
+      "key": "DAN.4.24-25",
+      "pericope": "DAN.P.4.19-27",
+      "start": [4, 24],
+      "end": [4, 25]
+    },
+    {
+      "key": "DAN.4.26-27",
+      "pericope": "DAN.P.4.19-27",
+      "start": [4, 26],
+      "end": [4, 27]
+    },
+    {
+      "key": "DAN.4.28-30",
+      "pericope": "DAN.P.4.28-33",
+      "start": [4, 28],
+      "end": [4, 30]
+    },
+    {
+      "key": "DAN.4.31-32",
+      "pericope": "DAN.P.4.28-33",
+      "start": [4, 31],
+      "end": [4, 32]
+    },
+    {
+      "key": "DAN.4.33-33",
+      "pericope": "DAN.P.4.28-33",
+      "start": [4, 33],
+      "end": [4, 33]
+    },
+    {
+      "key": "DAN.4.34-34",
+      "pericope": "DAN.P.4.34-37",
+      "start": [4, 34],
+      "end": [4, 34]
+    },
+    {
+      "key": "DAN.4.35-35",
+      "pericope": "DAN.P.4.34-37",
+      "start": [4, 35],
+      "end": [4, 35]
+    },
+    {
+      "key": "DAN.4.36-37",
+      "pericope": "DAN.P.4.34-37",
+      "start": [4, 36],
+      "end": [4, 37]
+    },
+    {
+      "key": "DAN.5.1-2",
+      "pericope": "DAN.P.5.1-4",
+      "start": [5, 1],
+      "end": [5, 2]
+    },
+    {
+      "key": "DAN.5.3-4",
+      "pericope": "DAN.P.5.1-4",
+      "start": [5, 3],
+      "end": [5, 4]
+    },
+    {
+      "key": "DAN.5.5-6",
+      "pericope": "DAN.P.5.5-12",
+      "start": [5, 5],
+      "end": [5, 6]
+    },
+    {
+      "key": "DAN.5.7-7",
+      "pericope": "DAN.P.5.5-12",
+      "start": [5, 7],
+      "end": [5, 7]
+    },
+    {
+      "key": "DAN.5.8-9",
+      "pericope": "DAN.P.5.5-12",
+      "start": [5, 8],
+      "end": [5, 9]
+    },
+    {
+      "key": "DAN.5.10-10",
+      "pericope": "DAN.P.5.5-12",
+      "start": [5, 10],
+      "end": [5, 10]
+    },
+    {
+      "key": "DAN.5.11-12",
+      "pericope": "DAN.P.5.5-12",
+      "start": [5, 11],
+      "end": [5, 12]
+    },
+    {
+      "key": "DAN.5.13-14",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 13],
+      "end": [5, 14]
+    },
+    {
+      "key": "DAN.5.15-16",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 15],
+      "end": [5, 16]
+    },
+    {
+      "key": "DAN.5.17-19",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 17],
+      "end": [5, 19]
+    },
+    {
+      "key": "DAN.5.20-21",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 20],
+      "end": [5, 21]
+    },
+    {
+      "key": "DAN.5.22-24",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 22],
+      "end": [5, 24]
+    },
+    {
+      "key": "DAN.5.25-28",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 25],
+      "end": [5, 28]
+    },
+    {
+      "key": "DAN.5.29-31",
+      "pericope": "DAN.P.5.13-31",
+      "start": [5, 29],
+      "end": [5, 31]
+    },
+    {
+      "key": "DAN.6.1-3",
+      "pericope": "DAN.P.6.1-9",
+      "start": [6, 1],
+      "end": [6, 3]
+    },
+    {
+      "key": "DAN.6.4-5",
+      "pericope": "DAN.P.6.1-9",
+      "start": [6, 4],
+      "end": [6, 5]
+    },
+    {
+      "key": "DAN.6.6-7",
+      "pericope": "DAN.P.6.1-9",
+      "start": [6, 6],
+      "end": [6, 7]
+    },
+    {
+      "key": "DAN.6.8-9",
+      "pericope": "DAN.P.6.1-9",
+      "start": [6, 8],
+      "end": [6, 9]
+    },
+    {
+      "key": "DAN.6.10-11",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 10],
+      "end": [6, 11]
+    },
+    {
+      "key": "DAN.6.12-12",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 12],
+      "end": [6, 12]
+    },
+    {
+      "key": "DAN.6.13-14",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 13],
+      "end": [6, 14]
+    },
+    {
+      "key": "DAN.6.15-15",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 15],
+      "end": [6, 15]
+    },
+    {
+      "key": "DAN.6.16-16",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 16],
+      "end": [6, 16]
+    },
+    {
+      "key": "DAN.6.17-18",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 17],
+      "end": [6, 18]
+    },
+    {
+      "key": "DAN.6.19-20",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 19],
+      "end": [6, 20]
+    },
+    {
+      "key": "DAN.6.21-22",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 21],
+      "end": [6, 22]
+    },
+    {
+      "key": "DAN.6.23-23",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 23],
+      "end": [6, 23]
+    },
+    {
+      "key": "DAN.6.24-24",
+      "pericope": "DAN.P.6.10-24",
+      "start": [6, 24],
+      "end": [6, 24]
+    },
+    {
+      "key": "DAN.6.25-25",
+      "pericope": "DAN.P.6.25-28",
+      "start": [6, 25],
+      "end": [6, 25]
+    },
+    {
+      "key": "DAN.6.26-27",
+      "pericope": "DAN.P.6.25-28",
+      "start": [6, 26],
+      "end": [6, 27]
+    },
+    {
+      "key": "DAN.6.28-28",
+      "pericope": "DAN.P.6.25-28",
+      "start": [6, 28],
+      "end": [6, 28]
+    },
+    {
+      "key": "DAN.7.1-3",
+      "pericope": "DAN.P.7.1-8",
+      "start": [7, 1],
+      "end": [7, 3]
+    },
+    {
+      "key": "DAN.7.4-5",
+      "pericope": "DAN.P.7.1-8",
+      "start": [7, 4],
+      "end": [7, 5]
+    },
+    {
+      "key": "DAN.7.6-7",
+      "pericope": "DAN.P.7.1-8",
+      "start": [7, 6],
+      "end": [7, 7]
+    },
+    {
+      "key": "DAN.7.8-8",
+      "pericope": "DAN.P.7.1-8",
+      "start": [7, 8],
+      "end": [7, 8]
+    },
+    {
+      "key": "DAN.7.9-9",
+      "pericope": "DAN.P.7.9-12",
+      "start": [7, 9],
+      "end": [7, 9]
+    },
+    {
+      "key": "DAN.7.10-10",
+      "pericope": "DAN.P.7.9-12",
+      "start": [7, 10],
+      "end": [7, 10]
+    },
+    {
+      "key": "DAN.7.11-12",
+      "pericope": "DAN.P.7.9-12",
+      "start": [7, 11],
+      "end": [7, 12]
+    },
+    {
+      "key": "DAN.7.13-14",
+      "pericope": "DAN.P.7.13-14",
+      "start": [7, 13],
+      "end": [7, 14]
+    },
+    {
+      "key": "DAN.7.15-16",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 15],
+      "end": [7, 16]
+    },
+    {
+      "key": "DAN.7.17-18",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 17],
+      "end": [7, 18]
+    },
+    {
+      "key": "DAN.7.19-20",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 19],
+      "end": [7, 20]
+    },
+    {
+      "key": "DAN.7.21-22",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 21],
+      "end": [7, 22]
+    },
+    {
+      "key": "DAN.7.23-24",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 23],
+      "end": [7, 24]
+    },
+    {
+      "key": "DAN.7.25-26",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 25],
+      "end": [7, 26]
+    },
+    {
+      "key": "DAN.7.27-28",
+      "pericope": "DAN.P.7.15-28",
+      "start": [7, 27],
+      "end": [7, 28]
+    },
+    {
+      "key": "DAN.8.1-2",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 1],
+      "end": [8, 2]
+    },
+    {
+      "key": "DAN.8.3-4",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 3],
+      "end": [8, 4]
+    },
+    {
+      "key": "DAN.8.5-6",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 5],
+      "end": [8, 6]
+    },
+    {
+      "key": "DAN.8.7-8",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 7],
+      "end": [8, 8]
+    },
+    {
+      "key": "DAN.8.9-10",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 9],
+      "end": [8, 10]
+    },
+    {
+      "key": "DAN.8.11-12",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 11],
+      "end": [8, 12]
+    },
+    {
+      "key": "DAN.8.13-14",
+      "pericope": "DAN.P.8.1-14",
+      "start": [8, 13],
+      "end": [8, 14]
+    },
+    {
+      "key": "DAN.8.15-17",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 15],
+      "end": [8, 17]
+    },
+    {
+      "key": "DAN.8.18-19",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 18],
+      "end": [8, 19]
+    },
+    {
+      "key": "DAN.8.20-21",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 20],
+      "end": [8, 21]
+    },
+    {
+      "key": "DAN.8.22-23",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 22],
+      "end": [8, 23]
+    },
+    {
+      "key": "DAN.8.24-25",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 24],
+      "end": [8, 25]
+    },
+    {
+      "key": "DAN.8.26-26",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 26],
+      "end": [8, 26]
+    },
+    {
+      "key": "DAN.8.27-27",
+      "pericope": "DAN.P.8.15-27",
+      "start": [8, 27],
+      "end": [8, 27]
+    },
+    {
+      "key": "DAN.9.1-2",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "DAN.9.3-4",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 3],
+      "end": [9, 4]
+    },
+    {
+      "key": "DAN.9.5-6",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 5],
+      "end": [9, 6]
+    },
+    {
+      "key": "DAN.9.7-8",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 7],
+      "end": [9, 8]
+    },
+    {
+      "key": "DAN.9.9-11",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 9],
+      "end": [9, 11]
+    },
+    {
+      "key": "DAN.9.12-14",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 12],
+      "end": [9, 14]
+    },
+    {
+      "key": "DAN.9.15-16",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 15],
+      "end": [9, 16]
+    },
+    {
+      "key": "DAN.9.17-19",
+      "pericope": "DAN.P.9.1-19",
+      "start": [9, 17],
+      "end": [9, 19]
+    },
+    {
+      "key": "DAN.9.20-21",
+      "pericope": "DAN.P.9.20-27",
+      "start": [9, 20],
+      "end": [9, 21]
+    },
+    {
+      "key": "DAN.9.22-23",
+      "pericope": "DAN.P.9.20-27",
+      "start": [9, 22],
+      "end": [9, 23]
+    },
+    {
+      "key": "DAN.9.24-25",
+      "pericope": "DAN.P.9.20-27",
+      "start": [9, 24],
+      "end": [9, 25]
+    },
+    {
+      "key": "DAN.9.26-26",
+      "pericope": "DAN.P.9.20-27",
+      "start": [9, 26],
+      "end": [9, 26]
+    },
+    {
+      "key": "DAN.9.27-27",
+      "pericope": "DAN.P.9.20-27",
+      "start": [9, 27],
+      "end": [9, 27]
+    },
+    {
+      "key": "DAN.10.1-1",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 1],
+      "end": [10, 1]
+    },
+    {
+      "key": "DAN.10.2-3",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 2],
+      "end": [10, 3]
+    },
+    {
+      "key": "DAN.10.4-6",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 4],
+      "end": [10, 6]
+    },
+    {
+      "key": "DAN.10.7-9",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 7],
+      "end": [10, 9]
+    },
+    {
+      "key": "DAN.10.10-11",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 10],
+      "end": [10, 11]
+    },
+    {
+      "key": "DAN.10.12-13",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 12],
+      "end": [10, 13]
+    },
+    {
+      "key": "DAN.10.14-15",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 14],
+      "end": [10, 15]
+    },
+    {
+      "key": "DAN.10.16-17",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 16],
+      "end": [10, 17]
+    },
+    {
+      "key": "DAN.10.18-19",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 18],
+      "end": [10, 19]
+    },
+    {
+      "key": "DAN.10.20-21",
+      "pericope": "DAN.P.10.1-21",
+      "start": [10, 20],
+      "end": [10, 21]
+    },
+    {
+      "key": "DAN.11.1-2",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 1],
+      "end": [11, 2]
+    },
+    {
+      "key": "DAN.11.3-4",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 3],
+      "end": [11, 4]
+    },
+    {
+      "key": "DAN.11.5-6",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 5],
+      "end": [11, 6]
+    },
+    {
+      "key": "DAN.11.7-9",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 7],
+      "end": [11, 9]
+    },
+    {
+      "key": "DAN.11.10-10",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 10],
+      "end": [11, 10]
+    },
+    {
+      "key": "DAN.11.11-12",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 11],
+      "end": [11, 12]
+    },
+    {
+      "key": "DAN.11.13-13",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 13],
+      "end": [11, 13]
+    },
+    {
+      "key": "DAN.11.14-14",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 14],
+      "end": [11, 14]
+    },
+    {
+      "key": "DAN.11.15-16",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 15],
+      "end": [11, 16]
+    },
+    {
+      "key": "DAN.11.17-19",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 17],
+      "end": [11, 19]
+    },
+    {
+      "key": "DAN.11.20-22",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 20],
+      "end": [11, 22]
+    },
+    {
+      "key": "DAN.11.23-24",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 23],
+      "end": [11, 24]
+    },
+    {
+      "key": "DAN.11.25-27",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 25],
+      "end": [11, 27]
+    },
+    {
+      "key": "DAN.11.28-28",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 28],
+      "end": [11, 28]
+    },
+    {
+      "key": "DAN.11.29-30",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 29],
+      "end": [11, 30]
+    },
+    {
+      "key": "DAN.11.31-32",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 31],
+      "end": [11, 32]
+    },
+    {
+      "key": "DAN.11.33-35",
+      "pericope": "DAN.P.11.1-35",
+      "start": [11, 33],
+      "end": [11, 35]
+    },
+    {
+      "key": "DAN.11.36-37",
+      "pericope": "DAN.P.11.36-45",
+      "start": [11, 36],
+      "end": [11, 37]
+    },
+    {
+      "key": "DAN.11.38-39",
+      "pericope": "DAN.P.11.36-45",
+      "start": [11, 38],
+      "end": [11, 39]
+    },
+    {
+      "key": "DAN.11.40-41",
+      "pericope": "DAN.P.11.36-45",
+      "start": [11, 40],
+      "end": [11, 41]
+    },
+    {
+      "key": "DAN.11.42-43",
+      "pericope": "DAN.P.11.36-45",
+      "start": [11, 42],
+      "end": [11, 43]
+    },
+    {
+      "key": "DAN.11.44-45",
+      "pericope": "DAN.P.11.36-45",
+      "start": [11, 44],
+      "end": [11, 45]
+    },
+    {
+      "key": "DAN.12.1-2",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 1],
+      "end": [12, 2]
+    },
+    {
+      "key": "DAN.12.3-4",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 3],
+      "end": [12, 4]
+    },
+    {
+      "key": "DAN.12.5-6",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 5],
+      "end": [12, 6]
+    },
+    {
+      "key": "DAN.12.7-7",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 7],
+      "end": [12, 7]
+    },
+    {
+      "key": "DAN.12.8-9",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 8],
+      "end": [12, 9]
+    },
+    {
+      "key": "DAN.12.10-11",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 10],
+      "end": [12, 11]
+    },
+    {
+      "key": "DAN.12.12-13",
+      "pericope": "DAN.P.12.1-13",
+      "start": [12, 12],
+      "end": [12, 13]
+    }
+  ]
+}
