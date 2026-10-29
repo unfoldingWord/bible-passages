@@ -67,8 +67,9 @@ Because the span is in the key, moving a boundary gives the new span its own
 key: a new one, or the same span's earlier key, revived. That is the contract's
 rule ("give the new passage a new key") enforced by the form of the key rather
 than by memory. The old key is retired by appending a row to
-`data/retired-keys.json`, where the latest row for a key is in force. A key is
-never attached to a different span
+`data/retired-keys.json`. While a key is absent from the live structure, its
+latest row there is in force; while it is live, all its rows are history only,
+and reviving it appends nothing. A key is never attached to a different span
 ([decisions/0001](decisions/0001-span-keys.md)).
 
 This replaces the order-based IDs in the pilot (`TIT.P02`), where inserting one

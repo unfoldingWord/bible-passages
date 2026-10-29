@@ -23,11 +23,13 @@ by the DRI on 28 Oct).
   keeps its own stored titles with their status. The revived key's live
   draft is a separate record: it starts `unreviewed`, is not seeded from
   any of those sets, and its reviewer is shown all of them.
-- `data/retired-keys.json` is an append-only log, and the latest row for a
-  key is the one in force. While a key is live, its earlier rows are audit
-  history only: no tool treats it as retired (successor, publishing, title
-  deletion or the key-stability check). When it is retired again, a new
-  row with its new successor is appended, and that row is what is followed.
+- `data/retired-keys.json` is an append-only log. A key's rows apply only
+  while the live structure does not contain that key; then its latest row
+  is the one in force. While a key is live, every row for it, the latest
+  included, is audit history only: no tool treats it as retired (successor,
+  publishing, title deletion or the key-stability check). Reviving a key
+  appends nothing. When it is retired again, a new row with its new
+  successor is appended, and that row is what is followed.
 
 ## Why
 
@@ -51,9 +53,10 @@ drafts. Each retired key names one successor in `data/retired-keys.json`
 (accepted on #17), and the DRI set the rule for each kind of change on
 28 Oct:
 
-In every case the retired key keeps its own stored titles with their
-status; carrying writes an `unreviewed` copy onto the successor and deletes
-nothing.
+In every case, move-back included, the retired key keeps its own stored
+titles with their status, and nothing is deleted. Only resize, and split
+onto its one named successor, write a copy: an `unreviewed` copy on that
+successor. Merge and move-back write no copy.
 
 - **Resize** (one key becomes one key): the old titles carry to the
   successor.
