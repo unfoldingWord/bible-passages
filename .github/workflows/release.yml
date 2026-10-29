@@ -3,8 +3,8 @@ name: Release
 # A pushed tag vX.Y.Z becomes a draft GitHub release with the files in
 # dist/tc-mobile/ attached (docs/schema.md, "Releases"). The tag must match
 # package.json, and the release is built from the pinned sources and checked
-# exactly as CI checks main, plus the key-stability check against the tag
-# before this one. The draft is published by hand after a look.
+# exactly as CI checks main, plus the key-stability check against every
+# earlier release tag. The draft is published by hand after a look.
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # Full history with tags, for the key-stability check.
+          # Full history, for the key-stability check (tags fetched below).
           fetch-depth: 0
 
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -59,8 +59,14 @@ jobs:
 
       - run: npm ci
 
-      # RELEASE_TAG makes the key-stability test compare with the tag
-      # before this one rather than with this tag itself.
+      # The release tags are the key check's baseline. Fetch them explicitly
+      # rather than rely on actions/checkout's defaults: an empty tag list
+      # reads as "never released" and skips every span comparison.
+      - name: Fetch release tags
+        run: git fetch --tags --force origin
+
+      # RELEASE_TAG makes the key-stability test compare with every release
+      # tag except this one, rather than with this tag itself.
       - run: npm run verify
         env:
           RELEASE_TAG: ${{ github.ref_name }}
