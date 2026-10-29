@@ -65,6 +65,22 @@ describe("structure inputs", () => {
     expect(BOOKS.length).toBeGreaterThan(0);
   });
 
+  // Psalms and Song of Songs take their book name from ULT (#39), at one
+  // released commit (v91).
+  it("pins ULT for exactly the two book names decided on #39", () => {
+    const ult = sources.filter((s) => s.id.startsWith("ult-"));
+    expect(ult.map((s) => s.id)).toEqual(["ult-psa", "ult-sng"]);
+    for (const [s, file] of [
+      [ult[0], "19-PSA"],
+      [ult[1], "22-SNG"],
+    ] as const) {
+      expect(s?.url).toBe(
+        `https://git.door43.org/unfoldingWord/en_ult/raw/commit/35d215957f3203fd2e2fac5702ce14902d417f9d/${file}.usfm`
+      );
+      expect(s?.licence).toBe("CC-BY-SA-4.0");
+    }
+  });
+
   it("pins nothing for a book not in ALL_BOOKS", () => {
     const ids = new Set(
       ALL_BOOKS.flatMap(([b]) => [
