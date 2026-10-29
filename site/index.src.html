@@ -208,7 +208,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
     <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-29T01:45:00Z"></span></div>
     <ul>
       <li><b>Titus is the first book on <code>main</code>.</b> Its structure (8 pericopes, 25 segments), its English segment titles and its key-term glossaries in 9 languages merged on 29 Oct, each reviewed by two models on the review bench. tC Mobile's own template checker runs in CI.</li>
-      <li><b>The requirements owner answered every open question on 28 Oct.</b> v0.1 is a gated subset; pericopes come from BSB; segment titles are explanatory comments; single-segment pericopes reuse their title (16,523 English titles). The six disputed Titus titles are settled. Decision 11 (metadata) is being confirmed and decision 8 (chunk source) is the content team's. See <a href="#decisions">Decisions</a>.</li>
+      <li><b>The requirements owner answered every open question on 28 Oct.</b> v0.1 is a gated subset; pericopes come from BSB; segment titles are explanatory comments; single-segment pericopes reuse their title (16,523 English titles). The six disputed Titus titles are answered; their record is PR #26, not yet on <code>main</code>. Decision 11 (metadata) is being confirmed and decision 8 (chunk source) is the content team's. See <a href="#decisions">Decisions</a>.</li>
       <li><b>Keys are decided:</b> a key is its span, a span that comes back keeps its key, and retired keys are an append-only record (<a data-doc="docs/decisions/0001-span-keys.md" target="_blank" rel="noopener">ADR 0001</a>). The release check that enforces this is PR #17, in review.</li>
       <li><b>The constraint now is measurement.</b> Titles per hour, cost per title and review minutes per title are not measured yet; translating Titus with both models (<a data-doc="docs/decisions/0002-measure-translation-models.md" target="_blank" rel="noopener">ADR 0002</a>) measures them. Next gate: Titus measured by 1 Nov. See <a href="#plan">Plan</a>.</li>
     </ul>
@@ -305,7 +305,7 @@ let SNAP = BASE, SNAP_KIND = "base";
 
 const GATES = [
   ["Sun 1 Nov", "Titus measured (#3)", "Titus built end to end, with time and cost per title and review minutes from one real reviewer", "Sprint 2 sizing stays an estimate, flagged here"],
-  ["Sun 1 Nov", "Decisions (#2)", "Scope, pericope source, keys and chunk source decided. Scope, source and keys passed 28 Oct (ADRs 0001, 0003); the chunk source is with the content team", "Build on the UFW chunk files, marked provisional; no keys released"],
+  ["Sun 1 Nov", "Decisions (#2)", "Scope, pericope source, keys and chunk source decided. Scope, source and keys answered 28 Oct; keys are recorded (ADR 0001), scope and source are pending PR #26; the chunk source is with the content team", "Build on the UFW chunk files, marked provisional; no keys released"],
   ["Wed 4 Nov", "Go/no-go 1: scope", "Titus rates × 66 books × 10 languages fit before 13 Nov, cross-model checks included", "Choose the v0.1 subset now and say so"],
   ["Sun 8 Nov", "English complete", "66 books: structure, pericope and segment titles, cross-model check, checks green", "Cut to the books done; the rest in v0.1.x"],
   ["Fri 13 Nov", "Go/no-go 2: release", "Every v0.1 language through the gates; dist passes tC Mobile's checker; notes list review status", "Slip, or ship the subset that passes, as a decision"],
@@ -363,7 +363,7 @@ const CHECKS = [
   ["BSB's verse counts match ULT's versification", "Re-derived", "Last verse per chapter matches ufw.vrs in all 66 books; no verse bridges. Verse contents were not compared."],
   ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Observed", "Titus glossaries built from pinned Door43 releases for ar, es-419, fr, hi, id, pt-BR, ru and sw (PR #20). Arabic has 16 headwords still in English (#21). No Chinese Translation Words (checked 28 Oct)."],
   ["Titus: 8 pericopes and 25 segments", "Re-derived", "data/structure/TIT.json (PR #15); a second model re-derived the same 25 keys from the raw sources."],
-  ["19 of 25 English Titus segment titles passed a second model's check", "Observed", "data/drafts/en/TIT.json (PR #16): Sonnet drafted, Opus checked. The 6 it disputed were decided by the requirements owner on 28 Oct (PR #26)."],
+  ["19 of 25 English Titus segment titles passed a second model's check", "Observed", "data/drafts/en/TIT.json (PR #16): Sonnet drafted, Opus checked. The 6 it disputed were answered by the requirements owner on 28 Oct; that record (PR #26) is not yet on main."],
   ["A released key is never missing, moved or reused for other verses", "Pending", "The check runs against every release tag and the append-only retired-keys record (PR #17, in review). No release exists yet."],
   ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
   ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
