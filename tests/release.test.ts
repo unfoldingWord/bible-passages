@@ -1,4 +1,4 @@
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -52,6 +52,15 @@ describe("release assets", () => {
     expect(problems[1]).toMatch(/^TIT\.json: not JSON/);
   });
 
+  it("fails on a top-level file that is not a package, but keeps .gitkeep", () => {
+    const dir = dist([["TIT.json", "v0.1.0"]]);
+    writeFileSync(join(dir, ".gitkeep"), "");
+    writeFileSync(join(dir, "README.txt"), "x");
+    expect(checkAssets(dir, "v0.1.0").problems).toEqual([
+      "README.txt: top-level file is not a .json package",
+    ]);
+  });
+
   it("fails on a nested file and on no packages", () => {
     const dir = dist([]);
     mkdirSync(join(dir, "titles/en"), { recursive: true });
@@ -66,12 +75,16 @@ describe("release assets", () => {
   // non-zero exit and prints no file to attach.
   it("the CLI exits non-zero on a wrong revision", () => {
     const dir = dist([["TIT.json", "unreleased"]]);
-    const run = () =>
-      execFileSync("node", ["scripts/release/assets.ts", "v0.1.0", dir], {
-        encoding: "utf8",
-        stdio: "pipe",
-      });
-    expect(run).toThrow(/source\.revision is "unreleased", not "v0\.1\.0"/);
+    const run = spawnSync(
+      "node",
+      ["scripts/release/assets.ts", "v0.1.0", dir],
+      { encoding: "utf8" }
+    );
+    expect(run.status).toBe(1);
+    expect(run.stdout).toBe("");
+    expect(run.stderr).toMatch(
+      /source\.revision is "unreleased", not "v0\.1\.0"/
+    );
   });
 
   // The build overwrites data/, so a dry run must stop before it rather than

@@ -13,6 +13,9 @@ export type Assets = { files: string[]; problems: string[] };
  * - Release assets are flat. Title tables (titles/<lang>/<BOOK>.json) share
  *   their package's file name, so a nested file stops the release until
  *   their asset names are decided, rather than being left out silently.
+ * - Every top-level file is a `.json` package (or the `.gitkeep` that keeps
+ *   the directory in git): anything else would be neither checked nor
+ *   attached.
  * - There is at least one package.
  * - Every package's `source.revision` is the tag: a file built without
  *   RELEASE_TAG says "unreleased", and must never be attached.
@@ -28,6 +31,15 @@ export function checkAssets(dir: string, tag: string): Assets {
     .map(
       (f) => `${relative(dir, f)}: nested file has no release asset name yet`
     );
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (
+      !e.isDirectory() &&
+      !e.name.endsWith(".json") &&
+      e.name !== ".gitkeep"
+    ) {
+      problems.push(`${e.name}: top-level file is not a .json package`);
+    }
+  }
   if (files.length === 0) problems.push(`${dir} has no packages`);
   for (const file of files) {
     let revision: unknown;
