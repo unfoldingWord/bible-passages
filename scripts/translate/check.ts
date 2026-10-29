@@ -108,7 +108,14 @@ const translator = (() => {
     return fail((e as Error).message);
   }
 })();
-if (translator === family(model))
+const checker = (() => {
+  try {
+    return family(model);
+  } catch (e) {
+    return fail((e as Error).message);
+  }
+})();
+if (translator === checker)
   fail(`${ledger.model} must be checked by another family, not ${model}`);
 const tags = values.lang ? values.lang.split(",") : ledger.languages;
 if (new Set(tags).size !== tags.length) fail("--lang lists a language twice");

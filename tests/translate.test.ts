@@ -15,6 +15,7 @@ import {
   MODELS,
   parseReply,
   runBook,
+  runLanguages,
   summarise,
   systemPrompt,
   termsFor,
@@ -533,6 +534,54 @@ describe("run ledger and spend fuse", () => {
     );
     expect(summary.cost).toBeCloseTo(0.127, 10);
     expect(summary.unreadable).toBe(1);
+    // A failed reply gets no language file, only its error in the ledger.
+    expect(written.has("es-419/TIT.json")).toBe(false);
+    expect(written.has("fr/TIT.json")).toBe(true);
+  });
+
+  it("treats a cost that is not a finite number >= 0 as unknown, whatever the client", async () => {
+    for (const cost of [Number.NaN, -0.01, Number.POSITIVE_INFINITY]) {
+      const run = vi.fn(async (tag: string) => ({
+        call: {
+          language: tag,
+          keys: [],
+          id: "g",
+          model: "m",
+          promptTokens: 1,
+          completionTokens: 1,
+          reasoningTokens: null,
+          cost,
+          ms: 1,
+        },
+      }));
+      const { stop } = await runLanguages({
+        tags: ["fr", "id"],
+        maxCost: 1,
+        run,
+        record: async () => {},
+        ledger: async () => {},
+      });
+      expect(stop, String(cost)).toEqual({ unknownCost: "fr" });
+      expect(run, String(cost)).toHaveBeenCalledTimes(1);
+    }
+  });
+
+  it("refuses, before any call, a book that is not a USFM book code", async () => {
+    const complete = vi.fn(scripted([]));
+    await expect(
+      runBook({
+        english: { ...english, book: "../../data/x" },
+        tags: ["fr"],
+        glossaries: { fr: null },
+        promptFile,
+        model: "m",
+        complete,
+        maxCost: 1,
+        meta: {},
+        write: async () => {},
+      })
+    ).rejects.toThrow("not a USFM book code");
+    expect(complete).not.toHaveBeenCalled();
   });
 
   it("records an unreadable reply and a non-text value with their call", async () => {
@@ -614,6 +663,21 @@ describe("runner command line", () => {
     expect(readFileSync(join(dir, "run.json"), "utf8")).toBe(
       '{"calls":[{"cost":0.125}]}'
     );
+  });
+
+  it("refuses a --book that is not a USFM book code, before reading any path", () => {
+    for (const book of ["../../package", "tit", "XYZ"]) {
+      const r = spawnSync(
+        process.execPath,
+        [script, "--book", book, "--model", "m", "--lang", "fr"],
+        {
+          env: { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY },
+          encoding: "utf8",
+        }
+      );
+      expect(r.status, book).toBe(1);
+      expect(r.stderr, book).toContain(`not a USFM book code: ${book}`);
+    }
   });
 
   it("refuses an --out inside data/ or dist/, before any call", () => {
