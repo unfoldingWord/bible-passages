@@ -17,6 +17,10 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
 - Glossary code for every book (#30): `GLOSSARY_BOOKS` apart from `BOOKS`;
   `TWL_BOOKS`, the 59 books `en_twl` v91 has; Psalms `c:front` references;
   per-release absent lists; a `no-heading` gap. Still Titus only.
+- Title tables in `dist/tc-mobile/titles/<lang>/<BOOK>.json` (#59), the
+  tc-mobile v0 shape: package segment keys only, plain-string titles,
+  `chapters: {}`. Titles below `ai-checked` are left out, and review status
+  does not travel (tc-mobile#1450, O4). English Titus: 25 of 25 segments.
 - Glossaries for the 59 books `en_twl` v91 has, in the nine languages with
   Translation Words (#30): 531 files, 7,951 pinned inputs. CI caches the
   pinned downloads, keyed on `sources.json`.

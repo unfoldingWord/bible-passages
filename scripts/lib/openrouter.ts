@@ -8,6 +8,18 @@
 
 export const ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 
+/**
+ * The most completion tokens (reasoning included) one call may use. Without
+ * it OpenRouter reserves credit for the model's whole output limit, which an
+ * account with little credit left cannot cover: on 2026-10-29 a Claude check
+ * call was refused with 402 ("You requested up to 65536 tokens"). It also
+ * bounds how far the call in flight can overshoot the spend fuse. The largest completion measured on the Titus
+ * run was 5,503 tokens (2026-10-29, one language, 33 titles), so 16,384
+ * leaves about three times that. A reply cut at the limit does not parse
+ * and is recorded as unreadable, with its call.
+ */
+export const MAX_TOKENS = 16_384;
+
 export type Message = { role: "system" | "user"; content: string };
 
 export type Usage = {
@@ -54,7 +66,12 @@ const redact = (text: string, key: string): string =>
   key.length > 0 ? text.split(key).join("[redacted]") : text;
 
 export async function complete(
-  request: { model: string; messages: Message[]; temperature?: number },
+  request: {
+    model: string;
+    messages: Message[];
+    temperature?: number;
+    maxTokens?: number;
+  },
   options: { apiKey: string; fetch?: Fetch; now?: () => number }
 ): Promise<Completion> {
   const { apiKey } = options;
@@ -73,6 +90,7 @@ export async function complete(
       model: request.model,
       messages: request.messages,
       temperature: request.temperature ?? 0,
+      max_tokens: request.maxTokens ?? MAX_TOKENS,
       // Ask for the usage block with the billed cost.
       usage: { include: true },
     }),

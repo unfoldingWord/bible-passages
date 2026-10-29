@@ -158,10 +158,20 @@ rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
 `prompts/`. Only English Titus exists so far.
 
+A translated draft (`<lang>` other than `en`) has the same record, keyed by
+every titled key in the English table (pericopes and segments), plus `from`,
+the English title it translates, and `gates`, any machine gate problems. Its
+`check` is by a model of another family than the translator's
+(`prompts/check-translations.md`; criteria `accurate`, `terms`, `names`,
+`plain`, `style`), and it is `ai-checked` only when the checker agreed and
+every gate passed. None is committed yet: the DRI chooses the model from the
+Titus measurement first ([decisions/0002](decisions/0002-measure-translation-models.md),
+[scoping/translation-check.md](scoping/translation-check.md)).
+
 Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
 for a disagreement `criteria`, `why` and a `suggestion`). A draft is
-`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
-and goes to a person first. The check's details stay here; the built table
+`ai-checked` only when the checker agreed (and, for a translation, every
+gate passed); anything else stays `unreviewed` and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
 
 ## `data/glossaries/<lang>/<BOOK>.json`
@@ -223,6 +233,41 @@ tc-mobile template package v0:
   until the first release).
 - `attribution`: built from the `sources.json` entries the book used.
 
+### `dist/tc-mobile/titles/<lang>/<BOOK>.json`
+
+A tc-mobile v0 title table, one per package per language in its
+`titleLanguages` whose `data/titles/<lang>/<BOOK>.json` has a title to ship.
+Built by `scripts/lib/title-table.ts`. Today that is English Titus only.
+
+```json
+{
+  "packageId": "bible-passages:TIT",
+  "version": "0.0.0",
+  "language": "en",
+  "chapters": {},
+  "segments": {
+    "TIT.1.1-3": "Paul introduces himself as God’s servant and apostle"
+  }
+}
+```
+
+- `packageId`, `version` and `language` equal the package's `id`, `version`
+  and one of its `titleLanguages`.
+- `chapters` is `{}`: the dataset has no chapter titles.
+- `segments` holds the package's segment keys only, in package order, each
+  with its title as a plain string. Pericope keys (`<BOOK>.P.…`) are left out,
+  since tC Mobile refuses a key its package lacks.
+- A segment with no title is left out; the app then shows no label, which the
+  contract allows. A book with no title to ship gets no table.
+- **Status floor: `ai-checked`.** Titles at `ai-checked`, `human-reviewed` and
+  `approved` are shipped; `unreviewed` titles are left out. The maintainer may
+  change this floor.
+- **Known limitation: status is dropped.** v0 tables hold plain strings, so a
+  phone cannot tell an `ai-checked` title from a `human-reviewed` one. Carrying
+  status needs a tc-mobile `formatVersion` change (tc-mobile#1450, open
+  question O4).
+- An unknown status, or an empty or whitespace-padded title, stops the build.
+
 ## `sources.json`
 
 Every input the build reads, pinned so a build can be repeated:
@@ -269,7 +314,8 @@ check the bump yet.
    stops unless every top-level file in `dist/tc-mobile/` has
    `"revision": "<tag>"` (`scripts/lib/release.ts`). Title tables under
    `dist/tc-mobile/titles/` share their package's file name, so until their
-   asset names are decided a nested file stops the release too.
+   asset names are decided a nested file stops the release too. Since English
+   Titus has a table, no release can be cut until that is decided.
 5. The top-level files are attached to a **draft** release, published by
    hand.
 
@@ -325,8 +371,9 @@ every test run until they exist.
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: the selection procedure is decided: measure Gemini and Claude on
-   Titus, then choose ([decisions/0002](decisions/0002-measure-translation-models.md)).
+6. **Translation**: the selection procedure, the two model IDs and the
+   choice rule are decided: measure Gemini and Claude on Titus, then choose
+   quality first ([decisions/0002](decisions/0002-measure-translation-models.md)).
    Still open: how key-term consistency is checked across a book and a
    language.
 7. **Review viewer**: the request asks for a visual way to review the dataset
