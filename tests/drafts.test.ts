@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 type Title = { text: string; status: string; source: string };
 type Draft = Title & {
   check?: { by: string; verdict: "agree" | "disagree"; suggestion?: string };
+  review?: { by: string; at: string; status: string; text?: string };
 };
 const read = (path: string) =>
   JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
@@ -59,12 +60,32 @@ describe("English Titus segment drafts", () => {
     }
   });
 
-  it("is merged into the built title table", () => {
-    for (const [key, d] of Object.entries(drafts))
-      expect(built[key]).toEqual({
-        text: d.text,
-        status: d.status,
-        source: d.source,
-      });
+  it("records a person's review with who, when and a reviewed status", () => {
+    for (const d of Object.values(drafts)) {
+      if (!d.review) continue;
+      expect(d.review.by).toMatch(/^reviewer:[A-Za-z0-9-]+$/);
+      expect(d.review.at).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(["human-reviewed", "approved"]).toContain(d.review.status);
+      if (d.review.text !== undefined) {
+        expect(d.review.text.length).toBeGreaterThan(0);
+        expect(d.review.text.length).toBeLessThanOrEqual(MAX);
+        expect(d.review.text).toBe(d.review.text.trim());
+      }
+    }
+  });
+
+  it("is merged into the built title table, a review deciding", () => {
+    for (const [key, d] of Object.entries(drafts)) {
+      const r = d.review;
+      expect(built[key]).toEqual(
+        r
+          ? {
+              text: r.text ?? d.text,
+              status: r.status,
+              source: r.text ? r.by : d.source,
+            }
+          : { text: d.text, status: d.status, source: d.source }
+      );
+    }
   });
 });
