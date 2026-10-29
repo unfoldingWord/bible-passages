@@ -1,5 +1,11 @@
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -15,6 +21,7 @@ import {
   MODELS,
   parseReply,
   runBook,
+  span,
   summarise,
   systemPrompt,
   termsFor,
@@ -211,7 +218,63 @@ describe("translation runner", () => {
       language: "fr",
       terms: { "kt/x": { en: "x", headword: "x", refs: ["1:4-5"] } },
     };
-    expect(() => termsFor("TIT.1.4-4", bad)).toThrow("not c:v: 1:4-5");
+    expect(() => termsFor("TIT.1.4-4", bad)).toThrow(
+      "not c:v or c:front: 1:4-5"
+    );
+  });
+
+  it("gives a psalm superscription's terms (c:front) to the span that starts at verse 1 (#54)", () => {
+    // PSA 3's superscription links psalm, David and Absalom (TWL, 3:front).
+    const segments = ["PSA.3.1-2", "PSA.3.3-4", "PSA.3.5-6", "PSA.3.7-8"];
+    const structure = JSON.parse(read("data/structure/PSA.json")) as {
+      segments: { key: string }[];
+    };
+    expect(
+      structure.segments.map((s) => s.key).filter((k) => k.startsWith("PSA.3."))
+    ).toEqual(segments);
+    // Every language with a Psalms glossary (zh-Hans has none yet).
+    const tags = [...Object.keys(LANGUAGES), "en"].filter((t) =>
+      existsSync(new URL(`data/glossaries/${t}/PSA.json`, root))
+    );
+    expect(tags.length).toBeGreaterThanOrEqual(9);
+    for (const tag of tags) {
+      const g = JSON.parse(read(`data/glossaries/${tag}/PSA.json`)) as Glossary;
+      const front = Object.values(g.terms)
+        .filter((t) => usableTerm(t) && t.refs.includes("3:front"))
+        .map(({ en, headword }) => ({ en, headword }));
+      // ar's Translation Words have none of the three (glossary gaps).
+      if (tag !== "ar") expect(front.length, tag).toBeGreaterThan(0);
+      const first = termsFor("PSA.3.1-2", g);
+      for (const t of front) expect(first, `${tag} ${t.en}`).toContainEqual(t);
+      // The heading for the whole psalm starts at verse 1 too.
+      for (const t of front)
+        expect(termsFor("PSA.P.3.1-8", g), `${tag} ${t.en}`).toContainEqual(t);
+      // No later segment takes them, unless one of its own verses links it.
+      for (const key of segments.slice(1)) {
+        const { from, to } = span(key);
+        for (const t of termsFor(key, g)) {
+          const entry = Object.values(g.terms).find(
+            (e) => e.en === t.en && e.headword === t.headword
+          );
+          expect(
+            entry?.refs.some((r) => {
+              const [c, v] = r.split(":");
+              return c === "3" && Number(v) >= from && Number(v) <= to;
+            }),
+            `${tag} ${key} ${t.en}`
+          ).toBe(true);
+        }
+      }
+    }
+    // Absalom is linked only from the superscription.
+    const en = JSON.parse(read("data/glossaries/en/PSA.json")) as Glossary;
+    const absalom = { en: "Absalom", headword: "Absalom" };
+    expect(en.terms["names/absalom"]?.refs).toEqual(["3:front"]);
+    expect(termsFor("PSA.3.1-2", en)).toContainEqual(absalom);
+    for (const key of segments.slice(1))
+      expect(termsFor(key, en), key).not.toContainEqual(absalom);
+    // Another chapter's front does not leak into chapter 3.
+    expect(termsFor("PSA.4.1-1", en)).not.toContainEqual(absalom);
   });
 
   it("leaves out AI-drafted terms no person has reviewed", () => {
