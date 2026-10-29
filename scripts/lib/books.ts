@@ -1,7 +1,7 @@
 /**
  * The 66 books in canonical order, each with the number its file has in
- * `Worldview/en_bsb` (`57-TIT.usfm`; 40 is unused there). Structure and
- * packages are built for all of them.
+ * `Worldview/en_bsb` (`57-TIT.usfm`; 40 is unused there). Every one has its
+ * inputs pinned (`scripts/data/pin-structure.ts`).
  */
 export const ALL_BOOKS: readonly (readonly [code: string, file: string])[] = [
   ["GEN", "01"],
@@ -72,7 +72,10 @@ export const ALL_BOOKS: readonly (readonly [code: string, file: string])[] = [
   ["REV", "67"],
 ];
 
-/** Books whose structure (pericopes and segments) and package are built. */
+/**
+ * Books whose structure (pericopes and segments) and package are built:
+ * every book in ALL_BOOKS.
+ */
 export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
 
 /**

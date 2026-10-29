@@ -7,6 +7,7 @@ import { existsSync, readdirSync } from "node:fs";
 import { BOOKS } from "../lib/books.ts";
 import {
   buildGlossary,
+  isGlossaryInput,
   parseTwl,
   TW,
   twId,
@@ -14,7 +15,7 @@ import {
   type Glossary,
   type TwRepo,
 } from "../lib/glossaries.ts";
-import { readSource, sources } from "../lib/sources.ts";
+import { readSource, source, sources } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 
 const out = new URL("../../data/glossaries/", import.meta.url);
@@ -23,9 +24,7 @@ const pinned = new Set(sources().map((s) => s.id));
 
 // Fetch the glossary inputs into the cache a few at a time; the build below
 // then reads them in order. readSource checks every file against its pin.
-const inputs = [...pinned].filter(
-  (id) => id.startsWith("tw-") || id.startsWith("twl-")
-);
+const inputs = [...pinned].filter(isGlossaryInput);
 await Promise.all(
   Array.from({ length: 8 }, async () => {
     for (let id = inputs.pop(); id !== undefined; id = inputs.pop()) {
@@ -57,7 +56,8 @@ for (const book of BOOKS) {
       book,
       rows,
       english,
-      reader(repo)
+      reader(repo),
+      source
     );
     built.push({
       file: new URL(`${repo.language}/${book}.json`, out),

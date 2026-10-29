@@ -219,21 +219,43 @@ Version numbers follow the contract's (assumed) rules: patch for no key
 changes, minor for keys added, major for keys dropped. The workflow does not
 check the bump yet.
 
-`.github/workflows/release.yml` runs on a pushed `v*` tag:
+`.github/workflows/release.yml` runs on a pushed `v*` tag. Its steps are in
+`scripts/release/run.sh`:
 
 1. The tag must be `vX.Y.Z`, equal `v` + `package.json`'s `version`, and point
    at a commit on `main`. The committed `dist/` already carries the version,
    so the bump is a reviewed PR and the tag follows its merge.
-2. `npm run verify`, with the key-stability check run against the release tag
-   before this one. Only a tag that passes step 1's rules (on `main`, naming
-   its commit's `package.json` version) counts as a release there.
+2. `npm run verify`, with the key-stability check run against every release
+   tag except the one being released. Only a tag that passes step 1's rules
+   (on `main`, naming its commit's `package.json` version) counts as a
+   release there.
 3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
    files exactly, as in CI.
-4. `dist/` is regenerated with `source.revision` set to the tag, and its
-   top-level files are attached to a **draft** release, published by hand.
-   Title tables under `dist/tc-mobile/titles/` share their package's file
-   name, so until their asset names are decided a nested file stops the
-   release.
+4. `dist/` is regenerated with `source.revision` set to the tag. The release
+   stops unless every top-level file in `dist/tc-mobile/` has
+   `"revision": "<tag>"` (`scripts/lib/release.ts`). Title tables under
+   `dist/tc-mobile/titles/` share their package's file name, so until their
+   asset names are decided a nested file stops the release too.
+5. The top-level files are attached to a **draft** release, published by
+   hand.
+
+**A failed release.** A tag that passes step 1 and then fails a later step
+stays in the key check's baseline for every later release (step 2), and its
+version cannot be tagged again while it exists.
+The recovery is to delete the tag, fix on `main`, and tag again. Deleting a
+`v*` tag is a maintainer action: a repository ruleset lets only maintainers
+and admins create, move or delete `v*` tags.
+
+**Dry run.** `scripts/release/run.sh --dry-run` runs steps 1 to 4 at `HEAD`
+for the tag `v` + `package.json`'s version (or a tag given after
+`--dry-run`), prints the `gh release create` it would run, and restores
+`data/` and `dist/`, passed or failed. It refuses to start while `data/` or
+`dist/` has uncommitted changes, since the build overwrites them. It creates
+no tag and no release and needs no token. Run by hand
+from the Actions tab (`workflow_dispatch`), the release workflow does the
+same, with a read-only token:
+`gh workflow run release.yml --repo unfoldingWord/bible-passages --ref main`.
+Step 1 still applies, so the commit must be on `main`.
 
 ## Checks
 

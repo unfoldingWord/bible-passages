@@ -7,8 +7,8 @@
 // For each book in ALL_BOOKS it fetches `<NN>-<BOOK>.usfm` from en_bsb and
 // `chunks/<book>.json` from the versification repo at the pinned commits,
 // and pins each file's SHA-256 with the same licence and attribution the
-// Titus pins carry. A file whose pin already exists must hash the same, so
-// re-running cannot silently move an input.
+// Titus pins carry. A file whose pin already exists must have the same URL,
+// hash, licence and attribution, so re-running cannot silently move an input.
 import { createHash } from "node:crypto";
 import { ALL_BOOKS } from "../lib/books.ts";
 import { sources, type Source } from "../lib/sources.ts";
@@ -37,19 +37,27 @@ const raw = (repo: { repo: string; commit: string }, path: string) =>
 
 // BSB's LICENSE.md dedicates the text to the public domain; the pin says so
 // only while the file at the pinned commit still does.
-const licence = (await get(raw(BSB, "LICENSE.md"))).toString("utf8");
-if (!/dedicated to the public domain/.test(licence)) {
+const terms = (await get(raw(BSB, "LICENSE.md"))).toString("utf8");
+if (!/dedicated to the public domain/.test(terms)) {
   throw new Error(`${BSB.repo}@${BSB.commit}: LICENSE.md is not public domain`);
 }
 
 const existing = new Map(sources().map((s) => [s.id, s]));
 const pin = async (s: Omit<Source, "sha256">): Promise<Source> => {
-  const sha = sha256(await get(s.url));
-  const old = existing.get(s.id);
-  if (old && (old.url !== s.url || old.sha256 !== sha)) {
-    throw new Error(`${s.id}: already pinned to different bytes`);
+  const { id, url, revision, licence, attribution } = s;
+  const pinned = {
+    id,
+    url,
+    revision,
+    sha256: sha256(await get(url)),
+    licence,
+    attribution,
+  };
+  const old = existing.get(id);
+  if (old && JSON.stringify(old) !== JSON.stringify(pinned)) {
+    throw new Error(`${id}: already pinned differently`);
   }
-  return { ...s, sha256: sha };
+  return pinned;
 };
 
 const bsb: Source[] = [];
@@ -79,14 +87,17 @@ for (const [book, file] of ALL_BOOKS) {
   console.log(`${book}: pinned`);
 }
 
-// Keep every other input; replace the structure inputs wholesale, BSB files
-// first and chunk files after the versification they go with.
+// Keep every other input where it is. A structure pin already in the file
+// keeps its place, new ones go at the end, and one for a book no longer in
+// ALL_BOOKS is dropped, so a re-run only ever appends.
 const ours = (id: string) =>
   id.startsWith("bsb-") || id.startsWith("ufw-chunks-");
-const rest = sources().filter((s) => !ours(s.id));
-const vrs = rest.filter((s) => s.id === "ufw-vrs");
-const others = rest.filter((s) => s.id !== "ufw-vrs");
+const pins = new Map([...bsb, ...chunks].map((s) => [s.id, s]));
+const kept = sources()
+  .filter((s) => !ours(s.id) || pins.has(s.id))
+  .map((s) => pins.get(s.id) ?? s);
+const placed = new Set(kept.map((s) => s.id));
 await writeJson(new URL("../../sources.json", import.meta.url), {
-  sources: [...bsb, ...vrs, ...chunks, ...others],
+  sources: [...kept, ...[...pins.values()].filter((s) => !placed.has(s.id))],
 });
-console.log(`${bsb.length + chunks.length} structure inputs pinned`);
+console.log(`${pins.size} structure inputs pinned`);
