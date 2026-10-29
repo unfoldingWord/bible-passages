@@ -185,6 +185,17 @@ describe("gateProblems and statusOf", () => {
     expect(g("使徒、使徒职分", "apostle")).toEqual([]);
     expect(g("耶和华", "Lord")).toEqual([]);
     expect(g("差徒", "apostle")).toEqual(["reference"]);
+    // Only 、 separates renderings.
+    for (const headword of [
+      "差徒/使徒",
+      "差徒;使徒",
+      "差徒，使徒",
+      "差徒,使徒",
+    ])
+      expect(g(headword, "apostle"), headword).toEqual(["reference"]);
+    // A name the list does not have is not a rendering mismatch: readDraft
+    // and the build refuse it.
+    expect(g("差徒", "presbyter")).toEqual([]);
     // A headword with no reference is not compared.
     expect(gateProblems({ headword: "差徒" }, HAN, fia)).toEqual([]);
   });
@@ -600,6 +611,13 @@ const records = readdirSync(new URL("data/glossary-drafts/", root), {
     )
   );
 
+it("has only JSON records for draft languages in data/glossary-drafts/", () => {
+  for (const name of records) {
+    expect(name, name).toMatch(/\.json$/);
+    expect(DRAFT_LANGUAGES[name.split("/")[0]!], name).toBeDefined();
+  }
+});
+
 it("has at least one committed key-term record", () => {
   expect(records).toContain("zh-Hans/TIT.json");
 });
@@ -630,7 +648,9 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       parseTwl(await readSource(twlId(record.book)))
     );
     expect(Object.keys(record.terms).sort()).toEqual([...links.keys()].sort());
-    const script = DRAFT_LANGUAGES[record.language]?.script ?? HAN;
+    const lang = DRAFT_LANGUAGES[record.language];
+    if (!lang) throw new Error(`${path}: not a draft language`);
+    const script = lang.script;
     const fia = parseFia(await readSource(record.reference));
     for (const [a, t] of Object.entries(record.terms)) {
       expect(t.headword, a).toBe(t.headword.normalize("NFC"));

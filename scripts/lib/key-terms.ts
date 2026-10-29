@@ -291,28 +291,32 @@ export function readCheck(
   return { checks, missing, invalid };
 }
 
-/** The renderings a headword or an FIA term lists (`使徒、使徒职分`). */
+/**
+ * The renderings a headword or an FIA term lists, separated by the
+ * enumeration comma `、` only (`使徒、使徒职分`). Any other separator is part
+ * of the rendering, so `差徒/使徒` does not count as using `使徒`.
+ */
 const renderings = (text: string): string[] =>
   text
-    .split(/[、，,;；/]/)
+    .split("、")
     .map((r) => r.trim())
     .filter((r) => r !== "");
 
 /**
  * Whether a headword uses the rendering of the reference term it says it
  * follows: one of its renderings is one of that FIA term's renderings.
- * True when it names no reference.
+ * True when it names no reference, or a name the list does not have: that is
+ * not a rendering mismatch but an invalid draft, which readDraft refuses at
+ * run time and buildDraftGlossary refuses at build.
  */
 export function usesReference(
   t: { headword: string; reference?: string },
   reference: ReferenceTerm[]
 ): boolean {
   if (t.reference === undefined) return true;
-  const fia = new Set(
-    reference
-      .filter((r) => r.en === t.reference)
-      .flatMap((r) => renderings(r.term))
-  );
+  const named = reference.filter((r) => r.en === t.reference);
+  if (named.length === 0) return true;
+  const fia = new Set(named.flatMap((r) => renderings(r.term)));
   return renderings(t.headword).some((r) => fia.has(r));
 }
 
