@@ -313,10 +313,9 @@ every test run until they exist.
    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 10. **Segment title style**: decided: explanatory comment
     ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
-11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
-    difficulty after v0.1. The requirements owner picked "all of it" on
-    28 Oct; being confirmed, since it adds unsized work.
-
+11. **Metadata in v0.1**: decided: key terms and figures of speech, plus any
+    other metadata already in the pinned inputs that needs no new writing
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 12. **Single-segment pericopes**: decided: reuse the pericope title, 16,523
     English titles ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 13. **Spanish language tag**: decided: `es-419`
