@@ -11,3 +11,6 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
 - Repository scaffold: layout, draft schema (`docs/schema.md`), pinned-source
   list, and checks that run tC Mobile's own template validator over
   `dist/tc-mobile/`. No data yet.
+- Inputs for all 66 books pinned in `sources.json` (`scripts/data/pin-structure.ts`),
+  and the build split into books with structure (`STRUCTURE_BOOKS`) and books
+  with titles and glossaries (`BOOKS`). Both are still Titus only.

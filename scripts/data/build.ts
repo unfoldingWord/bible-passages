@@ -1,9 +1,10 @@
-// Builds data/ from the pinned sources: the structure and the English
-// pericope titles for each book, and the verse counts the checks use.
+// Builds data/ from the pinned sources: the structure of every book, the
+// English titles of the books in BOOKS (the book name only for the others),
+// and the verse counts the checks use.
 //
 //   node scripts/data/build.ts
 import { existsSync, readFileSync } from "node:fs";
-import { BOOKS } from "../lib/books.ts";
+import { BOOKS, STRUCTURE_BOOKS } from "../lib/books.ts";
 import { readSource } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 import {
@@ -21,14 +22,15 @@ const write = (path: string, value: unknown) =>
 
 const vrs = parseVrs(await readSource("ufw-vrs"));
 
-// Only what this script writes, so a book dropped from BOOKS leaves no file.
+// Only what this script writes, so a book dropped from the build leaves no
+// file.
 for (const dir of ["structure/", "titles/en/", "versification/"]) {
   clearJson(new URL(dir, data));
 }
 
 await write("versification/ufw.json", vrs);
 
-for (const book of BOOKS) {
+for (const book of STRUCTURE_BOOKS) {
   const id = book.toLowerCase();
   const usfm = await readSource(`bsb-${id}`);
   const lastVerses = vrs[book];
@@ -46,7 +48,11 @@ for (const book of BOOKS) {
     string,
     { text: string; status: string; source: string }
   > = {};
-  for (const h of headings) {
+  // Titles are built one book at a time (AGENTS.md); until a book is in
+  // BOOKS its table holds the book name, which its package needs, and no
+  // titles.
+  const titled = BOOKS.includes(book);
+  for (const h of titled ? headings : []) {
     const p = structure.pericopes.find(
       (p) => p.start[0] === h.chapter && p.start[1] === h.verse
     );
@@ -61,6 +67,7 @@ for (const book of BOOKS) {
   // segment fails the build.
   const draftFile = new URL(`drafts/en/${book}.json`, data);
   if (existsSync(draftFile)) {
+    if (!titled) throw new Error(`${book}: drafts for a book not in BOOKS`);
     const drafts = (
       JSON.parse(readFileSync(draftFile, "utf8")) as {
         titles: Record<
