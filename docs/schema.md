@@ -228,13 +228,10 @@ every test run until they exist.
 
 ## Open decisions
 
-1. **v0.1 scope**: the dataset request asks for pericope titles and segment
-   titles (segments from UTN), for the whole Bible, in the Top 10 Strategic
-   Languages, by 2026-11-16. servant.bible#1 lists segment titles as later.
-   Which one is v0.1?
-2. **Pericope source**: the requirements owner's build plan uses BSB `\s1`
-   headings: 3,016, measured in this repo
-   ([scoping/sizing.md](scoping/sizing.md)). Proposed: confirm BSB.
+1. **v0.1 scope**: decided: a gated subset
+   ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+2. **Pericope source**: decided: BSB `\s1` headings
+   ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 3. **Keys**: decided: span keys. See
    [decisions/0001](decisions/0001-span-keys.md).
 4. **Versification and UTN release**: which scheme spans are checked against,
@@ -250,20 +247,18 @@ every test run until they exist.
 8. **Authoritative chunk source**: the UFW chunk files or ULT's `\ts\*`
    markers. They disagree at 1,184 places
    ([scoping/ts-vs-ufw.tsv](scoping/ts-vs-ufw.tsv)). The content team's call.
-9. **Consensus check in v0.1**: recommended out; BSB titles ship as-is and
-   review flags changes ([scoping/pipeline.md](scoping/pipeline.md#2-consensus-check)).
-10. **Segment title style**: which Translation Academy heading kind
-    (`checking/headings`) segment titles use. Proposed: explanatory comment.
+9. **Consensus check in v0.1**: decided: out
+   ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+10. **Segment title style**: decided: explanatory comment
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
-    difficulty after v0.1.
+    difficulty after v0.1. The requirements owner picked "all of it" on
+    28 Oct; being confirmed, since it adds unsized work.
 
-12. **Single-segment pericopes**: 263 pericopes are exactly one segment
-    (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
-    segment titles describe the same verses. Title both (16,786 English
-    titles) or reuse the pericope title (16,523)?
-13. **Spanish language tag**: every Spanish input is published as `es-419`;
-    the v0.1 list says `es`. Proposed: `es-419` (#20).
-14. **Chinese key terms**: there is no Chinese Translation Words on Door43
-    (checked 2026-10-28). Who carries a zh-Hans key-term list, or the
-    fallback (an AI-drafted list checked by a second model and reviewed by a
-    Chinese reader) if no owner by 2026-11-13?
+12. **Single-segment pericopes**: decided: reuse the pericope title, 16,523
+    English titles ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+13. **Spanish language tag**: decided: `es-419`
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+14. **Chinese key terms**: decided: AI-drafted, checked by a second model,
+    reviewed by a Chinese reader
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
