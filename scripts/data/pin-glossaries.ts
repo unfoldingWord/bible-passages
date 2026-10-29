@@ -4,19 +4,22 @@
 //
 //   node scripts/data/pin-glossaries.ts
 //
-// For each book in BOOKS it fetches the TWL file at the pinned commit, then,
-// for each language, lists that release's files and pins every linked
-// article it has. An article the release lacks must already be listed in
-// the language's `absent` (scripts/lib/glossaries.ts), so a gap is always a
-// recorded measurement. Each repo's manifest must say CC BY-SA 4.0.
+// It checks first that the TWL release has a file for exactly the books in
+// TWL_BOOKS, and that each language's `absent` list
+// (scripts/lib/glossary-absent.ts) is exactly the articles the TWL links,
+// from any of those books, that the release lacks: so a gap is always a
+// recorded measurement, re-derived here. Then, for each book in
+// GLOSSARY_BOOKS, it pins the TWL file and, for each language, every linked
+// article the release has. Each repo's manifest must say CC BY-SA 4.0.
 import { createHash } from "node:crypto";
-import { BOOKS } from "../lib/books.ts";
 import {
+  GLOSSARY_BOOKS,
   isGlossaryInput,
   linkedArticles,
   parseTwl,
   TW,
   TWL,
+  TWL_BOOKS,
   twId,
   twlId,
   twlUrl,
@@ -58,63 +61,116 @@ async function files(repo: string, commit: string): Promise<Set<string>> {
   return new Set(tree.tree.map((t) => t.path));
 }
 
-const pins: Source[] = [];
-const pin = async (
-  id: string,
-  url: string,
-  commit: string,
-  attribution: string
-) => {
-  pins.push({
-    id,
-    url,
-    revision: commit,
-    sha256: sha256(await get(url)),
-    licence: "CC-BY-SA-4.0",
-    attribution,
-  });
+type Job = { id: string; url: string; commit: string; attribution: string };
+const jobs: Job[] = [];
+const queued = new Set<string>();
+const queue = (job: Job) => {
+  if (queued.has(job.id)) return;
+  queued.add(job.id);
+  jobs.push(job);
 };
 
 await checkLicence(TWL.repo, TWL.commit);
 for (const repo of TW) await checkLicence(repo.repo, repo.commit);
 
-for (const book of BOOKS) {
-  const url = twlUrl(book);
-  const tsv = await get(url);
-  await pin(
-    twlId(book),
-    url,
-    TWL.commit,
-    `unfoldingWord Translation Word Links, ${TWL.repo} ${TWL.release}, CC BY-SA 4.0. Original work available at https://git.door43.org/${TWL.repo}`
-  );
-  const linked = [...linkedArticles(parseTwl(tsv.toString("utf8"))).keys()];
-  for (const repo of TW) {
-    const have = await files(repo.repo, repo.commit);
-    const absent = repo.absent[book] ?? [];
-    for (const article of linked) {
-      const inRepo = have.has(`bible/${article}.md`);
-      if (inRepo === absent.includes(article)) {
-        throw new Error(
-          `${repo.language} ${book}: ${article} is ${inRepo ? "in the repo but listed absent" : "missing but not listed absent"}`
-        );
-      }
-      if (!inRepo) continue;
-      const id = twId(repo.language, article);
-      if (pins.some((p) => p.id === id)) continue;
-      await pin(
-        id,
-        twUrl(repo, article),
-        repo.commit,
-        `Translation Words (${repo.door43}), ${repo.repo} ${repo.release}, CC BY-SA 4.0. Original work available at https://git.door43.org/${repo.repo}`
-      );
-    }
-    console.log(`${book} ${repo.language}: pinned`);
+for (const book of GLOSSARY_BOOKS) {
+  if (!TWL_BOOKS.includes(book)) {
+    throw new Error(`${book}: in GLOSSARY_BOOKS but not in TWL_BOOKS`);
   }
 }
 
-// Keep every other input; replace the glossary inputs wholesale.
-const rest = sources().filter((s) => !isGlossaryInput(s.id));
+// The release's books are exactly TWL_BOOKS.
+const twlFiles = [...(await files(TWL.repo, TWL.commit))]
+  .map((f) => /^twl_([1-3A-Z]{3})\.tsv$/.exec(f)?.[1])
+  .filter((b) => b !== undefined);
+const released = TWL_BOOKS.filter((b) => twlFiles.includes(b));
+if (
+  released.length !== TWL_BOOKS.length ||
+  twlFiles.length !== released.length
+) {
+  throw new Error(
+    `${TWL.repo}@${TWL.commit} has ${twlFiles.sort().join(" ")}; TWL_BOOKS is ${TWL_BOOKS.join(" ")}`
+  );
+}
+
+// Every book's links, and every article any of them links.
+const linkedBy = new Map<string, string[]>();
+for (const book of TWL_BOOKS) {
+  const tsv = (await get(twlUrl(book))).toString("utf8");
+  linkedBy.set(book, [...linkedArticles(parseTwl(tsv)).keys()]);
+}
+const allLinked = [...new Set([...linkedBy.values()].flat())].sort();
+console.log(
+  `${TWL_BOOKS.length} TWL books link ${allLinked.length} distinct articles`
+);
+
+for (const repo of TW) {
+  const have = await files(repo.repo, repo.commit);
+  const measured = allLinked.filter((a) => !have.has(`bible/${a}.md`));
+  const listed = [...repo.absent].sort();
+  const extra = listed.filter((a) => !measured.includes(a));
+  const unlisted = measured.filter((a) => !listed.includes(a));
+  if (extra.length > 0 || unlisted.length > 0) {
+    throw new Error(
+      `${repo.language}: absent list disagrees with ${repo.repo}@${repo.commit}: ` +
+        `listed but present or unlinked: ${extra.join(" ") || "none"}; ` +
+        `missing but not listed: ${unlisted.join(" ") || "none"}`
+    );
+  }
+  console.log(`${repo.language}: ${measured.length} linked articles absent`);
+  for (const book of GLOSSARY_BOOKS) {
+    for (const article of linkedBy.get(book) ?? []) {
+      if (repo.absent.includes(article)) continue;
+      queue({
+        id: twId(repo.language, article),
+        url: twUrl(repo, article),
+        commit: repo.commit,
+        attribution: `Translation Words (${repo.door43}), ${repo.repo} ${repo.release}, CC BY-SA 4.0. Original work available at https://git.door43.org/${repo.repo}`,
+      });
+    }
+  }
+}
+// TWL files first, then each language's articles, as before.
+const twlJobs: Job[] = GLOSSARY_BOOKS.map((book) => ({
+  id: twlId(book),
+  url: twlUrl(book),
+  commit: TWL.commit,
+  attribution: `unfoldingWord Translation Word Links, ${TWL.repo} ${TWL.release}, CC BY-SA 4.0. Original work available at https://git.door43.org/${TWL.repo}`,
+}));
+const all = [...twlJobs, ...jobs];
+
+// Fetch a few at a time; the pins keep the order above.
+const pins: Source[] = new Array(all.length);
+let next = 0;
+await Promise.all(
+  Array.from({ length: 8 }, async () => {
+    for (let i = next++; i < all.length; i = next++) {
+      const job = all[i];
+      if (job === undefined) throw new Error(`no pin job at ${i}`);
+      pins[i] = {
+        id: job.id,
+        url: job.url,
+        revision: job.commit,
+        sha256: sha256(await get(job.url)),
+        licence: "CC-BY-SA-4.0",
+        attribution: job.attribution,
+      };
+    }
+  })
+);
+
+// Every slot filled: a hole would be written to sources.json as null.
+for (let i = 0; i < all.length; i++) {
+  if (pins[i] === undefined) throw new Error(`pin ${all[i]?.id} not fetched`);
+}
+
+// Keep every other input; replace the glossary inputs wholesale, where the
+// first of them stood (or at the end), so a re-run moves nothing else.
+const before = sources();
+const first = before.findIndex((s) => isGlossaryInput(s.id));
+const at = first < 0 ? before.length : first;
+const rest = (list: Source[]) => list.filter((s) => !isGlossaryInput(s.id));
 await writeJson(new URL("../../sources.json", import.meta.url), {
-  sources: [...rest, ...pins],
+  sources: [...rest(before.slice(0, at)), ...pins, ...rest(before.slice(at))],
 });
 console.log(`${pins.length} glossary inputs pinned`);

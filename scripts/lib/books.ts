@@ -79,8 +79,8 @@ export const ALL_BOOKS: readonly (readonly [code: string, file: string])[] = [
 export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
 
 /**
- * Books whose titles and glossaries are built so far: one book end to end
- * before the next (AGENTS.md). Every other book has its structure and its
- * book name only, until its titles are built.
+ * Books whose titles are built so far: one book end to end before the next
+ * (AGENTS.md). Every other book has its structure and its book name only,
+ * until its titles are built.
  */
 export const BOOKS = ["TIT"];

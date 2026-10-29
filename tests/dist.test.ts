@@ -1,5 +1,5 @@
-import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import type { Structure } from "../scripts/lib/structure.ts";
@@ -76,5 +76,66 @@ describe("dist/tc-mobile", () => {
       }
     }
     expect(seen.size).toBeGreaterThan(0);
+    // A title table adds no key: each is a segment key from data/structure.
+    for (const file of tableFiles) {
+      const table = read(file) as { segments: Record<string, string> };
+      for (const key of Object.keys(table.segments))
+        expect(seen.has(key), `${file}: ${key} is in no package`).toBe(true);
+    }
+  });
+
+  // Re-derived from data/ here, apart from scripts/data/dist.ts: which tables
+  // exist and what each holds. Shipped statuses are ai-checked and above;
+  // unreviewed titles stay out (docs/schema.md, dist/tc-mobile/titles/).
+  it("title tables are exactly the shippable segment titles in data/titles", () => {
+    const shipped = ["ai-checked", "human-reviewed", "approved"];
+    const expected = new Map<string, Record<string, string>>();
+    for (const file of packageFiles) {
+      const pkg = read(file) as {
+        bookCode: string;
+        titleLanguages: string[];
+        chapters: { segments: { key: string }[] }[];
+      };
+      const keys = pkg.chapters.flatMap((c) => c.segments.map((s) => s.key));
+      for (const lang of pkg.titleLanguages) {
+        const path = fileURLToPath(
+          new URL(
+            `../data/titles/${lang}/${pkg.bookCode}.json`,
+            import.meta.url
+          )
+        );
+        if (!existsSync(path)) continue;
+        const data = read(path) as {
+          titles: Record<string, { text: string; status: string }>;
+        };
+        const segments = Object.fromEntries(
+          keys
+            .filter((k) => shipped.includes(data.titles[k]?.status ?? ""))
+            .map((k) => [k, data.titles[k]!.text])
+        );
+        if (Object.keys(segments).length > 0)
+          expected.set(`${lang}/${pkg.bookCode}.json`, segments);
+      }
+    }
+    const actual = new Map(
+      tableFiles.map((f) => {
+        const t = read(f) as {
+          chapters: object;
+          segments: Record<string, string>;
+        };
+        expect(t.chapters, f).toEqual({});
+        expect(
+          Object.keys(t.segments).filter((k) => k.includes(".P.")),
+          `${f}: pericope keys`
+        ).toEqual([]);
+        return [relative(titleDir, f), t.segments];
+      })
+    );
+    expect(actual).toEqual(expected);
+    // Measured at the commit that added tables: English Titus, all 25
+    // segments (19 ai-checked, 6 human-reviewed); 8 unreviewed pericope
+    // titles left out.
+    expect([...actual.keys()]).toContain("en/TIT.json");
+    expect(Object.keys(actual.get("en/TIT.json") ?? {})).toHaveLength(25);
   });
 });

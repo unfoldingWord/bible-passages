@@ -1,0 +1,124 @@
+{
+  "note": "One defect per case, each with the gate that must catch it and the exact problem it reports.",
+  "cases": [
+    {
+      "why": "(a) left in English",
+      "tag": "fr",
+      "en": "Titus must speak with authority",
+      "value": "Titus must speak with authority",
+      "problem": "equals the English title"
+    },
+    {
+      "why": "(a) left in English, case and spacing aside",
+      "tag": "es-419",
+      "en": "Avoid Divisions",
+      "value": "avoid divisions",
+      "problem": "equals the English title"
+    },
+    {
+      "why": "(a) left in English with a final full stop",
+      "tag": "sw",
+      "en": "Paul greets Titus",
+      "value": "Paul greets Titus.",
+      "problem": "equals the English title"
+    },
+    {
+      "why": "(b) a name left in Latin letters in Arabic",
+      "tag": "ar",
+      "en": "Paul greets Titus",
+      "value": "بولس يحيي Titus",
+      "problem": "stray \"Titus\" outside Arabic"
+    },
+    {
+      "why": "(b) a Latin-script title for Russian",
+      "tag": "ru",
+      "en": "Paul greets Titus",
+      "value": "Pavel privetstvuet Tita",
+      "problem": "stray \"Pavel\" outside Cyrillic"
+    },
+    {
+      "why": "(b) Japanese kana in Simplified Chinese",
+      "tag": "zh-Hans",
+      "en": "Paul greets Titus",
+      "value": "保罗问候テトス",
+      "problem": "stray \"テトス\" outside Han"
+    },
+    {
+      "why": "(b) Cyrillic in a Latin-script language",
+      "tag": "fr",
+      "en": "Paul greets Titus",
+      "value": "Павел salue Tite",
+      "problem": "stray \"Павел\" outside Latin"
+    },
+    {
+      "why": "(b) Hindi written in Latin transliteration",
+      "tag": "hi",
+      "en": "Paul greets Titus",
+      "value": "Paulus Titus ko namaskar karta hai",
+      "problem": "stray \"Paulus\" outside Devanagari"
+    },
+    {
+      "why": "(c) far longer than the English",
+      "tag": "sw",
+      "en": "Final greetings and blessing",
+      "value": "Salamu za mwisho na baraka kutoka kwa Paulo kwa Tito na kwa waamini wote walioko Krete",
+      "problem": "86 characters over a budget of 61"
+    },
+    {
+      "why": "(c) no letters at all",
+      "tag": "id",
+      "en": "Heirs of Grace",
+      "value": "???",
+      "problem": "no letters outside references"
+    },
+    {
+      "why": "(c) empty",
+      "tag": "pt-BR",
+      "en": "Heirs of Grace",
+      "value": "",
+      "problem": "empty"
+    },
+    {
+      "why": "(d) a brace",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers de la {grâce}",
+      "problem": "stray brace"
+    },
+    {
+      "why": "(d) HTML markup",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers de la <b>grâce</b>",
+      "problem": "markup"
+    },
+    {
+      "why": "(d) a USFM marker",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "\\s1 Héritiers de la grâce",
+      "problem": "markup"
+    },
+    {
+      "why": "(d) a line break",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers\nde la grâce",
+      "problem": "line break or tab"
+    },
+    {
+      "why": "(d) surrounding whitespace",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers de la grâce ",
+      "problem": "surrounding whitespace"
+    },
+    {
+      "why": "(d) null-ish text",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers undefined",
+      "problem": "leaked null-ish text"
+    }
+  ]
+}
