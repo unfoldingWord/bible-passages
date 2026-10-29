@@ -1,0 +1,786 @@
+{
+  "book": "HEB",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "HEB.P.1.1-14", "start": [1, 1], "end": [1, 14] },
+    { "key": "HEB.P.2.1-4", "start": [2, 1], "end": [2, 4] },
+    { "key": "HEB.P.2.5-18", "start": [2, 5], "end": [2, 18] },
+    { "key": "HEB.P.3.1-6", "start": [3, 1], "end": [3, 6] },
+    { "key": "HEB.P.3.7-11", "start": [3, 7], "end": [3, 11] },
+    { "key": "HEB.P.3.12-19", "start": [3, 12], "end": [3, 19] },
+    { "key": "HEB.P.4.1-11", "start": [4, 1], "end": [4, 11] },
+    { "key": "HEB.P.4.12-16", "start": [4, 12], "end": [4, 16] },
+    { "key": "HEB.P.5.1-10", "start": [5, 1], "end": [5, 10] },
+    { "key": "HEB.P.5.11-14", "start": [5, 11], "end": [5, 14] },
+    { "key": "HEB.P.6.1-12", "start": [6, 1], "end": [6, 12] },
+    { "key": "HEB.P.6.13-20", "start": [6, 13], "end": [6, 20] },
+    { "key": "HEB.P.7.1-10", "start": [7, 1], "end": [7, 10] },
+    { "key": "HEB.P.7.11-28", "start": [7, 11], "end": [7, 28] },
+    { "key": "HEB.P.8.1-5", "start": [8, 1], "end": [8, 5] },
+    { "key": "HEB.P.8.6-13", "start": [8, 6], "end": [8, 13] },
+    { "key": "HEB.P.9.1-10", "start": [9, 1], "end": [9, 10] },
+    { "key": "HEB.P.9.11-28", "start": [9, 11], "end": [9, 28] },
+    { "key": "HEB.P.10.1-18", "start": [10, 1], "end": [10, 18] },
+    { "key": "HEB.P.10.19-39", "start": [10, 19], "end": [10, 39] },
+    { "key": "HEB.P.11.1-3", "start": [11, 1], "end": [11, 3] },
+    { "key": "HEB.P.11.4-7", "start": [11, 4], "end": [11, 7] },
+    { "key": "HEB.P.11.8-19", "start": [11, 8], "end": [11, 19] },
+    { "key": "HEB.P.11.20-22", "start": [11, 20], "end": [11, 22] },
+    { "key": "HEB.P.11.23-29", "start": [11, 23], "end": [11, 29] },
+    { "key": "HEB.P.11.30-40", "start": [11, 30], "end": [11, 40] },
+    { "key": "HEB.P.12.1-3", "start": [12, 1], "end": [12, 3] },
+    { "key": "HEB.P.12.4-13", "start": [12, 4], "end": [12, 13] },
+    { "key": "HEB.P.12.14-17", "start": [12, 14], "end": [12, 17] },
+    { "key": "HEB.P.12.18-29", "start": [12, 18], "end": [12, 29] },
+    { "key": "HEB.P.13.1-4", "start": [13, 1], "end": [13, 4] },
+    { "key": "HEB.P.13.5-14", "start": [13, 5], "end": [13, 14] },
+    { "key": "HEB.P.13.15-19", "start": [13, 15], "end": [13, 19] },
+    { "key": "HEB.P.13.20-25", "start": [13, 20], "end": [13, 25] }
+  ],
+  "segments": [
+    {
+      "key": "HEB.1.1-3",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "HEB.1.4-5",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 4],
+      "end": [1, 5]
+    },
+    {
+      "key": "HEB.1.6-7",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 6],
+      "end": [1, 7]
+    },
+    {
+      "key": "HEB.1.8-9",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 8],
+      "end": [1, 9]
+    },
+    {
+      "key": "HEB.1.10-12",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 10],
+      "end": [1, 12]
+    },
+    {
+      "key": "HEB.1.13-14",
+      "pericope": "HEB.P.1.1-14",
+      "start": [1, 13],
+      "end": [1, 14]
+    },
+    {
+      "key": "HEB.2.1-1",
+      "pericope": "HEB.P.2.1-4",
+      "start": [2, 1],
+      "end": [2, 1]
+    },
+    {
+      "key": "HEB.2.2-4",
+      "pericope": "HEB.P.2.1-4",
+      "start": [2, 2],
+      "end": [2, 4]
+    },
+    {
+      "key": "HEB.2.5-6",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 5],
+      "end": [2, 6]
+    },
+    {
+      "key": "HEB.2.7-8",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 7],
+      "end": [2, 8]
+    },
+    {
+      "key": "HEB.2.9-10",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 9],
+      "end": [2, 10]
+    },
+    {
+      "key": "HEB.2.11-12",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 11],
+      "end": [2, 12]
+    },
+    {
+      "key": "HEB.2.13-15",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 13],
+      "end": [2, 15]
+    },
+    {
+      "key": "HEB.2.16-18",
+      "pericope": "HEB.P.2.5-18",
+      "start": [2, 16],
+      "end": [2, 18]
+    },
+    {
+      "key": "HEB.3.1-4",
+      "pericope": "HEB.P.3.1-6",
+      "start": [3, 1],
+      "end": [3, 4]
+    },
+    {
+      "key": "HEB.3.5-6",
+      "pericope": "HEB.P.3.1-6",
+      "start": [3, 5],
+      "end": [3, 6]
+    },
+    {
+      "key": "HEB.3.7-8",
+      "pericope": "HEB.P.3.7-11",
+      "start": [3, 7],
+      "end": [3, 8]
+    },
+    {
+      "key": "HEB.3.9-11",
+      "pericope": "HEB.P.3.7-11",
+      "start": [3, 9],
+      "end": [3, 11]
+    },
+    {
+      "key": "HEB.3.12-13",
+      "pericope": "HEB.P.3.12-19",
+      "start": [3, 12],
+      "end": [3, 13]
+    },
+    {
+      "key": "HEB.3.14-15",
+      "pericope": "HEB.P.3.12-19",
+      "start": [3, 14],
+      "end": [3, 15]
+    },
+    {
+      "key": "HEB.3.16-19",
+      "pericope": "HEB.P.3.12-19",
+      "start": [3, 16],
+      "end": [3, 19]
+    },
+    {
+      "key": "HEB.4.1-2",
+      "pericope": "HEB.P.4.1-11",
+      "start": [4, 1],
+      "end": [4, 2]
+    },
+    {
+      "key": "HEB.4.3-5",
+      "pericope": "HEB.P.4.1-11",
+      "start": [4, 3],
+      "end": [4, 5]
+    },
+    {
+      "key": "HEB.4.6-7",
+      "pericope": "HEB.P.4.1-11",
+      "start": [4, 6],
+      "end": [4, 7]
+    },
+    {
+      "key": "HEB.4.8-11",
+      "pericope": "HEB.P.4.1-11",
+      "start": [4, 8],
+      "end": [4, 11]
+    },
+    {
+      "key": "HEB.4.12-13",
+      "pericope": "HEB.P.4.12-16",
+      "start": [4, 12],
+      "end": [4, 13]
+    },
+    {
+      "key": "HEB.4.14-16",
+      "pericope": "HEB.P.4.12-16",
+      "start": [4, 14],
+      "end": [4, 16]
+    },
+    {
+      "key": "HEB.5.1-3",
+      "pericope": "HEB.P.5.1-10",
+      "start": [5, 1],
+      "end": [5, 3]
+    },
+    {
+      "key": "HEB.5.4-5",
+      "pericope": "HEB.P.5.1-10",
+      "start": [5, 4],
+      "end": [5, 5]
+    },
+    {
+      "key": "HEB.5.6-6",
+      "pericope": "HEB.P.5.1-10",
+      "start": [5, 6],
+      "end": [5, 6]
+    },
+    {
+      "key": "HEB.5.7-8",
+      "pericope": "HEB.P.5.1-10",
+      "start": [5, 7],
+      "end": [5, 8]
+    },
+    {
+      "key": "HEB.5.9-10",
+      "pericope": "HEB.P.5.1-10",
+      "start": [5, 9],
+      "end": [5, 10]
+    },
+    {
+      "key": "HEB.5.11-11",
+      "pericope": "HEB.P.5.11-14",
+      "start": [5, 11],
+      "end": [5, 11]
+    },
+    {
+      "key": "HEB.5.12-14",
+      "pericope": "HEB.P.5.11-14",
+      "start": [5, 12],
+      "end": [5, 14]
+    },
+    {
+      "key": "HEB.6.1-3",
+      "pericope": "HEB.P.6.1-12",
+      "start": [6, 1],
+      "end": [6, 3]
+    },
+    {
+      "key": "HEB.6.4-6",
+      "pericope": "HEB.P.6.1-12",
+      "start": [6, 4],
+      "end": [6, 6]
+    },
+    {
+      "key": "HEB.6.7-8",
+      "pericope": "HEB.P.6.1-12",
+      "start": [6, 7],
+      "end": [6, 8]
+    },
+    {
+      "key": "HEB.6.9-10",
+      "pericope": "HEB.P.6.1-12",
+      "start": [6, 9],
+      "end": [6, 10]
+    },
+    {
+      "key": "HEB.6.11-12",
+      "pericope": "HEB.P.6.1-12",
+      "start": [6, 11],
+      "end": [6, 12]
+    },
+    {
+      "key": "HEB.6.13-15",
+      "pericope": "HEB.P.6.13-20",
+      "start": [6, 13],
+      "end": [6, 15]
+    },
+    {
+      "key": "HEB.6.16-18",
+      "pericope": "HEB.P.6.13-20",
+      "start": [6, 16],
+      "end": [6, 18]
+    },
+    {
+      "key": "HEB.6.19-20",
+      "pericope": "HEB.P.6.13-20",
+      "start": [6, 19],
+      "end": [6, 20]
+    },
+    {
+      "key": "HEB.7.1-3",
+      "pericope": "HEB.P.7.1-10",
+      "start": [7, 1],
+      "end": [7, 3]
+    },
+    {
+      "key": "HEB.7.4-6",
+      "pericope": "HEB.P.7.1-10",
+      "start": [7, 4],
+      "end": [7, 6]
+    },
+    {
+      "key": "HEB.7.7-10",
+      "pericope": "HEB.P.7.1-10",
+      "start": [7, 7],
+      "end": [7, 10]
+    },
+    {
+      "key": "HEB.7.11-12",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 11],
+      "end": [7, 12]
+    },
+    {
+      "key": "HEB.7.13-14",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 13],
+      "end": [7, 14]
+    },
+    {
+      "key": "HEB.7.15-17",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 15],
+      "end": [7, 17]
+    },
+    {
+      "key": "HEB.7.18-19",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 18],
+      "end": [7, 19]
+    },
+    {
+      "key": "HEB.7.20-21",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 20],
+      "end": [7, 21]
+    },
+    {
+      "key": "HEB.7.22-24",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 22],
+      "end": [7, 24]
+    },
+    {
+      "key": "HEB.7.25-26",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 25],
+      "end": [7, 26]
+    },
+    {
+      "key": "HEB.7.27-28",
+      "pericope": "HEB.P.7.11-28",
+      "start": [7, 27],
+      "end": [7, 28]
+    },
+    {
+      "key": "HEB.8.1-2",
+      "pericope": "HEB.P.8.1-5",
+      "start": [8, 1],
+      "end": [8, 2]
+    },
+    {
+      "key": "HEB.8.3-5",
+      "pericope": "HEB.P.8.1-5",
+      "start": [8, 3],
+      "end": [8, 5]
+    },
+    {
+      "key": "HEB.8.6-7",
+      "pericope": "HEB.P.8.6-13",
+      "start": [8, 6],
+      "end": [8, 7]
+    },
+    {
+      "key": "HEB.8.8-9",
+      "pericope": "HEB.P.8.6-13",
+      "start": [8, 8],
+      "end": [8, 9]
+    },
+    {
+      "key": "HEB.8.10-10",
+      "pericope": "HEB.P.8.6-13",
+      "start": [8, 10],
+      "end": [8, 10]
+    },
+    {
+      "key": "HEB.8.11-12",
+      "pericope": "HEB.P.8.6-13",
+      "start": [8, 11],
+      "end": [8, 12]
+    },
+    {
+      "key": "HEB.8.13-13",
+      "pericope": "HEB.P.8.6-13",
+      "start": [8, 13],
+      "end": [8, 13]
+    },
+    {
+      "key": "HEB.9.1-2",
+      "pericope": "HEB.P.9.1-10",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "HEB.9.3-5",
+      "pericope": "HEB.P.9.1-10",
+      "start": [9, 3],
+      "end": [9, 5]
+    },
+    {
+      "key": "HEB.9.6-7",
+      "pericope": "HEB.P.9.1-10",
+      "start": [9, 6],
+      "end": [9, 7]
+    },
+    {
+      "key": "HEB.9.8-10",
+      "pericope": "HEB.P.9.1-10",
+      "start": [9, 8],
+      "end": [9, 10]
+    },
+    {
+      "key": "HEB.9.11-12",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 11],
+      "end": [9, 12]
+    },
+    {
+      "key": "HEB.9.13-15",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 13],
+      "end": [9, 15]
+    },
+    {
+      "key": "HEB.9.16-17",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 16],
+      "end": [9, 17]
+    },
+    {
+      "key": "HEB.9.18-20",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 18],
+      "end": [9, 20]
+    },
+    {
+      "key": "HEB.9.21-22",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 21],
+      "end": [9, 22]
+    },
+    {
+      "key": "HEB.9.23-24",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 23],
+      "end": [9, 24]
+    },
+    {
+      "key": "HEB.9.25-26",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 25],
+      "end": [9, 26]
+    },
+    {
+      "key": "HEB.9.27-28",
+      "pericope": "HEB.P.9.11-28",
+      "start": [9, 27],
+      "end": [9, 28]
+    },
+    {
+      "key": "HEB.10.1-4",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 1],
+      "end": [10, 4]
+    },
+    {
+      "key": "HEB.10.5-7",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 5],
+      "end": [10, 7]
+    },
+    {
+      "key": "HEB.10.8-10",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 8],
+      "end": [10, 10]
+    },
+    {
+      "key": "HEB.10.11-14",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 11],
+      "end": [10, 14]
+    },
+    {
+      "key": "HEB.10.15-16",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 15],
+      "end": [10, 16]
+    },
+    {
+      "key": "HEB.10.17-18",
+      "pericope": "HEB.P.10.1-18",
+      "start": [10, 17],
+      "end": [10, 18]
+    },
+    {
+      "key": "HEB.10.19-22",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 19],
+      "end": [10, 22]
+    },
+    {
+      "key": "HEB.10.23-25",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 23],
+      "end": [10, 25]
+    },
+    {
+      "key": "HEB.10.26-27",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 26],
+      "end": [10, 27]
+    },
+    {
+      "key": "HEB.10.28-29",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 28],
+      "end": [10, 29]
+    },
+    {
+      "key": "HEB.10.30-31",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 30],
+      "end": [10, 31]
+    },
+    {
+      "key": "HEB.10.32-34",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 32],
+      "end": [10, 34]
+    },
+    {
+      "key": "HEB.10.35-37",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 35],
+      "end": [10, 37]
+    },
+    {
+      "key": "HEB.10.38-39",
+      "pericope": "HEB.P.10.19-39",
+      "start": [10, 38],
+      "end": [10, 39]
+    },
+    {
+      "key": "HEB.11.1-3",
+      "pericope": "HEB.P.11.1-3",
+      "start": [11, 1],
+      "end": [11, 3]
+    },
+    {
+      "key": "HEB.11.4-4",
+      "pericope": "HEB.P.11.4-7",
+      "start": [11, 4],
+      "end": [11, 4]
+    },
+    {
+      "key": "HEB.11.5-6",
+      "pericope": "HEB.P.11.4-7",
+      "start": [11, 5],
+      "end": [11, 6]
+    },
+    {
+      "key": "HEB.11.7-7",
+      "pericope": "HEB.P.11.4-7",
+      "start": [11, 7],
+      "end": [11, 7]
+    },
+    {
+      "key": "HEB.11.8-10",
+      "pericope": "HEB.P.11.8-19",
+      "start": [11, 8],
+      "end": [11, 10]
+    },
+    {
+      "key": "HEB.11.11-12",
+      "pericope": "HEB.P.11.8-19",
+      "start": [11, 11],
+      "end": [11, 12]
+    },
+    {
+      "key": "HEB.11.13-14",
+      "pericope": "HEB.P.11.8-19",
+      "start": [11, 13],
+      "end": [11, 14]
+    },
+    {
+      "key": "HEB.11.15-16",
+      "pericope": "HEB.P.11.8-19",
+      "start": [11, 15],
+      "end": [11, 16]
+    },
+    {
+      "key": "HEB.11.17-19",
+      "pericope": "HEB.P.11.8-19",
+      "start": [11, 17],
+      "end": [11, 19]
+    },
+    {
+      "key": "HEB.11.20-22",
+      "pericope": "HEB.P.11.20-22",
+      "start": [11, 20],
+      "end": [11, 22]
+    },
+    {
+      "key": "HEB.11.23-26",
+      "pericope": "HEB.P.11.23-29",
+      "start": [11, 23],
+      "end": [11, 26]
+    },
+    {
+      "key": "HEB.11.27-28",
+      "pericope": "HEB.P.11.23-29",
+      "start": [11, 27],
+      "end": [11, 28]
+    },
+    {
+      "key": "HEB.11.29-29",
+      "pericope": "HEB.P.11.23-29",
+      "start": [11, 29],
+      "end": [11, 29]
+    },
+    {
+      "key": "HEB.11.30-31",
+      "pericope": "HEB.P.11.30-40",
+      "start": [11, 30],
+      "end": [11, 31]
+    },
+    {
+      "key": "HEB.11.32-34",
+      "pericope": "HEB.P.11.30-40",
+      "start": [11, 32],
+      "end": [11, 34]
+    },
+    {
+      "key": "HEB.11.35-38",
+      "pericope": "HEB.P.11.30-40",
+      "start": [11, 35],
+      "end": [11, 38]
+    },
+    {
+      "key": "HEB.11.39-40",
+      "pericope": "HEB.P.11.30-40",
+      "start": [11, 39],
+      "end": [11, 40]
+    },
+    {
+      "key": "HEB.12.1-3",
+      "pericope": "HEB.P.12.1-3",
+      "start": [12, 1],
+      "end": [12, 3]
+    },
+    {
+      "key": "HEB.12.4-6",
+      "pericope": "HEB.P.12.4-13",
+      "start": [12, 4],
+      "end": [12, 6]
+    },
+    {
+      "key": "HEB.12.7-8",
+      "pericope": "HEB.P.12.4-13",
+      "start": [12, 7],
+      "end": [12, 8]
+    },
+    {
+      "key": "HEB.12.9-11",
+      "pericope": "HEB.P.12.4-13",
+      "start": [12, 9],
+      "end": [12, 11]
+    },
+    {
+      "key": "HEB.12.12-13",
+      "pericope": "HEB.P.12.4-13",
+      "start": [12, 12],
+      "end": [12, 13]
+    },
+    {
+      "key": "HEB.12.14-17",
+      "pericope": "HEB.P.12.14-17",
+      "start": [12, 14],
+      "end": [12, 17]
+    },
+    {
+      "key": "HEB.12.18-21",
+      "pericope": "HEB.P.12.18-29",
+      "start": [12, 18],
+      "end": [12, 21]
+    },
+    {
+      "key": "HEB.12.22-24",
+      "pericope": "HEB.P.12.18-29",
+      "start": [12, 22],
+      "end": [12, 24]
+    },
+    {
+      "key": "HEB.12.25-26",
+      "pericope": "HEB.P.12.18-29",
+      "start": [12, 25],
+      "end": [12, 26]
+    },
+    {
+      "key": "HEB.12.27-29",
+      "pericope": "HEB.P.12.18-29",
+      "start": [12, 27],
+      "end": [12, 29]
+    },
+    {
+      "key": "HEB.13.1-2",
+      "pericope": "HEB.P.13.1-4",
+      "start": [13, 1],
+      "end": [13, 2]
+    },
+    {
+      "key": "HEB.13.3-4",
+      "pericope": "HEB.P.13.1-4",
+      "start": [13, 3],
+      "end": [13, 4]
+    },
+    {
+      "key": "HEB.13.5-6",
+      "pericope": "HEB.P.13.5-14",
+      "start": [13, 5],
+      "end": [13, 6]
+    },
+    {
+      "key": "HEB.13.7-8",
+      "pericope": "HEB.P.13.5-14",
+      "start": [13, 7],
+      "end": [13, 8]
+    },
+    {
+      "key": "HEB.13.9-11",
+      "pericope": "HEB.P.13.5-14",
+      "start": [13, 9],
+      "end": [13, 11]
+    },
+    {
+      "key": "HEB.13.12-14",
+      "pericope": "HEB.P.13.5-14",
+      "start": [13, 12],
+      "end": [13, 14]
+    },
+    {
+      "key": "HEB.13.15-17",
+      "pericope": "HEB.P.13.15-19",
+      "start": [13, 15],
+      "end": [13, 17]
+    },
+    {
+      "key": "HEB.13.18-19",
+      "pericope": "HEB.P.13.15-19",
+      "start": [13, 18],
+      "end": [13, 19]
+    },
+    {
+      "key": "HEB.13.20-21",
+      "pericope": "HEB.P.13.20-25",
+      "start": [13, 20],
+      "end": [13, 21]
+    },
+    {
+      "key": "HEB.13.22-23",
+      "pericope": "HEB.P.13.20-25",
+      "start": [13, 22],
+      "end": [13, 23]
+    },
+    {
+      "key": "HEB.13.24-25",
+      "pericope": "HEB.P.13.20-25",
+      "start": [13, 24],
+      "end": [13, 25]
+    }
+  ]
+}

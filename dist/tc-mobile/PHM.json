@@ -1,0 +1,113 @@
+{
+  "format": "tc-mobile-template",
+  "formatVersion": 0,
+  "id": "bible-passages:PHM",
+  "version": "0.0.0",
+  "kind": "bible-book",
+  "bookCode": "PHM",
+  "title": { "en": "Philemon" },
+  "titleLanguages": ["en"],
+  "dataLicence": "CC-BY-SA-4.0",
+  "recordingLicence": "CC-BY-SA-4.0",
+  "attribution": "Berean Standard Bible (BSB), section headings, public domain; unfoldingWord versification, CC BY-SA 4.0. Original work available at https://door43.org/; unfoldingWord chunk divisions, CC BY-SA 4.0. Original work available at https://door43.org/",
+  "source": {
+    "url": "https://github.com/unfoldingWord/bible-passages",
+    "revision": "unreleased"
+  },
+  "chapters": [
+    {
+      "key": "PHM.1",
+      "number": 1,
+      "segments": [
+        {
+          "key": "PHM.1.1-3",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 1,
+            "endChapter": 1,
+            "endVerse": 3
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.4-7",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 4,
+            "endChapter": 1,
+            "endVerse": 7
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.8-9",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 8,
+            "endChapter": 1,
+            "endVerse": 9
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.10-13",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 10,
+            "endChapter": 1,
+            "endVerse": 13
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.14-16",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 14,
+            "endChapter": 1,
+            "endVerse": 16
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.17-20",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 17,
+            "endChapter": 1,
+            "endVerse": 20
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.21-22",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 21,
+            "endChapter": 1,
+            "endVerse": 22
+          },
+          "thumbnail": null
+        },
+        {
+          "key": "PHM.1.23-25",
+          "reference": {
+            "book": "PHM",
+            "startChapter": 1,
+            "startVerse": 23,
+            "endChapter": 1,
+            "endVerse": 25
+          },
+          "thumbnail": null
+        }
+      ]
+    }
+  ]
+}

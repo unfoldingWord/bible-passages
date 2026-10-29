@@ -1,0 +1,3580 @@
+{
+  "book": "JER",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "JER.P.1.1-19", "start": [1, 1], "end": [1, 19] },
+    { "key": "JER.P.2.1-13", "start": [2, 1], "end": [2, 13] },
+    { "key": "JER.P.2.14-22", "start": [2, 14], "end": [2, 22] },
+    { "key": "JER.P.2.23-37", "start": [2, 23], "end": [2, 37] },
+    { "key": "JER.P.3.1-5", "start": [3, 1], "end": [3, 5] },
+    { "key": "JER.P.3.6-10", "start": [3, 6], "end": [3, 10] },
+    { "key": "JER.P.3.11-25", "start": [3, 11], "end": [3, 25] },
+    { "key": "JER.P.4.1-4", "start": [4, 1], "end": [4, 4] },
+    { "key": "JER.P.4.5-18", "start": [4, 5], "end": [4, 18] },
+    { "key": "JER.P.4.19-31", "start": [4, 19], "end": [4, 31] },
+    { "key": "JER.P.5.1-13", "start": [5, 1], "end": [5, 13] },
+    { "key": "JER.P.5.14-31", "start": [5, 14], "end": [5, 31] },
+    { "key": "JER.P.6.1-21", "start": [6, 1], "end": [6, 21] },
+    { "key": "JER.P.6.22-30", "start": [6, 22], "end": [6, 30] },
+    { "key": "JER.P.7.1-15", "start": [7, 1], "end": [7, 15] },
+    { "key": "JER.P.7.16-29", "start": [7, 16], "end": [7, 29] },
+    { "key": "JER.P.7.30-34", "start": [7, 30], "end": [7, 34] },
+    { "key": "JER.P.8.1-13", "start": [8, 1], "end": [8, 13] },
+    { "key": "JER.P.8.14-17", "start": [8, 14], "end": [8, 17] },
+    { "key": "JER.P.8.18-22", "start": [8, 18], "end": [8, 22] },
+    { "key": "JER.P.9.1-26", "start": [9, 1], "end": [9, 26] },
+    { "key": "JER.P.10.1-16", "start": [10, 1], "end": [10, 16] },
+    { "key": "JER.P.10.17-25", "start": [10, 17], "end": [10, 25] },
+    { "key": "JER.P.11.1-17", "start": [11, 1], "end": [11, 17] },
+    { "key": "JER.P.11.18-23", "start": [11, 18], "end": [11, 23] },
+    { "key": "JER.P.12.1-4", "start": [12, 1], "end": [12, 4] },
+    { "key": "JER.P.12.5-13", "start": [12, 5], "end": [12, 13] },
+    { "key": "JER.P.12.14-17", "start": [12, 14], "end": [12, 17] },
+    { "key": "JER.P.13.1-11", "start": [13, 1], "end": [13, 11] },
+    { "key": "JER.P.13.12-14", "start": [13, 12], "end": [13, 14] },
+    { "key": "JER.P.13.15-27", "start": [13, 15], "end": [13, 27] },
+    { "key": "JER.P.14.1-18", "start": [14, 1], "end": [14, 18] },
+    { "key": "JER.P.14.19-22", "start": [14, 19], "end": [14, 22] },
+    { "key": "JER.P.15.1-9", "start": [15, 1], "end": [15, 9] },
+    { "key": "JER.P.15.10-18", "start": [15, 10], "end": [15, 18] },
+    { "key": "JER.P.15.19-21", "start": [15, 19], "end": [15, 21] },
+    { "key": "JER.P.16.1-13", "start": [16, 1], "end": [16, 13] },
+    { "key": "JER.P.16.14-21", "start": [16, 14], "end": [16, 21] },
+    { "key": "JER.P.17.1-11", "start": [17, 1], "end": [17, 11] },
+    { "key": "JER.P.17.12-18", "start": [17, 12], "end": [17, 18] },
+    { "key": "JER.P.17.19-27", "start": [17, 19], "end": [17, 27] },
+    { "key": "JER.P.18.1-17", "start": [18, 1], "end": [18, 17] },
+    { "key": "JER.P.18.18-23", "start": [18, 18], "end": [18, 23] },
+    { "key": "JER.P.19.1-15", "start": [19, 1], "end": [19, 15] },
+    { "key": "JER.P.20.1-6", "start": [20, 1], "end": [20, 6] },
+    { "key": "JER.P.20.7-18", "start": [20, 7], "end": [20, 18] },
+    { "key": "JER.P.21.1-10", "start": [21, 1], "end": [21, 10] },
+    { "key": "JER.P.21.11-14", "start": [21, 11], "end": [21, 14] },
+    { "key": "JER.P.22.1-5", "start": [22, 1], "end": [22, 5] },
+    { "key": "JER.P.22.6-9", "start": [22, 6], "end": [22, 9] },
+    { "key": "JER.P.22.10-12", "start": [22, 10], "end": [22, 12] },
+    { "key": "JER.P.22.13-23", "start": [22, 13], "end": [22, 23] },
+    { "key": "JER.P.22.24-30", "start": [22, 24], "end": [22, 30] },
+    { "key": "JER.P.23.1-8", "start": [23, 1], "end": [23, 8] },
+    { "key": "JER.P.23.9-32", "start": [23, 9], "end": [23, 32] },
+    { "key": "JER.P.23.33-40", "start": [23, 33], "end": [23, 40] },
+    { "key": "JER.P.24.1-10", "start": [24, 1], "end": [24, 10] },
+    { "key": "JER.P.25.1-14", "start": [25, 1], "end": [25, 14] },
+    { "key": "JER.P.25.15-33", "start": [25, 15], "end": [25, 33] },
+    { "key": "JER.P.25.34-38", "start": [25, 34], "end": [25, 38] },
+    { "key": "JER.P.26.1-6", "start": [26, 1], "end": [26, 6] },
+    { "key": "JER.P.26.7-15", "start": [26, 7], "end": [26, 15] },
+    { "key": "JER.P.26.16-19", "start": [26, 16], "end": [26, 19] },
+    { "key": "JER.P.26.20-24", "start": [26, 20], "end": [26, 24] },
+    { "key": "JER.P.27.1-22", "start": [27, 1], "end": [27, 22] },
+    { "key": "JER.P.28.1-17", "start": [28, 1], "end": [28, 17] },
+    { "key": "JER.P.29.1-23", "start": [29, 1], "end": [29, 23] },
+    { "key": "JER.P.29.24-32", "start": [29, 24], "end": [29, 32] },
+    { "key": "JER.P.30.1-24", "start": [30, 1], "end": [30, 24] },
+    { "key": "JER.P.31.1-25", "start": [31, 1], "end": [31, 25] },
+    { "key": "JER.P.31.26-40", "start": [31, 26], "end": [31, 40] },
+    { "key": "JER.P.32.1-15", "start": [32, 1], "end": [32, 15] },
+    { "key": "JER.P.32.16-25", "start": [32, 16], "end": [32, 25] },
+    { "key": "JER.P.32.26-35", "start": [32, 26], "end": [32, 35] },
+    { "key": "JER.P.32.36-44", "start": [32, 36], "end": [32, 44] },
+    { "key": "JER.P.33.1-13", "start": [33, 1], "end": [33, 13] },
+    { "key": "JER.P.33.14-26", "start": [33, 14], "end": [33, 26] },
+    { "key": "JER.P.34.1-7", "start": [34, 1], "end": [34, 7] },
+    { "key": "JER.P.34.8-22", "start": [34, 8], "end": [34, 22] },
+    { "key": "JER.P.35.1-11", "start": [35, 1], "end": [35, 11] },
+    { "key": "JER.P.35.12-19", "start": [35, 12], "end": [35, 19] },
+    { "key": "JER.P.36.1-10", "start": [36, 1], "end": [36, 10] },
+    { "key": "JER.P.36.11-19", "start": [36, 11], "end": [36, 19] },
+    { "key": "JER.P.36.20-26", "start": [36, 20], "end": [36, 26] },
+    { "key": "JER.P.36.27-32", "start": [36, 27], "end": [36, 32] },
+    { "key": "JER.P.37.1-10", "start": [37, 1], "end": [37, 10] },
+    { "key": "JER.P.37.11-21", "start": [37, 11], "end": [37, 21] },
+    { "key": "JER.P.38.1-28", "start": [38, 1], "end": [38, 28] },
+    { "key": "JER.P.39.1-10", "start": [39, 1], "end": [39, 10] },
+    { "key": "JER.P.39.11-18", "start": [39, 11], "end": [39, 18] },
+    { "key": "JER.P.40.1-6", "start": [40, 1], "end": [40, 6] },
+    { "key": "JER.P.40.7-12", "start": [40, 7], "end": [40, 12] },
+    { "key": "JER.P.40.13-16", "start": [40, 13], "end": [40, 16] },
+    { "key": "JER.P.41.1-10", "start": [41, 1], "end": [41, 10] },
+    { "key": "JER.P.41.11-18", "start": [41, 11], "end": [41, 18] },
+    { "key": "JER.P.42.1-22", "start": [42, 1], "end": [42, 22] },
+    { "key": "JER.P.43.1-13", "start": [43, 1], "end": [43, 13] },
+    { "key": "JER.P.44.1-14", "start": [44, 1], "end": [44, 14] },
+    { "key": "JER.P.44.15-19", "start": [44, 15], "end": [44, 19] },
+    { "key": "JER.P.44.20-30", "start": [44, 20], "end": [44, 30] },
+    { "key": "JER.P.45.1-5", "start": [45, 1], "end": [45, 5] },
+    { "key": "JER.P.46.1-28", "start": [46, 1], "end": [46, 28] },
+    { "key": "JER.P.47.1-7", "start": [47, 1], "end": [47, 7] },
+    { "key": "JER.P.48.1-47", "start": [48, 1], "end": [48, 47] },
+    { "key": "JER.P.49.1-6", "start": [49, 1], "end": [49, 6] },
+    { "key": "JER.P.49.7-22", "start": [49, 7], "end": [49, 22] },
+    { "key": "JER.P.49.23-27", "start": [49, 23], "end": [49, 27] },
+    { "key": "JER.P.49.28-33", "start": [49, 28], "end": [49, 33] },
+    { "key": "JER.P.49.34-39", "start": [49, 34], "end": [49, 39] },
+    { "key": "JER.P.50.1-3", "start": [50, 1], "end": [50, 3] },
+    { "key": "JER.P.50.4-10", "start": [50, 4], "end": [50, 10] },
+    { "key": "JER.P.50.11-16", "start": [50, 11], "end": [50, 16] },
+    { "key": "JER.P.50.17-20", "start": [50, 17], "end": [50, 20] },
+    { "key": "JER.P.50.21-46", "start": [50, 21], "end": [50, 46] },
+    { "key": "JER.P.51.1-14", "start": [51, 1], "end": [51, 14] },
+    { "key": "JER.P.51.15-19", "start": [51, 15], "end": [51, 19] },
+    { "key": "JER.P.51.20-58", "start": [51, 20], "end": [51, 58] },
+    { "key": "JER.P.51.59-64", "start": [51, 59], "end": [51, 64] },
+    { "key": "JER.P.52.1-11", "start": [52, 1], "end": [52, 11] },
+    { "key": "JER.P.52.12-23", "start": [52, 12], "end": [52, 23] },
+    { "key": "JER.P.52.24-30", "start": [52, 24], "end": [52, 30] },
+    { "key": "JER.P.52.31-34", "start": [52, 31], "end": [52, 34] }
+  ],
+  "segments": [
+    {
+      "key": "JER.1.1-3",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "JER.1.4-6",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 4],
+      "end": [1, 6]
+    },
+    {
+      "key": "JER.1.7-8",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 7],
+      "end": [1, 8]
+    },
+    {
+      "key": "JER.1.9-10",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 9],
+      "end": [1, 10]
+    },
+    {
+      "key": "JER.1.11-12",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 11],
+      "end": [1, 12]
+    },
+    {
+      "key": "JER.1.13-14",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 13],
+      "end": [1, 14]
+    },
+    {
+      "key": "JER.1.15-16",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 15],
+      "end": [1, 16]
+    },
+    {
+      "key": "JER.1.17-19",
+      "pericope": "JER.P.1.1-19",
+      "start": [1, 17],
+      "end": [1, 19]
+    },
+    {
+      "key": "JER.2.1-3",
+      "pericope": "JER.P.2.1-13",
+      "start": [2, 1],
+      "end": [2, 3]
+    },
+    {
+      "key": "JER.2.4-6",
+      "pericope": "JER.P.2.1-13",
+      "start": [2, 4],
+      "end": [2, 6]
+    },
+    {
+      "key": "JER.2.7-8",
+      "pericope": "JER.P.2.1-13",
+      "start": [2, 7],
+      "end": [2, 8]
+    },
+    {
+      "key": "JER.2.9-11",
+      "pericope": "JER.P.2.1-13",
+      "start": [2, 9],
+      "end": [2, 11]
+    },
+    {
+      "key": "JER.2.12-13",
+      "pericope": "JER.P.2.1-13",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "JER.2.14-17",
+      "pericope": "JER.P.2.14-22",
+      "start": [2, 14],
+      "end": [2, 17]
+    },
+    {
+      "key": "JER.2.18-19",
+      "pericope": "JER.P.2.14-22",
+      "start": [2, 18],
+      "end": [2, 19]
+    },
+    {
+      "key": "JER.2.20-22",
+      "pericope": "JER.P.2.14-22",
+      "start": [2, 20],
+      "end": [2, 22]
+    },
+    {
+      "key": "JER.2.23-25",
+      "pericope": "JER.P.2.23-37",
+      "start": [2, 23],
+      "end": [2, 25]
+    },
+    {
+      "key": "JER.2.26-28",
+      "pericope": "JER.P.2.23-37",
+      "start": [2, 26],
+      "end": [2, 28]
+    },
+    {
+      "key": "JER.2.29-31",
+      "pericope": "JER.P.2.23-37",
+      "start": [2, 29],
+      "end": [2, 31]
+    },
+    {
+      "key": "JER.2.32-34",
+      "pericope": "JER.P.2.23-37",
+      "start": [2, 32],
+      "end": [2, 34]
+    },
+    {
+      "key": "JER.2.35-37",
+      "pericope": "JER.P.2.23-37",
+      "start": [2, 35],
+      "end": [2, 37]
+    },
+    {
+      "key": "JER.3.1-2",
+      "pericope": "JER.P.3.1-5",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "JER.3.3-5",
+      "pericope": "JER.P.3.1-5",
+      "start": [3, 3],
+      "end": [3, 5]
+    },
+    {
+      "key": "JER.3.6-7",
+      "pericope": "JER.P.3.6-10",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "JER.3.8-10",
+      "pericope": "JER.P.3.6-10",
+      "start": [3, 8],
+      "end": [3, 10]
+    },
+    {
+      "key": "JER.3.11-12",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 11],
+      "end": [3, 12]
+    },
+    {
+      "key": "JER.3.13-15",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 13],
+      "end": [3, 15]
+    },
+    {
+      "key": "JER.3.16-16",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 16],
+      "end": [3, 16]
+    },
+    {
+      "key": "JER.3.17-18",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 17],
+      "end": [3, 18]
+    },
+    {
+      "key": "JER.3.19-20",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 19],
+      "end": [3, 20]
+    },
+    {
+      "key": "JER.3.21-22",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 21],
+      "end": [3, 22]
+    },
+    {
+      "key": "JER.3.23-25",
+      "pericope": "JER.P.3.11-25",
+      "start": [3, 23],
+      "end": [3, 25]
+    },
+    {
+      "key": "JER.4.1-3",
+      "pericope": "JER.P.4.1-4",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "JER.4.4-4",
+      "pericope": "JER.P.4.1-4",
+      "start": [4, 4],
+      "end": [4, 4]
+    },
+    {
+      "key": "JER.4.5-6",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 5],
+      "end": [4, 6]
+    },
+    {
+      "key": "JER.4.7-8",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 7],
+      "end": [4, 8]
+    },
+    {
+      "key": "JER.4.9-10",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 9],
+      "end": [4, 10]
+    },
+    {
+      "key": "JER.4.11-12",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 11],
+      "end": [4, 12]
+    },
+    {
+      "key": "JER.4.13-15",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 13],
+      "end": [4, 15]
+    },
+    {
+      "key": "JER.4.16-18",
+      "pericope": "JER.P.4.5-18",
+      "start": [4, 16],
+      "end": [4, 18]
+    },
+    {
+      "key": "JER.4.19-20",
+      "pericope": "JER.P.4.19-31",
+      "start": [4, 19],
+      "end": [4, 20]
+    },
+    {
+      "key": "JER.4.21-22",
+      "pericope": "JER.P.4.19-31",
+      "start": [4, 21],
+      "end": [4, 22]
+    },
+    {
+      "key": "JER.4.23-26",
+      "pericope": "JER.P.4.19-31",
+      "start": [4, 23],
+      "end": [4, 26]
+    },
+    {
+      "key": "JER.4.27-29",
+      "pericope": "JER.P.4.19-31",
+      "start": [4, 27],
+      "end": [4, 29]
+    },
+    {
+      "key": "JER.4.30-31",
+      "pericope": "JER.P.4.19-31",
+      "start": [4, 30],
+      "end": [4, 31]
+    },
+    {
+      "key": "JER.5.1-3",
+      "pericope": "JER.P.5.1-13",
+      "start": [5, 1],
+      "end": [5, 3]
+    },
+    {
+      "key": "JER.5.4-6",
+      "pericope": "JER.P.5.1-13",
+      "start": [5, 4],
+      "end": [5, 6]
+    },
+    {
+      "key": "JER.5.7-9",
+      "pericope": "JER.P.5.1-13",
+      "start": [5, 7],
+      "end": [5, 9]
+    },
+    {
+      "key": "JER.5.10-13",
+      "pericope": "JER.P.5.1-13",
+      "start": [5, 10],
+      "end": [5, 13]
+    },
+    {
+      "key": "JER.5.14-15",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 14],
+      "end": [5, 15]
+    },
+    {
+      "key": "JER.5.16-17",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 16],
+      "end": [5, 17]
+    },
+    {
+      "key": "JER.5.18-19",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 18],
+      "end": [5, 19]
+    },
+    {
+      "key": "JER.5.20-22",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 20],
+      "end": [5, 22]
+    },
+    {
+      "key": "JER.5.23-25",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 23],
+      "end": [5, 25]
+    },
+    {
+      "key": "JER.5.26-29",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 26],
+      "end": [5, 29]
+    },
+    {
+      "key": "JER.5.30-31",
+      "pericope": "JER.P.5.14-31",
+      "start": [5, 30],
+      "end": [5, 31]
+    },
+    {
+      "key": "JER.6.1-3",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 1],
+      "end": [6, 3]
+    },
+    {
+      "key": "JER.6.4-5",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 4],
+      "end": [6, 5]
+    },
+    {
+      "key": "JER.6.6-8",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 6],
+      "end": [6, 8]
+    },
+    {
+      "key": "JER.6.9-10",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 9],
+      "end": [6, 10]
+    },
+    {
+      "key": "JER.6.11-12",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 11],
+      "end": [6, 12]
+    },
+    {
+      "key": "JER.6.13-15",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 13],
+      "end": [6, 15]
+    },
+    {
+      "key": "JER.6.16-19",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 16],
+      "end": [6, 19]
+    },
+    {
+      "key": "JER.6.20-21",
+      "pericope": "JER.P.6.1-21",
+      "start": [6, 20],
+      "end": [6, 21]
+    },
+    {
+      "key": "JER.6.22-22",
+      "pericope": "JER.P.6.22-30",
+      "start": [6, 22],
+      "end": [6, 22]
+    },
+    {
+      "key": "JER.6.23-24",
+      "pericope": "JER.P.6.22-30",
+      "start": [6, 23],
+      "end": [6, 24]
+    },
+    {
+      "key": "JER.6.25-26",
+      "pericope": "JER.P.6.22-30",
+      "start": [6, 25],
+      "end": [6, 26]
+    },
+    {
+      "key": "JER.6.27-30",
+      "pericope": "JER.P.6.22-30",
+      "start": [6, 27],
+      "end": [6, 30]
+    },
+    {
+      "key": "JER.7.1-2",
+      "pericope": "JER.P.7.1-15",
+      "start": [7, 1],
+      "end": [7, 2]
+    },
+    {
+      "key": "JER.7.3-4",
+      "pericope": "JER.P.7.1-15",
+      "start": [7, 3],
+      "end": [7, 4]
+    },
+    {
+      "key": "JER.7.5-7",
+      "pericope": "JER.P.7.1-15",
+      "start": [7, 5],
+      "end": [7, 7]
+    },
+    {
+      "key": "JER.7.8-11",
+      "pericope": "JER.P.7.1-15",
+      "start": [7, 8],
+      "end": [7, 11]
+    },
+    {
+      "key": "JER.7.12-15",
+      "pericope": "JER.P.7.1-15",
+      "start": [7, 12],
+      "end": [7, 15]
+    },
+    {
+      "key": "JER.7.16-18",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 16],
+      "end": [7, 18]
+    },
+    {
+      "key": "JER.7.19-20",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 19],
+      "end": [7, 20]
+    },
+    {
+      "key": "JER.7.21-23",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 21],
+      "end": [7, 23]
+    },
+    {
+      "key": "JER.7.24-26",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 24],
+      "end": [7, 26]
+    },
+    {
+      "key": "JER.7.27-28",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 27],
+      "end": [7, 28]
+    },
+    {
+      "key": "JER.7.29-29",
+      "pericope": "JER.P.7.16-29",
+      "start": [7, 29],
+      "end": [7, 29]
+    },
+    {
+      "key": "JER.7.30-30",
+      "pericope": "JER.P.7.30-34",
+      "start": [7, 30],
+      "end": [7, 30]
+    },
+    {
+      "key": "JER.7.31-32",
+      "pericope": "JER.P.7.30-34",
+      "start": [7, 31],
+      "end": [7, 32]
+    },
+    {
+      "key": "JER.7.33-34",
+      "pericope": "JER.P.7.30-34",
+      "start": [7, 33],
+      "end": [7, 34]
+    },
+    {
+      "key": "JER.8.1-3",
+      "pericope": "JER.P.8.1-13",
+      "start": [8, 1],
+      "end": [8, 3]
+    },
+    {
+      "key": "JER.8.4-5",
+      "pericope": "JER.P.8.1-13",
+      "start": [8, 4],
+      "end": [8, 5]
+    },
+    {
+      "key": "JER.8.6-7",
+      "pericope": "JER.P.8.1-13",
+      "start": [8, 6],
+      "end": [8, 7]
+    },
+    {
+      "key": "JER.8.8-10",
+      "pericope": "JER.P.8.1-13",
+      "start": [8, 8],
+      "end": [8, 10]
+    },
+    {
+      "key": "JER.8.11-13",
+      "pericope": "JER.P.8.1-13",
+      "start": [8, 11],
+      "end": [8, 13]
+    },
+    {
+      "key": "JER.8.14-15",
+      "pericope": "JER.P.8.14-17",
+      "start": [8, 14],
+      "end": [8, 15]
+    },
+    {
+      "key": "JER.8.16-17",
+      "pericope": "JER.P.8.14-17",
+      "start": [8, 16],
+      "end": [8, 17]
+    },
+    {
+      "key": "JER.8.18-19",
+      "pericope": "JER.P.8.18-22",
+      "start": [8, 18],
+      "end": [8, 19]
+    },
+    {
+      "key": "JER.8.20-22",
+      "pericope": "JER.P.8.18-22",
+      "start": [8, 20],
+      "end": [8, 22]
+    },
+    {
+      "key": "JER.9.1-3",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 1],
+      "end": [9, 3]
+    },
+    {
+      "key": "JER.9.4-6",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 4],
+      "end": [9, 6]
+    },
+    {
+      "key": "JER.9.7-9",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 7],
+      "end": [9, 9]
+    },
+    {
+      "key": "JER.9.10-12",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 10],
+      "end": [9, 12]
+    },
+    {
+      "key": "JER.9.13-14",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 13],
+      "end": [9, 14]
+    },
+    {
+      "key": "JER.9.15-16",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 15],
+      "end": [9, 16]
+    },
+    {
+      "key": "JER.9.17-18",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 17],
+      "end": [9, 18]
+    },
+    {
+      "key": "JER.9.19-20",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 19],
+      "end": [9, 20]
+    },
+    {
+      "key": "JER.9.21-22",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 21],
+      "end": [9, 22]
+    },
+    {
+      "key": "JER.9.23-24",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 23],
+      "end": [9, 24]
+    },
+    {
+      "key": "JER.9.25-26",
+      "pericope": "JER.P.9.1-26",
+      "start": [9, 25],
+      "end": [9, 26]
+    },
+    {
+      "key": "JER.10.1-2",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 1],
+      "end": [10, 2]
+    },
+    {
+      "key": "JER.10.3-5",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 3],
+      "end": [10, 5]
+    },
+    {
+      "key": "JER.10.6-7",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 6],
+      "end": [10, 7]
+    },
+    {
+      "key": "JER.10.8-10",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 8],
+      "end": [10, 10]
+    },
+    {
+      "key": "JER.10.11-13",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 11],
+      "end": [10, 13]
+    },
+    {
+      "key": "JER.10.14-16",
+      "pericope": "JER.P.10.1-16",
+      "start": [10, 14],
+      "end": [10, 16]
+    },
+    {
+      "key": "JER.10.17-18",
+      "pericope": "JER.P.10.17-25",
+      "start": [10, 17],
+      "end": [10, 18]
+    },
+    {
+      "key": "JER.10.19-20",
+      "pericope": "JER.P.10.17-25",
+      "start": [10, 19],
+      "end": [10, 20]
+    },
+    {
+      "key": "JER.10.21-22",
+      "pericope": "JER.P.10.17-25",
+      "start": [10, 21],
+      "end": [10, 22]
+    },
+    {
+      "key": "JER.10.23-25",
+      "pericope": "JER.P.10.17-25",
+      "start": [10, 23],
+      "end": [10, 25]
+    },
+    {
+      "key": "JER.11.1-2",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 1],
+      "end": [11, 2]
+    },
+    {
+      "key": "JER.11.3-5",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 3],
+      "end": [11, 5]
+    },
+    {
+      "key": "JER.11.6-8",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 6],
+      "end": [11, 8]
+    },
+    {
+      "key": "JER.11.9-10",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 9],
+      "end": [11, 10]
+    },
+    {
+      "key": "JER.11.11-13",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 11],
+      "end": [11, 13]
+    },
+    {
+      "key": "JER.11.14-16",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 14],
+      "end": [11, 16]
+    },
+    {
+      "key": "JER.11.17-17",
+      "pericope": "JER.P.11.1-17",
+      "start": [11, 17],
+      "end": [11, 17]
+    },
+    {
+      "key": "JER.11.18-20",
+      "pericope": "JER.P.11.18-23",
+      "start": [11, 18],
+      "end": [11, 20]
+    },
+    {
+      "key": "JER.11.21-23",
+      "pericope": "JER.P.11.18-23",
+      "start": [11, 21],
+      "end": [11, 23]
+    },
+    {
+      "key": "JER.12.1-2",
+      "pericope": "JER.P.12.1-4",
+      "start": [12, 1],
+      "end": [12, 2]
+    },
+    {
+      "key": "JER.12.3-4",
+      "pericope": "JER.P.12.1-4",
+      "start": [12, 3],
+      "end": [12, 4]
+    },
+    {
+      "key": "JER.12.5-6",
+      "pericope": "JER.P.12.5-13",
+      "start": [12, 5],
+      "end": [12, 6]
+    },
+    {
+      "key": "JER.12.7-9",
+      "pericope": "JER.P.12.5-13",
+      "start": [12, 7],
+      "end": [12, 9]
+    },
+    {
+      "key": "JER.12.10-11",
+      "pericope": "JER.P.12.5-13",
+      "start": [12, 10],
+      "end": [12, 11]
+    },
+    {
+      "key": "JER.12.12-13",
+      "pericope": "JER.P.12.5-13",
+      "start": [12, 12],
+      "end": [12, 13]
+    },
+    {
+      "key": "JER.12.14-15",
+      "pericope": "JER.P.12.14-17",
+      "start": [12, 14],
+      "end": [12, 15]
+    },
+    {
+      "key": "JER.12.16-17",
+      "pericope": "JER.P.12.14-17",
+      "start": [12, 16],
+      "end": [12, 17]
+    },
+    {
+      "key": "JER.13.1-4",
+      "pericope": "JER.P.13.1-11",
+      "start": [13, 1],
+      "end": [13, 4]
+    },
+    {
+      "key": "JER.13.5-7",
+      "pericope": "JER.P.13.1-11",
+      "start": [13, 5],
+      "end": [13, 7]
+    },
+    {
+      "key": "JER.13.8-11",
+      "pericope": "JER.P.13.1-11",
+      "start": [13, 8],
+      "end": [13, 11]
+    },
+    {
+      "key": "JER.13.12-14",
+      "pericope": "JER.P.13.12-14",
+      "start": [13, 12],
+      "end": [13, 14]
+    },
+    {
+      "key": "JER.13.15-17",
+      "pericope": "JER.P.13.15-27",
+      "start": [13, 15],
+      "end": [13, 17]
+    },
+    {
+      "key": "JER.13.18-19",
+      "pericope": "JER.P.13.15-27",
+      "start": [13, 18],
+      "end": [13, 19]
+    },
+    {
+      "key": "JER.13.20-21",
+      "pericope": "JER.P.13.15-27",
+      "start": [13, 20],
+      "end": [13, 21]
+    },
+    {
+      "key": "JER.13.22-24",
+      "pericope": "JER.P.13.15-27",
+      "start": [13, 22],
+      "end": [13, 24]
+    },
+    {
+      "key": "JER.13.25-27",
+      "pericope": "JER.P.13.15-27",
+      "start": [13, 25],
+      "end": [13, 27]
+    },
+    {
+      "key": "JER.14.1-3",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 1],
+      "end": [14, 3]
+    },
+    {
+      "key": "JER.14.4-6",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 4],
+      "end": [14, 6]
+    },
+    {
+      "key": "JER.14.7-9",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 7],
+      "end": [14, 9]
+    },
+    {
+      "key": "JER.14.10-12",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 10],
+      "end": [14, 12]
+    },
+    {
+      "key": "JER.14.13-14",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 13],
+      "end": [14, 14]
+    },
+    {
+      "key": "JER.14.15-16",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 15],
+      "end": [14, 16]
+    },
+    {
+      "key": "JER.14.17-18",
+      "pericope": "JER.P.14.1-18",
+      "start": [14, 17],
+      "end": [14, 18]
+    },
+    {
+      "key": "JER.14.19-20",
+      "pericope": "JER.P.14.19-22",
+      "start": [14, 19],
+      "end": [14, 20]
+    },
+    {
+      "key": "JER.14.21-22",
+      "pericope": "JER.P.14.19-22",
+      "start": [14, 21],
+      "end": [14, 22]
+    },
+    {
+      "key": "JER.15.1-2",
+      "pericope": "JER.P.15.1-9",
+      "start": [15, 1],
+      "end": [15, 2]
+    },
+    {
+      "key": "JER.15.3-4",
+      "pericope": "JER.P.15.1-9",
+      "start": [15, 3],
+      "end": [15, 4]
+    },
+    {
+      "key": "JER.15.5-7",
+      "pericope": "JER.P.15.1-9",
+      "start": [15, 5],
+      "end": [15, 7]
+    },
+    {
+      "key": "JER.15.8-9",
+      "pericope": "JER.P.15.1-9",
+      "start": [15, 8],
+      "end": [15, 9]
+    },
+    {
+      "key": "JER.15.10-12",
+      "pericope": "JER.P.15.10-18",
+      "start": [15, 10],
+      "end": [15, 12]
+    },
+    {
+      "key": "JER.15.13-14",
+      "pericope": "JER.P.15.10-18",
+      "start": [15, 13],
+      "end": [15, 14]
+    },
+    {
+      "key": "JER.15.15-16",
+      "pericope": "JER.P.15.10-18",
+      "start": [15, 15],
+      "end": [15, 16]
+    },
+    {
+      "key": "JER.15.17-18",
+      "pericope": "JER.P.15.10-18",
+      "start": [15, 17],
+      "end": [15, 18]
+    },
+    {
+      "key": "JER.15.19-21",
+      "pericope": "JER.P.15.19-21",
+      "start": [15, 19],
+      "end": [15, 21]
+    },
+    {
+      "key": "JER.16.1-4",
+      "pericope": "JER.P.16.1-13",
+      "start": [16, 1],
+      "end": [16, 4]
+    },
+    {
+      "key": "JER.16.5-6",
+      "pericope": "JER.P.16.1-13",
+      "start": [16, 5],
+      "end": [16, 6]
+    },
+    {
+      "key": "JER.16.7-9",
+      "pericope": "JER.P.16.1-13",
+      "start": [16, 7],
+      "end": [16, 9]
+    },
+    {
+      "key": "JER.16.10-11",
+      "pericope": "JER.P.16.1-13",
+      "start": [16, 10],
+      "end": [16, 11]
+    },
+    {
+      "key": "JER.16.12-13",
+      "pericope": "JER.P.16.1-13",
+      "start": [16, 12],
+      "end": [16, 13]
+    },
+    {
+      "key": "JER.16.14-15",
+      "pericope": "JER.P.16.14-21",
+      "start": [16, 14],
+      "end": [16, 15]
+    },
+    {
+      "key": "JER.16.16-18",
+      "pericope": "JER.P.16.14-21",
+      "start": [16, 16],
+      "end": [16, 18]
+    },
+    {
+      "key": "JER.16.19-21",
+      "pericope": "JER.P.16.14-21",
+      "start": [16, 19],
+      "end": [16, 21]
+    },
+    {
+      "key": "JER.17.1-2",
+      "pericope": "JER.P.17.1-11",
+      "start": [17, 1],
+      "end": [17, 2]
+    },
+    {
+      "key": "JER.17.3-4",
+      "pericope": "JER.P.17.1-11",
+      "start": [17, 3],
+      "end": [17, 4]
+    },
+    {
+      "key": "JER.17.5-6",
+      "pericope": "JER.P.17.1-11",
+      "start": [17, 5],
+      "end": [17, 6]
+    },
+    {
+      "key": "JER.17.7-8",
+      "pericope": "JER.P.17.1-11",
+      "start": [17, 7],
+      "end": [17, 8]
+    },
+    {
+      "key": "JER.17.9-11",
+      "pericope": "JER.P.17.1-11",
+      "start": [17, 9],
+      "end": [17, 11]
+    },
+    {
+      "key": "JER.17.12-14",
+      "pericope": "JER.P.17.12-18",
+      "start": [17, 12],
+      "end": [17, 14]
+    },
+    {
+      "key": "JER.17.15-16",
+      "pericope": "JER.P.17.12-18",
+      "start": [17, 15],
+      "end": [17, 16]
+    },
+    {
+      "key": "JER.17.17-18",
+      "pericope": "JER.P.17.12-18",
+      "start": [17, 17],
+      "end": [17, 18]
+    },
+    {
+      "key": "JER.17.19-20",
+      "pericope": "JER.P.17.19-27",
+      "start": [17, 19],
+      "end": [17, 20]
+    },
+    {
+      "key": "JER.17.21-23",
+      "pericope": "JER.P.17.19-27",
+      "start": [17, 21],
+      "end": [17, 23]
+    },
+    {
+      "key": "JER.17.24-25",
+      "pericope": "JER.P.17.19-27",
+      "start": [17, 24],
+      "end": [17, 25]
+    },
+    {
+      "key": "JER.17.26-27",
+      "pericope": "JER.P.17.19-27",
+      "start": [17, 26],
+      "end": [17, 27]
+    },
+    {
+      "key": "JER.18.1-4",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 1],
+      "end": [18, 4]
+    },
+    {
+      "key": "JER.18.5-8",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 5],
+      "end": [18, 8]
+    },
+    {
+      "key": "JER.18.9-10",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 9],
+      "end": [18, 10]
+    },
+    {
+      "key": "JER.18.11-12",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 11],
+      "end": [18, 12]
+    },
+    {
+      "key": "JER.18.13-14",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 13],
+      "end": [18, 14]
+    },
+    {
+      "key": "JER.18.15-17",
+      "pericope": "JER.P.18.1-17",
+      "start": [18, 15],
+      "end": [18, 17]
+    },
+    {
+      "key": "JER.18.18-20",
+      "pericope": "JER.P.18.18-23",
+      "start": [18, 18],
+      "end": [18, 20]
+    },
+    {
+      "key": "JER.18.21-23",
+      "pericope": "JER.P.18.18-23",
+      "start": [18, 21],
+      "end": [18, 23]
+    },
+    {
+      "key": "JER.19.1-3",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 1],
+      "end": [19, 3]
+    },
+    {
+      "key": "JER.19.4-5",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 4],
+      "end": [19, 5]
+    },
+    {
+      "key": "JER.19.6-9",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 6],
+      "end": [19, 9]
+    },
+    {
+      "key": "JER.19.10-11",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 10],
+      "end": [19, 11]
+    },
+    {
+      "key": "JER.19.12-13",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 12],
+      "end": [19, 13]
+    },
+    {
+      "key": "JER.19.14-15",
+      "pericope": "JER.P.19.1-15",
+      "start": [19, 14],
+      "end": [19, 15]
+    },
+    {
+      "key": "JER.20.1-2",
+      "pericope": "JER.P.20.1-6",
+      "start": [20, 1],
+      "end": [20, 2]
+    },
+    {
+      "key": "JER.20.3-4",
+      "pericope": "JER.P.20.1-6",
+      "start": [20, 3],
+      "end": [20, 4]
+    },
+    {
+      "key": "JER.20.5-6",
+      "pericope": "JER.P.20.1-6",
+      "start": [20, 5],
+      "end": [20, 6]
+    },
+    {
+      "key": "JER.20.7-9",
+      "pericope": "JER.P.20.7-18",
+      "start": [20, 7],
+      "end": [20, 9]
+    },
+    {
+      "key": "JER.20.10-11",
+      "pericope": "JER.P.20.7-18",
+      "start": [20, 10],
+      "end": [20, 11]
+    },
+    {
+      "key": "JER.20.12-13",
+      "pericope": "JER.P.20.7-18",
+      "start": [20, 12],
+      "end": [20, 13]
+    },
+    {
+      "key": "JER.20.14-15",
+      "pericope": "JER.P.20.7-18",
+      "start": [20, 14],
+      "end": [20, 15]
+    },
+    {
+      "key": "JER.20.16-18",
+      "pericope": "JER.P.20.7-18",
+      "start": [20, 16],
+      "end": [20, 18]
+    },
+    {
+      "key": "JER.21.1-2",
+      "pericope": "JER.P.21.1-10",
+      "start": [21, 1],
+      "end": [21, 2]
+    },
+    {
+      "key": "JER.21.3-5",
+      "pericope": "JER.P.21.1-10",
+      "start": [21, 3],
+      "end": [21, 5]
+    },
+    {
+      "key": "JER.21.6-7",
+      "pericope": "JER.P.21.1-10",
+      "start": [21, 6],
+      "end": [21, 7]
+    },
+    {
+      "key": "JER.21.8-10",
+      "pericope": "JER.P.21.1-10",
+      "start": [21, 8],
+      "end": [21, 10]
+    },
+    {
+      "key": "JER.21.11-12",
+      "pericope": "JER.P.21.11-14",
+      "start": [21, 11],
+      "end": [21, 12]
+    },
+    {
+      "key": "JER.21.13-14",
+      "pericope": "JER.P.21.11-14",
+      "start": [21, 13],
+      "end": [21, 14]
+    },
+    {
+      "key": "JER.22.1-3",
+      "pericope": "JER.P.22.1-5",
+      "start": [22, 1],
+      "end": [22, 3]
+    },
+    {
+      "key": "JER.22.4-5",
+      "pericope": "JER.P.22.1-5",
+      "start": [22, 4],
+      "end": [22, 5]
+    },
+    {
+      "key": "JER.22.6-7",
+      "pericope": "JER.P.22.6-9",
+      "start": [22, 6],
+      "end": [22, 7]
+    },
+    {
+      "key": "JER.22.8-9",
+      "pericope": "JER.P.22.6-9",
+      "start": [22, 8],
+      "end": [22, 9]
+    },
+    {
+      "key": "JER.22.10-10",
+      "pericope": "JER.P.22.10-12",
+      "start": [22, 10],
+      "end": [22, 10]
+    },
+    {
+      "key": "JER.22.11-12",
+      "pericope": "JER.P.22.10-12",
+      "start": [22, 11],
+      "end": [22, 12]
+    },
+    {
+      "key": "JER.22.13-14",
+      "pericope": "JER.P.22.13-23",
+      "start": [22, 13],
+      "end": [22, 14]
+    },
+    {
+      "key": "JER.22.15-16",
+      "pericope": "JER.P.22.13-23",
+      "start": [22, 15],
+      "end": [22, 16]
+    },
+    {
+      "key": "JER.22.17-19",
+      "pericope": "JER.P.22.13-23",
+      "start": [22, 17],
+      "end": [22, 19]
+    },
+    {
+      "key": "JER.22.20-21",
+      "pericope": "JER.P.22.13-23",
+      "start": [22, 20],
+      "end": [22, 21]
+    },
+    {
+      "key": "JER.22.22-23",
+      "pericope": "JER.P.22.13-23",
+      "start": [22, 22],
+      "end": [22, 23]
+    },
+    {
+      "key": "JER.22.24-26",
+      "pericope": "JER.P.22.24-30",
+      "start": [22, 24],
+      "end": [22, 26]
+    },
+    {
+      "key": "JER.22.27-28",
+      "pericope": "JER.P.22.24-30",
+      "start": [22, 27],
+      "end": [22, 28]
+    },
+    {
+      "key": "JER.22.29-30",
+      "pericope": "JER.P.22.24-30",
+      "start": [22, 29],
+      "end": [22, 30]
+    },
+    {
+      "key": "JER.23.1-2",
+      "pericope": "JER.P.23.1-8",
+      "start": [23, 1],
+      "end": [23, 2]
+    },
+    {
+      "key": "JER.23.3-4",
+      "pericope": "JER.P.23.1-8",
+      "start": [23, 3],
+      "end": [23, 4]
+    },
+    {
+      "key": "JER.23.5-6",
+      "pericope": "JER.P.23.1-8",
+      "start": [23, 5],
+      "end": [23, 6]
+    },
+    {
+      "key": "JER.23.7-8",
+      "pericope": "JER.P.23.1-8",
+      "start": [23, 7],
+      "end": [23, 8]
+    },
+    {
+      "key": "JER.23.9-10",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 9],
+      "end": [23, 10]
+    },
+    {
+      "key": "JER.23.11-12",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 11],
+      "end": [23, 12]
+    },
+    {
+      "key": "JER.23.13-15",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 13],
+      "end": [23, 15]
+    },
+    {
+      "key": "JER.23.16-18",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 16],
+      "end": [23, 18]
+    },
+    {
+      "key": "JER.23.19-20",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 19],
+      "end": [23, 20]
+    },
+    {
+      "key": "JER.23.21-22",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 21],
+      "end": [23, 22]
+    },
+    {
+      "key": "JER.23.23-24",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 23],
+      "end": [23, 24]
+    },
+    {
+      "key": "JER.23.25-27",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 25],
+      "end": [23, 27]
+    },
+    {
+      "key": "JER.23.28-30",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 28],
+      "end": [23, 30]
+    },
+    {
+      "key": "JER.23.31-32",
+      "pericope": "JER.P.23.9-32",
+      "start": [23, 31],
+      "end": [23, 32]
+    },
+    {
+      "key": "JER.23.33-34",
+      "pericope": "JER.P.23.33-40",
+      "start": [23, 33],
+      "end": [23, 34]
+    },
+    {
+      "key": "JER.23.35-36",
+      "pericope": "JER.P.23.33-40",
+      "start": [23, 35],
+      "end": [23, 36]
+    },
+    {
+      "key": "JER.23.37-40",
+      "pericope": "JER.P.23.33-40",
+      "start": [23, 37],
+      "end": [23, 40]
+    },
+    {
+      "key": "JER.24.1-3",
+      "pericope": "JER.P.24.1-10",
+      "start": [24, 1],
+      "end": [24, 3]
+    },
+    {
+      "key": "JER.24.4-7",
+      "pericope": "JER.P.24.1-10",
+      "start": [24, 4],
+      "end": [24, 7]
+    },
+    {
+      "key": "JER.24.8-10",
+      "pericope": "JER.P.24.1-10",
+      "start": [24, 8],
+      "end": [24, 10]
+    },
+    {
+      "key": "JER.25.1-2",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 1],
+      "end": [25, 2]
+    },
+    {
+      "key": "JER.25.3-4",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 3],
+      "end": [25, 4]
+    },
+    {
+      "key": "JER.25.5-6",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 5],
+      "end": [25, 6]
+    },
+    {
+      "key": "JER.25.7-9",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 7],
+      "end": [25, 9]
+    },
+    {
+      "key": "JER.25.10-11",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 10],
+      "end": [25, 11]
+    },
+    {
+      "key": "JER.25.12-14",
+      "pericope": "JER.P.25.1-14",
+      "start": [25, 12],
+      "end": [25, 14]
+    },
+    {
+      "key": "JER.25.15-16",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 15],
+      "end": [25, 16]
+    },
+    {
+      "key": "JER.25.17-18",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 17],
+      "end": [25, 18]
+    },
+    {
+      "key": "JER.25.19-21",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 19],
+      "end": [25, 21]
+    },
+    {
+      "key": "JER.25.22-23",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 22],
+      "end": [25, 23]
+    },
+    {
+      "key": "JER.25.24-26",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 24],
+      "end": [25, 26]
+    },
+    {
+      "key": "JER.25.27-29",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 27],
+      "end": [25, 29]
+    },
+    {
+      "key": "JER.25.30-31",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 30],
+      "end": [25, 31]
+    },
+    {
+      "key": "JER.25.32-33",
+      "pericope": "JER.P.25.15-33",
+      "start": [25, 32],
+      "end": [25, 33]
+    },
+    {
+      "key": "JER.25.34-36",
+      "pericope": "JER.P.25.34-38",
+      "start": [25, 34],
+      "end": [25, 36]
+    },
+    {
+      "key": "JER.25.37-38",
+      "pericope": "JER.P.25.34-38",
+      "start": [25, 37],
+      "end": [25, 38]
+    },
+    {
+      "key": "JER.26.1-3",
+      "pericope": "JER.P.26.1-6",
+      "start": [26, 1],
+      "end": [26, 3]
+    },
+    {
+      "key": "JER.26.4-6",
+      "pericope": "JER.P.26.1-6",
+      "start": [26, 4],
+      "end": [26, 6]
+    },
+    {
+      "key": "JER.26.7-9",
+      "pericope": "JER.P.26.7-15",
+      "start": [26, 7],
+      "end": [26, 9]
+    },
+    {
+      "key": "JER.26.10-12",
+      "pericope": "JER.P.26.7-15",
+      "start": [26, 10],
+      "end": [26, 12]
+    },
+    {
+      "key": "JER.26.13-15",
+      "pericope": "JER.P.26.7-15",
+      "start": [26, 13],
+      "end": [26, 15]
+    },
+    {
+      "key": "JER.26.16-17",
+      "pericope": "JER.P.26.16-19",
+      "start": [26, 16],
+      "end": [26, 17]
+    },
+    {
+      "key": "JER.26.18-19",
+      "pericope": "JER.P.26.16-19",
+      "start": [26, 18],
+      "end": [26, 19]
+    },
+    {
+      "key": "JER.26.20-21",
+      "pericope": "JER.P.26.20-24",
+      "start": [26, 20],
+      "end": [26, 21]
+    },
+    {
+      "key": "JER.26.22-24",
+      "pericope": "JER.P.26.20-24",
+      "start": [26, 22],
+      "end": [26, 24]
+    },
+    {
+      "key": "JER.27.1-4",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 1],
+      "end": [27, 4]
+    },
+    {
+      "key": "JER.27.5-7",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 5],
+      "end": [27, 7]
+    },
+    {
+      "key": "JER.27.8-8",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 8],
+      "end": [27, 8]
+    },
+    {
+      "key": "JER.27.9-11",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 9],
+      "end": [27, 11]
+    },
+    {
+      "key": "JER.27.12-13",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 12],
+      "end": [27, 13]
+    },
+    {
+      "key": "JER.27.14-15",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 14],
+      "end": [27, 15]
+    },
+    {
+      "key": "JER.27.16-18",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 16],
+      "end": [27, 18]
+    },
+    {
+      "key": "JER.27.19-20",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 19],
+      "end": [27, 20]
+    },
+    {
+      "key": "JER.27.21-22",
+      "pericope": "JER.P.27.1-22",
+      "start": [27, 21],
+      "end": [27, 22]
+    },
+    {
+      "key": "JER.28.1-2",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 1],
+      "end": [28, 2]
+    },
+    {
+      "key": "JER.28.3-4",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 3],
+      "end": [28, 4]
+    },
+    {
+      "key": "JER.28.5-7",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 5],
+      "end": [28, 7]
+    },
+    {
+      "key": "JER.28.8-9",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 8],
+      "end": [28, 9]
+    },
+    {
+      "key": "JER.28.10-11",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 10],
+      "end": [28, 11]
+    },
+    {
+      "key": "JER.28.12-14",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 12],
+      "end": [28, 14]
+    },
+    {
+      "key": "JER.28.15-17",
+      "pericope": "JER.P.28.1-17",
+      "start": [28, 15],
+      "end": [28, 17]
+    },
+    {
+      "key": "JER.29.1-3",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 1],
+      "end": [29, 3]
+    },
+    {
+      "key": "JER.29.4-5",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 4],
+      "end": [29, 5]
+    },
+    {
+      "key": "JER.29.6-7",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 6],
+      "end": [29, 7]
+    },
+    {
+      "key": "JER.29.8-9",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 8],
+      "end": [29, 9]
+    },
+    {
+      "key": "JER.29.10-11",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 10],
+      "end": [29, 11]
+    },
+    {
+      "key": "JER.29.12-14",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 12],
+      "end": [29, 14]
+    },
+    {
+      "key": "JER.29.15-17",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 15],
+      "end": [29, 17]
+    },
+    {
+      "key": "JER.29.18-19",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 18],
+      "end": [29, 19]
+    },
+    {
+      "key": "JER.29.20-21",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 20],
+      "end": [29, 21]
+    },
+    {
+      "key": "JER.29.22-23",
+      "pericope": "JER.P.29.1-23",
+      "start": [29, 22],
+      "end": [29, 23]
+    },
+    {
+      "key": "JER.29.24-26",
+      "pericope": "JER.P.29.24-32",
+      "start": [29, 24],
+      "end": [29, 26]
+    },
+    {
+      "key": "JER.29.27-29",
+      "pericope": "JER.P.29.24-32",
+      "start": [29, 27],
+      "end": [29, 29]
+    },
+    {
+      "key": "JER.29.30-32",
+      "pericope": "JER.P.29.24-32",
+      "start": [29, 30],
+      "end": [29, 32]
+    },
+    {
+      "key": "JER.30.1-3",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 1],
+      "end": [30, 3]
+    },
+    {
+      "key": "JER.30.4-5",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 4],
+      "end": [30, 5]
+    },
+    {
+      "key": "JER.30.6-7",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 6],
+      "end": [30, 7]
+    },
+    {
+      "key": "JER.30.8-9",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 8],
+      "end": [30, 9]
+    },
+    {
+      "key": "JER.30.10-11",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 10],
+      "end": [30, 11]
+    },
+    {
+      "key": "JER.30.12-13",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 12],
+      "end": [30, 13]
+    },
+    {
+      "key": "JER.30.14-15",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 14],
+      "end": [30, 15]
+    },
+    {
+      "key": "JER.30.16-17",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 16],
+      "end": [30, 17]
+    },
+    {
+      "key": "JER.30.18-19",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 18],
+      "end": [30, 19]
+    },
+    {
+      "key": "JER.30.20-22",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 20],
+      "end": [30, 22]
+    },
+    {
+      "key": "JER.30.23-24",
+      "pericope": "JER.P.30.1-24",
+      "start": [30, 23],
+      "end": [30, 24]
+    },
+    {
+      "key": "JER.31.1-3",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 1],
+      "end": [31, 3]
+    },
+    {
+      "key": "JER.31.4-6",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 4],
+      "end": [31, 6]
+    },
+    {
+      "key": "JER.31.7-7",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 7],
+      "end": [31, 7]
+    },
+    {
+      "key": "JER.31.8-9",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 8],
+      "end": [31, 9]
+    },
+    {
+      "key": "JER.31.10-11",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 10],
+      "end": [31, 11]
+    },
+    {
+      "key": "JER.31.12-12",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 12],
+      "end": [31, 12]
+    },
+    {
+      "key": "JER.31.13-14",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 13],
+      "end": [31, 14]
+    },
+    {
+      "key": "JER.31.15-15",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 15],
+      "end": [31, 15]
+    },
+    {
+      "key": "JER.31.16-17",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 16],
+      "end": [31, 17]
+    },
+    {
+      "key": "JER.31.18-20",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 18],
+      "end": [31, 20]
+    },
+    {
+      "key": "JER.31.21-22",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 21],
+      "end": [31, 22]
+    },
+    {
+      "key": "JER.31.23-25",
+      "pericope": "JER.P.31.1-25",
+      "start": [31, 23],
+      "end": [31, 25]
+    },
+    {
+      "key": "JER.31.26-26",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 26],
+      "end": [31, 26]
+    },
+    {
+      "key": "JER.31.27-28",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 27],
+      "end": [31, 28]
+    },
+    {
+      "key": "JER.31.29-30",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 29],
+      "end": [31, 30]
+    },
+    {
+      "key": "JER.31.31-32",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 31],
+      "end": [31, 32]
+    },
+    {
+      "key": "JER.31.33-34",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 33],
+      "end": [31, 34]
+    },
+    {
+      "key": "JER.31.35-36",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 35],
+      "end": [31, 36]
+    },
+    {
+      "key": "JER.31.37-37",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 37],
+      "end": [31, 37]
+    },
+    {
+      "key": "JER.31.38-40",
+      "pericope": "JER.P.31.26-40",
+      "start": [31, 38],
+      "end": [31, 40]
+    },
+    {
+      "key": "JER.32.1-2",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 1],
+      "end": [32, 2]
+    },
+    {
+      "key": "JER.32.3-5",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 3],
+      "end": [32, 5]
+    },
+    {
+      "key": "JER.32.6-7",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 6],
+      "end": [32, 7]
+    },
+    {
+      "key": "JER.32.8-9",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 8],
+      "end": [32, 9]
+    },
+    {
+      "key": "JER.32.10-12",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 10],
+      "end": [32, 12]
+    },
+    {
+      "key": "JER.32.13-15",
+      "pericope": "JER.P.32.1-15",
+      "start": [32, 13],
+      "end": [32, 15]
+    },
+    {
+      "key": "JER.32.16-18",
+      "pericope": "JER.P.32.16-25",
+      "start": [32, 16],
+      "end": [32, 18]
+    },
+    {
+      "key": "JER.32.19-21",
+      "pericope": "JER.P.32.16-25",
+      "start": [32, 19],
+      "end": [32, 21]
+    },
+    {
+      "key": "JER.32.22-23",
+      "pericope": "JER.P.32.16-25",
+      "start": [32, 22],
+      "end": [32, 23]
+    },
+    {
+      "key": "JER.32.24-25",
+      "pericope": "JER.P.32.16-25",
+      "start": [32, 24],
+      "end": [32, 25]
+    },
+    {
+      "key": "JER.32.26-28",
+      "pericope": "JER.P.32.26-35",
+      "start": [32, 26],
+      "end": [32, 28]
+    },
+    {
+      "key": "JER.32.29-30",
+      "pericope": "JER.P.32.26-35",
+      "start": [32, 29],
+      "end": [32, 30]
+    },
+    {
+      "key": "JER.32.31-32",
+      "pericope": "JER.P.32.26-35",
+      "start": [32, 31],
+      "end": [32, 32]
+    },
+    {
+      "key": "JER.32.33-35",
+      "pericope": "JER.P.32.26-35",
+      "start": [32, 33],
+      "end": [32, 35]
+    },
+    {
+      "key": "JER.32.36-37",
+      "pericope": "JER.P.32.36-44",
+      "start": [32, 36],
+      "end": [32, 37]
+    },
+    {
+      "key": "JER.32.38-40",
+      "pericope": "JER.P.32.36-44",
+      "start": [32, 38],
+      "end": [32, 40]
+    },
+    {
+      "key": "JER.32.41-42",
+      "pericope": "JER.P.32.36-44",
+      "start": [32, 41],
+      "end": [32, 42]
+    },
+    {
+      "key": "JER.32.43-44",
+      "pericope": "JER.P.32.36-44",
+      "start": [32, 43],
+      "end": [32, 44]
+    },
+    {
+      "key": "JER.33.1-3",
+      "pericope": "JER.P.33.1-13",
+      "start": [33, 1],
+      "end": [33, 3]
+    },
+    {
+      "key": "JER.33.4-5",
+      "pericope": "JER.P.33.1-13",
+      "start": [33, 4],
+      "end": [33, 5]
+    },
+    {
+      "key": "JER.33.6-9",
+      "pericope": "JER.P.33.1-13",
+      "start": [33, 6],
+      "end": [33, 9]
+    },
+    {
+      "key": "JER.33.10-11",
+      "pericope": "JER.P.33.1-13",
+      "start": [33, 10],
+      "end": [33, 11]
+    },
+    {
+      "key": "JER.33.12-13",
+      "pericope": "JER.P.33.1-13",
+      "start": [33, 12],
+      "end": [33, 13]
+    },
+    {
+      "key": "JER.33.14-16",
+      "pericope": "JER.P.33.14-26",
+      "start": [33, 14],
+      "end": [33, 16]
+    },
+    {
+      "key": "JER.33.17-18",
+      "pericope": "JER.P.33.14-26",
+      "start": [33, 17],
+      "end": [33, 18]
+    },
+    {
+      "key": "JER.33.19-22",
+      "pericope": "JER.P.33.14-26",
+      "start": [33, 19],
+      "end": [33, 22]
+    },
+    {
+      "key": "JER.33.23-24",
+      "pericope": "JER.P.33.14-26",
+      "start": [33, 23],
+      "end": [33, 24]
+    },
+    {
+      "key": "JER.33.25-26",
+      "pericope": "JER.P.33.14-26",
+      "start": [33, 25],
+      "end": [33, 26]
+    },
+    {
+      "key": "JER.34.1-3",
+      "pericope": "JER.P.34.1-7",
+      "start": [34, 1],
+      "end": [34, 3]
+    },
+    {
+      "key": "JER.34.4-5",
+      "pericope": "JER.P.34.1-7",
+      "start": [34, 4],
+      "end": [34, 5]
+    },
+    {
+      "key": "JER.34.6-7",
+      "pericope": "JER.P.34.1-7",
+      "start": [34, 6],
+      "end": [34, 7]
+    },
+    {
+      "key": "JER.34.8-9",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 8],
+      "end": [34, 9]
+    },
+    {
+      "key": "JER.34.10-11",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 10],
+      "end": [34, 11]
+    },
+    {
+      "key": "JER.34.12-14",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 12],
+      "end": [34, 14]
+    },
+    {
+      "key": "JER.34.15-16",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 15],
+      "end": [34, 16]
+    },
+    {
+      "key": "JER.34.17-19",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 17],
+      "end": [34, 19]
+    },
+    {
+      "key": "JER.34.20-22",
+      "pericope": "JER.P.34.8-22",
+      "start": [34, 20],
+      "end": [34, 22]
+    },
+    {
+      "key": "JER.35.1-2",
+      "pericope": "JER.P.35.1-11",
+      "start": [35, 1],
+      "end": [35, 2]
+    },
+    {
+      "key": "JER.35.3-4",
+      "pericope": "JER.P.35.1-11",
+      "start": [35, 3],
+      "end": [35, 4]
+    },
+    {
+      "key": "JER.35.5-7",
+      "pericope": "JER.P.35.1-11",
+      "start": [35, 5],
+      "end": [35, 7]
+    },
+    {
+      "key": "JER.35.8-11",
+      "pericope": "JER.P.35.1-11",
+      "start": [35, 8],
+      "end": [35, 11]
+    },
+    {
+      "key": "JER.35.12-14",
+      "pericope": "JER.P.35.12-19",
+      "start": [35, 12],
+      "end": [35, 14]
+    },
+    {
+      "key": "JER.35.15-16",
+      "pericope": "JER.P.35.12-19",
+      "start": [35, 15],
+      "end": [35, 16]
+    },
+    {
+      "key": "JER.35.17-17",
+      "pericope": "JER.P.35.12-19",
+      "start": [35, 17],
+      "end": [35, 17]
+    },
+    {
+      "key": "JER.35.18-19",
+      "pericope": "JER.P.35.12-19",
+      "start": [35, 18],
+      "end": [35, 19]
+    },
+    {
+      "key": "JER.36.1-3",
+      "pericope": "JER.P.36.1-10",
+      "start": [36, 1],
+      "end": [36, 3]
+    },
+    {
+      "key": "JER.36.4-6",
+      "pericope": "JER.P.36.1-10",
+      "start": [36, 4],
+      "end": [36, 6]
+    },
+    {
+      "key": "JER.36.7-8",
+      "pericope": "JER.P.36.1-10",
+      "start": [36, 7],
+      "end": [36, 8]
+    },
+    {
+      "key": "JER.36.9-10",
+      "pericope": "JER.P.36.1-10",
+      "start": [36, 9],
+      "end": [36, 10]
+    },
+    {
+      "key": "JER.36.11-12",
+      "pericope": "JER.P.36.11-19",
+      "start": [36, 11],
+      "end": [36, 12]
+    },
+    {
+      "key": "JER.36.13-15",
+      "pericope": "JER.P.36.11-19",
+      "start": [36, 13],
+      "end": [36, 15]
+    },
+    {
+      "key": "JER.36.16-19",
+      "pericope": "JER.P.36.11-19",
+      "start": [36, 16],
+      "end": [36, 19]
+    },
+    {
+      "key": "JER.36.20-22",
+      "pericope": "JER.P.36.20-26",
+      "start": [36, 20],
+      "end": [36, 22]
+    },
+    {
+      "key": "JER.36.23-24",
+      "pericope": "JER.P.36.20-26",
+      "start": [36, 23],
+      "end": [36, 24]
+    },
+    {
+      "key": "JER.36.25-26",
+      "pericope": "JER.P.36.20-26",
+      "start": [36, 25],
+      "end": [36, 26]
+    },
+    {
+      "key": "JER.36.27-29",
+      "pericope": "JER.P.36.27-32",
+      "start": [36, 27],
+      "end": [36, 29]
+    },
+    {
+      "key": "JER.36.30-31",
+      "pericope": "JER.P.36.27-32",
+      "start": [36, 30],
+      "end": [36, 31]
+    },
+    {
+      "key": "JER.36.32-32",
+      "pericope": "JER.P.36.27-32",
+      "start": [36, 32],
+      "end": [36, 32]
+    },
+    {
+      "key": "JER.37.1-2",
+      "pericope": "JER.P.37.1-10",
+      "start": [37, 1],
+      "end": [37, 2]
+    },
+    {
+      "key": "JER.37.3-5",
+      "pericope": "JER.P.37.1-10",
+      "start": [37, 3],
+      "end": [37, 5]
+    },
+    {
+      "key": "JER.37.6-8",
+      "pericope": "JER.P.37.1-10",
+      "start": [37, 6],
+      "end": [37, 8]
+    },
+    {
+      "key": "JER.37.9-10",
+      "pericope": "JER.P.37.1-10",
+      "start": [37, 9],
+      "end": [37, 10]
+    },
+    {
+      "key": "JER.37.11-13",
+      "pericope": "JER.P.37.11-21",
+      "start": [37, 11],
+      "end": [37, 13]
+    },
+    {
+      "key": "JER.37.14-15",
+      "pericope": "JER.P.37.11-21",
+      "start": [37, 14],
+      "end": [37, 15]
+    },
+    {
+      "key": "JER.37.16-17",
+      "pericope": "JER.P.37.11-21",
+      "start": [37, 16],
+      "end": [37, 17]
+    },
+    {
+      "key": "JER.37.18-20",
+      "pericope": "JER.P.37.11-21",
+      "start": [37, 18],
+      "end": [37, 20]
+    },
+    {
+      "key": "JER.37.21-21",
+      "pericope": "JER.P.37.11-21",
+      "start": [37, 21],
+      "end": [37, 21]
+    },
+    {
+      "key": "JER.38.1-3",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 1],
+      "end": [38, 3]
+    },
+    {
+      "key": "JER.38.4-5",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 4],
+      "end": [38, 5]
+    },
+    {
+      "key": "JER.38.6-6",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 6],
+      "end": [38, 6]
+    },
+    {
+      "key": "JER.38.7-9",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 7],
+      "end": [38, 9]
+    },
+    {
+      "key": "JER.38.10-11",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 10],
+      "end": [38, 11]
+    },
+    {
+      "key": "JER.38.12-13",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 12],
+      "end": [38, 13]
+    },
+    {
+      "key": "JER.38.14-16",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 14],
+      "end": [38, 16]
+    },
+    {
+      "key": "JER.38.17-18",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 17],
+      "end": [38, 18]
+    },
+    {
+      "key": "JER.38.19-19",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 19],
+      "end": [38, 19]
+    },
+    {
+      "key": "JER.38.20-21",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 20],
+      "end": [38, 21]
+    },
+    {
+      "key": "JER.38.22-23",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 22],
+      "end": [38, 23]
+    },
+    {
+      "key": "JER.38.24-26",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 24],
+      "end": [38, 26]
+    },
+    {
+      "key": "JER.38.27-28",
+      "pericope": "JER.P.38.1-28",
+      "start": [38, 27],
+      "end": [38, 28]
+    },
+    {
+      "key": "JER.39.1-3",
+      "pericope": "JER.P.39.1-10",
+      "start": [39, 1],
+      "end": [39, 3]
+    },
+    {
+      "key": "JER.39.4-5",
+      "pericope": "JER.P.39.1-10",
+      "start": [39, 4],
+      "end": [39, 5]
+    },
+    {
+      "key": "JER.39.6-7",
+      "pericope": "JER.P.39.1-10",
+      "start": [39, 6],
+      "end": [39, 7]
+    },
+    {
+      "key": "JER.39.8-10",
+      "pericope": "JER.P.39.1-10",
+      "start": [39, 8],
+      "end": [39, 10]
+    },
+    {
+      "key": "JER.39.11-14",
+      "pericope": "JER.P.39.11-18",
+      "start": [39, 11],
+      "end": [39, 14]
+    },
+    {
+      "key": "JER.39.15-16",
+      "pericope": "JER.P.39.11-18",
+      "start": [39, 15],
+      "end": [39, 16]
+    },
+    {
+      "key": "JER.39.17-18",
+      "pericope": "JER.P.39.11-18",
+      "start": [39, 17],
+      "end": [39, 18]
+    },
+    {
+      "key": "JER.40.1-2",
+      "pericope": "JER.P.40.1-6",
+      "start": [40, 1],
+      "end": [40, 2]
+    },
+    {
+      "key": "JER.40.3-4",
+      "pericope": "JER.P.40.1-6",
+      "start": [40, 3],
+      "end": [40, 4]
+    },
+    {
+      "key": "JER.40.5-6",
+      "pericope": "JER.P.40.1-6",
+      "start": [40, 5],
+      "end": [40, 6]
+    },
+    {
+      "key": "JER.40.7-8",
+      "pericope": "JER.P.40.7-12",
+      "start": [40, 7],
+      "end": [40, 8]
+    },
+    {
+      "key": "JER.40.9-10",
+      "pericope": "JER.P.40.7-12",
+      "start": [40, 9],
+      "end": [40, 10]
+    },
+    {
+      "key": "JER.40.11-12",
+      "pericope": "JER.P.40.7-12",
+      "start": [40, 11],
+      "end": [40, 12]
+    },
+    {
+      "key": "JER.40.13-14",
+      "pericope": "JER.P.40.13-16",
+      "start": [40, 13],
+      "end": [40, 14]
+    },
+    {
+      "key": "JER.40.15-16",
+      "pericope": "JER.P.40.13-16",
+      "start": [40, 15],
+      "end": [40, 16]
+    },
+    {
+      "key": "JER.41.1-3",
+      "pericope": "JER.P.41.1-10",
+      "start": [41, 1],
+      "end": [41, 3]
+    },
+    {
+      "key": "JER.41.4-5",
+      "pericope": "JER.P.41.1-10",
+      "start": [41, 4],
+      "end": [41, 5]
+    },
+    {
+      "key": "JER.41.6-7",
+      "pericope": "JER.P.41.1-10",
+      "start": [41, 6],
+      "end": [41, 7]
+    },
+    {
+      "key": "JER.41.8-9",
+      "pericope": "JER.P.41.1-10",
+      "start": [41, 8],
+      "end": [41, 9]
+    },
+    {
+      "key": "JER.41.10-10",
+      "pericope": "JER.P.41.1-10",
+      "start": [41, 10],
+      "end": [41, 10]
+    },
+    {
+      "key": "JER.41.11-12",
+      "pericope": "JER.P.41.11-18",
+      "start": [41, 11],
+      "end": [41, 12]
+    },
+    {
+      "key": "JER.41.13-14",
+      "pericope": "JER.P.41.11-18",
+      "start": [41, 13],
+      "end": [41, 14]
+    },
+    {
+      "key": "JER.41.15-16",
+      "pericope": "JER.P.41.11-18",
+      "start": [41, 15],
+      "end": [41, 16]
+    },
+    {
+      "key": "JER.41.17-18",
+      "pericope": "JER.P.41.11-18",
+      "start": [41, 17],
+      "end": [41, 18]
+    },
+    {
+      "key": "JER.42.1-3",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 1],
+      "end": [42, 3]
+    },
+    {
+      "key": "JER.42.4-6",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 4],
+      "end": [42, 6]
+    },
+    {
+      "key": "JER.42.7-10",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 7],
+      "end": [42, 10]
+    },
+    {
+      "key": "JER.42.11-12",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 11],
+      "end": [42, 12]
+    },
+    {
+      "key": "JER.42.13-14",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 13],
+      "end": [42, 14]
+    },
+    {
+      "key": "JER.42.15-17",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 15],
+      "end": [42, 17]
+    },
+    {
+      "key": "JER.42.18-19",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 18],
+      "end": [42, 19]
+    },
+    {
+      "key": "JER.42.20-22",
+      "pericope": "JER.P.42.1-22",
+      "start": [42, 20],
+      "end": [42, 22]
+    },
+    {
+      "key": "JER.43.1-3",
+      "pericope": "JER.P.43.1-13",
+      "start": [43, 1],
+      "end": [43, 3]
+    },
+    {
+      "key": "JER.43.4-7",
+      "pericope": "JER.P.43.1-13",
+      "start": [43, 4],
+      "end": [43, 7]
+    },
+    {
+      "key": "JER.43.8-10",
+      "pericope": "JER.P.43.1-13",
+      "start": [43, 8],
+      "end": [43, 10]
+    },
+    {
+      "key": "JER.43.11-13",
+      "pericope": "JER.P.43.1-13",
+      "start": [43, 11],
+      "end": [43, 13]
+    },
+    {
+      "key": "JER.44.1-3",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 1],
+      "end": [44, 3]
+    },
+    {
+      "key": "JER.44.4-6",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 4],
+      "end": [44, 6]
+    },
+    {
+      "key": "JER.44.7-8",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 7],
+      "end": [44, 8]
+    },
+    {
+      "key": "JER.44.9-10",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 9],
+      "end": [44, 10]
+    },
+    {
+      "key": "JER.44.11-12",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 11],
+      "end": [44, 12]
+    },
+    {
+      "key": "JER.44.13-14",
+      "pericope": "JER.P.44.1-14",
+      "start": [44, 13],
+      "end": [44, 14]
+    },
+    {
+      "key": "JER.44.15-17",
+      "pericope": "JER.P.44.15-19",
+      "start": [44, 15],
+      "end": [44, 17]
+    },
+    {
+      "key": "JER.44.18-19",
+      "pericope": "JER.P.44.15-19",
+      "start": [44, 18],
+      "end": [44, 19]
+    },
+    {
+      "key": "JER.44.20-21",
+      "pericope": "JER.P.44.20-30",
+      "start": [44, 20],
+      "end": [44, 21]
+    },
+    {
+      "key": "JER.44.22-23",
+      "pericope": "JER.P.44.20-30",
+      "start": [44, 22],
+      "end": [44, 23]
+    },
+    {
+      "key": "JER.44.24-25",
+      "pericope": "JER.P.44.20-30",
+      "start": [44, 24],
+      "end": [44, 25]
+    },
+    {
+      "key": "JER.44.26-28",
+      "pericope": "JER.P.44.20-30",
+      "start": [44, 26],
+      "end": [44, 28]
+    },
+    {
+      "key": "JER.44.29-30",
+      "pericope": "JER.P.44.20-30",
+      "start": [44, 29],
+      "end": [44, 30]
+    },
+    {
+      "key": "JER.45.1-3",
+      "pericope": "JER.P.45.1-5",
+      "start": [45, 1],
+      "end": [45, 3]
+    },
+    {
+      "key": "JER.45.4-5",
+      "pericope": "JER.P.45.1-5",
+      "start": [45, 4],
+      "end": [45, 5]
+    },
+    {
+      "key": "JER.46.1-4",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 1],
+      "end": [46, 4]
+    },
+    {
+      "key": "JER.46.5-6",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 5],
+      "end": [46, 6]
+    },
+    {
+      "key": "JER.46.7-9",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 7],
+      "end": [46, 9]
+    },
+    {
+      "key": "JER.46.10-10",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 10],
+      "end": [46, 10]
+    },
+    {
+      "key": "JER.46.11-12",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 11],
+      "end": [46, 12]
+    },
+    {
+      "key": "JER.46.13-14",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 13],
+      "end": [46, 14]
+    },
+    {
+      "key": "JER.46.15-17",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 15],
+      "end": [46, 17]
+    },
+    {
+      "key": "JER.46.18-19",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 18],
+      "end": [46, 19]
+    },
+    {
+      "key": "JER.46.20-22",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 20],
+      "end": [46, 22]
+    },
+    {
+      "key": "JER.46.23-24",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 23],
+      "end": [46, 24]
+    },
+    {
+      "key": "JER.46.25-26",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 25],
+      "end": [46, 26]
+    },
+    {
+      "key": "JER.46.27-28",
+      "pericope": "JER.P.46.1-28",
+      "start": [46, 27],
+      "end": [46, 28]
+    },
+    {
+      "key": "JER.47.1-2",
+      "pericope": "JER.P.47.1-7",
+      "start": [47, 1],
+      "end": [47, 2]
+    },
+    {
+      "key": "JER.47.3-4",
+      "pericope": "JER.P.47.1-7",
+      "start": [47, 3],
+      "end": [47, 4]
+    },
+    {
+      "key": "JER.47.5-7",
+      "pericope": "JER.P.47.1-7",
+      "start": [47, 5],
+      "end": [47, 7]
+    },
+    {
+      "key": "JER.48.1-2",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 1],
+      "end": [48, 2]
+    },
+    {
+      "key": "JER.48.3-5",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 3],
+      "end": [48, 5]
+    },
+    {
+      "key": "JER.48.6-7",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 6],
+      "end": [48, 7]
+    },
+    {
+      "key": "JER.48.8-10",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 8],
+      "end": [48, 10]
+    },
+    {
+      "key": "JER.48.11-12",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 11],
+      "end": [48, 12]
+    },
+    {
+      "key": "JER.48.13-14",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 13],
+      "end": [48, 14]
+    },
+    {
+      "key": "JER.48.15-17",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 15],
+      "end": [48, 17]
+    },
+    {
+      "key": "JER.48.18-20",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 18],
+      "end": [48, 20]
+    },
+    {
+      "key": "JER.48.21-25",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 21],
+      "end": [48, 25]
+    },
+    {
+      "key": "JER.48.26-27",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 26],
+      "end": [48, 27]
+    },
+    {
+      "key": "JER.48.28-29",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 28],
+      "end": [48, 29]
+    },
+    {
+      "key": "JER.48.30-32",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 30],
+      "end": [48, 32]
+    },
+    {
+      "key": "JER.48.33-33",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 33],
+      "end": [48, 33]
+    },
+    {
+      "key": "JER.48.34-35",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 34],
+      "end": [48, 35]
+    },
+    {
+      "key": "JER.48.36-37",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 36],
+      "end": [48, 37]
+    },
+    {
+      "key": "JER.48.38-39",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 38],
+      "end": [48, 39]
+    },
+    {
+      "key": "JER.48.40-41",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 40],
+      "end": [48, 41]
+    },
+    {
+      "key": "JER.48.42-44",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 42],
+      "end": [48, 44]
+    },
+    {
+      "key": "JER.48.45-45",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 45],
+      "end": [48, 45]
+    },
+    {
+      "key": "JER.48.46-47",
+      "pericope": "JER.P.48.1-47",
+      "start": [48, 46],
+      "end": [48, 47]
+    },
+    {
+      "key": "JER.49.1-2",
+      "pericope": "JER.P.49.1-6",
+      "start": [49, 1],
+      "end": [49, 2]
+    },
+    {
+      "key": "JER.49.3-4",
+      "pericope": "JER.P.49.1-6",
+      "start": [49, 3],
+      "end": [49, 4]
+    },
+    {
+      "key": "JER.49.5-6",
+      "pericope": "JER.P.49.1-6",
+      "start": [49, 5],
+      "end": [49, 6]
+    },
+    {
+      "key": "JER.49.7-8",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 7],
+      "end": [49, 8]
+    },
+    {
+      "key": "JER.49.9-11",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 9],
+      "end": [49, 11]
+    },
+    {
+      "key": "JER.49.12-13",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 12],
+      "end": [49, 13]
+    },
+    {
+      "key": "JER.49.14-15",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 14],
+      "end": [49, 15]
+    },
+    {
+      "key": "JER.49.16-16",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 16],
+      "end": [49, 16]
+    },
+    {
+      "key": "JER.49.17-18",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 17],
+      "end": [49, 18]
+    },
+    {
+      "key": "JER.49.19-19",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 19],
+      "end": [49, 19]
+    },
+    {
+      "key": "JER.49.20-20",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 20],
+      "end": [49, 20]
+    },
+    {
+      "key": "JER.49.21-22",
+      "pericope": "JER.P.49.7-22",
+      "start": [49, 21],
+      "end": [49, 22]
+    },
+    {
+      "key": "JER.49.23-25",
+      "pericope": "JER.P.49.23-27",
+      "start": [49, 23],
+      "end": [49, 25]
+    },
+    {
+      "key": "JER.49.26-27",
+      "pericope": "JER.P.49.23-27",
+      "start": [49, 26],
+      "end": [49, 27]
+    },
+    {
+      "key": "JER.49.28-29",
+      "pericope": "JER.P.49.28-33",
+      "start": [49, 28],
+      "end": [49, 29]
+    },
+    {
+      "key": "JER.49.30-31",
+      "pericope": "JER.P.49.28-33",
+      "start": [49, 30],
+      "end": [49, 31]
+    },
+    {
+      "key": "JER.49.32-33",
+      "pericope": "JER.P.49.28-33",
+      "start": [49, 32],
+      "end": [49, 33]
+    },
+    {
+      "key": "JER.49.34-36",
+      "pericope": "JER.P.49.34-39",
+      "start": [49, 34],
+      "end": [49, 36]
+    },
+    {
+      "key": "JER.49.37-39",
+      "pericope": "JER.P.49.34-39",
+      "start": [49, 37],
+      "end": [49, 39]
+    },
+    {
+      "key": "JER.50.1-2",
+      "pericope": "JER.P.50.1-3",
+      "start": [50, 1],
+      "end": [50, 2]
+    },
+    {
+      "key": "JER.50.3-3",
+      "pericope": "JER.P.50.1-3",
+      "start": [50, 3],
+      "end": [50, 3]
+    },
+    {
+      "key": "JER.50.4-5",
+      "pericope": "JER.P.50.4-10",
+      "start": [50, 4],
+      "end": [50, 5]
+    },
+    {
+      "key": "JER.50.6-7",
+      "pericope": "JER.P.50.4-10",
+      "start": [50, 6],
+      "end": [50, 7]
+    },
+    {
+      "key": "JER.50.8-10",
+      "pericope": "JER.P.50.4-10",
+      "start": [50, 8],
+      "end": [50, 10]
+    },
+    {
+      "key": "JER.50.11-13",
+      "pericope": "JER.P.50.11-16",
+      "start": [50, 11],
+      "end": [50, 13]
+    },
+    {
+      "key": "JER.50.14-15",
+      "pericope": "JER.P.50.11-16",
+      "start": [50, 14],
+      "end": [50, 15]
+    },
+    {
+      "key": "JER.50.16-16",
+      "pericope": "JER.P.50.11-16",
+      "start": [50, 16],
+      "end": [50, 16]
+    },
+    {
+      "key": "JER.50.17-18",
+      "pericope": "JER.P.50.17-20",
+      "start": [50, 17],
+      "end": [50, 18]
+    },
+    {
+      "key": "JER.50.19-20",
+      "pericope": "JER.P.50.17-20",
+      "start": [50, 19],
+      "end": [50, 20]
+    },
+    {
+      "key": "JER.50.21-22",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 21],
+      "end": [50, 22]
+    },
+    {
+      "key": "JER.50.23-24",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 23],
+      "end": [50, 24]
+    },
+    {
+      "key": "JER.50.25-26",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 25],
+      "end": [50, 26]
+    },
+    {
+      "key": "JER.50.27-28",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 27],
+      "end": [50, 28]
+    },
+    {
+      "key": "JER.50.29-30",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 29],
+      "end": [50, 30]
+    },
+    {
+      "key": "JER.50.31-32",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 31],
+      "end": [50, 32]
+    },
+    {
+      "key": "JER.50.33-34",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 33],
+      "end": [50, 34]
+    },
+    {
+      "key": "JER.50.35-37",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 35],
+      "end": [50, 37]
+    },
+    {
+      "key": "JER.50.38-40",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 38],
+      "end": [50, 40]
+    },
+    {
+      "key": "JER.50.41-43",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 41],
+      "end": [50, 43]
+    },
+    {
+      "key": "JER.50.44-44",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 44],
+      "end": [50, 44]
+    },
+    {
+      "key": "JER.50.45-46",
+      "pericope": "JER.P.50.21-46",
+      "start": [50, 45],
+      "end": [50, 46]
+    },
+    {
+      "key": "JER.51.1-2",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 1],
+      "end": [51, 2]
+    },
+    {
+      "key": "JER.51.3-4",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 3],
+      "end": [51, 4]
+    },
+    {
+      "key": "JER.51.5-6",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 5],
+      "end": [51, 6]
+    },
+    {
+      "key": "JER.51.7-8",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 7],
+      "end": [51, 8]
+    },
+    {
+      "key": "JER.51.9-10",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 9],
+      "end": [51, 10]
+    },
+    {
+      "key": "JER.51.11-12",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 11],
+      "end": [51, 12]
+    },
+    {
+      "key": "JER.51.13-14",
+      "pericope": "JER.P.51.1-14",
+      "start": [51, 13],
+      "end": [51, 14]
+    },
+    {
+      "key": "JER.51.15-16",
+      "pericope": "JER.P.51.15-19",
+      "start": [51, 15],
+      "end": [51, 16]
+    },
+    {
+      "key": "JER.51.17-19",
+      "pericope": "JER.P.51.15-19",
+      "start": [51, 17],
+      "end": [51, 19]
+    },
+    {
+      "key": "JER.51.20-21",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 20],
+      "end": [51, 21]
+    },
+    {
+      "key": "JER.51.22-23",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 22],
+      "end": [51, 23]
+    },
+    {
+      "key": "JER.51.24-24",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 24],
+      "end": [51, 24]
+    },
+    {
+      "key": "JER.51.25-26",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 25],
+      "end": [51, 26]
+    },
+    {
+      "key": "JER.51.27-28",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 27],
+      "end": [51, 28]
+    },
+    {
+      "key": "JER.51.29-29",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 29],
+      "end": [51, 29]
+    },
+    {
+      "key": "JER.51.30-32",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 30],
+      "end": [51, 32]
+    },
+    {
+      "key": "JER.51.33-33",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 33],
+      "end": [51, 33]
+    },
+    {
+      "key": "JER.51.34-35",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 34],
+      "end": [51, 35]
+    },
+    {
+      "key": "JER.51.36-37",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 36],
+      "end": [51, 37]
+    },
+    {
+      "key": "JER.51.38-40",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 38],
+      "end": [51, 40]
+    },
+    {
+      "key": "JER.51.41-42",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 41],
+      "end": [51, 42]
+    },
+    {
+      "key": "JER.51.43-44",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 43],
+      "end": [51, 44]
+    },
+    {
+      "key": "JER.51.45-46",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 45],
+      "end": [51, 46]
+    },
+    {
+      "key": "JER.51.47-49",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 47],
+      "end": [51, 49]
+    },
+    {
+      "key": "JER.51.50-51",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 50],
+      "end": [51, 51]
+    },
+    {
+      "key": "JER.51.52-53",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 52],
+      "end": [51, 53]
+    },
+    {
+      "key": "JER.51.54-56",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 54],
+      "end": [51, 56]
+    },
+    {
+      "key": "JER.51.57-58",
+      "pericope": "JER.P.51.20-58",
+      "start": [51, 57],
+      "end": [51, 58]
+    },
+    {
+      "key": "JER.51.59-60",
+      "pericope": "JER.P.51.59-64",
+      "start": [51, 59],
+      "end": [51, 60]
+    },
+    {
+      "key": "JER.51.61-62",
+      "pericope": "JER.P.51.59-64",
+      "start": [51, 61],
+      "end": [51, 62]
+    },
+    {
+      "key": "JER.51.63-64",
+      "pericope": "JER.P.51.59-64",
+      "start": [51, 63],
+      "end": [51, 64]
+    },
+    {
+      "key": "JER.52.1-3",
+      "pericope": "JER.P.52.1-11",
+      "start": [52, 1],
+      "end": [52, 3]
+    },
+    {
+      "key": "JER.52.4-5",
+      "pericope": "JER.P.52.1-11",
+      "start": [52, 4],
+      "end": [52, 5]
+    },
+    {
+      "key": "JER.52.6-8",
+      "pericope": "JER.P.52.1-11",
+      "start": [52, 6],
+      "end": [52, 8]
+    },
+    {
+      "key": "JER.52.9-11",
+      "pericope": "JER.P.52.1-11",
+      "start": [52, 9],
+      "end": [52, 11]
+    },
+    {
+      "key": "JER.52.12-14",
+      "pericope": "JER.P.52.12-23",
+      "start": [52, 12],
+      "end": [52, 14]
+    },
+    {
+      "key": "JER.52.15-16",
+      "pericope": "JER.P.52.12-23",
+      "start": [52, 15],
+      "end": [52, 16]
+    },
+    {
+      "key": "JER.52.17-19",
+      "pericope": "JER.P.52.12-23",
+      "start": [52, 17],
+      "end": [52, 19]
+    },
+    {
+      "key": "JER.52.20-21",
+      "pericope": "JER.P.52.12-23",
+      "start": [52, 20],
+      "end": [52, 21]
+    },
+    {
+      "key": "JER.52.22-23",
+      "pericope": "JER.P.52.12-23",
+      "start": [52, 22],
+      "end": [52, 23]
+    },
+    {
+      "key": "JER.52.24-25",
+      "pericope": "JER.P.52.24-30",
+      "start": [52, 24],
+      "end": [52, 25]
+    },
+    {
+      "key": "JER.52.26-27",
+      "pericope": "JER.P.52.24-30",
+      "start": [52, 26],
+      "end": [52, 27]
+    },
+    {
+      "key": "JER.52.28-30",
+      "pericope": "JER.P.52.24-30",
+      "start": [52, 28],
+      "end": [52, 30]
+    },
+    {
+      "key": "JER.52.31-31",
+      "pericope": "JER.P.52.31-34",
+      "start": [52, 31],
+      "end": [52, 31]
+    },
+    {
+      "key": "JER.52.32-34",
+      "pericope": "JER.P.52.31-34",
+      "start": [52, 32],
+      "end": [52, 34]
+    }
+  ]
+}

@@ -13,7 +13,7 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   `dist/tc-mobile/`. No data yet.
 - Inputs for all 66 books pinned in `sources.json` (`scripts/data/pin-structure.ts`),
   and the build split into books with structure (`STRUCTURE_BOOKS`) and books
-  with titles and glossaries (`BOOKS`). Both are still Titus only.
+  with titles and glossaries (`BOOKS`).
 - Glossary code for every book (#30): `GLOSSARY_BOOKS` apart from `BOOKS`;
   `TWL_BOOKS`, the 59 books `en_twl` v91 has; Psalms `c:front` references;
   per-release absent lists; a `no-heading` gap. Still Titus only.
@@ -21,3 +21,8 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   tc-mobile v0 shape: package segment keys only, plain-string titles,
   `chapters: {}`. Titles below `ai-checked` are left out, and review status
   does not travel (tc-mobile#1450, O4). English Titus: 25 of 25 segments.
+- Structure for all 66 books: 3,016 pericopes from BSB `\s1` headings and
+  13,770 segments (the 13,608 UFW chunks, 162 of them split at a pericope
+  start), and a `dist/tc-mobile/` package per book. Titles and glossaries
+  are still Titus only; other books carry their book name only. The segment
+  count depends on the chunk source, which is still open (#4).

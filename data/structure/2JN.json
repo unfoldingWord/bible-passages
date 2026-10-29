@@ -1,0 +1,42 @@
+{
+  "book": "2JN",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "2JN.P.1.1-3", "start": [1, 1], "end": [1, 3] },
+    { "key": "2JN.P.1.4-6", "start": [1, 4], "end": [1, 6] },
+    { "key": "2JN.P.1.7-11", "start": [1, 7], "end": [1, 11] },
+    { "key": "2JN.P.1.12-13", "start": [1, 12], "end": [1, 13] }
+  ],
+  "segments": [
+    {
+      "key": "2JN.1.1-3",
+      "pericope": "2JN.P.1.1-3",
+      "start": [1, 1],
+      "end": [1, 3]
+    },
+    {
+      "key": "2JN.1.4-6",
+      "pericope": "2JN.P.1.4-6",
+      "start": [1, 4],
+      "end": [1, 6]
+    },
+    {
+      "key": "2JN.1.7-8",
+      "pericope": "2JN.P.1.7-11",
+      "start": [1, 7],
+      "end": [1, 8]
+    },
+    {
+      "key": "2JN.1.9-11",
+      "pericope": "2JN.P.1.7-11",
+      "start": [1, 9],
+      "end": [1, 11]
+    },
+    {
+      "key": "2JN.1.12-13",
+      "pericope": "2JN.P.1.12-13",
+      "start": [1, 12],
+      "end": [1, 13]
+    }
+  ]
+}

@@ -1,0 +1,4286 @@
+{
+  "book": "ISA",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "ISA.P.1.1-9", "start": [1, 1], "end": [1, 9] },
+    { "key": "ISA.P.1.10-20", "start": [1, 10], "end": [1, 20] },
+    { "key": "ISA.P.1.21-31", "start": [1, 21], "end": [1, 31] },
+    { "key": "ISA.P.2.1-4", "start": [2, 1], "end": [2, 4] },
+    { "key": "ISA.P.2.5-22", "start": [2, 5], "end": [2, 22] },
+    { "key": "ISA.P.3.1-15", "start": [3, 1], "end": [3, 15] },
+    { "key": "ISA.P.3.16-26", "start": [3, 16], "end": [3, 26] },
+    { "key": "ISA.P.4.1-6", "start": [4, 1], "end": [4, 6] },
+    { "key": "ISA.P.5.1-7", "start": [5, 1], "end": [5, 7] },
+    { "key": "ISA.P.5.8-30", "start": [5, 8], "end": [5, 30] },
+    { "key": "ISA.P.6.1-13", "start": [6, 1], "end": [6, 13] },
+    { "key": "ISA.P.7.1-9", "start": [7, 1], "end": [7, 9] },
+    { "key": "ISA.P.7.10-16", "start": [7, 10], "end": [7, 16] },
+    { "key": "ISA.P.7.17-25", "start": [7, 17], "end": [7, 25] },
+    { "key": "ISA.P.8.1-10", "start": [8, 1], "end": [8, 10] },
+    { "key": "ISA.P.8.11-18", "start": [8, 11], "end": [8, 18] },
+    { "key": "ISA.P.8.19-22", "start": [8, 19], "end": [8, 22] },
+    { "key": "ISA.P.9.1-7", "start": [9, 1], "end": [9, 7] },
+    { "key": "ISA.P.9.8-12", "start": [9, 8], "end": [9, 12] },
+    { "key": "ISA.P.9.13-17", "start": [9, 13], "end": [9, 17] },
+    { "key": "ISA.P.9.18-21", "start": [9, 18], "end": [9, 21] },
+    { "key": "ISA.P.10.1-4", "start": [10, 1], "end": [10, 4] },
+    { "key": "ISA.P.10.5-19", "start": [10, 5], "end": [10, 19] },
+    { "key": "ISA.P.10.20-34", "start": [10, 20], "end": [10, 34] },
+    { "key": "ISA.P.11.1-16", "start": [11, 1], "end": [11, 16] },
+    { "key": "ISA.P.12.1-6", "start": [12, 1], "end": [12, 6] },
+    { "key": "ISA.P.13.1-22", "start": [13, 1], "end": [13, 22] },
+    { "key": "ISA.P.14.1-2", "start": [14, 1], "end": [14, 2] },
+    { "key": "ISA.P.14.3-23", "start": [14, 3], "end": [14, 23] },
+    { "key": "ISA.P.14.24-27", "start": [14, 24], "end": [14, 27] },
+    { "key": "ISA.P.14.28-32", "start": [14, 28], "end": [14, 32] },
+    { "key": "ISA.P.15.1-9", "start": [15, 1], "end": [15, 9] },
+    { "key": "ISA.P.16.1-14", "start": [16, 1], "end": [16, 14] },
+    { "key": "ISA.P.17.1-14", "start": [17, 1], "end": [17, 14] },
+    { "key": "ISA.P.18.1-7", "start": [18, 1], "end": [18, 7] },
+    { "key": "ISA.P.19.1-15", "start": [19, 1], "end": [19, 15] },
+    { "key": "ISA.P.19.16-25", "start": [19, 16], "end": [19, 25] },
+    { "key": "ISA.P.20.1-6", "start": [20, 1], "end": [20, 6] },
+    { "key": "ISA.P.21.1-10", "start": [21, 1], "end": [21, 10] },
+    { "key": "ISA.P.21.11-12", "start": [21, 11], "end": [21, 12] },
+    { "key": "ISA.P.21.13-17", "start": [21, 13], "end": [21, 17] },
+    { "key": "ISA.P.22.1-14", "start": [22, 1], "end": [22, 14] },
+    { "key": "ISA.P.22.15-25", "start": [22, 15], "end": [22, 25] },
+    { "key": "ISA.P.23.1-18", "start": [23, 1], "end": [23, 18] },
+    { "key": "ISA.P.24.1-23", "start": [24, 1], "end": [24, 23] },
+    { "key": "ISA.P.25.1-12", "start": [25, 1], "end": [25, 12] },
+    { "key": "ISA.P.26.1-21", "start": [26, 1], "end": [26, 21] },
+    { "key": "ISA.P.27.1-13", "start": [27, 1], "end": [27, 13] },
+    { "key": "ISA.P.28.1-13", "start": [28, 1], "end": [28, 13] },
+    { "key": "ISA.P.28.14-22", "start": [28, 14], "end": [28, 22] },
+    { "key": "ISA.P.28.23-29", "start": [28, 23], "end": [28, 29] },
+    { "key": "ISA.P.29.1-16", "start": [29, 1], "end": [29, 16] },
+    { "key": "ISA.P.29.17-24", "start": [29, 17], "end": [29, 24] },
+    { "key": "ISA.P.30.1-17", "start": [30, 1], "end": [30, 17] },
+    { "key": "ISA.P.30.18-33", "start": [30, 18], "end": [30, 33] },
+    { "key": "ISA.P.31.1-9", "start": [31, 1], "end": [31, 9] },
+    { "key": "ISA.P.32.1-8", "start": [32, 1], "end": [32, 8] },
+    { "key": "ISA.P.32.9-20", "start": [32, 9], "end": [32, 20] },
+    { "key": "ISA.P.33.1-24", "start": [33, 1], "end": [33, 24] },
+    { "key": "ISA.P.34.1-4", "start": [34, 1], "end": [34, 4] },
+    { "key": "ISA.P.34.5-17", "start": [34, 5], "end": [34, 17] },
+    { "key": "ISA.P.35.1-10", "start": [35, 1], "end": [35, 10] },
+    { "key": "ISA.P.36.1-22", "start": [36, 1], "end": [36, 22] },
+    { "key": "ISA.P.37.1-7", "start": [37, 1], "end": [37, 7] },
+    { "key": "ISA.P.37.8-13", "start": [37, 8], "end": [37, 13] },
+    { "key": "ISA.P.37.14-20", "start": [37, 14], "end": [37, 20] },
+    { "key": "ISA.P.37.21-35", "start": [37, 21], "end": [37, 35] },
+    { "key": "ISA.P.37.36-38", "start": [37, 36], "end": [37, 38] },
+    { "key": "ISA.P.38.1-8", "start": [38, 1], "end": [38, 8] },
+    { "key": "ISA.P.38.9-22", "start": [38, 9], "end": [38, 22] },
+    { "key": "ISA.P.39.1-8", "start": [39, 1], "end": [39, 8] },
+    { "key": "ISA.P.40.1-5", "start": [40, 1], "end": [40, 5] },
+    { "key": "ISA.P.40.6-8", "start": [40, 6], "end": [40, 8] },
+    { "key": "ISA.P.40.9-31", "start": [40, 9], "end": [40, 31] },
+    { "key": "ISA.P.41.1-20", "start": [41, 1], "end": [41, 20] },
+    { "key": "ISA.P.41.21-29", "start": [41, 21], "end": [41, 29] },
+    { "key": "ISA.P.42.1-9", "start": [42, 1], "end": [42, 9] },
+    { "key": "ISA.P.42.10-17", "start": [42, 10], "end": [42, 17] },
+    { "key": "ISA.P.42.18-25", "start": [42, 18], "end": [42, 25] },
+    { "key": "ISA.P.43.1-13", "start": [43, 1], "end": [43, 13] },
+    { "key": "ISA.P.43.14-21", "start": [43, 14], "end": [43, 21] },
+    { "key": "ISA.P.43.22-28", "start": [43, 22], "end": [43, 28] },
+    { "key": "ISA.P.44.1-20", "start": [44, 1], "end": [44, 20] },
+    { "key": "ISA.P.44.21-28", "start": [44, 21], "end": [44, 28] },
+    { "key": "ISA.P.45.1-25", "start": [45, 1], "end": [45, 25] },
+    { "key": "ISA.P.46.1-13", "start": [46, 1], "end": [46, 13] },
+    { "key": "ISA.P.47.1-15", "start": [47, 1], "end": [47, 15] },
+    { "key": "ISA.P.48.1-11", "start": [48, 1], "end": [48, 11] },
+    { "key": "ISA.P.48.12-22", "start": [48, 12], "end": [48, 22] },
+    { "key": "ISA.P.49.1-26", "start": [49, 1], "end": [49, 26] },
+    { "key": "ISA.P.50.1-3", "start": [50, 1], "end": [50, 3] },
+    { "key": "ISA.P.50.4-11", "start": [50, 4], "end": [50, 11] },
+    { "key": "ISA.P.51.1-16", "start": [51, 1], "end": [51, 16] },
+    { "key": "ISA.P.51.17-23", "start": [51, 17], "end": [51, 23] },
+    { "key": "ISA.P.52.1-12", "start": [52, 1], "end": [52, 12] },
+    { "key": "ISA.P.52.13-15", "start": [52, 13], "end": [52, 15] },
+    { "key": "ISA.P.53.1-8", "start": [53, 1], "end": [53, 8] },
+    { "key": "ISA.P.53.9-12", "start": [53, 9], "end": [53, 12] },
+    { "key": "ISA.P.54.1-17", "start": [54, 1], "end": [54, 17] },
+    { "key": "ISA.P.55.1-13", "start": [55, 1], "end": [55, 13] },
+    { "key": "ISA.P.56.1-8", "start": [56, 1], "end": [56, 8] },
+    { "key": "ISA.P.56.9-12", "start": [56, 9], "end": [56, 12] },
+    { "key": "ISA.P.57.1-2", "start": [57, 1], "end": [57, 2] },
+    { "key": "ISA.P.57.3-13", "start": [57, 3], "end": [57, 13] },
+    { "key": "ISA.P.57.14-21", "start": [57, 14], "end": [57, 21] },
+    { "key": "ISA.P.58.1-14", "start": [58, 1], "end": [58, 14] },
+    { "key": "ISA.P.59.1-17", "start": [59, 1], "end": [59, 17] },
+    { "key": "ISA.P.59.18-21", "start": [59, 18], "end": [59, 21] },
+    { "key": "ISA.P.60.1-22", "start": [60, 1], "end": [60, 22] },
+    { "key": "ISA.P.61.1-11", "start": [61, 1], "end": [61, 11] },
+    { "key": "ISA.P.62.1-12", "start": [62, 1], "end": [62, 12] },
+    { "key": "ISA.P.63.1-6", "start": [63, 1], "end": [63, 6] },
+    { "key": "ISA.P.63.7-14", "start": [63, 7], "end": [63, 14] },
+    { "key": "ISA.P.63.15-19", "start": [63, 15], "end": [63, 19] },
+    { "key": "ISA.P.64.1-12", "start": [64, 1], "end": [64, 12] },
+    { "key": "ISA.P.65.1-16", "start": [65, 1], "end": [65, 16] },
+    { "key": "ISA.P.65.17-25", "start": [65, 17], "end": [65, 25] },
+    { "key": "ISA.P.66.1-6", "start": [66, 1], "end": [66, 6] },
+    { "key": "ISA.P.66.7-14", "start": [66, 7], "end": [66, 14] },
+    { "key": "ISA.P.66.15-24", "start": [66, 15], "end": [66, 24] }
+  ],
+  "segments": [
+    {
+      "key": "ISA.1.1-1",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 1],
+      "end": [1, 1]
+    },
+    {
+      "key": "ISA.1.2-3",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 2],
+      "end": [1, 3]
+    },
+    {
+      "key": "ISA.1.4-4",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 4],
+      "end": [1, 4]
+    },
+    {
+      "key": "ISA.1.5-6",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 5],
+      "end": [1, 6]
+    },
+    {
+      "key": "ISA.1.7-8",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 7],
+      "end": [1, 8]
+    },
+    {
+      "key": "ISA.1.9-9",
+      "pericope": "ISA.P.1.1-9",
+      "start": [1, 9],
+      "end": [1, 9]
+    },
+    {
+      "key": "ISA.1.10-11",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 10],
+      "end": [1, 11]
+    },
+    {
+      "key": "ISA.1.12-13",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 12],
+      "end": [1, 13]
+    },
+    {
+      "key": "ISA.1.14-15",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 14],
+      "end": [1, 15]
+    },
+    {
+      "key": "ISA.1.16-17",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 16],
+      "end": [1, 17]
+    },
+    {
+      "key": "ISA.1.18-18",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 18],
+      "end": [1, 18]
+    },
+    {
+      "key": "ISA.1.19-20",
+      "pericope": "ISA.P.1.10-20",
+      "start": [1, 19],
+      "end": [1, 20]
+    },
+    {
+      "key": "ISA.1.21-22",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 21],
+      "end": [1, 22]
+    },
+    {
+      "key": "ISA.1.23-23",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 23],
+      "end": [1, 23]
+    },
+    {
+      "key": "ISA.1.24-25",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 24],
+      "end": [1, 25]
+    },
+    {
+      "key": "ISA.1.26-26",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 26],
+      "end": [1, 26]
+    },
+    {
+      "key": "ISA.1.27-28",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 27],
+      "end": [1, 28]
+    },
+    {
+      "key": "ISA.1.29-30",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 29],
+      "end": [1, 30]
+    },
+    {
+      "key": "ISA.1.31-31",
+      "pericope": "ISA.P.1.21-31",
+      "start": [1, 31],
+      "end": [1, 31]
+    },
+    {
+      "key": "ISA.2.1-2",
+      "pericope": "ISA.P.2.1-4",
+      "start": [2, 1],
+      "end": [2, 2]
+    },
+    {
+      "key": "ISA.2.3-3",
+      "pericope": "ISA.P.2.1-4",
+      "start": [2, 3],
+      "end": [2, 3]
+    },
+    {
+      "key": "ISA.2.4-4",
+      "pericope": "ISA.P.2.1-4",
+      "start": [2, 4],
+      "end": [2, 4]
+    },
+    {
+      "key": "ISA.2.5-6",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 5],
+      "end": [2, 6]
+    },
+    {
+      "key": "ISA.2.7-8",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 7],
+      "end": [2, 8]
+    },
+    {
+      "key": "ISA.2.9-11",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 9],
+      "end": [2, 11]
+    },
+    {
+      "key": "ISA.2.12-13",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 12],
+      "end": [2, 13]
+    },
+    {
+      "key": "ISA.2.14-16",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 14],
+      "end": [2, 16]
+    },
+    {
+      "key": "ISA.2.17-19",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 17],
+      "end": [2, 19]
+    },
+    {
+      "key": "ISA.2.20-22",
+      "pericope": "ISA.P.2.5-22",
+      "start": [2, 20],
+      "end": [2, 22]
+    },
+    {
+      "key": "ISA.3.1-3",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 1],
+      "end": [3, 3]
+    },
+    {
+      "key": "ISA.3.4-5",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 4],
+      "end": [3, 5]
+    },
+    {
+      "key": "ISA.3.6-7",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 6],
+      "end": [3, 7]
+    },
+    {
+      "key": "ISA.3.8-9",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 8],
+      "end": [3, 9]
+    },
+    {
+      "key": "ISA.3.10-12",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 10],
+      "end": [3, 12]
+    },
+    {
+      "key": "ISA.3.13-15",
+      "pericope": "ISA.P.3.1-15",
+      "start": [3, 13],
+      "end": [3, 15]
+    },
+    {
+      "key": "ISA.3.16-17",
+      "pericope": "ISA.P.3.16-26",
+      "start": [3, 16],
+      "end": [3, 17]
+    },
+    {
+      "key": "ISA.3.18-20",
+      "pericope": "ISA.P.3.16-26",
+      "start": [3, 18],
+      "end": [3, 20]
+    },
+    {
+      "key": "ISA.3.21-23",
+      "pericope": "ISA.P.3.16-26",
+      "start": [3, 21],
+      "end": [3, 23]
+    },
+    {
+      "key": "ISA.3.24-26",
+      "pericope": "ISA.P.3.16-26",
+      "start": [3, 24],
+      "end": [3, 26]
+    },
+    {
+      "key": "ISA.4.1-2",
+      "pericope": "ISA.P.4.1-6",
+      "start": [4, 1],
+      "end": [4, 2]
+    },
+    {
+      "key": "ISA.4.3-4",
+      "pericope": "ISA.P.4.1-6",
+      "start": [4, 3],
+      "end": [4, 4]
+    },
+    {
+      "key": "ISA.4.5-6",
+      "pericope": "ISA.P.4.1-6",
+      "start": [4, 5],
+      "end": [4, 6]
+    },
+    {
+      "key": "ISA.5.1-2",
+      "pericope": "ISA.P.5.1-7",
+      "start": [5, 1],
+      "end": [5, 2]
+    },
+    {
+      "key": "ISA.5.3-4",
+      "pericope": "ISA.P.5.1-7",
+      "start": [5, 3],
+      "end": [5, 4]
+    },
+    {
+      "key": "ISA.5.5-6",
+      "pericope": "ISA.P.5.1-7",
+      "start": [5, 5],
+      "end": [5, 6]
+    },
+    {
+      "key": "ISA.5.7-7",
+      "pericope": "ISA.P.5.1-7",
+      "start": [5, 7],
+      "end": [5, 7]
+    },
+    {
+      "key": "ISA.5.8-10",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 8],
+      "end": [5, 10]
+    },
+    {
+      "key": "ISA.5.11-12",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 11],
+      "end": [5, 12]
+    },
+    {
+      "key": "ISA.5.13-14",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 13],
+      "end": [5, 14]
+    },
+    {
+      "key": "ISA.5.15-17",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 15],
+      "end": [5, 17]
+    },
+    {
+      "key": "ISA.5.18-19",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 18],
+      "end": [5, 19]
+    },
+    {
+      "key": "ISA.5.20-21",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 20],
+      "end": [5, 21]
+    },
+    {
+      "key": "ISA.5.22-23",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 22],
+      "end": [5, 23]
+    },
+    {
+      "key": "ISA.5.24-24",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 24],
+      "end": [5, 24]
+    },
+    {
+      "key": "ISA.5.25-25",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 25],
+      "end": [5, 25]
+    },
+    {
+      "key": "ISA.5.26-26",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 26],
+      "end": [5, 26]
+    },
+    {
+      "key": "ISA.5.27-28",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 27],
+      "end": [5, 28]
+    },
+    {
+      "key": "ISA.5.29-30",
+      "pericope": "ISA.P.5.8-30",
+      "start": [5, 29],
+      "end": [5, 30]
+    },
+    {
+      "key": "ISA.6.1-2",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 1],
+      "end": [6, 2]
+    },
+    {
+      "key": "ISA.6.3-3",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 3],
+      "end": [6, 3]
+    },
+    {
+      "key": "ISA.6.4-5",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 4],
+      "end": [6, 5]
+    },
+    {
+      "key": "ISA.6.6-7",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 6],
+      "end": [6, 7]
+    },
+    {
+      "key": "ISA.6.8-9",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 8],
+      "end": [6, 9]
+    },
+    {
+      "key": "ISA.6.10-10",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 10],
+      "end": [6, 10]
+    },
+    {
+      "key": "ISA.6.11-12",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 11],
+      "end": [6, 12]
+    },
+    {
+      "key": "ISA.6.13-13",
+      "pericope": "ISA.P.6.1-13",
+      "start": [6, 13],
+      "end": [6, 13]
+    },
+    {
+      "key": "ISA.7.1-2",
+      "pericope": "ISA.P.7.1-9",
+      "start": [7, 1],
+      "end": [7, 2]
+    },
+    {
+      "key": "ISA.7.3-4",
+      "pericope": "ISA.P.7.1-9",
+      "start": [7, 3],
+      "end": [7, 4]
+    },
+    {
+      "key": "ISA.7.5-6",
+      "pericope": "ISA.P.7.1-9",
+      "start": [7, 5],
+      "end": [7, 6]
+    },
+    {
+      "key": "ISA.7.7-9",
+      "pericope": "ISA.P.7.1-9",
+      "start": [7, 7],
+      "end": [7, 9]
+    },
+    {
+      "key": "ISA.7.10-12",
+      "pericope": "ISA.P.7.10-16",
+      "start": [7, 10],
+      "end": [7, 12]
+    },
+    {
+      "key": "ISA.7.13-15",
+      "pericope": "ISA.P.7.10-16",
+      "start": [7, 13],
+      "end": [7, 15]
+    },
+    {
+      "key": "ISA.7.16-16",
+      "pericope": "ISA.P.7.10-16",
+      "start": [7, 16],
+      "end": [7, 16]
+    },
+    {
+      "key": "ISA.7.17-17",
+      "pericope": "ISA.P.7.17-25",
+      "start": [7, 17],
+      "end": [7, 17]
+    },
+    {
+      "key": "ISA.7.18-19",
+      "pericope": "ISA.P.7.17-25",
+      "start": [7, 18],
+      "end": [7, 19]
+    },
+    {
+      "key": "ISA.7.20-22",
+      "pericope": "ISA.P.7.17-25",
+      "start": [7, 20],
+      "end": [7, 22]
+    },
+    {
+      "key": "ISA.7.23-25",
+      "pericope": "ISA.P.7.17-25",
+      "start": [7, 23],
+      "end": [7, 25]
+    },
+    {
+      "key": "ISA.8.1-2",
+      "pericope": "ISA.P.8.1-10",
+      "start": [8, 1],
+      "end": [8, 2]
+    },
+    {
+      "key": "ISA.8.3-4",
+      "pericope": "ISA.P.8.1-10",
+      "start": [8, 3],
+      "end": [8, 4]
+    },
+    {
+      "key": "ISA.8.5-7",
+      "pericope": "ISA.P.8.1-10",
+      "start": [8, 5],
+      "end": [8, 7]
+    },
+    {
+      "key": "ISA.8.8-8",
+      "pericope": "ISA.P.8.1-10",
+      "start": [8, 8],
+      "end": [8, 8]
+    },
+    {
+      "key": "ISA.8.9-10",
+      "pericope": "ISA.P.8.1-10",
+      "start": [8, 9],
+      "end": [8, 10]
+    },
+    {
+      "key": "ISA.8.11-13",
+      "pericope": "ISA.P.8.11-18",
+      "start": [8, 11],
+      "end": [8, 13]
+    },
+    {
+      "key": "ISA.8.14-15",
+      "pericope": "ISA.P.8.11-18",
+      "start": [8, 14],
+      "end": [8, 15]
+    },
+    {
+      "key": "ISA.8.16-18",
+      "pericope": "ISA.P.8.11-18",
+      "start": [8, 16],
+      "end": [8, 18]
+    },
+    {
+      "key": "ISA.8.19-20",
+      "pericope": "ISA.P.8.19-22",
+      "start": [8, 19],
+      "end": [8, 20]
+    },
+    {
+      "key": "ISA.8.21-22",
+      "pericope": "ISA.P.8.19-22",
+      "start": [8, 21],
+      "end": [8, 22]
+    },
+    {
+      "key": "ISA.9.1-2",
+      "pericope": "ISA.P.9.1-7",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "ISA.9.3-3",
+      "pericope": "ISA.P.9.1-7",
+      "start": [9, 3],
+      "end": [9, 3]
+    },
+    {
+      "key": "ISA.9.4-5",
+      "pericope": "ISA.P.9.1-7",
+      "start": [9, 4],
+      "end": [9, 5]
+    },
+    {
+      "key": "ISA.9.6-7",
+      "pericope": "ISA.P.9.1-7",
+      "start": [9, 6],
+      "end": [9, 7]
+    },
+    {
+      "key": "ISA.9.8-10",
+      "pericope": "ISA.P.9.8-12",
+      "start": [9, 8],
+      "end": [9, 10]
+    },
+    {
+      "key": "ISA.9.11-12",
+      "pericope": "ISA.P.9.8-12",
+      "start": [9, 11],
+      "end": [9, 12]
+    },
+    {
+      "key": "ISA.9.13-15",
+      "pericope": "ISA.P.9.13-17",
+      "start": [9, 13],
+      "end": [9, 15]
+    },
+    {
+      "key": "ISA.9.16-17",
+      "pericope": "ISA.P.9.13-17",
+      "start": [9, 16],
+      "end": [9, 17]
+    },
+    {
+      "key": "ISA.9.18-19",
+      "pericope": "ISA.P.9.18-21",
+      "start": [9, 18],
+      "end": [9, 19]
+    },
+    {
+      "key": "ISA.9.20-21",
+      "pericope": "ISA.P.9.18-21",
+      "start": [9, 20],
+      "end": [9, 21]
+    },
+    {
+      "key": "ISA.10.1-2",
+      "pericope": "ISA.P.10.1-4",
+      "start": [10, 1],
+      "end": [10, 2]
+    },
+    {
+      "key": "ISA.10.3-4",
+      "pericope": "ISA.P.10.1-4",
+      "start": [10, 3],
+      "end": [10, 4]
+    },
+    {
+      "key": "ISA.10.5-6",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 5],
+      "end": [10, 6]
+    },
+    {
+      "key": "ISA.10.7-9",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 7],
+      "end": [10, 9]
+    },
+    {
+      "key": "ISA.10.10-11",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 10],
+      "end": [10, 11]
+    },
+    {
+      "key": "ISA.10.12-13",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 12],
+      "end": [10, 13]
+    },
+    {
+      "key": "ISA.10.14-14",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 14],
+      "end": [10, 14]
+    },
+    {
+      "key": "ISA.10.15-16",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 15],
+      "end": [10, 16]
+    },
+    {
+      "key": "ISA.10.17-19",
+      "pericope": "ISA.P.10.5-19",
+      "start": [10, 17],
+      "end": [10, 19]
+    },
+    {
+      "key": "ISA.10.20-21",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 20],
+      "end": [10, 21]
+    },
+    {
+      "key": "ISA.10.22-23",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 22],
+      "end": [10, 23]
+    },
+    {
+      "key": "ISA.10.24-25",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 24],
+      "end": [10, 25]
+    },
+    {
+      "key": "ISA.10.26-27",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 26],
+      "end": [10, 27]
+    },
+    {
+      "key": "ISA.10.28-29",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 28],
+      "end": [10, 29]
+    },
+    {
+      "key": "ISA.10.30-32",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 30],
+      "end": [10, 32]
+    },
+    {
+      "key": "ISA.10.33-34",
+      "pericope": "ISA.P.10.20-34",
+      "start": [10, 33],
+      "end": [10, 34]
+    },
+    {
+      "key": "ISA.11.1-2",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 1],
+      "end": [11, 2]
+    },
+    {
+      "key": "ISA.11.3-5",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 3],
+      "end": [11, 5]
+    },
+    {
+      "key": "ISA.11.6-7",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 6],
+      "end": [11, 7]
+    },
+    {
+      "key": "ISA.11.8-9",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 8],
+      "end": [11, 9]
+    },
+    {
+      "key": "ISA.11.10-11",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 10],
+      "end": [11, 11]
+    },
+    {
+      "key": "ISA.11.12-13",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 12],
+      "end": [11, 13]
+    },
+    {
+      "key": "ISA.11.14-15",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 14],
+      "end": [11, 15]
+    },
+    {
+      "key": "ISA.11.16-16",
+      "pericope": "ISA.P.11.1-16",
+      "start": [11, 16],
+      "end": [11, 16]
+    },
+    {
+      "key": "ISA.12.1-2",
+      "pericope": "ISA.P.12.1-6",
+      "start": [12, 1],
+      "end": [12, 2]
+    },
+    {
+      "key": "ISA.12.3-4",
+      "pericope": "ISA.P.12.1-6",
+      "start": [12, 3],
+      "end": [12, 4]
+    },
+    {
+      "key": "ISA.12.5-6",
+      "pericope": "ISA.P.12.1-6",
+      "start": [12, 5],
+      "end": [12, 6]
+    },
+    {
+      "key": "ISA.13.1-3",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 1],
+      "end": [13, 3]
+    },
+    {
+      "key": "ISA.13.4-5",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 4],
+      "end": [13, 5]
+    },
+    {
+      "key": "ISA.13.6-8",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 6],
+      "end": [13, 8]
+    },
+    {
+      "key": "ISA.13.9-10",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 9],
+      "end": [13, 10]
+    },
+    {
+      "key": "ISA.13.11-12",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 11],
+      "end": [13, 12]
+    },
+    {
+      "key": "ISA.13.13-14",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 13],
+      "end": [13, 14]
+    },
+    {
+      "key": "ISA.13.15-16",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 15],
+      "end": [13, 16]
+    },
+    {
+      "key": "ISA.13.17-18",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 17],
+      "end": [13, 18]
+    },
+    {
+      "key": "ISA.13.19-20",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 19],
+      "end": [13, 20]
+    },
+    {
+      "key": "ISA.13.21-22",
+      "pericope": "ISA.P.13.1-22",
+      "start": [13, 21],
+      "end": [13, 22]
+    },
+    {
+      "key": "ISA.14.1-2",
+      "pericope": "ISA.P.14.1-2",
+      "start": [14, 1],
+      "end": [14, 2]
+    },
+    {
+      "key": "ISA.14.3-4",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 3],
+      "end": [14, 4]
+    },
+    {
+      "key": "ISA.14.5-6",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 5],
+      "end": [14, 6]
+    },
+    {
+      "key": "ISA.14.7-9",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 7],
+      "end": [14, 9]
+    },
+    {
+      "key": "ISA.14.10-11",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 10],
+      "end": [14, 11]
+    },
+    {
+      "key": "ISA.14.12-14",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 12],
+      "end": [14, 14]
+    },
+    {
+      "key": "ISA.14.15-17",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 15],
+      "end": [14, 17]
+    },
+    {
+      "key": "ISA.14.18-20",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 18],
+      "end": [14, 20]
+    },
+    {
+      "key": "ISA.14.21-23",
+      "pericope": "ISA.P.14.3-23",
+      "start": [14, 21],
+      "end": [14, 23]
+    },
+    {
+      "key": "ISA.14.24-25",
+      "pericope": "ISA.P.14.24-27",
+      "start": [14, 24],
+      "end": [14, 25]
+    },
+    {
+      "key": "ISA.14.26-27",
+      "pericope": "ISA.P.14.24-27",
+      "start": [14, 26],
+      "end": [14, 27]
+    },
+    {
+      "key": "ISA.14.28-30",
+      "pericope": "ISA.P.14.28-32",
+      "start": [14, 28],
+      "end": [14, 30]
+    },
+    {
+      "key": "ISA.14.31-32",
+      "pericope": "ISA.P.14.28-32",
+      "start": [14, 31],
+      "end": [14, 32]
+    },
+    {
+      "key": "ISA.15.1-2",
+      "pericope": "ISA.P.15.1-9",
+      "start": [15, 1],
+      "end": [15, 2]
+    },
+    {
+      "key": "ISA.15.3-4",
+      "pericope": "ISA.P.15.1-9",
+      "start": [15, 3],
+      "end": [15, 4]
+    },
+    {
+      "key": "ISA.15.5-7",
+      "pericope": "ISA.P.15.1-9",
+      "start": [15, 5],
+      "end": [15, 7]
+    },
+    {
+      "key": "ISA.15.8-9",
+      "pericope": "ISA.P.15.1-9",
+      "start": [15, 8],
+      "end": [15, 9]
+    },
+    {
+      "key": "ISA.16.1-2",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 1],
+      "end": [16, 2]
+    },
+    {
+      "key": "ISA.16.3-4",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 3],
+      "end": [16, 4]
+    },
+    {
+      "key": "ISA.16.5-5",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 5],
+      "end": [16, 5]
+    },
+    {
+      "key": "ISA.16.6-7",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 6],
+      "end": [16, 7]
+    },
+    {
+      "key": "ISA.16.8-8",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 8],
+      "end": [16, 8]
+    },
+    {
+      "key": "ISA.16.9-10",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 9],
+      "end": [16, 10]
+    },
+    {
+      "key": "ISA.16.11-12",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 11],
+      "end": [16, 12]
+    },
+    {
+      "key": "ISA.16.13-14",
+      "pericope": "ISA.P.16.1-14",
+      "start": [16, 13],
+      "end": [16, 14]
+    },
+    {
+      "key": "ISA.17.1-3",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 1],
+      "end": [17, 3]
+    },
+    {
+      "key": "ISA.17.4-5",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 4],
+      "end": [17, 5]
+    },
+    {
+      "key": "ISA.17.6-7",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 6],
+      "end": [17, 7]
+    },
+    {
+      "key": "ISA.17.8-9",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 8],
+      "end": [17, 9]
+    },
+    {
+      "key": "ISA.17.10-11",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 10],
+      "end": [17, 11]
+    },
+    {
+      "key": "ISA.17.12-14",
+      "pericope": "ISA.P.17.1-14",
+      "start": [17, 12],
+      "end": [17, 14]
+    },
+    {
+      "key": "ISA.18.1-2",
+      "pericope": "ISA.P.18.1-7",
+      "start": [18, 1],
+      "end": [18, 2]
+    },
+    {
+      "key": "ISA.18.3-3",
+      "pericope": "ISA.P.18.1-7",
+      "start": [18, 3],
+      "end": [18, 3]
+    },
+    {
+      "key": "ISA.18.4-5",
+      "pericope": "ISA.P.18.1-7",
+      "start": [18, 4],
+      "end": [18, 5]
+    },
+    {
+      "key": "ISA.18.6-7",
+      "pericope": "ISA.P.18.1-7",
+      "start": [18, 6],
+      "end": [18, 7]
+    },
+    {
+      "key": "ISA.19.1-2",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 1],
+      "end": [19, 2]
+    },
+    {
+      "key": "ISA.19.3-4",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 3],
+      "end": [19, 4]
+    },
+    {
+      "key": "ISA.19.5-6",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 5],
+      "end": [19, 6]
+    },
+    {
+      "key": "ISA.19.7-8",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 7],
+      "end": [19, 8]
+    },
+    {
+      "key": "ISA.19.9-10",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 9],
+      "end": [19, 10]
+    },
+    {
+      "key": "ISA.19.11-12",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 11],
+      "end": [19, 12]
+    },
+    {
+      "key": "ISA.19.13-15",
+      "pericope": "ISA.P.19.1-15",
+      "start": [19, 13],
+      "end": [19, 15]
+    },
+    {
+      "key": "ISA.19.16-17",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 16],
+      "end": [19, 17]
+    },
+    {
+      "key": "ISA.19.18-18",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 18],
+      "end": [19, 18]
+    },
+    {
+      "key": "ISA.19.19-20",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 19],
+      "end": [19, 20]
+    },
+    {
+      "key": "ISA.19.21-22",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 21],
+      "end": [19, 22]
+    },
+    {
+      "key": "ISA.19.23-23",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 23],
+      "end": [19, 23]
+    },
+    {
+      "key": "ISA.19.24-25",
+      "pericope": "ISA.P.19.16-25",
+      "start": [19, 24],
+      "end": [19, 25]
+    },
+    {
+      "key": "ISA.20.1-2",
+      "pericope": "ISA.P.20.1-6",
+      "start": [20, 1],
+      "end": [20, 2]
+    },
+    {
+      "key": "ISA.20.3-4",
+      "pericope": "ISA.P.20.1-6",
+      "start": [20, 3],
+      "end": [20, 4]
+    },
+    {
+      "key": "ISA.20.5-6",
+      "pericope": "ISA.P.20.1-6",
+      "start": [20, 5],
+      "end": [20, 6]
+    },
+    {
+      "key": "ISA.21.1-2",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 1],
+      "end": [21, 2]
+    },
+    {
+      "key": "ISA.21.3-4",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 3],
+      "end": [21, 4]
+    },
+    {
+      "key": "ISA.21.5-5",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 5],
+      "end": [21, 5]
+    },
+    {
+      "key": "ISA.21.6-7",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 6],
+      "end": [21, 7]
+    },
+    {
+      "key": "ISA.21.8-9",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 8],
+      "end": [21, 9]
+    },
+    {
+      "key": "ISA.21.10-10",
+      "pericope": "ISA.P.21.1-10",
+      "start": [21, 10],
+      "end": [21, 10]
+    },
+    {
+      "key": "ISA.21.11-12",
+      "pericope": "ISA.P.21.11-12",
+      "start": [21, 11],
+      "end": [21, 12]
+    },
+    {
+      "key": "ISA.21.13-15",
+      "pericope": "ISA.P.21.13-17",
+      "start": [21, 13],
+      "end": [21, 15]
+    },
+    {
+      "key": "ISA.21.16-17",
+      "pericope": "ISA.P.21.13-17",
+      "start": [21, 16],
+      "end": [21, 17]
+    },
+    {
+      "key": "ISA.22.1-2",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 1],
+      "end": [22, 2]
+    },
+    {
+      "key": "ISA.22.3-4",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 3],
+      "end": [22, 4]
+    },
+    {
+      "key": "ISA.22.5-7",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 5],
+      "end": [22, 7]
+    },
+    {
+      "key": "ISA.22.8-9",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 8],
+      "end": [22, 9]
+    },
+    {
+      "key": "ISA.22.10-11",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 10],
+      "end": [22, 11]
+    },
+    {
+      "key": "ISA.22.12-14",
+      "pericope": "ISA.P.22.1-14",
+      "start": [22, 12],
+      "end": [22, 14]
+    },
+    {
+      "key": "ISA.22.15-16",
+      "pericope": "ISA.P.22.15-25",
+      "start": [22, 15],
+      "end": [22, 16]
+    },
+    {
+      "key": "ISA.22.17-19",
+      "pericope": "ISA.P.22.15-25",
+      "start": [22, 17],
+      "end": [22, 19]
+    },
+    {
+      "key": "ISA.22.20-22",
+      "pericope": "ISA.P.22.15-25",
+      "start": [22, 20],
+      "end": [22, 22]
+    },
+    {
+      "key": "ISA.22.23-24",
+      "pericope": "ISA.P.22.15-25",
+      "start": [22, 23],
+      "end": [22, 24]
+    },
+    {
+      "key": "ISA.22.25-25",
+      "pericope": "ISA.P.22.15-25",
+      "start": [22, 25],
+      "end": [22, 25]
+    },
+    {
+      "key": "ISA.23.1-3",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 1],
+      "end": [23, 3]
+    },
+    {
+      "key": "ISA.23.4-5",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 4],
+      "end": [23, 5]
+    },
+    {
+      "key": "ISA.23.6-7",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 6],
+      "end": [23, 7]
+    },
+    {
+      "key": "ISA.23.8-9",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 8],
+      "end": [23, 9]
+    },
+    {
+      "key": "ISA.23.10-12",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 10],
+      "end": [23, 12]
+    },
+    {
+      "key": "ISA.23.13-14",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 13],
+      "end": [23, 14]
+    },
+    {
+      "key": "ISA.23.15-16",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 15],
+      "end": [23, 16]
+    },
+    {
+      "key": "ISA.23.17-18",
+      "pericope": "ISA.P.23.1-18",
+      "start": [23, 17],
+      "end": [23, 18]
+    },
+    {
+      "key": "ISA.24.1-2",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 1],
+      "end": [24, 2]
+    },
+    {
+      "key": "ISA.24.3-5",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 3],
+      "end": [24, 5]
+    },
+    {
+      "key": "ISA.24.6-7",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 6],
+      "end": [24, 7]
+    },
+    {
+      "key": "ISA.24.8-9",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 8],
+      "end": [24, 9]
+    },
+    {
+      "key": "ISA.24.10-11",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 10],
+      "end": [24, 11]
+    },
+    {
+      "key": "ISA.24.12-13",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 12],
+      "end": [24, 13]
+    },
+    {
+      "key": "ISA.24.14-15",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 14],
+      "end": [24, 15]
+    },
+    {
+      "key": "ISA.24.16-16",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 16],
+      "end": [24, 16]
+    },
+    {
+      "key": "ISA.24.17-18",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 17],
+      "end": [24, 18]
+    },
+    {
+      "key": "ISA.24.19-20",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 19],
+      "end": [24, 20]
+    },
+    {
+      "key": "ISA.24.21-23",
+      "pericope": "ISA.P.24.1-23",
+      "start": [24, 21],
+      "end": [24, 23]
+    },
+    {
+      "key": "ISA.25.1-3",
+      "pericope": "ISA.P.25.1-12",
+      "start": [25, 1],
+      "end": [25, 3]
+    },
+    {
+      "key": "ISA.25.4-5",
+      "pericope": "ISA.P.25.1-12",
+      "start": [25, 4],
+      "end": [25, 5]
+    },
+    {
+      "key": "ISA.25.6-8",
+      "pericope": "ISA.P.25.1-12",
+      "start": [25, 6],
+      "end": [25, 8]
+    },
+    {
+      "key": "ISA.25.9-10",
+      "pericope": "ISA.P.25.1-12",
+      "start": [25, 9],
+      "end": [25, 10]
+    },
+    {
+      "key": "ISA.25.11-12",
+      "pericope": "ISA.P.25.1-12",
+      "start": [25, 11],
+      "end": [25, 12]
+    },
+    {
+      "key": "ISA.26.1-2",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 1],
+      "end": [26, 2]
+    },
+    {
+      "key": "ISA.26.3-4",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 3],
+      "end": [26, 4]
+    },
+    {
+      "key": "ISA.26.5-6",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 5],
+      "end": [26, 6]
+    },
+    {
+      "key": "ISA.26.7-9",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 7],
+      "end": [26, 9]
+    },
+    {
+      "key": "ISA.26.10-10",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 10],
+      "end": [26, 10]
+    },
+    {
+      "key": "ISA.26.11-12",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 11],
+      "end": [26, 12]
+    },
+    {
+      "key": "ISA.26.13-14",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 13],
+      "end": [26, 14]
+    },
+    {
+      "key": "ISA.26.15-15",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 15],
+      "end": [26, 15]
+    },
+    {
+      "key": "ISA.26.16-17",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 16],
+      "end": [26, 17]
+    },
+    {
+      "key": "ISA.26.18-18",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 18],
+      "end": [26, 18]
+    },
+    {
+      "key": "ISA.26.19-19",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 19],
+      "end": [26, 19]
+    },
+    {
+      "key": "ISA.26.20-21",
+      "pericope": "ISA.P.26.1-21",
+      "start": [26, 20],
+      "end": [26, 21]
+    },
+    {
+      "key": "ISA.27.1-3",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 1],
+      "end": [27, 3]
+    },
+    {
+      "key": "ISA.27.4-5",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 4],
+      "end": [27, 5]
+    },
+    {
+      "key": "ISA.27.6-6",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 6],
+      "end": [27, 6]
+    },
+    {
+      "key": "ISA.27.7-8",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 7],
+      "end": [27, 8]
+    },
+    {
+      "key": "ISA.27.9-9",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 9],
+      "end": [27, 9]
+    },
+    {
+      "key": "ISA.27.10-11",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 10],
+      "end": [27, 11]
+    },
+    {
+      "key": "ISA.27.12-13",
+      "pericope": "ISA.P.27.1-13",
+      "start": [27, 12],
+      "end": [27, 13]
+    },
+    {
+      "key": "ISA.28.1-2",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 1],
+      "end": [28, 2]
+    },
+    {
+      "key": "ISA.28.3-4",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 3],
+      "end": [28, 4]
+    },
+    {
+      "key": "ISA.28.5-6",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 5],
+      "end": [28, 6]
+    },
+    {
+      "key": "ISA.28.7-8",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 7],
+      "end": [28, 8]
+    },
+    {
+      "key": "ISA.28.9-10",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 9],
+      "end": [28, 10]
+    },
+    {
+      "key": "ISA.28.11-12",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 11],
+      "end": [28, 12]
+    },
+    {
+      "key": "ISA.28.13-13",
+      "pericope": "ISA.P.28.1-13",
+      "start": [28, 13],
+      "end": [28, 13]
+    },
+    {
+      "key": "ISA.28.14-15",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 14],
+      "end": [28, 15]
+    },
+    {
+      "key": "ISA.28.16-16",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 16],
+      "end": [28, 16]
+    },
+    {
+      "key": "ISA.28.17-17",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 17],
+      "end": [28, 17]
+    },
+    {
+      "key": "ISA.28.18-19",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 18],
+      "end": [28, 19]
+    },
+    {
+      "key": "ISA.28.20-21",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 20],
+      "end": [28, 21]
+    },
+    {
+      "key": "ISA.28.22-22",
+      "pericope": "ISA.P.28.14-22",
+      "start": [28, 22],
+      "end": [28, 22]
+    },
+    {
+      "key": "ISA.28.23-24",
+      "pericope": "ISA.P.28.23-29",
+      "start": [28, 23],
+      "end": [28, 24]
+    },
+    {
+      "key": "ISA.28.25-26",
+      "pericope": "ISA.P.28.23-29",
+      "start": [28, 25],
+      "end": [28, 26]
+    },
+    {
+      "key": "ISA.28.27-28",
+      "pericope": "ISA.P.28.23-29",
+      "start": [28, 27],
+      "end": [28, 28]
+    },
+    {
+      "key": "ISA.28.29-29",
+      "pericope": "ISA.P.28.23-29",
+      "start": [28, 29],
+      "end": [28, 29]
+    },
+    {
+      "key": "ISA.29.1-2",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 1],
+      "end": [29, 2]
+    },
+    {
+      "key": "ISA.29.3-4",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 3],
+      "end": [29, 4]
+    },
+    {
+      "key": "ISA.29.5-6",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 5],
+      "end": [29, 6]
+    },
+    {
+      "key": "ISA.29.7-8",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 7],
+      "end": [29, 8]
+    },
+    {
+      "key": "ISA.29.9-10",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 9],
+      "end": [29, 10]
+    },
+    {
+      "key": "ISA.29.11-12",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 11],
+      "end": [29, 12]
+    },
+    {
+      "key": "ISA.29.13-14",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 13],
+      "end": [29, 14]
+    },
+    {
+      "key": "ISA.29.15-15",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 15],
+      "end": [29, 15]
+    },
+    {
+      "key": "ISA.29.16-16",
+      "pericope": "ISA.P.29.1-16",
+      "start": [29, 16],
+      "end": [29, 16]
+    },
+    {
+      "key": "ISA.29.17-19",
+      "pericope": "ISA.P.29.17-24",
+      "start": [29, 17],
+      "end": [29, 19]
+    },
+    {
+      "key": "ISA.29.20-21",
+      "pericope": "ISA.P.29.17-24",
+      "start": [29, 20],
+      "end": [29, 21]
+    },
+    {
+      "key": "ISA.29.22-24",
+      "pericope": "ISA.P.29.17-24",
+      "start": [29, 22],
+      "end": [29, 24]
+    },
+    {
+      "key": "ISA.30.1-2",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 1],
+      "end": [30, 2]
+    },
+    {
+      "key": "ISA.30.3-5",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 3],
+      "end": [30, 5]
+    },
+    {
+      "key": "ISA.30.6-7",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 6],
+      "end": [30, 7]
+    },
+    {
+      "key": "ISA.30.8-9",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 8],
+      "end": [30, 9]
+    },
+    {
+      "key": "ISA.30.10-11",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 10],
+      "end": [30, 11]
+    },
+    {
+      "key": "ISA.30.12-13",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 12],
+      "end": [30, 13]
+    },
+    {
+      "key": "ISA.30.14-14",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 14],
+      "end": [30, 14]
+    },
+    {
+      "key": "ISA.30.15-16",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 15],
+      "end": [30, 16]
+    },
+    {
+      "key": "ISA.30.17-17",
+      "pericope": "ISA.P.30.1-17",
+      "start": [30, 17],
+      "end": [30, 17]
+    },
+    {
+      "key": "ISA.30.18-19",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 18],
+      "end": [30, 19]
+    },
+    {
+      "key": "ISA.30.20-21",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 20],
+      "end": [30, 21]
+    },
+    {
+      "key": "ISA.30.22-22",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 22],
+      "end": [30, 22]
+    },
+    {
+      "key": "ISA.30.23-24",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 23],
+      "end": [30, 24]
+    },
+    {
+      "key": "ISA.30.25-26",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 25],
+      "end": [30, 26]
+    },
+    {
+      "key": "ISA.30.27-28",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 27],
+      "end": [30, 28]
+    },
+    {
+      "key": "ISA.30.29-29",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 29],
+      "end": [30, 29]
+    },
+    {
+      "key": "ISA.30.30-30",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 30],
+      "end": [30, 30]
+    },
+    {
+      "key": "ISA.30.31-32",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 31],
+      "end": [30, 32]
+    },
+    {
+      "key": "ISA.30.33-33",
+      "pericope": "ISA.P.30.18-33",
+      "start": [30, 33],
+      "end": [30, 33]
+    },
+    {
+      "key": "ISA.31.1-2",
+      "pericope": "ISA.P.31.1-9",
+      "start": [31, 1],
+      "end": [31, 2]
+    },
+    {
+      "key": "ISA.31.3-3",
+      "pericope": "ISA.P.31.1-9",
+      "start": [31, 3],
+      "end": [31, 3]
+    },
+    {
+      "key": "ISA.31.4-4",
+      "pericope": "ISA.P.31.1-9",
+      "start": [31, 4],
+      "end": [31, 4]
+    },
+    {
+      "key": "ISA.31.5-9",
+      "pericope": "ISA.P.31.1-9",
+      "start": [31, 5],
+      "end": [31, 9]
+    },
+    {
+      "key": "ISA.32.1-3",
+      "pericope": "ISA.P.32.1-8",
+      "start": [32, 1],
+      "end": [32, 3]
+    },
+    {
+      "key": "ISA.32.4-6",
+      "pericope": "ISA.P.32.1-8",
+      "start": [32, 4],
+      "end": [32, 6]
+    },
+    {
+      "key": "ISA.32.7-8",
+      "pericope": "ISA.P.32.1-8",
+      "start": [32, 7],
+      "end": [32, 8]
+    },
+    {
+      "key": "ISA.32.9-10",
+      "pericope": "ISA.P.32.9-20",
+      "start": [32, 9],
+      "end": [32, 10]
+    },
+    {
+      "key": "ISA.32.11-13",
+      "pericope": "ISA.P.32.9-20",
+      "start": [32, 11],
+      "end": [32, 13]
+    },
+    {
+      "key": "ISA.32.14-15",
+      "pericope": "ISA.P.32.9-20",
+      "start": [32, 14],
+      "end": [32, 15]
+    },
+    {
+      "key": "ISA.32.16-18",
+      "pericope": "ISA.P.32.9-20",
+      "start": [32, 16],
+      "end": [32, 18]
+    },
+    {
+      "key": "ISA.32.19-20",
+      "pericope": "ISA.P.32.9-20",
+      "start": [32, 19],
+      "end": [32, 20]
+    },
+    {
+      "key": "ISA.33.1-1",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 1],
+      "end": [33, 1]
+    },
+    {
+      "key": "ISA.33.2-2",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 2],
+      "end": [33, 2]
+    },
+    {
+      "key": "ISA.33.3-4",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 3],
+      "end": [33, 4]
+    },
+    {
+      "key": "ISA.33.5-6",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 5],
+      "end": [33, 6]
+    },
+    {
+      "key": "ISA.33.7-8",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 7],
+      "end": [33, 8]
+    },
+    {
+      "key": "ISA.33.9-9",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 9],
+      "end": [33, 9]
+    },
+    {
+      "key": "ISA.33.10-12",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 10],
+      "end": [33, 12]
+    },
+    {
+      "key": "ISA.33.13-14",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 13],
+      "end": [33, 14]
+    },
+    {
+      "key": "ISA.33.15-16",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 15],
+      "end": [33, 16]
+    },
+    {
+      "key": "ISA.33.17-19",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 17],
+      "end": [33, 19]
+    },
+    {
+      "key": "ISA.33.20-21",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 20],
+      "end": [33, 21]
+    },
+    {
+      "key": "ISA.33.22-22",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 22],
+      "end": [33, 22]
+    },
+    {
+      "key": "ISA.33.23-24",
+      "pericope": "ISA.P.33.1-24",
+      "start": [33, 23],
+      "end": [33, 24]
+    },
+    {
+      "key": "ISA.34.1-2",
+      "pericope": "ISA.P.34.1-4",
+      "start": [34, 1],
+      "end": [34, 2]
+    },
+    {
+      "key": "ISA.34.3-4",
+      "pericope": "ISA.P.34.1-4",
+      "start": [34, 3],
+      "end": [34, 4]
+    },
+    {
+      "key": "ISA.34.5-6",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 5],
+      "end": [34, 6]
+    },
+    {
+      "key": "ISA.34.7-7",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 7],
+      "end": [34, 7]
+    },
+    {
+      "key": "ISA.34.8-10",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 8],
+      "end": [34, 10]
+    },
+    {
+      "key": "ISA.34.11-12",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 11],
+      "end": [34, 12]
+    },
+    {
+      "key": "ISA.34.13-15",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 13],
+      "end": [34, 15]
+    },
+    {
+      "key": "ISA.34.16-17",
+      "pericope": "ISA.P.34.5-17",
+      "start": [34, 16],
+      "end": [34, 17]
+    },
+    {
+      "key": "ISA.35.1-2",
+      "pericope": "ISA.P.35.1-10",
+      "start": [35, 1],
+      "end": [35, 2]
+    },
+    {
+      "key": "ISA.35.3-4",
+      "pericope": "ISA.P.35.1-10",
+      "start": [35, 3],
+      "end": [35, 4]
+    },
+    {
+      "key": "ISA.35.5-7",
+      "pericope": "ISA.P.35.1-10",
+      "start": [35, 5],
+      "end": [35, 7]
+    },
+    {
+      "key": "ISA.35.8-9",
+      "pericope": "ISA.P.35.1-10",
+      "start": [35, 8],
+      "end": [35, 9]
+    },
+    {
+      "key": "ISA.35.10-10",
+      "pericope": "ISA.P.35.1-10",
+      "start": [35, 10],
+      "end": [35, 10]
+    },
+    {
+      "key": "ISA.36.1-3",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 1],
+      "end": [36, 3]
+    },
+    {
+      "key": "ISA.36.4-5",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 4],
+      "end": [36, 5]
+    },
+    {
+      "key": "ISA.36.6-7",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 6],
+      "end": [36, 7]
+    },
+    {
+      "key": "ISA.36.8-8",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 8],
+      "end": [36, 8]
+    },
+    {
+      "key": "ISA.36.9-10",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 9],
+      "end": [36, 10]
+    },
+    {
+      "key": "ISA.36.11-12",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 11],
+      "end": [36, 12]
+    },
+    {
+      "key": "ISA.36.13-15",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 13],
+      "end": [36, 15]
+    },
+    {
+      "key": "ISA.36.16-17",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 16],
+      "end": [36, 17]
+    },
+    {
+      "key": "ISA.36.18-20",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 18],
+      "end": [36, 20]
+    },
+    {
+      "key": "ISA.36.21-22",
+      "pericope": "ISA.P.36.1-22",
+      "start": [36, 21],
+      "end": [36, 22]
+    },
+    {
+      "key": "ISA.37.1-2",
+      "pericope": "ISA.P.37.1-7",
+      "start": [37, 1],
+      "end": [37, 2]
+    },
+    {
+      "key": "ISA.37.3-4",
+      "pericope": "ISA.P.37.1-7",
+      "start": [37, 3],
+      "end": [37, 4]
+    },
+    {
+      "key": "ISA.37.5-7",
+      "pericope": "ISA.P.37.1-7",
+      "start": [37, 5],
+      "end": [37, 7]
+    },
+    {
+      "key": "ISA.37.8-10",
+      "pericope": "ISA.P.37.8-13",
+      "start": [37, 8],
+      "end": [37, 10]
+    },
+    {
+      "key": "ISA.37.11-13",
+      "pericope": "ISA.P.37.8-13",
+      "start": [37, 11],
+      "end": [37, 13]
+    },
+    {
+      "key": "ISA.37.14-16",
+      "pericope": "ISA.P.37.14-20",
+      "start": [37, 14],
+      "end": [37, 16]
+    },
+    {
+      "key": "ISA.37.17-18",
+      "pericope": "ISA.P.37.14-20",
+      "start": [37, 17],
+      "end": [37, 18]
+    },
+    {
+      "key": "ISA.37.19-20",
+      "pericope": "ISA.P.37.14-20",
+      "start": [37, 19],
+      "end": [37, 20]
+    },
+    {
+      "key": "ISA.37.21-23",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 21],
+      "end": [37, 23]
+    },
+    {
+      "key": "ISA.37.24-25",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 24],
+      "end": [37, 25]
+    },
+    {
+      "key": "ISA.37.26-27",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 26],
+      "end": [37, 27]
+    },
+    {
+      "key": "ISA.37.28-29",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 28],
+      "end": [37, 29]
+    },
+    {
+      "key": "ISA.37.30-30",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 30],
+      "end": [37, 30]
+    },
+    {
+      "key": "ISA.37.31-32",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 31],
+      "end": [37, 32]
+    },
+    {
+      "key": "ISA.37.33-34",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 33],
+      "end": [37, 34]
+    },
+    {
+      "key": "ISA.37.35-35",
+      "pericope": "ISA.P.37.21-35",
+      "start": [37, 35],
+      "end": [37, 35]
+    },
+    {
+      "key": "ISA.37.36-37",
+      "pericope": "ISA.P.37.36-38",
+      "start": [37, 36],
+      "end": [37, 37]
+    },
+    {
+      "key": "ISA.37.38-38",
+      "pericope": "ISA.P.37.36-38",
+      "start": [37, 38],
+      "end": [37, 38]
+    },
+    {
+      "key": "ISA.38.1-3",
+      "pericope": "ISA.P.38.1-8",
+      "start": [38, 1],
+      "end": [38, 3]
+    },
+    {
+      "key": "ISA.38.4-6",
+      "pericope": "ISA.P.38.1-8",
+      "start": [38, 4],
+      "end": [38, 6]
+    },
+    {
+      "key": "ISA.38.7-8",
+      "pericope": "ISA.P.38.1-8",
+      "start": [38, 7],
+      "end": [38, 8]
+    },
+    {
+      "key": "ISA.38.9-11",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 9],
+      "end": [38, 11]
+    },
+    {
+      "key": "ISA.38.12-13",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 12],
+      "end": [38, 13]
+    },
+    {
+      "key": "ISA.38.14-15",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 14],
+      "end": [38, 15]
+    },
+    {
+      "key": "ISA.38.16-17",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 16],
+      "end": [38, 17]
+    },
+    {
+      "key": "ISA.38.18-19",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 18],
+      "end": [38, 19]
+    },
+    {
+      "key": "ISA.38.20-20",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 20],
+      "end": [38, 20]
+    },
+    {
+      "key": "ISA.38.21-22",
+      "pericope": "ISA.P.38.9-22",
+      "start": [38, 21],
+      "end": [38, 22]
+    },
+    {
+      "key": "ISA.39.1-2",
+      "pericope": "ISA.P.39.1-8",
+      "start": [39, 1],
+      "end": [39, 2]
+    },
+    {
+      "key": "ISA.39.3-4",
+      "pericope": "ISA.P.39.1-8",
+      "start": [39, 3],
+      "end": [39, 4]
+    },
+    {
+      "key": "ISA.39.5-6",
+      "pericope": "ISA.P.39.1-8",
+      "start": [39, 5],
+      "end": [39, 6]
+    },
+    {
+      "key": "ISA.39.7-8",
+      "pericope": "ISA.P.39.1-8",
+      "start": [39, 7],
+      "end": [39, 8]
+    },
+    {
+      "key": "ISA.40.1-2",
+      "pericope": "ISA.P.40.1-5",
+      "start": [40, 1],
+      "end": [40, 2]
+    },
+    {
+      "key": "ISA.40.3-5",
+      "pericope": "ISA.P.40.1-5",
+      "start": [40, 3],
+      "end": [40, 5]
+    },
+    {
+      "key": "ISA.40.6-8",
+      "pericope": "ISA.P.40.6-8",
+      "start": [40, 6],
+      "end": [40, 8]
+    },
+    {
+      "key": "ISA.40.9-10",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 9],
+      "end": [40, 10]
+    },
+    {
+      "key": "ISA.40.11-11",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 11],
+      "end": [40, 11]
+    },
+    {
+      "key": "ISA.40.12-12",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 12],
+      "end": [40, 12]
+    },
+    {
+      "key": "ISA.40.13-14",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 13],
+      "end": [40, 14]
+    },
+    {
+      "key": "ISA.40.15-17",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 15],
+      "end": [40, 17]
+    },
+    {
+      "key": "ISA.40.18-20",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 18],
+      "end": [40, 20]
+    },
+    {
+      "key": "ISA.40.21-22",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 21],
+      "end": [40, 22]
+    },
+    {
+      "key": "ISA.40.23-24",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 23],
+      "end": [40, 24]
+    },
+    {
+      "key": "ISA.40.25-26",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 25],
+      "end": [40, 26]
+    },
+    {
+      "key": "ISA.40.27-28",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 27],
+      "end": [40, 28]
+    },
+    {
+      "key": "ISA.40.29-31",
+      "pericope": "ISA.P.40.9-31",
+      "start": [40, 29],
+      "end": [40, 31]
+    },
+    {
+      "key": "ISA.41.1-2",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 1],
+      "end": [41, 2]
+    },
+    {
+      "key": "ISA.41.3-4",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 3],
+      "end": [41, 4]
+    },
+    {
+      "key": "ISA.41.5-7",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 5],
+      "end": [41, 7]
+    },
+    {
+      "key": "ISA.41.8-9",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 8],
+      "end": [41, 9]
+    },
+    {
+      "key": "ISA.41.10-10",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 10],
+      "end": [41, 10]
+    },
+    {
+      "key": "ISA.41.11-11",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 11],
+      "end": [41, 11]
+    },
+    {
+      "key": "ISA.41.12-13",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 12],
+      "end": [41, 13]
+    },
+    {
+      "key": "ISA.41.14-15",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 14],
+      "end": [41, 15]
+    },
+    {
+      "key": "ISA.41.16-16",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 16],
+      "end": [41, 16]
+    },
+    {
+      "key": "ISA.41.17-18",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 17],
+      "end": [41, 18]
+    },
+    {
+      "key": "ISA.41.19-20",
+      "pericope": "ISA.P.41.1-20",
+      "start": [41, 19],
+      "end": [41, 20]
+    },
+    {
+      "key": "ISA.41.21-22",
+      "pericope": "ISA.P.41.21-29",
+      "start": [41, 21],
+      "end": [41, 22]
+    },
+    {
+      "key": "ISA.41.23-24",
+      "pericope": "ISA.P.41.21-29",
+      "start": [41, 23],
+      "end": [41, 24]
+    },
+    {
+      "key": "ISA.41.25-26",
+      "pericope": "ISA.P.41.21-29",
+      "start": [41, 25],
+      "end": [41, 26]
+    },
+    {
+      "key": "ISA.41.27-29",
+      "pericope": "ISA.P.41.21-29",
+      "start": [41, 27],
+      "end": [41, 29]
+    },
+    {
+      "key": "ISA.42.1-2",
+      "pericope": "ISA.P.42.1-9",
+      "start": [42, 1],
+      "end": [42, 2]
+    },
+    {
+      "key": "ISA.42.3-4",
+      "pericope": "ISA.P.42.1-9",
+      "start": [42, 3],
+      "end": [42, 4]
+    },
+    {
+      "key": "ISA.42.5-6",
+      "pericope": "ISA.P.42.1-9",
+      "start": [42, 5],
+      "end": [42, 6]
+    },
+    {
+      "key": "ISA.42.7-7",
+      "pericope": "ISA.P.42.1-9",
+      "start": [42, 7],
+      "end": [42, 7]
+    },
+    {
+      "key": "ISA.42.8-9",
+      "pericope": "ISA.P.42.1-9",
+      "start": [42, 8],
+      "end": [42, 9]
+    },
+    {
+      "key": "ISA.42.10-11",
+      "pericope": "ISA.P.42.10-17",
+      "start": [42, 10],
+      "end": [42, 11]
+    },
+    {
+      "key": "ISA.42.12-13",
+      "pericope": "ISA.P.42.10-17",
+      "start": [42, 12],
+      "end": [42, 13]
+    },
+    {
+      "key": "ISA.42.14-15",
+      "pericope": "ISA.P.42.10-17",
+      "start": [42, 14],
+      "end": [42, 15]
+    },
+    {
+      "key": "ISA.42.16-16",
+      "pericope": "ISA.P.42.10-17",
+      "start": [42, 16],
+      "end": [42, 16]
+    },
+    {
+      "key": "ISA.42.17-17",
+      "pericope": "ISA.P.42.10-17",
+      "start": [42, 17],
+      "end": [42, 17]
+    },
+    {
+      "key": "ISA.42.18-19",
+      "pericope": "ISA.P.42.18-25",
+      "start": [42, 18],
+      "end": [42, 19]
+    },
+    {
+      "key": "ISA.42.20-21",
+      "pericope": "ISA.P.42.18-25",
+      "start": [42, 20],
+      "end": [42, 21]
+    },
+    {
+      "key": "ISA.42.22-22",
+      "pericope": "ISA.P.42.18-25",
+      "start": [42, 22],
+      "end": [42, 22]
+    },
+    {
+      "key": "ISA.42.23-24",
+      "pericope": "ISA.P.42.18-25",
+      "start": [42, 23],
+      "end": [42, 24]
+    },
+    {
+      "key": "ISA.42.25-25",
+      "pericope": "ISA.P.42.18-25",
+      "start": [42, 25],
+      "end": [42, 25]
+    },
+    {
+      "key": "ISA.43.1-1",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 1],
+      "end": [43, 1]
+    },
+    {
+      "key": "ISA.43.2-3",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 2],
+      "end": [43, 3]
+    },
+    {
+      "key": "ISA.43.4-5",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 4],
+      "end": [43, 5]
+    },
+    {
+      "key": "ISA.43.6-7",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 6],
+      "end": [43, 7]
+    },
+    {
+      "key": "ISA.43.8-9",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 8],
+      "end": [43, 9]
+    },
+    {
+      "key": "ISA.43.10-11",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 10],
+      "end": [43, 11]
+    },
+    {
+      "key": "ISA.43.12-13",
+      "pericope": "ISA.P.43.1-13",
+      "start": [43, 12],
+      "end": [43, 13]
+    },
+    {
+      "key": "ISA.43.14-15",
+      "pericope": "ISA.P.43.14-21",
+      "start": [43, 14],
+      "end": [43, 15]
+    },
+    {
+      "key": "ISA.43.16-17",
+      "pericope": "ISA.P.43.14-21",
+      "start": [43, 16],
+      "end": [43, 17]
+    },
+    {
+      "key": "ISA.43.18-19",
+      "pericope": "ISA.P.43.14-21",
+      "start": [43, 18],
+      "end": [43, 19]
+    },
+    {
+      "key": "ISA.43.20-21",
+      "pericope": "ISA.P.43.14-21",
+      "start": [43, 20],
+      "end": [43, 21]
+    },
+    {
+      "key": "ISA.43.22-23",
+      "pericope": "ISA.P.43.22-28",
+      "start": [43, 22],
+      "end": [43, 23]
+    },
+    {
+      "key": "ISA.43.24-24",
+      "pericope": "ISA.P.43.22-28",
+      "start": [43, 24],
+      "end": [43, 24]
+    },
+    {
+      "key": "ISA.43.25-26",
+      "pericope": "ISA.P.43.22-28",
+      "start": [43, 25],
+      "end": [43, 26]
+    },
+    {
+      "key": "ISA.43.27-28",
+      "pericope": "ISA.P.43.22-28",
+      "start": [43, 27],
+      "end": [43, 28]
+    },
+    {
+      "key": "ISA.44.1-2",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 1],
+      "end": [44, 2]
+    },
+    {
+      "key": "ISA.44.3-4",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 3],
+      "end": [44, 4]
+    },
+    {
+      "key": "ISA.44.5-5",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 5],
+      "end": [44, 5]
+    },
+    {
+      "key": "ISA.44.6-6",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 6],
+      "end": [44, 6]
+    },
+    {
+      "key": "ISA.44.7-7",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 7],
+      "end": [44, 7]
+    },
+    {
+      "key": "ISA.44.8-8",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 8],
+      "end": [44, 8]
+    },
+    {
+      "key": "ISA.44.9-10",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 9],
+      "end": [44, 10]
+    },
+    {
+      "key": "ISA.44.11-11",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 11],
+      "end": [44, 11]
+    },
+    {
+      "key": "ISA.44.12-12",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 12],
+      "end": [44, 12]
+    },
+    {
+      "key": "ISA.44.13-13",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 13],
+      "end": [44, 13]
+    },
+    {
+      "key": "ISA.44.14-14",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 14],
+      "end": [44, 14]
+    },
+    {
+      "key": "ISA.44.15-16",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 15],
+      "end": [44, 16]
+    },
+    {
+      "key": "ISA.44.17-17",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 17],
+      "end": [44, 17]
+    },
+    {
+      "key": "ISA.44.18-18",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 18],
+      "end": [44, 18]
+    },
+    {
+      "key": "ISA.44.19-19",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 19],
+      "end": [44, 19]
+    },
+    {
+      "key": "ISA.44.20-20",
+      "pericope": "ISA.P.44.1-20",
+      "start": [44, 20],
+      "end": [44, 20]
+    },
+    {
+      "key": "ISA.44.21-22",
+      "pericope": "ISA.P.44.21-28",
+      "start": [44, 21],
+      "end": [44, 22]
+    },
+    {
+      "key": "ISA.44.23-23",
+      "pericope": "ISA.P.44.21-28",
+      "start": [44, 23],
+      "end": [44, 23]
+    },
+    {
+      "key": "ISA.44.24-25",
+      "pericope": "ISA.P.44.21-28",
+      "start": [44, 24],
+      "end": [44, 25]
+    },
+    {
+      "key": "ISA.44.26-27",
+      "pericope": "ISA.P.44.21-28",
+      "start": [44, 26],
+      "end": [44, 27]
+    },
+    {
+      "key": "ISA.44.28-28",
+      "pericope": "ISA.P.44.21-28",
+      "start": [44, 28],
+      "end": [44, 28]
+    },
+    {
+      "key": "ISA.45.1-1",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 1],
+      "end": [45, 1]
+    },
+    {
+      "key": "ISA.45.2-3",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 2],
+      "end": [45, 3]
+    },
+    {
+      "key": "ISA.45.4-6",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 4],
+      "end": [45, 6]
+    },
+    {
+      "key": "ISA.45.7-8",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 7],
+      "end": [45, 8]
+    },
+    {
+      "key": "ISA.45.9-9",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 9],
+      "end": [45, 9]
+    },
+    {
+      "key": "ISA.45.10-10",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 10],
+      "end": [45, 10]
+    },
+    {
+      "key": "ISA.45.11-11",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 11],
+      "end": [45, 11]
+    },
+    {
+      "key": "ISA.45.12-12",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 12],
+      "end": [45, 12]
+    },
+    {
+      "key": "ISA.45.13-13",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 13],
+      "end": [45, 13]
+    },
+    {
+      "key": "ISA.45.14-15",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 14],
+      "end": [45, 15]
+    },
+    {
+      "key": "ISA.45.16-17",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 16],
+      "end": [45, 17]
+    },
+    {
+      "key": "ISA.45.18-18",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 18],
+      "end": [45, 18]
+    },
+    {
+      "key": "ISA.45.19-19",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 19],
+      "end": [45, 19]
+    },
+    {
+      "key": "ISA.45.20-20",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 20],
+      "end": [45, 20]
+    },
+    {
+      "key": "ISA.45.21-21",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 21],
+      "end": [45, 21]
+    },
+    {
+      "key": "ISA.45.22-23",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 22],
+      "end": [45, 23]
+    },
+    {
+      "key": "ISA.45.24-25",
+      "pericope": "ISA.P.45.1-25",
+      "start": [45, 24],
+      "end": [45, 25]
+    },
+    {
+      "key": "ISA.46.1-2",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 1],
+      "end": [46, 2]
+    },
+    {
+      "key": "ISA.46.3-4",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 3],
+      "end": [46, 4]
+    },
+    {
+      "key": "ISA.46.5-6",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 5],
+      "end": [46, 6]
+    },
+    {
+      "key": "ISA.46.7-7",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 7],
+      "end": [46, 7]
+    },
+    {
+      "key": "ISA.46.8-9",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 8],
+      "end": [46, 9]
+    },
+    {
+      "key": "ISA.46.10-11",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 10],
+      "end": [46, 11]
+    },
+    {
+      "key": "ISA.46.12-13",
+      "pericope": "ISA.P.46.1-13",
+      "start": [46, 12],
+      "end": [46, 13]
+    },
+    {
+      "key": "ISA.47.1-2",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 1],
+      "end": [47, 2]
+    },
+    {
+      "key": "ISA.47.3-5",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 3],
+      "end": [47, 5]
+    },
+    {
+      "key": "ISA.47.6-7",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 6],
+      "end": [47, 7]
+    },
+    {
+      "key": "ISA.47.8-9",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 8],
+      "end": [47, 9]
+    },
+    {
+      "key": "ISA.47.10-11",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 10],
+      "end": [47, 11]
+    },
+    {
+      "key": "ISA.47.12-13",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 12],
+      "end": [47, 13]
+    },
+    {
+      "key": "ISA.47.14-15",
+      "pericope": "ISA.P.47.1-15",
+      "start": [47, 14],
+      "end": [47, 15]
+    },
+    {
+      "key": "ISA.48.1-2",
+      "pericope": "ISA.P.48.1-11",
+      "start": [48, 1],
+      "end": [48, 2]
+    },
+    {
+      "key": "ISA.48.3-5",
+      "pericope": "ISA.P.48.1-11",
+      "start": [48, 3],
+      "end": [48, 5]
+    },
+    {
+      "key": "ISA.48.6-7",
+      "pericope": "ISA.P.48.1-11",
+      "start": [48, 6],
+      "end": [48, 7]
+    },
+    {
+      "key": "ISA.48.8-8",
+      "pericope": "ISA.P.48.1-11",
+      "start": [48, 8],
+      "end": [48, 8]
+    },
+    {
+      "key": "ISA.48.9-11",
+      "pericope": "ISA.P.48.1-11",
+      "start": [48, 9],
+      "end": [48, 11]
+    },
+    {
+      "key": "ISA.48.12-13",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 12],
+      "end": [48, 13]
+    },
+    {
+      "key": "ISA.48.14-15",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 14],
+      "end": [48, 15]
+    },
+    {
+      "key": "ISA.48.16-16",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 16],
+      "end": [48, 16]
+    },
+    {
+      "key": "ISA.48.17-18",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 17],
+      "end": [48, 18]
+    },
+    {
+      "key": "ISA.48.19-19",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 19],
+      "end": [48, 19]
+    },
+    {
+      "key": "ISA.48.20-20",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 20],
+      "end": [48, 20]
+    },
+    {
+      "key": "ISA.48.21-22",
+      "pericope": "ISA.P.48.12-22",
+      "start": [48, 21],
+      "end": [48, 22]
+    },
+    {
+      "key": "ISA.49.1-2",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 1],
+      "end": [49, 2]
+    },
+    {
+      "key": "ISA.49.3-4",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 3],
+      "end": [49, 4]
+    },
+    {
+      "key": "ISA.49.5-6",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 5],
+      "end": [49, 6]
+    },
+    {
+      "key": "ISA.49.7-7",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 7],
+      "end": [49, 7]
+    },
+    {
+      "key": "ISA.49.8-8",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 8],
+      "end": [49, 8]
+    },
+    {
+      "key": "ISA.49.9-9",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 9],
+      "end": [49, 9]
+    },
+    {
+      "key": "ISA.49.10-11",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 10],
+      "end": [49, 11]
+    },
+    {
+      "key": "ISA.49.12-13",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 12],
+      "end": [49, 13]
+    },
+    {
+      "key": "ISA.49.14-15",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 14],
+      "end": [49, 15]
+    },
+    {
+      "key": "ISA.49.16-18",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 16],
+      "end": [49, 18]
+    },
+    {
+      "key": "ISA.49.19-20",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 19],
+      "end": [49, 20]
+    },
+    {
+      "key": "ISA.49.21-21",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 21],
+      "end": [49, 21]
+    },
+    {
+      "key": "ISA.49.22-22",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 22],
+      "end": [49, 22]
+    },
+    {
+      "key": "ISA.49.23-23",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 23],
+      "end": [49, 23]
+    },
+    {
+      "key": "ISA.49.24-25",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 24],
+      "end": [49, 25]
+    },
+    {
+      "key": "ISA.49.26-26",
+      "pericope": "ISA.P.49.1-26",
+      "start": [49, 26],
+      "end": [49, 26]
+    },
+    {
+      "key": "ISA.50.1-1",
+      "pericope": "ISA.P.50.1-3",
+      "start": [50, 1],
+      "end": [50, 1]
+    },
+    {
+      "key": "ISA.50.2-3",
+      "pericope": "ISA.P.50.1-3",
+      "start": [50, 2],
+      "end": [50, 3]
+    },
+    {
+      "key": "ISA.50.4-4",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 4],
+      "end": [50, 4]
+    },
+    {
+      "key": "ISA.50.5-6",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 5],
+      "end": [50, 6]
+    },
+    {
+      "key": "ISA.50.7-7",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 7],
+      "end": [50, 7]
+    },
+    {
+      "key": "ISA.50.8-9",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 8],
+      "end": [50, 9]
+    },
+    {
+      "key": "ISA.50.10-10",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 10],
+      "end": [50, 10]
+    },
+    {
+      "key": "ISA.50.11-11",
+      "pericope": "ISA.P.50.4-11",
+      "start": [50, 11],
+      "end": [50, 11]
+    },
+    {
+      "key": "ISA.51.1-1",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 1],
+      "end": [51, 1]
+    },
+    {
+      "key": "ISA.51.2-2",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 2],
+      "end": [51, 2]
+    },
+    {
+      "key": "ISA.51.3-3",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 3],
+      "end": [51, 3]
+    },
+    {
+      "key": "ISA.51.4-5",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 4],
+      "end": [51, 5]
+    },
+    {
+      "key": "ISA.51.6-6",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 6],
+      "end": [51, 6]
+    },
+    {
+      "key": "ISA.51.7-8",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 7],
+      "end": [51, 8]
+    },
+    {
+      "key": "ISA.51.9-10",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 9],
+      "end": [51, 10]
+    },
+    {
+      "key": "ISA.51.11-11",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 11],
+      "end": [51, 11]
+    },
+    {
+      "key": "ISA.51.12-12",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 12],
+      "end": [51, 12]
+    },
+    {
+      "key": "ISA.51.13-13",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 13],
+      "end": [51, 13]
+    },
+    {
+      "key": "ISA.51.14-15",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 14],
+      "end": [51, 15]
+    },
+    {
+      "key": "ISA.51.16-16",
+      "pericope": "ISA.P.51.1-16",
+      "start": [51, 16],
+      "end": [51, 16]
+    },
+    {
+      "key": "ISA.51.17-18",
+      "pericope": "ISA.P.51.17-23",
+      "start": [51, 17],
+      "end": [51, 18]
+    },
+    {
+      "key": "ISA.51.19-20",
+      "pericope": "ISA.P.51.17-23",
+      "start": [51, 19],
+      "end": [51, 20]
+    },
+    {
+      "key": "ISA.51.21-22",
+      "pericope": "ISA.P.51.17-23",
+      "start": [51, 21],
+      "end": [51, 22]
+    },
+    {
+      "key": "ISA.51.23-23",
+      "pericope": "ISA.P.51.17-23",
+      "start": [51, 23],
+      "end": [51, 23]
+    },
+    {
+      "key": "ISA.52.1-1",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 1],
+      "end": [52, 1]
+    },
+    {
+      "key": "ISA.52.2-3",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 2],
+      "end": [52, 3]
+    },
+    {
+      "key": "ISA.52.4-4",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 4],
+      "end": [52, 4]
+    },
+    {
+      "key": "ISA.52.5-6",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 5],
+      "end": [52, 6]
+    },
+    {
+      "key": "ISA.52.7-8",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 7],
+      "end": [52, 8]
+    },
+    {
+      "key": "ISA.52.9-10",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 9],
+      "end": [52, 10]
+    },
+    {
+      "key": "ISA.52.11-12",
+      "pericope": "ISA.P.52.1-12",
+      "start": [52, 11],
+      "end": [52, 12]
+    },
+    {
+      "key": "ISA.52.13-14",
+      "pericope": "ISA.P.52.13-15",
+      "start": [52, 13],
+      "end": [52, 14]
+    },
+    {
+      "key": "ISA.52.15-15",
+      "pericope": "ISA.P.52.13-15",
+      "start": [52, 15],
+      "end": [52, 15]
+    },
+    {
+      "key": "ISA.53.1-2",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 1],
+      "end": [53, 2]
+    },
+    {
+      "key": "ISA.53.3-3",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 3],
+      "end": [53, 3]
+    },
+    {
+      "key": "ISA.53.4-4",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 4],
+      "end": [53, 4]
+    },
+    {
+      "key": "ISA.53.5-5",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 5],
+      "end": [53, 5]
+    },
+    {
+      "key": "ISA.53.6-6",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 6],
+      "end": [53, 6]
+    },
+    {
+      "key": "ISA.53.7-7",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 7],
+      "end": [53, 7]
+    },
+    {
+      "key": "ISA.53.8-8",
+      "pericope": "ISA.P.53.1-8",
+      "start": [53, 8],
+      "end": [53, 8]
+    },
+    {
+      "key": "ISA.53.9-9",
+      "pericope": "ISA.P.53.9-12",
+      "start": [53, 9],
+      "end": [53, 9]
+    },
+    {
+      "key": "ISA.53.10-11",
+      "pericope": "ISA.P.53.9-12",
+      "start": [53, 10],
+      "end": [53, 11]
+    },
+    {
+      "key": "ISA.53.12-12",
+      "pericope": "ISA.P.53.9-12",
+      "start": [53, 12],
+      "end": [53, 12]
+    },
+    {
+      "key": "ISA.54.1-1",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 1],
+      "end": [54, 1]
+    },
+    {
+      "key": "ISA.54.2-3",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 2],
+      "end": [54, 3]
+    },
+    {
+      "key": "ISA.54.4-4",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 4],
+      "end": [54, 4]
+    },
+    {
+      "key": "ISA.54.5-6",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 5],
+      "end": [54, 6]
+    },
+    {
+      "key": "ISA.54.7-8",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 7],
+      "end": [54, 8]
+    },
+    {
+      "key": "ISA.54.9-10",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 9],
+      "end": [54, 10]
+    },
+    {
+      "key": "ISA.54.11-12",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 11],
+      "end": [54, 12]
+    },
+    {
+      "key": "ISA.54.13-14",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 13],
+      "end": [54, 14]
+    },
+    {
+      "key": "ISA.54.15-16",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 15],
+      "end": [54, 16]
+    },
+    {
+      "key": "ISA.54.17-17",
+      "pericope": "ISA.P.54.1-17",
+      "start": [54, 17],
+      "end": [54, 17]
+    },
+    {
+      "key": "ISA.55.1-1",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 1],
+      "end": [55, 1]
+    },
+    {
+      "key": "ISA.55.2-2",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 2],
+      "end": [55, 2]
+    },
+    {
+      "key": "ISA.55.3-4",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 3],
+      "end": [55, 4]
+    },
+    {
+      "key": "ISA.55.5-5",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 5],
+      "end": [55, 5]
+    },
+    {
+      "key": "ISA.55.6-7",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 6],
+      "end": [55, 7]
+    },
+    {
+      "key": "ISA.55.8-9",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 8],
+      "end": [55, 9]
+    },
+    {
+      "key": "ISA.55.10-11",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 10],
+      "end": [55, 11]
+    },
+    {
+      "key": "ISA.55.12-13",
+      "pericope": "ISA.P.55.1-13",
+      "start": [55, 12],
+      "end": [55, 13]
+    },
+    {
+      "key": "ISA.56.1-2",
+      "pericope": "ISA.P.56.1-8",
+      "start": [56, 1],
+      "end": [56, 2]
+    },
+    {
+      "key": "ISA.56.3-3",
+      "pericope": "ISA.P.56.1-8",
+      "start": [56, 3],
+      "end": [56, 3]
+    },
+    {
+      "key": "ISA.56.4-5",
+      "pericope": "ISA.P.56.1-8",
+      "start": [56, 4],
+      "end": [56, 5]
+    },
+    {
+      "key": "ISA.56.6-7",
+      "pericope": "ISA.P.56.1-8",
+      "start": [56, 6],
+      "end": [56, 7]
+    },
+    {
+      "key": "ISA.56.8-8",
+      "pericope": "ISA.P.56.1-8",
+      "start": [56, 8],
+      "end": [56, 8]
+    },
+    {
+      "key": "ISA.56.9-10",
+      "pericope": "ISA.P.56.9-12",
+      "start": [56, 9],
+      "end": [56, 10]
+    },
+    {
+      "key": "ISA.56.11-12",
+      "pericope": "ISA.P.56.9-12",
+      "start": [56, 11],
+      "end": [56, 12]
+    },
+    {
+      "key": "ISA.57.1-2",
+      "pericope": "ISA.P.57.1-2",
+      "start": [57, 1],
+      "end": [57, 2]
+    },
+    {
+      "key": "ISA.57.3-4",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 3],
+      "end": [57, 4]
+    },
+    {
+      "key": "ISA.57.5-5",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 5],
+      "end": [57, 5]
+    },
+    {
+      "key": "ISA.57.6-6",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 6],
+      "end": [57, 6]
+    },
+    {
+      "key": "ISA.57.7-8",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 7],
+      "end": [57, 8]
+    },
+    {
+      "key": "ISA.57.9-10",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 9],
+      "end": [57, 10]
+    },
+    {
+      "key": "ISA.57.11-12",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 11],
+      "end": [57, 12]
+    },
+    {
+      "key": "ISA.57.13-13",
+      "pericope": "ISA.P.57.3-13",
+      "start": [57, 13],
+      "end": [57, 13]
+    },
+    {
+      "key": "ISA.57.14-15",
+      "pericope": "ISA.P.57.14-21",
+      "start": [57, 14],
+      "end": [57, 15]
+    },
+    {
+      "key": "ISA.57.16-17",
+      "pericope": "ISA.P.57.14-21",
+      "start": [57, 16],
+      "end": [57, 17]
+    },
+    {
+      "key": "ISA.57.18-19",
+      "pericope": "ISA.P.57.14-21",
+      "start": [57, 18],
+      "end": [57, 19]
+    },
+    {
+      "key": "ISA.57.20-21",
+      "pericope": "ISA.P.57.14-21",
+      "start": [57, 20],
+      "end": [57, 21]
+    },
+    {
+      "key": "ISA.58.1-2",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 1],
+      "end": [58, 2]
+    },
+    {
+      "key": "ISA.58.3-3",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 3],
+      "end": [58, 3]
+    },
+    {
+      "key": "ISA.58.4-5",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 4],
+      "end": [58, 5]
+    },
+    {
+      "key": "ISA.58.6-7",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 6],
+      "end": [58, 7]
+    },
+    {
+      "key": "ISA.58.8-8",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 8],
+      "end": [58, 8]
+    },
+    {
+      "key": "ISA.58.9-10",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 9],
+      "end": [58, 10]
+    },
+    {
+      "key": "ISA.58.11-11",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 11],
+      "end": [58, 11]
+    },
+    {
+      "key": "ISA.58.12-12",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 12],
+      "end": [58, 12]
+    },
+    {
+      "key": "ISA.58.13-13",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 13],
+      "end": [58, 13]
+    },
+    {
+      "key": "ISA.58.14-14",
+      "pericope": "ISA.P.58.1-14",
+      "start": [58, 14],
+      "end": [58, 14]
+    },
+    {
+      "key": "ISA.59.1-2",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 1],
+      "end": [59, 2]
+    },
+    {
+      "key": "ISA.59.3-4",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 3],
+      "end": [59, 4]
+    },
+    {
+      "key": "ISA.59.5-6",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 5],
+      "end": [59, 6]
+    },
+    {
+      "key": "ISA.59.7-8",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 7],
+      "end": [59, 8]
+    },
+    {
+      "key": "ISA.59.9-10",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 9],
+      "end": [59, 10]
+    },
+    {
+      "key": "ISA.59.11-11",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 11],
+      "end": [59, 11]
+    },
+    {
+      "key": "ISA.59.12-13",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 12],
+      "end": [59, 13]
+    },
+    {
+      "key": "ISA.59.14-15",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 14],
+      "end": [59, 15]
+    },
+    {
+      "key": "ISA.59.16-16",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 16],
+      "end": [59, 16]
+    },
+    {
+      "key": "ISA.59.17-17",
+      "pericope": "ISA.P.59.1-17",
+      "start": [59, 17],
+      "end": [59, 17]
+    },
+    {
+      "key": "ISA.59.18-18",
+      "pericope": "ISA.P.59.18-21",
+      "start": [59, 18],
+      "end": [59, 18]
+    },
+    {
+      "key": "ISA.59.19-20",
+      "pericope": "ISA.P.59.18-21",
+      "start": [59, 19],
+      "end": [59, 20]
+    },
+    {
+      "key": "ISA.59.21-21",
+      "pericope": "ISA.P.59.18-21",
+      "start": [59, 21],
+      "end": [59, 21]
+    },
+    {
+      "key": "ISA.60.1-1",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 1],
+      "end": [60, 1]
+    },
+    {
+      "key": "ISA.60.2-3",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 2],
+      "end": [60, 3]
+    },
+    {
+      "key": "ISA.60.4-5",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 4],
+      "end": [60, 5]
+    },
+    {
+      "key": "ISA.60.6-7",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 6],
+      "end": [60, 7]
+    },
+    {
+      "key": "ISA.60.8-9",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 8],
+      "end": [60, 9]
+    },
+    {
+      "key": "ISA.60.10-11",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 10],
+      "end": [60, 11]
+    },
+    {
+      "key": "ISA.60.12-13",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 12],
+      "end": [60, 13]
+    },
+    {
+      "key": "ISA.60.14-14",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 14],
+      "end": [60, 14]
+    },
+    {
+      "key": "ISA.60.15-16",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 15],
+      "end": [60, 16]
+    },
+    {
+      "key": "ISA.60.17-18",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 17],
+      "end": [60, 18]
+    },
+    {
+      "key": "ISA.60.19-20",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 19],
+      "end": [60, 20]
+    },
+    {
+      "key": "ISA.60.21-22",
+      "pericope": "ISA.P.60.1-22",
+      "start": [60, 21],
+      "end": [60, 22]
+    },
+    {
+      "key": "ISA.61.1-1",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 1],
+      "end": [61, 1]
+    },
+    {
+      "key": "ISA.61.2-2",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 2],
+      "end": [61, 2]
+    },
+    {
+      "key": "ISA.61.3-3",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 3],
+      "end": [61, 3]
+    },
+    {
+      "key": "ISA.61.4-5",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 4],
+      "end": [61, 5]
+    },
+    {
+      "key": "ISA.61.6-7",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 6],
+      "end": [61, 7]
+    },
+    {
+      "key": "ISA.61.8-9",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 8],
+      "end": [61, 9]
+    },
+    {
+      "key": "ISA.61.10-11",
+      "pericope": "ISA.P.61.1-11",
+      "start": [61, 10],
+      "end": [61, 11]
+    },
+    {
+      "key": "ISA.62.1-2",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 1],
+      "end": [62, 2]
+    },
+    {
+      "key": "ISA.62.3-4",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 3],
+      "end": [62, 4]
+    },
+    {
+      "key": "ISA.62.5-5",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 5],
+      "end": [62, 5]
+    },
+    {
+      "key": "ISA.62.6-7",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 6],
+      "end": [62, 7]
+    },
+    {
+      "key": "ISA.62.8-9",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 8],
+      "end": [62, 9]
+    },
+    {
+      "key": "ISA.62.10-10",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 10],
+      "end": [62, 10]
+    },
+    {
+      "key": "ISA.62.11-12",
+      "pericope": "ISA.P.62.1-12",
+      "start": [62, 11],
+      "end": [62, 12]
+    },
+    {
+      "key": "ISA.63.1-2",
+      "pericope": "ISA.P.63.1-6",
+      "start": [63, 1],
+      "end": [63, 2]
+    },
+    {
+      "key": "ISA.63.3-4",
+      "pericope": "ISA.P.63.1-6",
+      "start": [63, 3],
+      "end": [63, 4]
+    },
+    {
+      "key": "ISA.63.5-6",
+      "pericope": "ISA.P.63.1-6",
+      "start": [63, 5],
+      "end": [63, 6]
+    },
+    {
+      "key": "ISA.63.7-8",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 7],
+      "end": [63, 8]
+    },
+    {
+      "key": "ISA.63.9-9",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 9],
+      "end": [63, 9]
+    },
+    {
+      "key": "ISA.63.10-10",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 10],
+      "end": [63, 10]
+    },
+    {
+      "key": "ISA.63.11-11",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 11],
+      "end": [63, 11]
+    },
+    {
+      "key": "ISA.63.12-13",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 12],
+      "end": [63, 13]
+    },
+    {
+      "key": "ISA.63.14-14",
+      "pericope": "ISA.P.63.7-14",
+      "start": [63, 14],
+      "end": [63, 14]
+    },
+    {
+      "key": "ISA.63.15-16",
+      "pericope": "ISA.P.63.15-19",
+      "start": [63, 15],
+      "end": [63, 16]
+    },
+    {
+      "key": "ISA.63.17-17",
+      "pericope": "ISA.P.63.15-19",
+      "start": [63, 17],
+      "end": [63, 17]
+    },
+    {
+      "key": "ISA.63.18-19",
+      "pericope": "ISA.P.63.15-19",
+      "start": [63, 18],
+      "end": [63, 19]
+    },
+    {
+      "key": "ISA.64.1-2",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 1],
+      "end": [64, 2]
+    },
+    {
+      "key": "ISA.64.3-4",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 3],
+      "end": [64, 4]
+    },
+    {
+      "key": "ISA.64.5-5",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 5],
+      "end": [64, 5]
+    },
+    {
+      "key": "ISA.64.6-7",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 6],
+      "end": [64, 7]
+    },
+    {
+      "key": "ISA.64.8-9",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 8],
+      "end": [64, 9]
+    },
+    {
+      "key": "ISA.64.10-12",
+      "pericope": "ISA.P.64.1-12",
+      "start": [64, 10],
+      "end": [64, 12]
+    },
+    {
+      "key": "ISA.65.1-2",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 1],
+      "end": [65, 2]
+    },
+    {
+      "key": "ISA.65.3-4",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 3],
+      "end": [65, 4]
+    },
+    {
+      "key": "ISA.65.5-5",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 5],
+      "end": [65, 5]
+    },
+    {
+      "key": "ISA.65.6-7",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 6],
+      "end": [65, 7]
+    },
+    {
+      "key": "ISA.65.8-8",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 8],
+      "end": [65, 8]
+    },
+    {
+      "key": "ISA.65.9-10",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 9],
+      "end": [65, 10]
+    },
+    {
+      "key": "ISA.65.11-11",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 11],
+      "end": [65, 11]
+    },
+    {
+      "key": "ISA.65.12-12",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 12],
+      "end": [65, 12]
+    },
+    {
+      "key": "ISA.65.13-14",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 13],
+      "end": [65, 14]
+    },
+    {
+      "key": "ISA.65.15-16",
+      "pericope": "ISA.P.65.1-16",
+      "start": [65, 15],
+      "end": [65, 16]
+    },
+    {
+      "key": "ISA.65.17-19",
+      "pericope": "ISA.P.65.17-25",
+      "start": [65, 17],
+      "end": [65, 19]
+    },
+    {
+      "key": "ISA.65.20-21",
+      "pericope": "ISA.P.65.17-25",
+      "start": [65, 20],
+      "end": [65, 21]
+    },
+    {
+      "key": "ISA.65.22-23",
+      "pericope": "ISA.P.65.17-25",
+      "start": [65, 22],
+      "end": [65, 23]
+    },
+    {
+      "key": "ISA.65.24-25",
+      "pericope": "ISA.P.65.17-25",
+      "start": [65, 24],
+      "end": [65, 25]
+    },
+    {
+      "key": "ISA.66.1-1",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 1],
+      "end": [66, 1]
+    },
+    {
+      "key": "ISA.66.2-2",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 2],
+      "end": [66, 2]
+    },
+    {
+      "key": "ISA.66.3-3",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 3],
+      "end": [66, 3]
+    },
+    {
+      "key": "ISA.66.4-4",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 4],
+      "end": [66, 4]
+    },
+    {
+      "key": "ISA.66.5-5",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 5],
+      "end": [66, 5]
+    },
+    {
+      "key": "ISA.66.6-6",
+      "pericope": "ISA.P.66.1-6",
+      "start": [66, 6],
+      "end": [66, 6]
+    },
+    {
+      "key": "ISA.66.7-8",
+      "pericope": "ISA.P.66.7-14",
+      "start": [66, 7],
+      "end": [66, 8]
+    },
+    {
+      "key": "ISA.66.9-9",
+      "pericope": "ISA.P.66.7-14",
+      "start": [66, 9],
+      "end": [66, 9]
+    },
+    {
+      "key": "ISA.66.10-11",
+      "pericope": "ISA.P.66.7-14",
+      "start": [66, 10],
+      "end": [66, 11]
+    },
+    {
+      "key": "ISA.66.12-13",
+      "pericope": "ISA.P.66.7-14",
+      "start": [66, 12],
+      "end": [66, 13]
+    },
+    {
+      "key": "ISA.66.14-14",
+      "pericope": "ISA.P.66.7-14",
+      "start": [66, 14],
+      "end": [66, 14]
+    },
+    {
+      "key": "ISA.66.15-16",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 15],
+      "end": [66, 16]
+    },
+    {
+      "key": "ISA.66.17-17",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 17],
+      "end": [66, 17]
+    },
+    {
+      "key": "ISA.66.18-19",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 18],
+      "end": [66, 19]
+    },
+    {
+      "key": "ISA.66.20-21",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 20],
+      "end": [66, 21]
+    },
+    {
+      "key": "ISA.66.22-23",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 22],
+      "end": [66, 23]
+    },
+    {
+      "key": "ISA.66.24-24",
+      "pericope": "ISA.P.66.15-24",
+      "start": [66, 24],
+      "end": [66, 24]
+    }
+  ]
+}

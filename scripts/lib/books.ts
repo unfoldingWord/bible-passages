@@ -73,11 +73,10 @@ export const ALL_BOOKS: readonly (readonly [code: string, file: string])[] = [
 ];
 
 /**
- * Books whose structure (pericopes and segments) and package are built.
- * Titus only for now; the switch to every book in ALL_BOOKS is its own
- * change, so the code can be reviewed apart from the generated data (#6).
+ * Books whose structure (pericopes and segments) and package are built:
+ * every book in ALL_BOOKS.
  */
-export const STRUCTURE_BOOKS: readonly string[] = ["TIT"];
+export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
 
 /**
  * Books whose titles are built so far: one book end to end before the next

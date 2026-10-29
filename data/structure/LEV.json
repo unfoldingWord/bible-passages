@@ -1,0 +1,2310 @@
+{
+  "book": "LEV",
+  "versification": "ufw",
+  "pericopes": [
+    { "key": "LEV.P.1.1-17", "start": [1, 1], "end": [1, 17] },
+    { "key": "LEV.P.2.1-16", "start": [2, 1], "end": [2, 16] },
+    { "key": "LEV.P.3.1-17", "start": [3, 1], "end": [3, 17] },
+    { "key": "LEV.P.4.1-35", "start": [4, 1], "end": [4, 35] },
+    { "key": "LEV.P.5.1-13", "start": [5, 1], "end": [5, 13] },
+    { "key": "LEV.P.5.14-19", "start": [5, 14], "end": [5, 19] },
+    { "key": "LEV.P.6.1-7", "start": [6, 1], "end": [6, 7] },
+    { "key": "LEV.P.6.8-13", "start": [6, 8], "end": [6, 13] },
+    { "key": "LEV.P.6.14-23", "start": [6, 14], "end": [6, 23] },
+    { "key": "LEV.P.6.24-30", "start": [6, 24], "end": [6, 30] },
+    { "key": "LEV.P.7.1-10", "start": [7, 1], "end": [7, 10] },
+    { "key": "LEV.P.7.11-21", "start": [7, 11], "end": [7, 21] },
+    { "key": "LEV.P.7.22-27", "start": [7, 22], "end": [7, 27] },
+    { "key": "LEV.P.7.28-38", "start": [7, 28], "end": [7, 38] },
+    { "key": "LEV.P.8.1-13", "start": [8, 1], "end": [8, 13] },
+    { "key": "LEV.P.8.14-17", "start": [8, 14], "end": [8, 17] },
+    { "key": "LEV.P.8.18-21", "start": [8, 18], "end": [8, 21] },
+    { "key": "LEV.P.8.22-36", "start": [8, 22], "end": [8, 36] },
+    { "key": "LEV.P.9.1-24", "start": [9, 1], "end": [9, 24] },
+    { "key": "LEV.P.10.1-7", "start": [10, 1], "end": [10, 7] },
+    { "key": "LEV.P.10.8-20", "start": [10, 8], "end": [10, 20] },
+    { "key": "LEV.P.11.1-47", "start": [11, 1], "end": [11, 47] },
+    { "key": "LEV.P.12.1-8", "start": [12, 1], "end": [12, 8] },
+    { "key": "LEV.P.13.1-46", "start": [13, 1], "end": [13, 46] },
+    { "key": "LEV.P.13.47-59", "start": [13, 47], "end": [13, 59] },
+    { "key": "LEV.P.14.1-32", "start": [14, 1], "end": [14, 32] },
+    { "key": "LEV.P.14.33-47", "start": [14, 33], "end": [14, 47] },
+    { "key": "LEV.P.14.48-57", "start": [14, 48], "end": [14, 57] },
+    { "key": "LEV.P.15.1-12", "start": [15, 1], "end": [15, 12] },
+    { "key": "LEV.P.15.13-18", "start": [15, 13], "end": [15, 18] },
+    { "key": "LEV.P.15.19-27", "start": [15, 19], "end": [15, 27] },
+    { "key": "LEV.P.15.28-33", "start": [15, 28], "end": [15, 33] },
+    { "key": "LEV.P.16.1-34", "start": [16, 1], "end": [16, 34] },
+    { "key": "LEV.P.17.1-9", "start": [17, 1], "end": [17, 9] },
+    { "key": "LEV.P.17.10-16", "start": [17, 10], "end": [17, 16] },
+    { "key": "LEV.P.18.1-30", "start": [18, 1], "end": [18, 30] },
+    { "key": "LEV.P.19.1-8", "start": [19, 1], "end": [19, 8] },
+    { "key": "LEV.P.19.9-18", "start": [19, 9], "end": [19, 18] },
+    { "key": "LEV.P.19.19-37", "start": [19, 19], "end": [19, 37] },
+    { "key": "LEV.P.20.1-9", "start": [20, 1], "end": [20, 9] },
+    { "key": "LEV.P.20.10-21", "start": [20, 10], "end": [20, 21] },
+    { "key": "LEV.P.20.22-27", "start": [20, 22], "end": [20, 27] },
+    { "key": "LEV.P.21.1-15", "start": [21, 1], "end": [21, 15] },
+    { "key": "LEV.P.21.16-24", "start": [21, 16], "end": [21, 24] },
+    { "key": "LEV.P.22.1-16", "start": [22, 1], "end": [22, 16] },
+    { "key": "LEV.P.22.17-33", "start": [22, 17], "end": [22, 33] },
+    { "key": "LEV.P.23.1-3", "start": [23, 1], "end": [23, 3] },
+    { "key": "LEV.P.23.4-8", "start": [23, 4], "end": [23, 8] },
+    { "key": "LEV.P.23.9-14", "start": [23, 9], "end": [23, 14] },
+    { "key": "LEV.P.23.15-22", "start": [23, 15], "end": [23, 22] },
+    { "key": "LEV.P.23.23-25", "start": [23, 23], "end": [23, 25] },
+    { "key": "LEV.P.23.26-32", "start": [23, 26], "end": [23, 32] },
+    { "key": "LEV.P.23.33-44", "start": [23, 33], "end": [23, 44] },
+    { "key": "LEV.P.24.1-4", "start": [24, 1], "end": [24, 4] },
+    { "key": "LEV.P.24.5-9", "start": [24, 5], "end": [24, 9] },
+    { "key": "LEV.P.24.10-16", "start": [24, 10], "end": [24, 16] },
+    { "key": "LEV.P.24.17-23", "start": [24, 17], "end": [24, 23] },
+    { "key": "LEV.P.25.1-7", "start": [25, 1], "end": [25, 7] },
+    { "key": "LEV.P.25.8-12", "start": [25, 8], "end": [25, 12] },
+    { "key": "LEV.P.25.13-17", "start": [25, 13], "end": [25, 17] },
+    { "key": "LEV.P.25.18-22", "start": [25, 18], "end": [25, 22] },
+    { "key": "LEV.P.25.23-34", "start": [25, 23], "end": [25, 34] },
+    { "key": "LEV.P.25.35-38", "start": [25, 35], "end": [25, 38] },
+    { "key": "LEV.P.25.39-46", "start": [25, 39], "end": [25, 46] },
+    { "key": "LEV.P.25.47-55", "start": [25, 47], "end": [25, 55] },
+    { "key": "LEV.P.26.1-13", "start": [26, 1], "end": [26, 13] },
+    { "key": "LEV.P.26.14-39", "start": [26, 14], "end": [26, 39] },
+    { "key": "LEV.P.26.40-46", "start": [26, 40], "end": [26, 46] },
+    { "key": "LEV.P.27.1-29", "start": [27, 1], "end": [27, 29] },
+    { "key": "LEV.P.27.30-34", "start": [27, 30], "end": [27, 34] }
+  ],
+  "segments": [
+    {
+      "key": "LEV.1.1-2",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 1],
+      "end": [1, 2]
+    },
+    {
+      "key": "LEV.1.3-4",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 3],
+      "end": [1, 4]
+    },
+    {
+      "key": "LEV.1.5-6",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 5],
+      "end": [1, 6]
+    },
+    {
+      "key": "LEV.1.7-9",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 7],
+      "end": [1, 9]
+    },
+    {
+      "key": "LEV.1.10-11",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 10],
+      "end": [1, 11]
+    },
+    {
+      "key": "LEV.1.12-13",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 12],
+      "end": [1, 13]
+    },
+    {
+      "key": "LEV.1.14-15",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 14],
+      "end": [1, 15]
+    },
+    {
+      "key": "LEV.1.16-17",
+      "pericope": "LEV.P.1.1-17",
+      "start": [1, 16],
+      "end": [1, 17]
+    },
+    {
+      "key": "LEV.2.1-3",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 1],
+      "end": [2, 3]
+    },
+    {
+      "key": "LEV.2.4-5",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 4],
+      "end": [2, 5]
+    },
+    {
+      "key": "LEV.2.6-7",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 6],
+      "end": [2, 7]
+    },
+    {
+      "key": "LEV.2.8-10",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 8],
+      "end": [2, 10]
+    },
+    {
+      "key": "LEV.2.11-13",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 11],
+      "end": [2, 13]
+    },
+    {
+      "key": "LEV.2.14-16",
+      "pericope": "LEV.P.2.1-16",
+      "start": [2, 14],
+      "end": [2, 16]
+    },
+    {
+      "key": "LEV.3.1-2",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 1],
+      "end": [3, 2]
+    },
+    {
+      "key": "LEV.3.3-5",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 3],
+      "end": [3, 5]
+    },
+    {
+      "key": "LEV.3.6-8",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 6],
+      "end": [3, 8]
+    },
+    {
+      "key": "LEV.3.9-11",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 9],
+      "end": [3, 11]
+    },
+    {
+      "key": "LEV.3.12-14",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 12],
+      "end": [3, 14]
+    },
+    {
+      "key": "LEV.3.15-17",
+      "pericope": "LEV.P.3.1-17",
+      "start": [3, 15],
+      "end": [3, 17]
+    },
+    {
+      "key": "LEV.4.1-3",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 1],
+      "end": [4, 3]
+    },
+    {
+      "key": "LEV.4.4-5",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 4],
+      "end": [4, 5]
+    },
+    {
+      "key": "LEV.4.6-7",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 6],
+      "end": [4, 7]
+    },
+    {
+      "key": "LEV.4.8-10",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 8],
+      "end": [4, 10]
+    },
+    {
+      "key": "LEV.4.11-12",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 11],
+      "end": [4, 12]
+    },
+    {
+      "key": "LEV.4.13-15",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 13],
+      "end": [4, 15]
+    },
+    {
+      "key": "LEV.4.16-17",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 16],
+      "end": [4, 17]
+    },
+    {
+      "key": "LEV.4.18-19",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 18],
+      "end": [4, 19]
+    },
+    {
+      "key": "LEV.4.20-21",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 20],
+      "end": [4, 21]
+    },
+    {
+      "key": "LEV.4.22-23",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 22],
+      "end": [4, 23]
+    },
+    {
+      "key": "LEV.4.24-25",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 24],
+      "end": [4, 25]
+    },
+    {
+      "key": "LEV.4.26-26",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 26],
+      "end": [4, 26]
+    },
+    {
+      "key": "LEV.4.27-28",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 27],
+      "end": [4, 28]
+    },
+    {
+      "key": "LEV.4.29-30",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 29],
+      "end": [4, 30]
+    },
+    {
+      "key": "LEV.4.31-31",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 31],
+      "end": [4, 31]
+    },
+    {
+      "key": "LEV.4.32-33",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 32],
+      "end": [4, 33]
+    },
+    {
+      "key": "LEV.4.34-35",
+      "pericope": "LEV.P.4.1-35",
+      "start": [4, 34],
+      "end": [4, 35]
+    },
+    {
+      "key": "LEV.5.1-2",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 1],
+      "end": [5, 2]
+    },
+    {
+      "key": "LEV.5.3-4",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 3],
+      "end": [5, 4]
+    },
+    {
+      "key": "LEV.5.5-6",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 5],
+      "end": [5, 6]
+    },
+    {
+      "key": "LEV.5.7-9",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 7],
+      "end": [5, 9]
+    },
+    {
+      "key": "LEV.5.10-10",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 10],
+      "end": [5, 10]
+    },
+    {
+      "key": "LEV.5.11-11",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 11],
+      "end": [5, 11]
+    },
+    {
+      "key": "LEV.5.12-13",
+      "pericope": "LEV.P.5.1-13",
+      "start": [5, 12],
+      "end": [5, 13]
+    },
+    {
+      "key": "LEV.5.14-16",
+      "pericope": "LEV.P.5.14-19",
+      "start": [5, 14],
+      "end": [5, 16]
+    },
+    {
+      "key": "LEV.5.17-19",
+      "pericope": "LEV.P.5.14-19",
+      "start": [5, 17],
+      "end": [5, 19]
+    },
+    {
+      "key": "LEV.6.1-4",
+      "pericope": "LEV.P.6.1-7",
+      "start": [6, 1],
+      "end": [6, 4]
+    },
+    {
+      "key": "LEV.6.5-7",
+      "pericope": "LEV.P.6.1-7",
+      "start": [6, 5],
+      "end": [6, 7]
+    },
+    {
+      "key": "LEV.6.8-9",
+      "pericope": "LEV.P.6.8-13",
+      "start": [6, 8],
+      "end": [6, 9]
+    },
+    {
+      "key": "LEV.6.10-11",
+      "pericope": "LEV.P.6.8-13",
+      "start": [6, 10],
+      "end": [6, 11]
+    },
+    {
+      "key": "LEV.6.12-13",
+      "pericope": "LEV.P.6.8-13",
+      "start": [6, 12],
+      "end": [6, 13]
+    },
+    {
+      "key": "LEV.6.14-15",
+      "pericope": "LEV.P.6.14-23",
+      "start": [6, 14],
+      "end": [6, 15]
+    },
+    {
+      "key": "LEV.6.16-18",
+      "pericope": "LEV.P.6.14-23",
+      "start": [6, 16],
+      "end": [6, 18]
+    },
+    {
+      "key": "LEV.6.19-20",
+      "pericope": "LEV.P.6.14-23",
+      "start": [6, 19],
+      "end": [6, 20]
+    },
+    {
+      "key": "LEV.6.21-23",
+      "pericope": "LEV.P.6.14-23",
+      "start": [6, 21],
+      "end": [6, 23]
+    },
+    {
+      "key": "LEV.6.24-26",
+      "pericope": "LEV.P.6.24-30",
+      "start": [6, 24],
+      "end": [6, 26]
+    },
+    {
+      "key": "LEV.6.27-28",
+      "pericope": "LEV.P.6.24-30",
+      "start": [6, 27],
+      "end": [6, 28]
+    },
+    {
+      "key": "LEV.6.29-30",
+      "pericope": "LEV.P.6.24-30",
+      "start": [6, 29],
+      "end": [6, 30]
+    },
+    {
+      "key": "LEV.7.1-4",
+      "pericope": "LEV.P.7.1-10",
+      "start": [7, 1],
+      "end": [7, 4]
+    },
+    {
+      "key": "LEV.7.5-6",
+      "pericope": "LEV.P.7.1-10",
+      "start": [7, 5],
+      "end": [7, 6]
+    },
+    {
+      "key": "LEV.7.7-8",
+      "pericope": "LEV.P.7.1-10",
+      "start": [7, 7],
+      "end": [7, 8]
+    },
+    {
+      "key": "LEV.7.9-10",
+      "pericope": "LEV.P.7.1-10",
+      "start": [7, 9],
+      "end": [7, 10]
+    },
+    {
+      "key": "LEV.7.11-12",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 11],
+      "end": [7, 12]
+    },
+    {
+      "key": "LEV.7.13-14",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 13],
+      "end": [7, 14]
+    },
+    {
+      "key": "LEV.7.15-16",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 15],
+      "end": [7, 16]
+    },
+    {
+      "key": "LEV.7.17-18",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 17],
+      "end": [7, 18]
+    },
+    {
+      "key": "LEV.7.19-20",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 19],
+      "end": [7, 20]
+    },
+    {
+      "key": "LEV.7.21-21",
+      "pericope": "LEV.P.7.11-21",
+      "start": [7, 21],
+      "end": [7, 21]
+    },
+    {
+      "key": "LEV.7.22-24",
+      "pericope": "LEV.P.7.22-27",
+      "start": [7, 22],
+      "end": [7, 24]
+    },
+    {
+      "key": "LEV.7.25-27",
+      "pericope": "LEV.P.7.22-27",
+      "start": [7, 25],
+      "end": [7, 27]
+    },
+    {
+      "key": "LEV.7.28-30",
+      "pericope": "LEV.P.7.28-38",
+      "start": [7, 28],
+      "end": [7, 30]
+    },
+    {
+      "key": "LEV.7.31-32",
+      "pericope": "LEV.P.7.28-38",
+      "start": [7, 31],
+      "end": [7, 32]
+    },
+    {
+      "key": "LEV.7.33-34",
+      "pericope": "LEV.P.7.28-38",
+      "start": [7, 33],
+      "end": [7, 34]
+    },
+    {
+      "key": "LEV.7.35-36",
+      "pericope": "LEV.P.7.28-38",
+      "start": [7, 35],
+      "end": [7, 36]
+    },
+    {
+      "key": "LEV.7.37-38",
+      "pericope": "LEV.P.7.28-38",
+      "start": [7, 37],
+      "end": [7, 38]
+    },
+    {
+      "key": "LEV.8.1-3",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 1],
+      "end": [8, 3]
+    },
+    {
+      "key": "LEV.8.4-5",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 4],
+      "end": [8, 5]
+    },
+    {
+      "key": "LEV.8.6-7",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 6],
+      "end": [8, 7]
+    },
+    {
+      "key": "LEV.8.8-9",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 8],
+      "end": [8, 9]
+    },
+    {
+      "key": "LEV.8.10-11",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 10],
+      "end": [8, 11]
+    },
+    {
+      "key": "LEV.8.12-13",
+      "pericope": "LEV.P.8.1-13",
+      "start": [8, 12],
+      "end": [8, 13]
+    },
+    {
+      "key": "LEV.8.14-15",
+      "pericope": "LEV.P.8.14-17",
+      "start": [8, 14],
+      "end": [8, 15]
+    },
+    {
+      "key": "LEV.8.16-17",
+      "pericope": "LEV.P.8.14-17",
+      "start": [8, 16],
+      "end": [8, 17]
+    },
+    {
+      "key": "LEV.8.18-19",
+      "pericope": "LEV.P.8.18-21",
+      "start": [8, 18],
+      "end": [8, 19]
+    },
+    {
+      "key": "LEV.8.20-21",
+      "pericope": "LEV.P.8.18-21",
+      "start": [8, 20],
+      "end": [8, 21]
+    },
+    {
+      "key": "LEV.8.22-24",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 22],
+      "end": [8, 24]
+    },
+    {
+      "key": "LEV.8.25-27",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 25],
+      "end": [8, 27]
+    },
+    {
+      "key": "LEV.8.28-29",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 28],
+      "end": [8, 29]
+    },
+    {
+      "key": "LEV.8.30-30",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 30],
+      "end": [8, 30]
+    },
+    {
+      "key": "LEV.8.31-33",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 31],
+      "end": [8, 33]
+    },
+    {
+      "key": "LEV.8.34-36",
+      "pericope": "LEV.P.8.22-36",
+      "start": [8, 34],
+      "end": [8, 36]
+    },
+    {
+      "key": "LEV.9.1-2",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 1],
+      "end": [9, 2]
+    },
+    {
+      "key": "LEV.9.3-5",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 3],
+      "end": [9, 5]
+    },
+    {
+      "key": "LEV.9.6-7",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 6],
+      "end": [9, 7]
+    },
+    {
+      "key": "LEV.9.8-9",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 8],
+      "end": [9, 9]
+    },
+    {
+      "key": "LEV.9.10-11",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 10],
+      "end": [9, 11]
+    },
+    {
+      "key": "LEV.9.12-14",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 12],
+      "end": [9, 14]
+    },
+    {
+      "key": "LEV.9.15-17",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 15],
+      "end": [9, 17]
+    },
+    {
+      "key": "LEV.9.18-19",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 18],
+      "end": [9, 19]
+    },
+    {
+      "key": "LEV.9.20-21",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 20],
+      "end": [9, 21]
+    },
+    {
+      "key": "LEV.9.22-24",
+      "pericope": "LEV.P.9.1-24",
+      "start": [9, 22],
+      "end": [9, 24]
+    },
+    {
+      "key": "LEV.10.1-2",
+      "pericope": "LEV.P.10.1-7",
+      "start": [10, 1],
+      "end": [10, 2]
+    },
+    {
+      "key": "LEV.10.3-4",
+      "pericope": "LEV.P.10.1-7",
+      "start": [10, 3],
+      "end": [10, 4]
+    },
+    {
+      "key": "LEV.10.5-7",
+      "pericope": "LEV.P.10.1-7",
+      "start": [10, 5],
+      "end": [10, 7]
+    },
+    {
+      "key": "LEV.10.8-11",
+      "pericope": "LEV.P.10.8-20",
+      "start": [10, 8],
+      "end": [10, 11]
+    },
+    {
+      "key": "LEV.10.12-13",
+      "pericope": "LEV.P.10.8-20",
+      "start": [10, 12],
+      "end": [10, 13]
+    },
+    {
+      "key": "LEV.10.14-15",
+      "pericope": "LEV.P.10.8-20",
+      "start": [10, 14],
+      "end": [10, 15]
+    },
+    {
+      "key": "LEV.10.16-18",
+      "pericope": "LEV.P.10.8-20",
+      "start": [10, 16],
+      "end": [10, 18]
+    },
+    {
+      "key": "LEV.10.19-20",
+      "pericope": "LEV.P.10.8-20",
+      "start": [10, 19],
+      "end": [10, 20]
+    },
+    {
+      "key": "LEV.11.1-2",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 1],
+      "end": [11, 2]
+    },
+    {
+      "key": "LEV.11.3-4",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 3],
+      "end": [11, 4]
+    },
+    {
+      "key": "LEV.11.5-8",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 5],
+      "end": [11, 8]
+    },
+    {
+      "key": "LEV.11.9-10",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 9],
+      "end": [11, 10]
+    },
+    {
+      "key": "LEV.11.11-12",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 11],
+      "end": [11, 12]
+    },
+    {
+      "key": "LEV.11.13-16",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 13],
+      "end": [11, 16]
+    },
+    {
+      "key": "LEV.11.17-19",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 17],
+      "end": [11, 19]
+    },
+    {
+      "key": "LEV.11.20-23",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 20],
+      "end": [11, 23]
+    },
+    {
+      "key": "LEV.11.24-25",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 24],
+      "end": [11, 25]
+    },
+    {
+      "key": "LEV.11.26-28",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 26],
+      "end": [11, 28]
+    },
+    {
+      "key": "LEV.11.29-30",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 29],
+      "end": [11, 30]
+    },
+    {
+      "key": "LEV.11.31-33",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 31],
+      "end": [11, 33]
+    },
+    {
+      "key": "LEV.11.34-35",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 34],
+      "end": [11, 35]
+    },
+    {
+      "key": "LEV.11.36-38",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 36],
+      "end": [11, 38]
+    },
+    {
+      "key": "LEV.11.39-40",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 39],
+      "end": [11, 40]
+    },
+    {
+      "key": "LEV.11.41-42",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 41],
+      "end": [11, 42]
+    },
+    {
+      "key": "LEV.11.43-45",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 43],
+      "end": [11, 45]
+    },
+    {
+      "key": "LEV.11.46-47",
+      "pericope": "LEV.P.11.1-47",
+      "start": [11, 46],
+      "end": [11, 47]
+    },
+    {
+      "key": "LEV.12.1-3",
+      "pericope": "LEV.P.12.1-8",
+      "start": [12, 1],
+      "end": [12, 3]
+    },
+    {
+      "key": "LEV.12.4-5",
+      "pericope": "LEV.P.12.1-8",
+      "start": [12, 4],
+      "end": [12, 5]
+    },
+    {
+      "key": "LEV.12.6-6",
+      "pericope": "LEV.P.12.1-8",
+      "start": [12, 6],
+      "end": [12, 6]
+    },
+    {
+      "key": "LEV.12.7-8",
+      "pericope": "LEV.P.12.1-8",
+      "start": [12, 7],
+      "end": [12, 8]
+    },
+    {
+      "key": "LEV.13.1-2",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 1],
+      "end": [13, 2]
+    },
+    {
+      "key": "LEV.13.3-4",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 3],
+      "end": [13, 4]
+    },
+    {
+      "key": "LEV.13.5-6",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 5],
+      "end": [13, 6]
+    },
+    {
+      "key": "LEV.13.7-8",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 7],
+      "end": [13, 8]
+    },
+    {
+      "key": "LEV.13.9-11",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 9],
+      "end": [13, 11]
+    },
+    {
+      "key": "LEV.13.12-14",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 12],
+      "end": [13, 14]
+    },
+    {
+      "key": "LEV.13.15-17",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 15],
+      "end": [13, 17]
+    },
+    {
+      "key": "LEV.13.18-20",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 18],
+      "end": [13, 20]
+    },
+    {
+      "key": "LEV.13.21-23",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 21],
+      "end": [13, 23]
+    },
+    {
+      "key": "LEV.13.24-25",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 24],
+      "end": [13, 25]
+    },
+    {
+      "key": "LEV.13.26-28",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 26],
+      "end": [13, 28]
+    },
+    {
+      "key": "LEV.13.29-30",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 29],
+      "end": [13, 30]
+    },
+    {
+      "key": "LEV.13.31-31",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 31],
+      "end": [13, 31]
+    },
+    {
+      "key": "LEV.13.32-33",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 32],
+      "end": [13, 33]
+    },
+    {
+      "key": "LEV.13.34-34",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 34],
+      "end": [13, 34]
+    },
+    {
+      "key": "LEV.13.35-37",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 35],
+      "end": [13, 37]
+    },
+    {
+      "key": "LEV.13.38-39",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 38],
+      "end": [13, 39]
+    },
+    {
+      "key": "LEV.13.40-41",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 40],
+      "end": [13, 41]
+    },
+    {
+      "key": "LEV.13.42-44",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 42],
+      "end": [13, 44]
+    },
+    {
+      "key": "LEV.13.45-46",
+      "pericope": "LEV.P.13.1-46",
+      "start": [13, 45],
+      "end": [13, 46]
+    },
+    {
+      "key": "LEV.13.47-49",
+      "pericope": "LEV.P.13.47-59",
+      "start": [13, 47],
+      "end": [13, 49]
+    },
+    {
+      "key": "LEV.13.50-52",
+      "pericope": "LEV.P.13.47-59",
+      "start": [13, 50],
+      "end": [13, 52]
+    },
+    {
+      "key": "LEV.13.53-55",
+      "pericope": "LEV.P.13.47-59",
+      "start": [13, 53],
+      "end": [13, 55]
+    },
+    {
+      "key": "LEV.13.56-58",
+      "pericope": "LEV.P.13.47-59",
+      "start": [13, 56],
+      "end": [13, 58]
+    },
+    {
+      "key": "LEV.13.59-59",
+      "pericope": "LEV.P.13.47-59",
+      "start": [13, 59],
+      "end": [13, 59]
+    },
+    {
+      "key": "LEV.14.1-2",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 1],
+      "end": [14, 2]
+    },
+    {
+      "key": "LEV.14.3-5",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 3],
+      "end": [14, 5]
+    },
+    {
+      "key": "LEV.14.6-7",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 6],
+      "end": [14, 7]
+    },
+    {
+      "key": "LEV.14.8-9",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 8],
+      "end": [14, 9]
+    },
+    {
+      "key": "LEV.14.10-11",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 10],
+      "end": [14, 11]
+    },
+    {
+      "key": "LEV.14.12-13",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 12],
+      "end": [14, 13]
+    },
+    {
+      "key": "LEV.14.14-16",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 14],
+      "end": [14, 16]
+    },
+    {
+      "key": "LEV.14.17-18",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 17],
+      "end": [14, 18]
+    },
+    {
+      "key": "LEV.14.19-20",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 19],
+      "end": [14, 20]
+    },
+    {
+      "key": "LEV.14.21-23",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 21],
+      "end": [14, 23]
+    },
+    {
+      "key": "LEV.14.24-25",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 24],
+      "end": [14, 25]
+    },
+    {
+      "key": "LEV.14.26-27",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 26],
+      "end": [14, 27]
+    },
+    {
+      "key": "LEV.14.28-29",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 28],
+      "end": [14, 29]
+    },
+    {
+      "key": "LEV.14.30-32",
+      "pericope": "LEV.P.14.1-32",
+      "start": [14, 30],
+      "end": [14, 32]
+    },
+    {
+      "key": "LEV.14.33-35",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 33],
+      "end": [14, 35]
+    },
+    {
+      "key": "LEV.14.36-38",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 36],
+      "end": [14, 38]
+    },
+    {
+      "key": "LEV.14.39-40",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 39],
+      "end": [14, 40]
+    },
+    {
+      "key": "LEV.14.41-42",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 41],
+      "end": [14, 42]
+    },
+    {
+      "key": "LEV.14.43-44",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 43],
+      "end": [14, 44]
+    },
+    {
+      "key": "LEV.14.45-47",
+      "pericope": "LEV.P.14.33-47",
+      "start": [14, 45],
+      "end": [14, 47]
+    },
+    {
+      "key": "LEV.14.48-48",
+      "pericope": "LEV.P.14.48-57",
+      "start": [14, 48],
+      "end": [14, 48]
+    },
+    {
+      "key": "LEV.14.49-51",
+      "pericope": "LEV.P.14.48-57",
+      "start": [14, 49],
+      "end": [14, 51]
+    },
+    {
+      "key": "LEV.14.52-53",
+      "pericope": "LEV.P.14.48-57",
+      "start": [14, 52],
+      "end": [14, 53]
+    },
+    {
+      "key": "LEV.14.54-57",
+      "pericope": "LEV.P.14.48-57",
+      "start": [14, 54],
+      "end": [14, 57]
+    },
+    {
+      "key": "LEV.15.1-3",
+      "pericope": "LEV.P.15.1-12",
+      "start": [15, 1],
+      "end": [15, 3]
+    },
+    {
+      "key": "LEV.15.4-5",
+      "pericope": "LEV.P.15.1-12",
+      "start": [15, 4],
+      "end": [15, 5]
+    },
+    {
+      "key": "LEV.15.6-7",
+      "pericope": "LEV.P.15.1-12",
+      "start": [15, 6],
+      "end": [15, 7]
+    },
+    {
+      "key": "LEV.15.8-9",
+      "pericope": "LEV.P.15.1-12",
+      "start": [15, 8],
+      "end": [15, 9]
+    },
+    {
+      "key": "LEV.15.10-12",
+      "pericope": "LEV.P.15.1-12",
+      "start": [15, 10],
+      "end": [15, 12]
+    },
+    {
+      "key": "LEV.15.13-15",
+      "pericope": "LEV.P.15.13-18",
+      "start": [15, 13],
+      "end": [15, 15]
+    },
+    {
+      "key": "LEV.15.16-18",
+      "pericope": "LEV.P.15.13-18",
+      "start": [15, 16],
+      "end": [15, 18]
+    },
+    {
+      "key": "LEV.15.19-20",
+      "pericope": "LEV.P.15.19-27",
+      "start": [15, 19],
+      "end": [15, 20]
+    },
+    {
+      "key": "LEV.15.21-23",
+      "pericope": "LEV.P.15.19-27",
+      "start": [15, 21],
+      "end": [15, 23]
+    },
+    {
+      "key": "LEV.15.24-24",
+      "pericope": "LEV.P.15.19-27",
+      "start": [15, 24],
+      "end": [15, 24]
+    },
+    {
+      "key": "LEV.15.25-27",
+      "pericope": "LEV.P.15.19-27",
+      "start": [15, 25],
+      "end": [15, 27]
+    },
+    {
+      "key": "LEV.15.28-30",
+      "pericope": "LEV.P.15.28-33",
+      "start": [15, 28],
+      "end": [15, 30]
+    },
+    {
+      "key": "LEV.15.31-31",
+      "pericope": "LEV.P.15.28-33",
+      "start": [15, 31],
+      "end": [15, 31]
+    },
+    {
+      "key": "LEV.15.32-33",
+      "pericope": "LEV.P.15.28-33",
+      "start": [15, 32],
+      "end": [15, 33]
+    },
+    {
+      "key": "LEV.16.1-2",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 1],
+      "end": [16, 2]
+    },
+    {
+      "key": "LEV.16.3-5",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 3],
+      "end": [16, 5]
+    },
+    {
+      "key": "LEV.16.6-7",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 6],
+      "end": [16, 7]
+    },
+    {
+      "key": "LEV.16.8-10",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 8],
+      "end": [16, 10]
+    },
+    {
+      "key": "LEV.16.11-11",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 11],
+      "end": [16, 11]
+    },
+    {
+      "key": "LEV.16.12-13",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 12],
+      "end": [16, 13]
+    },
+    {
+      "key": "LEV.16.14-14",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 14],
+      "end": [16, 14]
+    },
+    {
+      "key": "LEV.16.15-16",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 15],
+      "end": [16, 16]
+    },
+    {
+      "key": "LEV.16.17-19",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 17],
+      "end": [16, 19]
+    },
+    {
+      "key": "LEV.16.20-22",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 20],
+      "end": [16, 22]
+    },
+    {
+      "key": "LEV.16.23-24",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 23],
+      "end": [16, 24]
+    },
+    {
+      "key": "LEV.16.25-26",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 25],
+      "end": [16, 26]
+    },
+    {
+      "key": "LEV.16.27-28",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 27],
+      "end": [16, 28]
+    },
+    {
+      "key": "LEV.16.29-31",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 29],
+      "end": [16, 31]
+    },
+    {
+      "key": "LEV.16.32-33",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 32],
+      "end": [16, 33]
+    },
+    {
+      "key": "LEV.16.34-34",
+      "pericope": "LEV.P.16.1-34",
+      "start": [16, 34],
+      "end": [16, 34]
+    },
+    {
+      "key": "LEV.17.1-4",
+      "pericope": "LEV.P.17.1-9",
+      "start": [17, 1],
+      "end": [17, 4]
+    },
+    {
+      "key": "LEV.17.5-6",
+      "pericope": "LEV.P.17.1-9",
+      "start": [17, 5],
+      "end": [17, 6]
+    },
+    {
+      "key": "LEV.17.7-7",
+      "pericope": "LEV.P.17.1-9",
+      "start": [17, 7],
+      "end": [17, 7]
+    },
+    {
+      "key": "LEV.17.8-9",
+      "pericope": "LEV.P.17.1-9",
+      "start": [17, 8],
+      "end": [17, 9]
+    },
+    {
+      "key": "LEV.17.10-11",
+      "pericope": "LEV.P.17.10-16",
+      "start": [17, 10],
+      "end": [17, 11]
+    },
+    {
+      "key": "LEV.17.12-13",
+      "pericope": "LEV.P.17.10-16",
+      "start": [17, 12],
+      "end": [17, 13]
+    },
+    {
+      "key": "LEV.17.14-14",
+      "pericope": "LEV.P.17.10-16",
+      "start": [17, 14],
+      "end": [17, 14]
+    },
+    {
+      "key": "LEV.17.15-16",
+      "pericope": "LEV.P.17.10-16",
+      "start": [17, 15],
+      "end": [17, 16]
+    },
+    {
+      "key": "LEV.18.1-3",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 1],
+      "end": [18, 3]
+    },
+    {
+      "key": "LEV.18.4-5",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 4],
+      "end": [18, 5]
+    },
+    {
+      "key": "LEV.18.6-8",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 6],
+      "end": [18, 8]
+    },
+    {
+      "key": "LEV.18.9-11",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 9],
+      "end": [18, 11]
+    },
+    {
+      "key": "LEV.18.12-14",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 12],
+      "end": [18, 14]
+    },
+    {
+      "key": "LEV.18.15-16",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 15],
+      "end": [18, 16]
+    },
+    {
+      "key": "LEV.18.17-18",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 17],
+      "end": [18, 18]
+    },
+    {
+      "key": "LEV.18.19-20",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 19],
+      "end": [18, 20]
+    },
+    {
+      "key": "LEV.18.21-21",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 21],
+      "end": [18, 21]
+    },
+    {
+      "key": "LEV.18.22-23",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 22],
+      "end": [18, 23]
+    },
+    {
+      "key": "LEV.18.24-25",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 24],
+      "end": [18, 25]
+    },
+    {
+      "key": "LEV.18.26-28",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 26],
+      "end": [18, 28]
+    },
+    {
+      "key": "LEV.18.29-30",
+      "pericope": "LEV.P.18.1-30",
+      "start": [18, 29],
+      "end": [18, 30]
+    },
+    {
+      "key": "LEV.19.1-4",
+      "pericope": "LEV.P.19.1-8",
+      "start": [19, 1],
+      "end": [19, 4]
+    },
+    {
+      "key": "LEV.19.5-8",
+      "pericope": "LEV.P.19.1-8",
+      "start": [19, 5],
+      "end": [19, 8]
+    },
+    {
+      "key": "LEV.19.9-10",
+      "pericope": "LEV.P.19.9-18",
+      "start": [19, 9],
+      "end": [19, 10]
+    },
+    {
+      "key": "LEV.19.11-12",
+      "pericope": "LEV.P.19.9-18",
+      "start": [19, 11],
+      "end": [19, 12]
+    },
+    {
+      "key": "LEV.19.13-14",
+      "pericope": "LEV.P.19.9-18",
+      "start": [19, 13],
+      "end": [19, 14]
+    },
+    {
+      "key": "LEV.19.15-16",
+      "pericope": "LEV.P.19.9-18",
+      "start": [19, 15],
+      "end": [19, 16]
+    },
+    {
+      "key": "LEV.19.17-18",
+      "pericope": "LEV.P.19.9-18",
+      "start": [19, 17],
+      "end": [19, 18]
+    },
+    {
+      "key": "LEV.19.19-19",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 19],
+      "end": [19, 19]
+    },
+    {
+      "key": "LEV.19.20-22",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 20],
+      "end": [19, 22]
+    },
+    {
+      "key": "LEV.19.23-25",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 23],
+      "end": [19, 25]
+    },
+    {
+      "key": "LEV.19.26-28",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 26],
+      "end": [19, 28]
+    },
+    {
+      "key": "LEV.19.29-30",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 29],
+      "end": [19, 30]
+    },
+    {
+      "key": "LEV.19.31-31",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 31],
+      "end": [19, 31]
+    },
+    {
+      "key": "LEV.19.32-32",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 32],
+      "end": [19, 32]
+    },
+    {
+      "key": "LEV.19.33-34",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 33],
+      "end": [19, 34]
+    },
+    {
+      "key": "LEV.19.35-37",
+      "pericope": "LEV.P.19.19-37",
+      "start": [19, 35],
+      "end": [19, 37]
+    },
+    {
+      "key": "LEV.20.1-2",
+      "pericope": "LEV.P.20.1-9",
+      "start": [20, 1],
+      "end": [20, 2]
+    },
+    {
+      "key": "LEV.20.3-5",
+      "pericope": "LEV.P.20.1-9",
+      "start": [20, 3],
+      "end": [20, 5]
+    },
+    {
+      "key": "LEV.20.6-7",
+      "pericope": "LEV.P.20.1-9",
+      "start": [20, 6],
+      "end": [20, 7]
+    },
+    {
+      "key": "LEV.20.8-9",
+      "pericope": "LEV.P.20.1-9",
+      "start": [20, 8],
+      "end": [20, 9]
+    },
+    {
+      "key": "LEV.20.10-12",
+      "pericope": "LEV.P.20.10-21",
+      "start": [20, 10],
+      "end": [20, 12]
+    },
+    {
+      "key": "LEV.20.13-14",
+      "pericope": "LEV.P.20.10-21",
+      "start": [20, 13],
+      "end": [20, 14]
+    },
+    {
+      "key": "LEV.20.15-16",
+      "pericope": "LEV.P.20.10-21",
+      "start": [20, 15],
+      "end": [20, 16]
+    },
+    {
+      "key": "LEV.20.17-18",
+      "pericope": "LEV.P.20.10-21",
+      "start": [20, 17],
+      "end": [20, 18]
+    },
+    {
+      "key": "LEV.20.19-21",
+      "pericope": "LEV.P.20.10-21",
+      "start": [20, 19],
+      "end": [20, 21]
+    },
+    {
+      "key": "LEV.20.22-23",
+      "pericope": "LEV.P.20.22-27",
+      "start": [20, 22],
+      "end": [20, 23]
+    },
+    {
+      "key": "LEV.20.24-25",
+      "pericope": "LEV.P.20.22-27",
+      "start": [20, 24],
+      "end": [20, 25]
+    },
+    {
+      "key": "LEV.20.26-26",
+      "pericope": "LEV.P.20.22-27",
+      "start": [20, 26],
+      "end": [20, 26]
+    },
+    {
+      "key": "LEV.20.27-27",
+      "pericope": "LEV.P.20.22-27",
+      "start": [20, 27],
+      "end": [20, 27]
+    },
+    {
+      "key": "LEV.21.1-3",
+      "pericope": "LEV.P.21.1-15",
+      "start": [21, 1],
+      "end": [21, 3]
+    },
+    {
+      "key": "LEV.21.4-6",
+      "pericope": "LEV.P.21.1-15",
+      "start": [21, 4],
+      "end": [21, 6]
+    },
+    {
+      "key": "LEV.21.7-9",
+      "pericope": "LEV.P.21.1-15",
+      "start": [21, 7],
+      "end": [21, 9]
+    },
+    {
+      "key": "LEV.21.10-12",
+      "pericope": "LEV.P.21.1-15",
+      "start": [21, 10],
+      "end": [21, 12]
+    },
+    {
+      "key": "LEV.21.13-15",
+      "pericope": "LEV.P.21.1-15",
+      "start": [21, 13],
+      "end": [21, 15]
+    },
+    {
+      "key": "LEV.21.16-17",
+      "pericope": "LEV.P.21.16-24",
+      "start": [21, 16],
+      "end": [21, 17]
+    },
+    {
+      "key": "LEV.21.18-21",
+      "pericope": "LEV.P.21.16-24",
+      "start": [21, 18],
+      "end": [21, 21]
+    },
+    {
+      "key": "LEV.21.22-24",
+      "pericope": "LEV.P.21.16-24",
+      "start": [21, 22],
+      "end": [21, 24]
+    },
+    {
+      "key": "LEV.22.1-3",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 1],
+      "end": [22, 3]
+    },
+    {
+      "key": "LEV.22.4-6",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 4],
+      "end": [22, 6]
+    },
+    {
+      "key": "LEV.22.7-9",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 7],
+      "end": [22, 9]
+    },
+    {
+      "key": "LEV.22.10-11",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 10],
+      "end": [22, 11]
+    },
+    {
+      "key": "LEV.22.12-13",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 12],
+      "end": [22, 13]
+    },
+    {
+      "key": "LEV.22.14-16",
+      "pericope": "LEV.P.22.1-16",
+      "start": [22, 14],
+      "end": [22, 16]
+    },
+    {
+      "key": "LEV.22.17-19",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 17],
+      "end": [22, 19]
+    },
+    {
+      "key": "LEV.22.20-21",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 20],
+      "end": [22, 21]
+    },
+    {
+      "key": "LEV.22.22-23",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 22],
+      "end": [22, 23]
+    },
+    {
+      "key": "LEV.22.24-25",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 24],
+      "end": [22, 25]
+    },
+    {
+      "key": "LEV.22.26-27",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 26],
+      "end": [22, 27]
+    },
+    {
+      "key": "LEV.22.28-30",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 28],
+      "end": [22, 30]
+    },
+    {
+      "key": "LEV.22.31-33",
+      "pericope": "LEV.P.22.17-33",
+      "start": [22, 31],
+      "end": [22, 33]
+    },
+    {
+      "key": "LEV.23.1-2",
+      "pericope": "LEV.P.23.1-3",
+      "start": [23, 1],
+      "end": [23, 2]
+    },
+    {
+      "key": "LEV.23.3-3",
+      "pericope": "LEV.P.23.1-3",
+      "start": [23, 3],
+      "end": [23, 3]
+    },
+    {
+      "key": "LEV.23.4-6",
+      "pericope": "LEV.P.23.4-8",
+      "start": [23, 4],
+      "end": [23, 6]
+    },
+    {
+      "key": "LEV.23.7-8",
+      "pericope": "LEV.P.23.4-8",
+      "start": [23, 7],
+      "end": [23, 8]
+    },
+    {
+      "key": "LEV.23.9-11",
+      "pericope": "LEV.P.23.9-14",
+      "start": [23, 9],
+      "end": [23, 11]
+    },
+    {
+      "key": "LEV.23.12-14",
+      "pericope": "LEV.P.23.9-14",
+      "start": [23, 12],
+      "end": [23, 14]
+    },
+    {
+      "key": "LEV.23.15-16",
+      "pericope": "LEV.P.23.15-22",
+      "start": [23, 15],
+      "end": [23, 16]
+    },
+    {
+      "key": "LEV.23.17-18",
+      "pericope": "LEV.P.23.15-22",
+      "start": [23, 17],
+      "end": [23, 18]
+    },
+    {
+      "key": "LEV.23.19-21",
+      "pericope": "LEV.P.23.15-22",
+      "start": [23, 19],
+      "end": [23, 21]
+    },
+    {
+      "key": "LEV.23.22-22",
+      "pericope": "LEV.P.23.15-22",
+      "start": [23, 22],
+      "end": [23, 22]
+    },
+    {
+      "key": "LEV.23.23-25",
+      "pericope": "LEV.P.23.23-25",
+      "start": [23, 23],
+      "end": [23, 25]
+    },
+    {
+      "key": "LEV.23.26-27",
+      "pericope": "LEV.P.23.26-32",
+      "start": [23, 26],
+      "end": [23, 27]
+    },
+    {
+      "key": "LEV.23.28-29",
+      "pericope": "LEV.P.23.26-32",
+      "start": [23, 28],
+      "end": [23, 29]
+    },
+    {
+      "key": "LEV.23.30-32",
+      "pericope": "LEV.P.23.26-32",
+      "start": [23, 30],
+      "end": [23, 32]
+    },
+    {
+      "key": "LEV.23.33-34",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 33],
+      "end": [23, 34]
+    },
+    {
+      "key": "LEV.23.35-36",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 35],
+      "end": [23, 36]
+    },
+    {
+      "key": "LEV.23.37-38",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 37],
+      "end": [23, 38]
+    },
+    {
+      "key": "LEV.23.39-39",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 39],
+      "end": [23, 39]
+    },
+    {
+      "key": "LEV.23.40-41",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 40],
+      "end": [23, 41]
+    },
+    {
+      "key": "LEV.23.42-44",
+      "pericope": "LEV.P.23.33-44",
+      "start": [23, 42],
+      "end": [23, 44]
+    },
+    {
+      "key": "LEV.24.1-2",
+      "pericope": "LEV.P.24.1-4",
+      "start": [24, 1],
+      "end": [24, 2]
+    },
+    {
+      "key": "LEV.24.3-4",
+      "pericope": "LEV.P.24.1-4",
+      "start": [24, 3],
+      "end": [24, 4]
+    },
+    {
+      "key": "LEV.24.5-6",
+      "pericope": "LEV.P.24.5-9",
+      "start": [24, 5],
+      "end": [24, 6]
+    },
+    {
+      "key": "LEV.24.7-9",
+      "pericope": "LEV.P.24.5-9",
+      "start": [24, 7],
+      "end": [24, 9]
+    },
+    {
+      "key": "LEV.24.10-12",
+      "pericope": "LEV.P.24.10-16",
+      "start": [24, 10],
+      "end": [24, 12]
+    },
+    {
+      "key": "LEV.24.13-14",
+      "pericope": "LEV.P.24.10-16",
+      "start": [24, 13],
+      "end": [24, 14]
+    },
+    {
+      "key": "LEV.24.15-16",
+      "pericope": "LEV.P.24.10-16",
+      "start": [24, 15],
+      "end": [24, 16]
+    },
+    {
+      "key": "LEV.24.17-18",
+      "pericope": "LEV.P.24.17-23",
+      "start": [24, 17],
+      "end": [24, 18]
+    },
+    {
+      "key": "LEV.24.19-21",
+      "pericope": "LEV.P.24.17-23",
+      "start": [24, 19],
+      "end": [24, 21]
+    },
+    {
+      "key": "LEV.24.22-23",
+      "pericope": "LEV.P.24.17-23",
+      "start": [24, 22],
+      "end": [24, 23]
+    },
+    {
+      "key": "LEV.25.1-2",
+      "pericope": "LEV.P.25.1-7",
+      "start": [25, 1],
+      "end": [25, 2]
+    },
+    {
+      "key": "LEV.25.3-4",
+      "pericope": "LEV.P.25.1-7",
+      "start": [25, 3],
+      "end": [25, 4]
+    },
+    {
+      "key": "LEV.25.5-7",
+      "pericope": "LEV.P.25.1-7",
+      "start": [25, 5],
+      "end": [25, 7]
+    },
+    {
+      "key": "LEV.25.8-9",
+      "pericope": "LEV.P.25.8-12",
+      "start": [25, 8],
+      "end": [25, 9]
+    },
+    {
+      "key": "LEV.25.10-10",
+      "pericope": "LEV.P.25.8-12",
+      "start": [25, 10],
+      "end": [25, 10]
+    },
+    {
+      "key": "LEV.25.11-12",
+      "pericope": "LEV.P.25.8-12",
+      "start": [25, 11],
+      "end": [25, 12]
+    },
+    {
+      "key": "LEV.25.13-14",
+      "pericope": "LEV.P.25.13-17",
+      "start": [25, 13],
+      "end": [25, 14]
+    },
+    {
+      "key": "LEV.25.15-17",
+      "pericope": "LEV.P.25.13-17",
+      "start": [25, 15],
+      "end": [25, 17]
+    },
+    {
+      "key": "LEV.25.18-19",
+      "pericope": "LEV.P.25.18-22",
+      "start": [25, 18],
+      "end": [25, 19]
+    },
+    {
+      "key": "LEV.25.20-22",
+      "pericope": "LEV.P.25.18-22",
+      "start": [25, 20],
+      "end": [25, 22]
+    },
+    {
+      "key": "LEV.25.23-25",
+      "pericope": "LEV.P.25.23-34",
+      "start": [25, 23],
+      "end": [25, 25]
+    },
+    {
+      "key": "LEV.25.26-28",
+      "pericope": "LEV.P.25.23-34",
+      "start": [25, 26],
+      "end": [25, 28]
+    },
+    {
+      "key": "LEV.25.29-30",
+      "pericope": "LEV.P.25.23-34",
+      "start": [25, 29],
+      "end": [25, 30]
+    },
+    {
+      "key": "LEV.25.31-32",
+      "pericope": "LEV.P.25.23-34",
+      "start": [25, 31],
+      "end": [25, 32]
+    },
+    {
+      "key": "LEV.25.33-34",
+      "pericope": "LEV.P.25.23-34",
+      "start": [25, 33],
+      "end": [25, 34]
+    },
+    {
+      "key": "LEV.25.35-38",
+      "pericope": "LEV.P.25.35-38",
+      "start": [25, 35],
+      "end": [25, 38]
+    },
+    {
+      "key": "LEV.25.39-41",
+      "pericope": "LEV.P.25.39-46",
+      "start": [25, 39],
+      "end": [25, 41]
+    },
+    {
+      "key": "LEV.25.42-44",
+      "pericope": "LEV.P.25.39-46",
+      "start": [25, 42],
+      "end": [25, 44]
+    },
+    {
+      "key": "LEV.25.45-46",
+      "pericope": "LEV.P.25.39-46",
+      "start": [25, 45],
+      "end": [25, 46]
+    },
+    {
+      "key": "LEV.25.47-48",
+      "pericope": "LEV.P.25.47-55",
+      "start": [25, 47],
+      "end": [25, 48]
+    },
+    {
+      "key": "LEV.25.49-50",
+      "pericope": "LEV.P.25.47-55",
+      "start": [25, 49],
+      "end": [25, 50]
+    },
+    {
+      "key": "LEV.25.51-52",
+      "pericope": "LEV.P.25.47-55",
+      "start": [25, 51],
+      "end": [25, 52]
+    },
+    {
+      "key": "LEV.25.53-55",
+      "pericope": "LEV.P.25.47-55",
+      "start": [25, 53],
+      "end": [25, 55]
+    },
+    {
+      "key": "LEV.26.1-2",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 1],
+      "end": [26, 2]
+    },
+    {
+      "key": "LEV.26.3-4",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 3],
+      "end": [26, 4]
+    },
+    {
+      "key": "LEV.26.5-6",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 5],
+      "end": [26, 6]
+    },
+    {
+      "key": "LEV.26.7-8",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 7],
+      "end": [26, 8]
+    },
+    {
+      "key": "LEV.26.9-10",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 9],
+      "end": [26, 10]
+    },
+    {
+      "key": "LEV.26.11-13",
+      "pericope": "LEV.P.26.1-13",
+      "start": [26, 11],
+      "end": [26, 13]
+    },
+    {
+      "key": "LEV.26.14-15",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 14],
+      "end": [26, 15]
+    },
+    {
+      "key": "LEV.26.16-17",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 16],
+      "end": [26, 17]
+    },
+    {
+      "key": "LEV.26.18-20",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 18],
+      "end": [26, 20]
+    },
+    {
+      "key": "LEV.26.21-22",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 21],
+      "end": [26, 22]
+    },
+    {
+      "key": "LEV.26.23-24",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 23],
+      "end": [26, 24]
+    },
+    {
+      "key": "LEV.26.25-26",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 25],
+      "end": [26, 26]
+    },
+    {
+      "key": "LEV.26.27-28",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 27],
+      "end": [26, 28]
+    },
+    {
+      "key": "LEV.26.29-30",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 29],
+      "end": [26, 30]
+    },
+    {
+      "key": "LEV.26.31-33",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 31],
+      "end": [26, 33]
+    },
+    {
+      "key": "LEV.26.34-36",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 34],
+      "end": [26, 36]
+    },
+    {
+      "key": "LEV.26.37-39",
+      "pericope": "LEV.P.26.14-39",
+      "start": [26, 37],
+      "end": [26, 39]
+    },
+    {
+      "key": "LEV.26.40-42",
+      "pericope": "LEV.P.26.40-46",
+      "start": [26, 40],
+      "end": [26, 42]
+    },
+    {
+      "key": "LEV.26.43-43",
+      "pericope": "LEV.P.26.40-46",
+      "start": [26, 43],
+      "end": [26, 43]
+    },
+    {
+      "key": "LEV.26.44-45",
+      "pericope": "LEV.P.26.40-46",
+      "start": [26, 44],
+      "end": [26, 45]
+    },
+    {
+      "key": "LEV.26.46-46",
+      "pericope": "LEV.P.26.40-46",
+      "start": [26, 46],
+      "end": [26, 46]
+    },
+    {
+      "key": "LEV.27.1-2",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 1],
+      "end": [27, 2]
+    },
+    {
+      "key": "LEV.27.3-4",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 3],
+      "end": [27, 4]
+    },
+    {
+      "key": "LEV.27.5-6",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 5],
+      "end": [27, 6]
+    },
+    {
+      "key": "LEV.27.7-8",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 7],
+      "end": [27, 8]
+    },
+    {
+      "key": "LEV.27.9-10",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 9],
+      "end": [27, 10]
+    },
+    {
+      "key": "LEV.27.11-13",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 11],
+      "end": [27, 13]
+    },
+    {
+      "key": "LEV.27.14-15",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 14],
+      "end": [27, 15]
+    },
+    {
+      "key": "LEV.27.16-16",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 16],
+      "end": [27, 16]
+    },
+    {
+      "key": "LEV.27.17-18",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 17],
+      "end": [27, 18]
+    },
+    {
+      "key": "LEV.27.19-21",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 19],
+      "end": [27, 21]
+    },
+    {
+      "key": "LEV.27.22-23",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 22],
+      "end": [27, 23]
+    },
+    {
+      "key": "LEV.27.24-25",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 24],
+      "end": [27, 25]
+    },
+    {
+      "key": "LEV.27.26-27",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 26],
+      "end": [27, 27]
+    },
+    {
+      "key": "LEV.27.28-29",
+      "pericope": "LEV.P.27.1-29",
+      "start": [27, 28],
+      "end": [27, 29]
+    },
+    {
+      "key": "LEV.27.30-31",
+      "pericope": "LEV.P.27.30-34",
+      "start": [27, 30],
+      "end": [27, 31]
+    },
+    {
+      "key": "LEV.27.32-33",
+      "pericope": "LEV.P.27.30-34",
+      "start": [27, 32],
+      "end": [27, 33]
+    },
+    {
+      "key": "LEV.27.34-34",
+      "pericope": "LEV.P.27.30-34",
+      "start": [27, 34],
+      "end": [27, 34]
+    }
+  ]
+}
