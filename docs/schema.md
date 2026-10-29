@@ -293,7 +293,11 @@ and Titus.
   phone cannot tell an `ai-checked` title from a `human-reviewed` one. Carrying
   status needs a tc-mobile `formatVersion` change (tc-mobile#1450, open
   question O4).
-- An unknown status, or an empty or whitespace-padded title, stops the build.
+- An unknown status, or an empty or whitespace-padded title, for a package
+  segment key stops the build. The build does not read the entries for other
+  keys (pericope keys); `npm run verify` holds every entry in
+  `data/titles/<lang>/<BOOK>.json`, pericope keys included, to the same rule
+  (`tests/structure.test.ts`).
 
 ## `sources.json`
 

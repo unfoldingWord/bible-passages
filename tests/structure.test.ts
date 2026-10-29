@@ -18,6 +18,13 @@ const list = (dir: string) => {
 
 const vrs = read("data/versification/ufw.json") as Record<string, number[]>;
 const books = list("data/structure/").map((f) => f.replace(/\.json$/, ""));
+/** `<lang>/<BOOK>.json` for every title file in data/titles/. */
+const titleFiles = readdirSync(new URL("data/titles/", root), {
+  withFileTypes: true,
+})
+  .filter((d) => d.isDirectory())
+  .flatMap((d) => list(`data/titles/${d.name}/`).map((f) => `${d.name}/${f}`))
+  .sort();
 const structures = books.map(
   (b) => [b, read(`data/structure/${b}.json`) as Structure] as const
 );
@@ -140,6 +147,28 @@ describe("data/structure", () => {
       checkHistory(fileURLToPath(root), current, process.env.RELEASE_TAG)
     ).toEqual([]);
   });
+
+  // The rule the build applies to package segment keys
+  // (scripts/lib/title-table.ts), held on the data itself for every entry,
+  // pericope keys included, so `npm run verify` keeps it without the build.
+  describe.each(titleFiles)("data/titles/%s", (file) => {
+    it("has a known status and a non-empty, unpadded text for every key", () => {
+      const t = read(`data/titles/${file}`) as {
+        titles: Record<string, { text: unknown; status: unknown }>;
+      };
+      for (const [k, title] of Object.entries(t.titles)) {
+        expect(
+          ["unreviewed", "ai-checked", "human-reviewed", "approved"],
+          `${k}: status`
+        ).toContain(title.status);
+        expect(typeof title.text, `${k}: text`).toBe("string");
+        const text = title.text as string;
+        expect(text.trim(), `${k}: empty`).not.toBe("");
+        expect(text.trim(), `${k}: whitespace-padded`).toBe(text);
+      }
+    });
+  });
+
   it.todo("every key has a title in every language marked complete");
   it.todo("titles fit the length and script rules for their language");
 });
