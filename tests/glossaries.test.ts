@@ -126,11 +126,24 @@ describe("inScript", () => {
   });
 
   it("counts letters, not vowel signs or other marks", () => {
-    // नि is a letter and a vowel sign; दो likewise: 3 letters, all Devanagari.
+    // न, र, द and ष: 4 letters, all Devanagari; the vowel signs ि and ो
+    // and the virama ् are marks, not letters.
     expect(inScript("निर्दोष", /\p{Script=Devanagari}/u)).toBe(true);
     // Two Latin letters against two Devanagari letters with their signs.
     expect(inScript("ab नि दो", /\p{Script=Devanagari}/u)).toBe(false);
   });
+
+  it.each(["g", "y", "gy"])(
+    "gives the same answer with a %s-flagged pattern, every call",
+    (flags) => {
+      const script = new RegExp("\\p{Script=Arabic}", `u${flags}`);
+      for (let i = 0; i < 3; i++) {
+        expect(inScript("الله", script)).toBe(true);
+        expect(inScript("ab بت", script)).toBe(false);
+      }
+      expect(script.lastIndex).toBe(0);
+    }
+  );
 });
 
 describe("twId", () => {
@@ -255,7 +268,27 @@ describe("buildGlossary", () => {
           attribution: id,
         })
       )
-    ).rejects.toThrow(/2 licences/);
+    ).rejects.toThrow(
+      "sources under 2 licences, not one (CC-BY-SA-4.0: twl-en-tit; CC-BY-4.0: tw-ar-kt-god, tw-en-kt-god, tw-ar-names-titus, tw-en-names-titus)"
+    );
+  });
+
+  it.each([
+    ["licence", { licence: " ", attribution: "x" }],
+    ["attribution", { licence: "CC-BY-SA-4.0", attribution: "" }],
+  ])("refuses a pin with a blank %s, naming it", async (_, blank) => {
+    await expect(
+      buildGlossary(
+        repo({ absent: ["kt/faith"] }),
+        "TIT",
+        rows,
+        english,
+        async (a) => (a === "kt/faith" ? undefined : "# كلمة\n"),
+        (id) => (id === "tw-en-kt-god" ? blank : credit(id))
+      )
+    ).rejects.toThrow(
+      "blank licence or attribution in sources.json for tw-en-kt-god"
+    );
   });
 
   it("records an English headword in a non-Latin language as a gap", async () => {
