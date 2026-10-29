@@ -20,9 +20,10 @@ by the DRI on 28 Oct).
 - **Move-back** follows the merge rule, and it wins over the resize and
   split rules below whenever an edit makes a retired key live again. Nothing is
   copied in either direction. Every key that lost the span, however many,
-  keeps its own stored titles with their status. The revived key's live
-  draft is a separate record: it starts `unreviewed`, is not seeded from
-  any of those sets, and its reviewer is shown all of them.
+  keeps its own stored titles with their status, and so do the titles the
+  revived key held before it was retired. The revived key's live draft is a
+  separate record: it starts `unreviewed`, is not seeded from any of those
+  sets, replaces none of them, and its reviewer is shown all of them.
 - `data/retired-keys.json` is an append-only log. A key's rows apply only
   while the live structure does not contain that key; then its latest row
   is the one in force. While a key is live, every row for it, the latest
@@ -61,7 +62,8 @@ successor. Merge and move-back write no copy.
 - **Resize** (one key becomes one key): the old titles carry to the
   successor.
 - **Split** (one key becomes several): the old titles carry to the one
-  successor the record names; every other new key gets a fresh draft.
+  successor the record names; every other new key gets a fresh draft, and
+  its reviewer is shown the retired key's titles.
 - **Merge** (several keys become one): each old key names the merged key,
   but no title carries automatically. The merged key gets a fresh draft.
   The old title sets are not deleted: they stay stored on their retired

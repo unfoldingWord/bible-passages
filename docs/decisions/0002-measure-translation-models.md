@@ -2,7 +2,8 @@
 
 - **Status:** accepted
 - **Date:** 2026-10-28
-- **Decided by:** the DRI (open decision 6 in `../schema.md`)
+- **Decided by:** the DRI (the model-selection half of open decision 6 in
+  `../schema.md`; key-term consistency is still open)
 
 ## Decision
 
