@@ -10,6 +10,7 @@
 // Nothing here goes above `ai-checked` (AGENTS.md, "Label AI output").
 import {
   LANGUAGES,
+  MODELS,
   parseReply,
   runLanguages,
   span,
@@ -58,14 +59,37 @@ export type TranslatedFile = {
 };
 
 /**
+ * The model families ADR 0002 names (docs/decisions/0002): the provider part
+ * of each of its two models.
+ */
+export const FAMILIES: readonly string[] = [
+  ...new Set(Object.values(MODELS).map((m) => m.split("/")[0]!)),
+];
+
+/**
  * The model family: the provider part of an OpenRouter id
  * (`google/gemini-3.8-flash`), with or without the `ai:` source prefix.
+ * Read leniently, so a hand-edited source cannot pass for another family
+ * (`ai:ai:google/…`, `ai: Google/…` are Google), and refused unless it is a
+ * family ADR 0002 names.
  */
 export function family(model: string): string {
-  const id = model.replace(/^ai:/, "");
+  const id =
+    typeof model === "string"
+      ? model
+          .trim()
+          .toLowerCase()
+          .replace(/^(ai:\s*)+/, "")
+      : "";
   const slash = id.indexOf("/");
-  if (slash <= 0) throw new Error(`cannot tell the model family of ${model}`);
-  return id.slice(0, slash);
+  if (slash <= 0)
+    throw new Error(`cannot tell the model family of ${String(model)}`);
+  const f = id.slice(0, slash).trim();
+  if (!FAMILIES.includes(f))
+    throw new Error(
+      `${model} is of family ${f}, which ADR 0002 does not name (${FAMILIES.join(", ")})`
+    );
+  return f;
 }
 
 /** The user message: each translation with its English and key terms. */
@@ -148,11 +172,66 @@ export type CheckResult = {
   error?: string;
 };
 
+const isObject = (v: unknown): v is Record<string, unknown> =>
+  typeof v === "object" && v !== null && !Array.isArray(v);
+
 /**
- * Checks one language's translations with one call. Refuses, before the
- * call, a translation by the checker's own family, one whose English has
- * changed since it was translated, or a glossary for another language. A
- * key left out or answered badly is recorded and stays `unreviewed`.
+ * Refuses, before any call, what a check must never be made on: a language
+ * that is not a v0.1 tag (it names output paths), translations of another
+ * book, a glossary for another language, a title that is not a well-formed
+ * translation, one by the checker's own family, or one whose English has
+ * changed since it was translated. `checkBook` runs it over every file before
+ * the first call, so no language is billed before a later one is refused.
+ */
+export function checkInputs(args: {
+  english: EnglishTitles;
+  file: TranslatedFile;
+  glossary: Glossary | null;
+  model: string;
+}): void {
+  const { english, file, glossary, model } = args;
+  const tag = file.language;
+  if (typeof tag !== "string" || !Object.hasOwn(LANGUAGES, tag))
+    throw new Error(`not a v0.1 language: ${String(tag)}`);
+  if (file.book !== english.book)
+    throw new Error(
+      `${tag}: translations are for ${file.book}, not ${english.book}`
+    );
+  if (glossary && glossary.language !== tag)
+    throw new Error(`glossary is for ${glossary.language}, not ${tag}`);
+  if (!isObject(file.titles)) throw new Error(`${tag}: no titles object`);
+  const checker = family(model);
+  for (const [key, t] of Object.entries(
+    file.titles as Record<string, unknown>
+  )) {
+    if (!isObject(t)) throw new Error(`${tag} ${key}: not a title object`);
+    for (const field of ["text", "source", "status", "from"])
+      if (typeof t[field] !== "string")
+        throw new Error(`${tag} ${key}: ${field} is not a string`);
+    if (
+      t.gates !== undefined &&
+      !(Array.isArray(t.gates) && t.gates.every((g) => typeof g === "string"))
+    )
+      throw new Error(`${tag} ${key}: gates is not a list of strings`);
+    const source = t.source as string;
+    if (family(source) === checker)
+      throw new Error(
+        `${tag} ${key}: ${source} would be checked by its own family (${model})`
+      );
+    const en = english.titles[key]?.text;
+    if (en === undefined)
+      throw new Error(`${tag}: no English title for ${key}`);
+    if (t.from !== en)
+      throw new Error(
+        `${tag} ${key}: translated from "${String(t.from)}", but the English is now "${en}"`
+      );
+  }
+}
+
+/**
+ * Checks one language's translations with one call, after `checkInputs`
+ * passes. A key left out or answered badly is recorded and stays
+ * `unreviewed`.
  */
 export async function checkLanguage(args: {
   english: EnglishTitles;
@@ -163,29 +242,8 @@ export async function checkLanguage(args: {
   complete: Complete;
 }): Promise<CheckResult> {
   const { english, file, glossary, model } = args;
+  checkInputs({ english, file, glossary, model });
   const tag = file.language;
-  // The tag and book name output paths: only known values get that far.
-  if (typeof tag !== "string" || !Object.hasOwn(LANGUAGES, tag))
-    throw new Error(`not a v0.1 language: ${String(tag)}`);
-  if (file.book !== english.book)
-    throw new Error(
-      `${tag}: translations are for ${file.book}, not ${english.book}`
-    );
-  if (glossary && glossary.language !== tag)
-    throw new Error(`glossary is for ${glossary.language}, not ${tag}`);
-  for (const [key, t] of Object.entries(file.titles)) {
-    if (family(t.source) === family(model))
-      throw new Error(
-        `${tag} ${key}: ${t.source} would be checked by its own family (${model})`
-      );
-    const en = english.titles[key]?.text;
-    if (en === undefined)
-      throw new Error(`${tag}: no English title for ${key}`);
-    if (t.from !== en)
-      throw new Error(
-        `${tag} ${key}: translated from "${t.from}", but the English is now "${en}"`
-      );
-  }
   const keys = Object.keys(file.titles);
   const unchecked = (): Record<string, CheckedTitle> =>
     Object.fromEntries(
@@ -325,6 +383,15 @@ export async function checkBook(args: {
   const log = args.log ?? (() => {});
   const byTag = new Map(args.files.map((f) => [f.language, f]));
   const tags = args.files.map((f) => f.language);
+  if (byTag.size !== tags.length) throw new Error("a language is given twice");
+  // Every file is refused or accepted before the first call is billed.
+  for (const file of args.files)
+    checkInputs({
+      english: args.english,
+      file,
+      glossary: args.glossaries[file.language] ?? null,
+      model: args.model,
+    });
   const { stop, results } = await runLanguages<CheckResult>({
     tags,
     maxCost: args.maxCost,

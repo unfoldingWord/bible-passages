@@ -6,7 +6,7 @@
 // `unreviewed` (AGENTS.md, "Label AI output"). The cross-model check, which
 // can raise a title to `ai-checked`, is a separate step (./check.ts).
 import { createHash } from "node:crypto";
-import { titleProblems, SCRIPT_BY_TAG } from "./gates.ts";
+import { BOOK_CODES, titleProblems, SCRIPT_BY_TAG } from "./gates.ts";
 import type { Completion, Message } from "./openrouter.ts";
 
 /** The v0.1 languages (docs/decisions/0003), with their English names. */
@@ -314,7 +314,8 @@ export type StopReason =
  * One model call per language, in order, under a spend fuse, with the ledger
  * written after every call and before any throw, so money spent is always on
  * record. The fuse fails closed: a call whose cost is unknown stops the run
- * before the next call, and the run stops before a call once `maxCost` is
+ * before the next call (as does a cost that is not a finite number >= 0),
+ * and the run stops before a call once `maxCost` is
  * spent (the call in flight can still go over it). A result with no `call`
  * (nothing to send for that language) costs nothing. Shared by the
  * translation runner and the cross-model check.
@@ -343,8 +344,10 @@ export async function runLanguages<R extends { call?: Call }>(args: {
       const result = await args.run(tag);
       results.push(result);
       await args.record(result);
+      // Anything but a finite, non-negative dollar amount is an unknown
+      // cost, whatever client made the call.
       const cost = result.call ? result.call.cost : 0;
-      if (cost === null) {
+      if (typeof cost !== "number" || !Number.isFinite(cost) || cost < 0) {
         stop = { unknownCost: tag };
         break;
       }
@@ -362,7 +365,10 @@ export async function runLanguages<R extends { call?: Call }>(args: {
 
 /**
  * Runs `tags` in order, one call each (see `runLanguages` for the ledger and
- * the spend fuse), writing `<tag>/<BOOK>.json` after each call.
+ * the spend fuse), writing `<tag>/<BOOK>.json` after each call that gave a
+ * readable reply. A language whose reply failed gets no file: its error is
+ * in run.json, and the checker reports the language as not in the run
+ * rather than finding an empty file with nothing to check.
  */
 export async function runBook(args: {
   english: EnglishTitles;
@@ -380,6 +386,9 @@ export async function runBook(args: {
   log?: (line: string) => void;
 }): Promise<{ stop: StopReason; summary: ReturnType<typeof summarise> }> {
   const log = args.log ?? (() => {});
+  // The book names the output files, so only a USFM book code gets that far.
+  if (!BOOK_CODES.includes(args.english.book))
+    throw new Error(`not a USFM book code: ${String(args.english.book)}`);
   const { stop, results } = await runLanguages<LanguageResult>({
     tags: args.tags,
     maxCost: args.maxCost,
@@ -395,11 +404,12 @@ export async function runBook(args: {
       }),
     record: async (result) => {
       const tag = result.call.language;
-      await args.write(`${tag}/${args.english.book}.json`, {
-        language: tag,
-        book: args.english.book,
-        titles: result.titles,
-      });
+      if (result.error === undefined)
+        await args.write(`${tag}/${args.english.book}.json`, {
+          language: tag,
+          book: args.english.book,
+          titles: result.titles,
+        });
       const { call } = result;
       log(
         `${tag}: ${Object.keys(result.titles).length} titles, ` +

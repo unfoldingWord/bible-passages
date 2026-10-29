@@ -5,19 +5,35 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
+  renameSync,
   rmSync,
   writeFileSync,
 } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { format, resolveConfig } from "prettier";
 
+/**
+ * Writes `value` as formatted JSON at `file`. The text goes to a temporary
+ * file beside it, which is then renamed into place, so a crash mid-write
+ * leaves the earlier file whole (a run's ledger is rewritten after every
+ * call) rather than a truncated one.
+ */
 export async function writeJson(file: URL, value: unknown): Promise<void> {
-  const options = (await resolveConfig(fileURLToPath(file))) ?? {};
+  const path = fileURLToPath(file);
+  const options = (await resolveConfig(path)) ?? {};
+  const text = await format(JSON.stringify(value), {
+    ...options,
+    parser: "json",
+  });
   mkdirSync(new URL(".", file), { recursive: true });
-  writeFileSync(
-    file,
-    await format(JSON.stringify(value), { ...options, parser: "json" })
-  );
+  const tmp = `${path}.${process.pid}.tmp`;
+  try {
+    writeFileSync(tmp, text);
+    renameSync(tmp, path);
+  } catch (e) {
+    rmSync(tmp, { force: true });
+    throw e;
+  }
 }
 
 /**

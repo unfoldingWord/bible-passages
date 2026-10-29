@@ -26,7 +26,11 @@ or `dist/` or one that already exists.
 reads the translation run's ledger and language files, and refuses to start
 if the checker is of the translator's family (`google/…` against
 `anthropic/…`), or if the English titles or a glossary have changed since
-the run (SHA-256 against the run's ledger). It then sends each language's
+the run (SHA-256 against the run's ledger). The family is read leniently
+(trimmed, case-folded, any repeated `ai:` prefix dropped), so a hand-edited
+`source` cannot pass for another family, and a family ADR 0002 does not name
+is refused. Every language file is checked (shape, family, English) before
+the first call, so no language is billed before a later one is refused. It then sends each language's
 translations in one call with the English title, the verses and the key
 terms with their headwords, under `prompts/check-translations.md`.
 

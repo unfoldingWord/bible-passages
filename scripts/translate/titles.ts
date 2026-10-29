@@ -9,7 +9,8 @@
 //
 // The key is read only from the environment and is never written or
 // printed. Output goes to --out, by default under .cache/ (not committed):
-// one `<lang>/<BOOK>.json` of translations per language, and `run.json`, the
+// one `<lang>/<BOOK>.json` of translations per language whose reply could be
+// read (a failed reply's error is in the ledger only), and `run.json`, the
 // ledger of calls and totals, rewritten after every call and on any failure.
 // Exit 0: every requested title came back. Exit 2: the run stopped early
 // (spend limit or unknown cost) or some titles are missing, invalid or
@@ -18,6 +19,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { BOOK_CODES } from "../lib/gates.ts";
 import { complete } from "../lib/openrouter.ts";
 import {
   LANGUAGES,
@@ -48,11 +50,15 @@ const { values } = parseArgs({
   },
 });
 
-const apiKey = process.env.OPENROUTER_API_KEY ?? "";
-if (apiKey.trim() === "")
+// Trimmed once: the value checked is the value sent.
+const apiKey = (process.env.OPENROUTER_API_KEY ?? "").trim();
+if (apiKey === "")
   fail("OPENROUTER_API_KEY is not set; the runner reads the key only from it");
 
 const book = values.book ?? fail("--book is required (e.g. TIT)");
+// The book code names files that are read and written, so only a known code
+// is accepted.
+if (!BOOK_CODES.includes(book)) fail(`not a USFM book code: ${book}`);
 const model = values.model ?? fail("--model is required (an OpenRouter id)");
 const tags = values.lang ? values.lang.split(",") : Object.keys(LANGUAGES);
 for (const tag of tags)
@@ -66,6 +72,7 @@ const englishFile = new URL(englishPath, root);
 if (!existsSync(englishFile)) fail(`no English titles for ${book}`);
 const englishText = readFileSync(englishFile, "utf8");
 const english = JSON.parse(englishText) as EnglishTitles;
+if (english.book !== book) fail(`${englishPath} is not for ${book}`);
 const keys = values.keys ? values.keys.split(",") : undefined;
 for (const key of keys ?? [])
   if (!english.titles[key]) fail(`${book} has no English title for ${key}`);
