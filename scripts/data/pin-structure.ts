@@ -17,6 +17,12 @@ import { writeJson } from "../lib/write.ts";
 const BSB = {
   repo: "Worldview/en_bsb",
   commit: "7abbfafaa2225e9add01f00bb01e4124a698f018",
+  // SHA-256 of LICENSE.md at that commit (1,743 bytes, fetched 2026-10-29),
+  // which dedicates the text to the public domain ("officially dedicated to
+  // the public domain as of April 30, 2023. All uses are freely
+  // permitted.").
+  licenceSha256:
+    "1376c4cc2b40f8377172c87b5e5a4ebe8311f05ad288e95ecb4242f8d9838f44",
 };
 const VERSIFICATION = {
   repo: "Door43-Catalog/versification",
@@ -35,11 +41,14 @@ const sha256 = (bytes: Buffer) =>
 const raw = (repo: { repo: string; commit: string }, path: string) =>
   `https://git.door43.org/${repo.repo}/raw/commit/${repo.commit}/${path}`;
 
-// BSB's LICENSE.md dedicates the text to the public domain; the pin says so
-// only while the file at the pinned commit still does.
-const terms = (await get(raw(BSB, "LICENSE.md"))).toString("utf8");
-if (!/dedicated to the public domain/.test(terms)) {
-  throw new Error(`${BSB.repo}@${BSB.commit}: LICENSE.md is not public domain`);
+// The pins say "Public domain" only while LICENSE.md at the pinned commit is
+// byte for byte the file that was read and found to say so. Any change to
+// it, however small, stops the run until someone reads it again.
+const terms = sha256(await get(raw(BSB, "LICENSE.md")));
+if (terms !== BSB.licenceSha256) {
+  throw new Error(
+    `${BSB.repo}@${BSB.commit}: LICENSE.md sha256 ${terms} is not the one read and pinned (${BSB.licenceSha256})`
+  );
 }
 
 const existing = new Map(sources().map((s) => [s.id, s]));
@@ -87,11 +96,13 @@ for (const [book, file] of ALL_BOOKS) {
   console.log(`${book}: pinned`);
 }
 
-// Keep every other input where it is. A structure pin already in the file
-// keeps its place, new ones go at the end, and one for a book no longer in
-// ALL_BOOKS is dropped, so a re-run only ever appends.
-const ours = (id: string) =>
-  id.startsWith("bsb-") || id.startsWith("ufw-chunks-");
+// Keep every other input where it is. A structure pin is an id
+// `bsb-<book>` or `ufw-chunks-<book>`, <book> a three-character book code;
+// any other id, `ufw-vrs` or a later `bsb-` input among them, is not ours
+// and is kept untouched. A structure pin already in the file keeps its
+// place (and must be unchanged, see `pin`), a new one goes at the end, and
+// one for a book no longer in ALL_BOOKS is dropped.
+const ours = (id: string) => /^(?:bsb|ufw-chunks)-[a-z0-9]{3}$/.test(id);
 const pins = new Map([...bsb, ...chunks].map((s) => [s.id, s]));
 const kept = sources()
   .filter((s) => !ours(s.id) || pins.has(s.id))

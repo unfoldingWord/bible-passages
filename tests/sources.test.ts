@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { ALL_BOOKS } from "../scripts/lib/books.ts";
+import { ALL_BOOKS, BOOKS, STRUCTURE_BOOKS } from "../scripts/lib/books.ts";
 
 // Every input the build reads is pinned here. See docs/schema.md, "sources.json".
 type Source = {
@@ -53,6 +53,16 @@ describe("structure inputs", () => {
   it("lists the 66 books of ufw.vrs in its order", () => {
     expect(ALL_BOOKS.map(([b]) => b)).toEqual(Object.keys(vrs).slice(0, 66));
     expect(Object.keys(vrs)[65]).toBe("REV");
+  });
+
+  // Titles are built only for books with a structure, and a structure only
+  // for books the dataset knows.
+  it("BOOKS ⊆ STRUCTURE_BOOKS ⊆ ALL_BOOKS", () => {
+    const all = new Set(ALL_BOOKS.map(([b]) => b));
+    const structure = new Set(STRUCTURE_BOOKS);
+    expect(BOOKS.filter((b) => !structure.has(b))).toEqual([]);
+    expect(STRUCTURE_BOOKS.filter((b) => !all.has(b))).toEqual([]);
+    expect(BOOKS.length).toBeGreaterThan(0);
   });
 
   it("pins nothing for a book not in ALL_BOOKS", () => {
