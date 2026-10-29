@@ -9,4 +9,7 @@ A decision is recorded here once it is made, normally on
 Until then it stays in the "Open decisions" list at the end of
 [`../schema.md`](../schema.md).
 
-None recorded yet.
+| #                                          | Decision                                                | Status   |
+| ------------------------------------------ | ------------------------------------------------------- | -------- |
+| [0001](0001-span-keys.md)                  | Keys name their span                                    | accepted |
+| [0002](0002-measure-translation-models.md) | Choose the translation model by measuring both on Titus | accepted |

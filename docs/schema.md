@@ -69,10 +69,14 @@ A one-verse span repeats its verse (`TIT.1.4-4`, not `TIT.1.4`), so every
 key has the same shape and a chapter key is never confused with a verse; 9 of
 Titus's 25 segments are one verse (measured, `data/structure/TIT.json`).
 
-Because the span is in the key, moving a boundary always produces a new key.
-That is the contract's rule ("give the new passage a new key") enforced by the
-form of the key rather than by memory. The old key is then retired: it stays in
-the record of released keys and is never used again.
+Because the span is in the key, moving a boundary gives the new span its own
+key: a new one, or the same span's earlier key, revived. That is the contract's
+rule ("give the new passage a new key") enforced by the form of the key rather
+than by memory. The old key is retired by appending a row to
+`data/retired-keys.json`. While a key is absent from the live structure, its
+latest row there is in force; while it is live, all its rows are history only,
+and reviving it appends nothing. A key is never attached to a different span
+([decisions/0001](decisions/0001-span-keys.md)).
 
 This replaces the order-based IDs in the pilot (`TIT.P02`), where inserting one
 pericope renumbers every later one.
@@ -231,25 +235,15 @@ every test run until they exist.
 2. **Pericope source**: the requirements owner's build plan uses BSB `\s1`
    headings: 3,016, measured in this repo
    ([scoping/sizing.md](scoping/sizing.md)). Proposed: confirm BSB.
-3. **Keys**: the span-based keys above, instead of the pilot's order-based
-   ones. An alternative is to embed a Scripture Burrito scope string, which
-   tc-mobile already uses for sections (its ADR 0004): `TIT.1:1-4`,
-   `PSA.23:1-6`. Both fit the key rule.
-
-   **The cost of span keys:** any boundary change, even one verse, retires a
-   key, and the reviewed titles in every language attached to it would be
-   orphaned. Rule: a retired key is recorded with its successor in
-   `data/retired-keys.json`, and its titles carry forward to the new key as
-   `unreviewed` drafts. And the chunk source (decision 8) is pinned before
-   the first release, because changing it later retires thousands of keys.
-
+3. **Keys**: decided: span keys. See
+   [decisions/0001](decisions/0001-span-keys.md).
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: which model translates titles, and how key-term
-   consistency is checked across a book and a language. One suggestion is a
-   fast model for translation, with a script that checks key terms and drives
-   review.
+6. **Translation**: the selection procedure is decided: measure Gemini and Claude on
+   Titus, then choose ([decisions/0002](decisions/0002-measure-translation-models.md)).
+   Still open: how key-term consistency is checked across a book and a
+   language.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.
