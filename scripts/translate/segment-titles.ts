@@ -22,9 +22,11 @@ import { existsSync, readFileSync } from "node:fs";
 import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import { complete } from "../lib/openrouter.ts";
 import {
   draftSegmentTitles,
+  family,
   segmentInputs,
   verseTexts,
 } from "../lib/segment-titles.ts";
@@ -59,8 +61,10 @@ const checkModel = values["check-model"] ?? fail("--check-model is required");
 const maxCost = Number(values["max-cost"]);
 if (!(Number.isFinite(maxCost) && maxCost > 0))
   fail("--max-cost must be a positive number of dollars");
-if (draftModel === checkModel)
-  fail("--check-model must differ from --draft-model");
+if (family(draftModel) === family(checkModel))
+  fail("--check-model must be of a different family from --draft-model");
+// The book code goes into file paths, so only a known code is accepted.
+if (!STRUCTURE_BOOKS.includes(book)) fail(`not a book code: ${book}`);
 
 const runId = `${new Date().toISOString().replace(/[:.]/g, "-")}-en-${book}`;
 const out = new URL(

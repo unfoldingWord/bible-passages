@@ -285,6 +285,12 @@ export type DraftRecord = {
   titles: Record<string, DraftTitle>;
 };
 
+/**
+ * A model's family: the provider in its OpenRouter id (`anthropic`,
+ * `google`). The check is by another family (ADR 0002, AGENTS.md).
+ */
+export const family = (model: string): string => model.split("/")[0] ?? model;
+
 export type Complete = (request: {
   model: string;
   messages: Message[];
@@ -314,8 +320,10 @@ export async function draftSegmentTitles(args: {
   write: (ledger: unknown) => Promise<void>;
 }): Promise<{ record: DraftRecord | null; outcome: DraftOutcome }> {
   const { book, inputs, draftModel, checkModel } = args;
-  if (draftModel === checkModel)
-    throw new Error("the checking model must differ from the drafting model");
+  if (family(draftModel) === family(checkModel))
+    throw new Error(
+      "the checking model must be of a different family from the drafting model"
+    );
   if (inputs.length === 0) throw new Error(`${book}: no segment to draft`);
   const keys = inputs.map((s) => s.key);
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
@@ -401,12 +409,19 @@ export async function draftSegmentTitles(args: {
       return { record: null, outcome };
     }
     // Two requested ids can resolve to one model. A model never checks its
-    // own drafts, so judge by the models OpenRouter says answered.
+    // own drafts, nor one of its family, so judge by the models OpenRouter
+    // says answered.
     const draftedBy = calls[0]?.model ?? draftModel;
     const checkedBy = calls[1]?.model ?? checkModel;
     if (draftedBy === checkedBy) {
       outcome = {
         stopped: `check answered by the drafting model ${draftedBy}`,
+      };
+      return { record: null, outcome };
+    }
+    if (family(draftedBy) === family(checkedBy)) {
+      outcome = {
+        stopped: `check answered by ${checkedBy}, of the drafting model's family`,
       };
       return { record: null, outcome };
     }

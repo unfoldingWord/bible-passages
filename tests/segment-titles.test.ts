@@ -351,6 +351,25 @@ describe("draftSegmentTitles", () => {
     expect(ledgers.at(-1)).toMatchObject({ draftTitles: draftReply });
   });
 
+  it("refuses a check answered by a model of the drafting model's family", async () => {
+    const { complete } = fakeModels([
+      { reply: draftReply, cost: 0.01, answeredBy: "a/draft" },
+      {
+        reply: {
+          "XYZ.1.2-3": { verdict: "agree" },
+          "XYZ.1.4-4": { verdict: "agree" },
+        },
+        cost: 0.01,
+        answeredBy: "a/other",
+      },
+    ]);
+    const { record, outcome } = await run(complete, []);
+    expect(record).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "check answered by a/other, of the drafting model's family",
+    });
+  });
+
   it("reports titles the models left out", async () => {
     const { complete } = fakeModels([
       { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0 },
@@ -362,10 +381,13 @@ describe("draftSegmentTitles", () => {
     });
   });
 
-  it("refuses the same model for drafting and checking", async () => {
-    const { complete } = fakeModels([]);
-    await expect(run(complete, [], { checkModel: "a/draft" })).rejects.toThrow(
-      "must differ"
-    );
+  it("refuses the same model, or one of its family, for drafting and checking", async () => {
+    for (const checkModel of ["a/draft", "a/other"]) {
+      const { complete, sent } = fakeModels([]);
+      await expect(run(complete, [], { checkModel })).rejects.toThrow(
+        "different family"
+      );
+      expect(sent).toHaveLength(0);
+    }
   });
 });
