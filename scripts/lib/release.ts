@@ -1,7 +1,7 @@
 // The files a release attaches, and the checks they must pass first
 // (docs/schema.md, "Releases"). Pure apart from reading `dir`.
 import { type Dirent, readdirSync, readFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { join, relative, resolve } from "node:path";
 
 export type Assets = { files: string[]; problems: string[] };
 
@@ -28,8 +28,10 @@ const kind = (e: Dirent) =>
 export function checkAssets(dir: string, tag: string): Assets {
   const nested = readdirSync(dir, { withFileTypes: true, recursive: true })
     .filter((e) => e.isFile() && e.name.endsWith(".json"))
+    // Nested by parent directory, not by a "/" in the path: win32 joins
+    // with "\", and there a nested file would be in neither list.
+    .filter((e) => resolve(e.parentPath) !== resolve(dir))
     .map((e) => join(e.parentPath, e.name))
-    .filter((f) => relative(dir, f).includes("/"))
     .sort();
   const problems = nested.map(
     (f) => `${relative(dir, f)}: nested file has no release asset name yet`
