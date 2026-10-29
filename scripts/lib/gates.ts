@@ -9,9 +9,9 @@
 // 2026 unfoldingWord. There they are functions inside a test file over UI
 // strings; here they are exports over titles. What changed and why:
 //
-// - (a) English leak compares after trimming and case folding: a title is
-//   prose, and "Paul greets Titus" returned as "paul greets titus" is still
-//   English.
+// - (a) English leak compares letters and digits only, case folded: a title
+//   is prose, and "Paul greets Titus" returned as "paul greets Titus." is
+//   still English.
 // - (b) Script: the exemptions are scripture references and a per-language,
 //   reasoned allowlist of Latin words, in place of the app's brand words and
 //   placeholders; a stray is reported as the run of letters outside the
@@ -79,7 +79,12 @@ const exempt = (text: string): string => text.replace(REFERENCE, " ");
 
 const letters = (text: string): string[] => text.match(/\p{L}+/gu) ?? [];
 
-const fold = (text: string): string => text.trim().toLocaleLowerCase("en");
+// Letters and digits only: "Paul greets Titus." is still the English title.
+const fold = (text: string): string =>
+  text
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .toLocaleLowerCase("en");
 
 /** (a) A translation equal to its English title is an untranslated one. */
 export function englishLeak(en: string, value: string): string[] {

@@ -42,7 +42,16 @@ To be confirmed on #10, with the comparison rule, before the Titus run.
 
 `<out>/<lang>/<BOOK>.json`: per key `text`, `source: "ai:<model>"`, status
 `unreviewed`, `from` (the English it translates) and `gates` (problems, if
-any). `<out>/run.json`: the prompt's and inputs' SHA-256, every call (model,
-OpenRouter generation id, prompt, completion and reasoning tokens, cost in
-US dollars, milliseconds) and totals (cost per title, titles per hour of
-model time).
+any). `<out>/run.json`, the ledger: the prompt's and inputs' SHA-256, every
+call (model, OpenRouter generation id, prompt, completion and reasoning
+tokens, cost in US dollars, milliseconds), keys missing, not text or
+unreadable per language, why the run stopped, and totals (cost per title
+delivered, titles per hour of model time). It is rewritten after every call
+and on any failure, so money spent is always on record.
+
+The spend limit (`--max-cost`, default 1.00 USD) fails closed: a call whose
+cost OpenRouter does not report as a usable dollar amount stops the run
+before the next call, and the run stops before a call once the limit is
+spent (the call in flight can go over it). Exit 0 when every requested
+title came back, 2 when the run stopped early or titles are missing, 1 on an
+error.

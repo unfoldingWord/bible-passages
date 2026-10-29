@@ -7,6 +7,7 @@ import {
   LANGUAGES,
   MODELS,
   parseReply,
+  runBook,
   summarise,
   systemPrompt,
   termsFor,
@@ -93,6 +94,28 @@ describe("OpenRouter client (fetch mocked; no network)", () => {
     expect(c.usage.cost).toBeNull();
   });
 
+  it("treats a cost that is not a usable dollar amount as unknown", async () => {
+    for (const cost of [Number.NaN, -1, "0.1"]) {
+      const body = okBody("{}");
+      const { f } = fakeFetch({ ...body, usage: { ...body.usage, cost } });
+      const c = await complete(
+        { model: "m", messages: [] },
+        { apiKey: KEY, fetch: f }
+      );
+      expect(c.usage.cost, String(cost)).toBeNull();
+    }
+  });
+
+  it("throws when the completion token count is missing", async () => {
+    const { f } = fakeFetch({
+      choices: [{ message: { content: "{}" } }],
+      usage: { prompt_tokens: 3 },
+    });
+    await expect(
+      complete({ model: "m", messages: [] }, { apiKey: KEY, fetch: f })
+    ).rejects.toThrow("no usage block");
+  });
+
   it("throws on an HTTP error, with the key removed from the message", async () => {
     const { f } = fakeFetch({ error: { message: `bad key ${KEY}` } }, 401);
     const err = await complete(
@@ -136,6 +159,11 @@ describe("translation runner", () => {
       expect(entry?.refs).toContain("1:4");
     }
     expect(termsFor("TIT.1.4-4", null)).toEqual([]);
+    const bad: Glossary = {
+      language: "fr",
+      terms: { "kt/x": { en: "x", headword: "x", refs: ["1:4-5"] } },
+    };
+    expect(() => termsFor("TIT.1.4-4", bad)).toThrow("not c:v: 1:4-5");
   });
 
   it("builds a user message with key, kind, verses and English", () => {
@@ -159,7 +187,10 @@ describe("translation runner", () => {
   });
 
   it("parses a JSON reply, with or without a code fence", () => {
-    expect(parseReply('```json\n{"A": "x", "B": 3}\n```')).toEqual({ A: "x" });
+    expect(parseReply('```json\n{"A": "x", "B": 3}\n```')).toEqual({
+      A: "x",
+      B: 3,
+    });
     expect(() => parseReply("no json here")).toThrow("no JSON object");
     expect(() => parseReply("[1]")).toThrow();
   });
@@ -249,7 +280,7 @@ describe("translation runner", () => {
   it("sums cost per title and titles per hour, and keeps an unknown cost unknown", () => {
     const call = {
       language: "ar",
-      keys: [],
+      keys: ["A", "B", "C"],
       id: "",
       model: "m",
       promptTokens: 100,
@@ -258,10 +289,26 @@ describe("translation runner", () => {
       cost: 0.01 as number | null,
       ms: 1800,
     };
-    expect(summarise([call, call], 4, 1)).toEqual({
+    const t = {
+      text: "x",
+      source: "ai:m",
+      status: "unreviewed" as const,
+      from: "y",
+    };
+    const result = {
+      titles: { A: t, B: { ...t, gates: ["empty"] } },
+      call,
+      missing: ["C"],
+      invalid: [],
+    };
+    expect(summarise([call, call], [result, result])).toEqual({
       calls: 2,
+      requested: 6,
       titles: 4,
-      gateFailures: 1,
+      missing: 2,
+      invalid: 0,
+      unreadable: 0,
+      gateFailures: 2,
       promptTokens: 200,
       completionTokens: 20,
       cost: 0.02,
@@ -269,13 +316,149 @@ describe("translation runner", () => {
       modelSeconds: 3.6,
       titlesPerHour: 4000,
     });
-    expect(summarise([{ ...call, cost: null }], 2, 0).cost).toBeNull();
+    expect(summarise([{ ...call, cost: null }], [result]).cost).toBeNull();
   });
 
   it("covers every v0.1 language", () => {
     expect(Object.keys(LANGUAGES).sort()).toEqual(
       ["ar", "es-419", "fr", "hi", "id", "pt-BR", "ru", "sw", "zh-Hans"].sort()
     );
+  });
+});
+
+/** A fake model answering each call in turn from `answers`. */
+function scripted(
+  answers: ({ text: string; cost: number | null } | Error)[]
+): Complete {
+  let n = 0;
+  return async (request) => {
+    const a = answers[n++];
+    if (a === undefined) throw new Error("unexpected extra call");
+    if (a instanceof Error) throw a;
+    return {
+      id: `gen-${n}`,
+      model: request.model,
+      text: a.text,
+      usage: {
+        promptTokens: 10,
+        completionTokens: 5,
+        reasoningTokens: null,
+        cost: a.cost,
+      },
+      ms: 100,
+    };
+  };
+}
+
+describe("run ledger and spend fuse", () => {
+  const keys = ["TIT.P.3.9-11"];
+  const setup = (complete: Complete, maxCost = 1) => {
+    const written = new Map<string, unknown>();
+    const ledgers: unknown[] = [];
+    return {
+      written,
+      ledgers,
+      run: () =>
+        runBook({
+          english,
+          tags: ["es-419", "fr", "id"],
+          glossaries: { "es-419": null, fr: null, id: null },
+          promptFile,
+          model: "m",
+          complete,
+          keys,
+          maxCost,
+          meta: { book: "TIT" },
+          write: async (path, value) => {
+            written.set(path, structuredClone(value));
+            if (path === "run.json") ledgers.push(structuredClone(value));
+          },
+        }),
+    };
+  };
+  const ledger = (w: Map<string, unknown>) =>
+    w.get("run.json") as {
+      stop: unknown;
+      calls: { language: string; cost: number | null }[];
+      summary: { cost: number | null };
+    };
+
+  it("stops before the next call when a call's cost is unknown, and records it", async () => {
+    const complete = vi.fn(
+      scripted([
+        { text: '{"TIT.P.3.9-11": "Evitar las divisiones"}', cost: null },
+        { text: '{"TIT.P.3.9-11": "Éviter les divisions"}', cost: 0.001 },
+      ])
+    );
+    const { written, run } = setup(complete);
+    const { stop } = await run();
+    expect(complete).toHaveBeenCalledTimes(1);
+    expect(stop).toEqual({ unknownCost: "es-419" });
+    expect(ledger(written).stop).toEqual({ unknownCost: "es-419" });
+    expect(ledger(written).calls).toHaveLength(1);
+    expect(ledger(written).summary.cost).toBeNull();
+  });
+
+  it("stops before a call once the limit is spent", async () => {
+    const complete = vi.fn(
+      scripted([
+        { text: '{"TIT.P.3.9-11": "Evitar las divisiones"}', cost: 0.3 },
+        { text: '{"TIT.P.3.9-11": "Éviter les divisions"}', cost: 0.3 },
+      ])
+    );
+    const { written, run } = setup(complete, 0.5);
+    const { stop } = await run();
+    expect(complete).toHaveBeenCalledTimes(2);
+    expect(stop).toEqual({ maxCost: 0.5, spent: 0.6, before: "id" });
+    expect(ledger(written).calls.map((c) => c.cost)).toEqual([0.3, 0.3]);
+  });
+
+  it("keeps the ledger of earlier calls when a later call throws", async () => {
+    const { written, ledgers, run } = setup(
+      scripted([
+        { text: '{"TIT.P.3.9-11": "Evitar las divisiones"}', cost: 0.002 },
+        new Error("OpenRouter 429: rate limited"),
+      ])
+    );
+    await expect(run()).rejects.toThrow("429");
+    expect(ledger(written).stop).toEqual({
+      error: "OpenRouter 429: rate limited",
+      language: "fr",
+    });
+    expect(ledger(written).calls).toEqual([
+      expect.objectContaining({ language: "es-419", cost: 0.002 }),
+    ]);
+    expect(written.has("es-419/TIT.json")).toBe(true);
+    // Written after the first call too, not only at the end.
+    expect(ledgers.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("records an unreadable reply and a non-text value with their call", async () => {
+    const { written, run } = setup(
+      scripted([
+        { text: "Sorry, I cannot help with that.", cost: 0.001 },
+        { text: '{"TIT.P.3.9-11": 42}', cost: 0.001 },
+        { text: '{"TIT.P.3.9-11": "Hindari perpecahan"}', cost: 0.001 },
+      ])
+    );
+    const { stop, summary } = await run();
+    expect(stop).toBe("done");
+    expect(summary).toMatchObject({
+      calls: 3,
+      titles: 1,
+      unreadable: 1,
+      invalid: 1,
+    });
+    const results = (written.get("run.json") as { results: unknown }).results;
+    expect(results).toEqual({
+      "es-419": {
+        missing: [],
+        invalid: [],
+        error: "unreadable reply: reply has no JSON object",
+      },
+      fr: { missing: [], invalid: ["TIT.P.3.9-11"] },
+      id: { missing: [], invalid: [] },
+    });
   });
 });
 

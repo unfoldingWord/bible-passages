@@ -94,17 +94,25 @@ export async function complete(
   if (typeof text !== "string")
     throw new Error("OpenRouter response has no message content");
   const u = raw.usage;
-  if (!u || typeof u.prompt_tokens !== "number")
-    throw new Error("OpenRouter response has no usage block");
+  if (
+    !u ||
+    typeof u.prompt_tokens !== "number" ||
+    typeof u.completion_tokens !== "number"
+  )
+    throw new Error("OpenRouter response has no usage block with token counts");
   return {
     id: raw.id ?? "",
     model: raw.model ?? request.model,
     text,
     usage: {
       promptTokens: u.prompt_tokens,
-      completionTokens: u.completion_tokens ?? 0,
+      completionTokens: u.completion_tokens,
       reasoningTokens: u.completion_tokens_details?.reasoning_tokens ?? null,
-      cost: typeof u.cost === "number" ? u.cost : null,
+      // A cost that is not a usable dollar amount is unknown, not zero.
+      cost:
+        typeof u.cost === "number" && Number.isFinite(u.cost) && u.cost >= 0
+          ? u.cost
+          : null,
     },
     ms,
   };

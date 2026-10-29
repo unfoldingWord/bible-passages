@@ -108,8 +108,12 @@ export function termsFor(
   if (!glossary) return [];
   const { chapter, from, to } = span(key);
   const inSpan = (ref: string) => {
-    const [c, v] = ref.split(":").map(Number);
-    return c === chapter && v !== undefined && v >= from && v <= to;
+    const m = /^(\d+):(\d+)$/.exec(ref);
+    if (!m)
+      throw new Error(`${glossary.language}: glossary ref is not c:v: ${ref}`);
+    const c = Number(m[1]);
+    const v = Number(m[2]);
+    return c === chapter && v >= from && v <= to;
   };
   return Object.values(glossary.terms)
     .filter((t) => t.refs.some(inSpan))
@@ -137,27 +141,36 @@ export function userMessage(
   return JSON.stringify(items, null, 2);
 }
 
-/** The model's JSON object of key to translation; tolerant of code fences. */
-export function parseReply(text: string): Record<string, string> {
+/** The model's JSON object of key to value; tolerant of code fences. */
+export function parseReply(text: string): Record<string, unknown> {
   const start = text.indexOf("{");
   const end = text.lastIndexOf("}");
   if (start < 0 || end < start) throw new Error("reply has no JSON object");
   const value: unknown = JSON.parse(text.slice(start, end + 1));
   if (typeof value !== "object" || value === null || Array.isArray(value))
     throw new Error("reply is not a JSON object");
-  const out: Record<string, string> = {};
-  for (const [k, v] of Object.entries(value)) {
-    if (typeof v === "string") out[k] = v;
-  }
-  return out;
+  return value as Record<string, unknown>;
 }
 
 export const sha256 = (text: string): string =>
   createHash("sha256").update(text).digest("hex");
 
+export type LanguageResult = {
+  titles: Record<string, Translation>;
+  call: Call;
+  /** Requested keys the reply left out. */
+  missing: string[];
+  /** Requested keys the reply gave something other than text for. */
+  invalid: string[];
+  /** Why the reply could not be read at all; the call is still recorded. */
+  error?: string;
+};
+
 /**
  * Translates `keys` (default: every English title) into `tag` with one call.
- * A key the reply leaves out is recorded as a problem, not retried.
+ * A key the reply leaves out, or answers with something other than text, is
+ * recorded, not retried. A reply that cannot be parsed is recorded as an
+ * error with its call, so the spend is never lost.
  */
 export async function translateLanguage(args: {
   english: EnglishTitles;
@@ -167,11 +180,7 @@ export async function translateLanguage(args: {
   model: string;
   complete: Complete;
   keys?: string[];
-}): Promise<{
-  titles: Record<string, Translation>;
-  call: Call;
-  missing: string[];
-}> {
+}): Promise<LanguageResult> {
   const { english, tag, glossary, model } = args;
   if (SCRIPT_BY_TAG[tag] === undefined)
     throw new Error(`no script gate for ${tag}`);
@@ -185,14 +194,41 @@ export async function translateLanguage(args: {
       { role: "user", content: userMessage(english, keys, glossary) },
     ],
   });
-  const reply = parseReply(completion.text);
+  const call: Call = {
+    language: tag,
+    keys,
+    id: completion.id,
+    model: completion.model,
+    promptTokens: completion.usage.promptTokens,
+    completionTokens: completion.usage.completionTokens,
+    reasoningTokens: completion.usage.reasoningTokens,
+    cost: completion.usage.cost,
+    ms: completion.ms,
+  };
+  let reply: Record<string, unknown>;
+  try {
+    reply = parseReply(completion.text);
+  } catch (e) {
+    return {
+      titles: {},
+      call,
+      missing: [],
+      invalid: [],
+      error: `unreadable reply: ${(e as Error).message}`,
+    };
+  }
   const titles: Record<string, Translation> = {};
   const missing: string[] = [];
+  const invalid: string[] = [];
   for (const key of keys) {
     const value = reply[key];
     const en = english.titles[key]?.text ?? "";
     if (value === undefined) {
       missing.push(key);
+      continue;
+    }
+    if (typeof value !== "string") {
+      invalid.push(key);
       continue;
     }
     const problems = titleProblems(tag, en, value);
@@ -204,38 +240,136 @@ export async function translateLanguage(args: {
       ...(problems.length > 0 ? { gates: problems } : {}),
     };
   }
-  return {
-    titles,
-    missing,
-    call: {
-      language: tag,
-      keys,
-      id: completion.id,
-      model: completion.model,
-      promptTokens: completion.usage.promptTokens,
-      completionTokens: completion.usage.completionTokens,
-      reasoningTokens: completion.usage.reasoningTokens,
-      cost: completion.usage.cost,
-      ms: completion.ms,
-    },
-  };
+  return { titles, call, missing, invalid };
 }
 
-/** Totals for a run: what wave 3 compares between the two models. */
-export function summarise(calls: Call[], titles: number, gateFailures: number) {
+/** Totals for a run: what the Titus run compares between the two models. */
+export function summarise(calls: Call[], results: LanguageResult[]) {
+  const titles = results.reduce((n, r) => n + Object.keys(r.titles).length, 0);
   const cost = calls.every((c) => c.cost !== null)
     ? calls.reduce((s, c) => s + (c.cost ?? 0), 0)
     : null;
   const ms = calls.reduce((s, c) => s + c.ms, 0);
   return {
     calls: calls.length,
+    requested: calls.reduce((n, c) => n + c.keys.length, 0),
     titles,
-    gateFailures,
+    missing: results.reduce((n, r) => n + r.missing.length, 0),
+    invalid: results.reduce((n, r) => n + r.invalid.length, 0),
+    unreadable: results.filter((r) => r.error !== undefined).length,
+    gateFailures: results.reduce(
+      (n, r) => n + Object.values(r.titles).filter((t) => t.gates).length,
+      0
+    ),
     promptTokens: calls.reduce((s, c) => s + c.promptTokens, 0),
     completionTokens: calls.reduce((s, c) => s + c.completionTokens, 0),
     cost,
+    /** Per title delivered: what a usable title cost. */
     costPerTitle: cost === null || titles === 0 ? null : cost / titles,
     modelSeconds: ms / 1000,
     titlesPerHour: ms === 0 ? null : (titles / ms) * 3_600_000,
   };
+}
+
+export type StopReason =
+  | "done"
+  | { maxCost: number; spent: number; before: string }
+  | { unknownCost: string }
+  | { error: string; language: string };
+
+/**
+ * Runs `tags` in order, one call each, and writes the ledger (`run.json`)
+ * after every call and before any throw, so money spent is always on record.
+ * The spend fuse fails closed: a call whose cost is unknown stops the run
+ * before the next call, and the run stops before a call once `maxCost` is
+ * spent (the call in flight can still go over it).
+ */
+export async function runBook(args: {
+  english: EnglishTitles;
+  tags: string[];
+  glossaries: Record<string, Glossary | null>;
+  promptFile: string;
+  model: string;
+  complete: Complete;
+  keys?: string[];
+  maxCost: number;
+  /** Writes a JSON value at a path relative to the run's output directory. */
+  write: (path: string, value: unknown) => Promise<void>;
+  /** Fixed facts for run.json: inputs, hashes, start time. */
+  meta: Record<string, unknown>;
+  log?: (line: string) => void;
+}): Promise<{ stop: StopReason; summary: ReturnType<typeof summarise> }> {
+  const log = args.log ?? (() => {});
+  const calls: Call[] = [];
+  const results: LanguageResult[] = [];
+  const ledger = (stop: StopReason | "running") =>
+    args.write("run.json", {
+      ...args.meta,
+      model: args.model,
+      languages: args.tags,
+      maxCost: args.maxCost,
+      stop,
+      updatedAt: new Date().toISOString(),
+      results: Object.fromEntries(
+        results.map((r) => [
+          r.call.language,
+          {
+            missing: r.missing,
+            invalid: r.invalid,
+            ...(r.error ? { error: r.error } : {}),
+          },
+        ])
+      ),
+      calls,
+      summary: summarise(calls, results),
+    });
+  let spent = 0;
+  let stop: StopReason = "done";
+  let current = "";
+  try {
+    for (const tag of args.tags) {
+      current = tag;
+      if (spent >= args.maxCost) {
+        stop = { maxCost: args.maxCost, spent, before: tag };
+        break;
+      }
+      const result = await translateLanguage({
+        english: args.english,
+        tag,
+        glossary: args.glossaries[tag] ?? null,
+        promptFile: args.promptFile,
+        model: args.model,
+        complete: args.complete,
+        keys: args.keys,
+      });
+      calls.push(result.call);
+      results.push(result);
+      await args.write(`${tag}/${args.english.book}.json`, {
+        language: tag,
+        book: args.english.book,
+        titles: result.titles,
+      });
+      const { call } = result;
+      log(
+        `${tag}: ${Object.keys(result.titles).length} titles, ` +
+          `${Object.values(result.titles).filter((t) => t.gates).length} gate failures, ` +
+          `${result.missing.length} missing, ${result.invalid.length} invalid` +
+          `${result.error ? `, ${result.error}` : ""}, ` +
+          `${call.promptTokens}+${call.completionTokens} tokens, ` +
+          `$${call.cost?.toFixed(6) ?? "unknown"}, ${call.ms} ms`
+      );
+      if (call.cost === null) {
+        stop = { unknownCost: tag };
+        break;
+      }
+      spent += call.cost;
+      await ledger("running");
+    }
+  } catch (e) {
+    stop = { error: (e as Error).message, language: current };
+    throw e;
+  } finally {
+    await ledger(stop);
+  }
+  return { stop, summary: summarise(calls, results) };
 }
