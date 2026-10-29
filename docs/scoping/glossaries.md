@@ -91,6 +91,12 @@ pins; changing a repo is a new pin and a rebuild.
   "book": "TIT",
   "links": "twl-en-tit",
   "words": { "repo": "Xenizo/fr_tw", "release": "v2.0", "commit": "06db7f85…" },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, …",
+    "Translation Words (fr), Xenizo/fr_tw v2.0, …",
+    "Translation Words (en), unfoldingWord/en_tw v91, …"
+  ],
   "terms": {
     "kt/god": {
       "en": "God",
@@ -103,6 +109,10 @@ pins; changing a repo is a new pin and a rebuild.
 }
 ```
 
+- `licence` and `attribution`: copied from `sources.json` for every pin the
+  file's content comes from (the TWL file, this language's tW, and English
+  tW for the `en` headwords), each attribution once. The build refuses a
+  glossary whose sources do not share one licence.
 - `terms`: every article the book's TWL links that has a headword in this
   language: the English headword, this language's headword (the article's
   first heading, as written), the `sources.json` id it was read from, and the
@@ -110,7 +120,11 @@ pins; changing a repo is a new pin and a rebuild.
 - `gaps`: linked articles with no usable headword. `no-article`: the release
   has no such article (each is listed in `scripts/lib/glossaries.ts` as
   measured, and the build fails if the pins disagree). `english-headword`:
-  for Arabic, Hindi and Russian, a headword with no letter of that script.
+  for Arabic, Hindi and Russian, a headword not mostly in that script: more
+  than half of its letters must be in the script (marks such as vowel signs
+  are not counted), so a stray letter of the script does not make English a
+  term (#22). On Titus this changed nothing: no headword mixes scripts
+  (measured, see #22's PR).
 - Headwords are the full heading line (`grâce, gracieux`): which form a
   title uses is a translation choice, not the glossary's.
 

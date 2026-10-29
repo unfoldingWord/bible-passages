@@ -12,6 +12,7 @@
 import { createHash } from "node:crypto";
 import { BOOKS } from "../lib/books.ts";
 import {
+  isGlossaryInput,
   linkedArticles,
   parseTwl,
   TW,
@@ -112,8 +113,7 @@ for (const book of BOOKS) {
 }
 
 // Keep every other input; replace the glossary inputs wholesale.
-const ours = (id: string) => id.startsWith("tw-") || id.startsWith("twl-");
-const rest = sources().filter((s) => !ours(s.id));
+const rest = sources().filter((s) => !isGlossaryInput(s.id));
 await writeJson(new URL("../../sources.json", import.meta.url), {
   sources: [...rest, ...pins],
 });

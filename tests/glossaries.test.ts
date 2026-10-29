@@ -5,6 +5,8 @@ import {
   ARTICLE,
   buildGlossary,
   headword,
+  inScript,
+  isGlossaryInput,
   linkedArticles,
   parseTwl,
   TW,
@@ -69,6 +71,64 @@ describe("headword", () => {
   });
 });
 
+describe("inScript", () => {
+  const arabic = /\p{Script=Arabic}/u;
+  it.each([
+    ["إيمان", true],
+    ["الله، إله", true],
+    // A short English gloss beside the native word: still mostly Arabic.
+    ["إيمان، تصديق (faith)", true],
+    // Five letters each side: a tie, so not in the script.
+    ["إيمان (faith)", false],
+    ["faith", false],
+    // One letter of the script used to be enough; it no longer is.
+    ["faith إ", false],
+    // Exactly half is not a majority.
+    ["ab بت", false],
+    ["", false],
+    ["1:1 —", false],
+  ])("%j → %s", (word, expected) => {
+    expect(inScript(word, arabic)).toBe(expected);
+  });
+
+  it("counts letters, not vowel signs or other marks", () => {
+    // नि is a letter and a vowel sign; दो likewise: 3 letters, all Devanagari.
+    expect(inScript("निर्दोष", /\p{Script=Devanagari}/u)).toBe(true);
+    // Two Latin letters against two Devanagari letters with their signs.
+    expect(inScript("ab नि दो", /\p{Script=Devanagari}/u)).toBe(false);
+  });
+});
+
+describe("isGlossaryInput", () => {
+  it.each([
+    "twl-en-tit",
+    "twl-en-1co",
+    "tw-en-kt-god",
+    "tw-ar-names-titus",
+    "tw-es-419-other-age-timeperiod",
+    "tw-pt-br-kt-bornagain",
+  ])("claims %s", (id) => {
+    expect(isGlossaryInput(id)).toBe(true);
+  });
+
+  it.each([
+    "bsb-tit",
+    "ufw-vrs",
+    "ufw-chunks-tit",
+    "twl-fr-tit",
+    "twl-en-titus",
+    "twl-en-tit-v2",
+    "tw-en",
+    "tw-en-god",
+    "tw-notes-tit",
+    "tw-en-misc-god",
+    "tw-en-kt-",
+    "twx-en-kt-god",
+  ])("leaves %s alone", (id) => {
+    expect(isGlossaryInput(id)).toBe(false);
+  });
+});
+
 describe("buildGlossary", () => {
   const rows = parseTwl(
     [
@@ -80,6 +140,10 @@ describe("buildGlossary", () => {
     ].join("\n")
   );
   const english = async (a: string) => `# ${a.split("/")[1]}\n`;
+  const credit = (id: string) => ({
+    licence: "CC-BY-SA-4.0",
+    attribution: id.startsWith("twl-") ? "TWL" : `tW ${id.split("-")[1]}`,
+  });
   const repo = (over: Partial<TwRepo> = {}): TwRepo => ({
     language: "ar",
     door43: "ar",
@@ -96,7 +160,9 @@ describe("buildGlossary", () => {
       "TIT",
       rows,
       english,
-      async (a) => ({ "kt/god": "# الله، إله\n", "names/titus": "# تيطس\n" })[a]
+      async (a) =>
+        ({ "kt/god": "# الله، إله\n", "names/titus": "# تيطس\n" })[a],
+      credit
     );
     expect(g.terms).toEqual({
       "kt/god": {
@@ -113,6 +179,25 @@ describe("buildGlossary", () => {
       },
     });
     expect(g.gaps).toEqual({ "kt/faith": "no-article" });
+    expect(g.licence).toBe("CC-BY-SA-4.0");
+    // The TWL file, then this language's tW, then English tW for `en`.
+    expect(g.attribution).toEqual(["TWL", "tW ar", "tW en"]);
+  });
+
+  it("refuses sources under more than one licence", async () => {
+    await expect(
+      buildGlossary(
+        repo({ absent: { TIT: ["kt/faith"] } }),
+        "TIT",
+        rows,
+        english,
+        async (a) => (a === "kt/faith" ? undefined : "# كلمة\n"),
+        (id) => ({
+          licence: id.startsWith("twl-") ? "CC-BY-SA-4.0" : "CC-BY-4.0",
+          attribution: id,
+        })
+      )
+    ).rejects.toThrow(/2 licences/);
   });
 
   it("records an English headword in a non-Latin language as a gap", async () => {
@@ -121,16 +206,43 @@ describe("buildGlossary", () => {
       "TIT",
       rows,
       english,
-      async (a) => (a === "kt/faith" ? "# faith\n" : "# كلمة\n")
+      async (a) =>
+        a === "kt/faith"
+          ? "# faith\n"
+          : a === "kt/god"
+            ? "# god إ\n"
+            : "# كلمة\n",
+      credit
     );
-    expect(g.gaps).toEqual({ "kt/faith": "english-headword" });
-    expect(Object.keys(g.terms)).toEqual(["kt/god", "names/titus"]);
+    // `kt/god` has one Arabic letter of five: English, so a gap.
+    expect(g.gaps).toEqual({
+      "kt/faith": "english-headword",
+      "kt/god": "english-headword",
+    });
+    expect(Object.keys(g.terms)).toEqual(["names/titus"]);
+  });
+
+  it("credits only the TWL file when every article is a gap", async () => {
+    const g = await buildGlossary(
+      repo({ script: /\p{Script=Arabic}/u }),
+      "TIT",
+      rows,
+      english,
+      async () => "# faith\n",
+      credit
+    );
+    expect(g.attribution).toEqual(["TWL"]);
   });
 
   it("refuses an article neither pinned nor listed absent", async () => {
     await expect(
-      buildGlossary(repo(), "TIT", rows, english, async (a) =>
-        a === "kt/faith" ? undefined : "# x\n"
+      buildGlossary(
+        repo(),
+        "TIT",
+        rows,
+        english,
+        async (a) => (a === "kt/faith" ? undefined : "# x\n"),
+        credit
       )
     ).rejects.toThrow(/neither/);
   });
@@ -142,7 +254,8 @@ describe("buildGlossary", () => {
         "TIT",
         rows,
         english,
-        async () => "# x\n"
+        async () => "# x\n",
+        credit
       )
     ).rejects.toThrow(/both/);
   });
@@ -154,7 +267,8 @@ describe("buildGlossary", () => {
         "TIT",
         rows,
         english,
-        async () => "# x\n"
+        async () => "# x\n",
+        credit
       )
     ).rejects.toThrow(/unlinked/);
   });
@@ -196,6 +310,8 @@ describe("data/glossaries", () => {
           "book",
           "links",
           "words",
+          "licence",
+          "attribution",
           "terms",
           "gaps",
         ]);
@@ -207,6 +323,21 @@ describe("data/glossaries", () => {
           release: repo.release,
           commit: repo.commit,
         });
+
+        // Licence and attribution are those of the pins the content comes
+        // from: the TWL file, this language's tW and English tW.
+        const drawn = [
+          twlId(book),
+          ...Object.keys(g.terms).flatMap((a) => [
+            twId(lang, a),
+            twId("en", a),
+          ]),
+        ].map((id) => pins.get(id));
+        expect(g.licence).toBe("CC-BY-SA-4.0");
+        for (const p of drawn) expect(p?.licence).toBe(g.licence);
+        expect(g.attribution).toEqual([
+          ...new Set(drawn.map((p) => p?.attribution)),
+        ]);
 
         // Every linked article is a term or a gap, never both, never neither.
         const keys = [...Object.keys(g.terms), ...Object.keys(g.gaps)].sort();
@@ -223,12 +354,20 @@ describe("data/glossaries", () => {
           expect(pin?.url).toBe(twUrl(repo, article));
           expect(pin?.revision).toBe(repo.commit);
           expect(pin?.licence).toBe("CC-BY-SA-4.0");
-          if (repo.script) expect(term.headword).toMatch(repo.script);
+          if (repo.script) {
+            expect(inScript(term.headword, repo.script)).toBe(true);
+          }
         }
         for (const [article, gap] of Object.entries(g.gaps)) {
           const absent = repo.absent[book]?.includes(article);
           expect(gap).toBe(absent ? "no-article" : "english-headword");
-          if (gap === "english-headword") expect(repo.script).toBeDefined();
+          if (gap === "english-headword") {
+            expect(repo.script).toBeDefined();
+            if (repo.script) {
+              const md = await readSource(twId(lang, article));
+              expect(inScript(headword(md), repo.script)).toBe(false);
+            }
+          }
         }
       }
     );
@@ -254,9 +393,7 @@ describe("data/glossaries", () => {
         }
       }
     }
-    const glossaryPins = [...pins.keys()].filter(
-      (id) => id.startsWith("tw-") || id.startsWith("twl-")
-    );
+    const glossaryPins = [...pins.keys()].filter(isGlossaryInput);
     expect(glossaryPins.sort()).toEqual([...used].sort());
   });
 
