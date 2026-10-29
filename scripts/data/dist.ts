@@ -85,7 +85,7 @@ for (const book of STRUCTURE_BOOKS) {
     const count = Object.keys(table.segments).length;
     await writeJson(new URL(`titles/${language}/${book}.json`, out), table);
     console.log(
-      `dist/tc-mobile/titles/${language}/${book}.json: ${count} of ${structure.segments.length} segments titled`
+      `dist/tc-mobile/titles/${language}/${book}.json: ${count} of ${segmentKeys.length} segments titled`
     );
   }
 }
