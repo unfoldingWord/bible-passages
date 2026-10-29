@@ -42,11 +42,11 @@ largest completion on the run was 5,503 tokens.
 | Agreements                                       | 286                                   | 292                                            |
 | No verdict (checker left the key out)            | 1 (hi, 3:15)                          | 0                                              |
 | Disagreements by criterion¹                      | accurate 3, terms 3, plain 3, names 1 | names 2, plain 2, accurate 1, terms 1, style 1 |
-| Translation cost                                 | $0.2138                               | $0.4196                                        |
+| Translation cost                                 | $0.21382                              | $0.41961                                       |
 | **Translation cost per title**                   | **$0.00072**                          | **$0.00141**                                   |
 | Translation tokens: prompt / completion          | 118,455 / 33,327                      | 151,948 / 11,571                               |
 | of which reasoning                               | 25,572                                | 1,537                                          |
-| Titles per hour of model time²                   | 4,343 (246.2 s)                       | 14,253 (75.0 s)                                |
+| Titles per hour of model time²                   | 4,343 (246.170 s)                     | 14,253 (75.017 s)                              |
 | Checking the other's: cost per title             | $0.00071 (Gemini checking)            | $0.00177 (Claude checking)                     |
 | Checking: tokens prompt / completion (reasoning) | 124,678 / 31,335 (23,405)             | 161,685 / 20,187 (12,464)                      |
 | **Review minutes per title**                     | **not measured**                      | **not measured**                               |
@@ -54,9 +54,11 @@ largest completion on the run was 5,503 tokens.
 ¹ A disagreement can name more than one criterion. ² Sum of call times, one
 call per language, run one after another.
 
-Under the choice rule, before review: the disagreement counts differ by
-|10 − 5| / 10 = 50%, well outside "about 10%", so on the early signal
-quality decides and cost does not (the exact tie test is #50).
+For the choice rule, before review: the disagreement counts differ by
+|10 − 5| / 10 = 50%, far outside "about 10%", so on the early signal alone
+the cost tie-break would not come into play (the exact tie test is #50).
+This page does not choose; the DRI does (ADR 0002, rule 4), with the
+caveats below.
 
 ## Per language: disagreements by the other model
 
@@ -117,7 +119,7 @@ for each model, under the 2.2 gate.
 
 ## Spend
 
-$1.3796 in all on 2026-10-29 for this lane, summed from every ledger: the
-Titus run $1.3697 ($0.2138 + $0.4196 translating, $0.5252 Claude checking,
-$0.2110 Gemini checking) and a 4-title smoke test $0.0099. The spending cap
-was $5.
+$1.37962 in all on 2026-10-29 for this lane, summed from every ledger: the
+Titus run $1.36968 ($0.21382 + $0.41961 translating, $0.52524 Claude
+checking, $0.21101 Gemini checking) and a 4-title smoke test $0.00994. Each
+figure is rounded from the unrounded ledger sum. The spending cap was $5.
