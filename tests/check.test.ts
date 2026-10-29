@@ -1,0 +1,474 @@
+import { spawnSync } from "node:child_process";
+import {
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  writeFileSync,
+} from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { describe, expect, it, vi } from "vitest";
+import {
+  CRITERIA,
+  checkBook,
+  checkLanguage,
+  checkMessage,
+  family,
+  readVerdict,
+  type TranslatedFile,
+} from "../scripts/lib/check.ts";
+import {
+  MODELS,
+  sha256,
+  systemPrompt,
+  type Complete,
+  type EnglishTitles,
+  type Glossary,
+  type Translation,
+} from "../scripts/lib/translate.ts";
+
+const root = new URL("../", import.meta.url);
+const read = (path: string) => readFileSync(new URL(path, root), "utf8");
+const englishText = read("data/titles/en/TIT.json");
+const english = JSON.parse(englishText) as EnglishTitles;
+const promptFile = read("prompts/check-translations.md");
+const glossary = (tag: string) =>
+  JSON.parse(read(`data/glossaries/${tag}/TIT.json`)) as Glossary;
+
+// A key that only tests use; never a real one.
+const KEY = "test-key-not-real-0000";
+
+const A = "TIT.P.3.9-11";
+const B = "TIT.3.15-15";
+const en = (key: string) => english.titles[key]!.text;
+const translation = (
+  key: string,
+  text: string,
+  extra: Partial<Translation> = {}
+): Translation => ({
+  text,
+  source: `ai:${MODELS.gemini}`,
+  status: "unreviewed",
+  from: en(key),
+  ...extra,
+});
+const fileOf = (
+  language: string,
+  titles: Record<string, Translation>
+): TranslatedFile => ({ language, book: "TIT", titles });
+
+/** A fake model answering each call in turn; `model` is who answers. */
+function scripted(
+  answers: ({ text: string; cost: number | null; model?: string } | Error)[]
+): Complete {
+  let n = 0;
+  return async (request) => {
+    const a = answers[n++];
+    if (a === undefined) throw new Error("unexpected extra call");
+    if (a instanceof Error) throw a;
+    return {
+      id: `gen-${n}`,
+      model: a.model ?? request.model,
+      text: a.text,
+      usage: {
+        promptTokens: 10,
+        completionTokens: 5,
+        reasoningTokens: 2,
+        cost: a.cost,
+      },
+      ms: 100,
+    };
+  };
+}
+
+const disagree = {
+  verdict: "disagree",
+  criteria: ["terms"],
+  why: "Uses a word other than the glossary headword.",
+  suggestion: "Evitar las divisiones",
+};
+
+describe("cross-model check: pieces", () => {
+  it("tells the model family from an OpenRouter id or a source", () => {
+    expect(family(MODELS.gemini)).toBe("google");
+    expect(family(`ai:${MODELS.claude}`)).toBe("anthropic");
+    expect(() => family("ai:claude-opus-5-5")).toThrow("model family");
+  });
+
+  it("fills the system prompt from prompts/check-translations.md and names every criterion", () => {
+    const p = systemPrompt(promptFile, "fr");
+    expect(p).toContain("from English into French (BCP-47 tag fr)");
+    expect(p).not.toContain("{{");
+    for (const c of CRITERIA) expect(p).toContain(`"${c}"`);
+  });
+
+  it("sends each translation with its English, verses and key terms", () => {
+    const items = JSON.parse(
+      checkMessage(
+        english,
+        { [B]: translation(B, "Salutations finales") },
+        glossary("fr")
+      )
+    ) as Record<string, unknown>[];
+    expect(items).toEqual([
+      expect.objectContaining({
+        key: B,
+        kind: "segment title",
+        verses: "Titus 3:15",
+        english: en(B),
+        translation: "Salutations finales",
+      }),
+    ]);
+    expect(Array.isArray(items[0]?.terms)).toBe(true);
+  });
+
+  it("reads a well-formed verdict and rejects a malformed one", () => {
+    expect(readVerdict({ verdict: "agree", why: "fine" }, "ai:x/y")).toEqual({
+      by: "ai:x/y",
+      verdict: "agree",
+    });
+    expect(readVerdict(disagree, "ai:x/y")).toEqual({
+      by: "ai:x/y",
+      ...disagree,
+    });
+    const bad = [
+      null,
+      "agree",
+      { verdict: "maybe" },
+      { ...disagree, criteria: [] },
+      { ...disagree, criteria: ["covers"] },
+      { ...disagree, criteria: ["terms", "terms"] },
+      { ...disagree, criteria: "terms" },
+      { ...disagree, why: "" },
+      { ...disagree, suggestion: " Evitar" },
+      { verdict: "disagree", criteria: ["terms"], why: "x" },
+    ];
+    for (const v of bad)
+      expect(readVerdict(v, "ai:x/y"), JSON.stringify(v)).toBeNull();
+  });
+});
+
+describe("cross-model check: one language", () => {
+  const base = {
+    english,
+    glossary: glossary("es-419"),
+    promptFile,
+    model: MODELS.claude,
+  };
+
+  it("marks agreement ai-checked, and a disagreement or a gate failure unreviewed", async () => {
+    const C = "TIT.1.4-4";
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitad las divisiones"),
+      [B]: translation(B, "Saludos finales"),
+      [C]: translation(C, "Pablo saluda a Tito", { gates: ["markup"] }),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        {
+          text: JSON.stringify({
+            [A]: disagree,
+            [B]: { verdict: "agree" },
+            [C]: { verdict: "agree" },
+          }),
+          cost: 0.002,
+        },
+      ]),
+    });
+    const by = `ai:${MODELS.claude}`;
+    expect(r.titles[A]).toEqual({
+      ...file.titles[A],
+      status: "unreviewed",
+      check: { by, ...disagree },
+    });
+    expect(r.titles[B]).toEqual({
+      ...file.titles[B],
+      status: "ai-checked",
+      check: { by, verdict: "agree" },
+    });
+    // Agreed, but a gate failed: a person sees it first.
+    expect(r.titles[C]?.status).toBe("unreviewed");
+    expect(r.call).toMatchObject({
+      language: "es-419",
+      cost: 0.002,
+      reasoningTokens: 2,
+    });
+    expect(r.missing).toEqual([]);
+    expect(r.invalid).toEqual([]);
+  });
+
+  it("records missing and malformed verdicts, which stay unreviewed with no check", async () => {
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones"),
+      [B]: translation(B, "Saludos finales"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        { text: JSON.stringify({ [B]: { verdict: "perhaps" } }), cost: 0.001 },
+      ]),
+    });
+    expect(r.missing).toEqual([A]);
+    expect(r.invalid).toEqual([B]);
+    for (const k of [A, B]) {
+      expect(r.titles[k]?.status).toBe("unreviewed");
+      expect(r.titles[k]?.check).toBeUndefined();
+    }
+  });
+
+  it("keeps an unreadable reply's call and leaves every title unreviewed", async () => {
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([{ text: "I cannot do that.", cost: 0.001 }]),
+    });
+    expect(r.error).toBe("unreadable reply: reply has no JSON object");
+    expect(r.call?.cost).toBe(0.001);
+    expect(r.titles[A]?.status).toBe("unreviewed");
+  });
+
+  it("does not record a verdict from a model of the translator's family", async () => {
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        {
+          text: JSON.stringify({ [A]: { verdict: "agree" } }),
+          cost: 0.001,
+          model: "google/gemini-3.8-flash",
+        },
+      ]),
+    });
+    expect(r.error).toContain("not the anthropic/claude-sonnet-5.5 family");
+    expect(r.titles[A]?.check).toBeUndefined();
+  });
+
+  it("refuses, before any call, a check by the same family or against changed English", async () => {
+    const complete = vi.fn(scripted([]));
+    const same = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones", {
+        source: `ai:${MODELS.claude}`,
+      }),
+    });
+    await expect(
+      checkLanguage({ ...base, file: same, complete })
+    ).rejects.toThrow("checked by its own family");
+    const stale = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones", { from: "Avoid Division" }),
+    });
+    await expect(
+      checkLanguage({ ...base, file: stale, complete })
+    ).rejects.toThrow("the English is now");
+    await expect(
+      checkLanguage({
+        ...base,
+        glossary: glossary("fr"),
+        file: stale,
+        complete,
+      })
+    ).rejects.toThrow("glossary is for fr");
+    expect(complete).not.toHaveBeenCalled();
+  });
+
+  it("makes no call for a language with nothing to check", async () => {
+    const complete = vi.fn(scripted([]));
+    const r = await checkLanguage({
+      ...base,
+      file: fileOf("es-419", {}),
+      complete,
+    });
+    expect(complete).not.toHaveBeenCalled();
+    expect(r.call).toBeUndefined();
+  });
+});
+
+describe("cross-model check: a book, ledger and spend fuse", () => {
+  const files = [
+    fileOf("es-419", { [A]: translation(A, "Evitar las divisiones") }),
+    fileOf("fr", {}),
+    fileOf("id", { [A]: translation(A, "Hindari perpecahan") }),
+  ];
+  const setup = (complete: Complete, maxCost = 1) => {
+    const written = new Map<string, unknown>();
+    return {
+      written,
+      run: () =>
+        checkBook({
+          english,
+          files,
+          glossaries: { "es-419": null, fr: null, id: null },
+          promptFile,
+          model: MODELS.claude,
+          complete,
+          maxCost,
+          meta: { book: "TIT" },
+          write: async (path, value) => {
+            written.set(path, structuredClone(value));
+          },
+        }),
+    };
+  };
+
+  it("checks each language, skips an empty one, and totals the verdicts", async () => {
+    const { written, run } = setup(
+      scripted([
+        { text: JSON.stringify({ [A]: disagree }), cost: 0.003 },
+        { text: JSON.stringify({ [A]: { verdict: "agree" } }), cost: 0.001 },
+      ])
+    );
+    const { stop, summary } = await run();
+    expect(stop).toBe("done");
+    expect(summary).toMatchObject({
+      calls: 2,
+      titles: 2,
+      checked: 2,
+      agree: 1,
+      disagree: 1,
+      aiChecked: 1,
+      byCriterion: { accurate: 0, terms: 1, names: 0, plain: 0, style: 0 },
+      reasoningTokens: 4,
+      cost: 0.004,
+      costPerCheck: 0.002,
+    });
+    const ledger = written.get("run.json") as {
+      results: Record<string, unknown>;
+      calls: unknown[];
+    };
+    expect(ledger.calls).toHaveLength(2);
+    expect(ledger.results.fr).toEqual({
+      missing: [],
+      invalid: [],
+      skipped: "nothing to check",
+    });
+    expect(written.get("id/TIT.json")).toMatchObject({
+      language: "id",
+      book: "TIT",
+      titles: { [A]: { status: "ai-checked" } },
+    });
+  });
+
+  it("stops before the next call when a call's cost is unknown", async () => {
+    const complete = vi.fn(
+      scripted([
+        { text: JSON.stringify({ [A]: { verdict: "agree" } }), cost: null },
+        { text: "{}", cost: 0.001 },
+      ])
+    );
+    const { written, run } = setup(complete);
+    const { stop } = await run();
+    expect(complete).toHaveBeenCalledTimes(1);
+    expect(stop).toEqual({ unknownCost: "es-419" });
+    expect((written.get("run.json") as { stop: unknown }).stop).toEqual({
+      unknownCost: "es-419",
+    });
+  });
+
+  it("stops before a call once the limit is spent", async () => {
+    const complete = vi.fn(
+      scripted([{ text: JSON.stringify({ [A]: disagree }), cost: 0.6 }])
+    );
+    const { run } = setup(complete, 0.5);
+    const { stop } = await run();
+    expect(complete).toHaveBeenCalledTimes(1);
+    // fr has nothing to check, so the fuse fires at fr, before any call.
+    expect(stop).toEqual({ maxCost: 0.5, spent: 0.6, before: "fr" });
+  });
+});
+
+describe("checker command line", () => {
+  const script = fileURLToPath(new URL("scripts/translate/check.ts", root));
+  const env = { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY };
+  /** A translation run directory with a ledger and one language file. */
+  const fakeRun = (ledger: Record<string, unknown> = {}) => {
+    const dir = mkdtempSync(join(tmpdir(), "check-run-"));
+    writeFileSync(
+      join(dir, "run.json"),
+      JSON.stringify({
+        book: "TIT",
+        model: MODELS.gemini,
+        languages: ["fr"],
+        english: {
+          file: "data/titles/en/TIT.json",
+          sha256: sha256(englishText),
+        },
+        glossaries: { fr: sha256(read("data/glossaries/fr/TIT.json")) },
+        ...ledger,
+      })
+    );
+    mkdirSync(join(dir, "fr"));
+    writeFileSync(
+      join(dir, "fr", "TIT.json"),
+      JSON.stringify(
+        fileOf("fr", { [A]: translation(A, "Éviter les divisions") })
+      )
+    );
+    return dir;
+  };
+  const run = (args: string[], e: Record<string, string> = env) =>
+    spawnSync(process.execPath, [script, ...args], {
+      env: e,
+      encoding: "utf8",
+    });
+
+  it("fails clearly, before any call, when OPENROUTER_API_KEY is missing", () => {
+    const r = run(["--run", fakeRun(), "--model", MODELS.claude], {
+      PATH: env.PATH,
+    });
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("OPENROUTER_API_KEY is not set");
+  });
+
+  it("refuses a checker of the translator's family", () => {
+    const r = run(["--run", fakeRun(), "--model", "google/gemini-other"]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("must be checked by another family");
+    expect(r.stderr + r.stdout).not.toContain(KEY);
+  });
+
+  it("refuses a run whose English or glossary has changed since", () => {
+    let r = run([
+      "--run",
+      fakeRun({ english: { file: "x", sha256: "0" } }),
+      "--model",
+      MODELS.claude,
+    ]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("has changed since the translation run");
+    r = run([
+      "--run",
+      fakeRun({ glossaries: { fr: "0" } }),
+      "--model",
+      MODELS.claude,
+    ]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("fr glossary has changed");
+  });
+
+  it("refuses an --out that exists or is inside data/ or dist/, before any call", () => {
+    const existing = mkdtempSync(join(tmpdir(), "check-out-"));
+    for (const out of [existing, "data/drafts", "dist"]) {
+      const r = run([
+        "--run",
+        fakeRun(),
+        "--model",
+        MODELS.claude,
+        "--out",
+        out,
+      ]);
+      expect(r.status, out).toBe(1);
+      expect(r.stderr, out).toMatch(/already exists|must not be inside data/);
+    }
+    expect(readdirSync(existing)).toEqual([]);
+  });
+});

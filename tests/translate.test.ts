@@ -351,12 +351,18 @@ describe("translation runner", () => {
       gateFailures: 2,
       promptTokens: 200,
       completionTokens: 20,
+      reasoningTokens: null,
       cost: 0.02,
       costPerTitle: 0.005,
       modelSeconds: 3.6,
       titlesPerHour: 4000,
     });
     expect(summarise([{ ...call, cost: null }], [result]).cost).toBeNull();
+    // Reasoning tokens: summed over the calls that report them, else unknown.
+    expect(
+      summarise([call, { ...call, reasoningTokens: 7 }], [result, result])
+        .reasoningTokens
+    ).toBe(7);
   });
 
   it("covers every v0.1 language", () => {

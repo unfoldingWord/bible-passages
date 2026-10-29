@@ -157,6 +157,16 @@ rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
 `prompts/`. Only English Titus exists so far.
 
+A translated draft (`<lang>` other than `en`) has the same record, keyed by
+every titled key in the English table (pericopes and segments), plus `from`,
+the English title it translates, and `gates`, any machine gate problems. Its
+`check` is by a model of another family than the translator's
+(`prompts/check-translations.md`; criteria `accurate`, `terms`, `names`,
+`plain`, `style`), and it is `ai-checked` only when the checker agreed and
+every gate passed. None is committed yet: the DRI chooses the model from the
+Titus measurement first ([decisions/0002](decisions/0002-measure-translation-models.md),
+[scoping/translation-check.md](scoping/translation-check.md)).
+
 Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
 for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 `ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
