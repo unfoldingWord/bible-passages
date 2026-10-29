@@ -686,7 +686,7 @@ function renderReview(focus) {
       <span class="rv-err" id="rv-edit-err" role="alert"></span>
       <div class="rv-actions"><button class="btn" type="submit"${off}>Save the new title</button><button class="btn quiet" type="button" id="rv-cancel">Cancel</button></div></form>`
     : `<div class="rv-actions"><button class="btn" type="button" id="rv-approve"${off}>Approve</button><button class="btn quiet" type="button" id="rv-change"${off}>Change the wording</button><button class="btn quiet" type="button" id="rv-skip"${RQ.busy || (RV.db && RV.uid && !RQ.loaded) ? " disabled" : ""}>Skip</button></div>`}
-    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 && !RQ.busy ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
+    <div class="rv-nav"><button class="btn quiet" type="button" id="rv-prev"${n > 1 && !RQ.busy && !RQ.editing ? "" : " disabled"}>Previous</button><span class="saved" id="rv-msg">${esc(hint)}</span></div>`;
   $("#rv-prev").onclick = () => rqStep(-1);
   if (RQ.editing) {
     $("#rv-cancel").onclick = () => { RQ.editing = false; RQ.draft = null; renderReview(); };

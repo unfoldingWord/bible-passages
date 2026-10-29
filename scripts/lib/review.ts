@@ -16,6 +16,8 @@ export const HANDLE = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;
 export const TAG = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 /** The longest English title (tests/drafts.test.ts). */
 export const MAX_EN = 60;
+/** How far ahead of the applier's clock a record's time may be. */
+export const MAX_SKEW_MS = 60 * 60 * 1000;
 /** The longest reason kept with a review. */
 export const MAX_WHY = 500;
 
@@ -158,13 +160,14 @@ const STATUS = ["unreviewed", "ai-checked", "human-reviewed", "approved"];
  * (an `approved` title stays approved); an edit is new wording, so it is
  * `human-reviewed` whatever the title was.
  */
-function reviewFor(r: ReviewRecord, draft: Draft, prior: Review | undefined) {
+function reviewFor(r: ReviewRecord, draft: Draft) {
   const after = r.action === "edit" ? (r.text ?? "") : r.seen;
+  // The title's status now: a person's review decides it, else the draft's.
+  const prior = draft.review?.status ?? draft.status;
   const kept =
     r.action === "approve" &&
-    prior &&
-    STATUS.indexOf(prior.status) > STATUS.indexOf("human-reviewed")
-      ? prior.status
+    STATUS.indexOf(prior) > STATUS.indexOf("human-reviewed")
+      ? prior
       : "human-reviewed";
   const review: Review = {
     by: `reviewer:${r.handle}`,
@@ -186,7 +189,8 @@ function reviewFor(r: ReviewRecord, draft: Draft, prior: Review | undefined) {
  */
 export function applyReviews(
   files: ReadonlyMap<string, DraftFile>,
-  records: unknown
+  records: unknown,
+  now: number = Date.now()
 ): Batch {
   const none = (problems: string[]): Batch => ({
     changed: new Map(),
@@ -199,15 +203,24 @@ export function applyReviews(
   const valid: ReviewRecord[] = [];
   records.forEach((r, i) => {
     const p = recordProblems(r);
+    // `at` comes from the reviewer's device, and an applied review keeps it
+    // as the time up to which later batches pass records over: one from the
+    // future would close its title. Refused, not applied.
+    if (
+      p.length === 0 &&
+      Date.parse((r as ReviewRecord).at) > now + MAX_SKEW_MS
+    )
+      p.push("at is in the future");
     if (p.length) problems.push(`record ${i}: ${p.join(", ")}`);
     else valid.push(r as ReviewRecord);
   });
   if (problems.length) return none(problems);
 
-  // Oldest first; ties broken so the order never depends on the export.
+  // Oldest first, by time and not by string (`10:00:00Z` is before
+  // `10:00:00.100Z`); ties broken so the order never depends on the export.
   const ordered = [...valid].sort(
     (a, b) =>
-      a.at.localeCompare(b.at) ||
+      Date.parse(a.at) - Date.parse(b.at) ||
       a.handle.localeCompare(b.handle) ||
       a.lang.localeCompare(b.lang) ||
       a.book.localeCompare(b.book) ||
@@ -250,7 +263,7 @@ export function applyReviews(
       continue;
     }
     const before = current(draft);
-    const { after, review } = reviewFor(r, draft, draft.review);
+    const { after, review } = reviewFor(r, draft);
     if (r.seen !== before) {
       problems.push(
         `${where}: stale, reviewed "${r.seen}" but the title is now "${before}"`

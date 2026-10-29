@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   applyReviews,
+  MAX_SKEW_MS,
   current,
   direction,
   recordProblems,
@@ -41,6 +42,10 @@ const files = (): Map<string, DraftFile> =>
       },
     ],
   ]);
+// The applier's clock, fixed after every record the fixtures make.
+const NOW = Date.parse("2026-11-01T00:00:00.000Z");
+const apply = (f: ReadonlyMap<string, DraftFile>, r: unknown) =>
+  applyReviews(f, r, NOW);
 const rec = (over: Partial<ReviewRecord> = {}): ReviewRecord => ({
   v: 1,
   handle: "reader-7",
@@ -87,7 +92,7 @@ describe("review records", () => {
 describe("applyReviews", () => {
   it("writes an approval as a person's review, keeping the wording", () => {
     const before = files();
-    const { changed, applied, problems } = applyReviews(before, [rec()]);
+    const { changed, applied, problems } = apply(before, [rec()]);
     expect(problems).toEqual([]);
     expect(applied).toHaveLength(1);
     expect(changed.get("en/TIT")?.titles["TIT.1.4-4"]).toEqual({
@@ -104,7 +109,7 @@ describe("applyReviews", () => {
   });
 
   it("writes an edit with its wording and reason", () => {
-    const { changed } = applyReviews(files(), [edit("Paul greets his son")]);
+    const { changed } = apply(files(), [edit("Paul greets his son")]);
     const t = changed.get("en/TIT")!.titles["TIT.1.4-4"]!;
     expect(t.text).toBe("Paul greets Titus");
     expect(t.review).toEqual({
@@ -119,7 +124,7 @@ describe("applyReviews", () => {
   });
 
   it("refuses an unknown key, language or book file, and writes nothing", () => {
-    const r = applyReviews(files(), [
+    const r = apply(files(), [
       rec(),
       rec({ key: "TIT.9.1-2" }),
       rec({ lang: "fr" }),
@@ -135,7 +140,7 @@ describe("applyReviews", () => {
   });
 
   it("refuses a review of wording that has since changed", () => {
-    const r = applyReviews(files(), [rec({ seen: "Paul greets Tit" })]);
+    const r = apply(files(), [rec({ seen: "Paul greets Tit" })]);
     expect(r.problems).toEqual([
       'reader-7 en/TIT TIT.1.4-4: stale, reviewed "Paul greets Tit" but the title is now "Paul greets Titus"',
     ]);
@@ -146,7 +151,7 @@ describe("applyReviews", () => {
     const later = "2026-10-29T11:00:00.000Z";
     // A second reviewer approves the first one's edit: fine. A third
     // approves the old wording after the edit: stale.
-    const ok = applyReviews(files(), [
+    const ok = apply(files(), [
       rec({ handle: "second", seen: "Paul greets his son", at: later }),
       edit("Paul greets his son"),
     ]);
@@ -158,7 +163,7 @@ describe("applyReviews", () => {
       text: "Paul greets his son",
       saved: later,
     });
-    const stale = applyReviews(files(), [
+    const stale = apply(files(), [
       edit("Paul greets his son"),
       rec({ handle: "third", at: later }),
     ]);
@@ -171,9 +176,9 @@ describe("applyReviews", () => {
       rec({ key: "TIT.1.1-3", seen: "Paul introduces himself" }),
       edit("Paul greets his son"),
     ];
-    const first = applyReviews(files(), records);
+    const first = apply(files(), records);
     const merged = new Map([...files(), ...first.changed]);
-    const again = applyReviews(merged, records);
+    const again = apply(merged, records);
     expect(again.problems).toEqual([]);
     expect(again.applied).toEqual([]);
     expect(again.skipped).toHaveLength(2);
@@ -187,7 +192,7 @@ describe("applyReviews", () => {
       edit("Paul greets his son"),
       rec({ handle: "second", seen: "Paul greets his son", at: later }),
     ];
-    const first = applyReviews(files(), history);
+    const first = apply(files(), history);
     expect(first.problems).toEqual([]);
     const merged = new Map([...files(), ...first.changed]);
     // The next export holds both again, and a new review on another title.
@@ -196,7 +201,7 @@ describe("applyReviews", () => {
       seen: "Paul introduces himself",
       at: latest,
     });
-    const again = applyReviews(merged, [...history, fresh]);
+    const again = apply(merged, [...history, fresh]);
     expect(again.problems).toEqual([]);
     expect(again.skipped).toEqual(history);
     expect(again.applied.map((a) => a.record)).toEqual([fresh]);
@@ -206,7 +211,7 @@ describe("applyReviews", () => {
       seen: "Paul greets his son",
       at: latest,
     });
-    const next = applyReviews(merged, [...history, third]);
+    const next = apply(merged, [...history, third]);
     expect(next.problems).toEqual([]);
     expect(next.skipped).toEqual(history);
     expect(next.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.by).toBe(
@@ -224,7 +229,7 @@ describe("applyReviews", () => {
       seen: "Paul greets his son",
       at: "2026-10-29T11:00:00.000Z",
     });
-    const first = applyReviews(files(), [a, bEdit]);
+    const first = apply(files(), [a, bEdit]);
     expect(first.problems).toEqual([]);
     const merged = new Map([...files(), ...first.changed]);
     const bApprove = rec({
@@ -232,25 +237,82 @@ describe("applyReviews", () => {
       seen: "Paul greets his son Titus",
       at: "2026-10-30T08:00:00.000Z",
     });
-    const next = applyReviews(merged, [a, bApprove]);
+    const next = apply(merged, [a, bApprove]);
     expect(next.problems).toEqual([]);
     expect(next.skipped).toEqual([a]);
     expect(next.applied.map((x) => x.record)).toEqual([bApprove]);
     // A record never applied and saved after the stored review is still
     // checked: one made against the old wording is stale.
     const late = rec({ handle: "late", at: "2026-10-31T08:00:00.000Z" });
-    expect(applyReviews(merged, [a, late]).problems[0]).toMatch(
-      /^late .*stale/
+    expect(apply(merged, [a, late]).problems[0]).toMatch(/^late .*stale/);
+  });
+
+  it("orders records by time, whatever their precision", () => {
+    // 10:00:00Z is before 10:00:00.100Z, though it sorts after it as text.
+    const r = apply(files(), [
+      rec({
+        handle: "second",
+        seen: "Paul greets his son",
+        at: "2026-10-29T10:00:00.100Z",
+      }),
+      edit("Paul greets his son", { at: "2026-10-29T10:00:00Z" }),
+    ]);
+    expect(r.problems).toEqual([]);
+    expect(r.applied.map((a) => a.record.handle)).toEqual([
+      "reader-7",
+      "second",
+    ]);
+  });
+
+  it("refuses a record from the future, which would close its title", () => {
+    const future = rec({ at: "2099-01-01T00:00:00.000Z" });
+    const r = apply(files(), [
+      rec({ key: "TIT.1.1-3", seen: "Paul introduces himself" }),
+      future,
+    ]);
+    expect(r.problems).toEqual(["record 1: at is in the future"]);
+    expect(r.changed.size).toBe(0);
+    // Within the allowed skew it applies, and a later review builds on it.
+    const ahead = new Date(NOW + MAX_SKEW_MS - 1000).toISOString();
+    const soon = apply(files(), [rec({ at: ahead })]);
+    expect(soon.problems).toEqual([]);
+    const merged = new Map([...files(), ...soon.changed]);
+    const next = applyReviews(
+      merged,
+      [
+        edit("Paul greets his son", {
+          handle: "next",
+          at: new Date(NOW + MAX_SKEW_MS).toISOString(),
+        }),
+      ],
+      NOW + MAX_SKEW_MS
+    );
+    expect(next.problems).toEqual([]);
+    expect(next.applied).toHaveLength(1);
+  });
+
+  it("refuses wording with surrounding whitespace", () => {
+    expect(apply(files(), [edit("Paul greets his son. ")]).problems[0]).toMatch(
+      /surrounding whitespace/
     );
   });
 
   it("names a profile document copied into the records", () => {
-    const r = applyReviews(files(), [
+    const r = apply(files(), [
       { v: 1, handle: "reader-7", at: "2026-10-29T10:00:00.000Z" },
     ]);
     expect(r.problems).toEqual([
       "record 0: a profile document; records are item documents only",
     ]);
+  });
+
+  it("keeps a draft's own approved status on approval", () => {
+    const f = files();
+    f.get("en/TIT")!.titles["TIT.1.4-4"]!.status = "approved";
+    expect(
+      apply(f, [rec()]).changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review
+        ?.status
+    ).toBe("approved");
   });
 
   it("keeps an approved title approved on approval; an edit is human-reviewed", () => {
@@ -260,11 +322,11 @@ describe("applyReviews", () => {
       at: "2026-10-28",
       status: "approved",
     };
-    const approve = applyReviews(f, [rec()]);
+    const approve = apply(f, [rec()]);
     expect(
       approve.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.status
     ).toBe("approved");
-    const changed = applyReviews(f, [edit("Paul greets his son")]);
+    const changed = apply(f, [edit("Paul greets his son")]);
     expect(
       changed.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.status
     ).toBe("human-reviewed");
@@ -272,7 +334,7 @@ describe("applyReviews", () => {
 
   it("checks a person's own wording like any title", () => {
     const bad = (text: string, lang = "en", seen = "Paul greets Titus") =>
-      applyReviews(files(), [edit(text, { lang, seen })]).problems;
+      apply(files(), [edit(text, { lang, seen })]).problems;
     expect(bad("Paul greets Titus")[0]).toMatch(/changes nothing/);
     expect(bad("Paul greets Titus, his son.")[0]).toMatch(/full stop/);
     expect(bad("x".repeat(61))[0]).toMatch(/over 60 characters/);
@@ -287,13 +349,13 @@ describe("applyReviews", () => {
   });
 
   it("summarises a batch for the PR body, pipes escaped", () => {
-    const { applied } = applyReviews(files(), [
+    const { applied } = apply(files(), [
       edit("Paul greets his son", { why: "a | b" }),
     ]);
     expect(summary(applied)).toContain(
       "| en | TIT.1.4-4 | edit | reviewer:reader-7 | Paul greets Titus | Paul greets his son | a \\| b |"
     );
-    const { applied: bidi } = applyReviews(files(), [
+    const { applied: bidi } = apply(files(), [
       edit("Paul greets his son", { why: "a\u202Eb\u001B[31m" }),
     ]);
     expect(summary(bidi)).toMatch(/\| ab\[31m \|$/);

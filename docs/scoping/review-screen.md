@@ -211,10 +211,12 @@ another person's.
 - **Approving someone else's wording** credits the approver as `source` (the
   `review` entry holds one reviewer). Fine for v0.1; revisit if two-person
   review is required.
-- **Clocks**: `at` comes from the reviewer's device. A device clock running
-  behind can save a new review with a time before one already applied; it is
-  passed over, and the batch output counts it. Untested; a durable id per
-  record is the fix if it is seen.
+- **Clocks**: `at` comes from the reviewer's device. A record more than an
+  hour ahead of the applier's clock is refused, since its time would close
+  the title to later reviews. A clock running behind can save a new review
+  with a time before one already applied; it is passed over, and the batch
+  output counts it. Untested in use; a durable id per record is the fix if
+  it is seen.
 - **Status**: an approval never lowers a status (an `approved` title stays
   `approved`); an edit is new wording, so it is `human-reviewed`. Nothing
   grants `approved` yet.
