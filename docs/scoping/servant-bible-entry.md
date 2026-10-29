@@ -101,7 +101,7 @@ Validated against servant.bible's schema (below). Fields not listed under
   "org": "uw",
   "server": "bible-passages",
   "name": "Bible Passages (BPd)",
-  "description": "Passage (pericope) and segment (chunk) divisions for every book of the Bible, each with a short title in English and in more languages as each passes its quality checks. The chapter and verse range is secondary information.",
+  "description": "Planned dataset: passage (pericope) and segment (chunk) divisions for every book of the Bible. At v0.1 each division has a short English title; other languages are added as each passes its quality checks. The chapter and verse range is secondary information.",
   "purpose": "The template library in translationCore Mobile v2, starting with the top 10 Strategic Languages, and finding a place in the story without book, chapter, and verse.",
   "operator": {
     "name": "unfoldingWord",
@@ -121,7 +121,7 @@ Changed, and why:
 
 | Field         | Change                                                                        | Evidence                                                                                                                                                                                                                                                       |
 | ------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description` | Says what the files hold: pericope and segment divisions with titles. No OBS. | `docs/schema.md`; ADR 0003 decision 1 (v0.1 is all structure and English titles, plus the languages that pass the gates). OBS: Break (1), question 1.                                                                                                          |
+| `description` | Planned v0.1 contents: pericope and segment divisions with titles. No OBS.    | `docs/schema.md`; ADR 0003 decision 1 (v0.1 is all structure and English titles, plus the languages that pass the gates). Today titles exist for PHP and TIT only (below). OBS: Break (1), question 1.                                                         |
 | `sources`     | Added: DCS.                                                                   | Every pinned input is on `git.door43.org`: BSB headings (`Worldview/en_bsb`), UFW versification and chunks (`Door43-Catalog/versification`), Translation Words and Translation Words Links (`unfoldingWord/en_tw`, `unfoldingWord/en_twl`, nine other `*_tw`). |
 | `repository`  | Added.                                                                        | The repository is public (`gh repo view --json visibility`: `PUBLIC`).                                                                                                                                                                                         |
 
@@ -158,6 +158,8 @@ The draft entry was validated with ajv 8.17.1 and ajv-formats 3.0.1
 `servers.schema.json` at `5472c7b`, with the draft substituted for the
 merged entry in the full `servers.json`, plus the org+server and shorthand
 uniqueness rules. This re-implements the upstream gate; it is not the gate.
+The `description` was reworded in review after this run (planned framing),
+and the run was not repeated; step 3 below is the check that counts.
 The upstream PR runs the real one (`pnpm validate:servers`) in its pre-commit
 hook and CI.
 
