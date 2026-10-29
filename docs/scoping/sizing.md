@@ -26,6 +26,10 @@ code, the same pinned sources) on 2026-10-28 and matched.
 
 ## Derived counts
 
+ULT has 13,575 `\ts\*` markers across the 66 books (`en_ult` at `04e15203`,
+counted with `grep -o`; recounted 2026-10-28, two files checked byte for byte
+against the pinned commit). By tC 4.0's rule they give 13,548 sections.
+
 These use the UFW chunk files. With ULT's `\ts\*` markers as the source
 (schema.md, decision 8) they become 13,713 segments (13,548 sections plus 165 splits) and 16,729 English
 titles.

@@ -30,7 +30,8 @@ data/
   structure/<BOOK>.json      pericopes and segments: keys and spans, no text
   titles/<lang>/<BOOK>.json  titles per key, with status and source
   versification/ufw.json     last verse of each chapter, from ufw.vrs
-  retired-keys.json          released keys no longer used, each with its successor
+  glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
+  retired-keys.json          append-only log of retired keys, each with its successor
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
@@ -69,10 +70,14 @@ A one-verse span repeats its verse (`TIT.1.4-4`, not `TIT.1.4`), so every
 key has the same shape and a chapter key is never confused with a verse; 9 of
 Titus's 25 segments are one verse (measured, `data/structure/TIT.json`).
 
-Because the span is in the key, moving a boundary always produces a new key.
-That is the contract's rule ("give the new passage a new key") enforced by the
-form of the key rather than by memory. The old key is then retired: it stays in
-the record of released keys and is never used again.
+Because the span is in the key, moving a boundary gives the new span its own
+key: a new one, or the same span's earlier key, revived. That is the contract's
+rule ("give the new passage a new key") enforced by the form of the key rather
+than by memory. The old key is retired by appending a row to
+`data/retired-keys.json`. While a key is absent from the live structure, its
+latest row there is in force; while it is live, all its rows are history only,
+and reviving it appends nothing. A key is never attached to a different span
+([decisions/0001](decisions/0001-span-keys.md)).
 
 The record is `data/retired-keys.json`, written by hand, never by the build:
 
@@ -139,6 +144,30 @@ letters, digits and `. _ : -`, at most 64 characters).
   `title`.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
+
+## `data/drafts/<lang>/<BOOK>.json`
+
+A committed input, not generated: AI-drafted titles, `titles` keyed by segment
+key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
+into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
+rebuild cannot wipe a draft. A draft for a key that is not a segment in the
+structure fails the build. The instructions that produced them are in
+`prompts/`. Only English Titus exists so far.
+
+Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
+for a disagreement `criteria`, `why` and a `suggestion`). A draft is
+`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
+and goes to a person first. The check's details stay here; the built table
+gets `text`, `status` and `source`.
+
+## `data/glossaries/<lang>/<BOOK>.json`
+
+The key terms Translation Word Links link from a book, each with its
+headword in the language's Translation Words, the verses that link it, and
+the `sources.json` id it was read from. Linked terms with no headword in the
+language are listed under `gaps`. Shape, sources and gaps:
+[scoping/glossaries.md](scoping/glossaries.md). Not shipped in `dist/`;
+translation reads it.
 
 ## `dist/tc-mobile/`
 
@@ -219,7 +248,7 @@ Run on every PR (`npm test`):
 | Every segment inside the pericope it names                                       | built     |
 | `dist/` segment keys are the same as `data/`'s                                   | built     |
 | `data/` and `dist/` match a fresh build from the pinned sources (CI)             | built     |
-| No released key missing, moved or reused (against the last `vX.Y.Z` tag)         | built     |
+| No released key missing, moved or reused (against every `vX.Y.Z` release tag)    | built     |
 | Every key titled in every language marked complete                               | not built |
 | Title length and script                                                          | not built |
 
@@ -235,25 +264,15 @@ every test run until they exist.
 2. **Pericope source**: the requirements owner's build plan uses BSB `\s1`
    headings: 3,016, measured in this repo
    ([scoping/sizing.md](scoping/sizing.md)). Proposed: confirm BSB.
-3. **Keys**: the span-based keys above, instead of the pilot's order-based
-   ones. An alternative is to embed a Scripture Burrito scope string, which
-   tc-mobile already uses for sections (its ADR 0004): `TIT.1:1-4`,
-   `PSA.23:1-6`. Both fit the key rule.
-
-   **The cost of span keys:** any boundary change, even one verse, retires a
-   key, and the reviewed titles in every language attached to it would be
-   orphaned. Rule: a retired key is recorded with its successor in
-   `data/retired-keys.json`, and its titles carry forward to the new key as
-   `unreviewed` drafts. And the chunk source (decision 8) is pinned before
-   the first release, because changing it later retires thousands of keys.
-
+3. **Keys**: decided: span keys. See
+   [decisions/0001](decisions/0001-span-keys.md).
 4. **Versification and UTN release**: which scheme spans are checked against,
    and which UTN release the segment boundaries come from.
 5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
-6. **Translation**: which model translates titles, and how key-term
-   consistency is checked across a book and a language. One suggestion is a
-   fast model for translation, with a script that checks key terms and drives
-   review.
+6. **Translation**: the selection procedure is decided: measure Gemini and Claude on
+   Titus, then choose ([decisions/0002](decisions/0002-measure-translation-models.md)).
+   Still open: how key-term consistency is checked across a book and a
+   language.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.
@@ -266,3 +285,14 @@ every test run until they exist.
     (`checking/headings`) segment titles use. Proposed: explanatory comment.
 11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
     difficulty after v0.1.
+
+12. **Single-segment pericopes**: 263 pericopes are exactly one segment
+    (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
+    segment titles describe the same verses. Title both (16,786 English
+    titles) or reuse the pericope title (16,523)?
+13. **Spanish language tag**: every Spanish input is published as `es-419`;
+    the v0.1 list says `es`. Proposed: `es-419` (#20).
+14. **Chinese key terms**: there is no Chinese Translation Words on Door43
+    (checked 2026-10-28). Who carries a zh-Hans key-term list, or the
+    fallback (an AI-drafted list checked by a second model and reviewed by a
+    Chinese reader) if no owner by 2026-11-13?
