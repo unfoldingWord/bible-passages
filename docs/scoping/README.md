@@ -19,6 +19,7 @@ pieces around it.
 | 7a  | Glossaries         | key-term headwords per language from Translation Words     | [glossaries.md](glossaries.md)                 |
 | 7b  | Translation runner | translates one book's titles with one model, gated, costed | [translation-runner.md](translation-runner.md) |
 | 8   | Review             | people approve, flag or suggest each title                 | [review.md](review.md)                         |
+| 8a  | Review screen      | the site's Review page and the sync from it to PRs         | [review-screen.md](review-screen.md)           |
 | 9   | Publish            | `dist/tc-mobile/` packages and title tables, release tags  | [pipeline.md](pipeline.md#9-publish)           |
 | 10  | Project site       | live scope, sizing, sprints, decisions, coverage           | [site.md](site.md)                             |
 

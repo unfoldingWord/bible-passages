@@ -139,7 +139,8 @@ letters, digits and `. _ : -`, at most 64 characters).
 - `status`, in order: `unreviewed`, `ai-checked`, `human-reviewed`,
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
-- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
+- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<handle>`, a
+  handle the reviewer chose or the maintainer assigned, never a display name.
 - `name` is the book's name in this language; it becomes the package
   `title`.
 - A key with no title is allowed. A title for a key that is not in the
@@ -162,6 +163,13 @@ for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 `ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
 and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
+
+A person's review is `review`: `by` (`reviewer:<handle>`), `at` (a date),
+`status`, and `text` only when their wording differs from the draft's, with
+`why` when they gave a reason. The build takes the review's status, and its
+wording with the reviewer as `source`. Reviews come from the project site's
+Review page through `scripts/review/apply.ts`
+([scoping/review-screen.md](scoping/review-screen.md)).
 
 ## `data/glossaries/<lang>/<BOOK>.json`
 
