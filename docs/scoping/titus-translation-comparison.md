@@ -55,8 +55,9 @@ largest completion on the run was 5,503 tokens.
 call per language, run one after another.
 
 For the choice rule, before review: the disagreement counts differ by
-|10 − 5| / 10 = 50%, far outside "about 10%", so on the early signal alone
-the cost tie-break would not come into play (the exact tie test is #50).
+|10 − 5| / 10 = 0.50, above the tie line of 0.10 (ADR 0002, choice-rule
+details, decided after this run and before any human review), so on the
+early signal alone the cost tie-break would not come into play.
 This page does not choose; the DRI does (ADR 0002, rule 4), with the
 caveats below.
 
