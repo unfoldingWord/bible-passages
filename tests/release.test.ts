@@ -83,6 +83,16 @@ describe("release assets", () => {
     });
   });
 
+  // Not attached and not revision-checked, so it must not pass silently.
+  it("fails on a nested symlink", () => {
+    const dir = dist([["TIT.json", "v0.1.0"]]);
+    mkdirSync(join(dir, "titles/en"), { recursive: true });
+    symlinkSync(join(dir, "TIT.json"), join(dir, "titles/en/TIT.json"));
+    expect(checkAssets(dir, "v0.1.0").problems).toEqual([
+      "titles/en/TIT.json: nested symlink is not a regular file",
+    ]);
+  });
+
   it("fails on a nested file and on no packages", () => {
     const dir = dist([]);
     mkdirSync(join(dir, "titles/en"), { recursive: true });

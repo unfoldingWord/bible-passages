@@ -336,9 +336,10 @@ check the bump yet.
    (on `main`, naming its commit's `package.json` version) counts as a
    release there.
 3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
-   files exactly, as in CI. On a mismatch the step prints `git diff` of both
-   before it stops, so a dry run's output keeps the difference after the
-   files are restored.
+   files exactly, as in CI. On a mismatch the step prints `git diff HEAD` of
+   both before it stops, so a dry run's output keeps the difference to a
+   tracked file after the files are restored; an untracked file is named,
+   not shown.
 4. `dist/` is regenerated with `source.revision` set to the tag. The release
    stops unless every top-level `.json` package in `dist/tc-mobile/` has
    `"revision": "<tag>"` (`scripts/lib/release.ts`). The empty `.gitkeep`

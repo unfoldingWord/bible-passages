@@ -15,7 +15,8 @@ export type Assets = { files: string[]; problems: string[] };
  *   their asset names are decided, rather than being left out silently.
  * - The top level holds only regular `.json` files (the packages), the
  *   regular file `.gitkeep` that keeps the directory in git, and
- *   directories (whose nested files are reported above). Anything else, a
+ *   directories (whose nested files are reported above, as is any nested
+ *   entry that is not a regular file). Anything else, a
  *   symlink or a directory named `x.json` included, would be neither
  *   checked nor attached, so it is reported.
  * - There is at least one package.
@@ -26,16 +27,22 @@ const kind = (e: Dirent) =>
   e.isDirectory() ? "directory" : e.isSymbolicLink() ? "symlink" : "entry";
 
 export function checkAssets(dir: string, tag: string): Assets {
-  const nested = readdirSync(dir, { withFileTypes: true, recursive: true })
-    .filter((e) => e.isFile() && e.name.endsWith(".json"))
-    // Nested by parent directory, not by a "/" in the path: win32 joins
-    // with "\", and there a nested file would be in neither list.
+  // Nested by parent directory, not by a "/" in the path: win32 joins
+  // with "\", and there a nested file would be in neither list.
+  const below = readdirSync(dir, { withFileTypes: true, recursive: true })
     .filter((e) => resolve(e.parentPath) !== resolve(dir))
-    .map((e) => join(e.parentPath, e.name))
-    .sort();
-  const problems = nested.map(
-    (f) => `${relative(dir, f)}: nested file has no release asset name yet`
-  );
+    .filter((e) => !e.isDirectory());
+  const at = (e: Dirent) => relative(dir, join(e.parentPath, e.name));
+  const problems = [
+    ...below
+      .filter((e) => e.isFile() && e.name.endsWith(".json"))
+      .map((e) => `${at(e)}: nested file has no release asset name yet`),
+    // A nested symlink or other non-regular entry would otherwise slip past
+    // the nested-file stop: neither attached nor checked nor reported.
+    ...below
+      .filter((e) => !e.isFile())
+      .map((e) => `${at(e)}: nested ${kind(e)} is not a regular file`),
+  ].sort();
   const files: string[] = [];
   const top = readdirSync(dir, { withFileTypes: true }).sort((a, b) =>
     a.name < b.name ? -1 : a.name > b.name ? 1 : 0
