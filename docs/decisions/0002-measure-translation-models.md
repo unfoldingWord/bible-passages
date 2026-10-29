@@ -83,6 +83,9 @@ Three edge cases of those details, decided by the maintainer on 2026-10-29
 6. **No titles delivered.** A model that delivers 0 titles in a language
    loses that language. Its cost per title there, which would divide by 0,
    is never needed.
+7. **Neither model delivers.** If neither model delivers a title in a
+   language, neither wins it, and cost is not consulted (decided by the
+   maintainer on 2026-10-29, #94).
 
 ## Why
 
