@@ -41,8 +41,22 @@ export type EnglishTitles = {
 
 export type Glossary = {
   language: string;
-  terms: Record<string, { en: string; headword: string; refs: string[] }>;
+  terms: Record<
+    string,
+    { en: string; headword: string; refs: string[]; status?: string }
+  >;
 };
+
+/**
+ * Whether titles may use a glossary term: a Translation Words headword (no
+ * status: a published resource) or an AI-drafted term a person has reviewed.
+ * An AI term that is only `unreviewed` or `ai-checked` waits for its reader
+ * (docs/scoping/glossaries.md, "Chinese (zh-Hans)").
+ */
+export const usableTerm = (t: { status?: string }): boolean =>
+  t.status === undefined ||
+  t.status === "human-reviewed" ||
+  t.status === "approved";
 
 export type Translation = {
   text: string;
@@ -116,7 +130,7 @@ export function termsFor(
     return c === chapter && v >= from && v <= to;
   };
   return Object.values(glossary.terms)
-    .filter((t) => t.refs.some(inSpan))
+    .filter((t) => usableTerm(t) && t.refs.some(inSpan))
     .map(({ en, headword }) => ({ en, headword }));
 }
 

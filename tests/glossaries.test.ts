@@ -23,6 +23,7 @@ import {
   type Glossary,
   type TwRepo,
 } from "../scripts/lib/glossaries.ts";
+import { DRAFT_LANGUAGES } from "../scripts/lib/key-terms.ts";
 import { readSource, sources } from "../scripts/lib/sources.ts";
 
 // data/glossaries/<lang>/<BOOK>.json, built by scripts/data/glossaries.ts.
@@ -389,6 +390,7 @@ describe("absent lists", () => {
 });
 
 const dir = new URL("../data/glossaries/", import.meta.url);
+const drafts = new URL("../data/glossary-drafts/", import.meta.url);
 const read = (lang: string, book: string): Glossary =>
   JSON.parse(readFileSync(new URL(`${lang}/${book}.json`, dir), "utf8"));
 
@@ -398,7 +400,12 @@ describe("data/glossaries", () => {
       .filter((e) => e.isDirectory())
       .map((e) => e.name)
       .sort();
-    expect(langs).toEqual(TW.map((r) => r.language).sort());
+    // Languages with Translation Words, and AI-drafted ones with a record
+    // (tests/key-terms.test.ts checks those).
+    const drafted = readdirSync(drafts).filter(
+      (l) => DRAFT_LANGUAGES[l] !== undefined
+    );
+    expect(langs).toEqual([...TW.map((r) => r.language), ...drafted].sort());
     for (const lang of langs) {
       expect(readdirSync(new URL(`${lang}/`, dir)).sort()).toEqual(
         GLOSSARY_BOOKS.map((b) => `${b}.json`).sort()
