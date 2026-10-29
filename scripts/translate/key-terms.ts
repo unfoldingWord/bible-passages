@@ -23,12 +23,15 @@ import { existsSync, readFileSync } from "node:fs";
 import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import { twId } from "../lib/glossaries.ts";
 import {
+  assertFamilies,
   definition,
   draftKeyTerms,
   DRAFT_LANGUAGES,
   parseFia,
+  PROMPT_FILE,
   type TermInput,
 } from "../lib/key-terms.ts";
 import { complete } from "../lib/openrouter.ts";
@@ -53,11 +56,14 @@ const { values } = parseArgs({
   },
 });
 
-const apiKey = process.env.OPENROUTER_API_KEY ?? "";
-if (apiKey.trim() === "")
+// Trimmed once: the value checked is the value sent.
+const apiKey = (process.env.OPENROUTER_API_KEY ?? "").trim();
+if (apiKey === "")
   fail("OPENROUTER_API_KEY is not set; the runner reads the key only from it");
 
 const book = values.book ?? fail("--book is required (e.g. TIT)");
+// The book code goes into file paths, so only a known code is accepted.
+if (!STRUCTURE_BOOKS.includes(book)) fail(`not a book code: ${book}`);
 const tag = values.lang ?? fail("--lang is required (e.g. zh-Hans)");
 const lang = DRAFT_LANGUAGES[tag] ?? fail(`not a draft language: ${tag}`);
 const draftModel = values["draft-model"] ?? fail("--draft-model is required");
@@ -66,8 +72,12 @@ const maxCost = Number(values["max-cost"]);
 if (!(Number.isFinite(maxCost) && maxCost > 0))
   fail("--max-cost must be a positive number of dollars");
 
-if (draftModel === checkModel)
-  fail("--check-model must differ from --draft-model");
+// Of another family, checked before any call (ADR 0002).
+try {
+  assertFamilies(draftModel, checkModel);
+} catch (e) {
+  fail((e as Error).message);
+}
 
 const runId = `${new Date().toISOString().replace(/[:.]/g, "-")}-${tag}-${book}`;
 const out = new URL(
@@ -101,7 +111,7 @@ const reference = {
   terms: parseFia(await readSource(lang.reference)),
 };
 
-const promptPath = "prompts/key-terms.md";
+const promptPath = PROMPT_FILE;
 const promptText = readFileSync(new URL(promptPath, root), "utf8");
 
 try {

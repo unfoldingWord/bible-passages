@@ -89,23 +89,37 @@ echo "::group::Generated files match a fresh build"
 npm run build
 git status --porcelain --untracked-files=all -- data dist
 if [ -n "$(git status --porcelain --untracked-files=all -- data dist)" ]; then
+  # The difference from the committed files, staged or not, before a dry
+  # run's EXIT trap restores both directories (untracked files are named by
+  # the status above, not shown).
+  git --no-pager diff HEAD -- data dist
   echo "::error::data/ or dist/ differs from a fresh build."
   exit 1
 fi
 echo "::endgroup::"
 
-# 4. Only source.revision changes: it becomes the tag. Every attached file
-# must then carry it (scripts/lib/release.ts).
+# 4. Only source.revision changes: it becomes the tag. Every package must
+# then carry it, and every title table must name its package's id and
+# version (scripts/lib/release.ts).
 echo "::group::Build dist/ for the release"
 RELEASE_TAG="$TAG" node scripts/data/dist.ts
 # An assignment, not process substitution, so a failed check stops the run.
 assets=$(node scripts/release/assets.ts "$TAG")
-mapfile -t files <<<"$assets"
+# Release assets are flat and named by their file name, so each file is
+# copied under its asset name (titles/en/TIT.json as titles.en.TIT.json)
+# into a fresh directory, and the copies are attached.
+stage=$(mktemp -d "${RUNNER_TEMP:-${TMPDIR:-/tmp}}/release-assets.XXXXXX")
+files=()
+while IFS=$'\t' read -r name file; do
+  cp -- "$file" "$stage/$name"
+  files+=("$stage/$name")
+  if [ "$name" != "${file##*/}" ]; then echo "$file attached as $name"; fi
+done <<<"$assets"
 # A log line only: checkAssets has already decided.
-grep -H '"revision"' "${files[@]}" || true
+grep -H -E '"(revision|packageId)"' "${files[@]}" || true
 echo "::endgroup::"
 
-notes="tc-mobile template packages v0 for $TAG, built from the pinned sources in sources.json at this tag. See docs/schema.md, \"Releases\"."
+notes="tc-mobile template packages v0 and their title tables (titles.<lang>.<BOOK>.json) for $TAG, built from the pinned sources in sources.json at this tag. See docs/schema.md, \"Releases\"."
 # The release needs GITHUB_REPOSITORY (set -u); a local dry run may lack it.
 if $dry_run; then repo=${GITHUB_REPOSITORY:-unfoldingWord/bible-passages}; else repo=$GITHUB_REPOSITORY; fi
 create=(gh release create "$TAG" "${files[@]}" --repo "$repo"

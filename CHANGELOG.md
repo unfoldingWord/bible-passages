@@ -35,6 +35,14 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   14 disputed and `unreviewed` until a person reviews them. The 2 segments
   that are their pericope's only segment reuse its title (decision 12).
 
+### Changed
+
+- Book names for Psalms and Song of Songs (#39): "Psalms" and "Song of
+  Songs", from unfoldingWord's ULT `\toc2` (`unfoldingWord/en_ult` v91,
+  pinned as `ult-psa` and `ult-sng`), instead of BSB's "Psalm" and "Song".
+  Decided by the maintainer, so marked `approved`; the two packages also
+  credit ULT in `attribution`. The other 64 books keep BSB's names.
+
 ### Known issues
 
 - No glossary for Numbers, 1 and 2 Chronicles, Ecclesiastes, Isaiah,

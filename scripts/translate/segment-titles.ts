@@ -51,8 +51,9 @@ const { values } = parseArgs({
   },
 });
 
-const apiKey = process.env.OPENROUTER_API_KEY ?? "";
-if (apiKey.trim() === "")
+// Trimmed once: the value checked is the value sent.
+const apiKey = (process.env.OPENROUTER_API_KEY ?? "").trim();
+if (apiKey === "")
   fail("OPENROUTER_API_KEY is not set; the runner reads the key only from it");
 
 const book = values.book ?? fail("--book is required (e.g. PHP)");

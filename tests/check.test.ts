@@ -28,6 +28,7 @@ import {
   type Glossary,
   type Translation,
 } from "../scripts/lib/translate.ts";
+import { titleProblems } from "../scripts/lib/gates.ts";
 
 const root = new URL("../", import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, root), "utf8");
@@ -97,6 +98,17 @@ describe("cross-model check: pieces", () => {
     expect(() => family("ai:claude-opus-5-5")).toThrow("model family");
   });
 
+  it("reads a hand-edited source as its family, and refuses a family ADR 0002 does not name", () => {
+    for (const source of [
+      "ai:ai:google/gemini-3.8-flash",
+      " ai: Google/gemini-3.8-flash ",
+      "AI:GOOGLE/gemini-3.8-flash",
+    ])
+      expect(family(source), source).toBe("google");
+    expect(() => family("openai/gpt-5")).toThrow("ADR 0002 does not name");
+    expect(() => family(42 as unknown as string)).toThrow("model family");
+  });
+
   it("fills the system prompt from prompts/check-translations.md and names every criterion", () => {
     const p = systemPrompt(promptFile, "fr");
     expect(p).toContain("from English into French (BCP-47 tag fr)");
@@ -160,6 +172,39 @@ describe("cross-model check: one language", () => {
     promptFile,
     model: MODELS.claude,
   };
+
+  it("keeps a title with a final full stop or quotation marks from ai-checked (#41)", async () => {
+    const gated = (key: string, text: string) => {
+      const gates = titleProblems("es-419", en(key), text);
+      expect(gates.length, text).toBeGreaterThan(0);
+      return translation(key, text, { gates });
+    };
+    const file = fileOf("es-419", {
+      [A]: gated(A, "Evitar las divisiones."),
+      [B]: gated(B, "«Saludos finales»"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        {
+          text: JSON.stringify({
+            [A]: { verdict: "agree" },
+            [B]: { verdict: "agree" },
+          }),
+          cost: 0.001,
+        },
+      ]),
+    });
+    expect(r.titles[A]?.gates).toEqual(['final full stop "."']);
+    expect(r.titles[B]?.gates).toEqual([
+      'quotation mark "«"',
+      'quotation mark "»"',
+    ]);
+    // The checker agreed, but a gate failed: a person sees both first.
+    expect(r.titles[A]?.status).toBe("unreviewed");
+    expect(r.titles[B]?.status).toBe("unreviewed");
+  });
 
   it("marks agreement ai-checked, and a disagreement or a gate failure unreviewed", async () => {
     const C = "TIT.1.4-4";
@@ -281,6 +326,43 @@ describe("cross-model check: one language", () => {
         complete,
       })
     ).rejects.toThrow("glossary is for fr");
+    expect(complete).not.toHaveBeenCalled();
+  });
+
+  it("refuses a doubled ai: prefix checked by its own family, with no call", async () => {
+    const complete = vi.fn(scripted([]));
+    const file = fileOf("es-419", {
+      [A]: translation(A, "Evitar las divisiones", {
+        source: "ai:ai:google/gemini-3.8-flash",
+      }),
+    });
+    await expect(
+      checkLanguage({ ...base, model: MODELS.gemini, file, complete })
+    ).rejects.toThrow("checked by its own family");
+    expect(complete).not.toHaveBeenCalled();
+  });
+
+  it("refuses a title that is not well formed, naming its key, with no call", async () => {
+    const complete = vi.fn(scripted([]));
+    for (const [title, message] of [
+      [
+        { ...translation(A, "x"), source: 7 },
+        `es-419 ${A}: source is not a string`,
+      ],
+      [null, `es-419 ${A}: not a title object`],
+      [
+        { ...translation(A, "x"), gates: "length" },
+        `es-419 ${A}: gates is not a list`,
+      ],
+    ] as const) {
+      const file = fileOf("es-419", {
+        [A]: title as unknown as Translation,
+      });
+      await expect(
+        checkLanguage({ ...base, file, complete }),
+        message
+      ).rejects.toThrow(message);
+    }
     expect(complete).not.toHaveBeenCalled();
   });
 
@@ -431,6 +513,35 @@ describe("cross-model check: a book, ledger and spend fuse", () => {
     });
   });
 
+  it("refuses every file before the first call, so no language is billed before a later one is refused", async () => {
+    const complete = vi.fn(scripted([]));
+    const written = new Map<string, unknown>();
+    await expect(
+      checkBook({
+        english,
+        files: [
+          fileOf("es-419", { [A]: translation(A, "Evitar las divisiones") }),
+          fileOf("id", {
+            [A]: translation(A, "Hindari perpecahan", {
+              source: `ai:${MODELS.claude}`,
+            }),
+          }),
+        ],
+        glossaries: { "es-419": null, id: null },
+        promptFile,
+        model: MODELS.claude,
+        complete,
+        maxCost: 1,
+        meta: { book: "TIT" },
+        write: async (path, value) => {
+          written.set(path, value);
+        },
+      })
+    ).rejects.toThrow("id TIT.P.3.9-11");
+    expect(complete).not.toHaveBeenCalled();
+    expect(written.size).toBe(0);
+  });
+
   it("stops before a call once the limit is spent", async () => {
     const complete = vi.fn(
       scripted([{ text: JSON.stringify({ [A]: disagree }), cost: 0.6 }])
@@ -491,6 +602,15 @@ describe("checker command line", () => {
     expect(r.status).toBe(1);
     expect(r.stderr).toContain("must be checked by another family");
     expect(r.stderr + r.stdout).not.toContain(KEY);
+  });
+
+  it("refuses a --model with no provider prefix with a clear message, not a stack", () => {
+    const r = run(["--run", fakeRun(), "--model", "claude-sonnet-5.5"]);
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain(
+      "check: cannot tell the model family of claude-sonnet-5.5"
+    );
+    expect(r.stderr).not.toMatch(/^\s+at /m);
   });
 
   it("refuses a run whose English or glossary has changed since", () => {

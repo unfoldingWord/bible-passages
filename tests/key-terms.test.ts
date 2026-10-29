@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
@@ -57,8 +57,14 @@ describe("parseFia", () => {
     ]);
   });
 
-  it("refuses a resource without names", () => {
+  it("refuses a resource without names, or with a blank one", () => {
     expect(() => parseFia('{"1":{"name":"x"}}')).toThrow("localizedName");
+    expect(() => parseFia('{"1":{"name":"x","localizedName":" "}}')).toThrow(
+      "blank"
+    );
+    expect(() => parseFia('{"1":{"name":"","localizedName":"使徒"}}')).toThrow(
+      "blank"
+    );
   });
 });
 
@@ -161,14 +167,37 @@ describe("readCheck", () => {
 
 describe("gateProblems and statusOf", () => {
   it("flags non-Han headwords, Latin letters and line breaks", () => {
-    expect(gateProblems("使徒、使徒职分", HAN)).toEqual([]);
-    expect(gateProblems("Titus", HAN)).toEqual(["script", "latin-letters"]);
-    expect(gateProblems("革哩底 (Crete)", HAN)).toEqual([
-      "script",
-      "latin-letters",
-    ]);
-    expect(gateProblems("提多T", HAN)).toEqual(["latin-letters"]);
-    expect(gateProblems("使徒\n长老", HAN)).toEqual(["line-break"]);
+    const g = (headword: string) => gateProblems({ headword }, HAN, []);
+    expect(g("使徒、使徒职分")).toEqual([]);
+    expect(g("Titus")).toEqual(["script", "latin-letters"]);
+    expect(g("革哩底 (Crete)")).toEqual(["script", "latin-letters"]);
+    expect(g("提多T")).toEqual(["latin-letters"]);
+    expect(g("使徒\n长老")).toEqual(["line-break"]);
+  });
+
+  it("flags a headword that does not use the rendering of the reference it names", () => {
+    const fia = [
+      { en: "apostle", term: "使徒" },
+      { en: "Lord", term: "主、耶和华" },
+    ];
+    const g = (headword: string, reference: string) =>
+      gateProblems({ headword, reference }, HAN, fia);
+    expect(g("使徒、使徒职分", "apostle")).toEqual([]);
+    expect(g("耶和华", "Lord")).toEqual([]);
+    expect(g("差徒", "apostle")).toEqual(["reference"]);
+    // Only 、 separates renderings.
+    for (const headword of [
+      "差徒/使徒",
+      "差徒;使徒",
+      "差徒，使徒",
+      "差徒,使徒",
+    ])
+      expect(g(headword, "apostle"), headword).toEqual(["reference"]);
+    // A name the list does not have is not a rendering mismatch: readDraft
+    // and the build refuse it.
+    expect(g("差徒", "presbyter")).toEqual([]);
+    // A headword with no reference is not compared.
+    expect(gateProblems({ headword: "差徒" }, HAN, fia)).toEqual([]);
   });
 
   it("is ai-checked only for an agreed draft that passed every gate", () => {
@@ -232,8 +261,8 @@ const run = (
     inputs,
     reference: { id: "fia-kt-zhs", terms: reference },
     prompt: { file: "prompts/key-terms.md", text: promptText },
-    draftModel: "g/draft",
-    checkModel: "a/check",
+    draftModel: "google/draft",
+    checkModel: "anthropic/check",
     maxCost: 1,
     complete,
     write: async (l) => {
@@ -268,7 +297,10 @@ describe("draftKeyTerms", () => {
     const ledgers: unknown[] = [];
     const { record, outcome } = await run(complete, ledgers);
     expect(outcome).toBe("done");
-    expect(sent.map((s) => s.model)).toEqual(["g/draft", "a/check"]);
+    expect(sent.map((s) => s.model)).toEqual([
+      "google/draft",
+      "anthropic/check",
+    ]);
     expect(sent[0]?.system).toBe(promptPart(promptText, "draft", "zh-Hans"));
     expect(sent[0]?.user).toBe(draftMessage("TIT", inputs, reference));
     expect(sent[1]?.user).toBe(
@@ -282,26 +314,26 @@ describe("draftKeyTerms", () => {
       "kt/apostle": {
         en: "apostle",
         headword: "使徒",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "ai-checked",
         reference: "apostle",
-        check: { by: "ai:a/check", verdict: "agree" },
+        check: { by: "ai:anthropic/check", verdict: "agree" },
       },
       "names/titus": {
         en: "Titus",
         headword: "Titus",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "unreviewed",
         gates: ["script", "latin-letters"],
-        check: { by: "ai:a/check", verdict: "agree" },
+        check: { by: "ai:anthropic/check", verdict: "agree" },
       },
       "other/elder": {
         en: "elder",
         headword: "长者",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "unreviewed",
         check: {
-          by: "ai:a/check",
+          by: "ai:anthropic/check",
           verdict: "disagree",
           why: "The church office is 长老.",
           suggestion: "长老",
@@ -325,6 +357,8 @@ describe("draftKeyTerms", () => {
   it("does not run the check when the draft's cost is unknown or the limit is spent", async () => {
     for (const [cost, maxCost] of [
       [null, 1],
+      [Number.NaN, 1],
+      [-0.01, 1],
       [0.5, 0.5],
     ] as const) {
       const { complete, sent } = fakeModels([{ reply: draftReply, cost }]);
@@ -352,10 +386,22 @@ describe("draftKeyTerms", () => {
     expect(r.record?.terms["kt/apostle"]?.status).toBe("unreviewed");
   });
 
-  it("refuses one model for both roles, before any call", async () => {
+  it("refuses one model, or two of one family, for both roles, before any call", async () => {
     const { complete, sent } = fakeModels([]);
-    await expect(run(complete, [], { checkModel: "g/draft" })).rejects.toThrow(
-      "must differ"
+    for (const [draftModel, checkModel] of [
+      ["google/draft", "google/draft"],
+      ["google/a", "google/b"],
+    ])
+      await expect(
+        run(complete, [], { draftModel, checkModel })
+      ).rejects.toThrow("different family");
+    expect(sent).toHaveLength(0);
+  });
+
+  it("refuses a book that is not a book code, before any call", async () => {
+    const { complete, sent } = fakeModels([]);
+    await expect(run(complete, [], { book: "../x" })).rejects.toThrow(
+      "not a book"
     );
     expect(sent).toHaveLength(0);
   });
@@ -381,18 +427,18 @@ describe("buildDraftGlossary", () => {
     licence: "CC-BY-SA-4.0",
     attribution: id.startsWith("tw-") ? "tW en" : id,
   });
-  const agree = { by: "ai:a/check", verdict: "agree" as const };
+  const agree = { by: "ai:anthropic/check", verdict: "agree" as const };
   const record = (): DraftRecord => ({
     language: "zh-Hans",
     book: "TIT",
     links: "twl-en-tit",
     reference: "fia-kt-zhs",
-    prompt: { file: "prompts/key-terms.md", sha256: "x" },
+    prompt: { file: "prompts/key-terms.md", sha256: sha256(promptText) },
     calls: [
       {
         role: "draft",
         id: "1",
-        model: "g/draft",
+        model: "google/draft",
         promptTokens: 1,
         completionTokens: 1,
         reasoningTokens: null,
@@ -402,7 +448,7 @@ describe("buildDraftGlossary", () => {
       {
         role: "check",
         id: "2",
-        model: "a/check",
+        model: "anthropic/check",
         promptTokens: 1,
         completionTokens: 1,
         reasoningTokens: null,
@@ -414,26 +460,30 @@ describe("buildDraftGlossary", () => {
       "kt/apostle": {
         en: "apostle",
         headword: "使徒",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "ai-checked",
         check: agree,
       },
       "names/titus": {
         en: "Titus",
         headword: "提多",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "ai-checked",
         check: agree,
       },
       "other/elder": {
         en: "elder",
         headword: "长者",
-        source: "ai:g/draft",
+        source: "ai:google/draft",
         status: "unreviewed",
         check: { ...agree, verdict: "disagree", why: "w", suggestion: "长老" },
       },
     },
   });
+  const fia = [
+    { en: "apostle", term: "使徒" },
+    { en: "elder", term: "长老" },
+  ];
   const build = (r: DraftRecord, c = credit) =>
     buildDraftGlossary({
       record: r,
@@ -441,11 +491,26 @@ describe("buildDraftGlossary", () => {
       rows,
       english,
       credit: c,
+      prompt: promptText,
+      reference: fia,
     });
+
+  it("keeps a headword that does not use its reference's rendering when the gate records it", () => {
+    const r = record();
+    Object.assign(r.terms["kt/apostle"]!, {
+      reference: "elder",
+      gates: ["reference"],
+      status: "unreviewed",
+    });
+    expect(build(r).review).toEqual(["kt/apostle", "other/elder"]);
+  });
 
   it("adds the TWL verses, credits and the review list", () => {
     const g = build(record());
-    expect(g.models).toEqual({ draft: "ai:g/draft", check: "ai:a/check" });
+    expect(g.models).toEqual({
+      draft: "ai:google/draft",
+      check: "ai:anthropic/check",
+    });
     expect(g.terms["other/elder"]?.refs).toEqual(["1:5"]);
     expect(Object.keys(g.terms)).toEqual([
       "kt/apostle",
@@ -481,10 +546,37 @@ describe("buildDraftGlossary", () => {
       [
         "same model",
         (r) => {
-          r.calls[1]!.model = "g/draft";
+          r.calls[1]!.model = "google/draft";
         },
       ],
       ["one draft and one check", (r) => r.calls.pop()],
+      [
+        "a prompt other than the committed",
+        (r) => {
+          r.prompt.sha256 = sha256("an older prompt");
+        },
+      ],
+      [
+        "different family",
+        (r) => {
+          r.calls[1]!.model = "google/check";
+          for (const t of Object.values(r.terms))
+            if (t.check) t.check = { ...t.check, by: "ai:google/check" };
+        },
+      ],
+      [
+        'reference "presbyter" is not in fia-kt-zhs',
+        (r) => {
+          r.terms["other/elder"]!.reference = "presbyter";
+        },
+      ],
+      [
+        // Names a reference it does not use, with no gate recorded.
+        "gates do not match",
+        (r) => {
+          r.terms["kt/apostle"]!.reference = "elder";
+        },
+      ],
       [
         "checked by",
         (r) => {
@@ -506,12 +598,34 @@ describe("buildDraftGlossary", () => {
   });
 });
 
-describe("data/glossary-drafts/zh-Hans/TIT.json", () => {
-  const path = "data/glossary-drafts/zh-Hans/TIT.json";
+// Every committed record, whatever its language or book: the build
+// (buildDraftGlossary) enforces the invariants; these tests re-derive them
+// from the committed files.
+const records = readdirSync(new URL("data/glossary-drafts/", root), {
+  withFileTypes: true,
+})
+  .filter((e) => e.isDirectory())
+  .flatMap((e) =>
+    readdirSync(new URL(`data/glossary-drafts/${e.name}/`, root)).map(
+      (f) => `${e.name}/${f}`
+    )
+  );
+
+it("has only JSON records for draft languages in data/glossary-drafts/", () => {
+  for (const name of records) {
+    expect(name, name).toMatch(/\.json$/);
+    expect(DRAFT_LANGUAGES[name.split("/")[0]!], name).toBeDefined();
+  }
+});
+
+it("has at least one committed key-term record", () => {
+  expect(records).toContain("zh-Hans/TIT.json");
+});
+
+describe.each(records)("data/glossary-drafts/%s", (name) => {
+  const path = `data/glossary-drafts/${name}`;
   const record = JSON.parse(read(path)) as DraftRecord;
-  const built = JSON.parse(
-    read("data/glossaries/zh-Hans/TIT.json")
-  ) as DraftGlossary;
+  const built = JSON.parse(read(`data/glossaries/${name}`)) as DraftGlossary;
   const pins = new Map(sources().map((s) => [s.id, s]));
 
   it("was made with the committed prompt, by two model families", () => {
@@ -530,12 +644,17 @@ describe("data/glossary-drafts/zh-Hans/TIT.json", () => {
   });
 
   it("covers every article the TWL links, with gates and status by the rules", async () => {
-    const links = linkedArticles(parseTwl(await readSource(twlId("TIT"))));
+    const links = linkedArticles(
+      parseTwl(await readSource(twlId(record.book)))
+    );
     expect(Object.keys(record.terms).sort()).toEqual([...links.keys()].sort());
-    const script = DRAFT_LANGUAGES["zh-Hans"]?.script ?? HAN;
+    const lang = DRAFT_LANGUAGES[record.language];
+    if (!lang) throw new Error(`${path}: not a draft language`);
+    const script = lang.script;
+    const fia = parseFia(await readSource(record.reference));
     for (const [a, t] of Object.entries(record.terms)) {
       expect(t.headword, a).toBe(t.headword.normalize("NFC"));
-      expect(t.gates ?? [], a).toEqual(gateProblems(t.headword, script));
+      expect(t.gates ?? [], a).toEqual(gateProblems(t, script, fia));
       expect(t.status, a).toBe(statusOf(t));
       expect(t.source).toBe(`ai:${record.calls[0]?.model}`);
       if (t.check) expect(t.check.by).toBe(`ai:${record.calls[1]?.model}`);
@@ -569,8 +688,19 @@ describe("data/glossary-drafts/zh-Hans/TIT.json", () => {
         .filter(([, t]) => t.status === "unreviewed")
         .map(([a]) => a)
     );
-    for (const id of [twlId("TIT"), twId("en", "kt/god"), record.reference])
+    for (const id of [twlId(record.book), record.reference])
       expect(built.attribution).toContain(pins.get(id)?.attribution);
+  });
+
+  it("is built with the record's terms and the TWL's verses", async () => {
+    const links = linkedArticles(
+      parseTwl(await readSource(twlId(record.book)))
+    );
+    expect(Object.keys(built.terms).sort()).toEqual(
+      Object.keys(record.terms).sort()
+    );
+    for (const [a, refs] of links)
+      expect(built.terms[a]?.refs, a).toEqual(refs);
   });
 });
 
@@ -587,18 +717,29 @@ describe("key-terms command line", () => {
     "--lang",
     "zh-Hans",
     "--draft-model",
-    "g/a",
+    "google/a",
     "--check-model",
-    "a/b",
+    "anthropic/b",
   ];
 
-  it("fails before any call without a key, for one model twice, or into data/", () => {
+  it("fails before any call without a key, for one family twice, an unknown book, or into data/", () => {
     const cases: [string[], Record<string, string>, string][] = [
       [base, {}, "OPENROUTER_API_KEY is not set"],
+      [base, { OPENROUTER_API_KEY: "   " }, "OPENROUTER_API_KEY is not set"],
       [
-        [...base.slice(0, 6), "--check-model", "g/a"],
+        [...base.slice(0, 6), "--check-model", "google/a"],
         { OPENROUTER_API_KEY: KEY },
-        "must differ",
+        "different family",
+      ],
+      [
+        [...base.slice(0, 6), "--check-model", "google/b"],
+        { OPENROUTER_API_KEY: KEY },
+        "different family",
+      ],
+      [
+        ["--book", "../../package", ...base.slice(2)],
+        { OPENROUTER_API_KEY: KEY },
+        "not a book code: ../../package",
       ],
       [
         [...base, "--out", "data/glossary-drafts"],

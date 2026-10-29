@@ -91,6 +91,29 @@ describe("data/structure", () => {
       }
     });
 
+    // BSB's \h, except the two names the maintainer decided on #39, which
+    // come from ULT's \toc2.
+    it("takes its English book name from BSB, or ULT where decided", () => {
+      const { name } = read(`data/titles/en/${book}.json`) as {
+        name: { text: string; status: string; source: string };
+      };
+      const decided: Record<string, string> = {
+        PSA: "Psalms",
+        SNG: "Song of Songs",
+      };
+      const id = book.toLowerCase();
+      if (decided[book] !== undefined)
+        expect(name).toEqual({
+          text: decided[book],
+          status: "approved",
+          source: `ult-${id}`,
+        });
+      else {
+        expect(name.source).toBe(`bsb-${id}`);
+        expect(name.status).toBe("unreviewed");
+      }
+    });
+
     it("has English titles only for keys in the structure", () => {
       const t = read(`data/titles/en/${book}.json`) as {
         language: string;

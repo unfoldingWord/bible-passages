@@ -1,7 +1,8 @@
 # 0002: Choose the translation model by measuring both on Titus
 
 - **Status:** accepted
-- **Date:** 2026-10-28; amended 2026-10-29 (model IDs and choice rule)
+- **Date:** 2026-10-28; amended 2026-10-29 (model IDs, choice rule, and the
+  rule's three details)
 - **Decided by:** the DRI (the model-selection half of open decision 6 in
   `../schema.md`; key-term consistency is still open)
 
@@ -40,9 +41,9 @@ either model afterwards.
    changes wins. Until a person has reviewed them, quality is measured by
    the early signal: the number of disagreements the other model raises
    when it checks them.
-2. **Cost decides only on a near tie.** If the two models are within about
-   10% of each other on quality, measured as in rule 1, the one with the
-   lower cost per title wins.
+2. **Cost decides only on a near tie.** If the two models are tied on
+   quality, measured as in rule 1 and by the tie test below, the one with
+   the lower cost per title wins.
 3. **Review minutes are reported** per title for each model, beside quality
    and cost. They do not choose.
 4. **The DRI makes the call** from a one-page comparison of the Titus run,
@@ -50,9 +51,24 @@ either model afterwards.
    The choice is recorded as a new decision that cites the comparison and
    says which measure of quality it used.
 
-The exact tie test, which charges count in cost per title, and how titles a
-model fails to deliver count are left to the DRI (#50); the comparison
-reports the numbers each reading needs.
+### Choice-rule details (2026-10-29)
+
+Decided by the maintainer on 2026-10-29 (#50), before any human-review
+results exist (#64), so they cannot be fitted to those results. Here _a_
+and _b_ are the two models' counts of reviewer changes (or, before the
+human review, of checker disagreements, as in rule 1).
+
+1. **Tie test.** The two models are tied on quality when the relative
+   difference |a − b| / max(a, b) is 0.10 or less. This is a hard line,
+   not "about 10%": 0.10 is a tie, anything above it is not. Two equal
+   counts differ by nothing, so two counts of 0 (where the formula reads
+   0 / 0) are a tie too.
+2. **Cost per title.** Cost per title covers the whole pipeline, which
+   here is two charges only: the cost of a model's translations plus the
+   cost of the other model checking them, divided by the number of titles
+   the model delivered.
+3. **Undelivered titles.** A title a model fails to deliver counts as one
+   reviewer change against that model.
 
 ## Why
 
