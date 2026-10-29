@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "verify": "npm run format:check && npm run typecheck && npm test",
-    "build": "node scripts/data/build.ts && node scripts/data/dist.ts"
+    "build": "node scripts/data/build.ts && node scripts/data/glossaries.ts && node scripts/data/dist.ts"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

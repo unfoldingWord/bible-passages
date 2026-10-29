@@ -30,6 +30,7 @@ data/
   structure/<BOOK>.json      pericopes and segments: keys and spans, no text
   titles/<lang>/<BOOK>.json  titles per key, with status and source
   versification/ufw.json     last verse of each chapter, from ufw.vrs
+  glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
@@ -142,6 +143,15 @@ for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 `ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
 and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
+
+## `data/glossaries/<lang>/<BOOK>.json`
+
+The key terms Translation Word Links link from a book, each with its
+headword in the language's Translation Words, the verses that link it, and
+the `sources.json` id it was read from. Linked terms with no headword in the
+language are listed under `gaps`. Shape, sources and gaps:
+[scoping/glossaries.md](scoping/glossaries.md). Not shipped in `dist/`;
+translation reads it.
 
 ## `dist/tc-mobile/`
 
