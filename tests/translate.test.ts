@@ -1,0 +1,309 @@
+import { spawnSync } from "node:child_process";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { describe, expect, it, vi } from "vitest";
+import { ENDPOINT, complete, type Fetch } from "../scripts/lib/openrouter.ts";
+import {
+  LANGUAGES,
+  MODELS,
+  parseReply,
+  summarise,
+  systemPrompt,
+  termsFor,
+  translateLanguage,
+  userMessage,
+  type Complete,
+  type EnglishTitles,
+  type Glossary,
+} from "../scripts/lib/translate.ts";
+
+const root = new URL("../", import.meta.url);
+const read = (path: string) => readFileSync(new URL(path, root), "utf8");
+const english = JSON.parse(read("data/titles/en/TIT.json")) as EnglishTitles;
+const promptFile = read("prompts/translate-titles.md");
+const glossary = (tag: string) =>
+  JSON.parse(read(`data/glossaries/${tag}/TIT.json`)) as Glossary;
+
+// A key that only tests use; never a real one.
+const KEY = "test-key-not-real-0000";
+
+/** A fetch that answers once with `body` and records what it was sent. */
+function fakeFetch(body: unknown, status = 200) {
+  const calls: { url: string; init: RequestInit }[] = [];
+  const f: Fetch = async (url, init) => {
+    calls.push({ url, init });
+    return new Response(JSON.stringify(body), { status });
+  };
+  return { f, calls };
+}
+
+const okBody = (content: string, cost: number | null = 0.0012) => ({
+  id: "gen-1",
+  model: "google/gemini-3.8-flash",
+  choices: [{ message: { content } }],
+  usage: {
+    prompt_tokens: 900,
+    completion_tokens: 120,
+    ...(cost === null ? {} : { cost }),
+    completion_tokens_details: { reasoning_tokens: 20 },
+  },
+});
+
+describe("OpenRouter client (fetch mocked; no network)", () => {
+  it("sends the model and messages with the key only in the header", async () => {
+    const { f, calls } = fakeFetch(okBody("{}"));
+    let t = 1000;
+    const c = await complete(
+      {
+        model: "google/gemini-3.8-flash",
+        messages: [{ role: "user", content: "hi" }],
+      },
+      { apiKey: KEY, fetch: f, now: () => (t += 250) }
+    );
+    expect(calls).toHaveLength(1);
+    expect(calls[0]?.url).toBe(ENDPOINT);
+    const headers = calls[0]?.init.headers as Record<string, string>;
+    expect(headers.Authorization).toBe(`Bearer ${KEY}`);
+    const body = String(calls[0]?.init.body);
+    expect(body).not.toContain(KEY);
+    expect(JSON.parse(body)).toMatchObject({
+      model: "google/gemini-3.8-flash",
+      usage: { include: true },
+    });
+    expect(c).toEqual({
+      id: "gen-1",
+      model: "google/gemini-3.8-flash",
+      text: "{}",
+      usage: {
+        promptTokens: 900,
+        completionTokens: 120,
+        reasoningTokens: 20,
+        cost: 0.0012,
+      },
+      ms: 250,
+    });
+  });
+
+  it("records a missing cost as null rather than zero", async () => {
+    const { f } = fakeFetch(okBody("{}", null));
+    const c = await complete(
+      { model: "m", messages: [] },
+      { apiKey: KEY, fetch: f }
+    );
+    expect(c.usage.cost).toBeNull();
+  });
+
+  it("throws on an HTTP error, with the key removed from the message", async () => {
+    const { f } = fakeFetch({ error: { message: `bad key ${KEY}` } }, 401);
+    const err = await complete(
+      { model: "m", messages: [] },
+      { apiKey: KEY, fetch: f }
+    ).catch((e: Error) => e);
+    expect(err).toBeInstanceOf(Error);
+    expect(String(err)).toContain("OpenRouter 401");
+    expect(String(err)).not.toContain(KEY);
+    expect(String(err)).toContain("[redacted]");
+  });
+
+  it("throws on a response with no usage block", async () => {
+    const { f } = fakeFetch({ choices: [{ message: { content: "{}" } }] });
+    await expect(
+      complete({ model: "m", messages: [] }, { apiKey: KEY, fetch: f })
+    ).rejects.toThrow("no usage block");
+  });
+});
+
+describe("translation runner", () => {
+  it("names one Gemini and one Claude model (ADR 0002)", () => {
+    expect(MODELS.gemini).toMatch(/^google\/gemini-/);
+    expect(MODELS.claude).toMatch(/^anthropic\/claude-/);
+  });
+
+  it("fills the system prompt from prompts/translate-titles.md", () => {
+    const p = systemPrompt(promptFile, "zh-Hans");
+    expect(p).toContain("into Simplified Chinese (BCP-47 tag zh-Hans)");
+    expect(p).not.toMatch(/\{\{|prompt:start|prompt:end/);
+    expect(() => systemPrompt(promptFile, "de")).toThrow("not a v0.1");
+    expect(() => systemPrompt("no markers", "ar")).toThrow("markers");
+  });
+
+  it("gives each title only the glossary terms its own verses link", () => {
+    const g = glossary("es-419");
+    const terms = termsFor("TIT.1.4-4", g);
+    expect(terms.length).toBeGreaterThan(0);
+    for (const t of terms) {
+      const entry = Object.values(g.terms).find((e) => e.en === t.en);
+      expect(entry?.refs).toContain("1:4");
+    }
+    expect(termsFor("TIT.1.4-4", null)).toEqual([]);
+  });
+
+  it("builds a user message with key, kind, verses and English", () => {
+    const items = JSON.parse(
+      userMessage(english, ["TIT.P.3.9-11", "TIT.1.4-4"], null)
+    ) as Record<string, unknown>[];
+    expect(items[0]).toMatchObject({
+      key: "TIT.P.3.9-11",
+      kind: "section heading",
+      verses: "Titus 3:9-11",
+      english: "Avoid Divisions",
+      terms: [],
+    });
+    expect(items[1]).toMatchObject({
+      kind: "segment title",
+      verses: "Titus 1:4",
+    });
+    expect(() => userMessage(english, ["TIT.9.1-1"], null)).toThrow(
+      "no English title"
+    );
+  });
+
+  it("parses a JSON reply, with or without a code fence", () => {
+    expect(parseReply('```json\n{"A": "x", "B": 3}\n```')).toEqual({ A: "x" });
+    expect(() => parseReply("no json here")).toThrow("no JSON object");
+    expect(() => parseReply("[1]")).toThrow();
+  });
+
+  it("labels every translation as unreviewed AI output and records gate failures and gaps", async () => {
+    const reply = {
+      "TIT.P.3.9-11": "تجنّب الانقسامات",
+      "TIT.1.4-4": "بولس يحيي Titus",
+    };
+    const fake = vi.fn<Complete>(async (request) => ({
+      id: "gen-2",
+      model: request.model,
+      text: JSON.stringify(reply),
+      usage: {
+        promptTokens: 500,
+        completionTokens: 60,
+        reasoningTokens: null,
+        cost: 0.0004,
+      },
+      ms: 1200,
+    }));
+    const result = await translateLanguage({
+      english,
+      tag: "ar",
+      glossary: glossary("ar"),
+      promptFile,
+      model: "anthropic/claude-sonnet-5.5",
+      complete: fake,
+      keys: ["TIT.P.3.9-11", "TIT.1.4-4", "TIT.3.15-15"],
+    });
+    expect(fake).toHaveBeenCalledTimes(1);
+    expect(result.titles["TIT.P.3.9-11"]).toEqual({
+      text: "تجنّب الانقسامات",
+      source: "ai:anthropic/claude-sonnet-5.5",
+      status: "unreviewed",
+      from: "Avoid Divisions",
+    });
+    expect(result.titles["TIT.1.4-4"]?.gates).toEqual([
+      'stray "Titus" outside Arabic',
+    ]);
+    expect(result.titles["TIT.1.4-4"]?.status).toBe("unreviewed");
+    expect(result.missing).toEqual(["TIT.3.15-15"]);
+    expect(result.call).toEqual({
+      language: "ar",
+      keys: ["TIT.P.3.9-11", "TIT.1.4-4", "TIT.3.15-15"],
+      id: "gen-2",
+      model: "anthropic/claude-sonnet-5.5",
+      promptTokens: 500,
+      completionTokens: 60,
+      reasoningTokens: null,
+      cost: 0.0004,
+      ms: 1200,
+    });
+  });
+
+  it("runs zh-Hans with no glossary and refuses a glossary for another language", async () => {
+    const fake: Complete = async (request) => ({
+      id: "g",
+      model: request.model,
+      text: '{"TIT.2.15-15": "提多要带着权柄说话"}',
+      usage: {
+        promptTokens: 1,
+        completionTokens: 1,
+        reasoningTokens: null,
+        cost: 0,
+      },
+      ms: 1,
+    });
+    const args = {
+      english,
+      promptFile,
+      model: "m",
+      complete: fake,
+      keys: ["TIT.2.15-15"],
+    };
+    const zh = await translateLanguage({
+      ...args,
+      tag: "zh-Hans",
+      glossary: null,
+    });
+    expect(zh.titles["TIT.2.15-15"]?.gates).toBeUndefined();
+    await expect(
+      translateLanguage({ ...args, tag: "ru", glossary: glossary("ar") })
+    ).rejects.toThrow("glossary is for ar, not ru");
+  });
+
+  it("sums cost per title and titles per hour, and keeps an unknown cost unknown", () => {
+    const call = {
+      language: "ar",
+      keys: [],
+      id: "",
+      model: "m",
+      promptTokens: 100,
+      completionTokens: 10,
+      reasoningTokens: null,
+      cost: 0.01 as number | null,
+      ms: 1800,
+    };
+    expect(summarise([call, call], 4, 1)).toEqual({
+      calls: 2,
+      titles: 4,
+      gateFailures: 1,
+      promptTokens: 200,
+      completionTokens: 20,
+      cost: 0.02,
+      costPerTitle: 0.005,
+      modelSeconds: 3.6,
+      titlesPerHour: 4000,
+    });
+    expect(summarise([{ ...call, cost: null }], 2, 0).cost).toBeNull();
+  });
+
+  it("covers every v0.1 language", () => {
+    expect(Object.keys(LANGUAGES).sort()).toEqual(
+      ["ar", "es-419", "fr", "hi", "id", "pt-BR", "ru", "sw", "zh-Hans"].sort()
+    );
+  });
+});
+
+describe("runner command line", () => {
+  const script = fileURLToPath(new URL("scripts/translate/titles.ts", root));
+  const run = (env: Record<string, string>) =>
+    spawnSync(process.execPath, [script, "--book", "TIT", "--model", "m"], {
+      env: { PATH: process.env.PATH ?? "", ...env },
+      encoding: "utf8",
+    });
+
+  it("fails clearly, before any call, when OPENROUTER_API_KEY is missing", () => {
+    const r = run({});
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("OPENROUTER_API_KEY is not set");
+  });
+
+  it("fails before any call for zh-Hans without --allow-no-glossary", () => {
+    const r = spawnSync(
+      process.execPath,
+      [script, "--book", "TIT", "--model", "m", "--lang", "zh-Hans"],
+      {
+        env: { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY },
+        encoding: "utf8",
+      }
+    );
+    expect(r.status).toBe(1);
+    expect(r.stderr).toContain("no glossary for zh-Hans TIT");
+    expect(r.stderr + r.stdout).not.toContain(KEY);
+  });
+});
