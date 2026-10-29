@@ -1,13 +1,23 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-10-29T01:21:02.126Z",
+  "asOf": "2026-10-29T01:37:32.376Z",
   "repo": {
-    "pushedAt": "2026-10-29T01:19:48Z",
+    "pushedAt": "2026-10-29T01:37:13Z",
     "defaultBranch": "main",
     "openIssues": 19
   },
   "commits": [
+    {
+      "sha": "20ac202",
+      "msg": "Merge pull request #26 from unfoldingWord/feat/record-owner-decisions",
+      "at": "2026-10-29T01:37:12Z"
+    },
+    {
+      "sha": "755886d",
+      "msg": "feat: record the requirements owner's v0.1 decisions and T1-T6 titles",
+      "at": "2026-10-29T01:19:47Z"
+    },
     {
       "sha": "a2cdd00",
       "msg": "Merge pull request #25 from unfoldingWord/docs/eod-2026-10-29",
@@ -72,26 +82,24 @@
       "sha": "52ed344",
       "msg": "Merge pull request #1 from unfoldingWord/chore/scaffold",
       "at": "2026-10-29T00:52:25Z"
-    },
-    {
-      "sha": "15be392",
-      "msg": "fix(review): move-back wins over resize, no copy either way — bench round 5",
-      "at": "2026-10-28T23:43:02Z"
-    },
-    {
-      "sha": "58bbe68",
-      "msg": "fix(review): move-back keeps both title sets — bench round 4",
-      "at": "2026-10-28T23:31:48Z"
     }
   ],
   "pulls": [
     {
-      "number": 26,
-      "title": "feat: record the requirements owner's v0.1 decisions and T1–T6 titles",
+      "number": 27,
+      "title": "feat(site): bring every page up to 29 Oct",
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-29T01:19:53Z"
+      "at": "2026-10-29T01:34:31Z"
+    },
+    {
+      "number": 26,
+      "title": "feat: record the requirements owner's v0.1 decisions and T1–T6 titles",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T01:37:13Z"
     },
     {
       "number": 25,
@@ -131,7 +139,7 @@
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-10-29T01:18:48Z"
+      "at": "2026-10-29T01:33:49Z"
     },
     {
       "number": 16,
@@ -307,6 +315,62 @@
   ],
   "runs": [
     {
+      "sha": "20ac202",
+      "branch": "main",
+      "conclusion": "in_progress",
+      "at": "2026-10-29T01:37:15Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801509889"
+    },
+    {
+      "sha": "c293c05",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:33:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144350"
+    },
+    {
+      "sha": "c293c05",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:33:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144339"
+    },
+    {
+      "sha": "e2af010",
+      "branch": "feat/release-key-check",
+      "conclusion": "success",
+      "at": "2026-10-29T01:32:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036508"
+    },
+    {
+      "sha": "e2af010",
+      "branch": "feat/release-key-check",
+      "conclusion": "success",
+      "at": "2026-10-29T01:32:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036427"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938265"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "success",
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938241"
+    },
+    {
+      "sha": "17361d5",
+      "branch": "feat/site-refresh-29oct",
+      "conclusion": "cancelled",
+      "at": "2026-10-29T01:21:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938216"
+    },
+    {
       "sha": "755886d",
       "branch": "feat/record-owner-decisions",
       "conclusion": "success",
@@ -389,62 +453,6 @@
       "conclusion": "success",
       "at": "2026-10-29T01:08:38Z",
       "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798585744"
-    },
-    {
-      "sha": "507dcab",
-      "branch": "main",
-      "conclusion": "success",
-      "at": "2026-10-29T01:06:58Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40798410725"
-    },
-    {
-      "sha": "8e59a68",
-      "branch": "feat/glossaries",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:55Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797232519"
-    },
-    {
-      "sha": "8e59a68",
-      "branch": "feat/glossaries",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:55Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797232398"
-    },
-    {
-      "sha": "657a708",
-      "branch": "main",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:29Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797186964"
-    },
-    {
-      "sha": "9a74632",
-      "branch": "main",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:13Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797157095"
-    },
-    {
-      "sha": "40d4cc7",
-      "branch": "feat/glossaries",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:05Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797139969"
-    },
-    {
-      "sha": "860bfa3",
-      "branch": "feat/release-key-check",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:03Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797137303"
-    },
-    {
-      "sha": "22855f0",
-      "branch": "feat/tit-segment-titles",
-      "conclusion": "success",
-      "at": "2026-10-29T00:55:02Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40797134523"
     }
   ],
   "coverage": {
