@@ -60,7 +60,9 @@ human review, of checker disagreements, as in rule 1).
 
 1. **Tie test.** The two models are tied on quality when the relative
    difference |a − b| / max(a, b) is 0.10 or less. This is a hard line,
-   not "about 10%": 0.10 is a tie, anything above it is not.
+   not "about 10%": 0.10 is a tie, anything above it is not. Two equal
+   counts differ by nothing, so two counts of 0 (where the formula reads
+   0 / 0) are a tie too.
 2. **Cost per title.** Cost per title is the whole pipeline: the cost of a
    model's translations plus the cost of the other model checking them,
    divided by the number of titles the model delivered.
