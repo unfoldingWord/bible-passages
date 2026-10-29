@@ -1,0 +1,813 @@
+{
+  "language": "pt-BR",
+  "book": "COL",
+  "links": "twl-en-col",
+  "words": {
+    "repo": "Door43-Catalog/pt-br_tw",
+    "release": "v6.4",
+    "commit": "879ce3844fa3eadc94f714e45ec50f794d6fb27d"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (pt-br), Door43-Catalog/pt-br_tw v6.4, CC BY-SA 4.0. Original work available at https://git.door43.org/Door43-Catalog/pt-br_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/angel": {
+      "en": "angel, archangel",
+      "headword": "anjo, arcanjo",
+      "source": "tw-pt-br-kt-angel",
+      "refs": ["2:18"]
+    },
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "Apóstolo, Apostolado",
+      "source": "tw-pt-br-kt-apostle",
+      "refs": ["1:1"]
+    },
+    "kt/authority": {
+      "en": "authority",
+      "headword": "Autoridade",
+      "source": "tw-pt-br-kt-authority",
+      "refs": ["1:13", "1:16", "2:10", "2:15"]
+    },
+    "kt/baptize": {
+      "en": "baptize, baptized, baptism",
+      "headword": "batizar, batismo",
+      "source": "tw-pt-br-kt-baptize",
+      "refs": ["2:12"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "amado",
+      "source": "tw-pt-br-kt-beloved",
+      "refs": ["1:7", "4:7", "4:9", "4:14"]
+    },
+    "kt/blameless": {
+      "en": "blameless",
+      "headword": "sem culpa",
+      "source": "tw-pt-br-kt-blameless",
+      "refs": ["1:22"]
+    },
+    "kt/bond": {
+      "en": "bind, bond, bound",
+      "headword": "ligar, ligação, ligado",
+      "source": "tw-pt-br-kt-bond",
+      "refs": ["3:14", "4:3", "4:18"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "Cristo, Messias",
+      "source": "tw-pt-br-kt-christ",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:7",
+        "1:24",
+        "1:27",
+        "1:28",
+        "2:2",
+        "2:5",
+        "2:6",
+        "2:8",
+        "2:11",
+        "2:17",
+        "2:20",
+        "3:1",
+        "3:3",
+        "3:4",
+        "3:11",
+        "3:15",
+        "3:24",
+        "4:3",
+        "4:12"
+      ]
+    },
+    "kt/church": {
+      "en": "church, Church",
+      "headword": "igreja, Igreja No Novo Testamento , o termo \"igreja\" se refere a um grupo local de crentes em Jesus, que regularmente se encontram para orar e ouvir a pregação da palavra de Deus. O termo \" a Igreja\" geralmente se refere a todos os Cristãos. * O termo literalmente se refere ao chamado da assembleia ou congregação de pessoas que se reunem com um próposito especial. * Quando este termo é usado para se referir a todos os cristãos no corpo de Cristo algumas Bíblias trazuzem a primeira letra em maiúsculo (\"Igreja\") para distingui-la da igreja local. * Geralmente os cristãos numa cidade particular deveriam se reunir na casa de alguém. Estas igrejas locais davam o nome da cidade, por exemplo, \"igreja de Éfeso\". * Na Bíblia, \"igreja\" não se refere a um edíficio. SUGESTÕES DE TRADUÇÃO. * O termo \"igreja\" poderia ser traduzida com \" reunir-se\" ou \"assembléia\" ou \"congregação\" ou \"aqueles que se reunem\". * A palavra ou frase que é usada para traduzir este termo deveria também ser suficiente para traduzir como todos os crentes, não sómente para um pequeno grupo. * Esteja certo que a tradução de \"igreja\" não se refere a um edifício. * O termo usado para traduzir como \"assembleia\" no Antigo Testamento também poderia ser usado para traduzir este termo. * Também considere como esta tradução pode ser feira na local ou nacional tradução da Bíblia.",
+      "source": "tw-pt-br-kt-church",
+      "refs": ["1:18", "1:24", "4:15", "4:16"]
+    },
+    "kt/circumcise": {
+      "en": "circumcise, circumcised, circumcision, uncircumcised, uncircumcision",
+      "headword": "Circuncidar, circuncisão",
+      "source": "tw-pt-br-kt-circumcise",
+      "refs": ["2:11", "2:13", "3:11", "4:11"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "Compaixão , compassivo.",
+      "source": "tw-pt-br-kt-compassion",
+      "refs": ["3:12"]
+    },
+    "kt/cross": {
+      "en": "cross",
+      "headword": "cruz",
+      "source": "tw-pt-br-kt-cross",
+      "refs": ["1:20", "2:14"]
+    },
+    "kt/dominion": {
+      "en": "dominion",
+      "headword": "domínio",
+      "source": "tw-pt-br-kt-dominion",
+      "refs": ["1:16"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "Escolher alguém, escolher, escolher pessoas, O Escolhido, o eleito",
+      "source": "tw-pt-br-kt-elect",
+      "refs": ["3:12"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "mal, perverso, perversidade",
+      "source": "tw-pt-br-kt-evil",
+      "refs": ["1:21", "3:5", "3:8"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "FÉ",
+      "source": "tw-pt-br-kt-faith",
+      "refs": ["1:4", "1:23", "2:5", "2:7", "2:12"]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "Fiel, fidelidade",
+      "source": "tw-pt-br-kt-faithful",
+      "refs": ["1:2", "1:7", "4:7", "4:9"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "Falso deus, deus estrangeiro, deus, deusa",
+      "source": "tw-pt-br-kt-falsegod",
+      "refs": ["3:5"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "temer, medo, temor a YAHWEH",
+      "source": "tw-pt-br-kt-fear",
+      "refs": ["3:22"]
+    },
+    "kt/forgive": {
+      "en": "forgive, forgiven, forgiveness, pardon, pardoned",
+      "headword": "perdoar, perdão",
+      "source": "tw-pt-br-kt-forgive",
+      "refs": ["1:14", "3:13"]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "cumprir",
+      "source": "tw-pt-br-kt-fulfill",
+      "refs": ["1:25", "4:17"]
+    },
+    "kt/gentile": {
+      "en": "Gentile",
+      "headword": "Gentio",
+      "source": "tw-pt-br-kt-gentile",
+      "refs": ["1:27"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "Glória, glorioso",
+      "source": "tw-pt-br-kt-glory",
+      "refs": ["1:11", "1:27", "3:4"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Deus",
+      "source": "tw-pt-br-kt-god",
+      "refs": [
+        "1:1",
+        "1:6",
+        "1:10",
+        "1:15",
+        "1:25",
+        "1:27",
+        "2:2",
+        "2:9",
+        "2:12",
+        "2:19",
+        "3:1",
+        "3:3",
+        "3:6",
+        "3:12",
+        "3:16",
+        "4:3",
+        "4:12"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "Deus o Pai, Pai celestial, Pai",
+      "source": "tw-pt-br-kt-godthefather",
+      "refs": ["1:2", "1:3", "1:12", "3:17"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "Bom, bondade",
+      "source": "tw-pt-br-kt-good",
+      "refs": ["1:10"]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "Boa Notícia, Evangelho",
+      "source": "tw-pt-br-kt-goodnews",
+      "refs": ["1:5", "1:23"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "Graça , gracioso",
+      "source": "tw-pt-br-kt-grace",
+      "refs": ["1:2", "1:6", "3:16", "4:6", "4:18"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "céu, alturas, céus, celestial",
+      "source": "tw-pt-br-kt-heaven",
+      "refs": ["1:5", "1:16", "1:20", "1:23", "4:1"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "santo, santidade",
+      "source": "tw-pt-br-kt-holy",
+      "refs": ["1:22", "3:12"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "Espírito Santo, Espírito de Deus, Espírito do Pai",
+      "source": "tw-pt-br-kt-holyspirit",
+      "refs": ["1:8"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "esperança",
+      "source": "tw-pt-br-kt-hope",
+      "refs": ["1:5", "1:23", "1:27"]
+    },
+    "kt/imageofgod": {
+      "en": "image of God, image",
+      "headword": "Imagem de Deus, imagem",
+      "source": "tw-pt-br-kt-imageofgod",
+      "refs": ["1:15", "3:10"]
+    },
+    "kt/inchrist": {
+      "en": "in Christ, in Jesus, in the Lord, in him",
+      "headword": "Em Cristo, em Jesus, no Senhor, nEle",
+      "source": "tw-pt-br-kt-inchrist",
+      "refs": ["1:2", "1:4", "1:28", "2:5", "3:18", "3:20", "4:7", "4:17"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "Herdar, herança, patrimonio, herdeiro",
+      "source": "tw-pt-br-kt-inherit",
+      "refs": ["1:12", "3:24"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "Jesus, Jesus Cristo, Cristo Jesus",
+      "source": "tw-pt-br-kt-jesus",
+      "refs": ["1:1", "1:2", "1:3", "1:4", "2:6", "3:17", "4:12"]
+    },
+    "kt/jew": {
+      "en": "Jew, Jewish",
+      "headword": "Judeu, Judaico, Judeus",
+      "source": "tw-pt-br-kt-jew",
+      "refs": ["3:11"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "Julgar, juízo",
+      "source": "tw-pt-br-kt-judge",
+      "refs": ["2:16"]
+    },
+    "kt/kingdomofgod": {
+      "en": "kingdom of God, kingdom of heaven",
+      "headword": "Reino de Deus, Reino dos céus",
+      "source": "tw-pt-br-kt-kingdomofgod",
+      "refs": ["1:13", "4:11"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "Senhor, mestre, senhor",
+      "source": "tw-pt-br-kt-lord",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:10",
+        "2:6",
+        "3:13",
+        "3:17",
+        "3:18",
+        "3:20",
+        "3:22",
+        "3:23",
+        "3:24",
+        "4:1",
+        "4:7",
+        "4:17"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amor",
+      "source": "tw-pt-br-kt-love",
+      "refs": ["1:4", "1:8", "1:13", "2:2", "3:12", "3:14", "3:19"]
+    },
+    "kt/minister": {
+      "en": "to minister, ministry",
+      "headword": "ministro, ministério",
+      "source": "tw-pt-br-kt-minister",
+      "refs": ["1:7", "1:23", "1:25", "4:7", "4:17"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "adorar, orar",
+      "source": "tw-pt-br-kt-pray",
+      "refs": ["1:3", "1:9", "4:2", "4:3", "4:12"]
+    },
+    "kt/psalm": {
+      "en": "psalm",
+      "headword": "salmo",
+      "source": "tw-pt-br-kt-psalm",
+      "refs": ["3:16"]
+    },
+    "kt/reconcile": {
+      "en": "reconcile, reconciled, reconciliation",
+      "headword": "reconciliar, reconciliação",
+      "source": "tw-pt-br-kt-reconcile",
+      "refs": ["1:20", "1:22"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "redimir, redenção, redentor",
+      "source": "tw-pt-br-kt-redeem",
+      "refs": ["1:14", "4:5"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "justo, justiça",
+      "source": "tw-pt-br-kt-righteous",
+      "refs": ["3:25", "4:1"]
+    },
+    "kt/sabbath": {
+      "en": "Sabbath",
+      "headword": "Sábado",
+      "source": "tw-pt-br-kt-sabbath",
+      "refs": ["2:16"]
+    },
+    "kt/saint": {
+      "en": "saint",
+      "headword": "santos",
+      "source": "tw-pt-br-kt-saint",
+      "refs": ["1:2", "1:4", "1:12", "1:26"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "pecado, pecaminoso, pecador, pecando",
+      "source": "tw-pt-br-kt-sin",
+      "refs": ["1:14"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "testemunho, testemunhar",
+      "source": "tw-pt-br-kt-testimony",
+      "refs": ["4:13"]
+    },
+    "kt/trespass": {
+      "en": "trespass",
+      "headword": "violação",
+      "source": "tw-pt-br-kt-trespass",
+      "refs": ["2:13"]
+    },
+    "kt/willofgod": {
+      "en": "will of God",
+      "headword": "vontade de Deus",
+      "source": "tw-pt-br-kt-willofgod",
+      "refs": ["1:1", "1:9", "4:12"]
+    },
+    "kt/wise": {
+      "en": "wise, wisdom",
+      "headword": "sábio, sabedoria",
+      "source": "tw-pt-br-kt-wise",
+      "refs": ["1:9", "1:28", "2:3", "2:23", "3:16", "4:5"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "palavra de Deus, palavra de Yahweh, palavra do Senhor, Escritura",
+      "source": "tw-pt-br-kt-wordofgod",
+      "refs": ["1:25", "3:16", "4:3"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "mundo mundano",
+      "source": "tw-pt-br-kt-world",
+      "refs": ["1:6", "2:8", "2:20"]
+    },
+    "kt/worship": {
+      "en": "prostrate, bow down, worship",
+      "headword": "cultuar",
+      "source": "tw-pt-br-kt-worship",
+      "refs": ["2:18"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "ira, fúria",
+      "source": "tw-pt-br-kt-wrath",
+      "refs": ["3:6", "3:8"]
+    },
+    "names/barnabas": {
+      "en": "Barnabas",
+      "headword": "Barnabé",
+      "source": "tw-pt-br-names-barnabas",
+      "refs": ["4:10"]
+    },
+    "names/colossae": {
+      "en": "Colossae, Colossians",
+      "headword": "Colosso, colossence",
+      "source": "tw-pt-br-names-colossae",
+      "refs": ["1:2"]
+    },
+    "names/greek": {
+      "en": "Greek, Grecian, Hellenist",
+      "headword": "Grecia, Grego",
+      "source": "tw-pt-br-names-greek",
+      "refs": ["3:11"]
+    },
+    "names/johnmark": {
+      "en": "John Mark",
+      "headword": "João Marcos",
+      "source": "tw-pt-br-names-johnmark",
+      "refs": ["4:10"]
+    },
+    "names/luke": {
+      "en": "Luke",
+      "headword": "Lucas",
+      "source": "tw-pt-br-names-luke",
+      "refs": ["4:14"]
+    },
+    "names/paul": {
+      "en": "Paul, Saul",
+      "headword": "Paulo, Saulo",
+      "source": "tw-pt-br-names-paul",
+      "refs": ["1:1", "1:23", "4:18"]
+    },
+    "names/timothy": {
+      "en": "Timothy",
+      "headword": "Timóteo",
+      "source": "tw-pt-br-names-timothy",
+      "refs": ["1:1"]
+    },
+    "names/tychicus": {
+      "en": "Tychicus",
+      "headword": "Tíquico",
+      "source": "tw-pt-br-names-tychicus",
+      "refs": ["4:7"]
+    },
+    "other/admonish": {
+      "en": "admonish, warned, aware",
+      "headword": "exortar",
+      "source": "tw-pt-br-other-admonish",
+      "refs": ["1:28", "3:16"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "adversário, inimigo",
+      "source": "tw-pt-br-other-adversary",
+      "refs": ["1:21"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "idade",
+      "source": "tw-pt-br-other-age",
+      "refs": ["1:26"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "suportar",
+      "source": "tw-pt-br-other-bear",
+      "refs": ["3:13"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "tempo bíblico: dia",
+      "source": "tw-pt-br-other-biblicaltimeday",
+      "refs": ["1:6", "1:9"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "enterrar, enterrado, enterro",
+      "source": "tw-pt-br-other-bury",
+      "refs": ["2:12"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "Companheiro",
+      "source": "tw-pt-br-other-companion",
+      "refs": ["4:11"]
+    },
+    "other/confirm": {
+      "en": "confirm, confirmation",
+      "headword": "Confirmar, confirmação",
+      "source": "tw-pt-br-other-confirm",
+      "refs": ["2:7"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "Corrupto, corrupção",
+      "source": "tw-pt-br-other-corrupt",
+      "refs": ["2:22"]
+    },
+    "other/courage": {
+      "en": "courage, courageous, valor",
+      "headword": "Coragem, corajoso",
+      "source": "tw-pt-br-other-courage",
+      "refs": ["2:2", "4:8"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "Criar, Criação, Criador",
+      "source": "tw-pt-br-other-creation",
+      "refs": ["1:15", "1:16", "1:23", "3:10"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "enganar, engano, fraude, enganoso",
+      "source": "tw-pt-br-other-deceive",
+      "refs": ["2:8"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "libertar, libertador, libertação",
+      "source": "tw-pt-br-other-deliverer",
+      "refs": ["1:13"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "terra, terreno",
+      "source": "tw-pt-br-other-earth",
+      "refs": ["1:16", "1:20", "3:2", "3:5"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "inveja, cobiça",
+      "source": "tw-pt-br-other-envy",
+      "refs": ["3:5"]
+    },
+    "other/festival": {
+      "en": "festival, feast, celebrate",
+      "headword": "Festival",
+      "source": "tw-pt-br-other-festival",
+      "refs": ["2:16"]
+    },
+    "other/firstborn": {
+      "en": "firstborn",
+      "headword": "primogênito",
+      "source": "tw-pt-br-other-firstborn",
+      "refs": ["1:15", "1:18"]
+    },
+    "other/fornication": {
+      "en": "sexual immorality, immorality, immoral, fornication",
+      "headword": "imoralidade sexual",
+      "source": "tw-pt-br-other-fornication",
+      "refs": ["3:5"]
+    },
+    "other/foundation": {
+      "en": "foundation, founder, founded",
+      "headword": "alicerce, alicerçar",
+      "source": "tw-pt-br-other-foundation",
+      "refs": ["1:23"]
+    },
+    "other/free": {
+      "en": "free, freed, freedom, freeman, freewill, liberty",
+      "headword": "libertar, liberdade, ser livre",
+      "source": "tw-pt-br-other-free",
+      "refs": ["3:11"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "fruto, frutífero",
+      "source": "tw-pt-br-other-fruit",
+      "refs": ["1:6", "1:10"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "casa",
+      "source": "tw-pt-br-other-house",
+      "refs": ["4:15"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "Instruir, instrução",
+      "source": "tw-pt-br-other-instruct",
+      "refs": ["4:10"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "Alegria, alegre",
+      "source": "tw-pt-br-other-joy",
+      "refs": ["1:11", "1:24", "2:5"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "Saber, Conhecimento, Dar a conhecer",
+      "source": "tw-pt-br-other-know",
+      "refs": [
+        "1:9",
+        "1:10",
+        "1:27",
+        "2:1",
+        "2:2",
+        "2:3",
+        "3:10",
+        "3:24",
+        "4:1",
+        "4:6",
+        "4:7",
+        "4:8",
+        "4:9"
+      ]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "labuta, labutador",
+      "source": "tw-pt-br-other-labor",
+      "refs": ["1:29", "3:23"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "luxúria ou lascívia",
+      "source": "tw-pt-br-other-lust",
+      "refs": ["3:5"]
+    },
+    "other/manager": {
+      "en": "manager, steward, stewardship",
+      "headword": "gerente, mordomo",
+      "source": "tw-pt-br-other-manager",
+      "refs": ["1:25"]
+    },
+    "other/member": {
+      "en": "member, body part",
+      "headword": "membro",
+      "source": "tw-pt-br-other-member",
+      "refs": ["3:5"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "poderoso, poder",
+      "source": "tw-pt-br-other-mighty",
+      "refs": ["1:11"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "mente",
+      "source": "tw-pt-br-other-mind",
+      "refs": ["1:21", "2:18", "3:2"]
+    },
+    "other/multiply": {
+      "en": "multiply, multiplied, multiplication",
+      "headword": "multiplicar",
+      "source": "tw-pt-br-other-multiply",
+      "refs": ["2:7"]
+    },
+    "other/mystery": {
+      "en": "mystery, hidden truth",
+      "headword": "mistério, verdade oculta",
+      "source": "tw-pt-br-other-mystery",
+      "refs": ["1:26", "1:27", "2:2", "4:3"]
+    },
+    "other/newmoon": {
+      "en": "new moon",
+      "headword": "lua nova",
+      "source": "tw-pt-br-other-newmoon",
+      "refs": ["2:16"]
+    },
+    "other/ordinance": {
+      "en": "ordinance, regulation, requirement, strict law, custom",
+      "headword": "ordenança",
+      "source": "tw-pt-br-other-ordinance",
+      "refs": ["2:14"]
+    },
+    "other/partial": {
+      "en": "partial, partiality",
+      "headword": "parcial, parcialidade",
+      "source": "tw-pt-br-other-partial",
+      "refs": ["3:25"]
+    },
+    "other/patient": {
+      "en": "patient, patience, impatient",
+      "headword": "paciente, paciência",
+      "source": "tw-pt-br-other-patient",
+      "refs": ["1:11", "3:12"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "paz, pacífico",
+      "source": "tw-pt-br-other-peace",
+      "refs": ["1:2", "1:20", "3:15"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "perfeito",
+      "source": "tw-pt-br-other-perfect",
+      "refs": ["1:28", "4:12"]
+    },
+    "other/perseverance": {
+      "en": "persevere, perseverance",
+      "headword": "perseverar, perseverança",
+      "source": "tw-pt-br-other-perseverance",
+      "refs": ["1:11"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "pregar",
+      "source": "tw-pt-br-other-preach",
+      "refs": ["1:23", "1:28"]
+    },
+    "other/provoke": {
+      "en": "provoke, provoked, provocation",
+      "headword": "provocar",
+      "source": "tw-pt-br-other-provoke",
+      "refs": ["3:21"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "receber",
+      "source": "tw-pt-br-other-receive",
+      "refs": ["2:6", "3:24", "3:25", "4:10", "4:17"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "governante, governantes, regra",
+      "source": "tw-pt-br-other-ruler",
+      "refs": ["1:16", "2:10", "2:15", "3:15"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "procurar, buscar",
+      "source": "tw-pt-br-other-seek",
+      "refs": ["3:1"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "servo, escravo, esctravidão",
+      "source": "tw-pt-br-other-servant",
+      "refs": ["3:11", "3:22", "3:24", "4:1", "4:12"]
+    },
+    "other/slander": {
+      "en": "slander, slanderer, revile, insult",
+      "headword": "calúnia, caluniador",
+      "source": "tw-pt-br-other-slander",
+      "refs": ["3:8"]
+    },
+    "other/throne": {
+      "en": "throne, enthroned",
+      "headword": "trono",
+      "source": "tw-pt-br-other-throne",
+      "refs": ["1:16"]
+    },
+    "other/tradition": {
+      "en": "tradition",
+      "headword": "tradição",
+      "source": "tw-pt-br-other-tradition",
+      "refs": ["2:8"]
+    },
+    "other/tribulation": {
+      "en": "tribulation, distress, distresses, trouble",
+      "headword": "tribulação",
+      "source": "tw-pt-br-other-tribulation",
+      "refs": ["1:24"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "Compreender, compreensão",
+      "source": "tw-pt-br-other-understand",
+      "refs": ["1:6", "1:9", "2:2"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "Vão, vaidade",
+      "source": "tw-pt-br-other-vain",
+      "refs": ["2:18"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "assistir, vigiar",
+      "source": "tw-pt-br-other-watch",
+      "refs": ["4:2"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/sonofgod": "no-article",
+    "kt/soul": "no-article",
+    "kt/spirit": "no-article",
+    "other/age-timeperiod": "no-article",
+    "other/generation-lifetime": "no-article",
+    "other/submit": "no-article",
+    "other/suffer": "no-article"
+  }
+}

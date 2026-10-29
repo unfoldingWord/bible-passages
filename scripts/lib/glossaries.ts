@@ -62,11 +62,10 @@ export const TWL_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b).filter(
  * Books whose glossaries (`data/glossaries/<lang>/<BOOK>.json`) are built:
  * each must be in TWL_BOOKS. Apart from BOOKS (scripts/lib/books.ts)
  * because a glossary needs only the book's Translation Word Links, not its
- * titles, which go one book at a time. Titus only for now; the switch to
- * TWL_BOOKS is its own change, so the code can be reviewed apart from the
- * generated data (#30).
+ * titles, which go one book at a time. Every book the TWL release has
+ * (#30); the seven in TWL_UNRELEASED wait for a release (#57).
  */
-export const GLOSSARY_BOOKS: readonly string[] = ["TIT"];
+export const GLOSSARY_BOOKS: readonly string[] = TWL_BOOKS;
 
 export const TW: TwRepo[] = [
   {

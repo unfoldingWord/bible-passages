@@ -1,0 +1,610 @@
+{
+  "language": "hi",
+  "book": "RUT",
+  "links": "twl-en-rut",
+  "words": {
+    "repo": "translationCore-Create-BCS/hi_tw",
+    "release": "v8",
+    "commit": "5fa7b590a2e5f99ac6a84de96ee081e751e70b95"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (hi), translationCore-Create-BCS/hi_tw v8, CC BY-SA 4.0. Original work available at https://git.door43.org/translationCore-Create-BCS/hi_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/almighty": {
+      "en": "Almighty",
+      "headword": "सर्वशक्तिमान",
+      "source": "tw-hi-kt-almighty",
+      "refs": ["1:20", "1:21"]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "अभिषेक करना, अभिषिक्त, अभिषेक",
+      "source": "tw-hi-kt-anoint",
+      "refs": ["3:3"]
+    },
+    "kt/birthright": {
+      "en": "birthright",
+      "headword": "पहिलौठे का अधिकार",
+      "source": "tw-hi-kt-birthright",
+      "refs": ["4:6"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "आशीष देना, धन्य, आशीर्वाद",
+      "source": "tw-hi-kt-bless",
+      "refs": ["2:4", "2:19", "2:20", "3:10", "4:14"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "वाचा की विश्वासयोग्यता, निष्ठावान वाचा, वाचा का प्रेम",
+      "source": "tw-hi-kt-covenantfaith",
+      "refs": ["1:8", "2:20", "3:10"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "बुराई, दुष्ट, दुष्टता",
+      "source": "tw-hi-kt-evil",
+      "refs": ["1:21"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "देवता, झूठे देवता, देवियाँ, मूर्ति, मूर्तिपूजक, मूर्ति पूजा",
+      "source": "tw-hi-kt-falsegod",
+      "refs": ["1:15"]
+    },
+    "kt/favor": {
+      "en": "favor, favorable, favoritism",
+      "headword": "अनुग्रह, पक्ष, पक्षपात",
+      "source": "tw-hi-kt-favor",
+      "refs": ["2:2", "2:10", "2:13"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "डर, भय, भयभीत, डरना",
+      "source": "tw-hi-kt-fear",
+      "refs": ["3:11"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "परमेश्‍वर",
+      "source": "tw-hi-kt-god",
+      "refs": ["1:16", "2:12"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "अच्छा, सही, प्रसन्न करने वाला, उत्तम, सबसे अच्छा",
+      "source": "tw-hi-kt-good",
+      "refs": ["2:22", "3:1", "3:7", "3:10", "3:13", "4:15"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "आशा, आशा की",
+      "source": "tw-hi-kt-hope",
+      "refs": ["1:12"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "अधिकारी होना, भाग, वारिस",
+      "source": "tw-hi-kt-inherit",
+      "refs": ["4:5", "4:6", "4:10"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "इस्राएल, इस्राएली",
+      "source": "tw-hi-kt-israel",
+      "refs": ["2:12", "4:7", "4:11", "4:14"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "प्रभु, गुरु, स्वामी, स्वामियों, श्रीमान, महोदय",
+      "source": "tw-hi-kt-lord",
+      "refs": ["2:13"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "प्रेम, प्रिय,",
+      "source": "tw-hi-kt-love",
+      "refs": ["4:15"]
+    },
+    "kt/peopleofgod": {
+      "en": "people of God",
+      "headword": "परमेश्‍वर की प्रजा, मेरी प्रजा",
+      "source": "tw-hi-kt-peopleofgod",
+      "refs": ["1:6"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "छुड़ा ले, छुटकारा, छुटकारा, छुटकारा दिलानेवाला",
+      "source": "tw-hi-kt-redeem",
+      "refs": [
+        "2:20",
+        "3:9",
+        "3:12",
+        "3:13",
+        "4:1",
+        "4:3",
+        "4:4",
+        "4:6",
+        "4:7",
+        "4:8",
+        "4:14"
+      ]
+    },
+    "kt/restore": {
+      "en": "restore, restoration",
+      "headword": "ज्यों का त्यों करना, दृढ़ करना, पुनः स्थापन",
+      "source": "tw-hi-kt-restore",
+      "refs": ["4:15"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "गवाही, गवाही देना, साक्षी, साक्षात गवाह",
+      "source": "tw-hi-kt-testimony",
+      "refs": ["1:21", "4:9", "4:10", "4:11"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "यहोवा",
+      "source": "tw-hi-kt-yahweh",
+      "refs": [
+        "1:6",
+        "1:8",
+        "1:9",
+        "1:13",
+        "1:17",
+        "1:21",
+        "2:4",
+        "2:12",
+        "2:20",
+        "3:10",
+        "3:13",
+        "4:11",
+        "4:12",
+        "4:13",
+        "4:14"
+      ]
+    },
+    "names/bethlehem": {
+      "en": "Bethlehem, Ephrathah",
+      "headword": "बैतलहम, एप्रात",
+      "source": "tw-hi-names-bethlehem",
+      "refs": ["1:1", "1:2", "1:19", "1:22", "2:4", "4:11"]
+    },
+    "names/boaz": {
+      "en": "Boaz",
+      "headword": "बोअज़",
+      "source": "tw-hi-names-boaz",
+      "refs": [
+        "2:1",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:8",
+        "2:11",
+        "2:14",
+        "2:15",
+        "2:19",
+        "2:23",
+        "3:2",
+        "3:7",
+        "4:1",
+        "4:5",
+        "4:8",
+        "4:9",
+        "4:13",
+        "4:21"
+      ]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "दाऊद",
+      "source": "tw-hi-names-david",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/ephrathah": {
+      "en": "Ephrath, Ephrathah",
+      "headword": "एप्रात, एप्राती",
+      "source": "tw-hi-names-ephrathah",
+      "refs": ["1:2", "4:11"]
+    },
+    "names/jesse": {
+      "en": "Jesse",
+      "headword": "यिशै",
+      "source": "tw-hi-names-jesse",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "यहूदा",
+      "source": "tw-hi-names-judah",
+      "refs": ["4:12"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "यहूदिया",
+      "source": "tw-hi-names-judea",
+      "refs": ["1:1", "1:2", "1:7"]
+    },
+    "names/leah": {
+      "en": "Leah",
+      "headword": "लिआ:",
+      "source": "tw-hi-names-leah",
+      "refs": ["4:11"]
+    },
+    "names/moab": {
+      "en": "Moab, Moabite",
+      "headword": "मोआब, मोआबी",
+      "source": "tw-hi-names-moab",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:4",
+        "1:6",
+        "1:22",
+        "2:2",
+        "2:6",
+        "2:21",
+        "4:3",
+        "4:5",
+        "4:10"
+      ]
+    },
+    "names/rachel": {
+      "en": "Rachel",
+      "headword": "राहेल",
+      "source": "tw-hi-names-rachel",
+      "refs": ["4:11"]
+    },
+    "names/ruth": {
+      "en": "Ruth",
+      "headword": "रूत",
+      "source": "tw-hi-names-ruth",
+      "refs": [
+        "1:4",
+        "1:14",
+        "1:16",
+        "1:22",
+        "2:2",
+        "2:8",
+        "2:21",
+        "2:22",
+        "3:9",
+        "4:5",
+        "4:10",
+        "4:13"
+      ]
+    },
+    "names/tamar": {
+      "en": "Tamar",
+      "headword": "तामार",
+      "source": "tw-hi-names-tamar",
+      "refs": ["4:12"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "आयु, युग, वृद्ध",
+      "source": "tw-hi-other-age",
+      "refs": ["1:12", "4:15"]
+    },
+    "other/barley": {
+      "en": "barley",
+      "headword": "जौ",
+      "source": "tw-hi-other-barley",
+      "refs": ["1:22", "2:17", "2:23", "3:2", "3:15", "3:17"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "सहना, सह लेने वाला, ढोना",
+      "source": "tw-hi-other-bear",
+      "refs": ["4:12", "4:13", "4:15", "4:17"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "दिन, दिनों",
+      "source": "tw-hi-other-biblicaltimeday",
+      "refs": ["1:1"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "वर्ष, वर्षों",
+      "source": "tw-hi-other-biblicaltimeyear",
+      "refs": ["1:4"]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "दण्डवत्, झुक गया, दण्डवत् किया, झुकने, दण्डवत् करना, दण्डवत् करे, दण्डवत् किया, दण्डवत् करते रहे",
+      "source": "tw-hi-other-bow",
+      "refs": ["2:10"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "रोटी",
+      "source": "tw-hi-other-bread",
+      "refs": ["1:6", "2:14"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "मिट्टी देना, दबा देता है, दफन,",
+      "source": "tw-hi-other-bury",
+      "refs": ["1:17"]
+    },
+    "other/clan": {
+      "en": "clan",
+      "headword": "कुल, कुलों",
+      "source": "tw-hi-other-clan",
+      "refs": ["2:1", "2:3"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "साथी, संगी, मित्र",
+      "source": "tw-hi-other-companion",
+      "refs": ["3:14", "4:7"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "गर्भवती होना, गर्भ धारण करना",
+      "source": "tw-hi-other-conceive",
+      "refs": ["4:13"]
+    },
+    "other/confirm": {
+      "en": "confirm, confirmation",
+      "headword": "दृढ़ करने, दृढ़ करता, पक्की की, प्रमाण देने",
+      "source": "tw-hi-other-confirm",
+      "refs": ["4:7"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "पृथ्वी, मिट्टी, पार्थिव",
+      "source": "tw-hi-other-earth",
+      "refs": ["1:7", "2:6"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "प्राचीन, से बड़ा, बूढ़े",
+      "source": "tw-hi-other-elder",
+      "refs": ["4:2", "4:4", "4:9", "4:11"]
+    },
+    "other/famine": {
+      "en": "famine",
+      "headword": "अकाल",
+      "source": "tw-hi-other-famine",
+      "refs": ["1:1"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "परदेशी, फूट करा, अलग किए, पराई",
+      "source": "tw-hi-other-foreigner",
+      "refs": ["2:10"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "त्याग, त्यागना, छोड़ना",
+      "source": "tw-hi-other-forsaken",
+      "refs": ["1:16", "2:20"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "फाटक, फाटकों, बेंड़ों, द्वारपाल, चौकीदारों, द्वार के खम्भे, द्वार",
+      "source": "tw-hi-other-gate",
+      "refs": ["3:11", "4:1", "4:10", "4:11"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "बीनने, बीनता, बीना हुआ, इकट्ठा करना",
+      "source": "tw-hi-other-glean",
+      "refs": [
+        "2:2",
+        "2:3",
+        "2:7",
+        "2:8",
+        "2:15",
+        "2:16",
+        "2:17",
+        "2:18",
+        "2:19",
+        "2:23"
+      ]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "अन्न, किनकों, खेतों",
+      "source": "tw-hi-other-grain",
+      "refs": ["2:2", "2:7", "2:14", "3:7"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "फसल, लवनी, कटनी",
+      "source": "tw-hi-other-harvest",
+      "refs": [
+        "1:22",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:6",
+        "2:7",
+        "2:9",
+        "2:14",
+        "2:21",
+        "2:23"
+      ]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "घर, घरों, छत के ऊपर, छतों, भण्डार, भण्डारों, घर का कारबार करनेवाले",
+      "source": "tw-hi-other-house",
+      "refs": ["2:7"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "कुटुम्ब, घराना",
+      "source": "tw-hi-other-household",
+      "refs": ["1:8", "1:9", "4:11"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "निर्देश देना, आदेश, निर्देश, निर्देशक",
+      "source": "tw-hi-other-instruct",
+      "refs": ["2:9", "3:6"]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "न्यायी",
+      "source": "tw-hi-other-judgeposition",
+      "refs": ["1:1"]
+    },
+    "other/kin": {
+      "en": "kin, kinfolk, kindred, kinsman",
+      "headword": "कुटुम्बी, भाइयों, कुटुम्बी, कुटुम्बियों",
+      "source": "tw-hi-other-kin",
+      "refs": ["2:20", "3:9", "3:12", "4:1", "4:3", "4:6", "4:8", "4:14"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "चुम्बन, चूमा/चूमना",
+      "source": "tw-hi-other-kiss",
+      "refs": ["1:9", "1:14"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "जानना, जानता है, जानता था, जानना, ज्ञान, ज्ञात, प्रकट करना, ज्ञात करता है, ज्ञात करता है, अज्ञात, पहले से जानना, पूर्वज्ञान",
+      "source": "tw-hi-other-know",
+      "refs": ["3:3", "3:4", "3:11", "3:14", "3:18", "4:4"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "परिश्रम, श्रमिक, श्रम, कठोर परिश्रम",
+      "source": "tw-hi-other-labor",
+      "refs": ["2:12", "2:19", "3:2"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "पड़ोसी, पड़ोसियों, पडोस, आस पास के",
+      "source": "tw-hi-other-neighbor",
+      "refs": ["4:17"]
+    },
+    "other/prosper": {
+      "en": "prosper, prosperity, prosperous",
+      "headword": "समृद्ध होना, समृद्धि, समृद्ध",
+      "source": "tw-hi-other-prosper",
+      "refs": ["4:11"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "झिड़कना, डाँ/ डांटा",
+      "source": "tw-hi-other-rebuke",
+      "refs": ["2:16"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "शरण, शरणार्थी, शरणार्थियों, मण्डप, आड़, आड़ देना",
+      "source": "tw-hi-other-refuge",
+      "refs": ["2:12"]
+    },
+    "other/renown": {
+      "en": "renown, renowned, famous",
+      "headword": "कीर्ति, कीर्तिमान",
+      "source": "tw-hi-other-renown",
+      "refs": ["4:11", "4:14"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "समाचार, समाचारों, समाचार दिया",
+      "source": "tw-hi-other-report",
+      "refs": ["2:11", "2:19", "3:4", "3:16", "4:4"]
+    },
+    "other/reward": {
+      "en": "reward, prize, deserve",
+      "headword": "प्रतिफल, पारितोषक, योग्य",
+      "source": "tw-hi-other-reward",
+      "refs": ["2:12"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "शासन, नियम, शासित, शासक, शासकों, हाकिमों, निर्णयों, फैसलों, अतिरंजित",
+      "source": "tw-hi-other-ruler",
+      "refs": ["1:1"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "जूता, खडाऊं",
+      "source": "tw-hi-other-sandal",
+      "refs": ["4:7", "4:8"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "बीज, वीर्य",
+      "source": "tw-hi-other-seed",
+      "refs": ["4:12"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "ढूँढ़े, ढूँढ़ते हैं, खोजना, मांगा",
+      "source": "tw-hi-other-seek",
+      "refs": ["3:1"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "सेवा करना, दास बनाना, दास बना दिया, सेवक, सेवकों, दास, दासों, दासत्व, दासी",
+      "source": "tw-hi-other-servant",
+      "refs": [
+        "2:5",
+        "2:6",
+        "2:8",
+        "2:9",
+        "2:13",
+        "2:15",
+        "2:21",
+        "2:22",
+        "2:23",
+        "3:2",
+        "3:9"
+      ]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "नामधराई, लज्जा, शर्म, शर्मपूर्ण, शर्मपूर्णता से, शर्महीनता, शर्महीनता से,लज्जित, लज्जित नहीं",
+      "source": "tw-hi-other-shame",
+      "refs": ["2:15"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "दाँवना, दाएँ हुए, दाँवने",
+      "source": "tw-hi-other-thresh",
+      "refs": ["3:2", "3:3", "3:6", "3:14"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "चौकस, ताकता, देखा, देख रहा था, द्वारपाल, पहरुओं, जागते रहना",
+      "source": "tw-hi-other-watch",
+      "refs": ["2:9"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "गेहूँ",
+      "source": "tw-hi-other-wheat",
+      "refs": ["2:23"]
+    },
+    "other/winnow": {
+      "en": "winnow, sift",
+      "headword": "ओसाई, फटकना",
+      "source": "tw-hi-other-winnow",
+      "refs": ["3:2"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "गर्भ",
+      "source": "tw-hi-other-womb",
+      "refs": ["1:11"]
+    }
+  },
+  "gaps": {
+    "kt/call-toname": "no-article",
+    "other/generation-groupofdescendants": "no-article",
+    "other/house-descendants_nation": "no-article",
+    "other/know-relationship": "no-article"
+  }
+}

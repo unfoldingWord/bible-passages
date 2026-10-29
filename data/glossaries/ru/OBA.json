@@ -1,0 +1,373 @@
+{
+  "language": "ru",
+  "book": "OBA",
+  "links": "twl-en-oba",
+  "words": {
+    "repo": "ru_gl/ru_tw",
+    "release": "v14.2",
+    "commit": "861807f86dc5d532be57248a9225b5f124fc9563"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (ru), ru_gl/ru_tw v14.2, CC BY-SA 4.0. Original work available at https://git.door43.org/ru_gl/ru_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/covenant": {
+      "en": "covenant",
+      "headword": "завет, новый завет",
+      "source": "tw-ru-kt-covenant",
+      "refs": ["1:7"]
+    },
+    "kt/dayofthelord": {
+      "en": "day of the Lord, day of Yahweh",
+      "headword": "день Яхве, день Господа, день Божий",
+      "source": "tw-ru-kt-dayofthelord",
+      "refs": ["1:15"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "вечный, навсегда, навек, вовеки, вечность",
+      "source": "tw-ru-kt-eternity",
+      "refs": ["1:10"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "зло, злоба, злость, злой, плохой, злиться, бедствие, досада, досадный",
+      "source": "tw-ru-kt-evil",
+      "refs": ["1:13"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "святость, святой, освящение, святыня",
+      "source": "tw-ru-kt-holy",
+      "refs": ["1:16", "1:17"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Израиль, израильтяне, израильский народ",
+      "source": "tw-ru-kt-israel",
+      "refs": ["1:20"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "суд, судить, определения, Суд, осуждающий, осуждать",
+      "source": "tw-ru-kt-judge",
+      "refs": ["1:21"]
+    },
+    "kt/lordyahweh": {
+      "en": "Lord Yahweh, Yahweh God",
+      "headword": "Господь Яхве, Бог Яхве",
+      "source": "tw-ru-kt-lordyahweh",
+      "refs": ["1:1"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "погибать, гибель",
+      "source": "tw-ru-kt-perish",
+      "refs": ["1:12"]
+    },
+    "kt/savior": {
+      "en": "Savior, savior",
+      "headword": "Спаситель, освободитель, спасать",
+      "source": "tw-ru-kt-savior",
+      "refs": ["1:21"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Яхве",
+      "source": "tw-ru-kt-yahweh",
+      "refs": ["1:1", "1:4", "1:8", "1:18", "1:21"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "гора Сион",
+      "source": "tw-ru-kt-zion",
+      "refs": ["1:17", "1:21"]
+    },
+    "names/benjamin": {
+      "en": "Benjamin, Benjaminite",
+      "headword": "Вениамин, вениаминитянин",
+      "source": "tw-ru-names-benjamin",
+      "refs": ["1:19"]
+    },
+    "names/canaan": {
+      "en": "Canaan, Canaanite",
+      "headword": "Ханаан, хананеи, люди Ханаана",
+      "source": "tw-ru-names-canaan",
+      "refs": ["1:20"]
+    },
+    "names/edom": {
+      "en": "Edom, Edomite, Idumea",
+      "headword": "Едом",
+      "source": "tw-ru-names-edom",
+      "refs": ["1:1", "1:8"]
+    },
+    "names/ephraim": {
+      "en": "Ephraim, Ephraimite",
+      "headword": "Ефрем, Ефремов",
+      "source": "tw-ru-names-ephraim",
+      "refs": ["1:19"]
+    },
+    "names/esau": {
+      "en": "Esau",
+      "headword": "Исав",
+      "source": "tw-ru-names-esau",
+      "refs": ["1:6", "1:8", "1:9", "1:18", "1:19", "1:21"]
+    },
+    "names/gilead": {
+      "en": "Gilead, Gileadite",
+      "headword": "Галаад, галаадянин",
+      "source": "tw-ru-names-gilead",
+      "refs": ["1:19"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "Иаков, Израиль",
+      "source": "tw-ru-names-jacob",
+      "refs": ["1:10", "1:17", "1:18"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Иерусалим",
+      "source": "tw-ru-names-jerusalem",
+      "refs": ["1:11", "1:20"]
+    },
+    "names/josephot": {
+      "en": "Joseph (OT)",
+      "headword": "Иосиф",
+      "source": "tw-ru-names-josephot",
+      "refs": ["1:18"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "Иуда",
+      "source": "tw-ru-names-judah",
+      "refs": ["1:12"]
+    },
+    "names/negev": {
+      "en": "Negev",
+      "headword": "Негев",
+      "source": "tw-ru-names-negev",
+      "refs": ["1:19", "1:20"]
+    },
+    "names/obadiah": {
+      "en": "Obadiah",
+      "headword": "Авдий",
+      "source": "tw-ru-names-obadiah",
+      "refs": ["1:1"]
+    },
+    "names/philistines": {
+      "en": "Philistines",
+      "headword": "Филистимляне",
+      "source": "tw-ru-names-philistines",
+      "refs": ["1:19"]
+    },
+    "names/samaria": {
+      "en": "Samaria, Samaritan",
+      "headword": "Самария, самаряне, самарянин",
+      "source": "tw-ru-names-samaria",
+      "refs": ["1:19"]
+    },
+    "other/afflict": {
+      "en": "afflict, affliction, distress",
+      "headword": "притеснять, притеснение, стеснение, бедствие",
+      "source": "tw-ru-other-afflict",
+      "refs": ["1:12"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "день",
+      "source": "tw-ru-other-biblicaltimeday",
+      "refs": ["1:8", "1:11", "1:12", "1:13", "1:14"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "хлеб",
+      "source": "tw-ru-other-bread",
+      "refs": ["1:7"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "плен, пленник, пленять, ловить (поймать, поимка)",
+      "source": "tw-ru-other-captive",
+      "refs": ["1:11"]
+    },
+    "other/consume": {
+      "en": "consume, devour",
+      "headword": "поглощать",
+      "source": "tw-ru-other-consume",
+      "refs": ["1:18"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "обманывать, обманщик, заблуждение",
+      "source": "tw-ru-other-deceive",
+      "refs": ["1:3", "1:7"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "избавлять, спасать",
+      "source": "tw-ru-other-deliverer",
+      "refs": ["1:14"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "уничтожать, истреблять, разрушать, гибель, уничтожение, истребление",
+      "source": "tw-ru-other-destroyer",
+      "refs": ["1:5", "1:8"]
+    },
+    "other/eagle": {
+      "en": "eagle",
+      "headword": "орёл",
+      "source": "tw-ru-other-eagle",
+      "refs": ["1:4"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "земля, прах, земной",
+      "source": "tw-ru-other-earth",
+      "refs": ["1:3"]
+    },
+    "other/exile": {
+      "en": "exile, exiled",
+      "headword": "переселять, быть переселённым, переселенец",
+      "source": "tw-ru-other-exile",
+      "refs": ["1:20"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "чужестранец, пришлый, чужой, чужеземный",
+      "source": "tw-ru-other-foreigner",
+      "refs": ["1:11"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "ворота, сторож ворот",
+      "source": "tw-ru-other-gate",
+      "refs": ["1:11", "1:13"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "подбирать, упавшие плоды",
+      "source": "tw-ru-other-glean",
+      "refs": ["1:5"]
+    },
+    "other/grape": {
+      "en": "grape, grapevine",
+      "headword": "виноград",
+      "source": "tw-ru-other-grape",
+      "refs": ["1:5"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "радость, веселье, радоваться, обрадовать",
+      "source": "tw-ru-other-joy",
+      "refs": ["1:12"]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "царство",
+      "source": "tw-ru-other-kingdom",
+      "refs": ["1:21"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "жребий, бросать жребий",
+      "source": "tw-ru-other-lots",
+      "refs": ["1:11"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "посланник, посол",
+      "source": "tw-ru-other-messenger",
+      "refs": ["1:1"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "могущественный, могущество, сильный, сила",
+      "source": "tw-ru-other-mighty",
+      "refs": ["1:9"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "народ",
+      "source": "tw-ru-other-nation",
+      "refs": ["1:1", "1:2", "1:15", "1:16"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "мир, мирный, тихий, миролюбивый",
+      "source": "tw-ru-other-peace",
+      "refs": ["1:7"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "владеть, владение, собственность",
+      "source": "tw-ru-other-possess",
+      "refs": ["1:17", "1:19", "1:20"]
+    },
+    "other/proud": {
+      "en": "proud, pride, prideful, boast, boastful, boasting",
+      "headword": "гордый, гордиться, возгордиться, возноситься умом, поступать надменно, надменность",
+      "source": "tw-ru-other-proud",
+      "refs": ["1:3"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "искать, исследовать, расследовать, поиск",
+      "source": "tw-ru-other-seek",
+      "refs": ["1:6"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "стыд, позор, позорить, постыдный, стыдиться, постыдиться, непостыдный, нарекание",
+      "source": "tw-ru-other-shame",
+      "refs": ["1:10"]
+    },
+    "other/slaughter": {
+      "en": "slaughter, slaughtered",
+      "headword": "убить, убийство, закалывать, заклание",
+      "source": "tw-ru-other-slaughter",
+      "refs": ["1:9"]
+    },
+    "other/snare": {
+      "en": "snare, ensnare, entrap, trap, trapped, pitfall",
+      "headword": "ловушка",
+      "source": "tw-ru-other-snare",
+      "refs": ["1:7"]
+    },
+    "other/thief": {
+      "en": "thief, thieves, rob, robber, robbery, bandit",
+      "headword": "вор, грабитель",
+      "source": "tw-ru-other-thief",
+      "refs": ["1:5"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "беда, стеснение, теснота, страдание",
+      "source": "tw-ru-other-trouble",
+      "refs": ["1:13", "1:14"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "осознавать, понимать, понимание, понимающий, разум",
+      "source": "tw-ru-other-understand",
+      "refs": ["1:7", "1:8"]
+    },
+    "other/vision": {
+      "en": "vision, envision",
+      "headword": "видение, предвидеть",
+      "source": "tw-ru-other-vision",
+      "refs": ["1:1"]
+    },
+    "other/wisemen": {
+      "en": "wise men, advisor",
+      "headword": "мудрец",
+      "source": "tw-ru-other-wisemen",
+      "refs": ["1:8"]
+    }
+  },
+  "gaps": { "other/house-descendants_nation": "no-article" }
+}

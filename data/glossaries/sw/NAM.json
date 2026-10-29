@@ -1,0 +1,664 @@
+{
+  "language": "sw",
+  "book": "NAM",
+  "links": "twl-en-nam",
+  "words": {
+    "repo": "Door43-Catalog/sw_tw",
+    "release": "v7.3",
+    "commit": "82e94cd4a7aad817365190fa5d48960c90a01fc9"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (sw), Door43-Catalog/sw_tw v7.3, CC BY-SA 4.0. Original work available at https://git.door43.org/Door43-Catalog/sw_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "baya, ovu, uovu",
+      "source": "tw-sw-kt-evil",
+      "refs": ["1:11", "1:15", "3:19"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "mungu wa uongo, mungu mgeni, mungu, mungu wa kike",
+      "source": "tw-sw-kt-falsegod",
+      "refs": ["1:14"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "woga, hofu, hofu ya Yahwe",
+      "source": "tw-sw-kt-fear",
+      "refs": ["2:11"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Mungu",
+      "source": "tw-sw-kt-god",
+      "refs": ["1:2"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "wema, uzuri",
+      "source": "tw-sw-kt-good",
+      "refs": ["1:7", "3:4", "3:8"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "mbingu, anga, mbinguni",
+      "source": "tw-sw-kt-heaven",
+      "refs": ["3:16"]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "heshima, kuheshimu",
+      "source": "tw-sw-kt-honor",
+      "refs": ["3:10"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israeli, Waisraeli, taifa la Israeli",
+      "source": "tw-sw-kt-israel",
+      "refs": ["2:2"]
+    },
+    "kt/jealous": {
+      "en": "jealous, jealousy",
+      "headword": "wivu",
+      "source": "tw-sw-kt-jealous",
+      "refs": ["1:2"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "bwana, mkuu",
+      "source": "tw-sw-kt-lord",
+      "refs": ["1:2"]
+    },
+    "kt/majesty": {
+      "en": "majesty",
+      "headword": "mtukufu",
+      "source": "tw-sw-kt-majesty",
+      "refs": ["2:2"]
+    },
+    "kt/restore": {
+      "en": "restore, restoration",
+      "headword": "Kurejesha, marejesho",
+      "source": "tw-sw-kt-restore",
+      "refs": ["2:2"]
+    },
+    "kt/woe": {
+      "en": "woe",
+      "headword": "woe",
+      "source": "tw-sw-kt-woe",
+      "refs": ["3:1"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "Dunia, kidunia",
+      "source": "tw-sw-kt-world",
+      "refs": ["1:5"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "ghadhabu, hasira",
+      "source": "tw-sw-kt-wrath",
+      "refs": ["1:2", "1:6"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yaweh",
+      "source": "tw-sw-kt-yahweh",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:7",
+        "1:9",
+        "1:11",
+        "1:12",
+        "1:14",
+        "2:2",
+        "2:13",
+        "3:5"
+      ]
+    },
+    "names/assyria": {
+      "en": "Assyria, Assyrian, Assyrian Empire",
+      "headword": "Ashuru, Waashuru, Dola ya Waashuru",
+      "source": "tw-sw-names-assyria",
+      "refs": ["3:18"]
+    },
+    "names/bashan": {
+      "en": "Bashan",
+      "headword": "Bashani",
+      "source": "tw-sw-names-bashan",
+      "refs": ["1:4"]
+    },
+    "names/carmel": {
+      "en": "Carmel, Mount Carmel",
+      "headword": "Karmeli, Mlima Karmeli",
+      "source": "tw-sw-names-carmel",
+      "refs": ["1:4"]
+    },
+    "names/cush": {
+      "en": "Cush",
+      "headword": "Kushi",
+      "source": "tw-sw-names-cush",
+      "refs": ["3:9"]
+    },
+    "names/egypt": {
+      "en": "Egypt, Egyptian",
+      "headword": "Misri, Mmisri",
+      "source": "tw-sw-names-egypt",
+      "refs": ["3:9"]
+    },
+    "names/euphrates": {
+      "en": "Euphrates River, the River",
+      "headword": "Mto Frati",
+      "source": "tw-sw-names-euphrates",
+      "refs": ["1:4"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "Yakobo, Israeli",
+      "source": "tw-sw-names-jacob",
+      "refs": ["2:2"]
+    },
+    "names/kingdomofjudah": {
+      "en": "Judah, kingdom of Judah",
+      "headword": "Yuda, ufalme wa Yuda",
+      "source": "tw-sw-names-kingdomofjudah",
+      "refs": ["1:15"]
+    },
+    "names/lebanon": {
+      "en": "Lebanon",
+      "headword": "Lebanoni",
+      "source": "tw-sw-names-lebanon",
+      "refs": ["1:4"]
+    },
+    "names/nahum": {
+      "en": "Nahum",
+      "headword": "Nahumu",
+      "source": "tw-sw-names-nahum",
+      "refs": ["1:1"]
+    },
+    "names/nileriver": {
+      "en": "Nile River, River of Egypt, the Nile",
+      "headword": "Mto Nili, Mto wa Misri",
+      "source": "tw-sw-names-nileriver",
+      "refs": ["3:8"]
+    },
+    "names/nineveh": {
+      "en": "Nineveh, Ninevite",
+      "headword": "Ninawi, Mninwai",
+      "source": "tw-sw-names-nineveh",
+      "refs": ["1:1", "2:8"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "Adui",
+      "source": "tw-sw-other-adversary",
+      "refs": ["1:2", "1:8", "3:11", "3:13"]
+    },
+    "other/afflict": {
+      "en": "afflict, affliction, distress",
+      "headword": "Mateso",
+      "source": "tw-sw-other-afflict",
+      "refs": ["1:12"]
+    },
+    "other/anguish": {
+      "en": "anguish",
+      "headword": "Majuto",
+      "source": "tw-sw-other-anguish",
+      "refs": ["2:10"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "Mkutano, kukusanyika",
+      "source": "tw-sw-other-assembly",
+      "refs": ["3:18"]
+    },
+    "other/avenge": {
+      "en": "avenge, avenger, revenge, vengeance",
+      "headword": "Kisasi",
+      "source": "tw-sw-other-avenge",
+      "refs": ["1:2"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "siku",
+      "source": "tw-sw-other-biblicaltimeday",
+      "refs": ["1:7", "2:3", "2:8", "3:17"]
+    },
+    "other/bloodshed": {
+      "en": "bloodshed",
+      "headword": "kumwaga damu",
+      "source": "tw-sw-other-bloodshed",
+      "refs": ["3:1"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "mateka, kifungo",
+      "source": "tw-sw-other-captive",
+      "refs": ["3:10"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "Gari",
+      "source": "tw-sw-other-chariot",
+      "refs": ["2:3", "2:4", "2:13", "3:2"]
+    },
+    "other/counselor": {
+      "en": "advice, advise, advisor, counsel, counselor, counsels",
+      "headword": "ushauri, mshauri",
+      "source": "tw-sw-other-counselor",
+      "refs": ["1:11"]
+    },
+    "other/courage": {
+      "en": "courage, courageous, valor",
+      "headword": "ujasiri, jasiri",
+      "source": "tw-sw-other-courage",
+      "refs": ["2:3"]
+    },
+    "other/cypress": {
+      "en": "cypress",
+      "headword": "Mteserusi",
+      "source": "tw-sw-other-cypress",
+      "refs": ["2:3"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "kudanganya, udanganyifu, hila, mdanganyifu",
+      "source": "tw-sw-other-deceive",
+      "refs": ["3:1"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "tamka, tamko",
+      "source": "tw-sw-other-declare",
+      "refs": ["1:15"]
+    },
+    "other/decree": {
+      "en": "decree, decreed",
+      "headword": "amri",
+      "source": "tw-sw-other-decree",
+      "refs": ["2:7"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "Furaha",
+      "source": "tw-sw-other-delight",
+      "refs": ["2:9"]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "kuachwa, kuacha",
+      "source": "tw-sw-other-desolate",
+      "refs": ["2:10"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "Mwangamizi",
+      "source": "tw-sw-other-destroyer",
+      "refs": ["1:8", "2:2", "3:7", "3:19"]
+    },
+    "other/devour": {
+      "en": "devour",
+      "headword": "meza",
+      "source": "tw-sw-other-devour",
+      "refs": ["1:10", "2:13", "3:13", "3:15"]
+    },
+    "other/disperse": {
+      "en": "disperse, dispersion, scatter, distributed",
+      "headword": "tawanya, mtawanyiko",
+      "source": "tw-sw-other-disperse",
+      "refs": ["3:18"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "njiwa, ninga",
+      "source": "tw-sw-other-dove",
+      "refs": ["2:7"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "kulewa, mlevi",
+      "source": "tw-sw-other-drunk",
+      "refs": ["1:10", "3:11"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "dunia, kidunia",
+      "source": "tw-sw-other-earth",
+      "refs": ["1:5", "2:13", "3:13"]
+    },
+    "other/enslave": {
+      "en": "enslave, slave, bondservant, bondage, bound, bond, bonds, young man, young men, young woman, young women",
+      "headword": "tia utumwani, katika kifungo",
+      "source": "tw-sw-other-enslave",
+      "refs": ["3:10"]
+    },
+    "other/exile": {
+      "en": "exile, exiled",
+      "headword": "kuhamisha, Uhamisho",
+      "source": "tw-sw-other-exile",
+      "refs": ["2:7", "3:10"]
+    },
+    "other/festival": {
+      "en": "festival, feast, celebrate",
+      "headword": "sikukuu",
+      "source": "tw-sw-other-festival",
+      "refs": ["1:15"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "mtini",
+      "source": "tw-sw-other-fig",
+      "refs": ["3:12"]
+    },
+    "other/firstfruit": {
+      "en": "firstfruit, firstfruits",
+      "headword": "mazao ya kwanza",
+      "source": "tw-sw-other-firstfruit",
+      "refs": ["3:12"]
+    },
+    "other/flood": {
+      "en": "flood",
+      "headword": "mafuriko",
+      "source": "tw-sw-other-flood",
+      "refs": ["1:8"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "lango, nguzo ya lango",
+      "source": "tw-sw-other-gate",
+      "refs": ["2:6", "3:13"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "dhahabu",
+      "source": "tw-sw-other-gold",
+      "refs": ["2:9"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "Farasi",
+      "source": "tw-sw-other-horse",
+      "refs": ["3:2"]
+    },
+    "other/horsemen": {
+      "en": "horseman",
+      "headword": "Mpanda farasi",
+      "source": "tw-sw-other-horsemen",
+      "refs": ["3:3"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "Nyumba",
+      "source": "tw-sw-other-house",
+      "refs": ["1:14"]
+    },
+    "other/image": {
+      "en": "image, carved image, cast metal image, figure, carved figure, statue",
+      "headword": "umbo, sanamu ya kuchonga, umbo la kuchonga, umbo la chuma",
+      "source": "tw-sw-other-image",
+      "refs": ["1:14"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "mfalme",
+      "source": "tw-sw-other-king",
+      "refs": ["3:18"]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "ufalme",
+      "source": "tw-sw-other-kingdom",
+      "refs": ["3:5"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "kujua, ufahamu, kufanya kujulikana",
+      "source": "tw-sw-other-know",
+      "refs": ["3:17"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "simba",
+      "source": "tw-sw-other-lion",
+      "refs": ["2:11", "2:12", "2:13"]
+    },
+    "other/locust": {
+      "en": "locust",
+      "headword": "nzige",
+      "source": "tw-sw-other-locust",
+      "refs": ["3:15", "3:16", "3:17"]
+    },
+    "other/loins": {
+      "en": "loins",
+      "headword": "viuno",
+      "source": "tw-sw-other-loins",
+      "refs": ["2:1", "2:10"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "kura, kupiga kura",
+      "source": "tw-sw-other-lots",
+      "refs": ["3:10"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "mjumbe",
+      "source": "tw-sw-other-messenger",
+      "refs": ["2:13"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "uwezo",
+      "source": "tw-sw-other-mighty",
+      "refs": ["2:3"]
+    },
+    "other/mold": {
+      "en": "mold, molded, molds, molder",
+      "headword": "kufinyanga",
+      "source": "tw-sw-other-mold",
+      "refs": ["3:14"]
+    },
+    "other/multiply": {
+      "en": "multiply, multiplied, multiplication",
+      "headword": "kuzidisha",
+      "source": "tw-sw-other-multiply",
+      "refs": ["3:15", "3:16"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "Taifa",
+      "source": "tw-sw-other-nation",
+      "refs": ["3:4", "3:5"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "waheshima, heshima",
+      "source": "tw-sw-other-noble",
+      "refs": ["3:18"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "kiapo, kuapa,",
+      "source": "tw-sw-other-oath",
+      "refs": ["1:15"]
+    },
+    "other/palace": {
+      "en": "palace, house",
+      "headword": "Ikulu",
+      "source": "tw-sw-other-palace",
+      "refs": ["2:6"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "Amani",
+      "source": "tw-sw-other-peace",
+      "refs": ["1:15"]
+    },
+    "other/prey": {
+      "en": "prey, prey on",
+      "headword": "Mawindo, kwa mawindo ya",
+      "source": "tw-sw-other-prey",
+      "refs": ["2:12", "2:13", "3:1"]
+    },
+    "other/prostitute": {
+      "en": "prostitute, harlot, whored",
+      "headword": "Kahaba",
+      "source": "tw-sw-other-prostitute",
+      "refs": ["3:4"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "Kukemea",
+      "source": "tw-sw-other-rebuke",
+      "refs": ["1:4"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "Kimbilio, malazi",
+      "source": "tw-sw-other-refuge",
+      "refs": ["1:7", "3:11"]
+    },
+    "other/ruin": {
+      "en": "ruin, ruins, ruined",
+      "headword": "Kuharibu",
+      "source": "tw-sw-other-ruin",
+      "refs": ["2:10"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "tafuta",
+      "source": "tw-sw-other-seek",
+      "refs": ["3:7", "3:11"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "mtumishi, mtumwa, utumwa",
+      "source": "tw-sw-other-servant",
+      "refs": ["2:7"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "haya, aibu",
+      "source": "tw-sw-other-shame",
+      "refs": ["3:5"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "mchungaji, kuchunga",
+      "source": "tw-sw-other-shepherd",
+      "refs": ["3:18"]
+    },
+    "other/shield": {
+      "en": "shield",
+      "headword": "ngao",
+      "source": "tw-sw-other-shield",
+      "refs": ["2:3"]
+    },
+    "other/siege": {
+      "en": "siege, besiege, besieged, siegework, siegeworks",
+      "headword": "zingira, kuzingira",
+      "source": "tw-sw-other-siege",
+      "refs": ["2:5", "3:14"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "fedha",
+      "source": "tw-sw-other-silver",
+      "refs": ["2:9"]
+    },
+    "other/slain": {
+      "en": "slay, slain, slaughter, kill, murder",
+      "headword": "chinja, chinjwa",
+      "source": "tw-sw-other-slain",
+      "refs": ["3:3"]
+    },
+    "other/sorcery": {
+      "en": "sorcerer, sorceress, sorcery, sorceries, witchcraft, magician",
+      "headword": "uchawi, mchawi, uganga",
+      "source": "tw-sw-other-sorcery",
+      "refs": ["3:4"]
+    },
+    "other/spear": {
+      "en": "spear, spearmen",
+      "headword": "mkuki",
+      "source": "tw-sw-other-spear",
+      "refs": ["3:3"]
+    },
+    "other/stronghold": {
+      "en": "stronghold, fortification, fortress, citadel",
+      "headword": "ngome, kimbilio",
+      "source": "tw-sw-other-stronghold",
+      "refs": ["1:7", "3:12", "3:14"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "jikwaa",
+      "source": "tw-sw-other-stumble",
+      "refs": ["2:5", "3:3"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "upanga",
+      "source": "tw-sw-other-sword",
+      "refs": ["2:13", "3:3", "3:15"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "mwiba, mbaruti",
+      "source": "tw-sw-other-thorn",
+      "refs": ["1:10"]
+    },
+    "other/tomb": {
+      "en": "grave, gravedigger, tomb, burial place",
+      "headword": "kaburi",
+      "source": "tw-sw-other-tomb",
+      "refs": ["1:14"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "tetemeka",
+      "source": "tw-sw-other-tremble",
+      "refs": ["1:5", "2:10"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "taabu, mataabiko, taabika",
+      "source": "tw-sw-other-trouble",
+      "refs": ["1:7", "1:9"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "Mzabibu",
+      "source": "tw-sw-other-vine",
+      "refs": ["2:2"]
+    },
+    "other/vision": {
+      "en": "vision, envision",
+      "headword": "Maono",
+      "source": "tw-sw-other-vision",
+      "refs": ["1:1"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "Angalia, Mlinzi",
+      "source": "tw-sw-other-watch",
+      "refs": ["1:15", "2:1", "3:17"]
+    },
+    "other/yoke": {
+      "en": "yoke, yoked, tied",
+      "headword": "Nira",
+      "source": "tw-sw-other-yoke",
+      "refs": ["1:13"]
+    }
+  },
+  "gaps": {
+    "kt/call-tosummon": "no-article",
+    "other/know-relationship": "no-article",
+    "other/plunder": "no-article"
+  }
+}

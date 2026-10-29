@@ -1,0 +1,610 @@
+{
+  "language": "es-419",
+  "book": "RUT",
+  "links": "twl-en-rut",
+  "words": {
+    "repo": "es-419_gl/es-419_tw",
+    "release": "v37",
+    "commit": "7586f4ff1f0483ea40a4a68e5e1f33158e08c208"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (es-419), es-419_gl/es-419_tw v37, CC BY-SA 4.0. Original work available at https://git.door43.org/es-419_gl/es-419_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/almighty": {
+      "en": "Almighty",
+      "headword": "Todopoderoso",
+      "source": "tw-es-419-kt-almighty",
+      "refs": ["1:20", "1:21"]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "Ungir, ungido, unción",
+      "source": "tw-es-419-kt-anoint",
+      "refs": ["3:3"]
+    },
+    "kt/birthright": {
+      "en": "birthright",
+      "headword": "Derecho de nacimiento",
+      "source": "tw-es-419-kt-birthright",
+      "refs": ["4:6"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bendecir, bendecido, bienaventurado, bendición",
+      "source": "tw-es-419-kt-bless",
+      "refs": ["2:4", "2:19", "2:20", "3:10", "4:14"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "Fidelidad de pacto, lealtad de pacto, misericordia, amor infalible",
+      "source": "tw-es-419-kt-covenantfaith",
+      "refs": ["1:8", "2:20", "3:10"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "maldad, malvado, malicia, desagradable",
+      "source": "tw-es-419-kt-evil",
+      "refs": ["1:21"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "dios, dios falso, diosa, ídolo, idólatra, idolátrico, idolatría",
+      "source": "tw-es-419-kt-falsegod",
+      "refs": ["1:15"]
+    },
+    "kt/favor": {
+      "en": "favor, favorable, favoritism",
+      "headword": "Favor, favorable, favoritismo",
+      "source": "tw-es-419-kt-favor",
+      "refs": ["2:2", "2:10", "2:13"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "temer, temor, temor de Jehová",
+      "source": "tw-es-419-kt-fear",
+      "refs": ["3:11"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Dios",
+      "source": "tw-es-419-kt-god",
+      "refs": ["1:16", "2:12"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "bueno, bien, correcto, agradable, mejor",
+      "source": "tw-es-419-kt-good",
+      "refs": ["2:22", "3:1", "3:7", "3:10", "3:13", "4:15"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "esperanza, esperaba",
+      "source": "tw-es-419-kt-hope",
+      "refs": ["1:12"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "heredar, herencia, heredero",
+      "source": "tw-es-419-kt-inherit",
+      "refs": ["4:5", "4:6", "4:10"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, israelitas",
+      "source": "tw-es-419-kt-israel",
+      "refs": ["2:12", "4:7", "4:11", "4:14"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "señor, Señor, amo, caballero",
+      "source": "tw-es-419-kt-lord",
+      "refs": ["2:13"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amor, amar, amado",
+      "source": "tw-es-419-kt-love",
+      "refs": ["4:15"]
+    },
+    "kt/peopleofgod": {
+      "en": "people of God",
+      "headword": "Pueblo de Dios, mi pueblo",
+      "source": "tw-es-419-kt-peopleofgod",
+      "refs": ["1:6"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "redimir, redentor, redención",
+      "source": "tw-es-419-kt-redeem",
+      "refs": [
+        "2:20",
+        "3:9",
+        "3:12",
+        "3:13",
+        "4:1",
+        "4:3",
+        "4:4",
+        "4:6",
+        "4:7",
+        "4:8",
+        "4:14"
+      ]
+    },
+    "kt/restore": {
+      "en": "restore, restoration",
+      "headword": "Restaurar, restauración",
+      "source": "tw-es-419-kt-restore",
+      "refs": ["4:15"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "testimonio, testificar, testigo, testigo ocular, dar fe, evidenciar",
+      "source": "tw-es-419-kt-testimony",
+      "refs": ["1:21", "4:9", "4:10", "4:11"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Jehová",
+      "source": "tw-es-419-kt-yahweh",
+      "refs": [
+        "1:6",
+        "1:8",
+        "1:9",
+        "1:13",
+        "1:17",
+        "1:21",
+        "2:4",
+        "2:12",
+        "2:20",
+        "3:10",
+        "3:13",
+        "4:11",
+        "4:12",
+        "4:13",
+        "4:14"
+      ]
+    },
+    "names/bethlehem": {
+      "en": "Bethlehem, Ephrathah",
+      "headword": "Belén, Efrata",
+      "source": "tw-es-419-names-bethlehem",
+      "refs": ["1:1", "1:2", "1:19", "1:22", "2:4", "4:11"]
+    },
+    "names/boaz": {
+      "en": "Boaz",
+      "headword": "Booz",
+      "source": "tw-es-419-names-boaz",
+      "refs": [
+        "2:1",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:8",
+        "2:11",
+        "2:14",
+        "2:15",
+        "2:19",
+        "2:23",
+        "3:2",
+        "3:7",
+        "4:1",
+        "4:5",
+        "4:8",
+        "4:9",
+        "4:13",
+        "4:21"
+      ]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "David",
+      "source": "tw-es-419-names-david",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/ephrathah": {
+      "en": "Ephrath, Ephrathah",
+      "headword": "Efrata, efrateos",
+      "source": "tw-es-419-names-ephrathah",
+      "refs": ["1:2", "4:11"]
+    },
+    "names/jesse": {
+      "en": "Jesse",
+      "headword": "Isaí",
+      "source": "tw-es-419-names-jesse",
+      "refs": ["4:17", "4:22"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "Judá",
+      "source": "tw-es-419-names-judah",
+      "refs": ["4:12"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "Judea",
+      "source": "tw-es-419-names-judea",
+      "refs": ["1:1", "1:2", "1:7"]
+    },
+    "names/leah": {
+      "en": "Leah",
+      "headword": "Lea",
+      "source": "tw-es-419-names-leah",
+      "refs": ["4:11"]
+    },
+    "names/moab": {
+      "en": "Moab, Moabite",
+      "headword": "Moab, Moabita",
+      "source": "tw-es-419-names-moab",
+      "refs": [
+        "1:1",
+        "1:2",
+        "1:4",
+        "1:6",
+        "1:22",
+        "2:2",
+        "2:6",
+        "2:21",
+        "4:3",
+        "4:5",
+        "4:10"
+      ]
+    },
+    "names/rachel": {
+      "en": "Rachel",
+      "headword": "Raquel",
+      "source": "tw-es-419-names-rachel",
+      "refs": ["4:11"]
+    },
+    "names/ruth": {
+      "en": "Ruth",
+      "headword": "Rut",
+      "source": "tw-es-419-names-ruth",
+      "refs": [
+        "1:4",
+        "1:14",
+        "1:16",
+        "1:22",
+        "2:2",
+        "2:8",
+        "2:21",
+        "2:22",
+        "3:9",
+        "4:5",
+        "4:10",
+        "4:13"
+      ]
+    },
+    "names/tamar": {
+      "en": "Tamar",
+      "headword": "Tamar",
+      "source": "tw-es-419-names-tamar",
+      "refs": ["4:12"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "Edad, envejecido, era",
+      "source": "tw-es-419-other-age",
+      "refs": ["1:12", "4:15"]
+    },
+    "other/barley": {
+      "en": "barley",
+      "headword": "Cebada",
+      "source": "tw-es-419-other-barley",
+      "refs": ["1:22", "2:17", "2:23", "3:2", "3:15", "3:17"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "Llevar",
+      "source": "tw-es-419-other-bear",
+      "refs": ["4:12", "4:13", "4:15", "4:17"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "Tiempo Bíblico: día",
+      "source": "tw-es-419-other-biblicaltimeday",
+      "refs": ["1:1"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "Tiempo Biblico: año",
+      "source": "tw-es-419-other-biblicaltimeyear",
+      "refs": ["1:4"]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "Inclinarse, reverenciar, arrodillar, doblar la rodilla",
+      "source": "tw-es-419-other-bow",
+      "refs": ["2:10"]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "pan",
+      "source": "tw-es-419-other-bread",
+      "refs": ["1:6", "2:14"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "Enterrar, enterrado, entierro",
+      "source": "tw-es-419-other-bury",
+      "refs": ["1:17"]
+    },
+    "other/clan": {
+      "en": "clan",
+      "headword": "Clan",
+      "source": "tw-es-419-other-clan",
+      "refs": ["2:1", "2:3"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "Compañero, compañero de trabajo, amigo",
+      "source": "tw-es-419-other-companion",
+      "refs": ["3:14", "4:7"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "Concebir, concepción",
+      "source": "tw-es-419-other-conceive",
+      "refs": ["4:13"]
+    },
+    "other/confirm": {
+      "en": "confirm, confirmation",
+      "headword": "Confirmar, confirmación",
+      "source": "tw-es-419-other-confirm",
+      "refs": ["4:7"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "Tierra",
+      "source": "tw-es-419-other-earth",
+      "refs": ["1:7", "2:6"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "anciano, mayor, viejo",
+      "source": "tw-es-419-other-elder",
+      "refs": ["4:2", "4:4", "4:9", "4:11"]
+    },
+    "other/famine": {
+      "en": "famine",
+      "headword": "hambruna",
+      "source": "tw-es-419-other-famine",
+      "refs": ["1:1"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "extranjero, forastero, residir",
+      "source": "tw-es-419-other-foreigner",
+      "refs": ["2:10"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "abandonar, desamparar, dejar",
+      "source": "tw-es-419-other-forsaken",
+      "refs": ["1:16", "2:20"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "puerta, reja, portero, marco de puerta, entrada",
+      "source": "tw-es-419-other-gate",
+      "refs": ["3:11", "4:1", "4:10", "4:11"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "espigar, espigas",
+      "source": "tw-es-419-other-glean",
+      "refs": [
+        "2:2",
+        "2:3",
+        "2:7",
+        "2:8",
+        "2:15",
+        "2:16",
+        "2:17",
+        "2:18",
+        "2:19",
+        "2:23"
+      ]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "grano, campos de cereales",
+      "source": "tw-es-419-other-grain",
+      "refs": ["2:2", "2:7", "2:14", "3:7"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "cosechar, recoger",
+      "source": "tw-es-419-other-harvest",
+      "refs": [
+        "1:22",
+        "2:3",
+        "2:4",
+        "2:5",
+        "2:6",
+        "2:7",
+        "2:9",
+        "2:14",
+        "2:21",
+        "2:23"
+      ]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "casa, hogar",
+      "source": "tw-es-419-other-house",
+      "refs": ["2:7"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "casa, hogar",
+      "source": "tw-es-419-other-household",
+      "refs": ["1:8", "1:9", "4:11"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "Instruir, instrucción",
+      "source": "tw-es-419-other-instruct",
+      "refs": ["2:9", "3:6"]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "Juez",
+      "source": "tw-es-419-other-judgeposition",
+      "refs": ["1:1"]
+    },
+    "other/kin": {
+      "en": "kin, kinfolk, kindred, kinsman",
+      "headword": "Pariente",
+      "source": "tw-es-419-other-kin",
+      "refs": ["2:20", "3:9", "3:12", "4:1", "4:3", "4:6", "4:8", "4:14"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "Beso",
+      "source": "tw-es-419-other-kiss",
+      "refs": ["1:9", "1:14"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "conocer, conocimiento, desconocido, distinguir",
+      "source": "tw-es-419-other-know",
+      "refs": ["3:3", "3:4", "3:11", "3:14", "3:18", "4:4"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "Laborar, trabajo, obra, obrero",
+      "source": "tw-es-419-other-labor",
+      "refs": ["2:12", "2:19", "3:2"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "Vecino",
+      "source": "tw-es-419-other-neighbor",
+      "refs": ["4:17"]
+    },
+    "other/prosper": {
+      "en": "prosper, prosperity, prosperous",
+      "headword": "Prosperar, prosperidad, próspero",
+      "source": "tw-es-419-other-prosper",
+      "refs": ["4:11"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "reprender, amonestar, corregir",
+      "source": "tw-es-419-other-rebuke",
+      "refs": ["2:16"]
+    },
+    "other/refuge": {
+      "en": "refuge, refugee, shelter, sheltered",
+      "headword": "refugio, refugiado, albergue, albergado",
+      "source": "tw-es-419-other-refuge",
+      "refs": ["2:12"]
+    },
+    "other/renown": {
+      "en": "renown, renowned, famous",
+      "headword": "Renombre, renombrado",
+      "source": "tw-es-419-other-renown",
+      "refs": ["4:11", "4:14"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "Reportar",
+      "source": "tw-es-419-other-report",
+      "refs": ["2:11", "2:19", "3:4", "3:16", "4:4"]
+    },
+    "other/reward": {
+      "en": "reward, prize, deserve",
+      "headword": "Recompensa, recompensar",
+      "source": "tw-es-419-other-reward",
+      "refs": ["2:12"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "gobernar, reinar, gobernador, prefecto, oficial, líder",
+      "source": "tw-es-419-other-ruler",
+      "refs": ["1:1"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "sandalia",
+      "source": "tw-es-419-other-sandal",
+      "refs": ["4:7", "4:8"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "Semilla, semen",
+      "source": "tw-es-419-other-seed",
+      "refs": ["4:12"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "Buscar, buscado",
+      "source": "tw-es-419-other-seek",
+      "refs": ["3:1"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "siervo, sirviente, servir, esclavo, trabajador, servidor",
+      "source": "tw-es-419-other-servant",
+      "refs": [
+        "2:5",
+        "2:6",
+        "2:8",
+        "2:9",
+        "2:13",
+        "2:15",
+        "2:21",
+        "2:22",
+        "2:23",
+        "3:2",
+        "3:9"
+      ]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "vergüenza, avergonzado, deshonra, humillar, reproche",
+      "source": "tw-es-419-other-shame",
+      "refs": ["2:15"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "Trillar, trillando",
+      "source": "tw-es-419-other-thresh",
+      "refs": ["3:2", "3:3", "3:6", "3:14"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "Vigilar, guardar, vigilante",
+      "source": "tw-es-419-other-watch",
+      "refs": ["2:9"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "Trigo",
+      "source": "tw-es-419-other-wheat",
+      "refs": ["2:23"]
+    },
+    "other/winnow": {
+      "en": "winnow, sift",
+      "headword": "Aventar, cernir",
+      "source": "tw-es-419-other-winnow",
+      "refs": ["3:2"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "Vientre",
+      "source": "tw-es-419-other-womb",
+      "refs": ["1:11"]
+    }
+  },
+  "gaps": {
+    "kt/call-toname": "no-article",
+    "other/generation-groupofdescendants": "no-article",
+    "other/house-descendants_nation": "no-article",
+    "other/know-relationship": "no-article"
+  }
+}

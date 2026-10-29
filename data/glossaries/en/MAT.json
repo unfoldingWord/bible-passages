@@ -1,0 +1,4642 @@
+{
+  "language": "en",
+  "book": "MAT",
+  "links": "twl-en-mat",
+  "words": {
+    "repo": "unfoldingWord/en_tw",
+    "release": "v91",
+    "commit": "ff5b3852c27c3a0d01b109e482eb26047dcd20e2"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/abomination": {
+      "en": "abomination, abominable",
+      "headword": "abomination, abominable",
+      "source": "tw-en-kt-abomination",
+      "refs": ["24:15"]
+    },
+    "kt/adultery": {
+      "en": "adultery, adulterous, adulterer, adulteress",
+      "headword": "adultery, adulterous, adulterer, adulteress",
+      "source": "tw-en-kt-adultery",
+      "refs": [
+        "5:27",
+        "5:28",
+        "5:32",
+        "12:39",
+        "15:19",
+        "16:4",
+        "19:9",
+        "19:18"
+      ]
+    },
+    "kt/altar": {
+      "en": "altar",
+      "headword": "altar",
+      "source": "tw-en-kt-altar",
+      "refs": ["5:23", "5:24", "23:18", "23:19", "23:20", "23:35"]
+    },
+    "kt/amen": {
+      "en": "amen, truly",
+      "headword": "amen, truly",
+      "source": "tw-en-kt-amen",
+      "refs": [
+        "5:18",
+        "5:26",
+        "6:2",
+        "6:5",
+        "6:16",
+        "8:10",
+        "10:15",
+        "10:23",
+        "10:42",
+        "11:11",
+        "13:17",
+        "16:28",
+        "17:20",
+        "18:3",
+        "18:13",
+        "18:18",
+        "18:19",
+        "19:23",
+        "19:28",
+        "21:21",
+        "21:31",
+        "23:36",
+        "24:2",
+        "24:34",
+        "24:47",
+        "25:12",
+        "25:40",
+        "25:45",
+        "26:13",
+        "26:21",
+        "26:34"
+      ]
+    },
+    "kt/angel": {
+      "en": "angel, archangel",
+      "headword": "angel, archangel",
+      "source": "tw-en-kt-angel",
+      "refs": [
+        "1:20",
+        "1:24",
+        "2:13",
+        "2:19",
+        "4:6",
+        "4:11",
+        "13:39",
+        "13:41",
+        "13:49",
+        "16:27",
+        "18:10",
+        "22:30",
+        "24:31",
+        "24:36",
+        "25:31",
+        "25:41",
+        "26:53",
+        "28:2",
+        "28:5"
+      ]
+    },
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "anoint, anointed, anointing",
+      "source": "tw-en-kt-anoint",
+      "refs": ["6:17"]
+    },
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "apostle, apostleship",
+      "source": "tw-en-kt-apostle",
+      "refs": ["10:2"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "appoint, appointed",
+      "source": "tw-en-kt-appoint",
+      "refs": ["8:9", "24:45", "24:47", "24:51", "25:21", "25:23"]
+    },
+    "kt/ark": {
+      "en": "ark",
+      "headword": "ark",
+      "source": "tw-en-kt-ark",
+      "refs": ["24:38"]
+    },
+    "kt/authority": {
+      "en": "authority",
+      "headword": "authority",
+      "source": "tw-en-kt-authority",
+      "refs": [
+        "7:29",
+        "8:9",
+        "9:6",
+        "9:8",
+        "10:1",
+        "20:25",
+        "21:23",
+        "21:24",
+        "21:27",
+        "28:18"
+      ]
+    },
+    "kt/baptize": {
+      "en": "baptize, baptized, baptism",
+      "headword": "baptize, baptized, baptism",
+      "source": "tw-en-kt-baptize",
+      "refs": ["3:6", "3:7", "3:11", "3:13", "3:14", "3:16", "21:25", "28:19"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "believe, believer, belief, unbeliever, unbelief",
+      "source": "tw-en-kt-believe",
+      "refs": [
+        "8:13",
+        "9:28",
+        "13:58",
+        "17:17",
+        "18:6",
+        "21:22",
+        "21:25",
+        "21:32",
+        "24:23",
+        "24:26",
+        "27:42"
+      ]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "beloved",
+      "source": "tw-en-kt-beloved",
+      "refs": ["3:17", "12:18", "17:5"]
+    },
+    "kt/blasphemy": {
+      "en": "blasphemy, blaspheme, blasphemous",
+      "headword": "blasphemy, blaspheme, blasphemous",
+      "source": "tw-en-kt-blasphemy",
+      "refs": ["9:3", "12:31", "15:19", "26:65", "27:39"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bless, blessed, blessing",
+      "source": "tw-en-kt-bless",
+      "refs": [
+        "5:3",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:7",
+        "5:8",
+        "5:9",
+        "5:10",
+        "5:11",
+        "11:6",
+        "13:16",
+        "14:19",
+        "16:17",
+        "21:9",
+        "23:39",
+        "24:46",
+        "25:34",
+        "26:26"
+      ]
+    },
+    "kt/bond": {
+      "en": "bind, bond, bound",
+      "headword": "bind, bond, bound",
+      "source": "tw-en-kt-bond",
+      "refs": [
+        "12:29",
+        "13:30",
+        "14:3",
+        "16:19",
+        "18:18",
+        "22:13",
+        "23:4",
+        "27:2"
+      ]
+    },
+    "kt/bornagain": {
+      "en": "born again, born of God, new birth",
+      "headword": "born again, born of God, new birth",
+      "source": "tw-en-kt-bornagain",
+      "refs": ["19:28"]
+    },
+    "kt/call-speakloudly": {
+      "en": "call, called, call out, called out",
+      "headword": "call, called, call out, called out",
+      "source": "tw-en-kt-call-speakloudly",
+      "refs": [
+        "1:16",
+        "1:21",
+        "1:23",
+        "1:25",
+        "2:7",
+        "2:15",
+        "2:23",
+        "4:18",
+        "4:21",
+        "5:9",
+        "5:19",
+        "9:13",
+        "10:1",
+        "10:2",
+        "10:25",
+        "11:16",
+        "13:55",
+        "15:10",
+        "15:32",
+        "18:2",
+        "18:32",
+        "20:8",
+        "20:25",
+        "20:32",
+        "21:13",
+        "22:3",
+        "22:14",
+        "22:43",
+        "22:45",
+        "23:7",
+        "23:8",
+        "23:9",
+        "23:10",
+        "25:14",
+        "26:3",
+        "26:14",
+        "26:36",
+        "27:8",
+        "27:16",
+        "27:17",
+        "27:22",
+        "27:33",
+        "27:47"
+      ]
+    },
+    "kt/centurion": {
+      "en": "centurion",
+      "headword": "centurion",
+      "source": "tw-en-kt-centurion",
+      "refs": ["8:5", "8:8", "8:13", "27:54"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "Christ, Messiah",
+      "source": "tw-en-kt-christ",
+      "refs": [
+        "1:1",
+        "1:16",
+        "1:17",
+        "1:18",
+        "2:4",
+        "11:2",
+        "16:16",
+        "16:20",
+        "16:21",
+        "22:42",
+        "23:10",
+        "24:5",
+        "24:23",
+        "26:63",
+        "26:68",
+        "27:17",
+        "27:22"
+      ]
+    },
+    "kt/church": {
+      "en": "church, Church",
+      "headword": "church, Church",
+      "source": "tw-en-kt-church",
+      "refs": ["16:18", "18:17"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "compassion, compassionate",
+      "source": "tw-en-kt-compassion",
+      "refs": ["9:36", "14:14", "15:32", "18:27", "20:34"]
+    },
+    "kt/condemn": {
+      "en": "condemn, condemned, condemnation",
+      "headword": "condemn, condemned, condemnation",
+      "source": "tw-en-kt-condemn",
+      "refs": ["12:7", "12:37", "12:41", "12:42", "20:18", "27:3"]
+    },
+    "kt/confess": {
+      "en": "confess, confession",
+      "headword": "confess, confession",
+      "source": "tw-en-kt-confess",
+      "refs": ["3:6", "10:32"]
+    },
+    "kt/cornerstone": {
+      "en": "cornerstone",
+      "headword": "cornerstone",
+      "source": "tw-en-kt-cornerstone",
+      "refs": ["21:42"]
+    },
+    "kt/covenant": {
+      "en": "covenant",
+      "headword": "covenant",
+      "source": "tw-en-kt-covenant",
+      "refs": ["26:28"]
+    },
+    "kt/cross": {
+      "en": "cross",
+      "headword": "cross",
+      "source": "tw-en-kt-cross",
+      "refs": ["10:38", "16:24", "27:32", "27:40", "27:42"]
+    },
+    "kt/crucify": {
+      "en": "crucify, crucified",
+      "headword": "crucify, crucified",
+      "source": "tw-en-kt-crucify",
+      "refs": [
+        "20:19",
+        "23:34",
+        "26:2",
+        "27:22",
+        "27:23",
+        "27:26",
+        "27:31",
+        "27:35",
+        "27:38",
+        "27:44",
+        "28:5"
+      ]
+    },
+    "kt/curse": {
+      "en": "curse, cursed, cursing",
+      "headword": "curse, cursed, cursing",
+      "source": "tw-en-kt-curse",
+      "refs": ["25:41", "26:74"]
+    },
+    "kt/demon": {
+      "en": "demon, evil spirit, unclean spirit",
+      "headword": "demon, evil spirit, unclean spirit",
+      "source": "tw-en-kt-demon",
+      "refs": [
+        "7:22",
+        "8:16",
+        "8:31",
+        "9:33",
+        "9:34",
+        "10:1",
+        "10:8",
+        "11:18",
+        "12:24",
+        "12:27",
+        "12:28",
+        "12:43",
+        "12:45",
+        "17:18"
+      ]
+    },
+    "kt/demonpossessed": {
+      "en": "demon-possessed",
+      "headword": "demon-possessed",
+      "source": "tw-en-kt-demonpossessed",
+      "refs": ["4:24", "8:16", "8:28", "8:33", "9:32", "12:22", "15:22"]
+    },
+    "kt/disciple": {
+      "en": "disciple",
+      "headword": "disciple",
+      "source": "tw-en-kt-disciple",
+      "refs": [
+        "5:1",
+        "8:21",
+        "8:23",
+        "9:10",
+        "9:11",
+        "9:14",
+        "9:19",
+        "9:37",
+        "10:1",
+        "10:24",
+        "10:25",
+        "10:42",
+        "11:1",
+        "11:2",
+        "12:1",
+        "12:2",
+        "12:49",
+        "13:10",
+        "13:36",
+        "13:52",
+        "14:12",
+        "14:15",
+        "14:19",
+        "14:22",
+        "14:26",
+        "15:2",
+        "15:12",
+        "15:23",
+        "15:32",
+        "15:33",
+        "15:36",
+        "16:5",
+        "16:13",
+        "16:20",
+        "16:21",
+        "16:24",
+        "17:6",
+        "17:10",
+        "17:13",
+        "17:16",
+        "17:19",
+        "18:1",
+        "19:10",
+        "19:13",
+        "19:23",
+        "19:25",
+        "20:17",
+        "21:1",
+        "21:6",
+        "21:20",
+        "22:16",
+        "23:1",
+        "24:1",
+        "24:3",
+        "26:1",
+        "26:8",
+        "26:17",
+        "26:18",
+        "26:19",
+        "26:26",
+        "26:35",
+        "26:36",
+        "26:40",
+        "26:45",
+        "26:56",
+        "27:57",
+        "27:64",
+        "28:7",
+        "28:8",
+        "28:13",
+        "28:16",
+        "28:19"
+      ]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "chosen, choose, chosen people, Chosen One, elect",
+      "source": "tw-en-kt-elect",
+      "refs": ["12:18", "22:14", "24:22", "24:24", "24:31"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "eternity, everlasting, eternal, forever",
+      "source": "tw-en-kt-eternity",
+      "refs": ["18:8", "19:16", "19:29", "25:41", "25:46"]
+    },
+    "kt/eunuch": {
+      "en": "eunuch",
+      "headword": "eunuch",
+      "source": "tw-en-kt-eunuch",
+      "refs": ["19:12"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "evil, wicked, wickedness, unpleasant",
+      "source": "tw-en-kt-evil",
+      "refs": [
+        "5:11",
+        "5:37",
+        "5:39",
+        "5:45",
+        "6:23",
+        "6:34",
+        "7:11",
+        "9:4",
+        "12:34",
+        "12:35",
+        "12:39",
+        "12:45",
+        "13:49",
+        "15:19",
+        "16:4",
+        "18:32",
+        "20:15",
+        "22:10",
+        "22:18",
+        "24:48",
+        "25:26",
+        "27:23"
+      ]
+    },
+    "kt/exalt": {
+      "en": "exalt, exalted, exaltation",
+      "headword": "exalt, exalted, exaltation",
+      "source": "tw-en-kt-exalt",
+      "refs": ["11:23", "23:12"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "faith",
+      "source": "tw-en-kt-faith",
+      "refs": [
+        "6:30",
+        "8:10",
+        "8:26",
+        "9:2",
+        "9:22",
+        "9:29",
+        "15:28",
+        "16:8",
+        "17:20",
+        "21:21"
+      ]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "faithful, faithfulness, trustworthy",
+      "source": "tw-en-kt-faithful",
+      "refs": ["23:23", "24:45", "25:21", "25:23"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "fear, afraid, frighten",
+      "source": "tw-en-kt-fear",
+      "refs": [
+        "1:20",
+        "2:22",
+        "9:8",
+        "10:26",
+        "10:28",
+        "10:31",
+        "14:5",
+        "14:26",
+        "14:27",
+        "14:30",
+        "17:6",
+        "17:7",
+        "21:26",
+        "21:46",
+        "25:25",
+        "27:54",
+        "28:4",
+        "28:5",
+        "28:8",
+        "28:10"
+      ]
+    },
+    "kt/foolish": {
+      "en": "fool, foolish, folly",
+      "headword": "fool, foolish, folly",
+      "source": "tw-en-kt-foolish",
+      "refs": ["5:22", "7:26", "23:17", "23:19", "25:2", "25:3", "25:8"]
+    },
+    "kt/forgive": {
+      "en": "forgive, forgiven, forgiveness, pardon, pardoned",
+      "headword": "forgive, forgiven, forgiveness, pardon, pardoned",
+      "source": "tw-en-kt-forgive",
+      "refs": [
+        "6:12",
+        "6:14",
+        "6:15",
+        "9:2",
+        "9:5",
+        "9:6",
+        "12:31",
+        "12:32",
+        "18:21",
+        "18:27",
+        "18:32",
+        "18:35",
+        "26:28"
+      ]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "fulfill, fulfilled, carried out",
+      "source": "tw-en-kt-fulfill",
+      "refs": [
+        "1:22",
+        "2:15",
+        "2:17",
+        "2:23",
+        "3:15",
+        "4:14",
+        "5:17",
+        "8:17",
+        "12:17",
+        "13:14",
+        "13:35",
+        "21:4",
+        "26:54",
+        "26:56",
+        "27:9"
+      ]
+    },
+    "kt/gentile": {
+      "en": "Gentile",
+      "headword": "Gentile",
+      "source": "tw-en-kt-gentile",
+      "refs": [
+        "4:15",
+        "5:47",
+        "6:7",
+        "6:32",
+        "10:5",
+        "10:18",
+        "12:18",
+        "12:21",
+        "18:17",
+        "20:19",
+        "20:25"
+      ]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "glory, glorious, glorify",
+      "source": "tw-en-kt-glory",
+      "refs": [
+        "4:8",
+        "5:16",
+        "6:2",
+        "6:29",
+        "9:8",
+        "15:31",
+        "16:27",
+        "19:28",
+        "24:30",
+        "25:31"
+      ]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "God",
+      "source": "tw-en-kt-god",
+      "refs": [
+        "1:23",
+        "3:9",
+        "4:3",
+        "4:4",
+        "4:6",
+        "4:7",
+        "4:10",
+        "5:8",
+        "5:9",
+        "5:34",
+        "6:24",
+        "6:30",
+        "9:8",
+        "12:4",
+        "15:3",
+        "15:4",
+        "15:31",
+        "16:23",
+        "19:6",
+        "19:26",
+        "22:16",
+        "22:21",
+        "22:29",
+        "22:31",
+        "22:32",
+        "22:37",
+        "23:22",
+        "26:61",
+        "26:63",
+        "27:40",
+        "27:43",
+        "27:46"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "God the Father, heavenly Father, Father",
+      "source": "tw-en-kt-godthefather",
+      "refs": [
+        "5:16",
+        "5:45",
+        "5:48",
+        "6:1",
+        "6:4",
+        "6:6",
+        "6:8",
+        "6:9",
+        "6:14",
+        "6:15",
+        "6:18",
+        "6:26",
+        "6:32",
+        "7:11",
+        "7:21",
+        "10:20",
+        "10:29",
+        "10:32",
+        "10:33",
+        "11:25",
+        "11:26",
+        "11:27",
+        "12:50",
+        "13:43",
+        "15:13",
+        "16:17",
+        "16:27",
+        "18:10",
+        "18:14",
+        "18:19",
+        "18:35",
+        "20:23",
+        "23:9",
+        "24:36",
+        "25:34",
+        "26:29",
+        "26:39",
+        "26:53",
+        "28:19"
+      ]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "good, right, pleasant, better, best, goodness",
+      "source": "tw-en-kt-good",
+      "refs": [
+        "3:10",
+        "5:16",
+        "5:45",
+        "7:11",
+        "7:17",
+        "7:18",
+        "7:19",
+        "12:12",
+        "12:33",
+        "12:34",
+        "12:35",
+        "13:8",
+        "13:23",
+        "13:24",
+        "13:27",
+        "13:37",
+        "13:38",
+        "13:45",
+        "13:48",
+        "15:26",
+        "17:4",
+        "18:8",
+        "18:9",
+        "19:16",
+        "19:17",
+        "20:15",
+        "22:10",
+        "25:21",
+        "25:23",
+        "26:10",
+        "26:24"
+      ]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "good news, gospel",
+      "source": "tw-en-kt-goodnews",
+      "refs": ["4:23", "9:35", "11:5", "24:14", "26:13"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "Hades, Sheol",
+      "source": "tw-en-kt-hades",
+      "refs": ["11:23", "16:18"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "heaven, sky, heavens, heavenly",
+      "source": "tw-en-kt-heaven",
+      "refs": [
+        "3:2",
+        "3:16",
+        "3:17",
+        "4:17",
+        "5:3",
+        "5:10",
+        "5:12",
+        "5:16",
+        "5:18",
+        "5:19",
+        "5:20",
+        "5:34",
+        "5:45",
+        "5:48",
+        "6:1",
+        "6:9",
+        "6:10",
+        "6:14",
+        "6:20",
+        "6:26",
+        "6:32",
+        "7:11",
+        "7:21",
+        "8:11",
+        "8:20",
+        "10:7",
+        "10:32",
+        "10:33",
+        "11:11",
+        "11:12",
+        "11:23",
+        "11:25",
+        "12:50",
+        "13:11",
+        "13:24",
+        "13:31",
+        "13:32",
+        "13:33",
+        "13:44",
+        "13:45",
+        "13:47",
+        "13:52",
+        "14:19",
+        "15:13",
+        "16:1",
+        "16:17",
+        "16:19",
+        "18:1",
+        "18:3",
+        "18:4",
+        "18:10",
+        "18:14",
+        "18:18",
+        "18:19",
+        "18:23",
+        "18:35",
+        "19:12",
+        "19:14",
+        "19:21",
+        "19:23",
+        "20:1",
+        "21:25",
+        "22:2",
+        "22:30",
+        "23:9",
+        "23:13",
+        "23:22",
+        "24:29",
+        "24:30",
+        "24:31",
+        "24:35",
+        "24:36",
+        "25:1",
+        "26:64",
+        "28:2",
+        "28:18"
+      ]
+    },
+    "kt/hell": {
+      "en": "hell, lake of fire",
+      "headword": "hell, lake of fire",
+      "source": "tw-en-kt-hell",
+      "refs": ["5:22", "5:29", "5:30", "10:28", "18:9", "23:15", "23:33"]
+    },
+    "kt/highpriest": {
+      "en": "high priest, chief priest",
+      "headword": "high priest, chief priest",
+      "source": "tw-en-kt-highpriest",
+      "refs": [
+        "2:4",
+        "16:21",
+        "20:18",
+        "21:15",
+        "21:23",
+        "21:45",
+        "26:3",
+        "26:14",
+        "26:47",
+        "26:51",
+        "26:57",
+        "26:58",
+        "26:59",
+        "26:62",
+        "26:63",
+        "26:65",
+        "27:1",
+        "27:3",
+        "27:6",
+        "27:12",
+        "27:20",
+        "27:41",
+        "27:62",
+        "28:11"
+      ]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "holy, holiness, unholy, sacred",
+      "source": "tw-en-kt-holy",
+      "refs": ["4:5", "7:6", "24:15", "27:53"]
+    },
+    "kt/holyplace": {
+      "en": "holy place",
+      "headword": "holy place",
+      "source": "tw-en-kt-holyplace",
+      "refs": ["24:15"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "source": "tw-en-kt-holyspirit",
+      "refs": [
+        "1:18",
+        "1:20",
+        "3:11",
+        "3:16",
+        "4:1",
+        "10:20",
+        "12:18",
+        "12:28",
+        "12:31",
+        "12:32",
+        "22:43",
+        "28:19"
+      ]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "honor",
+      "source": "tw-en-kt-honor",
+      "refs": ["15:4", "15:6", "15:8", "19:19"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "hope, hoped",
+      "source": "tw-en-kt-hope",
+      "refs": ["12:21"]
+    },
+    "kt/houseofgod": {
+      "en": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "headword": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "source": "tw-en-kt-houseofgod",
+      "refs": ["12:4"]
+    },
+    "kt/humble": {
+      "en": "humble, humbled, humility",
+      "headword": "humble, humbled, humility",
+      "source": "tw-en-kt-humble",
+      "refs": ["11:29", "18:4", "23:12"]
+    },
+    "kt/hypocrite": {
+      "en": "hypocrite, hypocrisy",
+      "headword": "hypocrite, hypocrisy",
+      "source": "tw-en-kt-hypocrite",
+      "refs": [
+        "6:2",
+        "6:5",
+        "6:16",
+        "7:5",
+        "15:7",
+        "22:18",
+        "23:13",
+        "23:15",
+        "23:23",
+        "23:25",
+        "23:27",
+        "23:28",
+        "23:29",
+        "24:51"
+      ]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "inherit, inheritance, heir",
+      "source": "tw-en-kt-inherit",
+      "refs": ["5:5", "19:29", "21:38", "25:34"]
+    },
+    "kt/innocent": {
+      "en": "innocent",
+      "headword": "innocent",
+      "source": "tw-en-kt-innocent",
+      "refs": ["12:5", "12:7", "27:4", "27:24"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, Israelites",
+      "source": "tw-en-kt-israel",
+      "refs": [
+        "2:6",
+        "2:20",
+        "2:21",
+        "8:10",
+        "9:33",
+        "10:6",
+        "10:23",
+        "15:24",
+        "15:31",
+        "19:28",
+        "27:9",
+        "27:42"
+      ]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "Jesus, Jesus Christ, Christ Jesus",
+      "source": "tw-en-kt-jesus",
+      "refs": [
+        "1:1",
+        "1:16",
+        "1:18",
+        "1:21",
+        "1:25",
+        "2:1",
+        "3:13",
+        "3:15",
+        "3:16",
+        "4:1",
+        "4:7",
+        "4:10",
+        "4:17",
+        "7:28",
+        "8:4",
+        "8:10",
+        "8:13",
+        "8:14",
+        "8:18",
+        "8:20",
+        "8:22",
+        "8:34",
+        "9:2",
+        "9:4",
+        "9:9",
+        "9:10",
+        "9:15",
+        "9:19",
+        "9:22",
+        "9:23",
+        "9:27",
+        "9:28",
+        "9:30",
+        "9:35",
+        "10:5",
+        "11:1",
+        "11:4",
+        "11:7",
+        "11:25",
+        "12:1",
+        "12:15",
+        "13:1",
+        "13:34",
+        "13:53",
+        "13:57",
+        "14:1",
+        "14:12",
+        "14:13",
+        "14:16",
+        "14:27",
+        "14:29",
+        "14:31",
+        "15:1",
+        "15:21",
+        "15:28",
+        "15:29",
+        "15:32",
+        "15:34",
+        "16:6",
+        "16:8",
+        "16:13",
+        "16:17",
+        "16:21",
+        "16:24",
+        "17:1",
+        "17:4",
+        "17:7",
+        "17:8",
+        "17:9",
+        "17:17",
+        "17:18",
+        "17:19",
+        "17:22",
+        "17:25",
+        "17:26",
+        "18:1",
+        "18:22",
+        "19:1",
+        "19:14",
+        "19:18",
+        "19:21",
+        "19:23",
+        "19:26",
+        "19:28",
+        "20:17",
+        "20:22",
+        "20:25",
+        "20:30",
+        "20:32",
+        "20:34",
+        "21:1",
+        "21:6",
+        "21:11",
+        "21:12",
+        "21:16",
+        "21:21",
+        "21:24",
+        "21:27",
+        "21:31",
+        "21:42",
+        "22:1",
+        "22:18",
+        "22:29",
+        "22:41",
+        "23:1",
+        "24:1",
+        "24:4",
+        "26:1",
+        "26:4",
+        "26:6",
+        "26:10",
+        "26:17",
+        "26:19",
+        "26:26",
+        "26:31",
+        "26:34",
+        "26:36",
+        "26:49",
+        "26:50",
+        "26:51",
+        "26:52",
+        "26:55",
+        "26:57",
+        "26:59",
+        "26:63",
+        "26:64",
+        "26:69",
+        "26:71",
+        "26:75",
+        "27:1",
+        "27:11",
+        "27:17",
+        "27:20",
+        "27:22",
+        "27:26",
+        "27:27",
+        "27:37",
+        "27:46",
+        "27:50",
+        "27:54",
+        "27:55",
+        "27:57",
+        "27:58",
+        "28:5",
+        "28:9",
+        "28:10",
+        "28:16",
+        "28:18"
+      ]
+    },
+    "kt/jew": {
+      "en": "Jew, Jewish",
+      "headword": "Jew, Jewish",
+      "source": "tw-en-kt-jew",
+      "refs": ["2:2", "27:11", "27:29", "27:37", "28:15"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "judge, judgment",
+      "source": "tw-en-kt-judge",
+      "refs": [
+        "5:21",
+        "5:22",
+        "5:40",
+        "7:1",
+        "7:2",
+        "10:15",
+        "11:22",
+        "11:24",
+        "12:36",
+        "12:41",
+        "12:42",
+        "19:28",
+        "23:33"
+      ]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "just, justice, unjust, injustice, justify, justification",
+      "source": "tw-en-kt-justice",
+      "refs": ["5:45", "11:19", "12:18", "12:20", "12:37", "23:23"]
+    },
+    "kt/kingdomofgod": {
+      "en": "kingdom of God, kingdom of heaven",
+      "headword": "kingdom of God, kingdom of heaven",
+      "source": "tw-en-kt-kingdomofgod",
+      "refs": [
+        "3:2",
+        "4:17",
+        "4:23",
+        "5:3",
+        "5:10",
+        "5:19",
+        "5:20",
+        "6:10",
+        "6:33",
+        "7:21",
+        "8:11",
+        "8:12",
+        "9:35",
+        "10:7",
+        "11:11",
+        "11:12",
+        "12:28",
+        "13:11",
+        "13:19",
+        "13:24",
+        "13:31",
+        "13:33",
+        "13:38",
+        "13:41",
+        "13:43",
+        "13:44",
+        "13:45",
+        "13:47",
+        "13:52",
+        "16:19",
+        "16:28",
+        "18:1",
+        "18:3",
+        "18:4",
+        "18:23",
+        "19:12",
+        "19:14",
+        "19:23",
+        "19:24",
+        "20:1",
+        "20:21",
+        "21:31",
+        "21:43",
+        "22:2",
+        "23:13",
+        "24:14",
+        "25:1",
+        "25:34",
+        "26:29"
+      ]
+    },
+    "kt/kingofthejews": {
+      "en": "King of the Jews",
+      "headword": "King of the Jews",
+      "source": "tw-en-kt-kingofthejews",
+      "refs": ["2:2", "27:11", "27:29", "27:37"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "law, law of Moses, law of Yahweh, law of God",
+      "source": "tw-en-kt-lawofmoses",
+      "refs": [
+        "5:17",
+        "5:18",
+        "7:12",
+        "11:13",
+        "12:5",
+        "22:36",
+        "22:40",
+        "23:23"
+      ]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "lord, Lord, master, sir",
+      "source": "tw-en-kt-lord",
+      "refs": [
+        "1:20",
+        "1:22",
+        "1:24",
+        "2:13",
+        "2:15",
+        "2:19",
+        "3:3",
+        "4:7",
+        "4:10",
+        "5:33",
+        "6:24",
+        "7:21",
+        "7:22",
+        "8:2",
+        "8:6",
+        "8:8",
+        "8:21",
+        "8:25",
+        "9:28",
+        "9:38",
+        "10:24",
+        "10:25",
+        "11:25",
+        "12:8",
+        "13:27",
+        "14:28",
+        "14:30",
+        "15:22",
+        "15:25",
+        "15:27",
+        "16:22",
+        "17:4",
+        "17:15",
+        "18:21",
+        "18:25",
+        "18:26",
+        "18:27",
+        "18:31",
+        "18:32",
+        "18:34",
+        "20:8",
+        "20:11",
+        "20:30",
+        "20:31",
+        "20:33",
+        "21:3",
+        "21:9",
+        "21:30",
+        "21:40",
+        "21:42",
+        "22:37",
+        "22:43",
+        "22:44",
+        "22:45",
+        "23:39",
+        "24:42",
+        "24:43",
+        "24:45",
+        "24:46",
+        "24:48",
+        "24:50",
+        "25:11",
+        "25:18",
+        "25:19",
+        "25:20",
+        "25:21",
+        "25:22",
+        "25:23",
+        "25:24",
+        "25:26",
+        "25:37",
+        "25:44",
+        "26:22",
+        "27:10",
+        "27:63",
+        "28:2"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "love, beloved",
+      "source": "tw-en-kt-love",
+      "refs": [
+        "5:43",
+        "5:44",
+        "5:46",
+        "6:5",
+        "6:24",
+        "10:37",
+        "19:19",
+        "22:37",
+        "22:39",
+        "23:6",
+        "24:12"
+      ]
+    },
+    "kt/mercy": {
+      "en": "mercy, merciful",
+      "headword": "mercy, merciful",
+      "source": "tw-en-kt-mercy",
+      "refs": [
+        "5:7",
+        "9:13",
+        "9:27",
+        "12:7",
+        "15:22",
+        "17:15",
+        "18:33",
+        "20:30",
+        "20:31",
+        "23:23"
+      ]
+    },
+    "kt/minister": {
+      "en": "to minister, ministry",
+      "headword": "to minister, ministry",
+      "source": "tw-en-kt-minister",
+      "refs": [
+        "4:11",
+        "8:15",
+        "20:26",
+        "20:28",
+        "22:13",
+        "23:11",
+        "25:44",
+        "27:55"
+      ]
+    },
+    "kt/miracle": {
+      "en": "miracle, wonder, sign",
+      "headword": "miracle, wonder, sign",
+      "source": "tw-en-kt-miracle",
+      "refs": ["7:22", "11:20", "11:21", "11:23", "13:54", "13:58", "21:15"]
+    },
+    "kt/myrrh": {
+      "en": "myrrh",
+      "headword": "myrrh",
+      "source": "tw-en-kt-myrrh",
+      "refs": ["2:11"]
+    },
+    "kt/parable": {
+      "en": "parable",
+      "headword": "parable",
+      "source": "tw-en-kt-parable",
+      "refs": [
+        "13:3",
+        "13:10",
+        "13:13",
+        "13:18",
+        "13:24",
+        "13:31",
+        "13:33",
+        "13:34",
+        "13:35",
+        "13:36",
+        "13:53",
+        "15:15",
+        "21:33",
+        "21:45",
+        "22:1",
+        "24:32"
+      ]
+    },
+    "kt/passover": {
+      "en": "Passover",
+      "headword": "Passover",
+      "source": "tw-en-kt-passover",
+      "refs": ["26:2", "26:17", "26:18", "26:19"]
+    },
+    "kt/peopleofgod": {
+      "en": "people of God",
+      "headword": "people of God",
+      "source": "tw-en-kt-peopleofgod",
+      "refs": ["1:21"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "perish",
+      "source": "tw-en-kt-perish",
+      "refs": [
+        "5:29",
+        "5:30",
+        "8:25",
+        "8:32",
+        "9:17",
+        "10:6",
+        "10:28",
+        "10:39",
+        "10:42",
+        "15:24",
+        "16:25",
+        "18:14",
+        "21:41",
+        "22:7",
+        "26:52"
+      ]
+    },
+    "kt/pharisee": {
+      "en": "Pharisee",
+      "headword": "Pharisee",
+      "source": "tw-en-kt-pharisee",
+      "refs": [
+        "3:7",
+        "5:20",
+        "9:11",
+        "9:14",
+        "9:34",
+        "12:2",
+        "12:14",
+        "12:24",
+        "12:38",
+        "15:1",
+        "15:12",
+        "16:1",
+        "16:6",
+        "16:11",
+        "16:12",
+        "19:3",
+        "21:45",
+        "22:15",
+        "22:34",
+        "22:41",
+        "23:2",
+        "23:13",
+        "23:15",
+        "23:23",
+        "23:25",
+        "23:26",
+        "23:27",
+        "23:29",
+        "27:62"
+      ]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "pray, prayer",
+      "source": "tw-en-kt-pray",
+      "refs": [
+        "5:44",
+        "6:5",
+        "6:6",
+        "6:7",
+        "6:9",
+        "14:23",
+        "19:13",
+        "21:13",
+        "21:22",
+        "24:20",
+        "26:36",
+        "26:39",
+        "26:41",
+        "26:42",
+        "26:44"
+      ]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "priest, priesthood",
+      "source": "tw-en-kt-priest",
+      "refs": ["8:4", "12:4", "12:5"]
+    },
+    "kt/promise": {
+      "en": "promise, promised",
+      "headword": "promise, promised",
+      "source": "tw-en-kt-promise",
+      "refs": ["14:7"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "prophet, prophecy, prophesy, seer, prophetess",
+      "source": "tw-en-kt-prophet",
+      "refs": [
+        "1:22",
+        "2:5",
+        "2:15",
+        "2:17",
+        "2:23",
+        "3:3",
+        "4:14",
+        "5:12",
+        "5:17",
+        "7:12",
+        "7:22",
+        "8:17",
+        "10:41",
+        "11:9",
+        "11:13",
+        "12:17",
+        "12:39",
+        "13:14",
+        "13:17",
+        "13:35",
+        "13:57",
+        "14:5",
+        "15:7",
+        "16:14",
+        "21:4",
+        "21:11",
+        "21:26",
+        "21:46",
+        "22:40",
+        "23:29",
+        "23:30",
+        "23:31",
+        "23:34",
+        "23:37",
+        "24:15",
+        "26:56",
+        "26:68",
+        "27:9"
+      ]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "pure, purify, purification",
+      "source": "tw-en-kt-purify",
+      "refs": ["5:8"]
+    },
+    "kt/rabbi": {
+      "en": "Rabbi",
+      "headword": "Rabbi",
+      "source": "tw-en-kt-rabbi",
+      "refs": ["23:7", "23:8", "26:25", "26:49"]
+    },
+    "kt/ransom": {
+      "en": "ransom, ransomed",
+      "headword": "ransom, ransomed",
+      "source": "tw-en-kt-ransom",
+      "refs": ["20:28"]
+    },
+    "kt/reconcile": {
+      "en": "reconcile, reconciled, reconciliation",
+      "headword": "reconcile, reconciled, reconciliation",
+      "source": "tw-en-kt-reconcile",
+      "refs": ["5:24"]
+    },
+    "kt/repent": {
+      "en": "repent, repentance",
+      "headword": "repent, repentance",
+      "source": "tw-en-kt-repent",
+      "refs": [
+        "3:2",
+        "3:8",
+        "3:11",
+        "4:17",
+        "11:20",
+        "11:21",
+        "12:41",
+        "21:29",
+        "21:32",
+        "27:3"
+      ]
+    },
+    "kt/resurrection": {
+      "en": "resurrection",
+      "headword": "resurrection",
+      "source": "tw-en-kt-resurrection",
+      "refs": ["22:23", "22:28", "22:30", "22:31", "27:53"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "source": "tw-en-kt-righteous",
+      "refs": [
+        "1:19",
+        "3:15",
+        "5:6",
+        "5:10",
+        "5:20",
+        "6:1",
+        "6:33",
+        "9:13",
+        "10:41",
+        "13:17",
+        "13:43",
+        "13:49",
+        "20:4",
+        "21:32",
+        "23:28",
+        "23:29",
+        "23:35",
+        "25:37",
+        "25:46",
+        "27:19"
+      ]
+    },
+    "kt/sabbath": {
+      "en": "Sabbath",
+      "headword": "Sabbath",
+      "source": "tw-en-kt-sabbath",
+      "refs": [
+        "12:1",
+        "12:2",
+        "12:5",
+        "12:8",
+        "12:10",
+        "12:11",
+        "12:12",
+        "24:20",
+        "28:1"
+      ]
+    },
+    "kt/sadducee": {
+      "en": "Sadducee",
+      "headword": "Sadducee",
+      "source": "tw-en-kt-sadducee",
+      "refs": ["3:7", "16:1", "16:6", "16:11", "16:12", "22:23", "22:34"]
+    },
+    "kt/saint": {
+      "en": "saint",
+      "headword": "saint",
+      "source": "tw-en-kt-saint",
+      "refs": ["27:52"]
+    },
+    "kt/sanctify": {
+      "en": "sanctify, sanctification",
+      "headword": "sanctify, sanctification",
+      "source": "tw-en-kt-sanctify",
+      "refs": ["6:9", "23:17", "23:19"]
+    },
+    "kt/satan": {
+      "en": "Satan, devil, evil one",
+      "headword": "Satan, devil, evil one",
+      "source": "tw-en-kt-satan",
+      "refs": [
+        "4:1",
+        "4:5",
+        "4:8",
+        "4:10",
+        "4:11",
+        "6:13",
+        "12:26",
+        "13:19",
+        "13:38",
+        "13:39",
+        "16:23",
+        "25:41"
+      ]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "save, saved, safe, salvation, rescue",
+      "source": "tw-en-kt-save",
+      "refs": [
+        "1:21",
+        "8:25",
+        "10:22",
+        "14:30",
+        "16:25",
+        "19:25",
+        "24:13",
+        "24:22",
+        "27:40",
+        "27:42",
+        "27:49"
+      ]
+    },
+    "kt/scribe": {
+      "en": "scribe",
+      "headword": "scribe",
+      "source": "tw-en-kt-scribe",
+      "refs": [
+        "2:4",
+        "5:20",
+        "7:29",
+        "8:19",
+        "9:3",
+        "12:38",
+        "13:52",
+        "15:1",
+        "16:21",
+        "17:10",
+        "20:18",
+        "21:15",
+        "23:2",
+        "23:13",
+        "23:15",
+        "23:23",
+        "23:25",
+        "23:27",
+        "23:29",
+        "23:34",
+        "26:57",
+        "27:41"
+      ]
+    },
+    "kt/sign": {
+      "en": "sign, proof, reminder",
+      "headword": "sign, proof, reminder",
+      "source": "tw-en-kt-sign",
+      "refs": [
+        "12:38",
+        "12:39",
+        "16:1",
+        "16:4",
+        "24:3",
+        "24:24",
+        "24:30",
+        "26:48"
+      ]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "sin, sinful, sinner, sinning",
+      "source": "tw-en-kt-sin",
+      "refs": [
+        "1:21",
+        "3:6",
+        "9:2",
+        "9:5",
+        "9:6",
+        "9:10",
+        "9:11",
+        "9:13",
+        "11:19",
+        "12:31",
+        "18:15",
+        "18:21",
+        "26:28",
+        "26:45",
+        "27:4"
+      ]
+    },
+    "kt/sonofgod": {
+      "en": "Son of God, the Son",
+      "headword": "Son of God, the Son",
+      "source": "tw-en-kt-sonofgod",
+      "refs": [
+        "2:15",
+        "3:17",
+        "4:3",
+        "4:6",
+        "8:29",
+        "11:27",
+        "14:33",
+        "16:16",
+        "17:5",
+        "24:36",
+        "26:63",
+        "27:40",
+        "27:43",
+        "27:54",
+        "28:19"
+      ]
+    },
+    "kt/sonofman": {
+      "en": "Son of Man, son of man",
+      "headword": "Son of Man, son of man",
+      "source": "tw-en-kt-sonofman",
+      "refs": [
+        "8:20",
+        "9:6",
+        "10:23",
+        "11:19",
+        "12:8",
+        "12:32",
+        "12:40",
+        "13:37",
+        "13:41",
+        "16:13",
+        "16:27",
+        "16:28",
+        "17:9",
+        "17:12",
+        "17:22",
+        "19:28",
+        "20:18",
+        "20:28",
+        "24:27",
+        "24:30",
+        "24:37",
+        "24:39",
+        "24:44",
+        "25:31",
+        "26:2",
+        "26:24",
+        "26:45",
+        "26:64"
+      ]
+    },
+    "kt/sonsofgod": {
+      "en": "sons of God, children of God",
+      "headword": "sons of God, children of God",
+      "source": "tw-en-kt-sonsofgod",
+      "refs": ["5:9", "5:45"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "soul, self",
+      "source": "tw-en-kt-soul",
+      "refs": ["10:28", "11:29", "12:18", "16:26", "22:37", "26:38"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "spirit, wind, breath",
+      "source": "tw-en-kt-spirit",
+      "refs": ["5:3", "26:41", "27:50"]
+    },
+    "kt/stone": {
+      "en": "stone, stoning",
+      "headword": "stone, stoning",
+      "source": "tw-en-kt-stone",
+      "refs": ["21:35", "23:37"]
+    },
+    "kt/synagogue": {
+      "en": "synagogue",
+      "headword": "synagogue",
+      "source": "tw-en-kt-synagogue",
+      "refs": [
+        "4:23",
+        "6:2",
+        "6:5",
+        "9:35",
+        "10:17",
+        "12:9",
+        "13:54",
+        "23:6",
+        "23:34"
+      ]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "temple, house, house of God",
+      "source": "tw-en-kt-temple",
+      "refs": [
+        "4:5",
+        "12:5",
+        "12:6",
+        "21:12",
+        "21:14",
+        "21:15",
+        "21:23",
+        "23:16",
+        "23:17",
+        "23:21",
+        "23:35",
+        "24:1",
+        "26:55",
+        "26:61",
+        "27:5",
+        "27:40",
+        "27:51"
+      ]
+    },
+    "kt/tempt": {
+      "en": "tempt, temptation",
+      "headword": "tempt, temptation",
+      "source": "tw-en-kt-tempt",
+      "refs": ["4:1", "4:3", "6:13", "26:41"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "test, tested, testing, testing in the fire",
+      "source": "tw-en-kt-test",
+      "refs": ["4:7", "16:1", "19:3", "22:18", "22:35"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "testimony, testify, witness, eyewitness, evidence",
+      "source": "tw-en-kt-testimony",
+      "refs": ["8:4", "10:18", "18:16", "23:31", "24:14", "26:65"]
+    },
+    "kt/tetrarch": {
+      "en": "tetrarch",
+      "headword": "tetrarch",
+      "source": "tw-en-kt-tetrarch",
+      "refs": ["14:1"]
+    },
+    "kt/thetwelve": {
+      "en": "the twelve, the eleven",
+      "headword": "the twelve, the eleven",
+      "source": "tw-en-kt-thetwelve",
+      "refs": [
+        "10:1",
+        "10:2",
+        "10:5",
+        "11:1",
+        "20:17",
+        "26:14",
+        "26:20",
+        "26:47",
+        "28:16"
+      ]
+    },
+    "kt/trespass": {
+      "en": "trespass",
+      "headword": "trespass",
+      "source": "tw-en-kt-trespass",
+      "refs": ["6:14", "6:15"]
+    },
+    "kt/trust": {
+      "en": "trust, trusted, trustworthy, trustworthiness",
+      "headword": "trust, trusted, trustworthy, trustworthiness",
+      "source": "tw-en-kt-trust",
+      "refs": ["27:43"]
+    },
+    "kt/unleavenedbread": {
+      "en": "unleavened bread",
+      "headword": "unleavened bread",
+      "source": "tw-en-kt-unleavenedbread",
+      "refs": ["26:17"]
+    },
+    "kt/willofgod": {
+      "en": "will of God",
+      "headword": "will of God",
+      "source": "tw-en-kt-willofgod",
+      "refs": ["6:10", "7:21", "12:50", "18:14", "26:42"]
+    },
+    "kt/wise": {
+      "en": "wise, wisdom",
+      "headword": "wise, wisdom",
+      "source": "tw-en-kt-wise",
+      "refs": [
+        "7:24",
+        "10:16",
+        "11:19",
+        "11:25",
+        "12:42",
+        "13:54",
+        "23:34",
+        "24:45",
+        "25:2",
+        "25:4",
+        "25:8",
+        "25:9"
+      ]
+    },
+    "kt/woe": {
+      "en": "woe",
+      "headword": "woe",
+      "source": "tw-en-kt-woe",
+      "refs": [
+        "11:21",
+        "18:7",
+        "23:13",
+        "23:15",
+        "23:16",
+        "23:23",
+        "23:25",
+        "23:27",
+        "23:29",
+        "24:19",
+        "26:24"
+      ]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "source": "tw-en-kt-wordofgod",
+      "refs": ["15:6", "21:42", "22:29", "26:54", "26:56"]
+    },
+    "kt/world": {
+      "en": "world, worldly",
+      "headword": "world, worldly",
+      "source": "tw-en-kt-world",
+      "refs": [
+        "4:8",
+        "5:14",
+        "13:35",
+        "13:38",
+        "16:26",
+        "18:7",
+        "24:14",
+        "24:21",
+        "25:34",
+        "26:13"
+      ]
+    },
+    "kt/worship": {
+      "en": "prostrate, bow down, worship",
+      "headword": "prostrate, bow down, worship",
+      "source": "tw-en-kt-worship",
+      "refs": [
+        "2:2",
+        "2:8",
+        "2:11",
+        "4:9",
+        "4:10",
+        "8:2",
+        "14:33",
+        "15:9",
+        "15:25",
+        "18:26",
+        "28:9",
+        "28:17"
+      ]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "wrath, fury",
+      "source": "tw-en-kt-wrath",
+      "refs": ["3:7"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "Zion, Mount Zion",
+      "source": "tw-en-kt-zion",
+      "refs": ["21:5"]
+    },
+    "names/abel": {
+      "en": "Abel",
+      "headword": "Abel",
+      "source": "tw-en-names-abel",
+      "refs": ["23:35"]
+    },
+    "names/abijah": {
+      "en": "Abijah",
+      "headword": "Abijah",
+      "source": "tw-en-names-abijah",
+      "refs": ["1:7"]
+    },
+    "names/abraham": {
+      "en": "Abraham, Abram",
+      "headword": "Abraham, Abram",
+      "source": "tw-en-names-abraham",
+      "refs": ["1:1", "1:2", "1:17", "3:9", "8:11", "22:32"]
+    },
+    "names/ahaz": {
+      "en": "Ahaz",
+      "headword": "Ahaz",
+      "source": "tw-en-names-ahaz",
+      "refs": ["1:9"]
+    },
+    "names/andrew": {
+      "en": "Andrew",
+      "headword": "Andrew",
+      "source": "tw-en-names-andrew",
+      "refs": ["4:18", "10:2"]
+    },
+    "names/asa": {
+      "en": "Asa",
+      "headword": "Asa",
+      "source": "tw-en-names-asa",
+      "refs": ["1:7", "1:8"]
+    },
+    "names/babylon": {
+      "en": "Babylon, Babylonia, Babylonian",
+      "headword": "Babylon, Babylonia, Babylonian",
+      "source": "tw-en-names-babylon",
+      "refs": ["1:11", "1:12", "1:17"]
+    },
+    "names/barabbas": {
+      "en": "Barabbas",
+      "headword": "Barabbas",
+      "source": "tw-en-names-barabbas",
+      "refs": ["27:16", "27:17", "27:20", "27:21", "27:26"]
+    },
+    "names/bartholomew": {
+      "en": "Bartholomew",
+      "headword": "Bartholomew",
+      "source": "tw-en-names-bartholomew",
+      "refs": ["10:3"]
+    },
+    "names/beelzebul": {
+      "en": "Beelzebul",
+      "headword": "Beelzebul",
+      "source": "tw-en-names-beelzebul",
+      "refs": ["10:25", "12:24", "12:27"]
+    },
+    "names/bethany": {
+      "en": "Bethany",
+      "headword": "Bethany",
+      "source": "tw-en-names-bethany",
+      "refs": ["21:17", "26:6"]
+    },
+    "names/bethlehem": {
+      "en": "Bethlehem, Ephrathah",
+      "headword": "Bethlehem, Ephrathah",
+      "source": "tw-en-names-bethlehem",
+      "refs": ["2:1", "2:5", "2:6", "2:8", "2:16"]
+    },
+    "names/boaz": {
+      "en": "Boaz",
+      "headword": "Boaz",
+      "source": "tw-en-names-boaz",
+      "refs": ["1:5"]
+    },
+    "names/caesar": {
+      "en": "Caesar",
+      "headword": "Caesar",
+      "source": "tw-en-names-caesar",
+      "refs": ["22:17", "22:21"]
+    },
+    "names/caesarea": {
+      "en": "Caesarea, Caesarea Philippi",
+      "headword": "Caesarea, Caesarea Philippi",
+      "source": "tw-en-names-caesarea",
+      "refs": ["16:13"]
+    },
+    "names/caiaphas": {
+      "en": "Caiaphas",
+      "headword": "Caiaphas",
+      "source": "tw-en-names-caiaphas",
+      "refs": ["26:3", "26:57"]
+    },
+    "names/canaan": {
+      "en": "Canaan, Canaanite",
+      "headword": "Canaan, Canaanite",
+      "source": "tw-en-names-canaan",
+      "refs": ["15:22"]
+    },
+    "names/capernaum": {
+      "en": "Capernaum",
+      "headword": "Capernaum",
+      "source": "tw-en-names-capernaum",
+      "refs": ["4:13", "8:5", "11:23", "17:24"]
+    },
+    "names/cyrene": {
+      "en": "Cyrene",
+      "headword": "Cyrene",
+      "source": "tw-en-names-cyrene",
+      "refs": ["27:32"]
+    },
+    "names/daniel": {
+      "en": "Daniel",
+      "headword": "Daniel",
+      "source": "tw-en-names-daniel",
+      "refs": ["24:15"]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "David",
+      "source": "tw-en-names-david",
+      "refs": [
+        "1:1",
+        "1:6",
+        "1:17",
+        "1:20",
+        "9:27",
+        "12:3",
+        "12:23",
+        "15:22",
+        "20:30",
+        "20:31",
+        "21:9",
+        "21:15",
+        "22:42",
+        "22:43",
+        "22:45"
+      ]
+    },
+    "names/egypt": {
+      "en": "Egypt, Egyptian",
+      "headword": "Egypt, Egyptian",
+      "source": "tw-en-names-egypt",
+      "refs": ["2:13", "2:14", "2:15", "2:19"]
+    },
+    "names/eleazar": {
+      "en": "Eleazar",
+      "headword": "Eleazar",
+      "source": "tw-en-names-eleazar",
+      "refs": ["1:15"]
+    },
+    "names/eliakim": {
+      "en": "Eliakim",
+      "headword": "Eliakim",
+      "source": "tw-en-names-eliakim",
+      "refs": ["1:13"]
+    },
+    "names/elijah": {
+      "en": "Elijah",
+      "headword": "Elijah",
+      "source": "tw-en-names-elijah",
+      "refs": [
+        "11:14",
+        "16:14",
+        "17:3",
+        "17:4",
+        "17:10",
+        "17:11",
+        "17:12",
+        "27:47",
+        "27:49"
+      ]
+    },
+    "names/galilee": {
+      "en": "Galilee, Galilean",
+      "headword": "Galilee, Galilean",
+      "source": "tw-en-names-galilee",
+      "refs": [
+        "2:22",
+        "3:13",
+        "4:12",
+        "4:15",
+        "4:18",
+        "4:23",
+        "4:25",
+        "15:29",
+        "17:22",
+        "19:1",
+        "21:11",
+        "26:32",
+        "26:69",
+        "27:55",
+        "28:7",
+        "28:10",
+        "28:16"
+      ]
+    },
+    "names/gethsemane": {
+      "en": "Gethsemane",
+      "headword": "Gethsemane",
+      "source": "tw-en-names-gethsemane",
+      "refs": ["26:36"]
+    },
+    "names/golgotha": {
+      "en": "Golgotha",
+      "headword": "Golgotha",
+      "source": "tw-en-names-golgotha",
+      "refs": ["27:33"]
+    },
+    "names/gomorrah": {
+      "en": "Gomorrah",
+      "headword": "Gomorrah",
+      "source": "tw-en-names-gomorrah",
+      "refs": ["10:15"]
+    },
+    "names/herodantipas": {
+      "en": "Herod, Herod Antipas",
+      "headword": "Herod, Herod Antipas",
+      "source": "tw-en-names-herodantipas",
+      "refs": ["14:1", "14:3", "14:6"]
+    },
+    "names/herodias": {
+      "en": "Herodias",
+      "headword": "Herodias",
+      "source": "tw-en-names-herodias",
+      "refs": ["14:3", "14:6"]
+    },
+    "names/herodthegreat": {
+      "en": "Herod, Herod the Great",
+      "headword": "Herod, Herod the Great",
+      "source": "tw-en-names-herodthegreat",
+      "refs": [
+        "2:1",
+        "2:3",
+        "2:7",
+        "2:12",
+        "2:13",
+        "2:15",
+        "2:16",
+        "2:19",
+        "2:22"
+      ]
+    },
+    "names/hezekiah": {
+      "en": "Hezekiah",
+      "headword": "Hezekiah",
+      "source": "tw-en-names-hezekiah",
+      "refs": ["1:9", "1:10"]
+    },
+    "names/isaac": {
+      "en": "Isaac",
+      "headword": "Isaac",
+      "source": "tw-en-names-isaac",
+      "refs": ["1:2", "8:11", "22:32"]
+    },
+    "names/isaiah": {
+      "en": "Isaiah",
+      "headword": "Isaiah",
+      "source": "tw-en-names-isaiah",
+      "refs": ["3:3", "4:14", "8:17", "12:17", "13:14", "15:7"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "Jacob, Israel",
+      "source": "tw-en-names-jacob",
+      "refs": ["1:2", "1:15", "1:16", "8:11", "22:32"]
+    },
+    "names/jamesbrotherofjesus": {
+      "en": "James (brother of Jesus)",
+      "headword": "James (brother of Jesus)",
+      "source": "tw-en-names-jamesbrotherofjesus",
+      "refs": ["13:55"]
+    },
+    "names/jamessonofalphaeus": {
+      "en": "James (son of Alphaeus)",
+      "headword": "James (son of Alphaeus)",
+      "source": "tw-en-names-jamessonofalphaeus",
+      "refs": ["10:3"]
+    },
+    "names/jamessonofzebedee": {
+      "en": "James (son of Zebedee)",
+      "headword": "James (son of Zebedee)",
+      "source": "tw-en-names-jamessonofzebedee",
+      "refs": ["4:21", "10:2", "17:1"]
+    },
+    "names/jehoram": {
+      "en": "Jehoram, Joram",
+      "headword": "Jehoram, Joram",
+      "source": "tw-en-names-jehoram",
+      "refs": ["1:8"]
+    },
+    "names/jehoshaphat": {
+      "en": "Jehoshaphat",
+      "headword": "Jehoshaphat",
+      "source": "tw-en-names-jehoshaphat",
+      "refs": ["1:8"]
+    },
+    "names/jeremiah": {
+      "en": "Jeremiah",
+      "headword": "Jeremiah",
+      "source": "tw-en-names-jeremiah",
+      "refs": ["2:17", "16:14", "27:9"]
+    },
+    "names/jericho": {
+      "en": "Jericho",
+      "headword": "Jericho",
+      "source": "tw-en-names-jericho",
+      "refs": ["20:29"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Jerusalem",
+      "source": "tw-en-names-jerusalem",
+      "refs": [
+        "2:1",
+        "2:3",
+        "3:5",
+        "4:25",
+        "5:35",
+        "15:1",
+        "16:21",
+        "20:17",
+        "20:18",
+        "21:1",
+        "21:10",
+        "23:37"
+      ]
+    },
+    "names/jesse": {
+      "en": "Jesse",
+      "headword": "Jesse",
+      "source": "tw-en-names-jesse",
+      "refs": ["1:5", "1:6"]
+    },
+    "names/johntheapostle": {
+      "en": "John (the apostle)",
+      "headword": "John (the apostle)",
+      "source": "tw-en-names-johntheapostle",
+      "refs": ["4:21", "10:2", "17:1"]
+    },
+    "names/johnthebaptist": {
+      "en": "John (the Baptist)",
+      "headword": "John (the Baptist)",
+      "source": "tw-en-names-johnthebaptist",
+      "refs": [
+        "3:1",
+        "3:4",
+        "3:13",
+        "3:14",
+        "4:12",
+        "9:14",
+        "11:2",
+        "11:4",
+        "11:7",
+        "11:11",
+        "11:12",
+        "11:13",
+        "11:18",
+        "14:2",
+        "14:3",
+        "14:4",
+        "14:8",
+        "14:10",
+        "16:14",
+        "17:13",
+        "21:25",
+        "21:26",
+        "21:32"
+      ]
+    },
+    "names/jonah": {
+      "en": "Jonah",
+      "headword": "Jonah",
+      "source": "tw-en-names-jonah",
+      "refs": ["12:39", "12:40", "12:41", "16:4"]
+    },
+    "names/jordanriver": {
+      "en": "Jordan River, Jordan",
+      "headword": "Jordan River, Jordan",
+      "source": "tw-en-names-jordanriver",
+      "refs": ["3:5", "3:6", "3:13", "4:15", "4:25", "19:1"]
+    },
+    "names/josephnt": {
+      "en": "Joseph (NT)",
+      "headword": "Joseph (NT)",
+      "source": "tw-en-names-josephnt",
+      "refs": ["1:16", "1:18", "1:19", "1:20", "1:24", "2:13", "2:19"]
+    },
+    "names/josiah": {
+      "en": "Josiah",
+      "headword": "Josiah",
+      "source": "tw-en-names-josiah",
+      "refs": ["1:10", "1:11"]
+    },
+    "names/jotham": {
+      "en": "Jotham",
+      "headword": "Jotham",
+      "source": "tw-en-names-jotham",
+      "refs": ["1:9"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "Judah",
+      "source": "tw-en-names-judah",
+      "refs": ["1:2", "1:3", "2:6"]
+    },
+    "names/judasiscariot": {
+      "en": "Judas Iscariot",
+      "headword": "Judas Iscariot",
+      "source": "tw-en-names-judasiscariot",
+      "refs": ["10:4", "26:14", "26:25", "26:47", "27:3"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "Judea, Judah",
+      "source": "tw-en-names-judea",
+      "refs": ["2:1", "2:5", "2:22", "3:1", "3:5", "4:25", "19:1", "24:16"]
+    },
+    "names/manasseh": {
+      "en": "Manasseh",
+      "headword": "Manasseh",
+      "source": "tw-en-names-manasseh",
+      "refs": ["1:10"]
+    },
+    "names/mary": {
+      "en": "Mary (the mother of Jesus)",
+      "headword": "Mary (the mother of Jesus)",
+      "source": "tw-en-names-mary",
+      "refs": ["1:16", "1:18", "1:20", "2:11", "13:55"]
+    },
+    "names/marymagdalene": {
+      "en": "Mary Magdalene",
+      "headword": "Mary Magdalene",
+      "source": "tw-en-names-marymagdalene",
+      "refs": ["27:56", "27:61", "28:1"]
+    },
+    "names/matthew": {
+      "en": "Matthew, Levi",
+      "headword": "Matthew, Levi",
+      "source": "tw-en-names-matthew",
+      "refs": ["9:9", "10:3"]
+    },
+    "names/moses": {
+      "en": "Moses",
+      "headword": "Moses",
+      "source": "tw-en-names-moses",
+      "refs": ["8:4", "17:3", "17:4", "19:7", "19:8", "22:24", "23:2"]
+    },
+    "names/mountofolives": {
+      "en": "Mount of Olives",
+      "headword": "Mount of Olives",
+      "source": "tw-en-names-mountofolives",
+      "refs": ["21:1", "24:3", "26:30"]
+    },
+    "names/naphtali": {
+      "en": "Naphtali",
+      "headword": "Naphtali",
+      "source": "tw-en-names-naphtali",
+      "refs": ["4:13", "4:15"]
+    },
+    "names/nazareth": {
+      "en": "Nazareth, Nazarene",
+      "headword": "Nazareth, Nazarene",
+      "source": "tw-en-names-nazareth",
+      "refs": ["2:23", "4:13", "21:11", "26:71"]
+    },
+    "names/nineveh": {
+      "en": "Nineveh, Ninevite",
+      "headword": "Nineveh, Ninevite",
+      "source": "tw-en-names-nineveh",
+      "refs": ["12:41"]
+    },
+    "names/noah": {
+      "en": "Noah",
+      "headword": "Noah",
+      "source": "tw-en-names-noah",
+      "refs": ["24:37", "24:38"]
+    },
+    "names/peter": {
+      "en": "Peter, Simon Peter, Cephas",
+      "headword": "Peter, Simon Peter, Cephas",
+      "source": "tw-en-names-peter",
+      "refs": [
+        "4:18",
+        "8:14",
+        "10:2",
+        "14:28",
+        "14:29",
+        "15:15",
+        "16:16",
+        "16:17",
+        "16:18",
+        "16:22",
+        "16:23",
+        "17:1",
+        "17:4",
+        "17:24",
+        "17:25",
+        "18:21",
+        "19:27",
+        "26:33",
+        "26:35",
+        "26:37",
+        "26:40",
+        "26:58",
+        "26:69",
+        "26:73",
+        "26:75"
+      ]
+    },
+    "names/philiptheapostle": {
+      "en": "Philip (the apostle)",
+      "headword": "Philip (the apostle)",
+      "source": "tw-en-names-philiptheapostle",
+      "refs": ["10:3"]
+    },
+    "names/pilate": {
+      "en": "Pilate",
+      "headword": "Pilate",
+      "source": "tw-en-names-pilate",
+      "refs": [
+        "27:2",
+        "27:13",
+        "27:17",
+        "27:22",
+        "27:24",
+        "27:58",
+        "27:62",
+        "27:65"
+      ]
+    },
+    "names/rachel": {
+      "en": "Rachel",
+      "headword": "Rachel",
+      "source": "tw-en-names-rachel",
+      "refs": ["2:18"]
+    },
+    "names/rahab": {
+      "en": "Rahab",
+      "headword": "Rahab",
+      "source": "tw-en-names-rahab",
+      "refs": ["1:5"]
+    },
+    "names/ramah": {
+      "en": "Ramah",
+      "headword": "Ramah",
+      "source": "tw-en-names-ramah",
+      "refs": ["2:18"]
+    },
+    "names/rehoboam": {
+      "en": "Rehoboam",
+      "headword": "Rehoboam",
+      "source": "tw-en-names-rehoboam",
+      "refs": ["1:7"]
+    },
+    "names/ruth": {
+      "en": "Ruth",
+      "headword": "Ruth",
+      "source": "tw-en-names-ruth",
+      "refs": ["1:5"]
+    },
+    "names/samaria": {
+      "en": "Samaria, Samaritan",
+      "headword": "Samaria, Samaritan",
+      "source": "tw-en-names-samaria",
+      "refs": ["10:5"]
+    },
+    "names/seaofgalilee": {
+      "en": "Sea of Galilee, Sea of Kinnereth, lake of Gennesaret, Sea of Tiberias",
+      "headword": "Sea of Galilee, Sea of Kinnereth, lake of Gennesaret, Sea of Tiberias",
+      "source": "tw-en-names-seaofgalilee",
+      "refs": [
+        "4:18",
+        "8:24",
+        "8:26",
+        "8:27",
+        "8:32",
+        "13:1",
+        "14:25",
+        "14:26",
+        "15:29",
+        "17:27"
+      ]
+    },
+    "names/sidon": {
+      "en": "Sidon, Sidonians",
+      "headword": "Sidon, Sidonians",
+      "source": "tw-en-names-sidon",
+      "refs": ["11:21", "11:22", "15:21"]
+    },
+    "names/simonthezealot": {
+      "en": "Simon the Zealot",
+      "headword": "Simon the Zealot",
+      "source": "tw-en-names-simonthezealot",
+      "refs": ["10:4"]
+    },
+    "names/sodom": {
+      "en": "Sodom",
+      "headword": "Sodom",
+      "source": "tw-en-names-sodom",
+      "refs": ["10:15", "11:23", "11:24"]
+    },
+    "names/solomon": {
+      "en": "Solomon",
+      "headword": "Solomon",
+      "source": "tw-en-names-solomon",
+      "refs": ["1:6", "1:7", "6:29", "12:42"]
+    },
+    "names/syria": {
+      "en": "Syria, Ashur",
+      "headword": "Syria, Ashur",
+      "source": "tw-en-names-syria",
+      "refs": ["4:24"]
+    },
+    "names/tamar": {
+      "en": "Tamar",
+      "headword": "Tamar",
+      "source": "tw-en-names-tamar",
+      "refs": ["1:3"]
+    },
+    "names/thomas": {
+      "en": "Thomas",
+      "headword": "Thomas",
+      "source": "tw-en-names-thomas",
+      "refs": ["10:3"]
+    },
+    "names/tyre": {
+      "en": "Tyre, Tyrians",
+      "headword": "Tyre, Tyrians",
+      "source": "tw-en-names-tyre",
+      "refs": ["11:21", "11:22", "15:21"]
+    },
+    "names/uriah": {
+      "en": "Uriah",
+      "headword": "Uriah",
+      "source": "tw-en-names-uriah",
+      "refs": ["1:6"]
+    },
+    "names/uzziah": {
+      "en": "Uzziah, Azariah",
+      "headword": "Uzziah, Azariah",
+      "source": "tw-en-names-uzziah",
+      "refs": ["1:8", "1:9"]
+    },
+    "names/zadok": {
+      "en": "Zadok",
+      "headword": "Zadok",
+      "source": "tw-en-names-zadok",
+      "refs": ["1:14"]
+    },
+    "names/zebedee": {
+      "en": "Zebedee",
+      "headword": "Zebedee",
+      "source": "tw-en-names-zebedee",
+      "refs": ["4:21", "10:2", "20:20", "26:37", "27:56"]
+    },
+    "names/zebulun": {
+      "en": "Zebulun",
+      "headword": "Zebulun",
+      "source": "tw-en-names-zebulun",
+      "refs": ["4:13", "4:15"]
+    },
+    "names/zerubbabel": {
+      "en": "Zerubbabel",
+      "headword": "Zerubbabel",
+      "source": "tw-en-names-zerubbabel",
+      "refs": ["1:12", "1:13"]
+    },
+    "other/12tribesofisrael": {
+      "en": "twelve tribes of Israel, twelve tribes",
+      "headword": "twelve tribes of Israel, twelve tribes",
+      "source": "tw-en-other-12tribesofisrael",
+      "refs": ["19:28"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "adversary, enemy",
+      "source": "tw-en-other-adversary",
+      "refs": ["5:43", "5:44", "10:36", "13:25", "13:28", "13:39", "22:44"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "age, aged, old, old age, years old",
+      "source": "tw-en-other-age",
+      "refs": ["12:32", "13:22", "13:39", "13:40", "13:49", "24:3", "28:20"]
+    },
+    "other/age-timeperiod": {
+      "en": "age, era, time",
+      "headword": "age, era, time",
+      "source": "tw-en-other-age-timeperiod",
+      "refs": [
+        "2:7",
+        "2:16",
+        "8:29",
+        "11:25",
+        "12:1",
+        "13:30",
+        "14:1",
+        "21:34",
+        "21:41",
+        "24:45",
+        "25:19",
+        "26:18"
+      ]
+    },
+    "other/alms": {
+      "en": "alms",
+      "headword": "alms",
+      "source": "tw-en-other-alms",
+      "refs": ["6:2", "6:3", "6:4"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "assembly, assemble, congregation, meeting, gather, community",
+      "source": "tw-en-other-assembly",
+      "refs": [
+        "2:4",
+        "13:2",
+        "22:10",
+        "22:34",
+        "22:41",
+        "24:31",
+        "25:32",
+        "26:3",
+        "26:57",
+        "27:17",
+        "27:27",
+        "27:62",
+        "28:12"
+      ]
+    },
+    "other/ax": {
+      "en": "ax",
+      "headword": "ax",
+      "source": "tw-en-other-ax",
+      "refs": ["3:10"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "bear, bearer, bore, borne, produce, produced",
+      "source": "tw-en-other-bear",
+      "refs": ["1:21", "1:23", "3:11", "8:17", "17:17", "20:12"]
+    },
+    "other/beg": {
+      "en": "beg, begging, begged",
+      "headword": "beg, begging, begged",
+      "source": "tw-en-other-beg",
+      "refs": ["8:5", "8:31", "8:34", "9:38", "14:36", "18:29", "18:32"]
+    },
+    "other/betray": {
+      "en": "betray, betrayer",
+      "headword": "betray, betrayer",
+      "source": "tw-en-other-betray",
+      "refs": [
+        "10:4",
+        "24:10",
+        "26:15",
+        "26:16",
+        "26:21",
+        "26:23",
+        "26:24",
+        "26:25",
+        "26:45",
+        "26:46",
+        "26:48",
+        "27:3",
+        "27:4"
+      ]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "day",
+      "source": "tw-en-other-biblicaltimeday",
+      "refs": [
+        "2:1",
+        "3:1",
+        "4:2",
+        "6:34",
+        "7:22",
+        "9:15",
+        "10:15",
+        "11:12",
+        "11:22",
+        "11:24",
+        "12:36",
+        "12:40",
+        "13:1",
+        "15:32",
+        "16:21",
+        "17:1",
+        "17:23",
+        "20:2",
+        "20:6",
+        "20:12",
+        "20:19",
+        "22:23",
+        "22:46",
+        "23:30",
+        "24:19",
+        "24:22",
+        "24:29",
+        "24:36",
+        "24:37",
+        "24:38",
+        "24:42",
+        "24:50",
+        "25:13",
+        "26:2",
+        "26:29",
+        "26:55",
+        "26:61",
+        "27:40",
+        "27:63",
+        "27:64",
+        "28:20"
+      ]
+    },
+    "other/biblicaltimehour": {
+      "en": "hour, moment",
+      "headword": "hour, moment",
+      "source": "tw-en-other-biblicaltimehour",
+      "refs": [
+        "8:13",
+        "9:22",
+        "10:19",
+        "14:15",
+        "15:28",
+        "17:18",
+        "18:1",
+        "20:3",
+        "20:5",
+        "20:9",
+        "20:12",
+        "24:36",
+        "24:44",
+        "24:50",
+        "25:13",
+        "26:40",
+        "26:45",
+        "26:55",
+        "27:45",
+        "27:46"
+      ]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "year",
+      "source": "tw-en-other-biblicaltimeyear",
+      "refs": ["9:20"]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "bow, bow down, kneel, bend, bend the knee",
+      "source": "tw-en-other-bow",
+      "refs": [
+        "2:11",
+        "4:9",
+        "9:18",
+        "17:6",
+        "18:26",
+        "18:29",
+        "20:20",
+        "26:39",
+        "27:29"
+      ]
+    },
+    "other/bread": {
+      "en": "bread",
+      "headword": "bread",
+      "source": "tw-en-other-bread",
+      "refs": [
+        "4:3",
+        "4:4",
+        "6:11",
+        "7:9",
+        "12:4",
+        "14:17",
+        "14:19",
+        "15:2",
+        "15:26",
+        "15:33",
+        "15:34",
+        "15:36",
+        "16:5",
+        "16:7",
+        "16:8",
+        "16:9",
+        "16:10",
+        "16:11",
+        "16:12",
+        "26:26"
+      ]
+    },
+    "other/bridegroom": {
+      "en": "bridegroom, groom",
+      "headword": "bridegroom, groom",
+      "source": "tw-en-other-bridegroom",
+      "refs": ["9:15", "25:1", "25:5", "25:6", "25:10"]
+    },
+    "other/bury": {
+      "en": "bury, buried, burial",
+      "headword": "bury, buried, burial",
+      "source": "tw-en-other-bury",
+      "refs": ["8:21", "8:22", "14:12", "26:12", "27:7"]
+    },
+    "other/camel": {
+      "en": "camel",
+      "headword": "camel",
+      "source": "tw-en-other-camel",
+      "refs": ["3:4", "19:24", "23:24"]
+    },
+    "other/castout": {
+      "en": "cast out, driving out, throw out",
+      "headword": "cast out, driving out, throw out",
+      "source": "tw-en-other-castout",
+      "refs": [
+        "7:22",
+        "8:12",
+        "8:16",
+        "8:31",
+        "9:25",
+        "9:33",
+        "9:34",
+        "10:1",
+        "10:8",
+        "12:24",
+        "12:26",
+        "12:27",
+        "12:28",
+        "15:17",
+        "17:19",
+        "21:12",
+        "21:39",
+        "22:13",
+        "25:30"
+      ]
+    },
+    "other/chaff": {
+      "en": "chaff",
+      "headword": "chaff",
+      "source": "tw-en-other-chaff",
+      "refs": ["3:12"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "conceive, conceived, conception",
+      "source": "tw-en-other-conceive",
+      "refs": ["1:20"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "source": "tw-en-other-corrupt",
+      "refs": ["7:17", "7:18", "12:33", "13:48"]
+    },
+    "other/council": {
+      "en": "council",
+      "headword": "council",
+      "source": "tw-en-other-council",
+      "refs": ["5:22", "10:17", "26:59"]
+    },
+    "other/counselor": {
+      "en": "advice, advise, advisor, counsel, counselor, counsels",
+      "headword": "advice, advise, advisor, counsel, counselor, counsels",
+      "source": "tw-en-other-counselor",
+      "refs": ["12:14", "22:15", "27:1", "27:7", "28:12"]
+    },
+    "other/courage": {
+      "en": "courage, courageous, valor",
+      "headword": "courage, courageous, valor",
+      "source": "tw-en-other-courage",
+      "refs": ["9:2", "9:22", "14:27"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "create, created, creation, creator",
+      "source": "tw-en-other-creation",
+      "refs": ["13:35", "25:34"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "crown, crowned",
+      "source": "tw-en-other-crown",
+      "refs": ["27:29"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "cry, cry out, outcry",
+      "source": "tw-en-other-cry",
+      "refs": [
+        "3:3",
+        "8:29",
+        "9:27",
+        "12:19",
+        "14:26",
+        "14:30",
+        "15:22",
+        "15:23",
+        "20:30",
+        "20:31",
+        "21:9",
+        "21:15",
+        "25:6",
+        "27:23",
+        "27:46",
+        "27:50"
+      ]
+    },
+    "other/curtain": {
+      "en": "curtain",
+      "headword": "curtain",
+      "source": "tw-en-other-curtain",
+      "refs": ["27:51"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "deceive, lie, deception, illusion",
+      "source": "tw-en-other-deceive",
+      "refs": ["13:22", "27:63", "27:64"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "declare, proclaim, announce",
+      "source": "tw-en-other-declare",
+      "refs": ["7:23"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "defile, defiled, desecrate",
+      "source": "tw-en-other-defile",
+      "refs": ["15:11", "15:18", "15:20"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "delight",
+      "source": "tw-en-other-delight",
+      "refs": ["3:17", "12:18", "17:5"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "deliver, deliverer, deliverance, delivered",
+      "source": "tw-en-other-deliverer",
+      "refs": ["6:13", "27:43"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "desert, wilderness",
+      "source": "tw-en-other-desert",
+      "refs": ["3:1", "3:3", "4:1", "11:7", "15:33", "24:26"]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "desolate, desolated, desolation, deserted, desolator",
+      "source": "tw-en-other-desolate",
+      "refs": ["12:25", "14:13", "14:15", "23:38", "24:15"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "destroy, destruction, annihilate",
+      "source": "tw-en-other-destroyer",
+      "refs": ["2:13"]
+    },
+    "other/devour": {
+      "en": "devour",
+      "headword": "devour",
+      "source": "tw-en-other-devour",
+      "refs": ["13:4"]
+    },
+    "other/doctrine": {
+      "en": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "headword": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "source": "tw-en-other-doctrine",
+      "refs": ["15:9"]
+    },
+    "other/donkey": {
+      "en": "donkey, mule",
+      "headword": "donkey, mule",
+      "source": "tw-en-other-donkey",
+      "refs": ["21:2", "21:5", "21:7"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "dove, pigeon, turtledove",
+      "source": "tw-en-other-dove",
+      "refs": ["3:16", "10:16", "21:12"]
+    },
+    "other/dream": {
+      "en": "dream",
+      "headword": "dream",
+      "source": "tw-en-other-dream",
+      "refs": ["1:20", "2:12", "2:13", "2:19", "2:22", "27:19"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "drunk, drunkard",
+      "source": "tw-en-other-drunk",
+      "refs": ["11:19", "24:49"]
+    },
+    "other/eagle": {
+      "en": "eagle",
+      "headword": "eagle",
+      "source": "tw-en-other-eagle",
+      "refs": ["24:28"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "earth, land",
+      "source": "tw-en-other-earth",
+      "refs": [
+        "5:5",
+        "5:13",
+        "5:18",
+        "5:35",
+        "6:10",
+        "6:19",
+        "9:6",
+        "10:34",
+        "11:25",
+        "12:40",
+        "12:42",
+        "16:19",
+        "17:25",
+        "18:18",
+        "18:19",
+        "23:9",
+        "23:35",
+        "24:30",
+        "24:35",
+        "27:51",
+        "28:18"
+      ]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "elder",
+      "source": "tw-en-other-elder",
+      "refs": [
+        "15:2",
+        "16:21",
+        "21:23",
+        "26:3",
+        "26:47",
+        "26:57",
+        "27:1",
+        "27:3",
+        "27:12",
+        "27:20",
+        "27:41",
+        "28:12"
+      ]
+    },
+    "other/endure": {
+      "en": "endure, endurance",
+      "headword": "endure, endurance",
+      "source": "tw-en-other-endure",
+      "refs": ["10:22", "24:13"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "envy, covet, jealous, jealousy",
+      "source": "tw-en-other-envy",
+      "refs": ["27:18"]
+    },
+    "other/exult": {
+      "en": "exult, exultant",
+      "headword": "exult, exultant",
+      "source": "tw-en-other-exult",
+      "refs": ["5:12"]
+    },
+    "other/falseprophet": {
+      "en": "false prophet",
+      "headword": "false prophet",
+      "source": "tw-en-other-falseprophet",
+      "refs": ["7:15", "24:11", "24:24"]
+    },
+    "other/falsewitness": {
+      "en": "corrupt witness, false report, false testimony, false witness",
+      "headword": "corrupt witness, false report, false testimony, false witness",
+      "source": "tw-en-other-falsewitness",
+      "refs": ["15:19", "19:18", "26:60"]
+    },
+    "other/famine": {
+      "en": "famine",
+      "headword": "famine",
+      "source": "tw-en-other-famine",
+      "refs": ["24:7"]
+    },
+    "other/fast": {
+      "en": "fast, fasting",
+      "headword": "fast, fasting",
+      "source": "tw-en-other-fast",
+      "refs": ["4:2", "6:16", "6:17", "6:18", "9:14", "9:15"]
+    },
+    "other/feast": {
+      "en": "feast, feasting",
+      "headword": "feast, feasting",
+      "source": "tw-en-other-feast",
+      "refs": ["22:2", "22:3", "22:4", "22:8", "22:9", "23:6", "25:10"]
+    },
+    "other/festival": {
+      "en": "festival, feast, celebrate",
+      "headword": "festival, feast, celebrate",
+      "source": "tw-en-other-festival",
+      "refs": ["26:5", "27:15"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "fig",
+      "source": "tw-en-other-fig",
+      "refs": ["7:16", "21:19", "21:20", "21:21", "24:32"]
+    },
+    "other/fisherman": {
+      "en": "fisherman, fishermen, fisher",
+      "headword": "fisherman, fishermen, fisher",
+      "source": "tw-en-other-fisherman",
+      "refs": ["4:18", "4:19"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "flock, herd",
+      "source": "tw-en-other-flock",
+      "refs": ["26:31"]
+    },
+    "other/flood": {
+      "en": "flood",
+      "headword": "flood",
+      "source": "tw-en-other-flood",
+      "refs": ["24:38", "24:39"]
+    },
+    "other/flute": {
+      "en": "flute, pipe",
+      "headword": "flute, pipe",
+      "source": "tw-en-other-flute",
+      "refs": ["11:17"]
+    },
+    "other/footstool": {
+      "en": "footstool",
+      "headword": "footstool",
+      "source": "tw-en-other-footstool",
+      "refs": ["5:35"]
+    },
+    "other/fornication": {
+      "en": "sexual immorality, immorality, immoral, fornication",
+      "headword": "sexual immorality, immorality, immoral, fornication",
+      "source": "tw-en-other-fornication",
+      "refs": ["5:32", "15:19", "19:9"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "forsake, forsaken, leave",
+      "source": "tw-en-other-forsaken",
+      "refs": ["26:56", "27:46"]
+    },
+    "other/foundation": {
+      "en": "foundation, founder, founded",
+      "headword": "foundation, founder, founded",
+      "source": "tw-en-other-foundation",
+      "refs": ["7:25", "13:35", "25:34"]
+    },
+    "other/frankincense": {
+      "en": "frankincense",
+      "headword": "frankincense",
+      "source": "tw-en-other-frankincense",
+      "refs": ["2:11"]
+    },
+    "other/free": {
+      "en": "free, freed, freedom, freeman, freewill, liberty",
+      "headword": "free, freed, freedom, freeman, freewill, liberty",
+      "source": "tw-en-other-free",
+      "refs": ["10:8", "17:26"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "fruit, fruitful, unfruitful",
+      "source": "tw-en-other-fruit",
+      "refs": [
+        "3:8",
+        "3:10",
+        "7:16",
+        "7:17",
+        "7:18",
+        "7:19",
+        "7:20",
+        "12:33",
+        "13:8",
+        "13:22",
+        "13:23",
+        "13:26",
+        "21:19",
+        "21:34",
+        "21:41",
+        "21:43",
+        "26:29"
+      ]
+    },
+    "other/furnace": {
+      "en": "furnace",
+      "headword": "furnace",
+      "source": "tw-en-other-furnace",
+      "refs": ["13:42", "13:50"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "source": "tw-en-other-gate",
+      "refs": ["7:13", "7:14", "26:71"]
+    },
+    "other/generation-lifetime": {
+      "en": "generation",
+      "headword": "generation",
+      "source": "tw-en-other-generation-lifetime",
+      "refs": [
+        "1:17",
+        "11:16",
+        "12:39",
+        "12:41",
+        "12:42",
+        "12:45",
+        "16:4",
+        "17:17",
+        "23:36",
+        "24:34"
+      ]
+    },
+    "other/goat": {
+      "en": "goat, goatskin, scapegoat, kid",
+      "headword": "goat, goatskin, scapegoat, kid",
+      "source": "tw-en-other-goat",
+      "refs": ["25:32", "25:33"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "gold, golden",
+      "source": "tw-en-other-gold",
+      "refs": ["2:11", "10:9", "23:16", "23:17"]
+    },
+    "other/governor": {
+      "en": "govern, governor, proconsul, Tirshatha",
+      "headword": "govern, governor, proconsul, Tirshatha",
+      "source": "tw-en-other-governor",
+      "refs": [
+        "2:6",
+        "10:18",
+        "27:2",
+        "27:11",
+        "27:14",
+        "27:15",
+        "27:21",
+        "27:27",
+        "28:14"
+      ]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "grain, grainfields",
+      "source": "tw-en-other-grain",
+      "refs": ["12:1", "13:31", "17:20"]
+    },
+    "other/grape": {
+      "en": "grape, grapevine",
+      "headword": "grape, grapevine",
+      "source": "tw-en-other-grape",
+      "refs": ["7:16"]
+    },
+    "other/hang": {
+      "en": "hang, hung",
+      "headword": "hang, hung",
+      "source": "tw-en-other-hang",
+      "refs": ["27:5"]
+    },
+    "other/hard": {
+      "en": "hard, harder",
+      "headword": "hard, harder",
+      "source": "tw-en-other-hard",
+      "refs": ["19:8", "19:23", "25:24"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "harvest, reap",
+      "source": "tw-en-other-harvest",
+      "refs": ["6:26", "9:37", "9:38", "13:30", "13:39", "25:24", "25:26"]
+    },
+    "other/heir": {
+      "en": "heir",
+      "headword": "heir",
+      "source": "tw-en-other-heir",
+      "refs": ["21:38"]
+    },
+    "other/holycity": {
+      "en": "holy city",
+      "headword": "holy city",
+      "source": "tw-en-other-holycity",
+      "refs": ["4:5", "27:53"]
+    },
+    "other/honey": {
+      "en": "honey, honeycomb",
+      "headword": "honey, honeycomb",
+      "source": "tw-en-other-honey",
+      "refs": ["3:4"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "house",
+      "source": "tw-en-other-house",
+      "refs": [
+        "2:11",
+        "5:15",
+        "7:24",
+        "7:25",
+        "7:26",
+        "7:27",
+        "8:6",
+        "8:14",
+        "9:6",
+        "9:7",
+        "9:10",
+        "9:23",
+        "9:28",
+        "10:6",
+        "10:12",
+        "10:13",
+        "10:14",
+        "11:8",
+        "12:4",
+        "12:25",
+        "12:29",
+        "12:44",
+        "13:1",
+        "13:36",
+        "15:24",
+        "17:25",
+        "19:29",
+        "21:13",
+        "23:38",
+        "24:17",
+        "24:43",
+        "26:6"
+      ]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "household, house",
+      "source": "tw-en-other-household",
+      "refs": ["10:25", "10:36", "13:57", "24:45"]
+    },
+    "other/image": {
+      "en": "image, carved image, cast metal image, figure, carved figure, statue",
+      "headword": "image, carved image, cast metal image, figure, carved figure, statue",
+      "source": "tw-en-other-image",
+      "refs": ["22:20"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "instruct, instruction, instructor",
+      "source": "tw-en-other-instruct",
+      "refs": ["10:5", "28:15"]
+    },
+    "other/interpret": {
+      "en": "interpret, interpretation, interpreter",
+      "headword": "interpret, interpretation, interpreter",
+      "source": "tw-en-other-interpret",
+      "refs": ["1:23"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "joy, joyful, rejoice, glad",
+      "source": "tw-en-other-joy",
+      "refs": [
+        "2:10",
+        "5:12",
+        "13:20",
+        "13:44",
+        "18:13",
+        "25:21",
+        "25:23",
+        "28:8"
+      ]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "judge",
+      "source": "tw-en-other-judgeposition",
+      "refs": ["5:25", "12:27"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "king, kingship",
+      "source": "tw-en-other-king",
+      "refs": [
+        "1:6",
+        "2:1",
+        "2:2",
+        "2:3",
+        "2:9",
+        "5:35",
+        "10:18",
+        "11:8",
+        "14:9",
+        "17:25",
+        "18:23",
+        "21:5",
+        "22:2",
+        "22:7",
+        "22:11",
+        "22:13",
+        "25:34",
+        "25:40",
+        "27:11",
+        "27:29",
+        "27:37",
+        "27:42"
+      ]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "kingdom",
+      "source": "tw-en-other-kingdom",
+      "refs": ["4:8", "12:25", "12:26", "13:44", "24:7"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "kiss",
+      "source": "tw-en-other-kiss",
+      "refs": ["26:48", "26:49"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "know, knew, knowledge, known, unknown, distinguish",
+      "source": "tw-en-other-know",
+      "refs": [
+        "1:25",
+        "6:3",
+        "6:8",
+        "6:32",
+        "7:11",
+        "7:16",
+        "7:20",
+        "7:23",
+        "9:6",
+        "9:30",
+        "10:26",
+        "11:27",
+        "12:7",
+        "12:15",
+        "12:25",
+        "12:33",
+        "14:35",
+        "15:12",
+        "16:8",
+        "17:12",
+        "20:22",
+        "20:25",
+        "21:27",
+        "21:45",
+        "22:16",
+        "22:18",
+        "22:29",
+        "24:32",
+        "24:33",
+        "24:36",
+        "24:39",
+        "24:42",
+        "24:43",
+        "24:50",
+        "25:12",
+        "25:13",
+        "25:24",
+        "25:26",
+        "26:2",
+        "26:10",
+        "26:70",
+        "26:72",
+        "26:74",
+        "27:18",
+        "27:65",
+        "28:5"
+      ]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "labor, labors, labored, laboring, laborer, work, hard work",
+      "source": "tw-en-other-labor",
+      "refs": [
+        "6:28",
+        "7:23",
+        "9:37",
+        "9:38",
+        "10:10",
+        "11:28",
+        "20:1",
+        "20:2",
+        "20:8",
+        "21:28",
+        "25:16"
+      ]
+    },
+    "other/lamp": {
+      "en": "lamp",
+      "headword": "lamp",
+      "source": "tw-en-other-lamp",
+      "refs": ["5:15", "6:22", "25:1", "25:3", "25:4", "25:7", "25:8"]
+    },
+    "other/lampstand": {
+      "en": "lampstand",
+      "headword": "lampstand",
+      "source": "tw-en-other-lampstand",
+      "refs": ["5:15"]
+    },
+    "other/lawful": {
+      "en": "lawful, unlawful, not lawful, lawless, lawlessness",
+      "headword": "lawful, unlawful, not lawful, lawless, lawlessness",
+      "source": "tw-en-other-lawful",
+      "refs": [
+        "7:23",
+        "12:2",
+        "12:4",
+        "12:10",
+        "12:12",
+        "13:41",
+        "14:4",
+        "19:3",
+        "20:15",
+        "22:17",
+        "23:28",
+        "24:12",
+        "27:6"
+      ]
+    },
+    "other/leprosy": {
+      "en": "skin disease, leper, leprosy",
+      "headword": "skin disease, leper, leprosy",
+      "source": "tw-en-other-leprosy",
+      "refs": ["8:2", "8:3", "10:8", "11:5", "26:6"]
+    },
+    "other/locust": {
+      "en": "locust",
+      "headword": "locust",
+      "source": "tw-en-other-locust",
+      "refs": ["3:4"]
+    },
+    "other/loins": {
+      "en": "loins",
+      "headword": "loins",
+      "source": "tw-en-other-loins",
+      "refs": ["3:4"]
+    },
+    "other/lots": {
+      "en": "lots, casting lots",
+      "headword": "lots, casting lots",
+      "source": "tw-en-other-lots",
+      "refs": ["27:35"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "lust, lustful, passion, desire",
+      "source": "tw-en-other-lust",
+      "refs": ["5:28"]
+    },
+    "other/manager": {
+      "en": "manager, steward, stewardship",
+      "headword": "manager, steward, stewardship",
+      "source": "tw-en-other-manager",
+      "refs": ["20:8"]
+    },
+    "other/meek": {
+      "en": "meek, meekness",
+      "headword": "meek, meekness",
+      "source": "tw-en-other-meek",
+      "refs": ["5:5", "11:29"]
+    },
+    "other/member": {
+      "en": "member, body part",
+      "headword": "member, body part",
+      "source": "tw-en-other-member",
+      "refs": ["5:29", "5:30"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "messenger",
+      "source": "tw-en-other-messenger",
+      "refs": ["11:10"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "might, mighty, mighty works",
+      "source": "tw-en-other-mighty",
+      "refs": ["3:11"]
+    },
+    "other/mind": {
+      "en": "mind, mindful, remind, reminder, likeminded",
+      "headword": "mind, mindful, remind, reminder, likeminded",
+      "source": "tw-en-other-mind",
+      "refs": ["16:23", "22:37"]
+    },
+    "other/mock": {
+      "en": "mock, mocker, mockery, ridicule, scoff at, laughingstock",
+      "headword": "mock, mocker, mockery, ridicule, scoff at, laughingstock",
+      "source": "tw-en-other-mock",
+      "refs": ["20:19", "27:29", "27:31", "27:41"]
+    },
+    "other/mourn": {
+      "en": "mourn, mourner, weeping",
+      "headword": "mourn, mourner, weeping",
+      "source": "tw-en-other-mourn",
+      "refs": ["2:18", "5:4", "9:15", "24:30"]
+    },
+    "other/multiply": {
+      "en": "multiply, multiplied, multiplication",
+      "headword": "multiply, multiplied, multiplication",
+      "source": "tw-en-other-multiply",
+      "refs": ["24:12"]
+    },
+    "other/mystery": {
+      "en": "mystery, hidden truth",
+      "headword": "mystery, hidden truth",
+      "source": "tw-en-other-mystery",
+      "refs": ["13:11"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "nation",
+      "source": "tw-en-other-nation",
+      "refs": ["21:43", "24:7", "24:9", "24:14", "25:32", "28:19"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "neighbor, neighborhood, neighboring",
+      "source": "tw-en-other-neighbor",
+      "refs": ["5:43", "19:19", "22:39"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "oath, vow, swear, swearing, swear by, sworn",
+      "source": "tw-en-other-oath",
+      "refs": [
+        "5:33",
+        "5:34",
+        "5:36",
+        "14:7",
+        "14:9",
+        "23:16",
+        "23:18",
+        "23:20",
+        "23:21",
+        "23:22",
+        "26:72",
+        "26:74"
+      ]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "oil",
+      "source": "tw-en-other-oil",
+      "refs": ["25:3", "25:4", "25:8", "26:7", "26:12"]
+    },
+    "other/olive": {
+      "en": "olive",
+      "headword": "olive",
+      "source": "tw-en-other-olive",
+      "refs": ["24:3", "26:30"]
+    },
+    "other/ordain": {
+      "en": "ordain, ordained, ordination, planned long ago, set up, prepared",
+      "headword": "ordain, ordained, ordination, planned long ago, set up, prepared",
+      "source": "tw-en-other-ordain",
+      "refs": ["21:16"]
+    },
+    "other/patient": {
+      "en": "patient, patience, impatient",
+      "headword": "patient, patience, impatient",
+      "source": "tw-en-other-patient",
+      "refs": ["18:26", "18:29"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "peace, peaceful, peacemaker",
+      "source": "tw-en-other-peace",
+      "refs": ["10:13", "10:34"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "perfect, complete",
+      "source": "tw-en-other-perfect",
+      "refs": ["5:48", "19:21"]
+    },
+    "other/persecute": {
+      "en": "persecute",
+      "headword": "persecute",
+      "source": "tw-en-other-persecute",
+      "refs": ["5:10", "5:11", "5:12", "5:44", "10:23", "13:21", "23:34"]
+    },
+    "other/perverse": {
+      "en": "perverse, perversion, pervert, depraved, malicious, devious, dishonest, distortion",
+      "headword": "perverse, perversion, pervert, depraved, malicious, devious, dishonest, distortion",
+      "source": "tw-en-other-perverse",
+      "refs": ["17:17"]
+    },
+    "other/pig": {
+      "en": "pig, pork, swine",
+      "headword": "pig, pork, swine",
+      "source": "tw-en-other-pig",
+      "refs": ["7:6", "8:30", "8:31", "8:32"]
+    },
+    "other/pit": {
+      "en": "pit, pitfall, trench, cistern",
+      "headword": "pit, pitfall, trench, cistern",
+      "source": "tw-en-other-pit",
+      "refs": ["12:11", "15:14"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "possess, possessed, possession, dispossess",
+      "source": "tw-en-other-possess",
+      "refs": [
+        "6:2",
+        "6:5",
+        "6:16",
+        "19:21",
+        "19:22",
+        "21:38",
+        "24:47",
+        "25:14"
+      ]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "praise, praised, praiseworthy",
+      "source": "tw-en-other-praise",
+      "refs": ["11:25", "21:16"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "preach, preaching, preacher, proclaim, proclamation",
+      "source": "tw-en-other-preach",
+      "refs": [
+        "3:1",
+        "4:17",
+        "4:23",
+        "9:35",
+        "10:7",
+        "10:27",
+        "11:1",
+        "12:41",
+        "24:14",
+        "26:13"
+      ]
+    },
+    "other/profane": {
+      "en": "profane, profaned",
+      "headword": "profane, profaned",
+      "source": "tw-en-other-profane",
+      "refs": ["12:5"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "profit, profits, profited, profitable",
+      "source": "tw-en-other-profit",
+      "refs": [
+        "5:29",
+        "5:30",
+        "15:5",
+        "16:26",
+        "18:6",
+        "18:15",
+        "19:10",
+        "25:16",
+        "25:17",
+        "25:20",
+        "25:22",
+        "27:24"
+      ]
+    },
+    "other/prostitute": {
+      "en": "prostitute, harlot, whored",
+      "headword": "prostitute, harlot, whored",
+      "source": "tw-en-other-prostitute",
+      "refs": ["21:31", "21:32"]
+    },
+    "other/punish": {
+      "en": "punish, punished, punishment, unpunished",
+      "headword": "punish, punished, punishment, unpunished",
+      "source": "tw-en-other-punish",
+      "refs": ["25:46"]
+    },
+    "other/queen": {
+      "en": "queen",
+      "headword": "queen",
+      "source": "tw-en-other-queen",
+      "refs": ["12:42"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "quench, quenched, unquenchable",
+      "source": "tw-en-other-quench",
+      "refs": ["12:20"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "rebuke, reprove",
+      "source": "tw-en-other-rebuke",
+      "refs": ["8:26", "16:22", "17:18", "18:15", "19:13", "20:31"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "receive, welcome, taken up, acceptance",
+      "source": "tw-en-other-receive",
+      "refs": [
+        "7:8",
+        "10:8",
+        "10:14",
+        "10:40",
+        "10:41",
+        "11:14",
+        "13:20",
+        "17:25",
+        "18:5",
+        "19:11",
+        "19:12",
+        "19:29",
+        "20:9",
+        "20:10",
+        "20:11",
+        "21:22",
+        "21:34",
+        "25:16",
+        "25:18",
+        "25:20",
+        "25:24",
+        "25:27"
+      ]
+    },
+    "other/reed": {
+      "en": "reed",
+      "headword": "reed",
+      "source": "tw-en-other-reed",
+      "refs": ["11:7", "12:20", "27:48"]
+    },
+    "other/reign": {
+      "en": "reign, rule",
+      "headword": "reign, rule",
+      "source": "tw-en-other-reign",
+      "refs": ["2:22"]
+    },
+    "other/reject": {
+      "en": "reject, rejected, rejection",
+      "headword": "reject, rejected, rejection",
+      "source": "tw-en-other-reject",
+      "refs": ["21:42"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "report, reported, tell, reputation",
+      "source": "tw-en-other-report",
+      "refs": [
+        "2:8",
+        "8:33",
+        "9:26",
+        "11:4",
+        "14:12",
+        "18:31",
+        "28:8",
+        "28:10",
+        "28:11",
+        "28:15"
+      ]
+    },
+    "other/reward": {
+      "en": "reward, prize, deserve",
+      "headword": "reward, prize, deserve",
+      "source": "tw-en-other-reward",
+      "refs": [
+        "5:12",
+        "5:46",
+        "6:1",
+        "6:2",
+        "6:4",
+        "6:5",
+        "6:6",
+        "6:16",
+        "6:18",
+        "10:41",
+        "10:42"
+      ]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "robe, robed",
+      "source": "tw-en-other-robe",
+      "refs": ["27:28", "27:31"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "rule, reign, ruler, prefect, official, leader",
+      "source": "tw-en-other-ruler",
+      "refs": ["9:18", "9:23", "9:34", "12:24", "20:25"]
+    },
+    "other/sackcloth": {
+      "en": "sackcloth",
+      "headword": "sackcloth",
+      "source": "tw-en-other-sackcloth",
+      "refs": ["11:21"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "sacrifice, offering",
+      "source": "tw-en-other-sacrifice",
+      "refs": ["9:13", "12:7"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "sandal",
+      "source": "tw-en-other-sandal",
+      "refs": ["3:11", "10:10"]
+    },
+    "other/seal": {
+      "en": "seal, sealed, unsealed",
+      "headword": "seal, sealed, unsealed",
+      "source": "tw-en-other-seal",
+      "refs": ["27:66"]
+    },
+    "other/seed": {
+      "en": "seed",
+      "headword": "seed",
+      "source": "tw-en-other-seed",
+      "refs": ["13:24", "13:27", "13:32", "13:37", "13:38", "22:24", "22:25"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "seek, search, look for",
+      "source": "tw-en-other-seek",
+      "refs": [
+        "2:13",
+        "2:20",
+        "6:32",
+        "6:33",
+        "7:7",
+        "7:8",
+        "12:39",
+        "12:43",
+        "12:46",
+        "12:47",
+        "13:45",
+        "16:4",
+        "18:12",
+        "21:46",
+        "26:16",
+        "26:59",
+        "28:5"
+      ]
+    },
+    "other/seize": {
+      "en": "seize, seizure, capture",
+      "headword": "seize, seizure, capture",
+      "source": "tw-en-other-seize",
+      "refs": [
+        "11:12",
+        "12:29",
+        "13:19",
+        "14:3",
+        "18:28",
+        "21:46",
+        "22:6",
+        "26:4",
+        "26:48",
+        "26:50",
+        "26:55",
+        "26:57"
+      ]
+    },
+    "other/serpent": {
+      "en": "serpent, snake, viper",
+      "headword": "serpent, snake, viper",
+      "source": "tw-en-other-serpent",
+      "refs": ["3:7", "7:10", "10:16", "12:34", "23:33"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "servant, serve, maidservant, young man, young women",
+      "source": "tw-en-other-servant",
+      "refs": [
+        "4:10",
+        "6:24",
+        "8:6",
+        "8:8",
+        "8:9",
+        "8:13",
+        "10:24",
+        "10:25",
+        "12:18",
+        "13:27",
+        "13:28",
+        "14:2",
+        "18:23",
+        "18:26",
+        "18:27",
+        "18:28",
+        "18:29",
+        "18:31",
+        "18:32",
+        "18:33",
+        "20:27",
+        "21:34",
+        "21:35",
+        "21:36",
+        "22:3",
+        "22:4",
+        "22:6",
+        "22:8",
+        "22:10",
+        "24:45",
+        "24:46",
+        "24:48",
+        "24:49",
+        "24:50",
+        "25:14",
+        "25:19",
+        "25:21",
+        "25:23",
+        "25:26",
+        "25:30",
+        "26:51",
+        "26:69"
+      ]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "shame, ashamed, disgrace, humiliate, reproach",
+      "source": "tw-en-other-shame",
+      "refs": ["5:11", "11:20", "27:44"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "source": "tw-en-other-sheep",
+      "refs": [
+        "7:15",
+        "9:36",
+        "10:6",
+        "10:16",
+        "12:11",
+        "12:12",
+        "15:24",
+        "18:12",
+        "25:32",
+        "25:33",
+        "26:31"
+      ]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "shepherd, herder, pastor",
+      "source": "tw-en-other-shepherd",
+      "refs": ["2:6", "9:36", "25:32", "26:31"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "silver",
+      "source": "tw-en-other-silver",
+      "refs": [
+        "10:9",
+        "25:18",
+        "25:27",
+        "26:15",
+        "27:3",
+        "27:5",
+        "27:6",
+        "27:9",
+        "28:12",
+        "28:15"
+      ]
+    },
+    "other/snare": {
+      "en": "snare, ensnare, entrap, trap, trapped, pitfall",
+      "headword": "snare, ensnare, entrap, trap, trapped, pitfall",
+      "source": "tw-en-other-snare",
+      "refs": ["22:15"]
+    },
+    "other/snow": {
+      "en": "snow",
+      "headword": "snow",
+      "source": "tw-en-other-snow",
+      "refs": ["28:3"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "sow, sower, plant, planted, replanted, transplanted",
+      "source": "tw-en-other-sow",
+      "refs": [
+        "6:26",
+        "13:3",
+        "13:4",
+        "13:18",
+        "13:19",
+        "13:20",
+        "13:22",
+        "13:23",
+        "13:24",
+        "13:25",
+        "13:27",
+        "13:31",
+        "13:37",
+        "13:39",
+        "15:13",
+        "25:24",
+        "25:26"
+      ]
+    },
+    "other/staff": {
+      "en": "staff, clubs",
+      "headword": "staff, clubs",
+      "source": "tw-en-other-staff",
+      "refs": ["10:10", "27:29", "27:30"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "stumble, reeling",
+      "source": "tw-en-other-stumble",
+      "refs": ["5:29", "5:30", "18:6", "18:8", "18:9"]
+    },
+    "other/suffer": {
+      "en": "suffer, suffering",
+      "headword": "suffer, suffering",
+      "source": "tw-en-other-suffer",
+      "refs": ["16:21", "17:12", "27:19"]
+    },
+    "other/sweep": {
+      "en": "sweep",
+      "headword": "sweep",
+      "source": "tw-en-other-sweep",
+      "refs": ["12:44"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "sword, swordsmen",
+      "source": "tw-en-other-sword",
+      "refs": ["10:34", "26:47", "26:51", "26:52", "26:55"]
+    },
+    "other/tax": {
+      "en": "tax, tribute, taxation, taxpayer, tax collector",
+      "headword": "tax, tribute, taxation, taxpayer, tax collector",
+      "source": "tw-en-other-tax",
+      "refs": [
+        "5:46",
+        "9:9",
+        "9:10",
+        "9:11",
+        "10:3",
+        "11:19",
+        "17:25",
+        "18:17",
+        "21:31",
+        "21:32"
+      ]
+    },
+    "other/teacher": {
+      "en": "teacher, Teacher",
+      "headword": "teacher, Teacher",
+      "source": "tw-en-other-teacher",
+      "refs": [
+        "8:19",
+        "9:11",
+        "10:24",
+        "10:25",
+        "12:38",
+        "17:24",
+        "19:16",
+        "22:16",
+        "22:24",
+        "22:36",
+        "26:18"
+      ]
+    },
+    "other/tenth": {
+      "en": "tenth, tithe",
+      "headword": "tenth, tithe",
+      "source": "tw-en-other-tenth",
+      "refs": ["23:23"]
+    },
+    "other/thief": {
+      "en": "thief, thieves, rob, robber, robbery, bandit",
+      "headword": "thief, thieves, rob, robber, robbery, bandit",
+      "source": "tw-en-other-thief",
+      "refs": ["6:19", "6:20", "21:13", "24:43", "26:55", "27:38", "27:44"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "thorn, thorn bush, thistle",
+      "source": "tw-en-other-thorn",
+      "refs": ["7:16", "13:7", "13:22", "27:29"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "thresh",
+      "source": "tw-en-other-thresh",
+      "refs": ["3:12"]
+    },
+    "other/throne": {
+      "en": "throne, enthroned",
+      "headword": "throne, enthroned",
+      "source": "tw-en-other-throne",
+      "refs": ["5:34", "19:28", "23:22", "25:31"]
+    },
+    "other/tomb": {
+      "en": "grave, gravedigger, tomb, burial place",
+      "headword": "grave, gravedigger, tomb, burial place",
+      "source": "tw-en-other-tomb",
+      "refs": [
+        "8:28",
+        "23:27",
+        "23:29",
+        "27:52",
+        "27:53",
+        "27:60",
+        "27:61",
+        "27:64",
+        "27:66",
+        "28:1",
+        "28:8"
+      ]
+    },
+    "other/torment": {
+      "en": "torment, tormented, tormentor",
+      "headword": "torment, tormented, tormentor",
+      "source": "tw-en-other-torment",
+      "refs": ["8:6", "8:29"]
+    },
+    "other/tradition": {
+      "en": "tradition",
+      "headword": "tradition",
+      "source": "tw-en-other-tradition",
+      "refs": ["15:2", "15:3", "15:6"]
+    },
+    "other/trample": {
+      "en": "trample",
+      "headword": "trample",
+      "source": "tw-en-other-trample",
+      "refs": ["5:13", "7:6"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "tremble, shake, shaken, quake",
+      "source": "tw-en-other-tremble",
+      "refs": ["27:51", "28:4"]
+    },
+    "other/tribe": {
+      "en": "tribe, tribal, tribesmen",
+      "headword": "tribe, tribal, tribesmen",
+      "source": "tw-en-other-tribe",
+      "refs": ["19:28", "24:30"]
+    },
+    "other/tribulation": {
+      "en": "tribulation, distress, distresses, trouble",
+      "headword": "tribulation, distress, distresses, trouble",
+      "source": "tw-en-other-tribulation",
+      "refs": ["13:21", "24:9", "24:21", "24:29"]
+    },
+    "other/tribute": {
+      "en": "tribute, contribution",
+      "headword": "tribute, contribution",
+      "source": "tw-en-other-tribute",
+      "refs": ["17:25", "22:17", "22:19"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "trouble, disturb, stir up, distress, hardship, calamity",
+      "source": "tw-en-other-trouble",
+      "refs": ["2:3", "9:36", "14:26", "24:6", "26:10"]
+    },
+    "other/trumpet": {
+      "en": "trumpet, trumpeter",
+      "headword": "trumpet, trumpeter",
+      "source": "tw-en-other-trumpet",
+      "refs": ["6:2", "24:31"]
+    },
+    "other/tunic": {
+      "en": "tunic",
+      "headword": "tunic",
+      "source": "tw-en-other-tunic",
+      "refs": ["5:40", "10:10"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "understand, understanding, thinking",
+      "source": "tw-en-other-understand",
+      "refs": [
+        "11:25",
+        "13:11",
+        "13:13",
+        "13:14",
+        "13:15",
+        "13:19",
+        "13:23",
+        "13:51",
+        "15:10",
+        "15:17",
+        "16:9",
+        "16:11",
+        "16:12",
+        "17:13",
+        "24:15"
+      ]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "vain, vanity",
+      "source": "tw-en-other-vain",
+      "refs": ["15:9"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "vine",
+      "source": "tw-en-other-vine",
+      "refs": ["26:29"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "vineyard",
+      "source": "tw-en-other-vineyard",
+      "refs": [
+        "20:1",
+        "20:2",
+        "20:4",
+        "20:7",
+        "20:8",
+        "21:28",
+        "21:33",
+        "21:39",
+        "21:40",
+        "21:41"
+      ]
+    },
+    "other/virgin": {
+      "en": "virgin, virginity",
+      "headword": "virgin, virginity",
+      "source": "tw-en-other-virgin",
+      "refs": ["1:23", "25:1", "25:7", "25:11"]
+    },
+    "other/vision": {
+      "en": "vision, envision",
+      "headword": "vision, envision",
+      "source": "tw-en-other-vision",
+      "refs": ["17:9"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "soldier, warrior",
+      "source": "tw-en-other-warrior",
+      "refs": ["8:9", "27:27", "28:12"]
+    },
+    "other/waste": {
+      "en": "waste, wasted, wasteland, becomes weak",
+      "headword": "waste, wasted, wasteland, becomes weak",
+      "source": "tw-en-other-waste",
+      "refs": ["26:8"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "watch, guard, take heed, beware",
+      "source": "tw-en-other-watch",
+      "refs": [
+        "14:25",
+        "16:6",
+        "24:42",
+        "24:43",
+        "25:13",
+        "26:38",
+        "26:40",
+        "26:41",
+        "27:36",
+        "27:54",
+        "28:4"
+      ]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "watchtower, tower",
+      "source": "tw-en-other-watchtower",
+      "refs": ["21:33"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "wheat",
+      "source": "tw-en-other-wheat",
+      "refs": ["3:12", "13:25", "13:29", "13:30"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "wine, wineskin, new wine",
+      "source": "tw-en-other-wine",
+      "refs": ["9:17", "27:34"]
+    },
+    "other/winepress": {
+      "en": "winepress",
+      "headword": "winepress",
+      "source": "tw-en-other-winepress",
+      "refs": ["21:33"]
+    },
+    "other/winnow": {
+      "en": "winnow, sift",
+      "headword": "winnow, sift",
+      "source": "tw-en-other-winnow",
+      "refs": ["3:12"]
+    },
+    "other/wisemen": {
+      "en": "wise men, advisor",
+      "headword": "wise men, advisor",
+      "source": "tw-en-other-wisemen",
+      "refs": ["2:1", "2:7", "2:16"]
+    },
+    "other/wolf": {
+      "en": "wolf, wild dog, wild dogs",
+      "headword": "wolf, wild dog, wild dogs",
+      "source": "tw-en-other-wolf",
+      "refs": ["7:15", "10:16"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "womb",
+      "source": "tw-en-other-womb",
+      "refs": ["1:18", "1:23", "19:12", "24:19"]
+    },
+    "other/wrong": {
+      "en": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "headword": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "source": "tw-en-other-wrong",
+      "refs": ["20:13"]
+    },
+    "other/yeast": {
+      "en": "yeast, leaven, unleavened",
+      "headword": "yeast, leaven, unleavened",
+      "source": "tw-en-other-yeast",
+      "refs": ["13:33", "16:6", "16:11", "16:12"]
+    },
+    "other/yoke": {
+      "en": "yoke, yoked, tied",
+      "headword": "yoke, yoked, tied",
+      "source": "tw-en-other-yoke",
+      "refs": ["11:29", "11:30"]
+    }
+  },
+  "gaps": {}
+}

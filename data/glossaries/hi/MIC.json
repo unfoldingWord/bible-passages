@@ -1,0 +1,1207 @@
+{
+  "language": "hi",
+  "book": "MIC",
+  "links": "twl-en-mic",
+  "words": {
+    "repo": "translationCore-Create-BCS/hi_tw",
+    "release": "v8",
+    "commit": "5fa7b590a2e5f99ac6a84de96ee081e751e70b95"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (hi), translationCore-Create-BCS/hi_tw v8, CC BY-SA 4.0. Original work available at https://git.door43.org/translationCore-Create-BCS/hi_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/anoint": {
+      "en": "anoint, anointed, anointing",
+      "headword": "अभिषेक करना, अभिषिक्त, अभिषेक",
+      "source": "tw-hi-kt-anoint",
+      "refs": ["6:15"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "नियुक्त करना, निुयक्त किया",
+      "source": "tw-hi-kt-appoint",
+      "refs": ["6:9"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "तरस, दयालु",
+      "source": "tw-hi-kt-compassion",
+      "refs": ["7:19"]
+    },
+    "kt/consecrate": {
+      "en": "consecrate, consecrated, consecration",
+      "headword": "पवित्र करना, पवित्र किया, पवित्रीकरण संस्कार",
+      "source": "tw-hi-kt-consecrate",
+      "refs": ["3:5"]
+    },
+    "kt/covenantfaith": {
+      "en": "covenant faithfulness, covenant loyalty, covenant love",
+      "headword": "वाचा की विश्वासयोग्यता, निष्ठावान वाचा, वाचा का प्रेम",
+      "source": "tw-hi-kt-covenantfaith",
+      "refs": ["6:8", "7:18", "7:20"]
+    },
+    "kt/curse": {
+      "en": "curse, cursed, cursing",
+      "headword": "श्राप, श्रापित, श्राप दे रहा",
+      "source": "tw-hi-kt-curse",
+      "refs": ["6:10"]
+    },
+    "kt/dominion": {
+      "en": "dominion",
+      "headword": "प्रभुता",
+      "source": "tw-hi-kt-dominion",
+      "refs": ["4:8"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "सनातन, अनन्त, अनंत काल",
+      "source": "tw-hi-kt-eternity",
+      "refs": ["2:9", "4:5", "4:7", "5:2", "7:18"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "बुराई, दुष्ट, दुष्टता",
+      "source": "tw-hi-kt-evil",
+      "refs": ["1:12", "2:1", "2:3", "3:2", "3:11", "6:10", "6:11", "7:3"]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "विश्वासयोग्य, विश्वासयोग्यता",
+      "source": "tw-hi-kt-faithful",
+      "refs": ["7:2", "7:20"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "देवता, झूठे देवता, देवियाँ, मूर्ति, मूर्तिपूजक, मूर्ति पूजा",
+      "source": "tw-hi-kt-falsegod",
+      "refs": ["1:7", "4:5"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "डर, भय, भयभीत, डरना",
+      "source": "tw-hi-kt-fear",
+      "refs": ["6:9", "7:17"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "महिमा, महिमामय, महिमान्वित करना",
+      "source": "tw-hi-kt-glory",
+      "refs": ["1:15"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "परमेश्‍वर",
+      "source": "tw-hi-kt-god",
+      "refs": ["3:7", "4:5", "5:4", "6:6", "6:8", "7:7", "7:10", "7:17", "7:18"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "अच्छा, सही, प्रसन्न करने वाला, उत्तम, सबसे अच्छा",
+      "source": "tw-hi-kt-good",
+      "refs": ["1:12", "2:7", "3:2", "6:8"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "पवित्र, पवित्रता, अपवित्र,",
+      "source": "tw-hi-kt-holy",
+      "refs": ["1:2"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "पवित्र आत्मा, परमेश्वर का आत्मा, प्रभु की आत्मा, आत्मा",
+      "source": "tw-hi-kt-holyspirit",
+      "refs": ["2:7", "3:8"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "आशा, आशा की",
+      "source": "tw-hi-kt-hope",
+      "refs": ["5:7"]
+    },
+    "kt/houseofgod": {
+      "en": "house of God, your house, his house, Yahweh’s house, a house for my name, the house for my name, the house, a house, a house of Yahweh",
+      "headword": "परमेश्‍वर का भवन, यहोवा का भवन, परमेश्वर का मंदिर",
+      "source": "tw-hi-kt-houseofgod",
+      "refs": ["4:1", "4:2"]
+    },
+    "kt/humble": {
+      "en": "humble, humbled, humility",
+      "headword": "दीन, विनम्र, नम्र बनाया, नम्रता",
+      "source": "tw-hi-kt-humble",
+      "refs": ["6:8"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "अधिकारी होना, भाग, वारिस",
+      "source": "tw-hi-kt-inherit",
+      "refs": ["2:2", "7:14", "7:18"]
+    },
+    "kt/iniquity": {
+      "en": "iniquity",
+      "headword": "अधर्म, अधर्मों",
+      "source": "tw-hi-kt-iniquity",
+      "refs": ["2:1", "7:18", "7:19"]
+    },
+    "kt/innocent": {
+      "en": "innocent",
+      "headword": "निर्दोष",
+      "source": "tw-hi-kt-innocent",
+      "refs": ["6:11"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "इस्राएल, इस्राएली",
+      "source": "tw-hi-kt-israel",
+      "refs": [
+        "1:13",
+        "1:14",
+        "1:15",
+        "2:12",
+        "3:8",
+        "3:9",
+        "5:1",
+        "5:2",
+        "5:3",
+        "6:2"
+      ]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "न्यायी, न्याय",
+      "source": "tw-hi-kt-judge",
+      "refs": ["3:9", "3:11", "4:3", "7:9"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "न्यायोचित, न्याय, अन्याय, न्यायसंगत सिद्ध करना, औचित्य",
+      "source": "tw-hi-kt-justice",
+      "refs": ["3:1", "3:8", "3:10", "6:8"]
+    },
+    "kt/lament": {
+      "en": "lament, lamentation",
+      "headword": "विलाप करना, विलाप",
+      "source": "tw-hi-kt-lament",
+      "refs": ["1:8", "2:4"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "व्यवस्था, मूसा की व्यवस्था, परमेश्वर की व्यवस्था, यहोवा की व्यवस्था",
+      "source": "tw-hi-kt-lawofmoses",
+      "refs": ["4:2"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "प्रभु, गुरु, स्वामी, स्वामियों, श्रीमान, महोदय",
+      "source": "tw-hi-kt-lord",
+      "refs": ["1:2", "4:13"]
+    },
+    "kt/lordyahweh": {
+      "en": "Lord Yahweh, Yahweh God",
+      "headword": "प्रभु यहोवा, यहोवा परमेश्‍वर",
+      "source": "tw-hi-kt-lordyahweh",
+      "refs": ["1:2"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "प्रेम, प्रिय,",
+      "source": "tw-hi-kt-love",
+      "refs": ["3:2", "6:8"]
+    },
+    "kt/majesty": {
+      "en": "majesty",
+      "headword": "महामहिमन्",
+      "source": "tw-hi-kt-majesty",
+      "refs": ["5:4"]
+    },
+    "kt/miracle": {
+      "en": "miracle, wonder, sign",
+      "headword": "चमत्कार, आश्चर्यकर्मों, चिन्ह",
+      "source": "tw-hi-kt-miracle",
+      "refs": ["7:15"]
+    },
+    "kt/perish": {
+      "en": "perish",
+      "headword": "नाश होना, नष्ट",
+      "source": "tw-hi-kt-perish",
+      "refs": ["4:9", "7:2"]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "याजक, याजकों, याजकवृति",
+      "source": "tw-hi-kt-priest",
+      "refs": ["3:11"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "भविष्यद्वक्ता, भविष्यद्वाणी, भविष्यद्वाणी करना, द्रष्टा, भविष्यद्वक्तिन",
+      "source": "tw-hi-kt-prophet",
+      "refs": ["3:5", "3:6", "3:7", "3:11"]
+    },
+    "kt/redeem": {
+      "en": "redeem, redeemer, redemption",
+      "headword": "छुड़ा ले, छुटकारा, छुटकारा, छुटकारा दिलानेवाला",
+      "source": "tw-hi-kt-redeem",
+      "refs": ["4:10", "6:4"]
+    },
+    "kt/remnant": {
+      "en": "remnant",
+      "headword": "बचे हुए",
+      "source": "tw-hi-kt-remnant",
+      "refs": ["2:12", "4:7", "5:7", "5:8", "7:18"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "धर्मी, धार्मिकता, अधर्मी, अधर्म, खरा, खराई",
+      "source": "tw-hi-kt-righteous",
+      "refs": ["6:5", "7:2", "7:4"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "बचाना, बचाया, सुरक्षित, उद्धार",
+      "source": "tw-hi-kt-save",
+      "refs": ["4:10", "6:14", "7:7"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "पाप, पापी, पापी, पाप करते रहना",
+      "source": "tw-hi-kt-sin",
+      "refs": ["1:5", "1:13", "3:8", "6:7", "6:13", "7:9", "7:19"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "प्राण, स्वयं, व्यक्ति",
+      "source": "tw-hi-kt-soul",
+      "refs": ["6:7", "7:1", "7:3"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "आत्मा, हवा, सांस",
+      "source": "tw-hi-kt-spirit",
+      "refs": ["2:11"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "मन्दिर, भवन, परमेश्वर का भवन",
+      "source": "tw-hi-kt-temple",
+      "refs": ["3:12"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "गवाही, गवाही देना, साक्षी, साक्षात गवाह",
+      "source": "tw-hi-kt-testimony",
+      "refs": ["1:2", "6:3"]
+    },
+    "kt/transgression": {
+      "en": "transgress, transgression",
+      "headword": "उल्लंघन करना, अपराध",
+      "source": "tw-hi-kt-transgression",
+      "refs": ["1:5", "1:13", "3:8", "6:7", "7:18"]
+    },
+    "kt/trust": {
+      "en": "trust, trusted, trustworthy, trustworthiness",
+      "headword": "विश्वास,विश्वास किया, विश्वासयोग्य, विश्वासयोग्यता",
+      "source": "tw-hi-kt-trust",
+      "refs": ["7:5"]
+    },
+    "kt/wise": {
+      "en": "wise, wisdom",
+      "headword": "बुद्धिमान, बुद्धि",
+      "source": "tw-hi-kt-wise",
+      "refs": ["6:9"]
+    },
+    "kt/woe": {
+      "en": "woe",
+      "headword": "हाय",
+      "source": "tw-hi-kt-woe",
+      "refs": ["2:1", "7:1"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "परमेश्‍वर का वचन, परमेश्वर का वचन, यहोवा के वचन, सत्य का वचन, पवित्रशास्त्र,",
+      "source": "tw-hi-kt-wordofgod",
+      "refs": ["1:1", "4:2"]
+    },
+    "kt/worship": {
+      "en": "prostrate, bow down, worship",
+      "headword": "दंडवत करना, घुटने टेकना, उपासना",
+      "source": "tw-hi-kt-worship",
+      "refs": ["5:13", "6:6"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "क्रोध, रोष",
+      "source": "tw-hi-kt-wrath",
+      "refs": ["5:15"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "यहोवा",
+      "source": "tw-hi-kt-yahweh",
+      "refs": [
+        "1:3",
+        "1:12",
+        "2:3",
+        "2:5",
+        "2:7",
+        "2:13",
+        "3:4",
+        "3:5",
+        "3:8",
+        "3:11",
+        "4:2",
+        "4:5",
+        "4:6",
+        "4:7",
+        "4:10",
+        "4:12",
+        "4:13",
+        "5:4",
+        "5:7",
+        "5:10",
+        "6:1",
+        "6:2",
+        "6:5",
+        "6:6",
+        "6:7",
+        "6:8",
+        "6:9",
+        "7:7",
+        "7:8",
+        "7:9",
+        "7:10",
+        "7:17"
+      ]
+    },
+    "kt/yahwehofhosts": {
+      "en": "Yahweh of hosts, Yahweh of armies, God of armies, God of hosts, host of heaven, host of the heavens, Lord of hosts",
+      "headword": "सेनाओं का यहोवा, सेनाओं का परमेश्‍वर, आकाश के गण, आकाश का सारा तारागण, सेनाओं का प्रभु",
+      "source": "tw-hi-kt-yahwehofhosts",
+      "refs": ["4:4"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "सिय्योन, सिय्योन पर्वत",
+      "source": "tw-hi-kt-zion",
+      "refs": [
+        "1:13",
+        "3:10",
+        "3:12",
+        "4:2",
+        "4:7",
+        "4:8",
+        "4:10",
+        "4:11",
+        "4:13"
+      ]
+    },
+    "names/aaron": {
+      "en": "Aaron",
+      "headword": "हारून",
+      "source": "tw-hi-names-aaron",
+      "refs": ["6:4"]
+    },
+    "names/abraham": {
+      "en": "Abraham, Abram",
+      "headword": "अब्राहम, अब्राम",
+      "source": "tw-hi-names-abraham",
+      "refs": ["7:20"]
+    },
+    "names/ahab": {
+      "en": "Ahab",
+      "headword": "आहाब",
+      "source": "tw-hi-names-ahab",
+      "refs": ["6:16"]
+    },
+    "names/ahaz": {
+      "en": "Ahaz",
+      "headword": "आहाज",
+      "source": "tw-hi-names-ahaz",
+      "refs": ["1:1"]
+    },
+    "names/asherim": {
+      "en": "Asherah, Asherah pole, Ashtoreth",
+      "headword": "अशेरा, अशेरा के लिए मूरत, अशेरा नामक मूर्तियों, अश्तोरेत",
+      "source": "tw-hi-names-asherim",
+      "refs": ["5:14"]
+    },
+    "names/assyria": {
+      "en": "Assyria, Assyrian, Assyrian Empire",
+      "headword": "अश्शूर, अश्शूरी, अश्शूर राज्य",
+      "source": "tw-hi-names-assyria",
+      "refs": ["5:5", "5:6", "7:12"]
+    },
+    "names/babylon": {
+      "en": "Babylon, Babylonia, Babylonian",
+      "headword": "बेबीलोन, बाबेल, बबीलोनवासी",
+      "source": "tw-hi-names-babylon",
+      "refs": ["4:10"]
+    },
+    "names/balaam": {
+      "en": "Balaam",
+      "headword": "बिलाम",
+      "source": "tw-hi-names-balaam",
+      "refs": ["6:5"]
+    },
+    "names/bashan": {
+      "en": "Bashan",
+      "headword": "बाशान",
+      "source": "tw-hi-names-bashan",
+      "refs": ["7:14"]
+    },
+    "names/bethlehem": {
+      "en": "Bethlehem, Ephrathah",
+      "headword": "बैतलहम, एप्रात",
+      "source": "tw-hi-names-bethlehem",
+      "refs": ["5:2"]
+    },
+    "names/carmel": {
+      "en": "Carmel, Mount Carmel",
+      "headword": "कर्मेल, कर्मेल पहाड़",
+      "source": "tw-hi-names-carmel",
+      "refs": ["7:14"]
+    },
+    "names/egypt": {
+      "en": "Egypt, Egyptian",
+      "headword": "मिस्र, मिस्री, मिस्रियों",
+      "source": "tw-hi-names-egypt",
+      "refs": ["6:4", "7:12", "7:15"]
+    },
+    "names/euphrates": {
+      "en": "Euphrates River, the River",
+      "headword": "फरात नदी, महानद",
+      "source": "tw-hi-names-euphrates",
+      "refs": ["7:12"]
+    },
+    "names/gath": {
+      "en": "Gath, Gittite",
+      "headword": "गत, गतवासी, गती",
+      "source": "tw-hi-names-gath",
+      "refs": ["1:10"]
+    },
+    "names/gilead": {
+      "en": "Gilead, Gileadite",
+      "headword": "गिलाद, गिलादी, गिलादियों",
+      "source": "tw-hi-names-gilead",
+      "refs": ["7:14"]
+    },
+    "names/gilgal": {
+      "en": "Gilgal",
+      "headword": "गिलगाल",
+      "source": "tw-hi-names-gilgal",
+      "refs": ["6:5"]
+    },
+    "names/hezekiah": {
+      "en": "Hezekiah",
+      "headword": "हिजकिय्याह",
+      "source": "tw-hi-names-hezekiah",
+      "refs": ["1:1"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "याकूब, इस्राएल, इस्राएली",
+      "source": "tw-hi-names-jacob",
+      "refs": [
+        "1:5",
+        "2:7",
+        "2:12",
+        "3:1",
+        "3:8",
+        "3:9",
+        "4:2",
+        "5:7",
+        "5:8",
+        "7:20"
+      ]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "यरूशलेम",
+      "source": "tw-hi-names-jerusalem",
+      "refs": ["1:1", "1:5", "1:9", "1:12", "3:10", "3:12", "4:2", "4:8"]
+    },
+    "names/jotham": {
+      "en": "Jotham",
+      "headword": "योताम",
+      "source": "tw-hi-names-jotham",
+      "refs": ["1:1"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "यहूदिया",
+      "source": "tw-hi-names-judea",
+      "refs": ["1:5", "1:9", "5:2"]
+    },
+    "names/kingdomofjudah": {
+      "en": "Judah, kingdom of Judah",
+      "headword": "यहूदा, यहूदा का राज्य",
+      "source": "tw-hi-names-kingdomofjudah",
+      "refs": ["1:1"]
+    },
+    "names/lot": {
+      "en": "Lot",
+      "headword": "लूत",
+      "source": "tw-hi-names-lot",
+      "refs": ["2:5"]
+    },
+    "names/micah": {
+      "en": "Micah",
+      "headword": "मीका",
+      "source": "tw-hi-names-micah",
+      "refs": ["1:1"]
+    },
+    "names/miriam": {
+      "en": "Miriam",
+      "headword": "मिर्याम",
+      "source": "tw-hi-names-miriam",
+      "refs": ["6:4"]
+    },
+    "names/moab": {
+      "en": "Moab, Moabite",
+      "headword": "मोआब, मोआबी",
+      "source": "tw-hi-names-moab",
+      "refs": ["6:5"]
+    },
+    "names/moses": {
+      "en": "Moses",
+      "headword": "मूसा",
+      "source": "tw-hi-names-moses",
+      "refs": ["6:4"]
+    },
+    "names/omri": {
+      "en": "Omri",
+      "headword": "ओम्री",
+      "source": "tw-hi-names-omri",
+      "refs": ["6:16"]
+    },
+    "names/samaria": {
+      "en": "Samaria, Samaritan",
+      "headword": "सामरिया, सामरी",
+      "source": "tw-hi-names-samaria",
+      "refs": ["1:1", "1:5", "1:6"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "विरोधी, द्रोहियों, बैरी, शत्रुओं",
+      "source": "tw-hi-other-adversary",
+      "refs": ["2:8", "4:10", "5:9", "7:6", "7:8", "7:10"]
+    },
+    "other/afflict": {
+      "en": "afflict, affliction, distress",
+      "headword": "दुःखित, मारेगा, दुःख, क्लेश",
+      "source": "tw-hi-other-afflict",
+      "refs": ["4:6"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "मण्डली, सभा, इकट्ठा होना, सभा,",
+      "source": "tw-hi-other-assembly",
+      "refs": ["2:5", "2:12", "4:6", "4:11", "4:12"]
+    },
+    "other/avenge": {
+      "en": "avenge, avenger, revenge, vengeance",
+      "headword": "बदला लेना, पलटा लेनेवाला, पलटा लिया, बदला",
+      "source": "tw-hi-other-avenge",
+      "refs": ["5:15"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "सहना, सह लेने वाला, ढोना",
+      "source": "tw-hi-other-bear",
+      "refs": ["5:3"]
+    },
+    "other/bloodshed": {
+      "en": "bloodshed",
+      "headword": "लहू बहाना",
+      "source": "tw-hi-other-bloodshed",
+      "refs": ["3:10", "7:2"]
+    },
+    "other/bribe": {
+      "en": "bribe, bribery, payoff, payoffs",
+      "headword": "घूस, घूस, घूस दिया, घूस लेते हैं",
+      "source": "tw-hi-other-bribe",
+      "refs": ["3:11"]
+    },
+    "other/bronze": {
+      "en": "bronze",
+      "headword": "पीतल",
+      "source": "tw-hi-other-bronze",
+      "refs": ["4:13"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "रथ, रथी, सवार",
+      "source": "tw-hi-other-chariot",
+      "refs": ["1:13", "5:10"]
+    },
+    "other/clan": {
+      "en": "clan",
+      "headword": "कुल, कुलों",
+      "source": "tw-hi-other-clan",
+      "refs": ["5:2"]
+    },
+    "other/commander": {
+      "en": "commander",
+      "headword": "सेनापति, सरदार",
+      "source": "tw-hi-other-commander",
+      "refs": ["3:1", "3:9"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "साथी, संगी, मित्र",
+      "source": "tw-hi-other-companion",
+      "refs": ["7:5"]
+    },
+    "other/counselor": {
+      "en": "advice, advise, advisor, counsel, counselor, counsels",
+      "headword": "सम्मति, सम्मति देना, मंत्री, सम्मति, सम्मति देनेवाला, वकील",
+      "source": "tw-hi-other-counselor",
+      "refs": ["4:9", "6:5", "6:16"]
+    },
+    "other/cow": {
+      "en": "cow, bull, calf, cattle, heifer, ox",
+      "headword": "गाय, बैल, बछड़ा, मवेशी, कलोर, बैल",
+      "source": "tw-hi-other-cow",
+      "refs": ["6:6"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "पुकार, चिल्लाहट, पुकारकर, रोना, दोहाई, दोहाई,",
+      "source": "tw-hi-other-cry",
+      "refs": ["3:4"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "धोखा, धोखा देनेवाले, धोखा दिया, छलता, छली, धोखेबाज, धोखेबाजों, छलपूर्ण, धूर्तता से, छल में, छलता, छली",
+      "source": "tw-hi-other-deceive",
+      "refs": ["1:14", "2:11"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "घोषणा करना, विज्ञप्ति, घोषणा",
+      "source": "tw-hi-other-declare",
+      "refs": ["1:10", "3:8", "4:6"]
+    },
+    "other/dedicate": {
+      "en": "dedicate, dedication, established, devoted",
+      "headword": "समर्पण करना, अर्पण करना, स्थापति, प्राणार्पित",
+      "source": "tw-hi-other-dedicate",
+      "refs": ["4:1"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "अशुद्ध, अशुद्ध किया, भ्रष्ट करना",
+      "source": "tw-hi-other-defile",
+      "refs": ["4:11"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "आनन्द, प्रसन्‍न, सुखी",
+      "source": "tw-hi-other-delight",
+      "refs": ["1:16", "2:9", "7:18"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "छुड़ाना, सौंपना, छुड़ाया जाना, छुटकारा दिलाने वाला ,छुटकारा",
+      "source": "tw-hi-other-deliverer",
+      "refs": ["5:6", "5:8"]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "उजड़ा, उजाड़, अकेला, निर्जन",
+      "source": "tw-hi-other-desolate",
+      "refs": ["1:7", "6:16", "7:13"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "नाश करना, विनाश, नाश करनेवाला, सत्यानाश करना",
+      "source": "tw-hi-other-destroyer",
+      "refs": ["2:4", "2:10", "5:10", "5:14"]
+    },
+    "other/devastated": {
+      "en": "devastate, devastation",
+      "headword": "नाश होगा, उजाड़ दिया, नाश करता, उजाड़, उजाड़",
+      "source": "tw-hi-other-devastated",
+      "refs": ["6:13"]
+    },
+    "other/dishonor": {
+      "en": "dishonor, dishonored, dishonorable",
+      "headword": "निरादर, अपमान योग्य",
+      "source": "tw-hi-other-dishonor",
+      "refs": ["7:6"]
+    },
+    "other/divination": {
+      "en": "divination, diviner, soothsaying, soothsayer",
+      "headword": "भावी कहना, भविष्य कथन बताना, भावी कहने वाला, भूत सिद्धि करना, शकुन विचारना, ज्योतिषी, तांत्रिक, शुभ-अशुभ मुहूर्त्तों को मानना या तंत्रविद्या",
+      "source": "tw-hi-other-divination",
+      "refs": ["3:6", "3:7", "3:11", "5:12"]
+    },
+    "other/eagle": {
+      "en": "eagle",
+      "headword": "उकाब",
+      "source": "tw-hi-other-eagle",
+      "refs": ["1:16"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "पृथ्वी, मिट्टी, पार्थिव",
+      "source": "tw-hi-other-earth",
+      "refs": [
+        "1:2",
+        "1:3",
+        "4:13",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:11",
+        "6:2",
+        "7:2",
+        "7:13",
+        "7:15"
+      ]
+    },
+    "other/enslave": {
+      "en": "enslave, slave, bondservant, bondage, bound, bond, bonds, young man, young men, young woman, young women",
+      "headword": "सेवा करना, दास, दास बनाना, दासत्व, बन्धन, वश में, बन्धन, बाँधा",
+      "source": "tw-hi-other-enslave",
+      "refs": ["6:4"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "डाह, लालच",
+      "source": "tw-hi-other-envy",
+      "refs": ["2:2"]
+    },
+    "other/exile": {
+      "en": "exile, exiled",
+      "headword": "बँधुआई, बन्धुओं, बन्दी करके",
+      "source": "tw-hi-other-exile",
+      "refs": ["1:16"]
+    },
+    "other/fig": {
+      "en": "fig",
+      "headword": "अंजीर, अंजीरों",
+      "source": "tw-hi-other-fig",
+      "refs": ["4:4", "7:1"]
+    },
+    "other/firstborn": {
+      "en": "firstborn",
+      "headword": "पहलौठे",
+      "source": "tw-hi-other-firstborn",
+      "refs": ["6:7"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "भेड़-बकरियों, समूह, झुण्ड, गाय-बैलों",
+      "source": "tw-hi-other-flock",
+      "refs": ["2:12", "4:8", "5:8", "7:14"]
+    },
+    "other/foundation": {
+      "en": "foundation, founder, founded",
+      "headword": "नींव डाली, प्रतिष्ठापक, नींव, नीव",
+      "source": "tw-hi-other-foundation",
+      "refs": ["1:6"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "फल, फलों, फलवन्त, निष्फल",
+      "source": "tw-hi-other-fruit",
+      "refs": ["6:7", "7:13"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "फाटक, फाटकों, बेंड़ों, द्वारपाल, चौकीदारों, द्वार के खम्भे, द्वार",
+      "source": "tw-hi-other-gate",
+      "refs": ["1:9", "1:12", "2:13"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "बीनने, बीनता, बीना हुआ, इकट्ठा करना",
+      "source": "tw-hi-other-glean",
+      "refs": ["7:1"]
+    },
+    "other/grain": {
+      "en": "grain, grainfields",
+      "headword": "अन्न, किनकों, खेतों",
+      "source": "tw-hi-other-grain",
+      "refs": ["4:12"]
+    },
+    "other/harvest": {
+      "en": "harvest, reap",
+      "headword": "फसल, लवनी, कटनी",
+      "source": "tw-hi-other-harvest",
+      "refs": ["6:15", "7:1"]
+    },
+    "other/horn": {
+      "en": "horn, horned, shofar",
+      "headword": "सींग, सींगों, सींग वाले",
+      "source": "tw-hi-other-horn",
+      "refs": ["4:13"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "घोड़ा, घोड़े, युद्ध का घोडा, युद्ध के घोड़ों, सवार होकर",
+      "source": "tw-hi-other-horse",
+      "refs": ["1:13", "5:10"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "घर, घरों, छत के ऊपर, छतों, भण्डार, भण्डारों, घर का कारबार करनेवाले",
+      "source": "tw-hi-other-house",
+      "refs": ["1:14", "2:2", "6:10"]
+    },
+    "other/household": {
+      "en": "household, house",
+      "headword": "कुटुम्ब, घराना",
+      "source": "tw-hi-other-household",
+      "refs": ["2:9", "7:6"]
+    },
+    "other/image": {
+      "en": "image, carved image, cast metal image, figure, carved figure, statue",
+      "headword": "मूरत/मूरतों, खोद कर बनाई हुई मूरतें, धातु की मूरतें ढालकर, मूर्ति, प्रतिमा",
+      "source": "tw-hi-other-image",
+      "refs": ["1:7", "5:13"]
+    },
+    "other/judgeposition": {
+      "en": "judge",
+      "headword": "न्यायी",
+      "source": "tw-hi-other-judgeposition",
+      "refs": ["5:1", "7:3"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "राजा, राज्य, राजसी",
+      "source": "tw-hi-other-king",
+      "refs": ["1:1", "1:14", "2:13", "4:9", "6:5"]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "राज्य, राज्यों",
+      "source": "tw-hi-other-kingdom",
+      "refs": ["4:8"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "जानना, जानता है, जानता था, जानना, ज्ञान, ज्ञात, प्रकट करना, ज्ञात करता है, ज्ञात करता है, अज्ञात, पहले से जानना, पूर्वज्ञान",
+      "source": "tw-hi-other-know",
+      "refs": ["3:1", "4:12", "6:5"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "सिंहों, सिंहनी",
+      "source": "tw-hi-other-lion",
+      "refs": ["5:8"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "अभिलाषा, कामुक, मनोभाव, लालसाएं",
+      "source": "tw-hi-other-lust",
+      "refs": ["7:3"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "सामर्थ्य, सामर्थी, बहुत सामर्थी, पराक्रम से",
+      "source": "tw-hi-other-mighty",
+      "refs": ["3:8", "7:16"]
+    },
+    "other/mourn": {
+      "en": "mourn, mourner, weeping",
+      "headword": "शोक करना, विलाप कर रहा है, विलाप करने लगे, शोक करता हुआ, शोक करनेवाला, विलाप करनेवालों, उदासी, शोक",
+      "source": "tw-hi-other-mourn",
+      "refs": ["1:8", "1:10", "1:11"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "जाति, जातियों",
+      "source": "tw-hi-other-nation",
+      "refs": ["4:2", "4:3", "4:7", "4:11", "5:8", "5:15", "7:16"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "पड़ोसी, पड़ोसियों, पडोस, आस पास के",
+      "source": "tw-hi-other-neighbor",
+      "refs": ["7:5"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "शपथ, प्रण, शपथ खाना, की शपथ खाना,",
+      "source": "tw-hi-other-oath",
+      "refs": ["7:20"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "तेल",
+      "source": "tw-hi-other-oil",
+      "refs": ["6:7", "6:15"]
+    },
+    "other/olive": {
+      "en": "olive",
+      "headword": "जैतून",
+      "source": "tw-hi-other-olive",
+      "refs": ["6:15"]
+    },
+    "other/palace": {
+      "en": "palace, house",
+      "headword": "महल, आवास",
+      "source": "tw-hi-other-palace",
+      "refs": ["1:2"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "शान्ति,शान्त, शांतिपूर्ण, शांतिपूर्वक, शंतियोग्य, शांति बनाने वाले",
+      "source": "tw-hi-other-peace",
+      "refs": ["3:5", "5:5"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "स्तंभ, लाटें, खम्भा, खम्भों",
+      "source": "tw-hi-other-pillar",
+      "refs": ["5:13"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "गिड़गिड़ाना, विनती, मुकद्दमा, वाद विवाद करना, गिड़गिड़ाकर, निवेदन करता, निवेदन",
+      "source": "tw-hi-other-plead",
+      "refs": ["3:1", "3:9", "6:1", "6:5"]
+    },
+    "other/plow": {
+      "en": "plow, plower, plowman, plowmen, plowshare, unplowed",
+      "headword": "हल/हल चलाना, हल चलाया, खेत जोतने वाला, हलवाहा, हल की फाल, अजोत/जुताई रहित",
+      "source": "tw-hi-other-plow",
+      "refs": ["3:12", "4:3"]
+    },
+    "other/prince": {
+      "en": "prince, princess, governor, provincial governor, official, nobleman, noblemen, nobility",
+      "headword": "राजकुमार, राजकुमारी, राजकुमारी, राजकुमारियां",
+      "source": "tw-hi-other-prince",
+      "refs": ["5:5"]
+    },
+    "other/prostitute": {
+      "en": "prostitute, harlot, whored",
+      "headword": "वैश्या, गणिका, वेश्यावृत्ति,",
+      "source": "tw-hi-other-prostitute",
+      "refs": ["1:7"]
+    },
+    "other/proverb": {
+      "en": "proverb",
+      "headword": "नीतिवचन,",
+      "source": "tw-hi-other-proverb",
+      "refs": ["2:4"]
+    },
+    "other/reign": {
+      "en": "reign, rule",
+      "headword": "राज करना, राज्य करता है, राज्य करता, राज्य कर रहा है",
+      "source": "tw-hi-other-reign",
+      "refs": ["4:7"]
+    },
+    "other/rod": {
+      "en": "rod",
+      "headword": "लाठी",
+      "source": "tw-hi-other-rod",
+      "refs": ["5:1", "7:14"]
+    },
+    "other/ruin": {
+      "en": "ruin, ruins, ruined",
+      "headword": "नष्ट करना, खंडहर, नष्ट हो गया",
+      "source": "tw-hi-other-ruin",
+      "refs": ["1:6"]
+    },
+    "other/ruler": {
+      "en": "rule, reign, ruler, prefect, official, leader",
+      "headword": "शासन, नियम, शासित, शासक, शासकों, हाकिमों, निर्णयों, फैसलों, अतिरंजित",
+      "source": "tw-hi-other-ruler",
+      "refs": ["5:2", "7:3"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "बलिदान करना, बलि, भेंट, भेंट की वस्तुओं",
+      "source": "tw-hi-other-sacrifice",
+      "refs": ["6:6"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "ढूँढ़े, ढूँढ़ते हैं, खोजना, मांगा",
+      "source": "tw-hi-other-seek",
+      "refs": ["6:8"]
+    },
+    "other/seize": {
+      "en": "seize, seizure, capture",
+      "headword": "बन्दी बनाना, अभिग्रहण करना, बंदीकरण",
+      "source": "tw-hi-other-seize",
+      "refs": ["2:2"]
+    },
+    "other/serpent": {
+      "en": "serpent, snake, viper",
+      "headword": "सर्प, साँप, नाग",
+      "source": "tw-hi-other-serpent",
+      "refs": ["7:17"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "नामधराई, लज्जा, शर्म, शर्मपूर्ण, शर्मपूर्णता से, शर्महीनता, शर्महीनता से,लज्जित, लज्जित नहीं",
+      "source": "tw-hi-other-shame",
+      "refs": ["1:11", "2:6", "3:7", "6:16", "7:10", "7:16"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "भेड़, मेंढ़ा, भेड़शाला, भेड़शाला, भेड़ का ऊंन कतरने वाला, भेड़ की खाल",
+      "source": "tw-hi-other-sheep",
+      "refs": ["2:12", "5:8", "6:7"]
+    },
+    "other/siege": {
+      "en": "siege, besiege, besieged, siegework, siegeworks",
+      "headword": "घेर, घेर लेना, घेर लिया, घेर करनेवाला, घेर लेना, मोर्चा बांधना",
+      "source": "tw-hi-other-siege",
+      "refs": ["5:1"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "चाँदी",
+      "source": "tw-hi-other-silver",
+      "refs": ["3:11"]
+    },
+    "other/sorcery": {
+      "en": "sorcerer, sorceress, sorcery, sorceries, witchcraft, magician",
+      "headword": "जादूगर, जादूगर, जादूगर, जादूगर, जादूगर, जादू टोना",
+      "source": "tw-hi-other-sorcery",
+      "refs": ["5:12"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "पौधे लगाना, पौधे लगाए, रोपित किया, प्रत्यारोपित किया, प्रतिरोपित करना, बोना, बोया,",
+      "source": "tw-hi-other-sow",
+      "refs": ["1:6", "6:15"]
+    },
+    "other/spear": {
+      "en": "spear, spearmen",
+      "headword": "भाला, भाले, कुन्तधारी",
+      "source": "tw-hi-other-spear",
+      "refs": ["4:3"]
+    },
+    "other/splendor": {
+      "en": "splendor",
+      "headword": "वैभव",
+      "source": "tw-hi-other-splendor",
+      "refs": ["2:8", "2:9"]
+    },
+    "other/statute": {
+      "en": "statute",
+      "headword": "विधि",
+      "source": "tw-hi-other-statute",
+      "refs": ["6:16"]
+    },
+    "other/storehouse": {
+      "en": "storehouse",
+      "headword": "भण्डार, भण्डार",
+      "source": "tw-hi-other-storehouse",
+      "refs": ["6:10"]
+    },
+    "other/stronghold": {
+      "en": "stronghold, fortification, fortress, citadel",
+      "headword": "दृढ़गढ़ , सुदृढ़ीकरण, गढ़, शहरपनाह",
+      "source": "tw-hi-other-stronghold",
+      "refs": ["5:5", "5:11", "7:17"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "तलवार, तलवारें, तलवार रखनेवाले",
+      "source": "tw-hi-other-sword",
+      "refs": ["4:3", "5:6", "6:14"]
+    },
+    "other/terror": {
+      "en": "terror, terrorize, terrify, dread, panic",
+      "headword": "डर, डराना, भयभीत करना, भय, आतंक",
+      "source": "tw-hi-other-terror",
+      "refs": ["4:4", "7:17"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "काँटा, कंटीली झाड़ियाँ, ऊँटकटारे",
+      "source": "tw-hi-other-thorn",
+      "refs": ["7:4"]
+    },
+    "other/thresh": {
+      "en": "thresh",
+      "headword": "दाँवना, दाएँ हुए, दाँवने",
+      "source": "tw-hi-other-thresh",
+      "refs": ["4:12", "4:13"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "जीभ, जीभों",
+      "source": "tw-hi-other-tongue",
+      "refs": ["6:12"]
+    },
+    "other/trample": {
+      "en": "trample",
+      "headword": "रौंदना, कुचलना",
+      "source": "tw-hi-other-trample",
+      "refs": ["5:8", "7:10"]
+    },
+    "other/tremble": {
+      "en": "tremble, shake, shaken, quake",
+      "headword": "कांपना, थरथराना",
+      "source": "tw-hi-other-tremble",
+      "refs": ["7:17"]
+    },
+    "other/tribe": {
+      "en": "tribe, tribal, tribesmen",
+      "headword": "गोत्र, सगोत्र, गोत्रवासी",
+      "source": "tw-hi-other-tribe",
+      "refs": ["6:9"]
+    },
+    "other/understand": {
+      "en": "understand, understanding, thinking",
+      "headword": "समझना, समझता है, समझ लिया, समझ",
+      "source": "tw-hi-other-understand",
+      "refs": ["4:12"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "दाख, दाखलता",
+      "source": "tw-hi-other-vine",
+      "refs": ["4:4"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "दाख की बारी, दाख की बारियों",
+      "source": "tw-hi-other-vineyard",
+      "refs": ["1:6"]
+    },
+    "other/vision": {
+      "en": "vision, envision",
+      "headword": "दर्शन, अलौकिक दृष्टि",
+      "source": "tw-hi-other-vision",
+      "refs": ["3:6"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "चौकस, ताकता, देखा, देख रहा था, द्वारपाल, पहरुओं, जागते रहना",
+      "source": "tw-hi-other-watch",
+      "refs": ["7:5", "7:7"]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "गुम्मट, पहरे की मिनारें",
+      "source": "tw-hi-other-watchtower",
+      "refs": ["4:8"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "दाखरस, कुण्ड, कुण्डों, दाखरस, मशक, मशकों, नई दाखरस",
+      "source": "tw-hi-other-wine",
+      "refs": ["2:11", "6:15"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "other/bear-heldresponsiblefor": "no-article",
+    "other/house-descendants_nation": "no-article",
+    "other/iron": "no-article",
+    "other/plunder": "no-article",
+    "other/shepherd": "no-heading"
+  }
+}
