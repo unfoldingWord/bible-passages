@@ -247,6 +247,20 @@ export function parseTwl(tsv: string): TwlRow[] {
  * of `#` is removed, not just the first.
  */
 export function headword(markdown: string): string {
+  const text = headingOf(markdown);
+  if (text === undefined) {
+    throw new Error("tW article: first line is not a heading");
+  }
+  return text;
+}
+
+/**
+ * The article's first heading as `headword` reads it, or undefined when
+ * its first line is not a heading. Some releases have articles whose title
+ * line lost its `#` or has text before it (`mendukung# pilih kasih`); which
+ * part is the headword is not ours to guess, so such an article is a gap.
+ */
+export function headingOf(markdown: string): string | undefined {
   const first = markdown
     .split(/\r?\n/)
     .map((l) => l.replace(/﻿/g, "").trim())
@@ -259,8 +273,7 @@ export function headword(markdown: string): string {
         .trim()
         .normalize("NFC")
     : "";
-  if (text === "") throw new Error("tW article: first line is not a heading");
-  return text;
+  return text === "" ? undefined : text;
 }
 
 export type Term = {
@@ -279,9 +292,10 @@ export type Term = {
 
 /**
  * Why a linked article has no headword in a language: the release has no
- * such article, or its headword is still in English.
+ * such article, its first line is not a heading, or its headword is still
+ * in English.
  */
-export type Gap = "no-article" | "english-headword";
+export type Gap = "no-article" | "no-heading" | "english-headword";
 
 export type Glossary = {
   language: string;
@@ -354,7 +368,11 @@ export async function buildGlossary(
         `${repo.language} ${book}: ${article} must be pinned or listed as absent, not ${listed ? "both" : "neither"}`
       );
     }
-    const word = headword(markdown);
+    const word = headingOf(markdown);
+    if (word === undefined) {
+      gaps[article] = "no-heading";
+      continue;
+    }
     if (repo.script && !inScript(word, repo.script)) {
       gaps[article] = "english-headword";
       continue;

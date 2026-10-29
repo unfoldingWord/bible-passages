@@ -5,6 +5,7 @@ import {
   ARTICLE,
   buildGlossary,
   GLOSSARY_BOOKS,
+  headingOf,
   headword,
   inScript,
   isGlossaryInput,
@@ -95,6 +96,10 @@ describe("headword", () => {
   it("refuses an article that does not open with a heading", () => {
     expect(() => headword("God\n")).toThrow(/heading/);
     expect(() => headword("#\n")).toThrow(/heading/);
+    // As in bahtraku/id_tw other/partial and other/rod.
+    expect(headingOf("mendukung# pilih kasih\n")).toBeUndefined();
+    expect(headingOf(".# tongkat\n")).toBeUndefined();
+    expect(headingOf("# tongkat\n")).toBe("tongkat");
   });
 });
 
@@ -273,6 +278,27 @@ describe("buildGlossary", () => {
     expect(Object.keys(g.terms)).toEqual(["names/titus"]);
   });
 
+  it("records an article whose first line is not a heading as a gap", async () => {
+    const g = await buildGlossary(
+      repo(),
+      "TIT",
+      rows,
+      english,
+      async (a) =>
+        a === "kt/faith"
+          ? "mendukung# pilih kasih\n\n## Definisi:\n"
+          : a === "kt/god"
+            ? "* يعقوب\n"
+            : "# كلمة\n",
+      credit
+    );
+    expect(g.gaps).toEqual({
+      "kt/faith": "no-heading",
+      "kt/god": "no-heading",
+    });
+    expect(Object.keys(g.terms)).toEqual(["names/titus"]);
+  });
+
   it("credits only the TWL file when every article is a gap", async () => {
     const g = await buildGlossary(
       repo({ script: /\p{Script=Arabic}/u }),
@@ -447,13 +473,21 @@ describe("data/glossaries", () => {
         }
         for (const [article, gap] of Object.entries(g.gaps)) {
           const absent = repo.absent.includes(article);
-          expect(gap).toBe(absent ? "no-article" : "english-headword");
-          if (gap === "english-headword") {
-            expect(repo.script).toBeDefined();
-            if (repo.script) {
-              const md = await readSource(twId(lang, article));
-              expect(inScript(headword(md), repo.script)).toBe(false);
-            }
+          if (absent) {
+            expect(gap).toBe("no-article");
+            continue;
+          }
+          // Otherwise the article is pinned and read: re-derive the gap.
+          const md = await readSource(twId(lang, article));
+          const word = headingOf(md);
+          if (word === undefined) {
+            expect(gap).toBe("no-heading");
+            continue;
+          }
+          expect(gap).toBe("english-headword");
+          expect(repo.script).toBeDefined();
+          if (repo.script) {
+            expect(inScript(word, repo.script)).toBe(false);
           }
         }
       }
@@ -474,9 +508,9 @@ describe("data/glossaries", () => {
         for (const t of Object.values(read(repo.language, book).terms)) {
           used.add(t.source);
         }
-        // An English headword is still read, so its pin is used.
+        // An English or missing headword is still read, so its pin is used.
         for (const [a, gap] of Object.entries(read(repo.language, book).gaps)) {
-          if (gap === "english-headword") used.add(twId(repo.language, a));
+          if (gap !== "no-article") used.add(twId(repo.language, a));
         }
       }
     }
