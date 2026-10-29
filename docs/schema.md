@@ -349,13 +349,21 @@ check the bump yet.
    `"revision": "<tag>"` (`scripts/lib/release.ts`). The empty `.gitkeep`
    that keeps the directory in git is exempt and is not attached. Any other
    top-level entry stops the release unless it is a regular `.json` file or a
-   directory whose name does not end in `.json` (a symlink stops it). Title
-   tables under `dist/tc-mobile/titles/` share their package's file name, so
-   until their asset names are decided a nested file stops the release too.
-   Since English Titus has a table, no release can be cut until that is
-   decided.
-5. The top-level files are attached to a **draft** release, published by
-   hand.
+   directory whose name does not end in `.json` (a symlink stops it).
+   Title tables `dist/tc-mobile/titles/<lang>/<BOOK>.json` are checked too.
+   A table has no `source` block, so it carries no revision; it is tied to
+   the release through its package instead: its `packageId` and `version`
+   must equal the `id` and `version` of `<BOOK>.json` in the same release
+   (whose revision was just checked), and its `language` must be the
+   `<lang>` it sits under. Any other nested file, or a nested entry that is
+   not a regular file, stops the release.
+5. The packages and title tables are attached to a **draft** release,
+   published by hand. Release assets are flat and a table shares its
+   package's file name, so each table is attached as
+   `titles.<lang>.<BOOK>.json` (for example `titles.en.TIT.json`,
+   `titles.es-419.TIT.json`); a package keeps its own name (`TIT.json`).
+   The script copies each file under its asset name into a temporary
+   directory and attaches the copies.
 
 **A failed release.** A tag that passes step 1 and then fails a later step
 stays in the key check's baseline for every later release (step 2), and its
