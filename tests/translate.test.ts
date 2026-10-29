@@ -4,7 +4,12 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it, vi } from "vitest";
-import { ENDPOINT, complete, type Fetch } from "../scripts/lib/openrouter.ts";
+import {
+  ENDPOINT,
+  MAX_TOKENS,
+  complete,
+  type Fetch,
+} from "../scripts/lib/openrouter.ts";
 import {
   LANGUAGES,
   MODELS,
@@ -72,6 +77,8 @@ describe("OpenRouter client (fetch mocked; no network)", () => {
     expect(JSON.parse(body)).toMatchObject({
       model: "google/gemini-3.8-flash",
       usage: { include: true },
+      // Bounds the credit reserved for, and the cost of, one call.
+      max_tokens: MAX_TOKENS,
     });
     expect(c).toEqual({
       id: "gen-1",
