@@ -1,0 +1,328 @@
+{
+  "schema": "bp.snapshot",
+  "v": 1,
+  "asOf": "2026-10-28T22:10:50.954Z",
+  "repo": {
+    "pushedAt": "2026-10-28T22:04:25Z",
+    "defaultBranch": "main",
+    "openIssues": 15
+  },
+  "commits": [
+    {
+      "sha": "5f7f3e7",
+      "msg": "Update README.md",
+      "at": "2026-10-28T21:21:08Z"
+    },
+    {
+      "sha": "61abcd0",
+      "msg": "Initial commit: README and CC BY-SA 4.0 licence",
+      "at": "2026-10-28T19:57:22Z"
+    }
+  ],
+  "pulls": [
+    {
+      "number": 15,
+      "title": "feat(data): Titus structure from pinned sources to dist",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "at": "2026-10-28T22:09:38Z"
+    },
+    {
+      "number": 1,
+      "title": "Scaffold: layout, draft schema, checks, CLAUDE.md",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "at": "2026-10-28T22:08:49Z"
+    }
+  ],
+  "issues": [
+    {
+      "number": 14,
+      "title": "Servant.Bible registry entry for uw/bible-passages",
+      "state": "open",
+      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 13,
+      "title": "Release v0.1.0 and hand it to tC Mobile (#1459)",
+      "state": "open",
+      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 12,
+      "title": "dist generator, key-stability check and release workflow",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 11,
+      "title": "Review screen and sync to PRs",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 10,
+      "title": "Title translation runner with ported quality gates",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 9,
+      "title": "Glossaries for the 9 v0.1 languages from Translation Words",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 8,
+      "title": "Segment title drafting with a cross-model check",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 7,
+      "title": "Segments: nest chunks in pericopes and split at pericope starts",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 6,
+      "title": "Pericope parser for all 66 books, with the Psalms verse-1 rule",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 5,
+      "title": "Project site for this dataset, with a snapshot refreshed by hand",
+      "state": "open",
+      "milestone": "Sprint 1 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 4,
+      "title": "Ask the content team which chunk source is authoritative (1,184 differences)",
+      "state": "open",
+      "milestone": "Sprint 1 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 3,
+      "title": "Titus end to end: build one book and measure the real rates",
+      "state": "open",
+      "milestone": "Sprint 1 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 2,
+      "title": "Record the v0.1 decisions from servant.bible#1 as ADRs",
+      "state": "open",
+      "milestone": "Sprint 1 (10-19 → 11-01)",
+      "closedAt": null
+    }
+  ],
+  "milestones": [
+    {
+      "number": 1,
+      "title": "Sprint 1 (10-19 → 11-01)",
+      "open_issues": 4,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-01T00:00:00Z"
+    },
+    {
+      "number": 2,
+      "title": "Sprint 2 (11-02 → 11-15)",
+      "open_issues": 7,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-15T00:00:00Z"
+    },
+    {
+      "number": 3,
+      "title": "Sprint 3 (11-16 → 11-29) — v0.1.0",
+      "open_issues": 2,
+      "closed_issues": 0,
+      "state": "open",
+      "due": "2026-11-29T00:00:00Z"
+    }
+  ],
+  "runs": [
+    {
+      "sha": "93d4f93",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T22:04:31Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777097841"
+    },
+    {
+      "sha": "93d4f93",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T22:04:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40777095247"
+    },
+    {
+      "sha": "9301a0d",
+      "branch": "feat/tit-structure",
+      "conclusion": "success",
+      "at": "2026-10-28T21:52:33Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775513904"
+    },
+    {
+      "sha": "9301a0d",
+      "branch": "feat/tit-structure",
+      "conclusion": "cancelled",
+      "at": "2026-10-28T21:52:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775506314"
+    },
+    {
+      "sha": "9301a0d",
+      "branch": "feat/tit-structure",
+      "conclusion": "success",
+      "at": "2026-10-28T21:52:30Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775506155"
+    },
+    {
+      "sha": "d7596fa",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:52:28Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775502623"
+    },
+    {
+      "sha": "d7596fa",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:52:28Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40775502595"
+    },
+    {
+      "sha": "c5484b7",
+      "branch": "feat/tit-structure",
+      "conclusion": "success",
+      "at": "2026-10-28T21:42:32Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40774168633"
+    },
+    {
+      "sha": "c5484b7",
+      "branch": "feat/tit-structure",
+      "conclusion": "cancelled",
+      "at": "2026-10-28T21:42:32Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40774167276"
+    },
+    {
+      "sha": "c5484b7",
+      "branch": "feat/tit-structure",
+      "conclusion": "success",
+      "at": "2026-10-28T21:42:32Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40774167254"
+    },
+    {
+      "sha": "c5e05f8",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:20:31Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40771133399"
+    },
+    {
+      "sha": "c5e05f8",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:20:31Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40771133398"
+    },
+    {
+      "sha": "018e365",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:18:09Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40770800641"
+    },
+    {
+      "sha": "018e365",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:18:09Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40770800623"
+    },
+    {
+      "sha": "bfa3b6a",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:12:18Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769969414"
+    },
+    {
+      "sha": "bfa3b6a",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:12:18Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769969335"
+    },
+    {
+      "sha": "0c1925b",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:10:18Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769683067"
+    },
+    {
+      "sha": "0c1925b",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:10:17Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40769682957"
+    },
+    {
+      "sha": "aa8be03",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:03:11Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768655321"
+    },
+    {
+      "sha": "38f325a",
+      "branch": "chore/scaffold",
+      "conclusion": "success",
+      "at": "2026-10-28T21:02:17Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40768522939"
+    }
+  ],
+  "coverage": {
+    "structure": [],
+    "titles": {
+      "en": [],
+      "ar": [],
+      "fr": [],
+      "hi": [],
+      "id": [],
+      "zh-Hans": [],
+      "pt-BR": [],
+      "ru": [],
+      "es": [],
+      "sw": []
+    }
+  },
+  "external": {
+    "servant1": {
+      "state": "open",
+      "comments": 2,
+      "lastCommentAt": "2026-10-28T21:02:49Z",
+      "assignees": 0
+    },
+    "tcm1459": {
+      "state": "open",
+      "milestone": "Sprint 7 (11-16 → 11-29) — v1.3.0"
+    }
+  }
+}

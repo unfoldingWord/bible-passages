@@ -10,9 +10,25 @@ Project home: https://claude.ai/artifact/RiDFC57H2UCyKHe4ZwhvDT?sk=N9G-t8PMGiKhJ
 
 ## Status
 
-Empty. Layout, data format, and sources are not yet decided.
+No data yet. The proposed layout, key format and checks are in
+[docs/schema.md](docs/schema.md), with the decisions still open listed at the
+end.
 
-## License
+## Using it
 
-Data is licensed under [CC BY-SA 4.0](LICENSE). A separate licence for build
-code has not yet been decided.
+tC Mobile reads the generated packages in `dist/tc-mobile/`, in its template
+package format v0. Releases will be git tags (`v0.1.0` onward).
+
+## Development
+
+```
+npm ci
+npm run verify
+```
+
+## Licence
+
+- Data (`data/`, `dist/`, `sources.json`): [CC BY-SA 4.0](LICENSE).
+- Code (`scripts/`, `tests/`, configuration): [MIT](LICENSE-CODE).
+- `vendor/tc-mobile/` is copied from unfoldingWord/tc-mobile under its MIT
+  licence; see [VENDOR.md](vendor/tc-mobile/VENDOR.md).

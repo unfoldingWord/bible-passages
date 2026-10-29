@@ -1,0 +1,66 @@
+name: Assigned
+
+# AGENTS.md "All work is assigned": a PR has an assignee, links at least one
+# issue (Part of #N / Closes #N / Fixes #N / Resolves #N), and every linked
+# issue has an assignee. Dependabot PRs are exempt.
+
+on:
+  pull_request:
+    types:
+      [
+        opened,
+        edited,
+        reopened,
+        synchronize,
+        assigned,
+        unassigned,
+        ready_for_review,
+      ]
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  assigned:
+    name: Assigned
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: read
+      pull-requests: read
+    steps:
+      - name: Check assignees and linked issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          pr=$(gh api "repos/$REPO/pulls/$PR")
+          n=$(jq '.assignees | length' <<<"$pr")
+          if [ "$n" -eq 0 ]; then
+            echo "::error::PR #$PR has no assignee. Assign yourself (AGENTS.md, 'All work is assigned')."
+            exit 1
+          fi
+          # Issue references in the body: Part of / Closes / Fixes / Resolves #N
+          refs=$(jq -r '.body // ""' <<<"$pr" \
+            | grep -oiE '(part of|close[sd]?|fix(e[sd])?|resolve[sd]?) #[0-9]+' \
+            | grep -oE '[0-9]+' | sort -u || true)
+          if [ -z "$refs" ]; then
+            echo "::error::PR #$PR links no issue. Add 'Part of #N' or 'Closes #N' to the body."
+            exit 1
+          fi
+          fail=0
+          for i in $refs; do
+            a=$(gh api "repos/$REPO/issues/$i" --jq '.assignees | length')
+            if [ "$a" -eq 0 ]; then
+              echo "::error::Issue #$i has no assignee. Assign it before working on it."
+              fail=1
+            else
+              echo "Issue #$i is assigned."
+            fi
+          done
+          exit $fail

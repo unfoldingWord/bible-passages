@@ -1,0 +1,34 @@
+# Dependency updates, grouped weekly. The github-actions ecosystem also keeps
+# the SHA-pinned actions in ci.yml current (their `# vX.Y.Z` comments are
+# bumped alongside the digest). Majors stay out of the groups and get their
+# own PR. Modelled on tc-mobile's dependabot.yml.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        update-types:
+          - minor
+          - patch
+    ignore:
+      # Types track the Node runtime (22, engines in package.json), not the
+      # newest Node. Move this with the runtime, deliberately.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch

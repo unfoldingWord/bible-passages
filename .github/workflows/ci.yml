@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  # Merges land on main and get no pull_request event, so main needs a push
+  # trigger. Branches get their CI from pull_request.
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["**"]
+
+# Least privilege by default; jobs opt in to what they need.
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Cancel only superseded PR runs; every commit on main keeps its own run.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  secret-scan:
+    name: Secret Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      GITLEAKS_VERSION: 8.30.1
+      # sha256 of gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz, from the
+      # release's published checksums.txt.
+      GITLEAKS_SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      # The binary over full history, not the gitleaks action: the action's
+      # push-event range is invalid on a repo's first push and scans nothing.
+      - name: Install gitleaks
+        run: |
+          tarball="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          curl -sSL --fail -o "$tarball" \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/${tarball}"
+          echo "${GITLEAKS_SHA256}  ${tarball}" | sha256sum -c -
+          tar -xzf "$tarball" gitleaks
+          ./gitleaks version
+
+      - name: Scan full history
+        run: ./gitleaks detect --source . --redact -v --exit-code 1
+
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - run: npm ci
+      - run: npm run verify
