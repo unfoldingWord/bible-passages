@@ -29,6 +29,11 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
 - Glossaries for the 59 books `en_twl` v91 has, in the nine languages with
   Translation Words (#30): 531 files, 7,951 pinned inputs. CI caches the
   pinned downloads, keyed on `sources.json`.
+- English Philippians segment titles (#32), the second sample book: 37
+  drafted by Claude Sonnet and checked by Gemini Flash in one scripted run,
+  recorded with its calls (`scripts/translate/segment-titles.ts`); 23 `ai-checked`,
+  14 disputed and `unreviewed` until a person reviews them. The 2 segments
+  that are their pericope's only segment reuse its title (decision 12).
 
 ### Known issues
 

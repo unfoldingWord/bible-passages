@@ -98,11 +98,24 @@ for (const book of STRUCTURE_BOOKS) {
         : { text: draft.text, status: draft.status, source: draft.source };
     }
   }
+  // Decision 12 (docs/decisions/0003): a segment that is its pericope's only
+  // segment reuses the pericope title, unless a draft gives it its own
+  // (Titus 3:9-11 was drafted before the decision). Pericope titles first,
+  // then segment titles, each in reading order.
+  const ordered: typeof titles = {};
+  for (const p of structure.pericopes)
+    if (titles[p.key]) ordered[p.key] = titles[p.key]!;
+  for (const s of structure.segments) {
+    const only =
+      structure.segments.filter((t) => t.pericope === s.pericope).length === 1;
+    const title = titles[s.key] ?? (only ? titles[s.pericope] : undefined);
+    if (title) ordered[s.key] = { ...title };
+  }
   await write(`titles/en/${book}.json`, {
     language: "en",
     book,
     name: { text: name, status: "unreviewed", source },
-    titles,
+    titles: ordered,
   });
   console.log(
     `${book}: ${structure.pericopes.length} pericopes, ${structure.segments.length} segments`

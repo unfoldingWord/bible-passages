@@ -304,7 +304,10 @@ export const statusOf = (t: {
     ? "ai-checked"
     : "unreviewed";
 
-const callRecord = (role: CallRecord["role"], c: Completion): CallRecord => ({
+export const callRecord = (
+  role: CallRecord["role"],
+  c: Completion
+): CallRecord => ({
   role,
   id: c.id,
   model: c.model,
