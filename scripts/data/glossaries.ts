@@ -7,12 +7,13 @@
 //
 //   node scripts/data/glossaries.ts
 import { existsSync, readdirSync, readFileSync } from "node:fs";
-import { BOOKS } from "../lib/books.ts";
 import {
   buildGlossary,
+  GLOSSARY_BOOKS,
   isGlossaryInput,
   parseTwl,
   TW,
+  TWL_BOOKS,
   twId,
   twlId,
   type Glossary,
@@ -24,13 +25,22 @@ import {
   type DraftGlossary,
   type DraftRecord,
 } from "../lib/key-terms.ts";
-import { readSource, source, sources } from "../lib/sources.ts";
+import { readSource, sources, type Source } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 
 const out = new URL("../../data/glossaries/", import.meta.url);
 const drafts = new URL("../../data/glossary-drafts/", import.meta.url);
 
-const pinned = new Set(sources().map((s) => s.id));
+// sources.json is read once: source() re-reads and parses it on every call,
+// which over thousands of pins is most of a build's time.
+const pins = new Map(sources().map((s) => [s.id, s]));
+const pinned = new Set(pins.keys());
+const pinOf = (id: string): Source => {
+  const pin = pins.get(id);
+  if (!pin) throw new Error(`${id} is not pinned in sources.json`);
+  return pin;
+};
+const read = (id: string) => readSource(id, { pin: pinOf(id) });
 
 // Fetch the glossary inputs into the cache a few at a time; the build below
 // then reads them in order. readSource checks every file against its pin.
@@ -38,13 +48,13 @@ const inputs = [...pinned].filter(isGlossaryInput);
 await Promise.all(
   Array.from({ length: 8 }, async () => {
     for (let id = inputs.pop(); id !== undefined; id = inputs.pop()) {
-      await readSource(id);
+      await read(id);
     }
   })
 );
 const reader = (repo: TwRepo) => async (article: string) => {
   const id = twId(repo.language, article);
-  return pinned.has(id) ? readSource(id) : undefined;
+  return pinned.has(id) ? read(id) : undefined;
 };
 const en = TW.find((r) => r.language === "en");
 if (!en) throw new Error("no English Translation Words configured");
@@ -58,8 +68,11 @@ const english = async (article: string) => {
 // Every glossary is built before anything is deleted, so a failed fetch or
 // a bad pin leaves the committed data/glossaries/ untouched.
 const built: { file: URL; glossary: Glossary | DraftGlossary }[] = [];
-for (const book of BOOKS) {
-  const rows = parseTwl(await readSource(twlId(book)));
+for (const book of GLOSSARY_BOOKS) {
+  if (!TWL_BOOKS.includes(book)) {
+    throw new Error(`${book}: the pinned TWL release has no file for it`);
+  }
+  const rows = parseTwl(await read(twlId(book)));
   const englishHeadwords = new Map<string, string>();
   for (const repo of TW) {
     const glossary = await buildGlossary(
@@ -68,7 +81,7 @@ for (const book of BOOKS) {
       rows,
       english,
       reader(repo),
-      source
+      pinOf
     );
     built.push({
       file: new URL(`${repo.language}/${book}.json`, out),
@@ -95,7 +108,7 @@ for (const book of BOOKS) {
         if (word === undefined) throw new Error(`en: no headword for ${a}`);
         return word;
       },
-      credit: source,
+      credit: pinOf,
     });
     built.push({ file: new URL(`${language}/${book}.json`, out), glossary });
   }
@@ -108,7 +121,9 @@ if (existsSync(drafts)) {
     const known =
       entry.isDirectory() && DRAFT_LANGUAGES[entry.name] !== undefined;
     const files = known ? readdirSync(new URL(`${entry.name}/`, drafts)) : [];
-    const stray = files.filter((f) => !BOOKS.some((b) => f === `${b}.json`));
+    const stray = files.filter(
+      (f) => !GLOSSARY_BOOKS.some((b) => f === `${b}.json`)
+    );
     if (!known || stray.length > 0)
       throw new Error(
         `data/glossary-drafts/${entry.name}: not a draft language or book (${stray.join(", ")})`

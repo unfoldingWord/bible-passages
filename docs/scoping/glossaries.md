@@ -275,15 +275,101 @@ labels Latin American Spanish as Spanish in general. The maintainer decides.
 Related, not a decision: the dataset writes BCP 47 tags in their usual case,
 `pt-BR`, where Door43 writes `pt-br`. Tags compare case-insensitively.
 
+## Every book (#30)
+
+Measured on 2026-10-29 at the pinned commits above, unless labelled. The
+code for every book lands first with the build still Titus-only
+(`GLOSSARY_BOOKS = ["TIT"]` in `scripts/lib/glossaries.ts`); the switch to
+`TWL_BOOKS` and the generated data follow as their own change.
+
+### What running it over every book broke
+
+1. **`en_twl` v91 has 59 books, not 66.** Its git tree has no
+   `twl_NUM.tsv`, `1CH`, `2CH`, `ECC`, `ISA`, `JER` or `EZK` (404 at the
+   pinned commit). `en_twl` master (unreleased) has them; so do older
+   copies such as `ru_gl/ru_twl` v6 and `BSOJ/ar_twl` v5.1. These seven
+   books are `TWL_UNRELEASED`: no glossary until a release that has them is
+   pinned. Which source to use for them is open (below).
+2. **Psalms references.** 155 Psalms rows use `c:front`, the superscription
+   before verse 1. Read as verse 0, written back as `c:front`, sorted
+   before verse 1. Refs are in the TWL's versification (the ULT's), not
+   necessarily the structure's; untested beyond Titus, a watch item.
+3. **Two article names have an underscore**: `other/bear-witness_testify`
+   and `other/house-descendants_nation` (en_tw v91 tree; 180 TWL rows).
+   `ARTICLE` allows `_`; `twId` writes it as `--`, which no name has.
+4. **Absent lists per book did not scale**: 11,957 book-article pairs, and
+   2,501 gaps for Indonesian alone. An absent article is a fact about the
+   release, so `absent` is one list per language
+   (`scripts/lib/glossary-absent.ts`), measured over all 59 books by a
+   separate Python script and re-derived by `pin-glossaries.ts`, which
+   refuses to pin if they disagree. They agreed.
+5. **Nine articles have no heading line** (hi `kt/church`, `names/greek`,
+   `names/jamesbrotherofjesus`, `names/marysisterofmartha`,
+   `other/shepherd`; id `names/redsea`, `other/partial`, `other/report`,
+   `other/rod`): the `#` is missing or has text before it
+   (`mendukung# pilih kasih`). They are `no-heading` gaps; guessing the
+   headword is not ours to do.
+6. **`kt/arcofthecovenant`** is linked once (2 Samuel) and exists in no
+   release, English included; `kt/arkofthecovenant` does. Inference: a typo
+   in `en_twl`. A `no-article` gap in every language.
+7. **The build re-parsed `sources.json` for every read**, fine at 484 KB,
+   not at 4.1 MB. It now reads it once.
+
+### Sizes and gaps, all 59 books (measured on a local branch)
+
+| Measure                   | Value                                             |
+| ------------------------- | ------------------------------------------------- |
+| Distinct articles linked  | 938 (of 953 in `en_tw` v91)                       |
+| Glossary pins             | 7,951 (59 TWL + 7,892 tW), up from 830: 7,121 new |
+| `sources.json`            | 4,148,228 bytes, up from 484,048                  |
+| `data/glossaries/`        | 531 files, 26,632,415 bytes                       |
+| `pin-glossaries.ts`, cold | 3 min 37 s; the build with a warm cache 7 s       |
+
+Per language, summed over the 59 books (distinct articles in brackets):
+
+| Language | Terms  | no-article  | no-heading | english-headword |
+| -------- | ------ | ----------- | ---------- | ---------------- |
+| en       | 11,956 | 1 (1)       | 0          | 0                |
+| ar       | 6,542  | 44 (5)      | 0          | 5,371 (638)      |
+| es-419   | 11,617 | 340 (39)    | 0          | 0                |
+| fr       | 11,393 | 564 (69)    | 0          | 0                |
+| hi       | 11,551 | 349 (41)    | 57 (5)     | 0                |
+| id       | 9,400  | 2,501 (243) | 56 (4)     | 0                |
+| pt-BR    | 11,137 | 820 (70)    | 0          | 0                |
+| ru       | 11,608 | 349 (41)    | 0          | 0                |
+| sw       | 11,584 | 373 (41)    | 0          | 0                |
+
+Each count was produced twice: by the build, and by a separate Python
+script from the TWL files, the release trees and the cached articles. They
+agree. Arabic is the large gap: 638 of the 938 articles in `BSOJ/ar_tw` v5
+still have an English headword.
+
+### 6B: every book
+
+| Step   | Verdict  | Evidence / justification                                                                                                                       |
+| ------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Borrow | applied  | The same pins as Titus: `unfoldingWord/en_twl` v91 (59 books) and the nine tW releases in the table at the top.                                |
+| Bend   | applied  | Unchanged from Titus: the English TWL for every language.                                                                                      |
+| Break  | observed | The seven above, each from running the pin script and the build over all 59 books.                                                             |
+| Beget  | skipped  | No owner yet. To ask: the `en_twl` team (seven unreleased books, the `arc` link), the Arabic tW team (638 English headwords), hi and id teams. |
+| Bide   | waiting  | The seven books: tripwire is an `en_twl` release with them, or the maintainer's choice of another source (below), whichever is first.          |
+| Build  | minimal  | `TWL_BOOKS`, `c:front`, `_` in ids, per-release absent lists, the `no-heading` gap, one read of `sources.json`: one per Break, nothing else.   |
+
+Reversibility: forward = low; backward = low. All generated from pins.
+
+### Open for the maintainer
+
+- **The seven books without a released TWL.** Wait for an `en_twl` release
+  (current behaviour: no glossary), pin `en_twl` master at a commit
+  (unreleased work), or use an older full copy (`ru_gl/ru_twl` v6). Not
+  measured: how those copies differ from `en_twl` for those books.
+- **Size.** 26.6 MB of generated glossaries and a 4.1 MB `sources.json` go
+  into git. A CI build fetches all 7,951 glossary pins from Door43 each run
+  (no cache); measured cold 3 min 37 s for the pin script, which fetches
+  the same files.
+
 ## Not done
 
-- The other 65 books: each needs its TWL pinned and its absent lists measured
-  (`node scripts/data/pin-glossaries.ts` after adding the book to `BOOKS`).
-  Titus pins 830 files. A pin is per language and article, shared by every
-  book, so the whole Bible needs at most about 8,600 _(estimated: 953
-  articles in `en_tw` v91 × 9 languages, plus 66 TWL files; an upper bound,
-  since releases lack some articles)_. Pinning whole releases instead of
-  files is a choice to make before the second book.
 - How complete or reviewed each translation is beyond its headwords was not
   measured.
 - How the translation step uses a glossary (prompt, check) is part of

@@ -1,16 +1,21 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { BOOKS } from "../scripts/lib/books.ts";
+import { ALL_BOOKS } from "../scripts/lib/books.ts";
 import {
   ARTICLE,
   buildGlossary,
+  GLOSSARY_BOOKS,
+  headingOf,
   headword,
   inScript,
   isGlossaryInput,
   linkedArticles,
   parseTwl,
+  refOf,
   TW,
   TWL,
+  TWL_BOOKS,
+  TWL_UNRELEASED,
   twId,
   twlId,
   twlUrl,
@@ -37,11 +42,34 @@ describe("parseTwl", () => {
     ]);
   });
 
+  it("reads a psalm superscription as the chapter's front, before verse 1", () => {
+    const tsv = [
+      HEAD,
+      row("3:1", "names/david"),
+      row("3:front", "names/david"),
+      row("2:12", "names/david"),
+    ];
+    const rows = parseTwl(tsv.join("\n"));
+    expect(rows[1]).toEqual({ chapter: 3, verse: 0, article: "names/david" });
+    expect(rows.map(refOf)).toEqual(["3:1", "3:front", "2:12"]);
+    expect(linkedArticles(rows).get("names/david")).toEqual([
+      "2:12",
+      "3:front",
+      "3:1",
+    ]);
+  });
+
   it("refuses a row it cannot read", () => {
     expect(() =>
       parseTwl([HEAD, row("front:intro", "kt/god")].join("\n"))
     ).toThrow(/line 2/);
     expect(() => parseTwl([HEAD, row("1:1", "kt/../god")].join("\n"))).toThrow(
+      /line 2/
+    );
+    expect(() => parseTwl([HEAD, row("1:0", "kt/god")].join("\n"))).toThrow(
+      /line 2/
+    );
+    expect(() => parseTwl([HEAD, row("front:1", "kt/god")].join("\n"))).toThrow(
       /line 2/
     );
   });
@@ -69,6 +97,10 @@ describe("headword", () => {
   it("refuses an article that does not open with a heading", () => {
     expect(() => headword("God\n")).toThrow(/heading/);
     expect(() => headword("#\n")).toThrow(/heading/);
+    // As in bahtraku/id_tw other/partial and other/rod.
+    expect(headingOf("mendukung# pilih kasih\n")).toBeUndefined();
+    expect(headingOf(".# tongkat\n")).toBeUndefined();
+    expect(headingOf("# tongkat\n")).toBe("tongkat");
   });
 });
 
@@ -100,6 +132,27 @@ describe("inScript", () => {
   });
 });
 
+describe("twId", () => {
+  it("writes a plain slug, an underscore as a double hyphen", () => {
+    expect(twId("pt-BR", "kt/god")).toBe("tw-pt-br-kt-god");
+    expect(twId("fr", "other/bear-witness_testify")).toBe(
+      "tw-fr-other-bear-witness--testify"
+    );
+    // Distinct from a name with a hyphen there, if one is ever added.
+    expect(twId("fr", "other/bear-witness-testify")).not.toBe(
+      twId("fr", "other/bear-witness_testify")
+    );
+  });
+
+  it("reads TWL links with an underscore in the article name", () => {
+    expect(
+      parseTwl([HEAD, row("1:1", "other/house-descendants_nation")].join("\n"))
+    ).toEqual([
+      { chapter: 1, verse: 1, article: "other/house-descendants_nation" },
+    ]);
+  });
+});
+
 describe("isGlossaryInput", () => {
   it.each([
     "twl-en-tit",
@@ -108,6 +161,7 @@ describe("isGlossaryInput", () => {
     "tw-ar-names-titus",
     "tw-es-419-other-age-timeperiod",
     "tw-pt-br-kt-bornagain",
+    "tw-fr-other-bear-witness--testify",
   ])("claims %s", (id) => {
     expect(isGlossaryInput(id)).toBe(true);
   });
@@ -125,6 +179,8 @@ describe("isGlossaryInput", () => {
     "tw-en-misc-god",
     "tw-en-kt-",
     "twx-en-kt-god",
+    "tw-en-other-bear---witness",
+    "tw-en-other-bear-witness_testify",
   ])("leaves %s alone", (id) => {
     expect(isGlossaryInput(id)).toBe(false);
   });
@@ -151,13 +207,13 @@ describe("buildGlossary", () => {
     repo: "o/ar_tw",
     release: "v1",
     commit: "c",
-    absent: { TIT: [] },
+    absent: [],
     ...over,
   });
 
   it("maps each linked article to its headword, verses in order", async () => {
     const g = await buildGlossary(
-      repo({ absent: { TIT: ["kt/faith"] } }),
+      repo({ absent: ["kt/faith"] }),
       "TIT",
       rows,
       english,
@@ -188,7 +244,7 @@ describe("buildGlossary", () => {
   it("refuses sources under more than one licence", async () => {
     await expect(
       buildGlossary(
-        repo({ absent: { TIT: ["kt/faith"] } }),
+        repo({ absent: ["kt/faith"] }),
         "TIT",
         rows,
         english,
@@ -223,6 +279,27 @@ describe("buildGlossary", () => {
     expect(Object.keys(g.terms)).toEqual(["names/titus"]);
   });
 
+  it("records an article whose first line is not a heading as a gap", async () => {
+    const g = await buildGlossary(
+      repo(),
+      "TIT",
+      rows,
+      english,
+      async (a) =>
+        a === "kt/faith"
+          ? "mendukung# pilih kasih\n\n## Definisi:\n"
+          : a === "kt/god"
+            ? "* يعقوب\n"
+            : "# كلمة\n",
+      credit
+    );
+    expect(g.gaps).toEqual({
+      "kt/faith": "no-heading",
+      "kt/god": "no-heading",
+    });
+    expect(Object.keys(g.terms)).toEqual(["names/titus"]);
+  });
+
   it("credits only the TWL file when every article is a gap", async () => {
     const g = await buildGlossary(
       repo({ script: /\p{Script=Arabic}/u }),
@@ -251,7 +328,7 @@ describe("buildGlossary", () => {
   it("refuses an article both pinned and listed absent", async () => {
     await expect(
       buildGlossary(
-        repo({ absent: { TIT: ["kt/god"] } }),
+        repo({ absent: ["kt/god"] }),
         "TIT",
         rows,
         english,
@@ -261,17 +338,82 @@ describe("buildGlossary", () => {
     ).rejects.toThrow(/both/);
   });
 
-  it("refuses an absent entry the book does not link", async () => {
-    await expect(
-      buildGlossary(
-        repo({ absent: { TIT: ["kt/love"] } }),
-        "TIT",
-        rows,
-        english,
-        async () => "# x\n",
-        credit
-      )
-    ).rejects.toThrow(/unlinked/);
+  it("ignores an absent entry this book does not link", async () => {
+    // The absent list is per release, measured over every book: an article
+    // another book links is no gap here.
+    const g = await buildGlossary(
+      repo({ absent: ["kt/love"] }),
+      "TIT",
+      rows,
+      english,
+      async () => "# كلمة\n",
+      credit
+    );
+    expect(g.gaps).toEqual({});
+    expect(Object.keys(g.terms)).toHaveLength(3);
+  });
+});
+
+const pins = new Map(sources().map((s) => [s.id, s]));
+
+describe("book lists", () => {
+  it("splits ALL_BOOKS into TWL_BOOKS and TWL_UNRELEASED, in order", () => {
+    const all = ALL_BOOKS.map(([b]) => b);
+    expect(TWL_UNRELEASED.every((b) => all.includes(b))).toBe(true);
+    expect(TWL_BOOKS).toEqual(all.filter((b) => !TWL_UNRELEASED.includes(b)));
+    // As measured in en_twl v91's git tree (docs/scoping/glossaries.md).
+    expect(TWL_BOOKS).toHaveLength(59);
+    expect(TWL_UNRELEASED).toEqual([
+      "NUM",
+      "1CH",
+      "2CH",
+      "ECC",
+      "ISA",
+      "JER",
+      "EZK",
+    ]);
+  });
+
+  it("builds glossaries only for books the TWL release has", () => {
+    for (const b of GLOSSARY_BOOKS) expect(TWL_BOOKS).toContain(b);
+    expect(new Set(GLOSSARY_BOOKS).size).toBe(GLOSSARY_BOOKS.length);
+  });
+});
+
+describe("absent lists", () => {
+  it.each(TW.map((r) => [r.language, r] as const))(
+    "%s: sorted, unique tW article paths",
+    (_, repo) => {
+      for (const a of repo.absent) expect(a).toMatch(ARTICLE);
+      expect([...repo.absent]).toEqual([...new Set(repo.absent)].sort());
+    }
+  );
+
+  it("has the lengths measured on 2026-10-29", () => {
+    // A tripwire: CI does not run the pin script that re-derives the lists,
+    // so a dropped or added line must also change this table on purpose.
+    // docs/scoping/glossaries.md, "Every book".
+    expect(
+      Object.fromEntries(TW.map((r) => [r.language, r.absent.length]))
+    ).toEqual({
+      en: 1,
+      ar: 5,
+      "es-419": 39,
+      fr: 69,
+      hi: 41,
+      id: 243,
+      "pt-BR": 70,
+      ru: 41,
+      sw: 41,
+    });
+  });
+
+  it("pins no article a language lists as absent", () => {
+    for (const repo of TW) {
+      for (const a of repo.absent) {
+        expect(pins.has(twId(repo.language, a))).toBe(false);
+      }
+    }
   });
 });
 
@@ -279,7 +421,6 @@ const dir = new URL("../data/glossaries/", import.meta.url);
 const drafts = new URL("../data/glossary-drafts/", import.meta.url);
 const read = (lang: string, book: string): Glossary =>
   JSON.parse(readFileSync(new URL(`${lang}/${book}.json`, dir), "utf8"));
-const pins = new Map(sources().map((s) => [s.id, s]));
 
 describe("data/glossaries", () => {
   it("has one directory per configured language and nothing else", () => {
@@ -295,16 +436,16 @@ describe("data/glossaries", () => {
     expect(langs).toEqual([...TW.map((r) => r.language), ...drafted].sort());
     for (const lang of langs) {
       expect(readdirSync(new URL(`${lang}/`, dir)).sort()).toEqual(
-        BOOKS.map((b) => `${b}.json`).sort()
+        GLOSSARY_BOOKS.map((b) => `${b}.json`).sort()
       );
     }
   });
 
-  describe.each(BOOKS)("%s", (book) => {
+  describe.each(GLOSSARY_BOOKS)("%s", (book) => {
     // The one network read in the tests: the pinned TWL file, checked
     // against its SHA-256 by readSource, so each glossary is traced to it.
-    const linked = readSource(twlId(book)).then((tsv) =>
-      linkedArticles(parseTwl(tsv))
+    const linked = readSource(twlId(book), { pin: pins.get(twlId(book)) }).then(
+      (tsv) => linkedArticles(parseTwl(tsv))
     );
 
     it.each(TW.map((r) => [r.language, r] as const))(
@@ -366,14 +507,23 @@ describe("data/glossaries", () => {
           }
         }
         for (const [article, gap] of Object.entries(g.gaps)) {
-          const absent = repo.absent[book]?.includes(article);
-          expect(gap).toBe(absent ? "no-article" : "english-headword");
-          if (gap === "english-headword") {
-            expect(repo.script).toBeDefined();
-            if (repo.script) {
-              const md = await readSource(twId(lang, article));
-              expect(inScript(headword(md), repo.script)).toBe(false);
-            }
+          const absent = repo.absent.includes(article);
+          if (absent) {
+            expect(gap).toBe("no-article");
+            continue;
+          }
+          // Otherwise the article is pinned and read: re-derive the gap.
+          const id = twId(lang, article);
+          const md = await readSource(id, { pin: pins.get(id) });
+          const word = headingOf(md);
+          if (word === undefined) {
+            expect(gap).toBe("no-heading");
+            continue;
+          }
+          expect(gap).toBe("english-headword");
+          expect(repo.script).toBeDefined();
+          if (repo.script) {
+            expect(inScript(word, repo.script)).toBe(false);
           }
         }
       }
@@ -388,15 +538,15 @@ describe("data/glossaries", () => {
 
   it("pins no glossary input the build does not use", () => {
     const used = new Set<string>();
-    for (const book of BOOKS) {
+    for (const book of GLOSSARY_BOOKS) {
       used.add(twlId(book));
       for (const repo of TW) {
         for (const t of Object.values(read(repo.language, book).terms)) {
           used.add(t.source);
         }
-        // An English headword is still read, so its pin is used.
+        // An English or missing headword is still read, so its pin is used.
         for (const [a, gap] of Object.entries(read(repo.language, book).gaps)) {
-          if (gap === "english-headword") used.add(twId(repo.language, a));
+          if (gap !== "no-article") used.add(twId(repo.language, a));
         }
       }
     }
@@ -407,7 +557,7 @@ describe("data/glossaries", () => {
   it("keeps Persian-only letters out of the Arabic glossary", () => {
     // ar_gt/ar_tw, tagged ar on Door43, is written with Persian letters
     // (docs/scoping/glossaries.md); this guards against it creeping back in.
-    for (const book of BOOKS) {
+    for (const book of GLOSSARY_BOOKS) {
       for (const t of Object.values(read("ar", book).terms)) {
         expect(t.headword).not.toMatch(/[پچژکگی]/);
       }
