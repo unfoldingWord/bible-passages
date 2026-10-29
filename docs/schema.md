@@ -146,8 +146,13 @@ letters, digits and `. _ : -`, at most 64 characters).
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 - Every book with structure has a table, because its package takes `name`
-  as its title. A book whose titles are not built yet (all but Titus so far,
-  `BOOKS` in `scripts/lib/books.ts`) has `name` and an empty `titles`.
+  as its title. A book whose titles are not built yet (all but Philippians
+  and Titus so far, `BOOKS` in `scripts/lib/books.ts`) has `name` and an
+  empty `titles`.
+- A segment that is its pericope's only segment has the pericope's title,
+  `text`, `status` and `source` alike, unless a draft gives it its own
+  (decision 12, [decisions/0003](decisions/0003-v0.1-scope-and-titles.md);
+  Titus 3:9–11 was drafted before that decision). The build fills it in.
 
 ## `data/drafts/<lang>/<BOOK>.json`
 
@@ -156,7 +161,28 @@ key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
 into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
 rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
-`prompts/`. Only English Titus exists so far.
+`prompts/`. English Titus and Philippians exist so far. A pericope's only
+segment has no draft (decision 12): it takes the pericope title in the build.
+
+Titus was drafted by an agent following `prompts/segment-titles.md`, before a
+script existed. From Philippians on, the file is a recorded AI output:
+`scripts/translate/segment-titles.ts` writes it under `.cache/` and it is
+copied here unchanged, as `data/glossary-drafts/` records are. The build
+never calls a model. Such a record also has:
+
+- `bible`: the `sources.json` id of the BSB text both models were given.
+- `prompt`: the instructions file and its SHA-256; a test holds it equal to
+  the committed `prompts/segment-titles.md`.
+- `calls`: the draft and the check call, each with its OpenRouter generation
+  id, model, tokens and cost in US dollars.
+- per title, `gates`: the mechanical rules it breaks (`length` over 60
+  characters, `full-stop`, `quotes`, `straight-apostrophe`, `line-break`,
+  `markup`), absent when it breaks none. A gated title stays `unreviewed`
+  even when the checker agreed.
+
+An English check's `criteria` are `accurate`, `covers`, `plain` and `style`.
+A person's review is recorded by a later change as `review` (`by`, `at`,
+`status`, and `text` when the reviewer reworded the title).
 
 A translated draft (`<lang>` other than `en`) has the same record, keyed by
 every titled key in the English table (pericopes and segments), plus `from`,
@@ -237,7 +263,8 @@ tc-mobile template package v0:
 
 A tc-mobile v0 title table, one per package per language in its
 `titleLanguages` whose `data/titles/<lang>/<BOOK>.json` has a title to ship.
-Built by `scripts/lib/title-table.ts`. Today that is English Titus only.
+Built by `scripts/lib/title-table.ts`. Today that is English Philippians
+and Titus.
 
 ```json
 {

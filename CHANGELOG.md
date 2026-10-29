@@ -26,3 +26,8 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   start), and a `dist/tc-mobile/` package per book. Titles and glossaries
   are still Titus only; other books carry their book name only. The segment
   count depends on the chunk source, which is still open (#4).
+- English Philippians segment titles (#32), the second sample book: 37
+  drafted by Claude Sonnet and checked by Gemini Flash in one scripted run,
+  recorded with its calls (`scripts/translate/segment-titles.ts`); 23 `ai-checked`,
+  14 disputed and `unreviewed` until a person reviews them. The 2 segments
+  that are their pericope's only segment reuse its title (decision 12).

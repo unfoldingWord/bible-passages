@@ -83,4 +83,4 @@ export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
  * (AGENTS.md). Every other book has its structure and its book name only,
  * until its titles are built.
  */
-export const BOOKS = ["TIT"];
+export const BOOKS = ["PHP", "TIT"];

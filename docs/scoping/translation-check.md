@@ -52,7 +52,7 @@ Same spend fuse as the runner (`--max-cost`, default 1.00 USD).
 
 - `docs/schema.md` already defines `data/drafts/<lang>/<BOOK>.json` as the
   committed home of AI-drafted titles, which the build never clears, so a
-  rebuild cannot wipe them; English Titus is there now.
+  rebuild cannot wipe them; English Titus and Philippians are there now.
 - A translation is the same kind of thing: AI output that a person reviews,
   with its check beside it. Keeping it next to the English drafts means one
   record shape (`text`, `source: "ai:<model>"`, `status` no higher than
