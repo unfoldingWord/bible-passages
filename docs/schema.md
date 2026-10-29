@@ -129,6 +129,21 @@ letters, digits and `. _ : -`, at most 64 characters).
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 
+## `data/drafts/<lang>/<BOOK>.json`
+
+A committed input, not generated: AI-drafted titles, `titles` keyed by segment
+key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
+into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
+rebuild cannot wipe a draft. A draft for a key that is not a segment in the
+structure fails the build. The instructions that produced them are in
+`prompts/`. Only English Titus exists so far.
+
+Each draft carries `check`: a different model's verdict (`by`, `verdict`, and
+for a disagreement `criteria`, `why` and a `suggestion`). A draft is
+`ai-checked` only when the checker agreed; a disagreement stays `unreviewed`
+and goes to a person first. The check's details stay here; the built table
+gets `text`, `status` and `source`.
+
 ## `data/glossaries/<lang>/<BOOK>.json`
 
 The key terms Translation Word Links link from a book, each with its
@@ -247,3 +262,14 @@ every test run until they exist.
     (`checking/headings`) segment titles use. Proposed: explanatory comment.
 11. **Metadata in v0.1**: proposed key terms only; topics, literary form and
     difficulty after v0.1.
+
+12. **Single-segment pericopes**: 263 pericopes are exactly one segment
+    (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
+    segment titles describe the same verses. Title both (16,786 English
+    titles) or reuse the pericope title (16,523)?
+13. **Spanish language tag**: every Spanish input is published as `es-419`;
+    the v0.1 list says `es`. Proposed: `es-419` (#20).
+14. **Chinese key terms**: there is no Chinese Translation Words on Door43
+    (checked 2026-10-28). Who carries a zh-Hans key-term list, or the
+    fallback (an AI-drafted list checked by a second model and reviewed by a
+    Chinese reader) if no owner by 2026-11-13?

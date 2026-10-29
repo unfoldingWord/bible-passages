@@ -260,7 +260,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 
 <section class="page" data-page="decisions" hidden aria-label="Decisions">
   <div class="lead"><span class="eyebrow">Decisions · pick, say why, and the decider records it</span><h2>Decisions before data</h2>
-  <p>Pick the option you'd choose and add a reason. A pick is input; only a recorded decision counts. The requirements owner decides product questions, the content team decides the chunk source, and the DRI decides delivery questions.</p></div>
+  <p>Pick the option you'd choose and add a reason. A pick is input; only a recorded decision counts. The requirements owner decides product questions, the content team decides the chunk source, and the DRI decides delivery questions. T1–T6 are Titus segment titles where the checking model disagreed with the drafting model (<a href="https://github.com/unfoldingWord/bible-passages/pull/16" target="_blank" rel="noopener">PR #16</a>); the other 19 passed the check.</p></div>
   <div class="panel" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><span class="saved" id="rv-status">Sign in to claude.ai to add a pick.</span></div>
   <div class="grid" id="decs"></div>
 </section>
@@ -345,6 +345,14 @@ const DECIDE = [
   { id: "d11", n: 11, by: "Requirements owner", q: "What metadata is in v0.1?", opts: [["kt", "Key terms only", "They also feed the translation glossaries. (Proposed.)"], ["all", "All of it", "Topics, key terms, figures of speech, literary form, difficulty."], ["none", "None", "Spans and titles only; tC Mobile reads nothing else."]] },
   { id: "d12", n: 12, by: "Requirements owner", q: "263 pericopes are a single segment. Title both?", opts: [["both", "Title both", "16,786 English titles."], ["dedupe", "Reuse the pericope title", "16,523 English titles; fewer strings to translate and review."]] },
   { id: "d6", n: 6, by: "DRI", q: "Which model translates?", opts: [["gemini", "A fast Gemini model, checked by Claude", "The suggestion on record."], ["claude", "Claude, checked by a second model", "One provider for drafting and translation."], ["measure", "Measure both on Titus", "Pick from the measured quality and cost."]] },
+  { id: "t1", n: "T1", by: "Requirements owner", q: "Titus 1:12–13: which segment title?", opts: [["draft", "Titus must firmly correct them so their faith is sound", "Drafted by Claude Sonnet."], ["check", "Cretans are called liars, so Titus must correct them firmly", "Suggested by Claude Opus, which checked the draft: 'them' has no referent in the title, and v12 (a Cretan prophet calls Cretans liars) is not reflected at all."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "t2", n: "T2", by: "Requirements owner", q: "Titus 1:14: which segment title?", opts: [["draft", "Do not follow myths or commands of men", "Drafted by Claude Sonnet."], ["check", "The Cretans must ignore Jewish myths and men’s commands", "Suggested by Claude Opus, which checked the draft: An imperative with no named subject (rule 5) turns the verse, which states the purpose of the rebuke for the Cretans, into a general command, and it drops 'Jewish' from 'Jewish myths'."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "t3", n: "T3", by: "Requirements owner", q: "Titus 1:15–16: which segment title?", opts: [["draft", "Some say they know God but their actions deny him", "Drafted by Claude Sonnet."], ["check", "The defiled say they know God but their actions deny him", "Suggested by Claude Opus, which checked the draft: Fits only v16; v15 (to the pure all is pure, but the defiled have defiled minds) is not represented."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "t4", n: "T4", by: "Requirements owner", q: "Titus 2:6–8: which segment title?", opts: [["draft", "Titus urges younger men and sets an example", "Drafted by Claude Sonnet."], ["check", "Titus urges younger men to self-control and sets an example", "Suggested by Claude Opus, which checked the draft: 'urges younger men' has no object, so a reader cannot tell what Titus urges them to do (v6: to be self-controlled)."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "t5", n: "T5", by: "Requirements owner", q: "Titus 3:9–11: which segment title?", opts: [["draft", "Avoid foolish arguments and reject a divisive person", "Drafted by Claude Sonnet."], ["check", "Titus must avoid foolish arguments and reject divisive men", "Suggested by Claude Opus, which checked the draft: Imperative with no named addressee (rule 5); the commands are to Titus."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "t6", n: "T6", by: "Requirements owner", q: "Titus 3:15: which segment title?", opts: [["draft", "Final greetings and blessing", "Drafted by Claude Sonnet."], ["check", "Paul and those with him send greetings and grace to all", "Suggested by Claude Opus, which checked the draft: A noun phrase, not a statement (rule 1), with no one named (rule 5), and it nearly repeats the pericope heading 'Final Remarks and Greetings' (rule 4)."], ["other", "Other wording", "Write it in the note."]] },
+  { id: "d13", n: 13, by: "Requirements owner", q: "Which language tag do Spanish titles use?", opts: [["es-419", "es-419 (Latin American Spanish)", "Every Spanish input is published as es-419 (Translation Words, Translation Word Links). Apps on plain es devices need a fallback to find it. (Proposed by the glossary work, #20.)"], ["es", "es (Spanish)", "Matches the v0.1 language list; claims a variety the inputs were not written for."]] },
+  { id: "d14", n: 14, by: "Requirements owner", q: "Who carries the Chinese (zh-Hans) key-term list?", opts: [["team", "Ask a Chinese team", "There is no Chinese Translation Words on Door43 (checked 28 Oct). Name the team or person in your note."], ["ai", "AI-drafted, then a Chinese reader", "The recorded fallback if no owner by 13 Nov: one model drafts, another checks, a Chinese reader reviews."], ["later", "Leave Chinese out of v0.1 glossaries", "Translate Chinese titles without a key-term list for now."]] },
 ];
 
 const CHECKS = [
@@ -395,8 +403,10 @@ function renderHome() {
     ["Latest CI", run ? (run.conclusion === "success" ? "Pass" : esc(run.conclusion)) : "–", run ? `${esc(run.sha)} on ${esc(run.branch)}` : ""],
   ].map(([k, v, d]) => `<div class="kpi"><span class="k">${k}</span><span class="v">${v}</span><span class="d">${d}</span></div>`).join("");
   $("#sprint-mini").innerHTML = SNAP.milestones.map((m) => {
-    const t = m.open_issues + m.closed_issues, p = t ? (m.closed_issues / t) * 100 : 0;
-    return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${m.closed_issues}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
+    // Counts from a live snapshot are coerced: a string here would otherwise reach innerHTML as markup.
+    const openN = Number(m.open_issues) || 0, closedN = Number(m.closed_issues) || 0;
+    const t = openN + closedN, p = t ? (closedN / t) * 100 : 0;
+    return `<div style="display:grid;gap:4px"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.title)}</b><span class="saved">${closedN}/${t} closed</span></div><div class="meter"><i style="width:${p}%"></i></div></div>`;
   }).join("");
   $("#ci").innerHTML = SNAP.runs.slice(0, 20).reverse().map((r) => `<a class="${r.conclusion === "success" ? "ok" : r.conclusion === "failure" ? "no" : "sk"}" href="${href(r.url)}" target="_blank" rel="noopener" title="${esc(r.sha)} · ${esc(r.branch)} · ${esc(r.conclusion)}">${r.conclusion === "success" ? "✓" : r.conclusion === "failure" ? "✕" : "–"}</a>`).join("");
   $("#commits").innerHTML = `<table><tbody>${SNAP.commits.slice(0, 6).map((c) => `<tr><td class="mono"><a href="${REPO}/commit/${encodeURIComponent(c.sha)}" target="_blank" rel="noopener">${esc(c.sha)}</a></td><td>${esc(c.msg)}</td><td class="n">${day(c.at)}</td></tr>`).join("")}</tbody></table>`;
@@ -466,7 +476,7 @@ function renderFoot() {
 function renderLive() { liveState(); renderHome(); renderPlan(); renderCoverage(); renderFoot(); }
 
 /* ---------- decisions ---------- */
-const RV = { db: null, user: null, uid: null, canEdit: false, resp: {}, final: {}, names: {} };
+const RV = { db: null, user: null, uid: null, resp: {}, final: {}, names: {} };
 function buildDecisions() {
   $("#decs").innerHTML = DECIDE.map((d) => `<div class="panel dec" id="dec-${d.id}">
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span class="eyebrow">Decision ${d.n}</span><span class="chip">decides: ${d.by}</span></div>
@@ -499,16 +509,34 @@ function updateDecisions() {
   }
   $("#rv-status").textContent = RV.db && RV.uid ? "Your picks save to this page and everyone with access sees them." : "Sign in to claude.ai to add a pick. Decisions recorded so far still show.";
 }
-async function savePick(id) {
+// Saves run one at a time, and each writes only its own pick: update()
+// merges nested objects, so a second save cannot drop the first. set() is
+// used only when this viewer's document does not exist yet.
+let saving = Promise.resolve();
+function savePick(id) {
   const el = $("#dec-" + id), msg = el.querySelector("[data-msg]");
   const choice = el.querySelector("input:checked")?.value || "", note = el.querySelector("textarea").value.trim();
-  const cur = RV.resp[RV.uid] || { picks: {} };
-  const doc = { picks: { ...cur.picks, [id]: { choice, note, at: new Date().toISOString() } }, at: new Date().toISOString() };
+  const at = new Date().toISOString(), pick = { choice, note, at };
   msg.textContent = "Saving…";
-  try { await RV.db.doc("resp/" + RV.uid).set(doc); msg.textContent = "Saved"; el.dataset.touched = ""; }
-  catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
+  saving = saving.then(async () => {
+    const ref = RV.db.doc("resp/" + RV.uid);
+    try {
+      try { await ref.update({ picks: { [id]: pick }, at }); }
+      catch (e) {
+        if (e?.code !== "invalid_argument") throw e;
+        await ref.set({ picks: { ...(RV.resp[RV.uid]?.picks || {}), [id]: pick }, at });
+      }
+      msg.textContent = "Saved";
+      // Edits made while the save was in flight stay protected.
+      const now = el.querySelector("input:checked")?.value || "", nowNote = el.querySelector("textarea").value.trim();
+      if (now === choice && nowNote === note) el.dataset.touched = "";
+    } catch (e) { msg.textContent = "Couldn't save: " + (e?.message || "try again"); }
+  });
+  return saving;
 }
-document.addEventListener("change", (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
+// Any edit marks the card, so a snapshot never overwrites what is being typed.
+// "input" fires on every keystroke; "change" covers radios.
+for (const ev of ["input", "change"]) document.addEventListener(ev, (e) => { const d = e.target.closest?.(".dec"); if (d) d.dataset.touched = "1"; });
 async function resolveNames() {
   if (!RV.user) return;
   const ids = [...new Set(Object.keys(RV.resp))];
@@ -539,12 +567,12 @@ setInterval(liveState, 60000);
   const [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
   if (!db) return;
   RV.db = db; RV.user = user;
-  if (user) { try { RV.uid = await user.id(); RV.canEdit = await user.canEdit(); } catch (e) { RV.uid = null; } }
+  if (user) { try { RV.uid = await user.id(); } catch (e) { RV.uid = null; } }
   updateDecisions();
   db.doc("live/snapshot").onSnapshot((snap) => {
     if (!snap.exists) return;
     const d = snap.data();
-    if (!snapshotOk(d) || d.asOf < SNAP.asOf) return;
+    if (!snapshotOk(d) || Date.parse(d.asOf) < Date.parse(SNAP.asOf)) return;
     const prev = [SNAP, SNAP_KIND];
     try { SNAP = d; SNAP_KIND = "live"; renderLive(); }
     catch (e) { [SNAP, SNAP_KIND] = prev; renderLive(); }
