@@ -24,8 +24,10 @@ by the DRI on 28 Oct).
   held before it was retired also stay stored, with their status, for the
   reviewer to read. They are not the live draft and must not be published.
   The only current title record is the revived key's live draft: it starts
-  `unreviewed`, is not seeded from any stored set, replaces none of them, and
-  publishing reads it alone. Its reviewer is shown all the stored sets.
+  `unreviewed`, is not seeded from any set stored by this move-back (the
+  titles of each key that lost the span, and the titles the revived key held
+  before it was retired), replaces none of them, and publishing reads it
+  alone. Its reviewer is shown every one of those stored sets.
 - `data/retired-keys.json` is an append-only log. A key's rows apply only
   while the live structure does not contain that key; then its latest row
   is the one in force. While a key is live, every row for it, the latest

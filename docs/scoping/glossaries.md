@@ -125,6 +125,9 @@ pins; changing a repo is a new pin and a rebuild.
   are not counted), so a stray letter of the script does not make English a
   term (#22). On Titus this changed nothing: no headword mixes scripts
   (measured, see #22's PR).
+  A short native headword with a long English gloss beside it counts as a
+  gap under this rule. Before anyone loosens the majority rule because a gap
+  looks wrong, measure the rule again on a later book.
 - Headwords are the full heading line (`grâce, gracieux`): which form a
   title uses is a translation choice, not the glossary's.
 

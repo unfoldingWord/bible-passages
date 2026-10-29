@@ -32,8 +32,11 @@ export type TitleTable = {
  * - A segment with no title, or only an `unreviewed` one, is left out; the
  *   contract allows that, and the app shows no label.
  * - `chapters` is empty: the dataset has no chapter titles.
- * - An unknown status or an empty or whitespace-padded title throws, naming
- *   `where` and the key, rather than shipping or dropping it silently.
+ * - For a package segment key, an unknown status or an empty or
+ *   whitespace-padded title throws, naming `where` and the key, rather than
+ *   shipping or dropping it silently. Entries for other keys are not read
+ *   here; tests/structure.test.ts holds every entry in data/titles/ to the
+ *   same rule.
  */
 export function titleTable(
   pkg: { id: string; version: string },

@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { ALL_BOOKS } from "../scripts/lib/books.ts";
+import { ALL_BOOKS, BOOKS, STRUCTURE_BOOKS } from "../scripts/lib/books.ts";
 
 // Every input the build reads is pinned here. See docs/schema.md, "sources.json".
 type Source = {
@@ -53,6 +53,32 @@ describe("structure inputs", () => {
   it("lists the 66 books of ufw.vrs in its order", () => {
     expect(ALL_BOOKS.map(([b]) => b)).toEqual(Object.keys(vrs).slice(0, 66));
     expect(Object.keys(vrs)[65]).toBe("REV");
+  });
+
+  // Titles are built only for books with a structure, and a structure only
+  // for books the dataset knows.
+  it("BOOKS ⊆ STRUCTURE_BOOKS ⊆ ALL_BOOKS", () => {
+    const all = new Set(ALL_BOOKS.map(([b]) => b));
+    const structure = new Set(STRUCTURE_BOOKS);
+    expect(BOOKS.filter((b) => !structure.has(b))).toEqual([]);
+    expect(STRUCTURE_BOOKS.filter((b) => !all.has(b))).toEqual([]);
+    expect(BOOKS.length).toBeGreaterThan(0);
+  });
+
+  // Psalms and Song of Songs take their book name from ULT (#39), at one
+  // released commit (v91).
+  it("pins ULT for exactly the two book names decided on #39", () => {
+    const ult = sources.filter((s) => s.id.startsWith("ult-"));
+    expect(ult.map((s) => s.id)).toEqual(["ult-psa", "ult-sng"]);
+    for (const [s, file] of [
+      [ult[0], "19-PSA"],
+      [ult[1], "22-SNG"],
+    ] as const) {
+      expect(s?.url).toBe(
+        `https://git.door43.org/unfoldingWord/en_ult/raw/commit/35d215957f3203fd2e2fac5702ce14902d417f9d/${file}.usfm`
+      );
+      expect(s?.licence).toBe("CC-BY-SA-4.0");
+    }
   });
 
   it("pins nothing for a book not in ALL_BOOKS", () => {

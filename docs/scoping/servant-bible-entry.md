@@ -79,7 +79,7 @@ normal pull request to `servers.json`".
 | Step   | Verdict  | Evidence / justification                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Borrow | applied  | servant.bible `servers.json` and `servers.schema.json` at `5472c7b`, unchanged: the merged `uw/bible-passages` entry is the starting point, and its slug, `kind`, `status`, `name`, `purpose` and `operator` are kept. The DCS `sources` item is copied verbatim from the `uw/tc-helps` and `uw/bibles` entries, so the map draws one DCS node, not several spellings of it (ADR 0005, decision 6).                        |
-| Bend   | applied  | This repo's `sources.json`, read for the entry's `sources`: all 8,085 pinned inputs are on `git.door43.org` (measured below), so one DCS item covers them. `docs/adding-a-server.md` step 2 ("copy the closest existing entry and change every field") used as the procedure.                                                                                                                                              |
+| Bend   | applied  | This repo's `sources.json`, read for the entry's `sources`: all 8,087 pinned inputs are on `git.door43.org` (measured below), so one DCS item covers them. `docs/adding-a-server.md` step 2 ("copy the closest existing entry and change every field") used as the procedure.                                                                                                                                              |
 | Break  | observed | (1) The description says "Open Bible Stories and every passage"; nothing in this repo's schema, plan or README mentions OBS (`grep -rni 'open bible stories' docs/schema.md docs/scoping/plan.md README.md`: no match). (2) The schema has no field for a licence or a release: an entry with `license` fails validation (output below). (3) No release exists, so there is nothing for a release-dependent field to name. |
 | Beget  | skipped  | Changing the entry is a pull request to servant.bible, which this repo's agents do not open; the maintainer submits it (steps below). A licence or release field would be a servant.bible schema change, for its owners to decide (question 2).                                                                                                                                                                            |
 | Bide   | waiting  | `status` stays `planned`. Tripwire: the `v0.1.0` tag exists on this repo **and** servant.bible states what `available` means for a dataset. When it fires, inspect whether the release meets that meaning and whether #20's standard applies to datasets.                                                                                                                                                                  |
@@ -147,7 +147,7 @@ repository and reach readers through `repository`.
 | Licence            | Data CC BY-SA 4.0; code MIT                                                                                                                               | `LICENSE`, `LICENSE-CODE`, `README.md` |
 | Release            | None. `package.json` version `0.0.0`; `git tag` and `gh release list` empty (2026-10-29). Releases will be `vX.Y.Z` tags with `dist/tc-mobile/` attached. | `docs/schema.md`, "Releases"           |
 | Layout             | `dist/tc-mobile/`: 66 book packages (`<BOOK>.json`) and title tables `titles/<lang>/<BOOK>.json`, tC Mobile template package format v0                    | `docs/schema.md`                       |
-| Title tables built | English only, for 2 books (PHP, TIT), at `71658d0`                                                                                                        | `dist/tc-mobile/titles/en/`            |
+| Title tables built | English only, for 2 books (PHP, TIT), at `0594780`                                                                                                        | `dist/tc-mobile/titles/en/`            |
 | v0.1 languages     | en plus ar, es-419, fr, hi, id, pt-BR, ru, sw, zh-Hans, each shipping only once it passes the gates                                                       | ADR 0002; ADR 0003 decision 1          |
 
 ## Checks run
@@ -170,11 +170,11 @@ draft + "license":         errors=1  /entries/5 must NOT have additional propert
 draft + versions/current:  errors=3  /entries/5/current boolean schema is false; /entries/5/versions boolean schema is false; must match "then" schema
 ```
 
-Source hosts in `sources.json` at `71658d0`, counted two ways:
+Source hosts in `sources.json` at `0594780` (8,085 at `71658d0`, before main added two pins), counted two ways:
 
 ```
-python3 (urllib.parse netloc):  Counter({'git.door43.org': 8085})
-jq (split("/")[2], group_by):   git.door43.org 8085
+python3 (urllib.parse netloc):  Counter({'git.door43.org': 8087})
+jq (split("/")[2], group_by):   git.door43.org 8087
 ```
 
 Every URL in the draft, and the four Door43 repositories named above,
