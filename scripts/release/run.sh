@@ -89,6 +89,10 @@ echo "::group::Generated files match a fresh build"
 npm run build
 git status --porcelain --untracked-files=all -- data dist
 if [ -n "$(git status --porcelain --untracked-files=all -- data dist)" ]; then
+  # The difference from the committed files, staged or not, before a dry
+  # run's EXIT trap restores both directories (untracked files are named by
+  # the status above, not shown).
+  git --no-pager diff HEAD -- data dist
   echo "::error::data/ or dist/ differs from a fresh build."
   exit 1
 fi
