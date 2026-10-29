@@ -41,7 +41,7 @@ const span = ({ start, end }: { start: Ref; end: Ref }) =>
   `${start.join(":")}-${end.join(":")}`;
 
 /**
- * What breaks key stability between the last release and now, one message
+ * What breaks key stability between `previous`, a release, and now, one message
  * per problem; empty when nothing does. With no earlier release there is
  * nothing to compare, but the retired-keys record is still checked.
  */
