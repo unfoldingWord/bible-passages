@@ -205,11 +205,11 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 
 <section class="page" data-page="home" aria-label="Home">
   <div class="callout"><div>
-    <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-29T01:45:00Z"></span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline"><span class="eyebrow">Where it stands</span><span class="dated" data-written="2026-10-29T11:20:00Z"></span></div>
     <ul>
       <li><b>Titus is the first book on <code>main</code>.</b> Its structure (8 pericopes, 25 segments), its English segment titles and its key-term glossaries in 9 languages merged on 29 Oct; each PR passed both review-bench lenses (Frank on Codex, George on Grok). tC Mobile's own template checker runs in CI.</li>
       <li><b>The requirements owner answered the open questions on 28 Oct, and they are recorded</b> (<a data-doc="docs/decisions/0003-v0.1-scope-and-titles.md" target="_blank" rel="noopener">ADR 0003</a>): v0.1 is a gated subset; pericopes come from BSB; segment titles are explanatory comments; single-segment pericopes reuse their title (16,523 English titles). The six disputed Titus titles are settled in the data. Two remain: decision 11 (metadata), being confirmed with them, and decision 8 (chunk source), the content team's call. See <a href="#decisions">Decisions</a>.</li>
-      <li><b>Keys are decided:</b> a key is its span, a span that comes back keeps its key, and retired keys are an append-only record (<a data-doc="docs/decisions/0001-span-keys.md" target="_blank" rel="noopener">ADR 0001</a>). The release check that enforces this is PR #17, in review.</li>
+      <li><b>Keys are decided:</b> a key is its span, a span that comes back keeps its key, and retired keys are an append-only record (<a data-doc="docs/decisions/0001-span-keys.md" target="_blank" rel="noopener">ADR 0001</a>). The check that enforces this runs in CI on every PR (PR #17, merged 29 Oct); no release has been tagged yet.</li>
       <li><b>The constraint now is measurement.</b> Titles per hour, cost per title and review minutes per title are not measured yet; translating Titus with both models (<a data-doc="docs/decisions/0002-measure-translation-models.md" target="_blank" rel="noopener">ADR 0002</a>) measures them. Next gate: Titus measured by 1 Nov. See <a href="#plan">Plan</a>.</li>
     </ul>
   </div></div>
@@ -274,7 +274,7 @@ td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 </section>
 
 <section class="page" data-page="checks" hidden aria-label="Checks">
-  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2><span class="dated" data-written="2026-10-29T01:45:00Z"></span>
+  <div class="lead"><span class="eyebrow">Checks · every claim and its evidence</span><h2>What we know, and how</h2><span class="dated" data-written="2026-10-29T11:20:00Z"></span>
   <p>Static text is dated, and flagged once it is more than a week old. Live sections show when their data was last read from GitHub.</p></div>
   <div class="tw"><table><thead><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="checks"></tbody></table></div>
 </section>
@@ -337,7 +337,7 @@ const BREAKS = [
 const DECIDE = [
   { id: "d1", n: 1, by: "Requirements owner", q: "What is v0.1?", opts: [["full", "The full request", "Pericope and segment titles, 66 books, 10 languages, by 16 Nov."], ["subset", "A gated subset", "All structure and English titles; languages that pass the gates by 13 Nov; the rest in v0.1.x."], ["issue", "The issue's scope", "Pericope titles and segments; segment titles later."]] },
   { id: "d2", n: 2, by: "Requirements owner", q: "Where do pericopes come from?", opts: [["bsb", "BSB section headings", "3,016 headings, public domain. The build plan's choice. (Proposed.)"], ["other", "Another source", "Say which in your note."]] },
-  { id: "d3", n: 3, by: "DRI", q: "What form do keys take?", opts: [["span", "Span keys: TIT.1.1-4", "Matches tC Mobile's own fixture; a moved boundary always gets a new key. (Proposed.)"], ["scope", "Scripture Burrito scope: TIT.1:1-4", "Matches tC Mobile's section addressing (its ADR 0004)."], ["order", "Order keys: TIT.P02", "The pilot's form; inserting one pericope renumbers the rest."]] },
+  { id: "d3", n: 3, by: "DRI", q: "What form do keys take?", opts: [["span", "Span keys: TIT.1.1-4", "Matches tC Mobile's own fixture; a key is its span, so a moved boundary gets its new span's key, and a span that comes back gets its old key back (ADR 0001)."], ["scope", "Scripture Burrito scope: TIT.1:1-4", "Matches tC Mobile's section addressing (its ADR 0004)."], ["order", "Order keys: TIT.P02", "The pilot's form; inserting one pericope renumbers the rest."]] },
   { id: "d8", n: 8, by: "Content team", q: "Which chunk source is authoritative?", opts: [["ufw", "The UFW chunk files", "13,608 chunks; the build plan's source."], ["ult", "ULT's \\ts\\* markers", "13,548 sections by tC 4.0's rule (from 13,575 markers); 165 splits instead of 162."], ["case", "Case by case", "The content team rules on each of the 1,184 differences."]] },
   { id: "d9", n: 9, by: "Requirements owner", q: "Is the consensus check in v0.1?", opts: [["out", "Out of v0.1", "BSB titles ship with their source; review flags changes; overrides can come later. (Proposed.)"], ["in", "In v0.1", "Needs a source for 8 copyrighted Bibles' headings (about 9,500 pages)."]] },
   { id: "d10", n: 10, by: "Requirements owner", q: "Which heading style do segment titles use?", opts: [["explain", "Explanatory comment", "“Jesus heals a paralyzed man.” Short and plain. (Proposed.)"], ["topic", "Topical reference", "“Cure of a paralytic.” Shortest; assumes Bible knowledge."], ["about", "“About” comment", "“About Jesus healing a paralyzed man.” Clearly not Bible text."], ["question", "Question", "“Does Jesus have authority to heal?”"]] },
@@ -364,7 +364,7 @@ const CHECKS = [
   ["Translation Words exist for 8 of the 9 non-English v0.1 languages", "Observed", "Titus glossaries built from pinned Door43 releases for ar, es-419, fr, hi, id, pt-BR, ru and sw (PR #20). Arabic has 16 headwords still in English (#21). No Chinese Translation Words (checked 28 Oct)."],
   ["Titus: 8 pericopes and 25 segments", "Re-derived", "data/structure/TIT.json (PR #15); a second model re-derived the same 25 keys from the raw sources."],
   ["19 of 25 English Titus segment titles passed a second model's check", "Observed", "data/drafts/en/TIT.json (PR #16): Sonnet drafted, Opus checked. The 6 it disputed were decided by the requirements owner on 28 Oct and are in the data as reviewed titles (PR #26, ADR 0003)."],
-  ["A released key is never missing, moved or reused for other verses", "Pending", "The check runs against every release tag and the append-only retired-keys record (PR #17, in review). No release exists yet."],
+  ["The key-stability check runs on every PR", "Observed", "tests/structure.test.ts runs it in CI against every release tag and the append-only retired-keys record (PR #17, merged 29 Oct); tests/keys.test.ts plants moved, dropped and reused keys and expects each to fail. No release is tagged yet, so today it checks only the retired-keys record."],
   ["Review takes about 10 seconds a title", "Assumption", "Never timed. Titus (#3) measures it."],
   ["The plan can be done correctly by 16 Nov", "Unresolved", "Go/no-go 1 on 4 Nov decides, from Titus's measured rates."],
   ["This site's GitHub numbers are refreshed by hand", "Dated", "They are refreshed in work sessions, not on a schedule; the pill at the top shows their age. A scheduled cloud refresh was tried on 28 Oct and paused: GitHub returned 401 to the cloud sandbox's token and 429 (rate limited) without it."],
