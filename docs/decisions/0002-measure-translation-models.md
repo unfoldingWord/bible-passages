@@ -1,8 +1,8 @@
 # 0002: Choose the translation model by measuring both on Titus
 
 - **Status:** accepted
-- **Date:** 2026-10-28; amended 2026-10-29 (model IDs, choice rule, and the
-  rule's three details)
+- **Date:** 2026-10-28; amended 2026-10-29 (model IDs, choice rule, the
+  rule's three details, and three edge cases of those)
 - **Decided by:** the DRI (the model-selection half of open decision 6 in
   `../schema.md`; key-term consistency is still open)
 
@@ -69,6 +69,20 @@ human review, of checker disagreements, as in rule 1).
    the model delivered.
 3. **Undelivered titles.** A title a model fails to deliver counts as one
    reviewer change against that model.
+
+Three edge cases of those details, decided by the maintainer on 2026-10-29
+(#85), also before any review results:
+
+4. **Undelivered titles before human review.** Before a person has
+   reviewed, when quality is measured by checker disagreements (rule 1), a
+   title a model fails to deliver counts as one checker disagreement
+   against that model.
+5. **Spend that delivered nothing.** The cost of calls that delivered no
+   title still counts toward cost per title: it is in the sum of charges
+   (detail 2), while the divisor stays the titles delivered.
+6. **No titles delivered.** A model that delivers 0 titles in a language
+   loses that language. Its cost per title there, which would divide by 0,
+   is never needed.
 
 ## Why
 
