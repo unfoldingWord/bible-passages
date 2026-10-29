@@ -18,6 +18,7 @@ pieces around it.
 | 7   | Translation        | titles in each language, with per-language glossaries      | [ai.md](ai.md#7-translation)                   |
 | 7a  | Glossaries         | key-term headwords per language from Translation Words     | [glossaries.md](glossaries.md)                 |
 | 7b  | Translation runner | translates one book's titles with one model, gated, costed | [translation-runner.md](translation-runner.md) |
+| 7c  | Translation check  | the other model's verdict on each translation              | [translation-check.md](translation-check.md)   |
 | 8   | Review             | people approve, flag or suggest each title                 | [review.md](review.md)                         |
 | 9   | Publish            | `dist/tc-mobile/` packages and title tables, release tags  | [pipeline.md](pipeline.md#9-publish)           |
 | 10  | Project site       | live scope, sizing, sprints, decisions, coverage           | [site.md](site.md)                             |
