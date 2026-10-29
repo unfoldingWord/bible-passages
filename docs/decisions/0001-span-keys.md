@@ -8,8 +8,9 @@
 
 Pericope and segment keys carry their span: `TIT.1.1-4` for a segment,
 `TIT.P.1.1-4` for a pericope, and `TIT.1.4-4` for a one-verse segment. A
-moved boundary always produces a new key; the old key is retired with its
-successor in `data/retired-keys.json`.
+moved boundary gives the new span its key: a new key, or, if that span had a
+key before, that key revived (never a second key for one span). The old key
+is retired by appending a row with its successor to `data/retired-keys.json`.
 
 A key is always its span. If a later edit makes a retired span live again
 (a boundary moved and then moved back), that same key is live again. A key is
@@ -22,9 +23,11 @@ by the DRI on 28 Oct).
   keeps its own stored titles with their status. The revived key's live
   draft is a separate record: it starts `unreviewed`, is not seeded from
   any of those sets, and its reviewer is shown all of them.
-- Its row in `data/retired-keys.json` stays as history. While a key is
-  live, no tool follows that row's successor pointer. The key-stability
-  check treats a key that is live as present, whatever the record says.
+- `data/retired-keys.json` is an append-only log, and the latest row for a
+  key is the one in force. While a key is live, its earlier rows are audit
+  history only: no tool treats it as retired (successor, publishing, title
+  deletion or the key-stability check). When it is retired again, a new
+  row with its new successor is appended, and that row is what is followed.
 
 ## Why
 
@@ -47,6 +50,10 @@ to it. Carried-forward titles always become `unreviewed`
 drafts. Each retired key names one successor in `data/retired-keys.json`
 (accepted on #17), and the DRI set the rule for each kind of change on
 28 Oct:
+
+In every case the retired key keeps its own stored titles with their
+status; carrying writes an `unreviewed` copy onto the successor and deletes
+nothing.
 
 - **Resize** (one key becomes one key): the old titles carry to the
   successor.

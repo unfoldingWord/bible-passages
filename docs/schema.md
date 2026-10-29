@@ -63,11 +63,13 @@ Bible fixture (`MRK.1.1-8`):
 
 No pericope or segment in this dataset crosses a chapter: BSB opens every one of its 1,189 chapters with a heading at verse 1, and the chunk files are per chapter. So every key is single-chapter. (tc-mobile's format allows cross-chapter spans; this dataset never needs them.)
 
-Because the span is in the key, moving a boundary always produces a new key.
-That is the contract's rule ("give the new passage a new key") enforced by the
-form of the key rather than by memory. The old key is then retired: it stays in
-the record of released keys. It is never attached to a different span; if the
-same span is live again, so is its key ([decisions/0001](decisions/0001-span-keys.md)).
+Because the span is in the key, moving a boundary gives the new span its own
+key: a new one, or the same span's earlier key, revived. That is the contract's
+rule ("give the new passage a new key") enforced by the form of the key rather
+than by memory. The old key is retired by appending a row to
+`data/retired-keys.json`, where the latest row for a key is in force. A key is
+never attached to a different span
+([decisions/0001](decisions/0001-span-keys.md)).
 
 This replaces the order-based IDs in the pilot (`TIT.P02`), where inserting one
 pericope renumbers every later one.
