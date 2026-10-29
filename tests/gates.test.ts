@@ -1,7 +1,12 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
+  ALLOW_PUNCTUATION,
   BOOK_CODES,
+  FULL_STOPS,
+  QUOTATION_MARKS,
+  finalStopProblems,
+  quoteProblems,
   LENGTH_FLOOR_CHARS,
   LENGTH_RATIO_MAX,
   SCRIPT_BY_TAG,
@@ -113,5 +118,65 @@ describe("title translation gates (ported from tc-mobile)", () => {
   it("(d) passes plain text, typographic apostrophes and punctuation", () => {
     expect(leakProblems("L’héritage de la grâce, selon Paul")).toEqual([]);
     expect(leakProblems("保罗问候提多，他在信仰上的真儿子")).toEqual([]);
+  });
+
+  it("(e)(f) start with an empty exception list", () => {
+    expect(ALLOW_PUNCTUATION).toEqual({});
+  });
+
+  it("(e)(f) list single characters, each with a reason", () => {
+    for (const set of [FULL_STOPS, QUOTATION_MARKS])
+      for (const [mark, why] of Object.entries(set)) {
+        expect([...mark], mark).toHaveLength(1);
+        expect(why.length, mark).toBeGreaterThan(0);
+      }
+  });
+
+  it("(e) catches every listed full stop at the end, and only at the end", () => {
+    for (const stop of Object.keys(FULL_STOPS)) {
+      expect(finalStopProblems("fr", `Tite ${stop}`), stop).toEqual([
+        `final full stop ${JSON.stringify(stop)}`,
+      ]);
+      expect(finalStopProblems("fr", `Tite${stop} salue`), stop).toEqual([]);
+    }
+    // Abbreviation dots and verse references inside a title are not checked.
+    expect(finalStopProblems("fr", "Paul salue Tite (TIT 1:1-4)")).toEqual([]);
+    // A question is not a full stop.
+    expect(finalStopProblems("fr", "Qui est sage ?")).toEqual([]);
+    expect(finalStopProblems("fr", "")).toEqual([]);
+  });
+
+  it("(f) catches every listed quotation mark", () => {
+    for (const mark of Object.keys(QUOTATION_MARKS))
+      expect(quoteProblems("fr", `Tite ${mark}salue${mark}`), mark).toEqual([
+        `quotation mark ${JSON.stringify(mark)}`,
+      ]);
+    // Each mark once, in the order it first appears.
+    expect(quoteProblems("ru", "«Тит» и «Павел»")).toEqual([
+      'quotation mark "«"',
+      'quotation mark "»"',
+    ]);
+  });
+
+  it("(f) passes an apostrophe inside a word", () => {
+    expect(quoteProblems("fr", "L’héritage d’Israël aujourd'hui")).toEqual([]);
+    expect(quoteProblems("sw", "Ng'ombe wa Abrahamu")).toEqual([]);
+    // After a combining mark, still inside the word.
+    expect(quoteProblems("hi", "अनुग्रहे’स")).toEqual([]);
+    // At a word's edge it is a quotation mark.
+    expect(quoteProblems("fr", "l’ Église")).toEqual(['quotation mark "’"']);
+  });
+
+  it("(e)(f) let a mark through only by a per-language entry", () => {
+    const allow = { "।": "a test entry", "«": "a test entry" };
+    expect(finalStopProblems("hi", "तीतुस।", allow)).toEqual([]);
+    expect(finalStopProblems("hi", "तीतुस.", allow)).toEqual([
+      'final full stop "."',
+    ]);
+    expect(quoteProblems("fr", "«Tite»", allow)).toEqual([
+      'quotation mark "»"',
+    ]);
+    // The default is the language's own entry in ALLOW_PUNCTUATION: none.
+    expect(finalStopProblems("hi", "तीतुस।")).toEqual(['final full stop "।"']);
   });
 });

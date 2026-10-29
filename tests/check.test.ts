@@ -28,6 +28,7 @@ import {
   type Glossary,
   type Translation,
 } from "../scripts/lib/translate.ts";
+import { titleProblems } from "../scripts/lib/gates.ts";
 
 const root = new URL("../", import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, root), "utf8");
@@ -160,6 +161,39 @@ describe("cross-model check: one language", () => {
     promptFile,
     model: MODELS.claude,
   };
+
+  it("keeps a title with a final full stop or quotation marks from ai-checked (#41)", async () => {
+    const gated = (key: string, text: string) => {
+      const gates = titleProblems("es-419", en(key), text);
+      expect(gates.length, text).toBeGreaterThan(0);
+      return translation(key, text, { gates });
+    };
+    const file = fileOf("es-419", {
+      [A]: gated(A, "Evitar las divisiones."),
+      [B]: gated(B, "«Saludos finales»"),
+    });
+    const r = await checkLanguage({
+      ...base,
+      file,
+      complete: scripted([
+        {
+          text: JSON.stringify({
+            [A]: { verdict: "agree" },
+            [B]: { verdict: "agree" },
+          }),
+          cost: 0.001,
+        },
+      ]),
+    });
+    expect(r.titles[A]?.gates).toEqual(['final full stop "."']);
+    expect(r.titles[B]?.gates).toEqual([
+      'quotation mark "«"',
+      'quotation mark "»"',
+    ]);
+    // The checker agreed, but a gate failed: a person sees both first.
+    expect(r.titles[A]?.status).toBe("unreviewed");
+    expect(r.titles[B]?.status).toBe("unreviewed");
+  });
 
   it("marks agreement ai-checked, and a disagreement or a gate failure unreviewed", async () => {
     const C = "TIT.1.4-4";

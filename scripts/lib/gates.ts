@@ -19,6 +19,14 @@
 // - (c) Length: the ratio is re-tuned for titles (LENGTH_RATIO_MAX below).
 // - (d) Leak: titles have no placeholders, so any brace is a leak; markup,
 //   line breaks and surrounding whitespace are leaks too.
+//
+// Added here, not in tc-mobile (decided by the maintainer, #41):
+//
+// - (e) No final full stop, in any script's form of it.
+// - (f) No quotation marks, in any language's form of them.
+//
+// A heading convention that needs one of those marks is let through by a
+// reasoned per-language entry in ALLOW_PUNCTUATION, never by editing the sets.
 
 /** The script each v0.1 language's letters must come from. */
 export const SCRIPT_BY_TAG: Readonly<Record<string, string>> = {
@@ -223,6 +231,101 @@ export function leakProblems(value: string): string[] {
   return problems;
 }
 
+/**
+ * (e) Marks that may not end a title, each with the script or convention it
+ * stands for. A title is a heading, not a sentence: no v0.1 language ends a
+ * heading with a full stop, and the English titles carry none.
+ *
+ * Question and exclamation marks are not here: a title may be a question.
+ * The comma-like marks (، ， 、) are not here either: they cannot end a
+ * heading, and a title that ends in one is cut short, which a reader sees.
+ */
+export const FULL_STOPS: Reasons = {
+  ".": "full stop of the Latin and Cyrillic languages (es-419, fr, id, pt-BR, ru, sw), also used in modern Arabic",
+  "…": "ellipsis as one character; its three-dot form ends in '.' and is caught by that entry",
+  "।": "danda, the Devanagari full stop (hi)",
+  "॥": "double danda, the Devanagari end of verse or paragraph (hi)",
+  "۔": "Arabic full stop (U+06D4), which a model writing Arabic script may use for '.'",
+  "。": "ideographic full stop, the Chinese full stop (zh-Hans)",
+  "．": "fullwidth full stop, an alternative in Chinese text (zh-Hans)",
+  "｡": "halfwidth ideographic full stop (zh-Hans)",
+};
+
+/**
+ * (f) Quotation marks, each with the languages that use it. A title names
+ * what a passage is about; it does not quote it, and a quotation mark in a
+ * title is a model echoing its input or quoting the verse text.
+ *
+ * The ASCII apostrophe and the right single quotation mark (' and ’) are
+ * also apostrophes (French l’, d’; Swahili ng'ombe), so they count only when
+ * they are not between two letters: ‘Amen’ is quoted, l’Église is not.
+ */
+export const QUOTATION_MARKS: Reasons = {
+  '"': "ASCII double quote, used for any language by a model",
+  "“": "left double quotation mark (es-419, pt-BR, id, sw, hi, ar, zh-Hans; closing in ru)",
+  "”": "right double quotation mark (same languages)",
+  "„": "low double quotation mark (opening in ru)",
+  "‟": "reversed double quotation mark",
+  "«": "left guillemet (fr, ru, es-419, pt-BR, ar)",
+  "»": "right guillemet (same languages)",
+  "‹": "single left guillemet (fr)",
+  "›": "single right guillemet (fr)",
+  "‘": "left single quotation mark (inner quotes; es-419, pt-BR, id, sw, hi, zh-Hans)",
+  "’": "right single quotation mark, when not an apostrophe (see above)",
+  "'": "ASCII apostrophe used as a quote, when not between letters",
+  "‚": "low single quotation mark (inner quotes in ru)",
+  "‛": "reversed single quotation mark",
+  "「": "left corner bracket, a CJK quotation mark (zh-Hans)",
+  "」": "right corner bracket (zh-Hans)",
+  "『": "left white corner bracket, CJK inner quotation mark (zh-Hans)",
+  "』": "right white corner bracket (zh-Hans)",
+  "〝": "reversed double prime quotation mark, CJK (zh-Hans)",
+  "〞": "double prime quotation mark, CJK (zh-Hans)",
+  "〟": "low double prime quotation mark, CJK (zh-Hans)",
+  "＂": "fullwidth quotation mark (zh-Hans)",
+  "＇": "fullwidth apostrophe used as a quote (zh-Hans)",
+};
+
+/**
+ * Marks from FULL_STOPS or QUOTATION_MARKS a language may carry anyway, by
+ * language tag and then mark, each with its reason (the heading convention
+ * that needs it), so one entry lets one mark through in one language only.
+ * Empty: no v0.1 language's heading convention has needed one yet.
+ */
+export const ALLOW_PUNCTUATION: Readonly<Record<string, Reasons>> = {};
+
+// Closing brackets and quotes after a full stop ("… fin.)") do not hide it.
+const TRAILING_CLOSERS = /[\p{Pe}\p{Pf}"'＂＇」』〞〟]+$/u;
+
+/** (e) The title does not end with a full stop, in any script. */
+export function finalStopProblems(
+  tag: string,
+  value: string,
+  allow: Reasons = ALLOW_PUNCTUATION[tag] ?? {}
+): string[] {
+  const last = [...value.trimEnd().replace(TRAILING_CLOSERS, "")].at(-1);
+  if (last === undefined || !Object.hasOwn(FULL_STOPS, last)) return [];
+  if (Object.hasOwn(allow, last)) return [];
+  return [`final full stop ${JSON.stringify(last)}`];
+}
+
+// ' or ’ with a letter (or a mark on one) before it and a letter after it is
+// an apostrophe inside a word, not a quotation mark.
+const APOSTROPHE = /(?<=[\p{L}\p{M}])['’](?=\p{L})/gu;
+
+/** (f) The title carries no quotation marks; each mark is reported once. */
+export function quoteProblems(
+  tag: string,
+  value: string,
+  allow: Reasons = ALLOW_PUNCTUATION[tag] ?? {}
+): string[] {
+  const seen = new Set<string>();
+  for (const ch of value.replace(APOSTROPHE, ""))
+    if (Object.hasOwn(QUOTATION_MARKS, ch) && !Object.hasOwn(allow, ch))
+      seen.add(ch);
+  return [...seen].map((m) => `quotation mark ${JSON.stringify(m)}`);
+}
+
 /** Every gate over one English title and its translation. */
 export function titleProblems(
   tag: string,
@@ -234,5 +337,7 @@ export function titleProblems(
     ...scriptProblems(tag, value),
     ...lengthProblems(en, value),
     ...leakProblems(value),
+    ...finalStopProblems(tag, value),
+    ...quoteProblems(tag, value),
   ];
 }
