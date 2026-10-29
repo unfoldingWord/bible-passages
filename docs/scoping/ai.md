@@ -41,6 +41,8 @@ pt-BR, ru, es, sw): 151,074 strings. 26 languages later.
 Reversibility: forward = low; backward = medium. A change of model after
 review has started means re-reviewing what changed.
 
+The runner and its gates: [translation-runner.md](translation-runner.md).
+
 ## Watch items
 
 - **Review hours dominate.** 167,860 strings at v0.1. Even at an assumed 10
