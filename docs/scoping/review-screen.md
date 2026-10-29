@@ -130,10 +130,12 @@ list and state inventory (the parent session publishes after merge).
 
 ## Data flow
 
-1. `npm run build` ends with `node scripts/review/queue.ts`, which writes
+1. `npm run build` runs `node scripts/review/queue.ts`, which writes
    `site/review.json`: every title in `data/drafts/<lang>/<BOOK>.json` as it
    stands now, with its passage. CI fails if a rebuild changes it.
-   `scripts/site/build.mjs` inlines it into the page.
+   `scripts/site/build.mjs`, also run by `npm run build`, inlines it into the
+   page; CI checks both are current. The site is republished after a review
+   PR merges, so reviewers see the reviewed wording.
 2. A reviewer saves. The page writes, under the reviewer's own id:
    - `review/<id>`: `{ "v": 1, "handle": "reader-7", "at": "…" }`
    - `review/<id>/items/<lang>~<BOOK>~<key>`, one per title, replaced if they

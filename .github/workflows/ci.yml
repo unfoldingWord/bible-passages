@@ -73,12 +73,13 @@ jobs:
 
       - run: npm run verify
 
-      # data/, dist/ and the site's review queue are generated: rebuilding
+      # data/, dist/, the site's review queue and the page built from it
+      # are generated: rebuilding
       # from the pinned sources must reproduce the committed files exactly,
       # none changed, missing or extra. git diff alone misses untracked
       # files, so test the status.
       - run: npm run build
       - name: Generated files match a fresh build
         run: |
-          git status --porcelain --untracked-files=all -- data dist site/review.json
-          test -z "$(git status --porcelain --untracked-files=all -- data dist site/review.json)"
+          git status --porcelain --untracked-files=all -- data dist site/review.json site/index.html
+          test -z "$(git status --porcelain --untracked-files=all -- data dist site/review.json site/index.html)"

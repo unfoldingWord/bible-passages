@@ -125,6 +125,7 @@ export function wordingProblems(
 ): string[] {
   const p = leakProblems(value);
   if (value.length === 0) p.push("empty");
+  if (BIDI.test(value)) p.push("bidi control character");
   if (lang === "en") {
     if (value.length > MAX_EN) p.push(`over ${MAX_EN} characters`);
     if (/[.“”"]$|^["“]/.test(value)) p.push("ends in a full stop or a quote");
@@ -153,6 +154,18 @@ export type Batch = {
   problems: string[];
 };
 
+/** Bidirectional embeddings, overrides and isolates: they reorder a diff. */
+const BIDI = /[\u202A-\u202E\u2066-\u2069]/u;
+/**
+ * A reason as kept in data/drafts/: on one line, without control characters
+ * or bidi controls. Joiners (U+200C, U+200D), which some scripts need, stay.
+ */
+const plainWhy = (why: string) =>
+  why
+    .replace(/[\r\n\t]+/g, " ")
+    .replace(/[\p{Cc}\u202A-\u202E\u2066-\u2069]/gu, "")
+    .trim();
+
 const STATUS = ["unreviewed", "ai-checked", "human-reviewed", "approved"];
 
 /**
@@ -176,7 +189,7 @@ function reviewFor(r: ReviewRecord, draft: Draft) {
     // The draft keeps its own wording in `text`; the review carries one
     // only when the person's title differs from it.
     ...(after !== draft.text ? { text: after } : {}),
-    ...(r.why !== undefined ? { why: r.why } : {}),
+    ...(r.why !== undefined ? { why: plainWhy(r.why) } : {}),
     saved: r.at,
   };
   return { after, review };

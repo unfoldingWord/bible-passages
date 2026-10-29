@@ -291,6 +291,17 @@ describe("applyReviews", () => {
     expect(next.applied).toHaveLength(1);
   });
 
+  it("keeps reasons on one line without bidi controls; refuses them in wording", () => {
+    const why = "first line\nsecond \u202Eline\u0007 with \u200Djoiner";
+    const r = apply(files(), [edit("Paul greets his son", { why })]);
+    expect(r.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(
+      "first line second line with \u200Djoiner"
+    );
+    expect(
+      apply(files(), [edit("Paul greets his \u202Eson")]).problems[0]
+    ).toMatch(/bidi control character/);
+  });
+
   it("refuses wording with surrounding whitespace", () => {
     expect(apply(files(), [edit("Paul greets his son. ")]).problems[0]).toMatch(
       /surrounding whitespace/
