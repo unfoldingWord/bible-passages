@@ -157,8 +157,17 @@ describe("checkKeys", () => {
       { key: "TIT.P.1.1-4", successor: "TIT.P.1.4-9" },
       ...movedRecord.slice(2),
     ];
+    // The log is append-only, so the first row that differs is reported.
     expect(checkKeys(previous, release(moved, edited))).toEqual([
       "TIT.P.1.1-4: its retirement record (successor TIT.P.1.1-3) was removed or changed",
+    ]);
+    // Removing a row alone is caught too.
+    expect(
+      checkKeys(
+        previous,
+        release(moved, [...movedRecord.slice(0, 1), ...movedRecord.slice(2)])
+      )
+    ).toEqual([
       "TIT.P.1.5-9: its retirement record (successor TIT.P.1.4-9) was removed or changed",
     ]);
   });
@@ -189,14 +198,29 @@ describe("checkKeys", () => {
     ]);
   });
 
-  it("fails on a key retired twice", () => {
-    const record = [
+  it("follows the latest row for a key retired, revived and retired again", () => {
+    // 1-4 -> 1-3, back to 1-4, then 1-4 -> 1-2: the log has two rows for
+    // TIT.1.1-4 and the latest one is in force.
+    const now = book(["1-9", "1-2", "3-9"]);
+    const log = [
       { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
-      { key: "TIT.1.1-4", successor: "TIT.1.1-3" },
+      { key: "TIT.1.1-3", successor: "TIT.1.1-4" },
+      { key: "TIT.1.1-4", successor: "TIT.1.1-2" },
     ];
-    expect(checkKeys(null, release(moved, record))).toEqual([
-      "TIT.1.1-4 is retired twice",
+    expect(checkKeys(null, release(now, log))).toEqual([]);
+    // The first row alone would point at a key that is gone.
+    expect(checkKeys(null, release(now, log.slice(0, 1)))).toEqual([
+      "TIT.1.1-4: successor TIT.1.1-3 is not a current key",
     ]);
+  });
+
+  it("fails when released rows are reordered", () => {
+    const previous = release(moved, movedRecord);
+    const [a, b, ...rest] = movedRecord;
+    if (!a || !b) throw new Error("fixture");
+    expect(
+      checkKeys(previous, release(moved, [b, a, ...rest])).length
+    ).toBeGreaterThan(0);
   });
 });
 

@@ -50,9 +50,10 @@ export function checkKeys(
   current: Release
 ): string[] {
   const problems: string[] = [];
+  // The record is an append-only log; the latest row for a key is in force
+  // (a revived key retired again gets a new row; decisions/0001).
   const retired = new Map<string, string>();
   for (const { key, successor } of current.retired) {
-    if (retired.has(key)) problems.push(`${key} is retired twice`);
     retired.set(key, successor);
   }
 
@@ -86,14 +87,17 @@ export function checkKeys(
 
   if (!previous) return problems;
 
-  // The record is append-only, so every retirement in `previous` must still
-  // be in the current record with the same successor.
-  for (const { key, successor } of previous.retired) {
-    if (retired.get(key) !== successor) {
-      problems.push(
-        `${key}: its retirement record (successor ${successor}) was removed or changed`
-      );
-    }
+  // Append-only: the released record must be a prefix of the current one.
+  // Report the first row that differs; every later row shifts with it.
+  const changed = previous.retired.findIndex(({ key, successor }, i) => {
+    const now = current.retired[i];
+    return now?.key !== key || now.successor !== successor;
+  });
+  const first = previous.retired[changed];
+  if (first) {
+    problems.push(
+      `${first.key}: its retirement record (successor ${first.successor}) was removed or changed`
+    );
   }
   for (const [key, was] of previous.spans) {
     const now = current.spans.get(key);
