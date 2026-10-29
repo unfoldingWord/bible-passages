@@ -63,9 +63,10 @@ human review, of checker disagreements, as in rule 1).
    not "about 10%": 0.10 is a tie, anything above it is not. Two equal
    counts differ by nothing, so two counts of 0 (where the formula reads
    0 / 0) are a tie too.
-2. **Cost per title.** Cost per title is the whole pipeline: the cost of a
-   model's translations plus the cost of the other model checking them,
-   divided by the number of titles the model delivered.
+2. **Cost per title.** Cost per title covers the whole pipeline, which
+   here is two charges only: the cost of a model's translations plus the
+   cost of the other model checking them, divided by the number of titles
+   the model delivered.
 3. **Undelivered titles.** A title a model fails to deliver counts as one
    reviewer change against that model.
 
