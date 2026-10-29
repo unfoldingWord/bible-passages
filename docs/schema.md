@@ -31,6 +31,7 @@ data/
   titles/<lang>/<BOOK>.json  titles per key, with status and source
   versification/ufw.json     last verse of each chapter, from ufw.vrs
   glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
+  glossary-drafts/<lang>/<BOOK>.json  committed AI key-term records (zh-Hans)
   retired-keys.json          append-only log of retired keys, each with its successor
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
@@ -171,6 +172,39 @@ the `sources.json` id it was read from. Linked terms with no headword in the
 language are listed under `gaps`. Shape, sources and gaps:
 [scoping/glossaries.md](scoping/glossaries.md). Not shipped in `dist/`;
 translation reads it.
+
+For zh-Hans, which has no Translation Words, the file is built from
+`data/glossary-drafts/zh-Hans/<BOOK>.json` (below) instead: each term also
+carries `source` (`ai:<model>`), `status` and the check, the file names both
+models under `models`, and `review` lists the terms that are `unreviewed`
+(the checker disagreed or a gate failed). Title translation uses a term with
+a `status` only once it is `human-reviewed` or `approved`.
+
+## `data/glossary-drafts/<lang>/<BOOK>.json`
+
+A committed input, not generated: a recorded AI output, the key terms one
+model drafted for a language without Translation Words and a second model
+checked (decision 14, [decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+`scripts/translate/key-terms.ts` writes it under `.cache/`; it is copied here
+unchanged. The build never calls a model: it reads this file and the pinned
+TWL and English tW, refuses a record that no longer matches them, and writes
+`data/glossaries/<lang>/<BOOK>.json`. A new draft is a new run and a new
+commit, not a rebuild.
+
+- `prompt`: the instructions file and its SHA-256; a test holds it equal to
+  the committed `prompts/key-terms.md`.
+- `reference`: the `sources.json` id of the term list both models were given
+  (FIA Key Terms, `fia-kt-zhs`).
+- `calls`: the draft and the check call, each with its OpenRouter generation
+  id, model, tokens and cost in US dollars.
+- `terms`, per linked article: `en` (the English headword it was drafted
+  from), `headword`, `source`, `status`, and where they apply `reference`
+  (the reference term it follows), `note` (for the reader), `gates` and
+  `check` (`by`, `verdict`, and for a disagreement `why` and `suggestion`).
+  A term is `ai-checked` only when the checker agreed and every gate passed.
+
+A reader's review is recorded here by a later change; until then nothing is
+above `ai-checked`.
 
 ## `dist/tc-mobile/`
 
@@ -314,4 +348,6 @@ every test run until they exist.
     ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 14. **Chinese key terms**: decided: AI-drafted, checked by a second model,
     reviewed by a Chinese reader
-    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)). Titus
+    drafted and checked (`data/glossary-drafts/zh-Hans/TIT.json`); the
+    reader is still to be named on #31.

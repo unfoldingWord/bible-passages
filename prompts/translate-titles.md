@@ -11,7 +11,9 @@ Each item in the user message carries the key, whether it is a section
 heading (from the BSB) or a segment title, its verses, the English text, and
 the key terms the verses link to with their headword in the language's
 Translation Words (`data/glossaries/<lang>/<BOOK>.json`). zh-Hans has no
-glossary yet (docs/decisions/0003, decision 14), so its items carry none.
+Translation Words; its AI-drafted terms (docs/decisions/0003, decision 14)
+are given only once a person has reviewed them, so until then its items carry
+none.
 
 The style follows the English rules in `segment-titles.md`.
 

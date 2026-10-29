@@ -14,6 +14,7 @@ import {
   systemPrompt,
   termsFor,
   translateLanguage,
+  usableTerm,
   userMessage,
   type Complete,
   type EnglishTitles,
@@ -204,6 +205,28 @@ describe("translation runner", () => {
       terms: { "kt/x": { en: "x", headword: "x", refs: ["1:4-5"] } },
     };
     expect(() => termsFor("TIT.1.4-4", bad)).toThrow("not c:v: 1:4-5");
+  });
+
+  it("leaves out AI-drafted terms no person has reviewed", () => {
+    const term = (status?: string) => ({
+      en: "grace",
+      headword: "恩典",
+      refs: ["1:4"],
+      ...(status ? { status } : {}),
+    });
+    const g = (status?: string): Glossary => ({
+      language: "zh-Hans",
+      terms: { "kt/grace": term(status) },
+    });
+    expect(termsFor("TIT.1.4-4", g("unreviewed"))).toEqual([]);
+    expect(termsFor("TIT.1.4-4", g("ai-checked"))).toEqual([]);
+    for (const status of [undefined, "human-reviewed", "approved"])
+      expect(termsFor("TIT.1.4-4", g(status)), status).toEqual([
+        { en: "grace", headword: "恩典" },
+      ]);
+    // Today's zh-Hans glossary has no reviewed term, so titles get none.
+    const zh = glossary("zh-Hans");
+    expect(Object.values(zh.terms).some(usableTerm)).toBe(false);
   });
 
   it("builds a user message with key, kind, verses and English", () => {
@@ -543,7 +566,7 @@ describe("runner command line", () => {
     expect(r.stderr).toContain("OPENROUTER_API_KEY is not set");
   });
 
-  it("fails before any call for zh-Hans without --allow-no-glossary", () => {
+  it("fails before any call for zh-Hans, whose AI terms wait for a reader, without --allow-no-glossary", () => {
     const r = spawnSync(
       process.execPath,
       [script, "--book", "TIT", "--model", "m", "--lang", "zh-Hans"],
@@ -553,7 +576,9 @@ describe("runner command line", () => {
       }
     );
     expect(r.status).toBe(1);
-    expect(r.stderr).toContain("no glossary for zh-Hans TIT");
+    expect(r.stderr).toContain(
+      "no glossary with reviewed terms for zh-Hans TIT"
+    );
     expect(r.stderr + r.stdout).not.toContain(KEY);
   });
 
