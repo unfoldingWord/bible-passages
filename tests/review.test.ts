@@ -96,6 +96,7 @@ describe("applyReviews", () => {
         by: "reviewer:reader-7",
         at: "2026-10-29",
         status: "human-reviewed",
+        saved: "2026-10-29T10:00:00.000Z",
       },
     });
     // The input is not modified.
@@ -112,6 +113,7 @@ describe("applyReviews", () => {
       status: "human-reviewed",
       text: "Paul greets his son",
       why: "the passage says more",
+      saved: "2026-10-29T10:00:00.000Z",
     });
     expect(current(t)).toBe("Paul greets his son");
   });
@@ -154,6 +156,7 @@ describe("applyReviews", () => {
       at: "2026-10-29",
       status: "human-reviewed",
       text: "Paul greets his son",
+      saved: later,
     });
     const stale = applyReviews(files(), [
       edit("Paul greets his son"),
@@ -208,6 +211,36 @@ describe("applyReviews", () => {
     expect(next.skipped).toEqual(history);
     expect(next.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.by).toBe(
       "reviewer:third"
+    );
+  });
+
+  it("passes over records whose documents were replaced since they were applied", () => {
+    // A edits X to Y, B edits Y to Z: both applied. B then approves Z,
+    // which replaces B's earlier document, so the next export holds A's
+    // edit and B's approval, and not the edit that links them.
+    const a = edit("Paul greets his son");
+    const bEdit = edit("Paul greets his son Titus", {
+      handle: "second",
+      seen: "Paul greets his son",
+      at: "2026-10-29T11:00:00.000Z",
+    });
+    const first = applyReviews(files(), [a, bEdit]);
+    expect(first.problems).toEqual([]);
+    const merged = new Map([...files(), ...first.changed]);
+    const bApprove = rec({
+      handle: "second",
+      seen: "Paul greets his son Titus",
+      at: "2026-10-30T08:00:00.000Z",
+    });
+    const next = applyReviews(merged, [a, bApprove]);
+    expect(next.problems).toEqual([]);
+    expect(next.skipped).toEqual([a]);
+    expect(next.applied.map((x) => x.record)).toEqual([bApprove]);
+    // A record never applied and saved after the stored review is still
+    // checked: one made against the old wording is stale.
+    const late = rec({ handle: "late", at: "2026-10-31T08:00:00.000Z" });
+    expect(applyReviews(merged, [a, late]).problems[0]).toMatch(
+      /^late .*stale/
     );
   });
 

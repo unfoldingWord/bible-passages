@@ -10,6 +10,7 @@ type Draft = Title & {
     status: string;
     text?: string;
     why?: string;
+    saved?: string;
   };
 };
 const read = (path: string) =>
@@ -78,6 +79,8 @@ describe("English Titus segment drafts", () => {
         expect(d.review.text).toBe(d.review.text.trim());
       }
       // A reviewer's reason, kept with the review (scripts/review/apply.ts).
+      if (d.review.saved !== undefined)
+        expect(d.review.saved).toMatch(/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/);
       if (d.review.why !== undefined) {
         expect(d.review.why.length).toBeGreaterThan(0);
         expect(d.review.why).toBe(d.review.why.trim());

@@ -86,6 +86,6 @@ console.log(
   (dry ? "Dry run; nothing written.\n\n" : "") +
     summary(applied) +
     (skipped.length
-      ? `\n\n${skipped.length} already applied by an earlier batch, passed over.`
+      ? `\n\n${skipped.length} saved no later than a review already applied (applied or overtaken by an earlier batch), passed over.`
       : "")
 );

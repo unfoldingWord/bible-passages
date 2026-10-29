@@ -30,6 +30,8 @@ export type Review = {
   status: string;
   text?: string;
   why?: string;
+  /** When the applied record was saved (its `at`, in full). */
+  saved?: string;
 };
 export type Draft = {
   text: string;
@@ -144,7 +146,7 @@ export type Applied = {
 export type Batch = {
   changed: Map<string, DraftFile>;
   applied: Applied[];
-  /** Records an earlier batch already applied. */
+  /** Records saved no later than the review an earlier batch applied. */
   skipped: ReviewRecord[];
   problems: string[];
 };
@@ -172,38 +174,9 @@ function reviewFor(r: ReviewRecord, draft: Draft, prior: Review | undefined) {
     // only when the person's title differs from it.
     ...(after !== draft.text ? { text: after } : {}),
     ...(r.why !== undefined ? { why: r.why } : {}),
+    saved: r.at,
   };
   return { after, review };
-}
-
-const sameReview = (a: Review | undefined, b: Review) =>
-  a !== undefined &&
-  a.by === b.by &&
-  a.at === b.at &&
-  a.status === b.status &&
-  a.text === b.text &&
-  a.why === b.why;
-
-/**
- * An export holds every review ever saved, so a batch meets records an
- * earlier batch applied. For one title's records, oldest first: the longest
- * run from the first that chains (each saw what the one before it left) and
- * ends in exactly the review stored now was applied before. Those are
- * passed over; the rest are applied.
- */
-function appliedBefore(draft: Draft, chain: ReviewRecord[]): number {
-  let done = 0;
-  let prior: Review | undefined;
-  let text: string | undefined;
-  for (let i = 0; i < chain.length; i++) {
-    const r = chain[i]!;
-    if (text !== undefined && r.seen !== text) break;
-    const { after, review } = reviewFor(r, draft, prior);
-    if (sameReview(draft.review, review)) done = i + 1;
-    prior = review;
-    text = after;
-  }
-  return done;
 }
 
 /**
@@ -240,20 +213,19 @@ export function applyReviews(
       a.book.localeCompare(b.book) ||
       a.key.localeCompare(b.key)
   );
-  // Each title's records, oldest first, against the files as given.
-  const chains = new Map<string, ReviewRecord[]>();
-  for (const r of ordered) {
-    const t = `${r.lang}/${r.book}/${r.key}`;
-    chains.set(t, [...(chains.get(t) ?? []), r]);
-  }
-  const passOver = new Set<ReviewRecord>();
-  for (const chain of chains.values()) {
-    const r = chain[0]!;
-    const draft = files.get(`${r.lang}/${r.book}`)?.titles;
-    const d = draft && Object.hasOwn(draft, r.key) ? draft[r.key] : undefined;
-    if (d)
-      for (const x of chain.slice(0, appliedBefore(d, chain))) passOver.add(x);
-  }
+  // An export holds every review ever saved, and the page replaces a
+  // reviewer's document when they review a title again, so history cannot
+  // be rebuilt from it. Instead each applied review keeps the time its
+  // record was saved: a record saved no later than that was applied before,
+  // or was overtaken by one that was. Measured against the files as given.
+  const appliedUpTo = (r: ReviewRecord): number => {
+    const titles = files.get(`${r.lang}/${r.book}`)?.titles;
+    const saved =
+      titles && Object.hasOwn(titles, r.key)
+        ? titles[r.key]?.review?.saved
+        : undefined;
+    return saved === undefined ? -Infinity : Date.parse(saved);
+  };
 
   const changed = new Map<string, DraftFile>();
   const applied: Applied[] = [];
@@ -273,7 +245,7 @@ export function applyReviews(
       problems.push(`${where}: unknown key`);
       continue;
     }
-    if (passOver.has(r)) {
+    if (Date.parse(r.at) <= appliedUpTo(r)) {
       skipped.push(r);
       continue;
     }

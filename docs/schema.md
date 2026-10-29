@@ -166,7 +166,8 @@ gets `text`, `status` and `source`.
 
 A person's review is `review`: `by` (`reviewer:<handle>`), `at` (a date),
 `status`, and `text` only when their wording differs from the draft's, with
-`why` when they gave a reason. The build takes the review's status, and its
+`why` when they gave a reason and `saved`, the time the applied record was
+saved. The build takes the review's status, and its
 wording with the reviewer as `source`. Reviews come from the project site's
 Review page through `scripts/review/apply.ts`
 ([scoping/review-screen.md](scoping/review-screen.md)).

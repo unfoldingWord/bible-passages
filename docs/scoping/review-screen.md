@@ -163,13 +163,18 @@ list and state inventory (the parent session publishes after merge).
    `{ "schema": "bp.review-export", "v": 1, "records": [ … ] }`. The profile
    documents (`review/<id>`) are not records; one copied in is refused by
    name. The ids in the paths are account identifiers and stay out of the
-   repo and the export. Every export holds every review ever saved: records
-   an earlier batch applied are recognised and passed over (for each title,
-   the run of its records that ends in the review stored now).
+   repo and the export. Every export holds every reviewer's latest review of
+   each title, and the page replaces a reviewer's document when they review
+   a title again, so the history cannot be rebuilt from it. Each applied
+   review therefore keeps `saved`, its record's time: a record saved no
+   later than that was applied before, or overtaken by one that was, and is
+   passed over. Later records are checked as usual.
 4. On a new branch: `node scripts/review/apply.ts <export.json>`, then
    `npm run build` and `npm run verify`. The script writes
-   `review: { by: "reviewer:<handle>", at: "<date>", status: "human-reviewed", text?, why? }`
-   into each title, and prints a table for the PR body. One PR per batch.
+   `review: { by: "reviewer:<handle>", at: "<date>", status, text?, why?, saved }`
+   into each title (`status` is `human-reviewed`, or stays `approved` when an
+   approved title is approved again; `saved` is the record's own time), and
+   prints a table for the PR body. One PR per batch.
 5. After review and merge, `data/titles/` and `dist/` carry the status
    `human-reviewed` and, for a change, the reviewer as `source`.
 
@@ -206,6 +211,10 @@ another person's.
 - **Approving someone else's wording** credits the approver as `source` (the
   `review` entry holds one reviewer). Fine for v0.1; revisit if two-person
   review is required.
+- **Clocks**: `at` comes from the reviewer's device. A device clock running
+  behind can save a new review with a time before one already applied; it is
+  passed over, and the batch output counts it. Untested; a durable id per
+  record is the fix if it is seen.
 - **Status**: an approval never lowers a status (an `approved` title stays
   `approved`); an edit is new wording, so it is `human-reviewed`. Nothing
   grants `approved` yet.
