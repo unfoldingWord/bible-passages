@@ -31,6 +31,7 @@ data/
   titles/<lang>/<BOOK>.json  titles per key, with status and source
   versification/ufw.json     last verse of each chapter, from ufw.vrs
   glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
+  retired-keys.json          append-only log of retired keys, each with its successor
   metadata/<BOOK>.json       later: topics, key terms, difficulty
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
@@ -77,6 +78,17 @@ than by memory. The old key is retired by appending a row to
 latest row there is in force; while it is live, all its rows are history only,
 and reviving it appends nothing. A key is never attached to a different span
 ([decisions/0001](decisions/0001-span-keys.md)).
+
+The record is `data/retired-keys.json`, written by hand, never by the build:
+
+```json
+{ "retired": [{ "key": "TIT.1.1-4", "successor": "TIT.1.1-3" }] }
+```
+
+A successor is a current key, or a key retired later whose own successor
+chain ends in one. Entries are only ever added: a release may not remove or
+change one that an earlier release shipped. When a key splits in two, the
+successor is the one its titles carry forward to.
 
 This replaces the order-based IDs in the pilot (`TIT.P02`), where inserting one
 pericope renumbers every later one.
@@ -201,7 +213,24 @@ Every input the build reads, pinned so a build can be repeated:
 A release is a git tag `vX.Y.Z` with the files in `dist/tc-mobile/` attached,
 which is what the tc-mobile contract assumes under "What 'published' means".
 Version numbers follow the contract's (assumed) rules: patch for no key
-changes, minor for keys added, major for keys dropped.
+changes, minor for keys added, major for keys dropped. The workflow does not
+check the bump yet.
+
+`.github/workflows/release.yml` runs on a pushed `v*` tag:
+
+1. The tag must be `vX.Y.Z`, equal `v` + `package.json`'s `version`, and point
+   at a commit on `main`. The committed `dist/` already carries the version,
+   so the bump is a reviewed PR and the tag follows its merge.
+2. `npm run verify`, with the key-stability check run against the release tag
+   before this one. Only a tag that passes step 1's rules (on `main`, naming
+   its commit's `package.json` version) counts as a release there.
+3. `data/` and `dist/` rebuilt from the pinned sources must match the tagged
+   files exactly, as in CI.
+4. `dist/` is regenerated with `source.revision` set to the tag, and its
+   top-level files are attached to a **draft** release, published by hand.
+   Title tables under `dist/tc-mobile/titles/` share their package's file
+   name, so until their asset names are decided a nested file stops the
+   release.
 
 ## Checks
 
@@ -219,7 +248,7 @@ Run on every PR (`npm test`):
 | Every segment inside the pericope it names                                       | built     |
 | `dist/` segment keys are the same as `data/`'s                                   | built     |
 | `data/` and `dist/` match a fresh build from the pinned sources (CI)             | built     |
-| No released key missing, moved or reused                                         | not built |
+| No released key missing, moved or reused (against every `vX.Y.Z` release tag)    | built     |
 | Every key titled in every language marked complete                               | not built |
 | Title length and script                                                          | not built |
 

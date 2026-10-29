@@ -53,6 +53,10 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Full history: the key-stability test compares data/ with every
+          # release tag and refuses a shallow clone.
+          fetch-depth: 0
 
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
@@ -60,6 +64,13 @@ jobs:
           cache: "npm"
 
       - run: npm ci
+
+      # The release tags are the key check's baseline. Fetch them explicitly
+      # rather than rely on actions/checkout's defaults: an empty tag list
+      # reads as "never released" and skips every span comparison.
+      - name: Fetch release tags
+        run: git fetch --tags --force origin
+
       - run: npm run verify
 
       # data/ and dist/ are generated: rebuilding from the pinned sources

@@ -1,5 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { checkHistory, spans, type Retired } from "../scripts/lib/keys.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
 
 // Checks on data/structure/ and data/titles/. See docs/schema.md, "Checks".
@@ -127,7 +129,17 @@ describe("data/structure", () => {
     });
   });
 
-  it.todo("no key released in an earlier tag is missing, moved or reused");
+  // Against every release tag (vX.Y.Z on main, naming its package.json
+  // version); the release workflow sets RELEASE_TAG so a release is not
+  // checked against itself. With no release yet only data/retired-keys.json
+  // is checked. Fixtures for each failure are in tests/keys.test.ts.
+  it("no released key is missing, moved or reused", () => {
+    const { retired } = read("data/retired-keys.json") as { retired: Retired };
+    const current = { spans: spans(structures.map(([, s]) => s)), retired };
+    expect(
+      checkHistory(fileURLToPath(root), current, process.env.RELEASE_TAG)
+    ).toEqual([]);
+  });
   it.todo("every key has a title in every language marked complete");
   it.todo("titles fit the length and script rules for their language");
 });
