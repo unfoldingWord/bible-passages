@@ -15,8 +15,9 @@ export type TwRepo = {
   release: string;
   commit: string;
   /**
-   * For languages not written in Latin script: a headword with no letter of
-   * this script is English left untranslated, and is recorded as a gap.
+   * For languages not written in Latin script: a headword whose letters are
+   * not mostly in this script (see `inScript`) is English left untranslated,
+   * and is recorded as a gap.
    */
   script?: RegExp;
   /**
@@ -128,6 +129,34 @@ export const twId = (language: string, article: string) =>
 export const twUrl = (repo: TwRepo, article: string) =>
   `${HOST}/${repo.repo}/raw/commit/${repo.commit}/bible/${article}.md`;
 
+/**
+ * Whether a sources.json id is a glossary input: `twl-en-<book>` (a
+ * three-character book code) or `tw-<lang>-<article>` (a language tag, then
+ * a tW category and article slug, as `twId` writes them). The pattern is
+ * the shape of the id, not the configured languages, so a pin left behind
+ * by a language that was dropped is still recognised as a glossary input
+ * (and the test that every glossary pin is used catches it).
+ */
+export const isGlossaryInput = (id: string) =>
+  /^twl-en-[a-z0-9]{3}$/.test(id) ||
+  /^tw-[a-z]{2,3}(?:-[a-z0-9]{2,8})*-(?:kt|names|other)-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(
+    id
+  );
+
+/**
+ * Whether a headword is written in a script: more than half of its letters
+ * (Unicode `L`, so vowel signs and other marks are not counted) are in it.
+ * A strict majority is the plainest line that says what most of the word is
+ * written in: a native headword with a short English gloss beside it stays
+ * a term, while English with a stray letter of the script, or half English
+ * and half not, is a gap. A headword with no letters is not in any script.
+ */
+export function inScript(word: string, script: RegExp): boolean {
+  const letters = [...word].filter((c) => /\p{L}/u.test(c));
+  const inside = letters.filter((c) => script.test(c)).length;
+  return inside * 2 > letters.length;
+}
+
 /** A tW article path, as TWL links name it: category and file name. */
 export const ARTICLE = /^(kt|names|other)\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const LINK = /^rc:\/\/\*\/tw\/dict\/bible\/(.+)$/;
@@ -206,6 +235,14 @@ export type Glossary = {
   links: string;
   /** The Door43 repo and release the headwords come from. */
   words: { repo: string; release: string; commit: string };
+  /** The licence every source of this file is under, from sources.json. */
+  licence: string;
+  /**
+   * The sources.json attribution of each source this file's content comes
+   * from, each once: the TWL file, this language's tW, and English tW for
+   * the `en` headwords.
+   */
+  attribution: string[];
   terms: Record<string, Term>;
   gaps: Record<string, Gap>;
 };
@@ -227,18 +264,24 @@ export function linkedArticles(rows: TwlRow[]): Map<string, string[]> {
   );
 }
 
+/** The licence and attribution of a pinned source, as sources.json has them. */
+export type Credit = { licence: string; attribution: string };
+
 /**
  * One language's glossary for one book. `read` returns an article's pinned
  * markdown in that language, or undefined if it is not pinned; `english`
- * returns the English article. Every linked article must be either pinned
- * or listed as absent, never both.
+ * returns the English article; `credit` returns a pinned source's licence
+ * and attribution. Every linked article must be either pinned or listed as
+ * absent, never both. The sources a glossary draws on must share one
+ * licence; a mix would need a decision, so it is refused.
  */
 export async function buildGlossary(
   repo: TwRepo,
   book: string,
   rows: TwlRow[],
   english: (article: string) => Promise<string>,
-  read: (article: string) => Promise<string | undefined>
+  read: (article: string) => Promise<string | undefined>,
+  credit: (id: string) => Credit
 ): Promise<Glossary> {
   const absent = repo.absent[book];
   if (!absent) throw new Error(`${repo.language}: no absent list for ${book}`);
@@ -263,7 +306,7 @@ export async function buildGlossary(
       );
     }
     const word = headword(markdown);
-    if (repo.script && !repo.script.test(word)) {
+    if (repo.script && !inScript(word, repo.script)) {
       gaps[article] = "english-headword";
       continue;
     }
@@ -274,11 +317,25 @@ export async function buildGlossary(
       refs,
     };
   }
+  const used = [
+    twlId(book),
+    ...Object.entries(terms).flatMap(([a, t]) => [t.source, twId("en", a)]),
+  ];
+  const credits = used.map(credit);
+  const licences = [...new Set(credits.map((c) => c.licence))];
+  const [licence] = licences;
+  if (licence === undefined || licences.length !== 1) {
+    throw new Error(
+      `${repo.language} ${book}: sources under ${licences.length} licences (${licences.join(", ")}), not one`
+    );
+  }
   return {
     language: repo.language,
     book,
     links: twlId(book),
     words: { repo: repo.repo, release: repo.release, commit: repo.commit },
+    licence,
+    attribution: [...new Set(credits.map((c) => c.attribution))],
     terms,
     gaps,
   };
