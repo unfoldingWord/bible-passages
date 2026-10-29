@@ -7,7 +7,7 @@ Tracking issue: [unfoldingWord/servant.bible#1](https://github.com/unfoldingWord
 Servant.Bible slug: `uw/bible-passages`, listed as a planned dataset since
 servant.bible PR #31 merged; see [docs/scoping/servant-bible-entry.md](docs/scoping/servant-bible-entry.md).
 
-Project home: https://claude.ai/artifact/RiDFC57H2UCyKHe4ZwhvDT?sk=N9G-t8PMGiKhJQplKo8ivw#home
+Project home: https://claude.ai/artifact/RiDFC57H2UCyKHe4ZwhvDT#home
 
 ## Status
 
