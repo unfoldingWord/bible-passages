@@ -257,3 +257,9 @@ every test run until they exist.
     (measured, [scoping/sizing.md](scoping/sizing.md)), so their pericope and
     segment titles describe the same verses. Title both (16,786 English
     titles) or reuse the pericope title (16,523)?
+13. **Spanish language tag**: every Spanish input is published as `es-419`;
+    the v0.1 list says `es`. Proposed: `es-419` (#20).
+14. **Chinese key terms**: there is no Chinese Translation Words on Door43
+    (checked 2026-10-28). Who carries a zh-Hans key-term list, or the
+    fallback (an AI-drafted list checked by a second model and reviewed by a
+    Chinese reader) if no owner by 2026-11-13?
