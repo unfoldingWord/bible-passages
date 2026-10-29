@@ -142,7 +142,13 @@ letters, digits and `. _ : -`, at most 64 characters).
   marked `ai-checked`.
 - `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
 - `name` is the book's name in this language; it becomes the package
-  `title`.
+  `title`. In English it is BSB's `\h` (`bsb-<book>`, `unreviewed`), except
+  for two books whose BSB name reads wrong ("Psalm", "Song"): Psalms and
+  Song of Songs take ULT's `\toc2` (`ult-psa`, `ult-sng`: unfoldingWord/en_ult
+  v91), as the maintainer decided on #39. Those two are `approved`, because a
+  person chose the exact words; the build stops if the pinned ULT `\toc2` is
+  not that text (`NAME_OVERRIDES` in `scripts/data/build.ts`). A package
+  whose name is not from BSB credits its source in `attribution` too.
 - A key with no title is allowed. A title for a key that is not in the
   structure file is an error.
 - Every book with structure has a table, because its package takes `name`

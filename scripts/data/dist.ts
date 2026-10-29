@@ -19,7 +19,7 @@ const read = (path: string) =>
 const VERSION = (read("package.json") as { version: string }).version;
 const REVISION = process.env.RELEASE_TAG ?? "unreleased";
 
-type Titles = { name: { text: string }; titles: TitleEntries };
+type Titles = { name: { text: string; source: string }; titles: TitleEntries };
 
 // A book or language dropped from the build leaves no stale package or table.
 const out = new URL("dist/tc-mobile/", root);
@@ -30,7 +30,16 @@ for (const book of STRUCTURE_BOOKS) {
   const id = book.toLowerCase();
   const structure = read(`data/structure/${book}.json`) as Structure;
   const titles = read(`data/titles/en/${book}.json`) as Titles;
-  const used = [`bsb-${id}`, "ufw-vrs", `ufw-chunks-${id}`].map(source);
+  // The book name's own source is credited too when it is not BSB (ULT for
+  // Psalms and Song of Songs, #39).
+  const used = [
+    ...new Set([
+      `bsb-${id}`,
+      titles.name.source,
+      "ufw-vrs",
+      `ufw-chunks-${id}`,
+    ]),
+  ].map(source);
 
   const chapters = new Map<number, Structure["segments"]>();
   for (const s of structure.segments) {
