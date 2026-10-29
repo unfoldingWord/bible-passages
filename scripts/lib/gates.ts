@@ -256,6 +256,9 @@ export const FULL_STOPS: Reasons = {
  * what a passage is about; it does not quote it, and a quotation mark in a
  * title is a model echoing its input or quoting the verse text.
  *
+ * Not here: the Chinese title marks 《》 and 〈〉 (书名号). They mark the
+ * name of a work, not a quotation, and a title may name a book.
+ *
  * The ASCII apostrophe and the right single quotation mark (' and ’) are
  * also apostrophes (French l’, d’; Swahili ng'ombe), so they count only when
  * they are not between two letters: ‘Amen’ is quoted, l’Église is not.
@@ -294,8 +297,12 @@ export const QUOTATION_MARKS: Reasons = {
  */
 export const ALLOW_PUNCTUATION: Readonly<Record<string, Reasons>> = {};
 
-// Closing brackets and quotes after a full stop ("… fin.)") do not hide it.
-const TRAILING_CLOSERS = /[\p{Pe}\p{Pf}"'＂＇」』〞〟]+$/u;
+// Closing brackets and quotes after a full stop ("… fin.)"), in any mix with
+// whitespace (French puts a no-break space before »), and format characters
+// (a bidi mark after Arabic text), do not hide it. Marks (\p{M}) are not
+// stripped: a trailing vowel sign belongs to the last letter.
+const TRAILING_NOISE =
+  /(?:[\p{Cf}\s]*[\p{Pe}\p{Pf}"'＂＇」』〞〟])*[\p{Cf}\s]*$/u;
 
 /** (e) The title does not end with a full stop, in any script. */
 export function finalStopProblems(
@@ -303,7 +310,7 @@ export function finalStopProblems(
   value: string,
   allow: Reasons = ALLOW_PUNCTUATION[tag] ?? {}
 ): string[] {
-  const last = [...value.trimEnd().replace(TRAILING_CLOSERS, "")].at(-1);
+  const last = [...value.replace(TRAILING_NOISE, "")].at(-1);
   if (last === undefined || !Object.hasOwn(FULL_STOPS, last)) return [];
   if (Object.hasOwn(allow, last)) return [];
   return [`final full stop ${JSON.stringify(last)}`];

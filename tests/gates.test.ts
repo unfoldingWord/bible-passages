@@ -141,6 +141,20 @@ describe("title translation gates (ported from tc-mobile)", () => {
     }
     // Abbreviation dots and verse references inside a title are not checked.
     expect(finalStopProblems("fr", "Paul salue Tite (TIT 1:1-4)")).toEqual([]);
+    // Whitespace, format characters and closers after the stop do not hide it.
+    for (const v of [
+      "Tite (enfant. )",
+      "Tite. \u202f»",
+      "Tite.\u00a0)",
+      "تيطس.\u200f",
+      "Tite.\u200b",
+      "Tite. ) »",
+    ])
+      expect(finalStopProblems("fr", v), JSON.stringify(v)).toEqual([
+        'final full stop "."',
+      ]);
+    // A trailing vowel sign is part of the last letter, not noise.
+    expect(finalStopProblems("hi", "तीतुस को")).toEqual([]);
     // A question is not a full stop.
     expect(finalStopProblems("fr", "Qui est sage ?")).toEqual([]);
     expect(finalStopProblems("fr", "")).toEqual([]);

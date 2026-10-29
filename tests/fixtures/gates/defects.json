@@ -212,6 +212,27 @@
       "problem": "final full stop \".\""
     },
     {
+      "why": "(e) a full stop, a space, then a closing bracket",
+      "tag": "fr",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "Paul salue Tite (son vrai enfant. )",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a full stop, a narrow no-break space, then a guillemet",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers de la grâce. \u202f»",
+      "problem": "final full stop \".\""
+    },
+    {
+      "why": "(e) a full stop, then a right-to-left mark",
+      "tag": "ar",
+      "en": "Paul greets Titus, his true child in the faith",
+      "value": "بولس يُحيّي تيطس، ابنه الحقيقي في الإيمان.\u200f",
+      "problem": "final full stop \".\""
+    },
+    {
       "why": "(e) an ellipsis",
       "tag": "es-419",
       "en": "Paul greets Titus, his true child in the faith",
