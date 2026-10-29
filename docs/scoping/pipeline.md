@@ -79,6 +79,9 @@ Topics, key terms, figures of speech, literary form, difficulty.
 
 Reversibility: forward = low; backward = low.
 
+Decision 11 (ADR 0003) has since set the v0.1 scope; what is already in
+the data, with counts, is measured in [metadata.md](metadata.md) (#44).
+
 ## 9. Publish
 
 | Step   | Verdict  | Evidence / justification                                                                                                                                                                                                                                                               |
