@@ -1,0 +1,660 @@
+{
+  "language": "fr",
+  "book": "SNG",
+  "links": "twl-en-sng",
+  "words": {
+    "repo": "Xenizo/fr_tw",
+    "release": "v2.0",
+    "commit": "06db7f855a0deb302a47a0e4d1b22312833b2ca1"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (fr), Xenizo/fr_tw v2.0, CC BY-SA 4.0. Original work available at https://git.door43.org/Xenizo/fr_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "nommer, établir, désigner",
+      "source": "tw-fr-kt-appoint",
+      "refs": ["1:6"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "bien-aimé",
+      "source": "tw-fr-kt-beloved",
+      "refs": [
+        "1:13",
+        "1:14",
+        "1:16",
+        "2:3",
+        "2:8",
+        "2:9",
+        "2:10",
+        "2:16",
+        "2:17",
+        "4:16",
+        "5:1",
+        "5:2",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:8",
+        "5:9",
+        "5:10",
+        "5:16",
+        "6:1",
+        "6:2",
+        "6:3",
+        "7:9",
+        "7:10",
+        "7:11",
+        "7:13",
+        "8:5",
+        "8:14"
+      ]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "bénir, béni, bénédiction",
+      "source": "tw-fr-kt-bless",
+      "refs": ["6:9"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "bon, bien, la bonté, le bien",
+      "source": "tw-fr-kt-good",
+      "refs": ["1:2", "1:3", "1:16", "4:10", "4:14", "7:9"]
+    },
+    "kt/hades": {
+      "en": "Hades, Sheol",
+      "headword": "Hadès, Shéol",
+      "source": "tw-fr-kt-hades",
+      "refs": ["8:6"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israël, Israëlistes, La nation d'Israël",
+      "source": "tw-fr-kt-israel",
+      "refs": ["3:7"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amour, aimer",
+      "source": "tw-fr-kt-love",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:7",
+        "2:4",
+        "2:5",
+        "2:7",
+        "3:1",
+        "3:2",
+        "3:3",
+        "3:4",
+        "3:5",
+        "3:10",
+        "4:10",
+        "5:8",
+        "7:6",
+        "7:12",
+        "8:4",
+        "8:6",
+        "8:7"
+      ]
+    },
+    "kt/myrrh": {
+      "en": "myrrh",
+      "headword": "myrrhe",
+      "source": "tw-fr-kt-myrrh",
+      "refs": ["1:13", "3:6", "4:6", "4:14", "5:1", "5:5", "5:13"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "purifier, pur, purification",
+      "source": "tw-fr-kt-purify",
+      "refs": ["6:9", "6:10"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "âme",
+      "source": "tw-fr-kt-soul",
+      "refs": ["1:7", "3:1", "3:2", "3:3", "3:4", "5:6", "6:12"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yahvé, l’Éternel, SEIGNEUR, Seigneur",
+      "source": "tw-fr-kt-yahweh",
+      "refs": ["8:6"]
+    },
+    "kt/zealous": {
+      "en": "zeal, zealous",
+      "headword": "zèle, zélé, ardeur, ardent",
+      "source": "tw-fr-kt-zealous",
+      "refs": ["8:6"]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "Sion, la montagne de Sion, mont Sion",
+      "source": "tw-fr-kt-zion",
+      "refs": ["3:11"]
+    },
+    "names/carmel": {
+      "en": "Carmel, Mount Carmel",
+      "headword": "Carmel ,Mont Carmel",
+      "source": "tw-fr-names-carmel",
+      "refs": ["7:5"]
+    },
+    "names/damascus": {
+      "en": "Damascus",
+      "headword": "Damas",
+      "source": "tw-fr-names-damascus",
+      "refs": ["7:4"]
+    },
+    "names/david": {
+      "en": "David",
+      "headword": "David",
+      "source": "tw-fr-names-david",
+      "refs": ["4:4"]
+    },
+    "names/engedi": {
+      "en": "En Gedi",
+      "headword": "En Gedi",
+      "source": "tw-fr-names-engedi",
+      "refs": ["1:14"]
+    },
+    "names/gilead": {
+      "en": "Gilead, Gileadite",
+      "headword": "Galaad",
+      "source": "tw-fr-names-gilead",
+      "refs": ["4:1", "6:5"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Jérusalem",
+      "source": "tw-fr-names-jerusalem",
+      "refs": ["1:5", "2:7", "3:5", "3:10", "5:8", "5:16", "6:4", "8:4"]
+    },
+    "names/kedar": {
+      "en": "Kedar",
+      "headword": "Kedar",
+      "source": "tw-fr-names-kedar",
+      "refs": ["1:5"]
+    },
+    "names/lebanon": {
+      "en": "Lebanon",
+      "headword": "Liban",
+      "source": "tw-fr-names-lebanon",
+      "refs": ["3:9", "4:8", "4:11", "4:15", "5:15", "7:4"]
+    },
+    "names/pharaoh": {
+      "en": "Pharaoh, king of Egypt",
+      "headword": "Pharaon, roi d’Égypte",
+      "source": "tw-fr-names-pharaoh",
+      "refs": ["1:9"]
+    },
+    "names/sharon": {
+      "en": "Sharon, Plain of Sharon",
+      "headword": "Saron, Plaine de Saron",
+      "source": "tw-fr-names-sharon",
+      "refs": ["2:1"]
+    },
+    "names/solomon": {
+      "en": "Solomon",
+      "headword": "Salomon",
+      "source": "tw-fr-names-solomon",
+      "refs": ["1:1", "1:5", "3:7", "3:9", "3:11", "8:11", "8:12"]
+    },
+    "names/tirzah": {
+      "en": "Tirzah",
+      "headword": "Thirtsa",
+      "source": "tw-fr-names-tirzah",
+      "refs": ["6:4"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "âge",
+      "source": "tw-fr-other-age",
+      "refs": ["7:13"]
+    },
+    "other/awe": {
+      "en": "awe, awesome",
+      "headword": "emerveillement impressionnant",
+      "source": "tw-fr-other-awe",
+      "refs": ["6:4", "6:10"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "supporter",
+      "source": "tw-fr-other-bear",
+      "refs": ["4:2", "6:6", "6:9"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "temps biblique",
+      "source": "tw-fr-other-biblicaltimeday",
+      "refs": ["2:17", "3:11", "4:6", "8:8"]
+    },
+    "other/blemish": {
+      "en": "blemish, unblemished, defect",
+      "headword": "défaut",
+      "source": "tw-fr-other-blemish",
+      "refs": ["4:7"]
+    },
+    "other/bride": {
+      "en": "bride, bridal",
+      "headword": "mariéé",
+      "source": "tw-fr-other-bride",
+      "refs": ["4:8", "4:9", "4:10", "4:11", "4:12", "5:1"]
+    },
+    "other/captive": {
+      "en": "captive, captivate, captivity, catch",
+      "headword": "captif, captivité",
+      "source": "tw-fr-other-captive",
+      "refs": ["2:15", "7:5"]
+    },
+    "other/cedar": {
+      "en": "cedar, cedarwood",
+      "headword": "cèdre",
+      "source": "tw-fr-other-cedar",
+      "refs": ["1:17", "5:15", "8:9"]
+    },
+    "other/chariot": {
+      "en": "chariot, charioteer",
+      "headword": "char, conducteur de char",
+      "source": "tw-fr-other-chariot",
+      "refs": ["1:9", "6:12"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "Compagnon, compagnon de travail, ami",
+      "source": "tw-fr-other-companion",
+      "refs": ["1:7", "5:1", "5:16", "8:13"]
+    },
+    "other/conceive": {
+      "en": "conceive, conceived, conception",
+      "headword": "concevoir ,conception",
+      "source": "tw-fr-other-conceive",
+      "refs": ["3:4"]
+    },
+    "other/concubine": {
+      "en": "concubine",
+      "headword": "concubine",
+      "source": "tw-fr-other-concubine",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "couronne ,couronner",
+      "source": "tw-fr-other-crown",
+      "refs": ["3:11"]
+    },
+    "other/curtain": {
+      "en": "curtain",
+      "headword": "rideau",
+      "source": "tw-fr-other-curtain",
+      "refs": ["1:5"]
+    },
+    "other/declare": {
+      "en": "declare, proclaim, announce",
+      "headword": "declarer ,declaration",
+      "source": "tw-fr-other-declare",
+      "refs": ["1:7", "5:8"]
+    },
+    "other/deer": {
+      "en": "deer, doe, fawn, roebuck, stag",
+      "headword": "cerf ,biche ,daim ,chevreuil faon",
+      "source": "tw-fr-other-deer",
+      "refs": ["2:9", "2:17", "4:5", "7:3", "8:14"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "delice",
+      "source": "tw-fr-other-delight",
+      "refs": ["2:3", "7:6"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "desert",
+      "source": "tw-fr-other-desert",
+      "refs": ["3:6", "8:5"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "detruire",
+      "source": "tw-fr-other-destroyer",
+      "refs": ["2:15"]
+    },
+    "other/dove": {
+      "en": "dove, pigeon, turtledove",
+      "headword": "colombe , pigeon",
+      "source": "tw-fr-other-dove",
+      "refs": ["1:15", "2:12", "2:14", "4:1", "5:2", "5:12", "6:9"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "ivre , ivrogne",
+      "source": "tw-fr-other-drunk",
+      "refs": ["5:1"]
+    },
+    "other/fountain": {
+      "en": "fountain, source, spring",
+      "headword": "fontaine, source",
+      "source": "tw-fr-other-fountain",
+      "refs": ["4:12", "4:15"]
+    },
+    "other/frankincense": {
+      "en": "frankincense",
+      "headword": "encens",
+      "source": "tw-fr-other-frankincense",
+      "refs": ["3:6", "4:6", "4:14"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "fruits, fructueux, sans fruits",
+      "source": "tw-fr-other-fruit",
+      "refs": ["2:3", "4:13", "4:16", "7:8", "7:13", "8:11", "8:12"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "porte, barre de grille",
+      "source": "tw-fr-other-gate",
+      "refs": ["7:4"]
+    },
+    "other/glean": {
+      "en": "glean, gleaning, gleanings",
+      "headword": "glaner, glanant",
+      "source": "tw-fr-other-glean",
+      "refs": ["6:2"]
+    },
+    "other/goat": {
+      "en": "goat, goatskin, scapegoat, kid",
+      "headword": "chèvre,",
+      "source": "tw-fr-other-goat",
+      "refs": ["1:8", "4:1", "6:5"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "or",
+      "source": "tw-fr-other-gold",
+      "refs": ["1:11", "3:10", "5:11", "5:14", "5:15"]
+    },
+    "other/honey": {
+      "en": "honey, honeycomb",
+      "headword": "Miel, Gateau de miel",
+      "source": "tw-fr-other-honey",
+      "refs": ["4:11", "5:1"]
+    },
+    "other/horse": {
+      "en": "horse, warhorse, horseback, stallion, steed, mare",
+      "headword": "Cheval",
+      "source": "tw-fr-other-horse",
+      "refs": ["1:9"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "Maison",
+      "source": "tw-fr-other-house",
+      "refs": ["1:17", "2:4", "3:4", "8:2", "8:7"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "joie, joyeux, se réjouir",
+      "source": "tw-fr-other-joy",
+      "refs": ["1:4", "3:11"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "Roi royaume, royauté",
+      "source": "tw-fr-other-king",
+      "refs": ["1:4", "1:12", "3:9", "3:11", "7:5"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "baiser",
+      "source": "tw-fr-other-kiss",
+      "refs": ["1:2", "8:1"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "connaître, connaissance",
+      "source": "tw-fr-other-know",
+      "refs": ["1:8", "6:12"]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "travail, ouvrier, labeur, travailler",
+      "source": "tw-fr-other-labor",
+      "refs": ["7:1", "8:5"]
+    },
+    "other/leopard": {
+      "en": "leopard",
+      "headword": "léopard",
+      "source": "tw-fr-other-leopard",
+      "refs": ["4:8"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "Lion",
+      "source": "tw-fr-other-lion",
+      "refs": ["4:8"]
+    },
+    "other/noble": {
+      "en": "noble, nobleman, royal official",
+      "headword": "noble, noble",
+      "source": "tw-fr-other-noble",
+      "refs": ["6:12", "7:1"]
+    },
+    "other/oil": {
+      "en": "oil",
+      "headword": "Huile",
+      "source": "tw-fr-other-oil",
+      "refs": ["1:3", "4:10"]
+    },
+    "other/overseer": {
+      "en": "oversee, overseer, keeper",
+      "headword": "superviseur, gardien, surveillant, superviser",
+      "source": "tw-fr-other-overseer",
+      "refs": ["1:6", "8:11", "8:12"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "paix, paisible, conciliateur",
+      "source": "tw-fr-other-peace",
+      "refs": ["8:10"]
+    },
+    "other/perfect": {
+      "en": "perfect, complete",
+      "headword": "parfait, complet, perfection",
+      "source": "tw-fr-other-perfect",
+      "refs": ["5:2", "6:9"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "pilier, colonne",
+      "source": "tw-fr-other-pillar",
+      "refs": ["3:6", "5:15"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "plaider, plaidant, plaidoyer",
+      "source": "tw-fr-other-plead",
+      "refs": ["7:8"]
+    },
+    "other/pomegranate": {
+      "en": "pomegranate",
+      "headword": "Grenade",
+      "source": "tw-fr-other-pomegranate",
+      "refs": ["4:3", "4:13", "6:7", "6:11", "7:12", "8:2"]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "louer, faire l'éloge, louange, louable, digne de louange",
+      "source": "tw-fr-other-praise",
+      "refs": ["6:9"]
+    },
+    "other/purple": {
+      "en": "purple",
+      "headword": "violet",
+      "source": "tw-fr-other-purple",
+      "refs": ["3:10", "7:5"]
+    },
+    "other/queen": {
+      "en": "queen",
+      "headword": "reine",
+      "source": "tw-fr-other-queen",
+      "refs": ["6:8", "6:9"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "éteindre",
+      "source": "tw-fr-other-quench",
+      "refs": ["8:7"]
+    },
+    "other/robe": {
+      "en": "robe, robed",
+      "headword": "robe",
+      "source": "tw-fr-other-robe",
+      "refs": ["5:3"]
+    },
+    "other/rod": {
+      "en": "rod",
+      "headword": "barre",
+      "source": "tw-fr-other-rod",
+      "refs": ["5:14"]
+    },
+    "other/sandal": {
+      "en": "sandal",
+      "headword": "sandale",
+      "source": "tw-fr-other-sandal",
+      "refs": ["7:1"]
+    },
+    "other/seal": {
+      "en": "seal, sealed, unsealed",
+      "headword": "sceller, pour sceller",
+      "source": "tw-fr-other-seal",
+      "refs": ["4:12", "8:6"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "chercher, rechercher",
+      "source": "tw-fr-other-seek",
+      "refs": ["3:1", "3:2", "5:6", "6:1"]
+    },
+    "other/sheep": {
+      "en": "ewe, ram, sheep, sheepfold, sheepshearer, sheepskin",
+      "headword": "moutons, bélier; brebis",
+      "source": "tw-fr-other-sheep",
+      "refs": ["4:2", "6:6"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "le berger, berger en chef, paître",
+      "source": "tw-fr-other-shepherd",
+      "refs": ["1:8"]
+    },
+    "other/shield": {
+      "en": "shield",
+      "headword": "bouclier",
+      "source": "tw-fr-other-shield",
+      "refs": ["4:4"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "argent",
+      "source": "tw-fr-other-silver",
+      "refs": ["1:11", "3:10", "8:9", "8:11"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "épée",
+      "source": "tw-fr-other-sword",
+      "refs": ["3:8"]
+    },
+    "other/tent": {
+      "en": "tent, tentmaker",
+      "headword": "tente",
+      "source": "tw-fr-other-tent",
+      "refs": ["1:5", "1:8"]
+    },
+    "other/terror": {
+      "en": "terror, terrorize, terrify, dread, panic",
+      "headword": "terreur, épouvante",
+      "source": "tw-fr-other-terror",
+      "refs": ["3:8"]
+    },
+    "other/thorn": {
+      "en": "thorn, thorn bush, thistle",
+      "headword": "épine, chardon",
+      "source": "tw-fr-other-thorn",
+      "refs": ["2:2"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "langue",
+      "source": "tw-fr-other-tongue",
+      "refs": ["4:11"]
+    },
+    "other/veil": {
+      "en": "veil, veiled, unveiled",
+      "headword": "voile, voiles, voilé, dévoilé",
+      "source": "tw-fr-other-veil",
+      "refs": ["4:1", "4:3", "6:7"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "vigne, vignes",
+      "source": "tw-fr-other-vine",
+      "refs": ["2:13", "6:11", "7:8", "7:12"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "Vigne (cep), vignobles",
+      "source": "tw-fr-other-vineyard",
+      "refs": ["1:6", "1:14", "2:15", "7:12", "8:11", "8:12"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "guerrier, soldat",
+      "source": "tw-fr-other-warrior",
+      "refs": ["3:7", "4:4"]
+    },
+    "other/watchtower": {
+      "en": "watchtower, tower",
+      "headword": "tour de garde, tours de guet, tour",
+      "source": "tw-fr-other-watchtower",
+      "refs": ["4:4", "5:13", "7:4", "8:10"]
+    },
+    "other/well": {
+      "en": "cistern, well",
+      "headword": "citerne, puits",
+      "source": "tw-fr-other-well",
+      "refs": ["4:15"]
+    },
+    "other/wheat": {
+      "en": "wheat",
+      "headword": "blé",
+      "source": "tw-fr-other-wheat",
+      "refs": ["7:2"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "vin, outre à vin, vin nouveau",
+      "source": "tw-fr-other-wine",
+      "refs": ["1:2", "1:4", "2:4", "4:10", "5:1", "7:2", "7:9", "8:2"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/call-toname": "no-article",
+    "names/heshbon": "no-article",
+    "other/fig": "no-article",
+    "other/flock": "no-article",
+    "other/labor-birthing": "no-article",
+    "other/marriage": "no-article",
+    "other/palm": "no-article"
+  }
+}

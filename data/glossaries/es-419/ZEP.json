@@ -1,0 +1,843 @@
+{
+  "language": "es-419",
+  "book": "ZEP",
+  "links": "twl-en-zep",
+  "words": {
+    "repo": "es-419_gl/es-419_tw",
+    "release": "v37",
+    "commit": "7586f4ff1f0483ea40a4a68e5e1f33158e08c208"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (es-419), es-419_gl/es-419_tw v37, CC BY-SA 4.0. Original work available at https://git.door43.org/es-419_gl/es-419_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/dayofthelord": {
+      "en": "day of the Lord, day of Yahweh",
+      "headword": "Día del Señor, Día de Jehová",
+      "source": "tw-es-419-kt-dayofthelord",
+      "refs": ["1:7", "1:14"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "eternidad, eterno, perpetuo, por siempre",
+      "source": "tw-es-419-kt-eternity",
+      "refs": ["2:9"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "maldad, malvado, malicia, desagradable",
+      "source": "tw-es-419-kt-evil",
+      "refs": ["1:3", "3:15"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "dios, dios falso, diosa, ídolo, idólatra, idolátrico, idolatría",
+      "source": "tw-es-419-kt-falsegod",
+      "refs": ["1:4", "2:11"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "temer, temor, temor de Jehová",
+      "source": "tw-es-419-kt-fear",
+      "refs": ["2:11", "3:7", "3:13", "3:15", "3:16"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Dios",
+      "source": "tw-es-419-kt-god",
+      "refs": ["2:7", "2:9", "3:2", "3:17"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "bueno, bien, correcto, agradable, mejor",
+      "source": "tw-es-419-kt-good",
+      "refs": ["1:12"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "cielo, lo alto, cielos, celestial",
+      "source": "tw-es-419-kt-heaven",
+      "refs": ["1:3", "1:5"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "santo, santidad, impío, sagrado",
+      "source": "tw-es-419-kt-holy",
+      "refs": ["3:4", "3:11"]
+    },
+    "kt/humble": {
+      "en": "humble, humbled, humility",
+      "headword": "humilde, humillarse, humildad, considerado",
+      "source": "tw-es-419-kt-humble",
+      "refs": ["2:3", "3:12"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, israelitas",
+      "source": "tw-es-419-kt-israel",
+      "refs": ["2:9", "3:13", "3:14", "3:15"]
+    },
+    "kt/jealous": {
+      "en": "jealous, jealousy",
+      "headword": "Celoso, celos",
+      "source": "tw-es-419-kt-jealous",
+      "refs": ["1:18", "3:8"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "juzgar, juicio, juez",
+      "source": "tw-es-419-kt-judge",
+      "refs": ["3:3", "3:8", "3:15"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "justicia, justo, injusto, injusticia, justificar, justificación",
+      "source": "tw-es-419-kt-justice",
+      "refs": ["2:3", "3:5"]
+    },
+    "kt/lawofmoses": {
+      "en": "law, law of Moses, law of Yahweh, law of God",
+      "headword": "ley, ley de Moisés, ley de Jehová, ley de Dios",
+      "source": "tw-es-419-kt-lawofmoses",
+      "refs": ["3:4"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "señor, Señor, amo, caballero",
+      "source": "tw-es-419-kt-lord",
+      "refs": ["1:9"]
+    },
+    "kt/lordyahweh": {
+      "en": "Lord Yahweh, Yahweh God",
+      "headword": "Señor Jehová, Jehová Dios",
+      "source": "tw-es-419-kt-lordyahweh",
+      "refs": ["1:7"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "amor, amar, amado",
+      "source": "tw-es-419-kt-love",
+      "refs": ["3:17"]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "sacerdote, sacerdocio",
+      "source": "tw-es-419-kt-priest",
+      "refs": ["1:4", "3:4"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "profeta, profecía, profetizar, vidente, profetisa",
+      "source": "tw-es-419-kt-prophet",
+      "refs": ["3:4"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "puro, purificar, purificación",
+      "source": "tw-es-419-kt-purify",
+      "refs": ["3:9"]
+    },
+    "kt/remnant": {
+      "en": "remnant",
+      "headword": "Remanente",
+      "source": "tw-es-419-kt-remnant",
+      "refs": ["1:4", "2:7", "2:9", "3:13"]
+    },
+    "kt/restore": {
+      "en": "restore, restoration",
+      "headword": "Restaurar, restauración",
+      "source": "tw-es-419-kt-restore",
+      "refs": ["2:7", "3:20"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "justo, justicia, injusto, injusticia, recto, rectitud",
+      "source": "tw-es-419-kt-righteous",
+      "refs": ["2:3", "3:5", "3:13"]
+    },
+    "kt/sanctify": {
+      "en": "sanctify, sanctification",
+      "headword": "Santificar, santificación",
+      "source": "tw-es-419-kt-sanctify",
+      "refs": ["1:7"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "salvar, salvo, a salvo, salvación",
+      "source": "tw-es-419-kt-save",
+      "refs": ["3:17", "3:19"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "pecado, pecaminoso, pecador, pecando",
+      "source": "tw-es-419-kt-sin",
+      "refs": ["1:17"]
+    },
+    "kt/transgression": {
+      "en": "transgress, transgression",
+      "headword": "Transgredir, transgresión",
+      "source": "tw-es-419-kt-transgression",
+      "refs": ["3:11"]
+    },
+    "kt/trust": {
+      "en": "trust, trusted, trustworthy, trustworthiness",
+      "headword": "confiar, fidedigno, confiable, confiabilidad",
+      "source": "tw-es-419-kt-trust",
+      "refs": ["3:2", "3:12"]
+    },
+    "kt/woe": {
+      "en": "woe",
+      "headword": "Aflicción, ay",
+      "source": "tw-es-419-kt-woe",
+      "refs": ["2:5", "3:1"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "Palabra de Dios, Palabra de Jehová, Palabra del Señor, Palabra de Verdad, Escritura",
+      "source": "tw-es-419-kt-wordofgod",
+      "refs": ["1:1", "2:5"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "Ira, furia",
+      "source": "tw-es-419-kt-wrath",
+      "refs": ["1:15", "1:18"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Jehová",
+      "source": "tw-es-419-kt-yahweh",
+      "refs": [
+        "1:2",
+        "1:3",
+        "1:5",
+        "1:6",
+        "1:7",
+        "1:8",
+        "1:10",
+        "1:12",
+        "1:17",
+        "1:18",
+        "2:2",
+        "2:3",
+        "2:7",
+        "2:9",
+        "2:10",
+        "2:11",
+        "3:2",
+        "3:5",
+        "3:8",
+        "3:9",
+        "3:12",
+        "3:15",
+        "3:17",
+        "3:20"
+      ]
+    },
+    "kt/zion": {
+      "en": "Zion, Mount Zion",
+      "headword": "Sion, Monte de Sion",
+      "source": "tw-es-419-kt-zion",
+      "refs": ["3:14", "3:16"]
+    },
+    "names/ammon": {
+      "en": "Ammon, Ammonite",
+      "headword": "Amón, Amonita, Amonitas",
+      "source": "tw-es-419-names-ammon",
+      "refs": ["2:8", "2:9"]
+    },
+    "names/ashdod": {
+      "en": "Ashdod, Azotus",
+      "headword": "Asdod, Azoto",
+      "source": "tw-es-419-names-ashdod",
+      "refs": ["2:4"]
+    },
+    "names/ashkelon": {
+      "en": "Ashkelon",
+      "headword": "Ascalón",
+      "source": "tw-es-419-names-ashkelon",
+      "refs": ["2:4", "2:7"]
+    },
+    "names/assyria": {
+      "en": "Assyria, Assyrian, Assyrian Empire",
+      "headword": "Asiria, asirios, Imperio asirio",
+      "source": "tw-es-419-names-assyria",
+      "refs": ["2:13"]
+    },
+    "names/baal": {
+      "en": "Baal",
+      "headword": "Baal",
+      "source": "tw-es-419-names-baal",
+      "refs": ["1:4"]
+    },
+    "names/canaan": {
+      "en": "Canaan, Canaanite",
+      "headword": "Canaán, cananeo",
+      "source": "tw-es-419-names-canaan",
+      "refs": ["1:11", "2:5"]
+    },
+    "names/cherethites": {
+      "en": "Cherethites",
+      "headword": "Cereteos",
+      "source": "tw-es-419-names-cherethites",
+      "refs": ["2:5"]
+    },
+    "names/cush": {
+      "en": "Cush",
+      "headword": "Cus",
+      "source": "tw-es-419-names-cush",
+      "refs": ["3:10"]
+    },
+    "names/ekron": {
+      "en": "Ekron, Ekronites",
+      "headword": "Ecrón",
+      "source": "tw-es-419-names-ekron",
+      "refs": ["2:4"]
+    },
+    "names/gaza": {
+      "en": "Gaza",
+      "headword": "Gaza",
+      "source": "tw-es-419-names-gaza",
+      "refs": ["2:4"]
+    },
+    "names/gomorrah": {
+      "en": "Gomorrah",
+      "headword": "Gomorra",
+      "source": "tw-es-419-names-gomorrah",
+      "refs": ["2:9"]
+    },
+    "names/hezekiah": {
+      "en": "Hezekiah",
+      "headword": "Ezequías",
+      "source": "tw-es-419-names-hezekiah",
+      "refs": ["1:1"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Jerusalén",
+      "source": "tw-es-419-names-jerusalem",
+      "refs": ["1:4", "1:12", "3:14", "3:16"]
+    },
+    "names/josiah": {
+      "en": "Josiah",
+      "headword": "Josías",
+      "source": "tw-es-419-names-josiah",
+      "refs": ["1:1"]
+    },
+    "names/judah": {
+      "en": "Judah",
+      "headword": "Judá",
+      "source": "tw-es-419-names-judah",
+      "refs": ["2:7"]
+    },
+    "names/kingdomofjudah": {
+      "en": "Judah, kingdom of Judah",
+      "headword": "Judá, reino de Judá",
+      "source": "tw-es-419-names-kingdomofjudah",
+      "refs": ["1:1", "1:4"]
+    },
+    "names/moab": {
+      "en": "Moab, Moabite",
+      "headword": "Moab, Moabita",
+      "source": "tw-es-419-names-moab",
+      "refs": ["2:8", "2:9"]
+    },
+    "names/nineveh": {
+      "en": "Nineveh, Ninevite",
+      "headword": "Nínive, Ninivita",
+      "source": "tw-es-419-names-nineveh",
+      "refs": ["2:13"]
+    },
+    "names/philistines": {
+      "en": "Philistines",
+      "headword": "Filisteos",
+      "source": "tw-es-419-names-philistines",
+      "refs": ["2:5"]
+    },
+    "names/sodom": {
+      "en": "Sodom",
+      "headword": "Sodoma",
+      "source": "tw-es-419-names-sodom",
+      "refs": ["2:9"]
+    },
+    "names/zephaniah": {
+      "en": "Zephaniah",
+      "headword": "Sofonías",
+      "source": "tw-es-419-names-zephaniah",
+      "refs": ["1:1"]
+    },
+    "other/adversary": {
+      "en": "adversary, enemy",
+      "headword": "Adversario, enemigo",
+      "source": "tw-es-419-other-adversary",
+      "refs": ["3:15"]
+    },
+    "other/afflict": {
+      "en": "afflict, affliction, distress",
+      "headword": "afligir, aflicción, angustia",
+      "source": "tw-es-419-other-afflict",
+      "refs": ["1:17"]
+    },
+    "other/anguish": {
+      "en": "anguish",
+      "headword": "Angustia",
+      "source": "tw-es-419-other-anguish",
+      "refs": ["1:15"]
+    },
+    "other/assembly": {
+      "en": "assembly, assemble, congregation, meeting, gather, community",
+      "headword": "Asamblea, armar o reunir",
+      "source": "tw-es-419-other-assembly",
+      "refs": ["2:1", "3:8", "3:18", "3:19", "3:20"]
+    },
+    "other/barren": {
+      "en": "barren, dry",
+      "headword": "Estéril",
+      "source": "tw-es-419-other-barren",
+      "refs": ["2:13"]
+    },
+    "other/beast": {
+      "en": "beast",
+      "headword": "bestia",
+      "source": "tw-es-419-other-beast",
+      "refs": ["1:3", "2:15"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "Tiempo Bíblico: día",
+      "source": "tw-es-419-other-biblicaltimeday",
+      "refs": [
+        "1:1",
+        "1:8",
+        "1:9",
+        "1:10",
+        "1:15",
+        "1:16",
+        "1:18",
+        "2:2",
+        "2:3",
+        "3:8",
+        "3:11",
+        "3:16"
+      ]
+    },
+    "other/bow": {
+      "en": "bow, bow down, kneel, bend, bend the knee",
+      "headword": "Inclinarse, reverenciar, arrodillar, doblar la rodilla",
+      "source": "tw-es-419-other-bow",
+      "refs": ["1:5", "2:11"]
+    },
+    "other/cedar": {
+      "en": "cedar, cedarwood",
+      "headword": "Cedro",
+      "source": "tw-es-419-other-cedar",
+      "refs": ["2:14"]
+    },
+    "other/chaff": {
+      "en": "chaff",
+      "headword": "Paja",
+      "source": "tw-es-419-other-chaff",
+      "refs": ["2:2"]
+    },
+    "other/commit": {
+      "en": "commit, committed",
+      "headword": "Comprometer, comprometido, compromiso",
+      "source": "tw-es-419-other-commit",
+      "refs": ["3:5", "3:13"]
+    },
+    "other/consume": {
+      "en": "consume, devour",
+      "headword": "Consumir",
+      "source": "tw-es-419-other-consume",
+      "refs": ["3:8"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "corrupto, corromper, corrompido, corrupción",
+      "source": "tw-es-419-other-corrupt",
+      "refs": ["3:7"]
+    },
+    "other/cry": {
+      "en": "cry, cry out, outcry",
+      "headword": "Llorar, clamar, llorar o clamar a gritos",
+      "source": "tw-es-419-other-cry",
+      "refs": ["1:10", "1:14", "1:16"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "engañar, engaño, engañoso, mentira",
+      "source": "tw-es-419-other-deceive",
+      "refs": ["3:13"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "Mancha, manchado",
+      "source": "tw-es-419-other-defile",
+      "refs": ["3:1"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "liberar, entregar, librar, rescatar",
+      "source": "tw-es-419-other-deliverer",
+      "refs": ["1:18"]
+    },
+    "other/desert": {
+      "en": "desert, wilderness",
+      "headword": "Desierto, sequedal",
+      "source": "tw-es-419-other-desert",
+      "refs": ["2:13", "2:14"]
+    },
+    "other/desolate": {
+      "en": "desolate, desolated, desolation, deserted, desolator",
+      "headword": "Desolar, desolación",
+      "source": "tw-es-419-other-desolate",
+      "refs": ["1:15"]
+    },
+    "other/destroyer": {
+      "en": "destroy, destruction, annihilate",
+      "headword": "Destructor",
+      "source": "tw-es-419-other-destroyer",
+      "refs": ["1:2", "1:11", "1:15", "2:5", "2:13", "3:6"]
+    },
+    "other/devastated": {
+      "en": "devastate, devastation",
+      "headword": "Devastar, devastado, devastación",
+      "source": "tw-es-419-other-devastated",
+      "refs": ["2:14"]
+    },
+    "other/devour": {
+      "en": "devour",
+      "headword": "Devorar",
+      "source": "tw-es-419-other-devour",
+      "refs": ["1:18"]
+    },
+    "other/disperse": {
+      "en": "disperse, dispersion, scatter, distributed",
+      "headword": "Dispersar, dispersión",
+      "source": "tw-es-419-other-disperse",
+      "refs": ["3:10"]
+    },
+    "other/dung": {
+      "en": "dung, manure",
+      "headword": "Excremento, estiércol",
+      "source": "tw-es-419-other-dung",
+      "refs": ["1:17"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "Tierra",
+      "source": "tw-es-419-other-earth",
+      "refs": ["1:18", "2:3", "2:11", "3:8", "3:19", "3:20"]
+    },
+    "other/exult": {
+      "en": "exult, exultant",
+      "headword": "Regocijarse, regocijado",
+      "source": "tw-es-419-other-exult",
+      "refs": ["2:15", "3:11", "3:14", "3:17"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "Rebaño, manada",
+      "source": "tw-es-419-other-flock",
+      "refs": ["2:6", "2:14"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "extranjero, forastero, residir",
+      "source": "tw-es-419-other-foreigner",
+      "refs": ["1:8"]
+    },
+    "other/forsaken": {
+      "en": "forsake, forsaken, leave",
+      "headword": "abandonar, desamparar, dejar",
+      "source": "tw-es-419-other-forsaken",
+      "refs": ["2:4"]
+    },
+    "other/gate": {
+      "en": "gate, gate bar, gatekeeper, gatepost, gateway",
+      "headword": "puerta, reja, portero, marco de puerta, entrada",
+      "source": "tw-es-419-other-gate",
+      "refs": ["1:10"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "Oro",
+      "source": "tw-es-419-other-gold",
+      "refs": ["1:18"]
+    },
+    "other/grainoffering": {
+      "en": "grain offering",
+      "headword": "Ofrenda de grano",
+      "source": "tw-es-419-other-grainoffering",
+      "refs": ["3:10"]
+    },
+    "other/haughty": {
+      "en": "haughty, lofty",
+      "headword": "Arrogante,",
+      "source": "tw-es-419-other-haughty",
+      "refs": ["3:11"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "casa, hogar",
+      "source": "tw-es-419-other-house",
+      "refs": ["1:9", "1:13", "2:7"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "Gozo, gozoso, alegría, alegre, regocijo, deleite",
+      "source": "tw-es-419-other-joy",
+      "refs": ["3:14", "3:17"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "rey, realeza, reinado",
+      "source": "tw-es-419-other-king",
+      "refs": ["1:1", "1:5", "1:8", "3:15"]
+    },
+    "other/kingdom": {
+      "en": "kingdom",
+      "headword": "reino",
+      "source": "tw-es-419-other-kingdom",
+      "refs": ["3:8"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "conocer, conocimiento, desconocido, distinguir",
+      "source": "tw-es-419-other-know",
+      "refs": ["3:5"]
+    },
+    "other/lamp": {
+      "en": "lamp",
+      "headword": "Lámpara",
+      "source": "tw-es-419-other-lamp",
+      "refs": ["1:12"]
+    },
+    "other/lion": {
+      "en": "lion, lioness",
+      "headword": "León",
+      "source": "tw-es-419-other-lion",
+      "refs": ["3:3"]
+    },
+    "other/lowly": {
+      "en": "lowly, lowliness",
+      "headword": "Humilde, humildad",
+      "source": "tw-es-419-other-lowly",
+      "refs": ["3:12"]
+    },
+    "other/mighty": {
+      "en": "might, mighty, mighty works",
+      "headword": "Poderoso, poder",
+      "source": "tw-es-419-other-mighty",
+      "refs": ["3:17"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "Nación",
+      "source": "tw-es-419-other-nation",
+      "refs": ["2:1", "2:5", "2:9", "2:11", "2:14", "3:6", "3:8"]
+    },
+    "other/oath": {
+      "en": "oath, vow, swear, swearing, swear by, sworn",
+      "headword": "juramento, jurar, jurar por",
+      "source": "tw-es-419-other-oath",
+      "refs": ["1:5"]
+    },
+    "other/ordain": {
+      "en": "ordain, ordained, ordination, planned long ago, set up, prepared",
+      "headword": "ordenar, ordenado, ordenación, designar, designado, planeado tiempo atrás, establecer, preparado",
+      "source": "tw-es-419-other-ordain",
+      "refs": ["1:7"]
+    },
+    "other/pillar": {
+      "en": "column, pillar",
+      "headword": "Pilar, columna",
+      "source": "tw-es-419-other-pillar",
+      "refs": ["2:14"]
+    },
+    "other/pit": {
+      "en": "pit, pitfall, trench, cistern",
+      "headword": "Hoyo",
+      "source": "tw-es-419-other-pit",
+      "refs": ["2:9"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "Poseer, posesión",
+      "source": "tw-es-419-other-possess",
+      "refs": ["2:9"]
+    },
+    "other/praise": {
+      "en": "praise, praised, praiseworthy",
+      "headword": "alabar, alabanza",
+      "source": "tw-es-419-other-praise",
+      "refs": ["3:19", "3:20"]
+    },
+    "other/prey": {
+      "en": "prey, prey on",
+      "headword": "Presa, cazar algo, acosar",
+      "source": "tw-es-419-other-prey",
+      "refs": ["3:8"]
+    },
+    "other/prince": {
+      "en": "prince, princess, governor, provincial governor, official, nobleman, noblemen, nobility",
+      "headword": "Príncipe, princesa",
+      "source": "tw-es-419-other-prince",
+      "refs": ["1:8", "3:3"]
+    },
+    "other/profane": {
+      "en": "profane, profaned",
+      "headword": "Profanar",
+      "source": "tw-es-419-other-profane",
+      "refs": ["3:4"]
+    },
+    "other/prosper": {
+      "en": "prosper, prosperity, prosperous",
+      "headword": "Prosperar, prosperidad, próspero",
+      "source": "tw-es-419-other-prosper",
+      "refs": ["1:13", "2:7", "3:20"]
+    },
+    "other/proud": {
+      "en": "proud, pride, prideful, boast, boastful, boasting",
+      "headword": "orgulloso, orgullo, altanero, soberbio",
+      "source": "tw-es-419-other-proud",
+      "refs": ["2:10", "3:11"]
+    },
+    "other/punish": {
+      "en": "punish, punished, punishment, unpunished",
+      "headword": "castigar, castigado, castigo, impune",
+      "source": "tw-es-419-other-punish",
+      "refs": ["1:8", "1:9", "1:12"]
+    },
+    "other/rebel": {
+      "en": "rebel, rebellion, rebellious, rebelliousness",
+      "headword": "rebelarse, rebelión, rebelde, rebeldía",
+      "source": "tw-es-419-other-rebel",
+      "refs": ["3:1"]
+    },
+    "other/ruin": {
+      "en": "ruin, ruins, ruined",
+      "headword": "Arruinar, ruinas",
+      "source": "tw-es-419-other-ruin",
+      "refs": ["1:10", "1:13", "2:4", "2:9", "2:13", "2:15", "3:6"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "sacrificio, sacrificios, ofrenda",
+      "source": "tw-es-419-other-sacrifice",
+      "refs": ["1:7", "1:8"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "Buscar, buscado",
+      "source": "tw-es-419-other-seek",
+      "refs": ["1:6", "1:12", "2:3"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "siervo, sirviente, servir, esclavo, trabajador, servidor",
+      "source": "tw-es-419-other-servant",
+      "refs": ["3:9"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "vergüenza, avergonzado, deshonra, humillar, reproche",
+      "source": "tw-es-419-other-shame",
+      "refs": ["2:8", "2:10", "3:5", "3:11", "3:18", "3:19"]
+    },
+    "other/shepherd": {
+      "en": "shepherd, herder, pastor",
+      "headword": "pastor de ovejas, ganadero, pastor",
+      "source": "tw-es-419-other-shepherd",
+      "refs": ["2:6", "2:7"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "Plata",
+      "source": "tw-es-419-other-silver",
+      "refs": ["1:11", "1:18"]
+    },
+    "other/slander": {
+      "en": "slander, slanderer, revile, insult",
+      "headword": "calumnia, calumniadores, injuriar, insultar",
+      "source": "tw-es-419-other-slander",
+      "refs": ["2:8"]
+    },
+    "other/sow": {
+      "en": "sow, sower, plant, planted, replanted, transplanted",
+      "headword": "Sembrar, sembrador",
+      "source": "tw-es-419-other-sow",
+      "refs": ["1:13"]
+    },
+    "other/statute": {
+      "en": "statute",
+      "headword": "Estatuto, estatutos",
+      "source": "tw-es-419-other-statute",
+      "refs": ["2:2"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "Tropezón",
+      "source": "tw-es-419-other-stumble",
+      "refs": ["1:3"]
+    },
+    "other/sword": {
+      "en": "sword, swordsmen",
+      "headword": "Espada",
+      "source": "tw-es-419-other-sword",
+      "refs": ["2:12"]
+    },
+    "other/threshold": {
+      "en": "threshold, doorway",
+      "headword": "Umbral",
+      "source": "tw-es-419-other-threshold",
+      "refs": ["1:9", "2:14"]
+    },
+    "other/tongue": {
+      "en": "tongue, language",
+      "headword": "Lengua",
+      "source": "tw-es-419-other-tongue",
+      "refs": ["3:13"]
+    },
+    "other/trouble": {
+      "en": "trouble, disturb, stir up, distress, hardship, calamity",
+      "headword": "Dificultad, dificultades, turbado",
+      "source": "tw-es-419-other-trouble",
+      "refs": ["1:15"]
+    },
+    "other/trumpet": {
+      "en": "trumpet, trumpeter",
+      "headword": "Trompeta",
+      "source": "tw-es-419-other-trumpet",
+      "refs": ["1:16"]
+    },
+    "other/vineyard": {
+      "en": "vineyard",
+      "headword": "Viñedo",
+      "source": "tw-es-419-other-vineyard",
+      "refs": ["1:13"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "Guerrero, soldado",
+      "source": "tw-es-419-other-warrior",
+      "refs": ["1:14"]
+    },
+    "other/wine": {
+      "en": "wine, wineskin, new wine",
+      "headword": "vino, odre, vino nuevo",
+      "source": "tw-es-419-other-wine",
+      "refs": ["1:13"]
+    }
+  },
+  "gaps": {
+    "kt/call-tosummon": "no-article",
+    "names/thegreatsea": "no-article",
+    "other/age-timeperiod": "no-article",
+    "other/house-descendants_nation": "no-article",
+    "other/plunder": "no-article"
+  }
+}

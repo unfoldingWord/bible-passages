@@ -1,0 +1,651 @@
+{
+  "language": "id",
+  "book": "MAL",
+  "links": "twl-en-mal",
+  "words": {
+    "repo": "bahtraku/id_tw",
+    "release": "v26",
+    "commit": "31c260398c056748118a5d9184aa1d5327b7dbdd"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (id), bahtraku/id_tw v26, CC BY-SA 4.0. Original work available at https://git.door43.org/bahtraku/id_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/abomination": {
+      "en": "abomination, abominable",
+      "headword": "kekejian, keji",
+      "source": "tw-id-kt-abomination",
+      "refs": ["2:11"]
+    },
+    "kt/adultery": {
+      "en": "adultery, adulterous, adulterer, adulteress",
+      "headword": "perzinahan, pezina",
+      "source": "tw-id-kt-adultery",
+      "refs": ["3:5"]
+    },
+    "kt/altar": {
+      "en": "altar",
+      "headword": "mezbah",
+      "source": "tw-id-kt-altar",
+      "refs": ["1:7", "1:10", "2:13"]
+    },
+    "kt/bless": {
+      "en": "bless, blessed, blessing",
+      "headword": "berkat, diberkati, memberkati",
+      "source": "tw-id-kt-bless",
+      "refs": ["2:2", "3:10", "3:12", "3:15"]
+    },
+    "kt/call-toname": {
+      "en": "call, called",
+      "headword": "memanggil, dipanggil",
+      "source": "tw-id-kt-call-toname",
+      "refs": ["1:4"]
+    },
+    "kt/compassion": {
+      "en": "compassion, compassionate",
+      "headword": "belas kasihan, berbelas kasihan",
+      "source": "tw-id-kt-compassion",
+      "refs": ["3:17"]
+    },
+    "kt/covenant": {
+      "en": "covenant",
+      "headword": "perjanjian",
+      "source": "tw-id-kt-covenant",
+      "refs": ["2:4", "2:5", "2:8", "2:10", "2:14", "3:1"]
+    },
+    "kt/curse": {
+      "en": "curse, cursed, cursing",
+      "headword": "mengutuk, terkutuk, kutukan",
+      "source": "tw-id-kt-curse",
+      "refs": ["1:14", "2:2", "3:9", "4:6"]
+    },
+    "kt/dayofthelord": {
+      "en": "day of the Lord, day of Yahweh",
+      "headword": "hari Tuhan, hari TUHAN",
+      "source": "tw-id-kt-dayofthelord",
+      "refs": ["4:5"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "keabadian, kekal, abadi, selamanya",
+      "source": "tw-id-kt-eternity",
+      "refs": ["1:4"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "jahat, fasik, tidak berkenan",
+      "source": "tw-id-kt-evil",
+      "refs": ["1:8", "2:17", "3:18", "4:3"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "ilah, allah palsu, dewi, berhala, pemuja berhala, menyembah berhala, penyembahan berhala",
+      "source": "tw-id-kt-falsegod",
+      "refs": ["2:11"]
+    },
+    "kt/favor": {
+      "en": "favor, favorable, favoritism",
+      "headword": "perkenanan, menguntungkan, pilih kasih",
+      "source": "tw-id-kt-favor",
+      "refs": ["2:13"]
+    },
+    "kt/fear": {
+      "en": "fear, afraid, frighten",
+      "headword": "takut/ketakutan, takut, menakut-nakuti/menakutkan",
+      "source": "tw-id-kt-fear",
+      "refs": ["1:6", "1:14", "2:5", "3:5", "3:16", "4:5"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "kemuliaan, mulia, memuliakan",
+      "source": "tw-id-kt-glory",
+      "refs": ["1:6", "2:2"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "Allah",
+      "source": "tw-id-kt-god",
+      "refs": [
+        "1:9",
+        "2:10",
+        "2:15",
+        "2:16",
+        "2:17",
+        "3:8",
+        "3:14",
+        "3:15",
+        "3:18"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "Allah Bapa, Bapa Surgawi, Bapa",
+      "source": "tw-id-kt-godthefather",
+      "refs": ["1:6", "2:10"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "baik, benar, menyenangkan, lebih baik, terbaik",
+      "source": "tw-id-kt-good",
+      "refs": ["2:17"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "anugerah, murah hati",
+      "source": "tw-id-kt-grace",
+      "refs": ["1:9"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "surga, langit, angkasa, surgawi",
+      "source": "tw-id-kt-heaven",
+      "refs": ["3:10"]
+    },
+    "kt/holyplace": {
+      "en": "holy place",
+      "headword": "tempat kudus",
+      "source": "tw-id-kt-holyplace",
+      "refs": ["2:11"]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "kehormatan",
+      "source": "tw-id-kt-honor",
+      "refs": ["1:6"]
+    },
+    "kt/inherit": {
+      "en": "inherit, inheritance, heir",
+      "headword": "mewarisi, warisan, ahli waris",
+      "source": "tw-id-kt-inherit",
+      "refs": ["1:3"]
+    },
+    "kt/iniquity": {
+      "en": "iniquity",
+      "headword": "kedurhakaan",
+      "source": "tw-id-kt-iniquity",
+      "refs": ["2:6"]
+    },
+    "kt/israel": {
+      "en": "Israel, Israelites",
+      "headword": "Israel, Orang Israel",
+      "source": "tw-id-kt-israel",
+      "refs": ["1:1", "1:5", "2:11", "2:16", "4:4"]
+    },
+    "kt/judge": {
+      "en": "judge, judgment",
+      "headword": "hakim, penghakiman",
+      "source": "tw-id-kt-judge",
+      "refs": ["3:5", "4:4"]
+    },
+    "kt/justice": {
+      "en": "just, justice, unjust, injustice, justify, justification",
+      "headword": "Adil, Keadilan, Tidak Adil, Ketidakadilan, Membenarkan, Pembenaran",
+      "source": "tw-id-kt-justice",
+      "refs": ["2:17"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "tuan, Tuhan, Guru, Tuan",
+      "source": "tw-id-kt-lord",
+      "refs": ["1:6", "1:12", "1:14", "3:1"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "kasih, yang terkasih",
+      "source": "tw-id-kt-love",
+      "refs": ["1:2", "2:11"]
+    },
+    "kt/priest": {
+      "en": "priest, priesthood",
+      "headword": "Imam, Keimaman",
+      "source": "tw-id-kt-priest",
+      "refs": ["1:6", "2:1", "2:7"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "nabi, nubuat, bernubuat, peramal, nabiah",
+      "source": "tw-id-kt-prophet",
+      "refs": ["4:5"]
+    },
+    "kt/purify": {
+      "en": "pure, purify, purification",
+      "headword": "murni, memurnikan, pemurnian",
+      "source": "tw-id-kt-purify",
+      "refs": ["1:11", "3:3"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "benar, kebenaran, tidak benar, ketidakbenaran, jujur, kejujuran",
+      "source": "tw-id-kt-righteous",
+      "refs": ["2:6", "3:3", "3:18", "4:2"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "roh, angin, napas",
+      "source": "tw-id-kt-spirit",
+      "refs": ["2:15", "2:16"]
+    },
+    "kt/temple": {
+      "en": "temple, house, house of God",
+      "headword": "Bait Suci, rumah, rumah Allah",
+      "source": "tw-id-kt-temple",
+      "refs": ["3:1", "3:10"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "uji, diuji, pengujian, uji dalam api",
+      "source": "tw-id-kt-test",
+      "refs": ["3:10", "3:15"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "kesaksian, bersaksi, saksi, saksi mata, bukti",
+      "source": "tw-id-kt-testimony",
+      "refs": ["2:14", "3:5"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "firman Allah, firman TUHAN, firman Tuhan, firman kebenaran, kitab suci",
+      "source": "tw-id-kt-wordofgod",
+      "refs": ["1:1"]
+    },
+    "kt/yahweh": {
+      "en": "Yahweh, Yah",
+      "headword": "Yahweh",
+      "source": "tw-id-kt-yahweh",
+      "refs": [
+        "1:2",
+        "1:4",
+        "1:5",
+        "1:6",
+        "1:7",
+        "1:8",
+        "1:9",
+        "1:10",
+        "1:11",
+        "1:13",
+        "1:14",
+        "2:2",
+        "2:4",
+        "2:7",
+        "2:8",
+        "2:11",
+        "2:12",
+        "2:13",
+        "2:14",
+        "2:16",
+        "2:17",
+        "3:1",
+        "3:3",
+        "3:4",
+        "3:5",
+        "3:6",
+        "3:7",
+        "3:10",
+        "3:11",
+        "3:12",
+        "3:13",
+        "3:14",
+        "3:16",
+        "3:17",
+        "4:1",
+        "4:3"
+      ]
+    },
+    "names/edom": {
+      "en": "Edom, Edomite, Idumea",
+      "headword": "Edom, Orang Edom, Idumea",
+      "source": "tw-id-names-edom",
+      "refs": ["1:4"]
+    },
+    "names/elijah": {
+      "en": "Elijah",
+      "headword": "Elia",
+      "source": "tw-id-names-elijah",
+      "refs": ["4:5"]
+    },
+    "names/esau": {
+      "en": "Esau",
+      "headword": "Esau",
+      "source": "tw-id-names-esau",
+      "refs": ["1:2", "1:3"]
+    },
+    "names/jacob": {
+      "en": "Jacob, Israel",
+      "headword": "Yacob, Israel",
+      "source": "tw-id-names-jacob",
+      "refs": ["1:2", "2:12", "3:6"]
+    },
+    "names/jerusalem": {
+      "en": "Jerusalem",
+      "headword": "Yerusalem",
+      "source": "tw-id-names-jerusalem",
+      "refs": ["2:11", "3:4"]
+    },
+    "names/kingdomofjudah": {
+      "en": "Judah, kingdom of Judah",
+      "headword": "Yehuda, kerajaan Yehuda",
+      "source": "tw-id-names-kingdomofjudah",
+      "refs": ["2:11", "3:4"]
+    },
+    "names/malachi": {
+      "en": "Malachi",
+      "headword": "Maleakhi",
+      "source": "tw-id-names-malachi",
+      "refs": ["1:1"]
+    },
+    "names/moses": {
+      "en": "Moses",
+      "headword": "Musa",
+      "source": "tw-id-names-moses",
+      "refs": ["4:4"]
+    },
+    "names/sinai": {
+      "en": "Sinai, Horeb",
+      "headword": "Sinai, Horeb",
+      "source": "tw-id-names-sinai",
+      "refs": ["4:4"]
+    },
+    "other/age": {
+      "en": "age, aged, old, old age, years old",
+      "headword": "umur, berumur, tua, umur tua, tahun, usia, zaman",
+      "source": "tw-id-other-age",
+      "refs": ["3:4"]
+    },
+    "other/arrogant": {
+      "en": "arrogant, presumptuous",
+      "headword": "sombong, angkuh",
+      "source": "tw-id-other-arrogant",
+      "refs": ["3:15", "4:1"]
+    },
+    "other/barren": {
+      "en": "barren, dry",
+      "headword": "tandus, kering",
+      "source": "tw-id-other-barren",
+      "refs": ["3:11"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "hari",
+      "source": "tw-id-other-biblicaltimeday",
+      "refs": ["3:2", "3:7", "3:17", "4:1", "4:3"]
+    },
+    "other/biblicaltimeyear": {
+      "en": "year",
+      "headword": "tahun",
+      "source": "tw-id-other-biblicaltimeyear",
+      "refs": ["3:4"]
+    },
+    "other/blemish": {
+      "en": "blemish, unblemished, defect",
+      "headword": "cacat, tidak bercacat, tidak sempurna",
+      "source": "tw-id-other-blemish",
+      "refs": ["1:14"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "sahabat, rekan kerja, teman",
+      "source": "tw-id-other-companion",
+      "refs": ["2:14"]
+    },
+    "other/corrupt": {
+      "en": "corrupt, corrupted, corruption, incorruptibility, depraved",
+      "headword": "rusak, merusak, perusakan, kerusakan, dengan cara merusak, tak dapat dirusak",
+      "source": "tw-id-other-corrupt",
+      "refs": ["2:8", "3:11"]
+    },
+    "other/creation": {
+      "en": "create, created, creation, creator",
+      "headword": "menciptakan, diciptakan, penciptaan, pencipta",
+      "source": "tw-id-other-creation",
+      "refs": ["2:10"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "menipu, mendustakan, penipu, pendusta, pembohong, kebohongan, kecurangan, kedustaan, penipuan, memperdaya",
+      "source": "tw-id-other-deceive",
+      "refs": ["3:5"]
+    },
+    "other/defile": {
+      "en": "defile, defiled, desecrate",
+      "headword": "menajiskan, mencemarkan, menodai",
+      "source": "tw-id-other-defile",
+      "refs": ["1:7", "1:12"]
+    },
+    "other/delight": {
+      "en": "delight",
+      "headword": "kesenangan",
+      "source": "tw-id-other-delight",
+      "refs": ["2:17", "3:12"]
+    },
+    "other/doctrine": {
+      "en": "doctrine, teaching, belief, beliefs, instruction, knowledge",
+      "headword": "doktrin, ajaran, kepercayaan, instruksi, pengetahuan",
+      "source": "tw-id-other-doctrine",
+      "refs": ["2:7"]
+    },
+    "other/earth": {
+      "en": "earth, land",
+      "headword": "bumi, tanah",
+      "source": "tw-id-other-earth",
+      "refs": ["4:6"]
+    },
+    "other/endure": {
+      "en": "endure, endurance",
+      "headword": "ketekunan, daya tahan",
+      "source": "tw-id-other-endure",
+      "refs": ["3:2"]
+    },
+    "other/feast": {
+      "en": "feast, feasting",
+      "headword": "pesta, berpesta",
+      "source": "tw-id-other-feast",
+      "refs": ["2:3"]
+    },
+    "other/flock": {
+      "en": "flock, herd",
+      "headword": "kawanan, kelompok",
+      "source": "tw-id-other-flock",
+      "refs": ["1:14"]
+    },
+    "other/foreigner": {
+      "en": "alien, foreigner, sojourn",
+      "headword": "alien, orang asing, pendatang",
+      "source": "tw-id-other-foreigner",
+      "refs": ["2:11", "3:5"]
+    },
+    "other/fruit": {
+      "en": "fruit, fruitful, unfruitful",
+      "headword": "buah, berbuah, tidak berbuah",
+      "source": "tw-id-other-fruit",
+      "refs": ["1:12", "3:11"]
+    },
+    "other/gold": {
+      "en": "gold, golden",
+      "headword": "emas, keemasan",
+      "source": "tw-id-other-gold",
+      "refs": ["3:3"]
+    },
+    "other/incense": {
+      "en": "incense",
+      "headword": "dupa",
+      "source": "tw-id-other-incense",
+      "refs": ["1:11"]
+    },
+    "other/instruct": {
+      "en": "instruct, instruction, instructor",
+      "headword": "memberi perintah, perintah, pemberi perintah",
+      "source": "tw-id-other-instruct",
+      "refs": ["2:7", "2:8", "2:9", "4:4"]
+    },
+    "other/king": {
+      "en": "king, kingship",
+      "headword": "Raja, Tugas Kerajaan",
+      "source": "tw-id-other-king",
+      "refs": ["1:14"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "tahu, mengetahui, pengetahuan, tidak diketahui, membedakan",
+      "source": "tw-id-other-know",
+      "refs": ["2:4"]
+    },
+    "other/marriage": {
+      "en": "marriage, marry, married, wedding",
+      "headword": "pernikahan, menikah, upacara pernikahan",
+      "source": "tw-id-other-marriage",
+      "refs": ["2:11"]
+    },
+    "other/messenger": {
+      "en": "messenger",
+      "headword": "utusan",
+      "source": "tw-id-other-messenger",
+      "refs": ["2:7", "3:1"]
+    },
+    "other/mourn": {
+      "en": "mourn, mourner, weeping",
+      "headword": "berkabung, orang yang berkabung, tangisan",
+      "source": "tw-id-other-mourn",
+      "refs": ["2:13"]
+    },
+    "other/nation": {
+      "en": "nation",
+      "headword": "bangsa",
+      "source": "tw-id-other-nation",
+      "refs": ["1:11", "1:14", "3:9", "3:12"]
+    },
+    "other/neighbor": {
+      "en": "neighbor, neighborhood, neighboring",
+      "headword": "tetangga, lingkungan di sekitar, daerah yang beredekatan",
+      "source": "tw-id-other-neighbor",
+      "refs": ["3:16"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "damai, kedamaian, pembuat perdamaian",
+      "source": "tw-id-other-peace",
+      "refs": ["2:5", "2:6"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "permohonan, memohon, mohon, meminta, memohon dengan sangat",
+      "source": "tw-id-other-plead",
+      "refs": ["1:9"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "memiliki, dirasuki, kepemilikan, merampas",
+      "source": "tw-id-other-possess",
+      "refs": ["3:17"]
+    },
+    "other/profane": {
+      "en": "profane, profaned",
+      "headword": "Cemar, Tercemar",
+      "source": "tw-id-other-profane",
+      "refs": ["1:12", "2:10", "2:11"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "keuntungan, keuntungan, menguntungkan, tidak menguntungkan",
+      "source": "tw-id-other-profit",
+      "refs": ["3:14"]
+    },
+    "other/rebuke": {
+      "en": "rebuke, reprove",
+      "headword": "menegur, teguran, memarahi",
+      "source": "tw-id-other-rebuke",
+      "refs": ["2:3", "3:11"]
+    },
+    "other/ruin": {
+      "en": "ruin, ruins, ruined",
+      "headword": "kehancuran, reruntuhan, hancur",
+      "source": "tw-id-other-ruin",
+      "refs": ["1:4"]
+    },
+    "other/sacrifice": {
+      "en": "sacrifice, offering",
+      "headword": "pengorbanan, kurban, persembahan",
+      "source": "tw-id-other-sacrifice",
+      "refs": [
+        "1:8",
+        "1:10",
+        "1:11",
+        "1:13",
+        "1:14",
+        "2:12",
+        "2:13",
+        "3:3",
+        "3:4"
+      ]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "mencari",
+      "source": "tw-id-other-seek",
+      "refs": ["2:7", "2:15", "3:1"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "memperbudak, diperbudak, hamba, budak, perbudakan, pelayan, melayani, layanan, pelayanan, pelayanan mata",
+      "source": "tw-id-other-servant",
+      "refs": ["1:6", "3:14", "3:17", "3:18", "4:4"]
+    },
+    "other/shame": {
+      "en": "shame, ashamed, disgrace, humiliate, reproach",
+      "headword": "malu, memalukan, merasa malu, dipermalukan, tidak malu, tidak tahu malu",
+      "source": "tw-id-other-shame",
+      "refs": ["2:9"]
+    },
+    "other/silver": {
+      "en": "silver",
+      "headword": "perak",
+      "source": "tw-id-other-silver",
+      "refs": ["3:3"]
+    },
+    "other/stumble": {
+      "en": "stumble, reeling",
+      "headword": "tersandung, terguncang",
+      "source": "tw-id-other-stumble",
+      "refs": ["2:8"]
+    },
+    "other/thief": {
+      "en": "thief, thieves, rob, robber, robbery, bandit",
+      "headword": "pencuri, merampok, perampok, perampokan, bandit",
+      "source": "tw-id-other-thief",
+      "refs": ["3:8", "3:9"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "sia-sia, kesia-siaan",
+      "source": "tw-id-other-vain",
+      "refs": ["1:10"]
+    },
+    "other/vine": {
+      "en": "vine",
+      "headword": "pokok anggur, tanaman merambat",
+      "source": "tw-id-other-vine",
+      "refs": ["3:11"]
+    }
+  },
+  "gaps": {
+    "kt/remnant": "no-article",
+    "kt/restore": "no-article",
+    "names/levite": "no-article",
+    "other/desert": "no-article",
+    "other/desolate": "no-article",
+    "other/dung": "no-article",
+    "other/governor": "no-article",
+    "other/oath": "no-article",
+    "other/seed": "no-article",
+    "other/sorcery": "no-article",
+    "other/statute": "no-article",
+    "other/tent": "no-article",
+    "other/tenth": "no-article",
+    "other/trample": "no-article",
+    "other/tribute": "no-article",
+    "other/watch": "no-article"
+  }
+}

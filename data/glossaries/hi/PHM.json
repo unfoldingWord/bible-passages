@@ -1,0 +1,247 @@
+{
+  "language": "hi",
+  "book": "PHM",
+  "links": "twl-en-phm",
+  "words": {
+    "repo": "translationCore-Create-BCS/hi_tw",
+    "release": "v8",
+    "commit": "5fa7b590a2e5f99ac6a84de96ee081e751e70b95"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (hi), translationCore-Create-BCS/hi_tw v8, CC BY-SA 4.0. Original work available at https://git.door43.org/translationCore-Create-BCS/hi_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/amen": {
+      "en": "amen, truly",
+      "headword": "आमीन, सच में",
+      "source": "tw-hi-kt-amen",
+      "refs": ["1:25"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "प्रिय",
+      "source": "tw-hi-kt-beloved",
+      "refs": ["1:1", "1:16"]
+    },
+    "kt/bond": {
+      "en": "bind, bond, bound",
+      "headword": "बांधना, बन्धन, बाँधा",
+      "source": "tw-hi-kt-bond",
+      "refs": ["1:10", "1:13"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "ख्रीस्त, मसीह",
+      "source": "tw-hi-kt-christ",
+      "refs": ["1:1", "1:3", "1:6", "1:8", "1:9", "1:20", "1:23", "1:25"]
+    },
+    "kt/eternity": {
+      "en": "eternity, everlasting, eternal, forever",
+      "headword": "सनातन, अनन्त, अनंत काल",
+      "source": "tw-hi-kt-eternity",
+      "refs": ["1:15"]
+    },
+    "kt/exhort": {
+      "en": "exhort, exhortation",
+      "headword": "आग्रह करना, उपदेश",
+      "source": "tw-hi-kt-exhort",
+      "refs": ["1:9", "1:10"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "विश्वास",
+      "source": "tw-hi-kt-faith",
+      "refs": ["1:5", "1:6"]
+    },
+    "kt/fellowship": {
+      "en": "fellowship",
+      "headword": "सहभागिता",
+      "source": "tw-hi-kt-fellowship",
+      "refs": ["1:6"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "परमेश्‍वर",
+      "source": "tw-hi-kt-god",
+      "refs": ["1:4"]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "परमेश्वर पिता, स्वर्गीय पिता, पिता",
+      "source": "tw-hi-kt-godthefather",
+      "refs": ["1:3"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "अच्छा, सही, प्रसन्न करने वाला, उत्तम, सबसे अच्छा",
+      "source": "tw-hi-kt-good",
+      "refs": ["1:6", "1:14"]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "शुभ सन्देश, सुसमाचार",
+      "source": "tw-hi-kt-goodnews",
+      "refs": ["1:13"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "अनुग्रह, अनुग्रहकारी",
+      "source": "tw-hi-kt-grace",
+      "refs": ["1:3", "1:25"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "आशा, आशा की",
+      "source": "tw-hi-kt-hope",
+      "refs": ["1:22"]
+    },
+    "kt/inchrist": {
+      "en": "in Christ, in Jesus, in the Lord, in him",
+      "headword": "मसीह में, यीशु में, प्रभु में, उसमें",
+      "source": "tw-hi-kt-inchrist",
+      "refs": ["1:8", "1:16", "1:20", "1:23"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "यीशु, यीशु ख्रीस्त, मसीह यीशु",
+      "source": "tw-hi-kt-jesus",
+      "refs": ["1:1", "1:3", "1:5", "1:9", "1:23", "1:25"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "प्रभु, गुरु, स्वामी, स्वामियों, श्रीमान, महोदय",
+      "source": "tw-hi-kt-lord",
+      "refs": ["1:3", "1:5", "1:16", "1:20", "1:25"]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "प्रेम, प्रिय,",
+      "source": "tw-hi-kt-love",
+      "refs": ["1:5", "1:7", "1:9"]
+    },
+    "kt/minister": {
+      "en": "to minister, ministry",
+      "headword": "सेवा करना, सेवकाई",
+      "source": "tw-hi-kt-minister",
+      "refs": ["1:13"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "प्रार्थना कर, प्रार्थना",
+      "source": "tw-hi-kt-pray",
+      "refs": ["1:4", "1:22"]
+    },
+    "kt/saint": {
+      "en": "saint",
+      "headword": "संत, पवित्र जन",
+      "source": "tw-hi-kt-saint",
+      "refs": ["1:5", "1:7"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "आत्मा, हवा, सांस",
+      "source": "tw-hi-kt-spirit",
+      "refs": ["1:25"]
+    },
+    "names/johnmark": {
+      "en": "John Mark",
+      "headword": "यूहन्ना मरकुस",
+      "source": "tw-hi-names-johnmark",
+      "refs": ["1:24"]
+    },
+    "names/luke": {
+      "en": "Luke",
+      "headword": "लूका",
+      "source": "tw-hi-names-luke",
+      "refs": ["1:24"]
+    },
+    "names/paul": {
+      "en": "Paul, Saul",
+      "headword": "पौलुस, शाऊल",
+      "source": "tw-hi-names-paul",
+      "refs": ["1:1", "1:9", "1:19"]
+    },
+    "names/timothy": {
+      "en": "Timothy",
+      "headword": "तीमुथियुस",
+      "source": "tw-hi-names-timothy",
+      "refs": ["1:1"]
+    },
+    "other/biblicaltimehour": {
+      "en": "hour, moment",
+      "headword": "पहर, घंटे, तत्काल, क्षण भर के लिए",
+      "source": "tw-hi-other-biblicaltimehour",
+      "refs": ["1:15"]
+    },
+    "other/companion": {
+      "en": "companion, fellow worker, friend",
+      "headword": "साथी, संगी, मित्र",
+      "source": "tw-hi-other-companion",
+      "refs": ["1:1", "1:24"]
+    },
+    "other/elder": {
+      "en": "elder",
+      "headword": "प्राचीन, से बड़ा, बूढ़े",
+      "source": "tw-hi-other-elder",
+      "refs": ["1:9"]
+    },
+    "other/house": {
+      "en": "house",
+      "headword": "घर, घरों, छत के ऊपर, छतों, भण्डार, भण्डारों, घर का कारबार करनेवाले",
+      "source": "tw-hi-other-house",
+      "refs": ["1:2"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "आनन्द, आनन्दित, आनन्द करे, प्रसन्न",
+      "source": "tw-hi-other-joy",
+      "refs": ["1:7"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "जानना, जानता है, जानता था, जानना, ज्ञान, ज्ञात, प्रकट करना, ज्ञात करता है, ज्ञात करता है, अज्ञात, पहले से जानना, पूर्वज्ञान",
+      "source": "tw-hi-other-know",
+      "refs": ["1:6", "1:21"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "शान्ति,शान्त, शांतिपूर्ण, शांतिपूर्वक, शंतियोग्य, शांति बनाने वाले",
+      "source": "tw-hi-other-peace",
+      "refs": ["1:3"]
+    },
+    "other/profit": {
+      "en": "profit, profits, profited, profitable",
+      "headword": "लाभ, लाभदायक, अलाभकर",
+      "source": "tw-hi-other-profit",
+      "refs": ["1:20"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "ग्रहण करना, स्वागत करना, बीड़ा उठाया, ग्राह्यता",
+      "source": "tw-hi-other-receive",
+      "refs": ["1:17"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "सेवा करना, दास बनाना, दास बना दिया, सेवक, सेवकों, दास, दासों, दासत्व, दासी",
+      "source": "tw-hi-other-servant",
+      "refs": ["1:16"]
+    },
+    "other/warrior": {
+      "en": "soldier, warrior",
+      "headword": "सैनिक, योद्धा,",
+      "source": "tw-hi-other-warrior",
+      "refs": ["1:2"]
+    },
+    "other/wrong": {
+      "en": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "headword": "बुरा, गलत करना, बुरा करनेवाला, दुर्व्यवहार, चोट पहुँचाना, कष्टदायक",
+      "source": "tw-hi-other-wrong",
+      "refs": ["1:18"]
+    }
+  },
+  "gaps": { "kt/church": "no-heading" }
+}

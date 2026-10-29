@@ -1,0 +1,688 @@
+{
+  "language": "hi",
+  "book": "1TH",
+  "links": "twl-en-1th",
+  "words": {
+    "repo": "translationCore-Create-BCS/hi_tw",
+    "release": "v8",
+    "commit": "5fa7b590a2e5f99ac6a84de96ee081e751e70b95"
+  },
+  "licence": "CC-BY-SA-4.0",
+  "attribution": [
+    "unfoldingWord Translation Word Links, unfoldingWord/en_twl v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_twl",
+    "Translation Words (hi), translationCore-Create-BCS/hi_tw v8, CC BY-SA 4.0. Original work available at https://git.door43.org/translationCore-Create-BCS/hi_tw",
+    "Translation Words (en), unfoldingWord/en_tw v91, CC BY-SA 4.0. Original work available at https://git.door43.org/unfoldingWord/en_tw"
+  ],
+  "terms": {
+    "kt/amen": {
+      "en": "amen, truly",
+      "headword": "आमीन, सच में",
+      "source": "tw-hi-kt-amen",
+      "refs": ["3:13"]
+    },
+    "kt/angel": {
+      "en": "angel, archangel",
+      "headword": "स्वर्गदूत, प्रधान स्वर्गदूत",
+      "source": "tw-hi-kt-angel",
+      "refs": ["4:16"]
+    },
+    "kt/apostle": {
+      "en": "apostle, apostleship",
+      "headword": "प्रेरित, प्रेरितों, प्रेरिताई",
+      "source": "tw-hi-kt-apostle",
+      "refs": ["2:7"]
+    },
+    "kt/appoint": {
+      "en": "appoint, appointed",
+      "headword": "नियुक्त करना, निुयक्त किया",
+      "source": "tw-hi-kt-appoint",
+      "refs": ["3:3"]
+    },
+    "kt/believe": {
+      "en": "believe, believer, belief, unbeliever, unbelief",
+      "headword": "विश्वास करना, विश्वासी, विश्वास, अविश्वासी, अविश्वास",
+      "source": "tw-hi-kt-believe",
+      "refs": ["1:7", "2:10", "2:13", "4:14"]
+    },
+    "kt/beloved": {
+      "en": "beloved",
+      "headword": "प्रिय",
+      "source": "tw-hi-kt-beloved",
+      "refs": ["2:8"]
+    },
+    "kt/blameless": {
+      "en": "blameless",
+      "headword": "निर्दोष",
+      "source": "tw-hi-kt-blameless",
+      "refs": ["2:10", "3:13", "5:23"]
+    },
+    "kt/christ": {
+      "en": "Christ, Messiah",
+      "headword": "ख्रीस्त, मसीह",
+      "source": "tw-hi-kt-christ",
+      "refs": ["1:1", "1:3", "2:7", "2:14", "3:2", "5:9", "5:23", "5:28"]
+    },
+    "kt/dayofthelord": {
+      "en": "day of the Lord, day of Yahweh",
+      "headword": "प्रभु का दिन, यहोवा का दिन",
+      "source": "tw-hi-kt-dayofthelord",
+      "refs": ["5:2"]
+    },
+    "kt/elect": {
+      "en": "chosen, choose, chosen people, Chosen One, elect",
+      "headword": "चुना हुआ, चुने हुए, चुनना, चुने हुए लोग, चुना हुआ जन, चुनना।",
+      "source": "tw-hi-kt-elect",
+      "refs": ["1:4"]
+    },
+    "kt/evil": {
+      "en": "evil, wicked, wickedness, unpleasant",
+      "headword": "बुराई, दुष्ट, दुष्टता",
+      "source": "tw-hi-kt-evil",
+      "refs": ["5:15", "5:22"]
+    },
+    "kt/exhort": {
+      "en": "exhort, exhortation",
+      "headword": "आग्रह करना, उपदेश",
+      "source": "tw-hi-kt-exhort",
+      "refs": ["2:3", "2:12", "4:1", "4:10", "5:14", "5:27"]
+    },
+    "kt/faith": {
+      "en": "faith",
+      "headword": "विश्वास",
+      "source": "tw-hi-kt-faith",
+      "refs": ["1:3", "1:8", "3:2", "3:5", "3:6", "3:7", "3:10", "5:8"]
+    },
+    "kt/faithful": {
+      "en": "faithful, faithfulness, trustworthy",
+      "headword": "विश्वासयोग्य, विश्वासयोग्यता",
+      "source": "tw-hi-kt-faithful",
+      "refs": ["5:24"]
+    },
+    "kt/falsegod": {
+      "en": "god, false god, goddess, idol, idolater, idolatrous, idolatry",
+      "headword": "देवता, झूठे देवता, देवियाँ, मूर्ति, मूर्तिपूजक, मूर्ति पूजा",
+      "source": "tw-hi-kt-falsegod",
+      "refs": ["1:9"]
+    },
+    "kt/fulfill": {
+      "en": "fulfill, fulfilled, carried out",
+      "headword": "पूरा करना, पूरा हुआ, सिद्ध किया",
+      "source": "tw-hi-kt-fulfill",
+      "refs": ["2:16"]
+    },
+    "kt/gentile": {
+      "en": "Gentile",
+      "headword": "अन्यजाति",
+      "source": "tw-hi-kt-gentile",
+      "refs": ["2:16", "4:5"]
+    },
+    "kt/glory": {
+      "en": "glory, glorious, glorify",
+      "headword": "महिमा, महिमामय, महिमान्वित करना",
+      "source": "tw-hi-kt-glory",
+      "refs": ["2:6", "2:12", "2:20"]
+    },
+    "kt/god": {
+      "en": "God",
+      "headword": "परमेश्‍वर",
+      "source": "tw-hi-kt-god",
+      "refs": [
+        "1:2",
+        "1:4",
+        "1:8",
+        "1:9",
+        "2:2",
+        "2:4",
+        "2:5",
+        "2:8",
+        "2:9",
+        "2:10",
+        "2:12",
+        "2:13",
+        "2:14",
+        "2:15",
+        "3:2",
+        "3:9",
+        "4:1",
+        "4:5",
+        "4:7",
+        "4:8",
+        "4:14",
+        "4:16",
+        "5:9",
+        "5:23"
+      ]
+    },
+    "kt/godthefather": {
+      "en": "God the Father, heavenly Father, Father",
+      "headword": "परमेश्वर पिता, स्वर्गीय पिता, पिता",
+      "source": "tw-hi-kt-godthefather",
+      "refs": ["1:1", "1:3", "3:11", "3:13"]
+    },
+    "kt/good": {
+      "en": "good, right, pleasant, better, best, goodness",
+      "headword": "अच्छा, सही, प्रसन्न करने वाला, उत्तम, सबसे अच्छा",
+      "source": "tw-hi-kt-good",
+      "refs": ["3:6", "5:15", "5:21"]
+    },
+    "kt/goodnews": {
+      "en": "good news, gospel",
+      "headword": "शुभ सन्देश, सुसमाचार",
+      "source": "tw-hi-kt-goodnews",
+      "refs": ["1:5", "2:2", "2:4", "2:8", "2:9", "3:2"]
+    },
+    "kt/grace": {
+      "en": "grace, gracious",
+      "headword": "अनुग्रह, अनुग्रहकारी",
+      "source": "tw-hi-kt-grace",
+      "refs": ["1:1", "5:28"]
+    },
+    "kt/heaven": {
+      "en": "heaven, sky, heavens, heavenly",
+      "headword": "स्वर्ग, आकाश, आकाशमण्डल, स्वर्गीय",
+      "source": "tw-hi-kt-heaven",
+      "refs": ["1:10", "4:16"]
+    },
+    "kt/holy": {
+      "en": "holy, holiness, unholy, sacred",
+      "headword": "पवित्र, पवित्रता, अपवित्र,",
+      "source": "tw-hi-kt-holy",
+      "refs": ["2:10", "3:13", "4:4", "4:7", "5:26"]
+    },
+    "kt/holyspirit": {
+      "en": "Holy Spirit, Spirit of God, Spirit of the Lord, Spirit",
+      "headword": "पवित्र आत्मा, परमेश्वर का आत्मा, प्रभु की आत्मा, आत्मा",
+      "source": "tw-hi-kt-holyspirit",
+      "refs": ["1:5", "1:6", "4:8", "5:19"]
+    },
+    "kt/honor": {
+      "en": "honor",
+      "headword": "आदर, आदर करना",
+      "source": "tw-hi-kt-honor",
+      "refs": ["4:4"]
+    },
+    "kt/hope": {
+      "en": "hope, hoped",
+      "headword": "आशा, आशा की",
+      "source": "tw-hi-kt-hope",
+      "refs": ["1:3", "2:19", "4:13", "5:8"]
+    },
+    "kt/inchrist": {
+      "en": "in Christ, in Jesus, in the Lord, in him",
+      "headword": "मसीह में, यीशु में, प्रभु में, उसमें",
+      "source": "tw-hi-kt-inchrist",
+      "refs": ["3:8", "4:1", "4:16", "5:12", "5:18"]
+    },
+    "kt/jesus": {
+      "en": "Jesus, Jesus Christ, Christ Jesus",
+      "headword": "यीशु, यीशु ख्रीस्त, मसीह यीशु",
+      "source": "tw-hi-kt-jesus",
+      "refs": [
+        "1:1",
+        "1:3",
+        "1:10",
+        "2:14",
+        "2:15",
+        "2:19",
+        "3:11",
+        "3:13",
+        "4:1",
+        "4:2",
+        "4:14",
+        "5:9",
+        "5:18",
+        "5:23",
+        "5:28"
+      ]
+    },
+    "kt/jew": {
+      "en": "Jew, Jewish",
+      "headword": "यहूदी, यहूदियों का, यहूदियों",
+      "source": "tw-hi-kt-jew",
+      "refs": ["2:14"]
+    },
+    "kt/kingdomofgod": {
+      "en": "kingdom of God, kingdom of heaven",
+      "headword": "परमेश्‍वर का राज्य, स्वर्ग का राज्य",
+      "source": "tw-hi-kt-kingdomofgod",
+      "refs": ["2:12"]
+    },
+    "kt/lord": {
+      "en": "lord, Lord, master, sir",
+      "headword": "प्रभु, गुरु, स्वामी, स्वामियों, श्रीमान, महोदय",
+      "source": "tw-hi-kt-lord",
+      "refs": [
+        "1:1",
+        "1:3",
+        "1:6",
+        "1:8",
+        "2:15",
+        "2:19",
+        "3:8",
+        "3:11",
+        "3:12",
+        "3:13",
+        "4:1",
+        "4:2",
+        "4:6",
+        "4:15",
+        "4:16",
+        "4:17",
+        "5:9",
+        "5:12",
+        "5:23",
+        "5:27",
+        "5:28"
+      ]
+    },
+    "kt/love": {
+      "en": "love, beloved",
+      "headword": "प्रेम, प्रिय,",
+      "source": "tw-hi-kt-love",
+      "refs": ["1:3", "1:4", "3:6", "3:12", "4:9", "5:8", "5:13"]
+    },
+    "kt/pray": {
+      "en": "pray, prayer",
+      "headword": "प्रार्थना कर, प्रार्थना",
+      "source": "tw-hi-kt-pray",
+      "refs": ["1:2", "5:17", "5:25"]
+    },
+    "kt/prophet": {
+      "en": "prophet, prophecy, prophesy, seer, prophetess",
+      "headword": "भविष्यद्वक्ता, भविष्यद्वाणी, भविष्यद्वाणी करना, द्रष्टा, भविष्यद्वक्तिन",
+      "source": "tw-hi-kt-prophet",
+      "refs": ["2:15", "5:20"]
+    },
+    "kt/righteous": {
+      "en": "righteous, righteousness, unrighteous, unrighteousness, upright, uprightness",
+      "headword": "धर्मी, धार्मिकता, अधर्मी, अधर्म, खरा, खराई",
+      "source": "tw-hi-kt-righteous",
+      "refs": ["2:10"]
+    },
+    "kt/saint": {
+      "en": "saint",
+      "headword": "संत, पवित्र जन",
+      "source": "tw-hi-kt-saint",
+      "refs": ["3:13"]
+    },
+    "kt/sanctify": {
+      "en": "sanctify, sanctification",
+      "headword": "शुद्ध करना, शोधन",
+      "source": "tw-hi-kt-sanctify",
+      "refs": ["4:3", "5:23"]
+    },
+    "kt/satan": {
+      "en": "Satan, devil, evil one",
+      "headword": "शैतान, दुष्ट, वह दुष्ट",
+      "source": "tw-hi-kt-satan",
+      "refs": ["2:18"]
+    },
+    "kt/save": {
+      "en": "save, saved, safe, salvation, rescue",
+      "headword": "बचाना, बचाया, सुरक्षित, उद्धार",
+      "source": "tw-hi-kt-save",
+      "refs": ["2:16", "5:8", "5:9"]
+    },
+    "kt/sin": {
+      "en": "sin, sinful, sinner, sinning",
+      "headword": "पाप, पापी, पापी, पाप करते रहना",
+      "source": "tw-hi-kt-sin",
+      "refs": ["2:16"]
+    },
+    "kt/sonofgod": {
+      "en": "Son of God, the Son",
+      "headword": "परमेश्वर का पुत्र, पुत्र",
+      "source": "tw-hi-kt-sonofgod",
+      "refs": ["1:10"]
+    },
+    "kt/soul": {
+      "en": "soul, self",
+      "headword": "प्राण, स्वयं, व्यक्ति",
+      "source": "tw-hi-kt-soul",
+      "refs": ["2:8", "5:23"]
+    },
+    "kt/spirit": {
+      "en": "spirit, wind, breath",
+      "headword": "आत्मा, हवा, सांस",
+      "source": "tw-hi-kt-spirit",
+      "refs": ["5:23"]
+    },
+    "kt/tempt": {
+      "en": "tempt, temptation",
+      "headword": "परीक्षा करना, परीक्षा",
+      "source": "tw-hi-kt-tempt",
+      "refs": ["3:5"]
+    },
+    "kt/test": {
+      "en": "test, tested, testing, testing in the fire",
+      "headword": "परखना, परखा, परीक्षण, अग्नि परीक्षा",
+      "source": "tw-hi-kt-test",
+      "refs": ["2:4", "5:21"]
+    },
+    "kt/testimony": {
+      "en": "testimony, testify, witness, eyewitness, evidence",
+      "headword": "गवाही, गवाही देना, साक्षी, साक्षात गवाह",
+      "source": "tw-hi-kt-testimony",
+      "refs": ["2:5", "2:10", "2:12"]
+    },
+    "kt/trust": {
+      "en": "trust, trusted, trustworthy, trustworthiness",
+      "headword": "विश्वास,विश्वास किया, विश्वासयोग्य, विश्वासयोग्यता",
+      "source": "tw-hi-kt-trust",
+      "refs": ["2:4"]
+    },
+    "kt/willofgod": {
+      "en": "will of God",
+      "headword": "परमेश्‍वर की इच्छा",
+      "source": "tw-hi-kt-willofgod",
+      "refs": ["4:3", "5:18"]
+    },
+    "kt/wordofgod": {
+      "en": "word of God, word of Yahweh, word of the Lord, word of truth, scripture",
+      "headword": "परमेश्‍वर का वचन, परमेश्वर का वचन, यहोवा के वचन, सत्य का वचन, पवित्रशास्त्र,",
+      "source": "tw-hi-kt-wordofgod",
+      "refs": ["1:8", "2:13", "4:15"]
+    },
+    "kt/wrath": {
+      "en": "wrath, fury",
+      "headword": "क्रोध, रोष",
+      "source": "tw-hi-kt-wrath",
+      "refs": ["1:10", "2:16", "5:9"]
+    },
+    "names/judea": {
+      "en": "Judea, Judah",
+      "headword": "यहूदिया",
+      "source": "tw-hi-names-judea",
+      "refs": ["2:14"]
+    },
+    "names/macedonia": {
+      "en": "Macedonia",
+      "headword": "मकिदुनिया",
+      "source": "tw-hi-names-macedonia",
+      "refs": ["1:7", "1:8", "4:10"]
+    },
+    "names/paul": {
+      "en": "Paul, Saul",
+      "headword": "पौलुस, शाऊल",
+      "source": "tw-hi-names-paul",
+      "refs": ["1:1", "2:18"]
+    },
+    "names/philippi": {
+      "en": "Philippi, Philippians",
+      "headword": "फिलिप्पी, फिलिप्पियों",
+      "source": "tw-hi-names-philippi",
+      "refs": ["2:2"]
+    },
+    "names/silas": {
+      "en": "Silas, Silvanus",
+      "headword": "सीलास, सिलवानुस",
+      "source": "tw-hi-names-silas",
+      "refs": ["1:1"]
+    },
+    "names/thessalonica": {
+      "en": "Thessalonica, Thessalonian",
+      "headword": "थिस्सलुनिके, थिस्सलुनीकियों, थिस्सलुनीकियों",
+      "source": "tw-hi-names-thessalonica",
+      "refs": ["1:1"]
+    },
+    "names/timothy": {
+      "en": "Timothy",
+      "headword": "तीमुथियुस",
+      "source": "tw-hi-names-timothy",
+      "refs": ["1:1", "3:2", "3:6"]
+    },
+    "other/acknowledge": {
+      "en": "acknowledge, admit, admitted",
+      "headword": "मानना, स्वीकार करना, अंगीकार किया",
+      "source": "tw-hi-other-acknowledge",
+      "refs": ["5:12"]
+    },
+    "other/admonish": {
+      "en": "admonish, warned, aware",
+      "headword": "चिताना, चेतावनी, चेतावनी देने",
+      "source": "tw-hi-other-admonish",
+      "refs": ["5:12", "5:14"]
+    },
+    "other/afflict": {
+      "en": "afflict, affliction, distress",
+      "headword": "दुःखित, मारेगा, दुःख, क्लेश",
+      "source": "tw-hi-other-afflict",
+      "refs": ["3:3", "3:7"]
+    },
+    "other/avenge": {
+      "en": "avenge, avenger, revenge, vengeance",
+      "headword": "बदला लेना, पलटा लेनेवाला, पलटा लिया, बदला",
+      "source": "tw-hi-other-avenge",
+      "refs": ["4:6"]
+    },
+    "other/bear": {
+      "en": "bear, bearer, bore, borne, produce, produced",
+      "headword": "सहना, सह लेने वाला, ढोना",
+      "source": "tw-hi-other-bear",
+      "refs": ["3:1", "3:5"]
+    },
+    "other/biblicaltimeday": {
+      "en": "day",
+      "headword": "दिन, दिनों",
+      "source": "tw-hi-other-biblicaltimeday",
+      "refs": ["2:9", "3:10", "5:2", "5:4", "5:5", "5:8"]
+    },
+    "other/biblicaltimehour": {
+      "en": "hour, moment",
+      "headword": "पहर, घंटे, तत्काल, क्षण भर के लिए",
+      "source": "tw-hi-other-biblicaltimehour",
+      "refs": ["2:17"]
+    },
+    "other/breastplate": {
+      "en": "breastplate, breastpiece",
+      "headword": "झिलम, झिलमें, चपरास",
+      "source": "tw-hi-other-breastplate",
+      "refs": ["5:8"]
+    },
+    "other/crown": {
+      "en": "crown, crowned",
+      "headword": "मुकुट, मुकुट पहनाना, मुकुट रखा",
+      "source": "tw-hi-other-crown",
+      "refs": ["2:19"]
+    },
+    "other/deceive": {
+      "en": "deceive, lie, deception, illusion",
+      "headword": "धोखा, धोखा देनेवाले, धोखा दिया, छलता, छली, धोखेबाज, धोखेबाजों, छलपूर्ण, धूर्तता से, छल में, छलता, छली",
+      "source": "tw-hi-other-deceive",
+      "refs": ["2:3"]
+    },
+    "other/deliverer": {
+      "en": "deliver, deliverer, deliverance, delivered",
+      "headword": "छुड़ाना, सौंपना, छुड़ाया जाना, छुटकारा दिलाने वाला ,छुटकारा",
+      "source": "tw-hi-other-deliverer",
+      "refs": ["1:10"]
+    },
+    "other/drunk": {
+      "en": "drunk, drunkard",
+      "headword": "मतवाले, पियक्कड़",
+      "source": "tw-hi-other-drunk",
+      "refs": ["5:7"]
+    },
+    "other/envy": {
+      "en": "envy, covet, jealous, jealousy",
+      "headword": "डाह, लालच",
+      "source": "tw-hi-other-envy",
+      "refs": ["2:5"]
+    },
+    "other/fornication": {
+      "en": "sexual immorality, immorality, immoral, fornication",
+      "headword": "व्यभिचार, व्यभिचार, अनैतिक, परस्त्रीगमन",
+      "source": "tw-hi-other-fornication",
+      "refs": ["4:3"]
+    },
+    "other/joy": {
+      "en": "joy, joyful, rejoice, glad",
+      "headword": "आनन्द, आनन्दित, आनन्द करे, प्रसन्न",
+      "source": "tw-hi-other-joy",
+      "refs": ["1:6", "2:19", "2:20", "3:9", "5:16"]
+    },
+    "other/kiss": {
+      "en": "kiss",
+      "headword": "चुम्बन, चूमा/चूमना",
+      "source": "tw-hi-other-kiss",
+      "refs": ["5:26"]
+    },
+    "other/know": {
+      "en": "know, knew, knowledge, known, unknown, distinguish",
+      "headword": "जानना, जानता है, जानता था, जानना, ज्ञान, ज्ञात, प्रकट करना, ज्ञात करता है, ज्ञात करता है, अज्ञात, पहले से जानना, पूर्वज्ञान",
+      "source": "tw-hi-other-know",
+      "refs": [
+        "1:4",
+        "1:5",
+        "2:1",
+        "2:2",
+        "2:5",
+        "2:11",
+        "3:3",
+        "3:4",
+        "3:5",
+        "4:2",
+        "4:4",
+        "4:5",
+        "5:2"
+      ]
+    },
+    "other/labor": {
+      "en": "labor, labors, labored, laboring, laborer, work, hard work",
+      "headword": "परिश्रम, श्रमिक, श्रम, कठोर परिश्रम",
+      "source": "tw-hi-other-labor",
+      "refs": ["1:3", "2:9", "3:5", "4:11", "5:12"]
+    },
+    "other/lust": {
+      "en": "lust, lustful, passion, desire",
+      "headword": "अभिलाषा, कामुक, मनोभाव, लालसाएं",
+      "source": "tw-hi-other-lust",
+      "refs": ["4:5"]
+    },
+    "other/overtake": {
+      "en": "overtake",
+      "headword": "आ पड़े, घेरना",
+      "source": "tw-hi-other-overtake",
+      "refs": ["5:4"]
+    },
+    "other/patient": {
+      "en": "patient, patience, impatient",
+      "headword": "धीरजवन्त, धीरज, अधीर",
+      "source": "tw-hi-other-patient",
+      "refs": ["5:14"]
+    },
+    "other/peace": {
+      "en": "peace, peaceful, peacemaker",
+      "headword": "शान्ति,शान्त, शांतिपूर्ण, शांतिपूर्वक, शंतियोग्य, शांति बनाने वाले",
+      "source": "tw-hi-other-peace",
+      "refs": ["1:1", "5:3", "5:13", "5:23"]
+    },
+    "other/plead": {
+      "en": "plea, plead, please, beg, implore",
+      "headword": "गिड़गिड़ाना, विनती, मुकद्दमा, वाद विवाद करना, गिड़गिड़ाकर, निवेदन करता, निवेदन",
+      "source": "tw-hi-other-plead",
+      "refs": ["3:10"]
+    },
+    "other/possess": {
+      "en": "possess, possessed, possession, dispossess",
+      "headword": "अधिकार में लेना, अधिकार में लिया, कब्ज़ा, वंचित करना",
+      "source": "tw-hi-other-possess",
+      "refs": ["4:4"]
+    },
+    "other/preach": {
+      "en": "preach, preaching, preacher, proclaim, proclamation",
+      "headword": "प्रचार करना, प्रचार, प्रचारक, घोषणा करना, उद्घोषणा",
+      "source": "tw-hi-other-preach",
+      "refs": ["2:9"]
+    },
+    "other/quench": {
+      "en": "quench, quenched, unquenchable",
+      "headword": "बुझाना, बुझेगी, नहीं बुझती",
+      "source": "tw-hi-other-quench",
+      "refs": ["5:19"]
+    },
+    "other/receive": {
+      "en": "receive, welcome, taken up, acceptance",
+      "headword": "ग्रहण करना, स्वागत करना, बीड़ा उठाया, ग्राह्यता",
+      "source": "tw-hi-other-receive",
+      "refs": ["1:6", "2:13", "4:1"]
+    },
+    "other/reject": {
+      "en": "reject, rejected, rejection",
+      "headword": "अस्वीकार करना, त्याग कर दिया, परित्याग",
+      "source": "tw-hi-other-reject",
+      "refs": ["4:8"]
+    },
+    "other/report": {
+      "en": "report, reported, tell, reputation",
+      "headword": "समाचार, समाचारों, समाचार दिया",
+      "source": "tw-hi-other-report",
+      "refs": ["1:9"]
+    },
+    "other/seek": {
+      "en": "seek, search, look for",
+      "headword": "ढूँढ़े, ढूँढ़ते हैं, खोजना, मांगा",
+      "source": "tw-hi-other-seek",
+      "refs": ["2:6"]
+    },
+    "other/servant": {
+      "en": "servant, serve, maidservant, young man, young women",
+      "headword": "सेवा करना, दास बनाना, दास बना दिया, सेवक, सेवकों, दास, दासों, दासत्व, दासी",
+      "source": "tw-hi-other-servant",
+      "refs": ["1:9", "3:2"]
+    },
+    "other/suffer": {
+      "en": "suffer, suffering",
+      "headword": "दुःख उठाना, कष्ट",
+      "source": "tw-hi-other-suffer",
+      "refs": ["2:2", "2:14", "3:4"]
+    },
+    "other/thief": {
+      "en": "thief, thieves, rob, robber, robbery, bandit",
+      "headword": "चोर, लूटना, लूटेरा, लूटना, डाकू",
+      "source": "tw-hi-other-thief",
+      "refs": ["5:2", "5:4"]
+    },
+    "other/tribulation": {
+      "en": "tribulation, distress, distresses, trouble",
+      "headword": "विपत्ति, क्लेश, दुःख",
+      "source": "tw-hi-other-tribulation",
+      "refs": ["1:6"]
+    },
+    "other/trumpet": {
+      "en": "trumpet, trumpeter",
+      "headword": "तुरही, तुरही फूँकनेवालों",
+      "source": "tw-hi-other-trumpet",
+      "refs": ["4:16"]
+    },
+    "other/vain": {
+      "en": "vain, vanity",
+      "headword": "व्यर्थ, निस्सारता",
+      "source": "tw-hi-other-vain",
+      "refs": ["2:1", "3:5"]
+    },
+    "other/watch": {
+      "en": "watch, guard, take heed, beware",
+      "headword": "चौकस, ताकता, देखा, देख रहा था, द्वारपाल, पहरुओं, जागते रहना",
+      "source": "tw-hi-other-watch",
+      "refs": ["5:6"]
+    },
+    "other/womb": {
+      "en": "womb",
+      "headword": "गर्भ",
+      "source": "tw-hi-other-womb",
+      "refs": ["5:3"]
+    },
+    "other/wrong": {
+      "en": "wrong, wronged, wrongdoer, mistreat, hurt, hurtful",
+      "headword": "बुरा, गलत करना, बुरा करनेवाला, दुर्व्यवहार, चोट पहुँचाना, कष्टदायक",
+      "source": "tw-hi-other-wrong",
+      "refs": ["4:6"]
+    }
+  },
+  "gaps": {
+    "kt/call-speakloudly": "no-article",
+    "kt/church": "no-heading",
+    "other/age-timeperiod": "no-article"
+  }
+}

@@ -278,9 +278,8 @@ Related, not a decision: the dataset writes BCP 47 tags in their usual case,
 ## Every book (#30)
 
 Measured on 2026-10-29 at the pinned commits above, unless labelled. The
-code for every book lands first with the build still Titus-only
-(`GLOSSARY_BOOKS = ["TIT"]` in `scripts/lib/glossaries.ts`); the switch to
-`TWL_BOOKS` and the generated data follow as their own change.
+code landed first (#52) with the build still Titus-only; `GLOSSARY_BOOKS`
+is now `TWL_BOOKS`, and the 59 books' pins and glossaries are committed.
 
 ### What running it over every book broke
 
@@ -352,21 +351,26 @@ still have an English headword.
 | Bend   | applied  | Unchanged from Titus: the English TWL for every language.                                                                                      |
 | Break  | observed | The seven above, each from running the pin script and the build over all 59 books.                                                             |
 | Beget  | skipped  | No owner yet. To ask: the `en_twl` team (seven unreleased books, the `arc` link), the Arabic tW team (638 English headwords), hi and id teams. |
-| Bide   | waiting  | The seven books: tripwire is an `en_twl` release with them, or the maintainer's choice of another source (below), whichever is first.          |
+| Bide   | waiting  | The seven books (maintainer's decision): tripwire is an `en_twl` release with them (#57).                                                      |
 | Build  | minimal  | `TWL_BOOKS`, `c:front`, `_` in ids, per-release absent lists, the `no-heading` gap, one read of `sources.json`: one per Break, nothing else.   |
 
 Reversibility: forward = low; backward = low. All generated from pins.
 
-### Open for the maintainer
+### Decided by the maintainer (2026-10-29)
 
-- **The seven books without a released TWL.** Wait for an `en_twl` release
-  (current behaviour: no glossary), pin `en_twl` master at a commit
-  (unreleased work), or use an older full copy (`ru_gl/ru_twl` v6). Not
-  measured: how those copies differ from `en_twl` for those books.
-- **Size.** 26.6 MB of generated glossaries and a 4.1 MB `sources.json` go
-  into git. A CI build fetches all 7,951 glossary pins from Door43 each run
-  (no cache); measured cold 3 min 37 s for the pin script, which fetches
-  the same files.
+- **The seven books without a released TWL: wait for a release.** No
+  glossary for them now; a known gap in the CHANGELOG. #57 asks the content
+  team whether an `en_twl` release with them is coming. Not chosen: pinning
+  `en_twl` master (unreleased work) or an older full copy
+  (`ru_gl/ru_twl` v6).
+- **Size: commit it, and cache CI's downloads.** 26.6 MB of glossaries and
+  a 4.1 MB `sources.json` go into git. CI caches `.cache/sources/` keyed on
+  the hash of `sources.json`, so it fetches from Door43 only when pins
+  change. A stale or partial cache cannot change the data: each file is
+  named by its id and pinned SHA-256 and hash-checked on every read
+  (`scripts/lib/sources.ts`). Checked locally: a cached file overwritten
+  with other bytes was refused and deleted, and the next run fetched it
+  again, byte-identical.
 
 ## Not done
 
