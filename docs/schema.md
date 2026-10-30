@@ -140,7 +140,8 @@ letters, digits and `. _ : -`, at most 64 characters).
 - `status`, in order: `unreviewed`, `ai-checked`, `human-reviewed`,
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
-- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
+- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<handle>`, a
+  handle the reviewer chose or the maintainer assigned, never a display name.
 - `name` is the book's name in this language; it becomes the package
   `title`. In English it is BSB's `\h` (`bsb-<book>`, `unreviewed`), except
   for two books whose BSB name reads wrong ("Psalm", "Song"): Psalms and
@@ -187,8 +188,14 @@ never calls a model. Such a record also has:
   even when the checker agreed.
 
 An English check's `criteria` are `accurate`, `covers`, `plain` and `style`.
-A person's review is recorded by a later change as `review` (`by`, `at`,
-`status`, and `text` when the reviewer reworded the title).
+A person's review is `review`: `by` (`reviewer:<handle>`), `at` (a date),
+`status`, and `text` only when their wording differs from the draft's, with
+`why` when they gave a reason and `saved`, the time the applied record was
+saved. A later review replaces the whole entry, its reason included. The
+build takes the review's status, and its wording with the reviewer as
+`source`. Reviews come from the review artifact through
+`scripts/review/apply.ts` (below, "Review exports";
+[scoping/review-apply.md](scoping/review-apply.md)).
 
 A translated draft (`<lang>` other than `en`) has the same record, keyed by
 every titled key in the English table (pericopes and segments), plus `from`,
@@ -206,6 +213,70 @@ for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 gate passed); anything else stays `unreviewed` and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
 
+### Review exports
+
+The review artifact (a claude.ai page with its own database, not in this
+repo) keeps one answer document per reviewer and title, at
+`reviews/<uid>/answers/<lang>~<key>`. A work session that can read the
+artifact's database exports one reviewer's answers to a file outside the
+repo:
+
+```json
+{
+  "schema": "bp.review-export",
+  "v": 2,
+  "reviewer": "reviewer:reader-7",
+  "records": [
+    {
+      "at": "2026-10-29T23:53:12.331Z",
+      "changed": false,
+      "key": "TIT.1.1-3",
+      "lang": "en",
+      "ms": 5826,
+      "note": "",
+      "pick": "keep",
+      "shown": [],
+      "text": "Paul introduces himself as God’s servant and apostle",
+      "v": 1
+    }
+  ]
+}
+```
+
+- `reviewer`: `reviewer:` and a handle the session assigns (lower-case
+  letters, digits and inner hyphens, at most 39 characters). The `<uid>` in
+  the document path is an account identifier: it stays out of the export and
+  the repo. One reviewer per file; `apply.ts` takes several files as one
+  batch.
+- `records`: the answer documents, unchanged, with exactly the fields above.
+  `v` is 1; `at` is an ISO 8601 UTC time; `ms` the milliseconds spent;
+  `shown` is empty.
+- `pick` is `keep` or `change`, and `changed` is true exactly for `change`.
+  For a keep, `text` is the wording the reviewer was shown, and a keep whose
+  `text` is no longer the title is stale. For a change, `text` is the
+  reviewer's wording and `note` (required) the reason. A change does not
+  record the wording it replaced, so it is applied only while the title is
+  still the draft's own wording; a title a person has already reworded is
+  refused.
+- The artifact's blind-comparison tabs write answers whose `pick` is a
+  candidate id or `both`, with `shown` listing candidates. They are not title
+  reviews: an export holding one is refused whole.
+
+`node scripts/review/apply.ts <export.json>... [--dry-run]` checks every
+record before writing anything: an unknown language, book or key, a stale
+keep, a change without a reason, wording that fails the gates any title
+passes, a record more than an hour in the future or two records from one
+reviewer for one title stop the whole batch. A translated title's wording is
+gated against the English title: its English draft, else the built
+`data/titles/en/` table. Records apply oldest first, each against the
+wording the ones before it left, so a second reviewer's keep of a first
+one's change applies, and a second change to one title is refused (above).
+A keep never lowers a status, and a change is `human-reviewed`. Each review
+replaces the title's `review` whole: a keep of an `approved` title stays
+`approved`, but `by` becomes the reviewer who kept it. A record saved no later than a title's `review.saved`
+was applied before (or overtaken) and is passed over, so the same export
+can be run again. It prints the table for the PR body.
+
 ## `data/glossaries/<lang>/<BOOK>.json`
 
 The key terms Translation Word Links link from a book, each with its
@@ -217,8 +288,10 @@ translation reads it.
 
 For zh-Hans, which has no Translation Words, the file is built from
 `data/glossary-drafts/zh-Hans/<BOOK>.json` (below) instead: each term also
-carries `source` (`ai:<model>`), `status` and the check, the file names both
-models under `models`, and `review` lists the terms that are `unreviewed`
+carries `source` (`ai:<model>`, or the reviewer's `reviewer:<…>` once a
+person has changed its headword), `status`, the check and, once a person has
+reviewed it, the term's `review` (below); the file names both models under
+`models`, and the file's own `review` lists the terms that are `unreviewed`
 (the checker disagreed or a gate failed). Title translation uses a term with
 a `status` only once it is `human-reviewed` or `approved`.
 
@@ -245,8 +318,64 @@ commit, not a rebuild.
   `check` (`by`, `verdict`, and for a disagreement `why` and `suggestion`).
   A term is `ai-checked` only when the checker agreed and every gate passed.
 
-A reader's review is recorded here by a later change; until then nothing is
-above `ai-checked`.
+A reader's review is recorded in this same file, by hand, as the maintainer
+decided on #53: the term's `status` is raised to `human-reviewed` and the term
+gains `review`, with `by`, `at` and, when the reader changed the headword,
+`text`, named as a title's review is in `data/drafts/`. An illustration (no
+review is recorded yet; the committed Titus term is `ai-checked`):
+
+```json
+"other/elder": {
+  "en": "elder",
+  "headword": "长老",
+  "source": "ai:google/gemini-3.8-flash",
+  "status": "human-reviewed",
+  "reference": "elder",
+  "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+  "review": { "by": "reviewer:zh-hans-reader", "at": "2026-10-30" }
+}
+```
+
+- `by`: `reviewer:<role>` (letters, digits and hyphens), or
+  `reviewer:<github-handle>` for a contributor who chose to be named. No
+  personal names (AGENTS.md, "Privacy").
+- `at`: the date of the review, `YYYY-MM-DD`.
+- Without `text`, the reviewer accepts the headword as drafted.
+- `text`: the reader's headword, when they changed it, as the maintainer
+  decided on #53 (30 Oct). Recorded as a reworded title is in `data/drafts/`
+  (`review.text`): the term's `headword` and `source` in this file stay the
+  model's, and the built term in `data/glossaries/` takes `text` as its
+  `headword`, with `review.by` as its `source`. For the illustration above
+  with the checker's 长老 replacing a drafted 长者, the record keeps
+  `"headword": "长者"` and `"source": "ai:<model>"`, and adds
+  `"text": "长老"` to `review`; the built term has `"headword": "长老"`,
+  `"source": "reviewer:zh-hans-reader"` and `"drafted": "长者"`.
+- Everything the models recorded stays as it was: `headword`, `source`
+  (`ai:<model>`), `check` and `gates`. AI output is never relabelled.
+- Git keeps the history: the commit that adds the review is the record of
+  the change.
+
+Where this differs from a title's review, and why: a title's `review` also
+carries its own `status`; a term's status is the term's `status`, raised to
+`human-reviewed` (decided on #53), so `review` has none. A changed headword
+must differ from the drafted one (the same headword under the reviewer's name
+would relabel AI output) and pass every gate the drafted one was put through
+(`script`, `latin-letters`, `line-break`, `reference`); a title review's
+`text` is held to non-empty and trimmed by tests/drafts.test.ts, and a term's
+`text` is also held to NFC, as a drafted headword is. The built term carries
+no `gates` once its headword is the reader's (they described the model's).
+It keeps `check`, and gains `drafted`, the model's headword: `check` does not
+record the headword it judged, and on a changed term that is `drafted`, not
+`headword`. `drafted` is present only on a changed term.
+
+The build refuses `human-reviewed` without a `review`; a `review` without a
+`by` and `at` in those forms, with any field but `by`, `at` and `text`, or
+with a `text` that is not a trimmed, non-empty NFC string; a `review` on a
+term whose status is not `human-reviewed`; a `text` equal to the drafted
+headword or failing a gate; a term whose `source` in this file is not the
+drafting model; and any status above `human-reviewed`. Without a review,
+nothing is above `ai-checked`. The built term keeps its `status` and `review`,
+so title translation can use it.
 
 ## `dist/tc-mobile/`
 
@@ -374,7 +503,9 @@ check the bump yet.
    `<BOOK>.json` and `titles.<lang>.<BOOK>.json` with a known book code, so
    no name holds a tab, CR, LF or `#`, which the release script's
    `<name><TAB><file>` lines or `gh release create`'s `file#label` would
-   misread.
+   misread. The release also stops if two files would share an asset name,
+   since the script copies each file under its name and a second copy would
+   replace the first. A name in a problem message is JSON-quoted.
 5. The packages and title tables are attached to a **draft** release,
    published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as

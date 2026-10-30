@@ -35,6 +35,29 @@ export const isAssetName = (name: string): boolean => {
     : LANGUAGE_TAG.test(table[1]!) && packageBook(table[2]!) !== null;
 };
 
+/**
+ * Why `names`, the asset names of one release, cannot be attached: each
+ * distinct name outside the grammar, and each name held by more than one
+ * file, sorted by name. Names are JSON-quoted, as they may hold a tab, CR
+ * or LF. run.sh copies each file to `<stage>/<name>`, so a repeated name
+ * would overwrite the first copy and attach one file silently; checkAssets
+ * cannot build such a list today, and this is the guard if that changes.
+ */
+export const assetNameProblems = (names: readonly string[]): string[] => {
+  const count = new Map<string, number>();
+  for (const name of names) count.set(name, (count.get(name) ?? 0) + 1);
+  return [...count.keys()]
+    .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+    .flatMap((name) => [
+      ...(isAssetName(name)
+        ? []
+        : [`${JSON.stringify(name)}: not a release asset name`]),
+      ...(count.get(name)! > 1
+        ? [`${JSON.stringify(name)}: two files share this asset name`]
+        : []),
+    ]);
+};
+
 const isObject = (v: unknown): boolean =>
   typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -88,7 +111,9 @@ export const titleAssetName = (language: string, book: string): string =>
  *   something other than an object), the table says the package failed
  *   validation rather than that it is missing.
  * - Every asset name is in the allowlisted grammar above, so none holds a
- *   tab, CR, LF or `#`, and no two share a name.
+ *   tab, CR, LF or `#`, and no two share a name (assetNameProblems).
+ * - Every name in a message is JSON-quoted where it may hold a tab, CR or
+ *   LF, which would split the CLI's "::error::" line.
  */
 const kind = (e: Dirent) =>
   e.isDirectory() ? "directory" : e.isSymbolicLink() ? "symlink" : "entry";
@@ -104,7 +129,9 @@ export function checkAssets(dir: string, tag: string): Assets {
   const tables: { file: string; language: string; book: string }[] = [];
   for (const e of below) {
     if (!e.isFile()) {
-      problems.push(`${at(e)}: nested ${kind(e)} is not a regular file`);
+      problems.push(
+        `${JSON.stringify(at(e))}: nested ${kind(e)} is not a regular file`
+      );
       continue;
     }
     const parts = at(e).split(sep);
@@ -117,7 +144,10 @@ export function checkAssets(dir: string, tag: string): Assets {
       packageBook(name) === book
     )
       tables.push({ file: join(e.parentPath, e.name), language, book });
-    else problems.push(`${at(e)}: nested file has no release asset name`);
+    else
+      problems.push(
+        `${JSON.stringify(at(e))}: nested file has no release asset name`
+      );
   }
   problems.sort();
   const files: string[] = [];
@@ -130,11 +160,13 @@ export function checkAssets(dir: string, tag: string): Assets {
     else if (e.isFile() && e.name === ".gitkeep") continue;
     else if (e.isDirectory() && !e.name.endsWith(".json")) continue;
     else if (e.isFile())
-      // Quoted: the name may hold a tab, CR or LF.
       problems.push(
         `${JSON.stringify(e.name)}: top-level file is not a package <BOOK>.json`
       );
-    else problems.push(`${e.name}: top-level ${kind(e)} is not a regular file`);
+    else
+      problems.push(
+        `${JSON.stringify(e.name)}: top-level ${kind(e)} is not a regular file`
+      );
   }
   if (files.length === 0) problems.push(`${dir} has no packages`);
   const read = (file: string): Record<string, unknown> | null => {
@@ -206,13 +238,7 @@ export function checkAssets(dir: string, tag: string): Assets {
   }
   assets.sort(byName);
   // Already true of every name built above; checked here because run.sh and
-  // `gh` rely on it.
-  for (let i = 0; i < assets.length; i++) {
-    const { name } = assets[i]!;
-    if (!isAssetName(name))
-      problems.push(`${JSON.stringify(name)}: not a release asset name`);
-    else if (i > 0 && name === assets[i - 1]!.name)
-      problems.push(`${name}: two files share this asset name`);
-  }
+  // `gh` rely on it (tested on name lists directly).
+  problems.push(...assetNameProblems(assets.map((a) => a.name)));
   return { assets, problems };
 }

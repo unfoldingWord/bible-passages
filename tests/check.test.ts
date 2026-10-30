@@ -675,26 +675,28 @@ describe("checker command line", () => {
     expect(read("data/drafts/en/TIT.json")).toBe(before);
   });
 
-  it("refuses a ledger with an unknown book or language, or missing fields, with a clear message", () => {
-    const cases: [Record<string, unknown>, string][] = [
-      [{ book: "../TIT" }, "not a USFM book code"],
-      [{ languages: ["fr", "../x"] }, "not v0.1 language tags"],
-      [{ languages: ["fr", "toString"] }, "not v0.1 language tags"],
-      [{ glossaries: undefined }, "no glossary hashes"],
-      [{ english: undefined }, "no English hash"],
-      [{ model: "gemini" }, "cannot tell the model family"],
-      [{ glossaries: [] }, "no glossary hashes"],
-      [{ glossaries: {} }, "no glossary hash for fr"],
-      [{ glossaries: { fr: 7 } }, "no glossary hash for fr"],
-      [{ languages: ["fr", "fr"] }, "lists a language twice"],
-    ];
-    for (const [ledger, message] of cases) {
+  // One spawn per test, as in the key-terms command line tests (#111).
+  const ledgerCases: [Record<string, unknown>, string][] = [
+    [{ book: "../TIT" }, "not a USFM book code"],
+    [{ languages: ["fr", "../x"] }, "not v0.1 language tags"],
+    [{ languages: ["fr", "toString"] }, "not v0.1 language tags"],
+    [{ glossaries: undefined }, "no glossary hashes"],
+    [{ english: undefined }, "no English hash"],
+    [{ model: "gemini" }, "cannot tell the model family"],
+    [{ glossaries: [] }, "no glossary hashes"],
+    [{ glossaries: {} }, "no glossary hash for fr"],
+    [{ glossaries: { fr: 7 } }, "no glossary hash for fr"],
+    [{ languages: ["fr", "fr"] }, "lists a language twice"],
+  ];
+  it.each(ledgerCases)(
+    "refuses a ledger with an unknown book or language, or missing fields, with a clear message: %j",
+    (ledger, message) => {
       const r = run(["--run", fakeRun(ledger), "--model", MODELS.claude]);
       expect(r.status, message).toBe(1);
       expect(r.stderr, message).toContain(`check: `);
       expect(r.stderr, message).toContain(message);
     }
-  });
+  );
 
   it("refuses a run file that is not JSON or has no titles object", () => {
     for (const [body, message] of [

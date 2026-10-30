@@ -24,6 +24,9 @@ repos on 2026-10-28 and have not been re-run here.
 Reversibility: forward = low; backward = low. Reviews are data in the repo;
 the screen can be replaced without losing them.
 
+The sync step, applying the review artifact's answers to `data/drafts/`:
+[review-apply.md](review-apply.md).
+
 ## Open
 
 - Who reviews each language, and which titles must be reviewed before v0.1
