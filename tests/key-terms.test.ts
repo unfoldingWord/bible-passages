@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, type Dirent } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
@@ -8,7 +8,6 @@ import {
   twId,
   twlId,
   type Credit,
-  type Glossary,
   type TwlRow,
 } from "../scripts/lib/glossaries.ts";
 import {
@@ -53,6 +52,61 @@ function thrown(fn: () => unknown): string {
   }
   throw new Error("expected a throw");
 }
+
+// The English headword the build is given for article `a`, read from the
+// book's English glossary as parsed JSON. It must be a non-empty string; if
+// not, the error says why: no glossary, no term, or a headword that is
+// missing, blank or of another runtime type.
+function englishHeadword(en: unknown, a: string): string {
+  const fail = (why: string) => {
+    throw new Error(`en: no headword for ${a} (${why})`);
+  };
+  const isObject = (v: unknown): v is Record<string, unknown> =>
+    typeof v === "object" && v !== null && !Array.isArray(v);
+  if (!isObject(en))
+    return fail(`no glossary: ${en === null ? "null" : typeof en}`);
+  const terms = en.terms;
+  if (!isObject(terms)) return fail("glossary has no terms");
+  const term = Object.hasOwn(terms, a) ? terms[a] : undefined;
+  if (!isObject(term)) return fail("term not in the glossary");
+  const word = term.headword;
+  if (word === undefined) return fail("headword missing");
+  if (typeof word !== "string")
+    return fail(`headword is ${word === null ? "null" : `a ${typeof word}`}`);
+  if (word.trim() === "") return fail("headword blank");
+  return word;
+}
+
+describe("englishHeadword (the English lookup the record test gives the build)", () => {
+  const g = (term: unknown) => ({ terms: { "kt/apostle": term } });
+  const cases: [string, unknown, string][] = [
+    ["a null glossary", null, "no glossary: null"],
+    ["a glossary that is not an object", "x", "no glossary: string"],
+    ["a glossary with no terms", {}, "glossary has no terms"],
+    ["a missing term", { terms: {} }, "term not in the glossary"],
+    ["a null term", g(null), "term not in the glossary"],
+    ["a missing headword", g({}), "headword missing"],
+    ["a null headword", g({ headword: null }), "headword is null"],
+    ["an empty headword", g({ headword: "" }), "headword blank"],
+    ["a blank headword", g({ headword: "  " }), "headword blank"],
+    ["a number", g({ headword: 0 }), "headword is a number"],
+  ];
+  it.each(cases)("refuses %s, saying why", (_name, en, why) => {
+    expect(thrown(() => englishHeadword(en, "kt/apostle"))).toBe(
+      `en: no headword for kt/apostle (${why})`
+    );
+  });
+  it("returns a headword that is non-empty text", () => {
+    expect(englishHeadword(g({ headword: "apostle" }), "kt/apostle")).toBe(
+      "apostle"
+    );
+  });
+  it("does not read an inherited property as a term", () => {
+    expect(thrown(() => englishHeadword({ terms: {} }, "toString"))).toBe(
+      "en: no headword for toString (term not in the glossary)"
+    );
+  });
+});
 
 describe("parseFia", () => {
   it("reads name and localizedName, each pair once, sorted", () => {
@@ -956,31 +1010,43 @@ describe("assertBuiltTerms", () => {
 // Every committed record, whatever its language or book: the build
 // (buildDraftGlossary) enforces the invariants; these tests re-derive them
 // from the committed files.
-const files = readdirSync(new URL("data/glossary-drafts/", root), {
+//
+// Each entry is classed by its own type, not its target's: a symlink is
+// classed `symlink` whatever it points to, and so is never a language
+// directory or a record.
+const kindOf = (e: Dirent) =>
+  e.isFile()
+    ? "file"
+    : e.isDirectory()
+      ? "directory"
+      : e.isSymbolicLink()
+        ? "symlink"
+        : "other";
+// Every entry of data/glossary-drafts/, listed whatever it is; only real
+// directories are read below, and the next test fails by name on the rest.
+const languages = readdirSync(new URL("data/glossary-drafts/", root), {
   withFileTypes: true,
-})
-  .filter((e) => e.isDirectory())
-  .flatMap((e) =>
-    readdirSync(new URL(`data/glossary-drafts/${e.name}/`, root), {
+}).map((e) => ({ name: e.name, kind: kindOf(e) }));
+const files = languages
+  .filter((l) => l.kind === "directory")
+  .flatMap((l) =>
+    readdirSync(new URL(`data/glossary-drafts/${l.name}/`, root), {
       withFileTypes: true,
-    }).map((f) => ({
-      name: `${e.name}/${f.name}`,
-      kind: f.isFile()
-        ? "file"
-        : f.isDirectory()
-          ? "directory"
-          : f.isSymbolicLink()
-            ? "symlink"
-            : "other",
-    }))
+    }).map((f) => ({ name: `${l.name}/${f.name}`, kind: kindOf(f) }))
   );
-// Only .json files are parsed below, while the file loads; anything else,
-// including a directory or a symlink named *.json, is left to the next test,
-// which fails with its name instead of a parse or read error. A record is a
-// regular file, so a symlink is named as one whatever it points to.
+// Only regular .json files are parsed below, while the file loads; anything
+// else, including a directory or a symlink named *.json, is left to the
+// guard test, which fails with its name instead of a parse or read error.
 const records = files
   .filter((f) => f.kind === "file" && f.name.endsWith(".json"))
   .map((f) => f.name);
+
+it("has only draft-language directories in data/glossary-drafts/", () => {
+  for (const { name, kind } of languages) {
+    expect(kind, name).toBe("directory");
+    expect(DRAFT_LANGUAGES[name], name).toBeDefined();
+  }
+});
 
 it("has only JSON records for draft languages in data/glossary-drafts/", () => {
   for (const { name, kind } of files) {
@@ -1091,21 +1157,16 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     const rows = parseTwl(await readSource(twlId(record.book)));
     // The English headwords the build passes come from its English glossary
     // for the book, committed as data/glossaries/en/<BOOK>.json.
-    const en = JSON.parse(
+    const en: unknown = JSON.parse(
       read(`data/glossaries/en/${record.book}.json`)
-    ) as Glossary | null;
+    );
     const lang = DRAFT_LANGUAGES[record.language];
     if (!lang) throw new Error(`${path}: not a draft language`);
     const glossary = buildDraftGlossary({
       record,
       file: path,
       rows,
-      english: (a) => {
-        const word: unknown = en?.terms?.[a]?.headword;
-        if (typeof word !== "string" || word.trim() === "")
-          throw new Error(`en: no headword for ${a}`);
-        return word;
-      },
+      english: (a) => englishHeadword(en, a),
       credit: (id) => {
         const pin = pins.get(id);
         if (!pin) throw new Error(`${id} is not pinned in sources.json`);
