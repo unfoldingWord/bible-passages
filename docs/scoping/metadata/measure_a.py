@@ -2,12 +2,54 @@
 """Metadata sizing for bible-passages #44, script A (Python, stdlib only).
 
 Usage: python3 -I measure_a.py <src-dir> <bsb-dir> <structure-dir> > a.json
+       python3 -I measure_a.py --line-markers <file.usfm>   (the marker-line counts of one file)
   <src-dir>        holds en_tn, en_tq, en_ta (v91 clones) and ta_<repo> clones
   <bsb-dir>        <BOOK>.usfm, the pinned BSB files (sha256 checked against sources.json)
   <structure-dir>  data/structure/ of this repo
 """
 import json, os, re, sys
 from collections import Counter
+
+
+def is_marker(line, name):
+    """The line starts with \\<name> followed by a space, a tab or the end of the line."""
+    tag = "\\" + name
+    return line.startswith(tag) and line[len(tag):len(tag) + 1] in ("", " ", "\t")
+
+
+def line_markers(text):
+    """Counts of marker lines, one rule for all four, the same rule step for step as
+    measure_b.mjs's lineMarkers: lines split at \\r\\n, \\r or \\n; a marker line starts
+    with the marker followed by a space, a tab or the end of the line (is_marker).
+      s1Markers  \\s1 lines
+      rMarkers   \\r lines
+      dMarkers   \\d lines
+      rAfterS1   \\r lines whose previous line is an \\s1 line, skipping blank lines (only
+                 spaces and tabs) and \\b lines (a \\b line may carry trailing text)."""
+    n = dict(s1Markers=0, rMarkers=0, dMarkers=0, rAfterS1=0)
+    prev_s1 = False
+    for line in re.split(r"\r\n|\r|\n", text):
+        if re.fullmatch(r"[ \t]*", line) or is_marker(line, "b"):
+            continue
+        here_s1 = is_marker(line, "s1")
+        n["s1Markers"] += here_s1
+        n["rMarkers"] += is_marker(line, "r")
+        n["dMarkers"] += is_marker(line, "d")
+        n["rAfterS1"] += is_marker(line, "r") and prev_s1
+        prev_s1 = here_s1
+    return n
+
+
+def read_usfm(path):
+    """A BSB file as text, read the same way here and in the --line-markers check."""
+    return open(path, encoding="utf-8").read()
+
+
+# python3 -I measure_a.py --line-markers <file.usfm>: print line_markers() of one file as
+# JSON and stop. The recipe in metadata.md runs it on a synthetic file of edge cases.
+if sys.argv[1:2] == ["--line-markers"]:
+    json.dump(line_markers(read_usfm(sys.argv[2])), sys.stdout, sort_keys=True)
+    sys.exit(0)
 
 SRC, BSB, STRUCT = sys.argv[1:4]
 BOOKS = ("GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG "
@@ -165,33 +207,9 @@ def has_text(text, start):
 PARA = {"m", "q1", "q2", "qr", "qa", "li", "li1", "li2", "pmo", "pc", "d", "s1", "s2", "r", "ms", "mr"}
 
 
-def is_marker(line, name):
-    """The line starts with \\<name> followed by a space, a tab or the end of the line."""
-    tag = "\\" + name
-    return line.startswith(tag) and line[len(tag):len(tag) + 1] in ("", " ", "\t")
-
-
-def s1_and_r_after_s1(text):
-    """(\\s1 lines, \\r lines whose previous line is an \\s1 line), walking lines and skipping
-    blank lines and \\b lines. The same rule, step for step, as measure_b.mjs's
-    s1AndRAfterS1: lines split at \\r\\n, \\r or \\n; blank means only spaces and tabs; a
-    marker is followed by a space, a tab or the end of the line (so a \\b line may carry
-    trailing text and is still skipped)."""
-    s1 = r_after = 0
-    prev_s1 = False
-    for line in re.split(r"\r\n|\r|\n", text):
-        if re.fullmatch(r"[ \t]*", line) or is_marker(line, "b"):
-            continue
-        here_s1 = is_marker(line, "s1")
-        s1 += here_s1
-        r_after += is_marker(line, "r") and prev_s1
-        prev_s1 = here_s1
-    return s1, r_after
-
-
 def bsb_book(book):
-    text = open(f"{BSB}/{book}.usfm", encoding="utf-8").read()
-    r = Counter(rMarkers=0, dMarkers=0)
+    text = read_usfm(f"{BSB}/{book}.usfm")
+    r = Counter()
     poetic, seen = {}, set()
     chap, verse, style = 0, 0, None
     # tokenise markers in order; a marker is \name followed by space/newline/end
@@ -211,12 +229,9 @@ def bsb_book(book):
             line_start = m.start() == 0 or text[m.start() - 1] == "\n"
             if not line_start:
                 continue
-            if name == "r":
-                r["rMarkers"] += 1
+            if name == "r":  # \r and \d lines are counted by line_markers, not here
                 line = text[m.start():text.find("\n", m.start())]
                 r["rRefs"] += len([x for x in re.split(r"[;,]", line[2:].strip(" ()")) if re.search(r"\d", x)])
-            if name == "d":
-                r["dMarkers"] += 1
             style = name
             if name in POETIC and chap and has_text(text, m.end()):
                 if verse == 0:  # chapter text before any \v: implicit verse 1
@@ -230,8 +245,8 @@ def bsb_book(book):
         vs = [cv for cv in seen if a <= cv <= b]
         n = sum(poetic.get(cv, False) for cv in vs)
         kinds["segmentsPoetry" if vs and n == len(vs) else "segmentsProse" if n == 0 else "segmentsMixed"] += 1
-    r["s1Markers"], r["rAfterS1"] = s1_and_r_after_s1(text)
     out = dict(r)
+    out.update(line_markers(text))
     out.update(verses=len(seen), poeticVerses=sum(poetic.values()), **kinds)
     return out
 

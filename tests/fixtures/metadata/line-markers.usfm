@@ -1,0 +1,27 @@
+\id TIT synthetic line-marker edge cases (tests/metadata-markers.test.ts)
+\c 1
+\s1 Heading one, CRLF
+\r (Ref 1, CRLF)
+\p
+\v 1 Verse text.
+\s1 Heading two, lone CR\r (Ref 2)
+\s1 Heading three
+ 	
+\b x
+\r (Ref 3)
+\s1 Heading four
+ 
+\r (Ref 4)
+\s1x not a heading
+\r (Ref 5)
+\s1	Heading five, tab
+\r-not a reference line
+\r (Ref 6)
+\s1
+\r	(Ref 7, tab)
+\r (no-break space)
+\d A title, CRLF
+\d no-break space
+\dx not a title
+\d
+\v 2 Verse text.

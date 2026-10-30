@@ -3,6 +3,7 @@
 // measure_a.py, written by a second model from a written spec without seeing script A.
 // Node 22 ESM, no dependencies.
 // Usage: node measure_b.mjs <work-dir> <structure-dir>
+//        node measure_b.mjs --line-markers <file.usfm>   (the marker-line counts of one file)
 //   <work-dir> holds src/ (en_tn, en_tq, en_ta, ta_<lang>_ta clones), bsb/<BOOK>.usfm and out/
 import fs from "node:fs";
 
@@ -14,6 +15,46 @@ const OUT = `${ROOT}/out/b.json`;
 
 const read = (p) => fs.readFileSync(p, "utf8");
 const cmp = (a, b) => a[0] - b[0] || a[1] - b[1];
+
+// The line starts with \<name> followed by a space, a tab or the end of the line.
+const isMarker = (line, name) => {
+  const tag = "\\" + name;
+  return (
+    line.startsWith(tag) &&
+    ["", " ", "\t"].includes(line.slice(tag.length, tag.length + 1))
+  );
+};
+// Counts of marker lines, one rule for all four, the same rule step for step as
+// measure_a.py's line_markers: lines split at \r\n, \r or \n; a marker line starts with
+// the marker followed by a space, a tab or the end of the line (isMarker).
+//   s1Markers  \s1 lines
+//   rMarkers   \r lines
+//   dMarkers   \d lines
+//   rAfterS1   \r lines whose previous line is an \s1 line, skipping blank lines (only
+//              spaces and tabs) and \b lines (a \b line may carry trailing text).
+// It takes the raw file text (read() keeps CR), not the \n-split lines below.
+const lineMarkers = (text) => {
+  const n = { s1Markers: 0, rMarkers: 0, dMarkers: 0, rAfterS1: 0 };
+  let prevS1 = false;
+  for (const line of text.split(/\r\n|\r|\n/)) {
+    if (/^[ \t]*$/.test(line) || isMarker(line, "b")) continue;
+    const hereS1 = isMarker(line, "s1");
+    if (hereS1) n.s1Markers++;
+    if (isMarker(line, "r")) n.rMarkers++;
+    if (isMarker(line, "d")) n.dMarkers++;
+    if (isMarker(line, "r") && prevS1) n.rAfterS1++;
+    prevS1 = hereS1;
+  }
+  return n;
+};
+
+// node measure_b.mjs --line-markers <file.usfm>: print lineMarkers() of one file as JSON
+// and stop. tests/metadata-markers.test.ts runs it on a synthetic file of edge cases.
+if (process.argv[2] === "--line-markers") {
+  const n = lineMarkers(read(process.argv[3]));
+  console.log(JSON.stringify(Object.fromEntries(Object.entries(n).sort())));
+  process.exit(0);
+}
 
 // ---------- books ----------
 const books = fs
@@ -316,32 +357,6 @@ const bsbNumeric = [
   "implicitVerse1Chapters",
   "implicitButFirstVIs1",
 ];
-// The line starts with \<name> followed by a space, a tab or the end of the line.
-const isMarker = (line, name) => {
-  const tag = "\\" + name;
-  return (
-    line.startsWith(tag) &&
-    ["", " ", "\t"].includes(line.slice(tag.length, tag.length + 1))
-  );
-};
-// [\s1 lines, \r lines whose previous line is an \s1 line], walking lines and skipping
-// blank lines and \b lines. The same rule, step for step, as measure_a.py's
-// s1_and_r_after_s1: lines split at \r\n, \r or \n; blank means only spaces and tabs; a
-// marker is followed by a space, a tab or the end of the line (so a \b line may carry
-// trailing text and is still skipped).
-const s1AndRAfterS1 = (text) => {
-  let s1 = 0,
-    rAfter = 0,
-    prevS1 = false;
-  for (const line of text.split(/\r\n|\r|\n/)) {
-    if (/^[ \t]*$/.test(line) || isMarker(line, "b")) continue;
-    const hereS1 = isMarker(line, "s1");
-    if (hereS1) s1++;
-    if (isMarker(line, "r") && prevS1) rAfter++;
-    prevS1 = hereS1;
-  }
-  return [s1, rAfter];
-};
 for (const b of books) {
   const lines = read(`${BSB}/${b}.usfm`)
     .split("\n")
@@ -375,10 +390,8 @@ for (const b of books) {
       pre = null;
     }
   };
-  [r.s1Markers, r.rAfterS1] = s1AndRAfterS1(read(`${BSB}/${b}.usfm`));
+  Object.assign(r, lineMarkers(read(`${BSB}/${b}.usfm`)));
   for (const line of lines) {
-    if (/^\\r(\s|$)/.test(line)) r.rMarkers++;
-    if (/^\\d(\s|$)/.test(line)) r.dMarkers++;
     let rest = line,
       textStart = 0;
     let m;

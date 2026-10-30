@@ -356,31 +356,46 @@ added to both scripts later (#84) by one author. For those counters the two
 scripts are two implementations, not two independent readings of a
 specification:
 
-- **`\s1` and `\r` after `\s1`** (#110): both scripts run the same line
-  walk (`s1_and_r_after_s1` in A, `s1AndRAfterS1` in B). Lines are split at
-  `\r\n`, `\r` or `\n`; a line of only spaces and tabs is blank; a marker
-  line starts with the marker followed by a space, a tab or the end of the
-  line. Blank lines and `\b` lines (with or without text after `\b`) are
-  skipped, and an `\r` line counts if the line before it is an `\s1` line.
-  So CRLF line ends, a lone `\r`, other whitespace (a no-break space line is
+- **`\s1`, `\r` and `\d` lines, and `\r` after `\s1`** (#110, #119): both
+  scripts count all four with the same line walk (`line_markers` in A,
+  `lineMarkers` in B). Lines are split at `\r\n`, `\r` or `\n`; a line of
+  only spaces and tabs is blank; a marker line starts with the marker
+  followed by a space, a tab or the end of the line, so `\s1x`, `\r-` and
+  `\d` followed by a no-break space are not marker lines. Blank lines and
+  `\b` lines (with or without text after `\b`) are skipped, and an `\r`
+  line counts as after an `\s1` if the line before it is an `\s1` line. So
+  CRLF line ends, a lone `\r`, other whitespace (a no-break space line is
   not blank) and text after `\b` are read the same way by both. None of
   these occurs in the 66 pinned BSB files: they hold no `\r` character, no
   `\b` line with text after it (of 17,466 `\b` lines) and no line of only
   whitespace other than spaces and tabs (measured on 2026-10-30 with `tr`,
-  `grep -P` and a short Python check). The counts were re-run with the
-  recipe below after the change: 3,016 `\s1`, 1,325 `\r` after `\s1`,
-  `compare.py` "compared 1568, diffs 0".
+  `grep -P` and a short Python check). So a corpus run cannot tell whether
+  the rule holds. A synthetic file of those cases,
+  `tests/fixtures/metadata/line-markers.usfm`, has a count made by hand:
+  6 `\s1`, 7 `\r`, 4 `\r` after `\s1`, 2 `\d`. Each script's
+  `--line-markers` mode prints its helper's counts for one file. For B,
+  `tests/metadata-markers.test.ts` checks them in `npm test`, which stays
+  Node-only; for A, the first command of the recipe below checks them and
+  stops the run on a mismatch. The
+  counts were re-run with the recipe below after the change (#119): 3,016
+  `\s1`, 1,325 `\r`, 1,325 `\r` after `\s1`, 117 `\d` in both scripts,
+  `compare.py` "compared 1568, diffs 0", and every value both scripts
+  output is the same as before the change.
 - **Used figures per language:** A counts over the set of figures the notes
   use; B counts over the figures in the table of contents that the notes
   use. These are the same set, because both scripts count a note's figure
   only if it is in the table of contents.
 
 They sit under `docs/`, not `scripts/`, on purpose: no build reads them and
-no data is made from them, so they carry no tests. A build of any of this is
-new code under `scripts/` with tests.
+no data is made from them, so they carry no tests beyond the marker-line
+checks above. A build of any of this is new code under `scripts/` with tests.
 
 ```sh
 set -euo pipefail
+# Script A's marker-line helper on the synthetic edge cases, against the hand count
+# (npm test checks script B on the same file; see "How it was measured"). A mismatch stops the run.
+test "$(python3 -I docs/scoping/metadata/measure_a.py --line-markers tests/fixtures/metadata/line-markers.usfm)" \
+  = '{"dMarkers": 2, "rAfterS1": 4, "rMarkers": 7, "s1Markers": 6}'
 W=$(mktemp -d)
 # clone <owner/repo> <tag> <commit> <dir>: the tag, then the named commit. If the tag has
 # moved, the commit is not in the shallow clone and the checkout fails, which stops the run.
