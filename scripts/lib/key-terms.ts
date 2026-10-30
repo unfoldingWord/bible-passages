@@ -555,6 +555,43 @@ export type DraftGlossary = {
 };
 
 /**
+ * Refuses built terms that are not exactly the record's and the TWL's, with
+ * each term's verses the TWL's. buildDraftGlossary runs it on what it is about
+ * to return, so a later change to how the terms are assembled cannot drop,
+ * add or re-verse a term without failing the build. In the message, `+x`
+ * is a term built but absent from the named side (record or TWL), `-x` one
+ * the named side has and the build lacks, and `verses of x` a term present
+ * in both whose verses differ, or whose built value is missing.
+ */
+export function assertBuiltTerms(
+  where: string,
+  built: Record<string, { refs: string[] } | undefined>,
+  recordTerms: Record<string, unknown>,
+  linked: Map<string, string[]>
+): void {
+  const differ = (a: string[], b: string[]) => [
+    ...a.filter((k) => !b.includes(k)).map((k) => `+${k}`),
+    ...b.filter((k) => !a.includes(k)).map((k) => `-${k}`),
+  ];
+  const keys = Object.keys(built);
+  const problems = [
+    ...differ(keys, Object.keys(recordTerms)).map((d) => `record ${d}`),
+    ...differ(keys, [...linked.keys()]).map((d) => `TWL ${d}`),
+    ...[...linked]
+      .filter(
+        ([a, refs]) =>
+          Object.hasOwn(built, a) &&
+          JSON.stringify(built[a]?.refs) !== JSON.stringify(refs)
+      )
+      .map(([a]) => `verses of ${a}`),
+  ];
+  if (problems.length > 0)
+    throw new Error(
+      `${where}: the built terms do not match the record and TWL (${problems.join(", ")})`
+    );
+}
+
+/**
  * Builds a language's glossary from its committed AI record, offline, and is
  * the one check every record passes, whatever its language or book. The
  * record must have been made with the committed prompt (by SHA-256), by a
@@ -645,18 +682,10 @@ export function buildDraftGlossary(args: {
       );
     terms[article] = { ...t, refs };
   }
-  // The built terms are the record's and the TWL's, with the TWL's verses.
-  const keys = JSON.stringify(Object.keys(terms).sort());
-  if (
-    keys !== JSON.stringify(Object.keys(record.terms).sort()) ||
-    keys !== JSON.stringify([...linked.keys()].sort()) ||
-    [...linked].some(
-      ([a, refs]) => JSON.stringify(terms[a]?.refs) !== JSON.stringify(refs)
-    )
-  )
-    throw new Error(
-      `${where}: the built terms do not match the record and TWL`
-    );
+  // Unreachable while the loop above builds terms from `linked` after the
+  // TWL check; it guards later changes to that loop, so removing this call
+  // fails no test. assertBuiltTerms has its own tests.
+  assertBuiltTerms(where, terms, record.terms, linked);
   const ids = [
     twlId(record.book),
     ...Object.keys(terms).map((a) => twId("en", a)),

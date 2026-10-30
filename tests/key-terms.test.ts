@@ -12,6 +12,7 @@ import {
   type TwlRow,
 } from "../scripts/lib/glossaries.ts";
 import {
+  assertBuiltTerms,
   buildDraftGlossary,
   checkMessage,
   definition,
@@ -558,6 +559,13 @@ describe("buildDraftGlossary", () => {
         },
       ],
       [
+        // The committed prompt's text, filed under another name.
+        "a prompt other than the committed",
+        (r) => {
+          r.prompt.file = "prompts/translate-titles.md";
+        },
+      ],
+      [
         "different family",
         (r) => {
           r.calls[1]!.model = "google/check";
@@ -596,6 +604,71 @@ describe("buildDraftGlossary", () => {
         attribution: id,
       }))
     ).toThrow("licences");
+  });
+});
+
+describe("assertBuiltTerms", () => {
+  const linked = new Map([
+    ["kt/apostle", ["1:1"]],
+    ["other/elder", ["1:5", "1:6"]],
+  ]);
+  const record = { "kt/apostle": {}, "other/elder": {} };
+  const built = () => ({
+    "kt/apostle": { refs: ["1:1"] },
+    "other/elder": { refs: ["1:5", "1:6"] },
+  });
+
+  it("accepts the record's terms with the TWL's verses", () => {
+    expect(() => assertBuiltTerms("w", built(), record, linked)).not.toThrow();
+  });
+
+  it("refuses built terms that drop, add or re-verse a term", () => {
+    const cases: [
+      string,
+      Record<string, { refs: string[] } | undefined>,
+      string,
+      Record<string, unknown>?,
+    ][] = [
+      [
+        "a term dropped",
+        { "kt/apostle": { refs: ["1:1"] } },
+        "record -other/elder, TWL -other/elder",
+      ],
+      [
+        "a term added",
+        { ...built(), "names/titus": { refs: ["1:4"] } },
+        "record +names/titus, TWL +names/titus",
+      ],
+      [
+        "a verse dropped",
+        { ...built(), "other/elder": { refs: ["1:5"] } },
+        "verses of other/elder",
+      ],
+      [
+        "verses out of order",
+        { ...built(), "other/elder": { refs: ["1:6", "1:5"] } },
+        "verses of other/elder",
+      ],
+      [
+        "a term with no value",
+        { ...built(), "other/elder": undefined },
+        "verses of other/elder",
+      ],
+      // The record must agree with the TWL too.
+      [
+        "the record short of a term",
+        built(),
+        "record +other/elder",
+        { "kt/apostle": {} },
+      ],
+    ];
+    for (const [name, terms, detail, recordTerms = record] of cases)
+      expect(
+        () => assertBuiltTerms("w", terms, recordTerms, linked),
+        name
+      ).toThrow(
+        `w: the built terms do not match the record and TWL (${detail})`
+      );
   });
 });
 
@@ -772,7 +845,8 @@ describe("key-terms command line", () => {
         "different family",
       ],
       [
-        [...base.slice(0, 6), "--check-model", "google/b"],
+        // NUM has no English glossary: refused before any input is read.
+        ["--book", "NUM", ...base.slice(2, 6), "--check-model", "google/b"],
         { OPENROUTER_API_KEY: KEY },
         "different family",
       ],
