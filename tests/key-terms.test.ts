@@ -818,12 +818,19 @@ const files = readdirSync(new URL("data/glossary-drafts/", root), {
       withFileTypes: true,
     }).map((f) => ({
       name: `${e.name}/${f.name}`,
-      kind: f.isFile() ? "file" : f.isDirectory() ? "directory" : "other",
+      kind: f.isFile()
+        ? "file"
+        : f.isDirectory()
+          ? "directory"
+          : f.isSymbolicLink()
+            ? "symlink"
+            : "other",
     }))
   );
 // Only .json files are parsed below, while the file loads; anything else,
-// including a directory named *.json, is left to the next test, which fails
-// with its name instead of a parse or read error.
+// including a directory or a symlink named *.json, is left to the next test,
+// which fails with its name instead of a parse or read error. A record is a
+// regular file, so a symlink is named as one whatever it points to.
 const records = files
   .filter((f) => f.kind === "file" && f.name.endsWith(".json"))
   .map((f) => f.name);
@@ -929,7 +936,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     // for the book, committed as data/glossaries/en/<BOOK>.json.
     const en = JSON.parse(
       read(`data/glossaries/en/${record.book}.json`)
-    ) as Glossary;
+    ) as Glossary | null;
     const lang = DRAFT_LANGUAGES[record.language];
     if (!lang) throw new Error(`${path}: not a draft language`);
     const glossary = buildDraftGlossary({
@@ -937,8 +944,9 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       file: path,
       rows,
       english: (a) => {
-        const word = en.terms?.[a]?.headword;
-        if (word === undefined) throw new Error(`en: no headword for ${a}`);
+        const word: unknown = en?.terms?.[a]?.headword;
+        if (typeof word !== "string" || word.trim() === "")
+          throw new Error(`en: no headword for ${a}`);
         return word;
       },
       credit: (id) => {
