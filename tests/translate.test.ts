@@ -41,6 +41,25 @@ const promptFile = read("prompts/translate-titles.md");
 const glossary = (tag: string) =>
   JSON.parse(read(`data/glossaries/${tag}/TIT.json`)) as Glossary;
 
+type Span = { key: string; start: [number, number] };
+const psalms = JSON.parse(read("data/structure/PSA.json")) as {
+  pericopes: Span[];
+  segments: Span[];
+};
+const inChapter = (c: number) => (s: Span) => s.start[0] === c;
+const psalmGlossary = (tag: string) =>
+  JSON.parse(read(`data/glossaries/${tag}/PSA.json`)) as Glossary;
+// Every language with a Psalms glossary (zh-Hans has none yet).
+const psalmTags = [...Object.keys(LANGUAGES), "en"].filter((t) =>
+  existsSync(new URL(`data/glossaries/${t}/PSA.json`, root))
+);
+
+/** The value, or a failure naming what is missing. */
+function defined<T>(value: T | undefined, what: string): T {
+  if (value === undefined) throw new Error(`missing: ${what}`);
+  return value;
+}
+
 // A key that only tests use; never a real one.
 const KEY = "test-key-not-real-0000";
 
@@ -227,19 +246,18 @@ describe("translation runner", () => {
   it("gives a psalm superscription's terms (c:front) to the span that starts at verse 1 (#54)", () => {
     // PSA 3's superscription links psalm, David and Absalom (TWL, 3:front).
     const segments = ["PSA.3.1-2", "PSA.3.3-4", "PSA.3.5-6", "PSA.3.7-8"];
-    const structure = JSON.parse(read("data/structure/PSA.json")) as {
-      segments: { key: string }[];
-    };
-    expect(
-      structure.segments.map((s) => s.key).filter((k) => k.startsWith("PSA.3."))
-    ).toEqual(segments);
-    // Every language with a Psalms glossary (zh-Hans has none yet).
-    const tags = [...Object.keys(LANGUAGES), "en"].filter((t) =>
-      existsSync(new URL(`data/glossaries/${t}/PSA.json`, root))
+    expect(psalms.segments.filter(inChapter(3)).map((s) => s.key)).toEqual(
+      segments
     );
-    expect(tags.length).toBeGreaterThanOrEqual(9);
-    for (const tag of tags) {
-      const g = JSON.parse(read(`data/glossaries/${tag}/PSA.json`)) as Glossary;
+    // The heading key comes from the structure: the pericope at 3:1.
+    const heading = psalms.pericopes.filter(
+      (p) => p.start[0] === 3 && p.start[1] === 1
+    );
+    expect(heading.map((p) => p.key)).toEqual(["PSA.P.3.1-8"]);
+    const headingKey = defined(heading[0], "heading at 3:1").key;
+    expect(psalmTags.length).toBeGreaterThanOrEqual(9);
+    for (const tag of psalmTags) {
+      const g = psalmGlossary(tag);
       const front = Object.values(g.terms)
         .filter((t) => usableTerm(t) && t.refs.includes("3:front"))
         .map(({ en, headword }) => ({ en, headword }));
@@ -249,26 +267,27 @@ describe("translation runner", () => {
       for (const t of front) expect(first, `${tag} ${t.en}`).toContainEqual(t);
       // The heading for the whole psalm starts at verse 1 too.
       for (const t of front)
-        expect(termsFor("PSA.P.3.1-8", g), `${tag} ${t.en}`).toContainEqual(t);
-      // No later segment takes them, unless one of its own verses links it.
-      for (const key of segments.slice(1)) {
-        const { from, to } = span(key);
-        for (const t of termsFor(key, g)) {
-          const entry = Object.values(g.terms).find(
-            (e) => e.en === t.en && e.headword === t.headword
-          );
+        expect(termsFor(headingKey, g), `${tag} ${t.en}`).toContainEqual(t);
+      // A term linked only from the superscription (Absalom's shape) is in
+      // no later segment of the psalm.
+      const frontOnly = Object.values(g.terms).filter(
+        (t) =>
+          usableTerm(t) &&
+          t.refs.length > 0 &&
+          t.refs.every((r) => r === "3:front")
+      );
+      if (tag !== "ar") expect(frontOnly.length, tag).toBeGreaterThan(0);
+      for (const t of frontOnly)
+        for (const key of segments.slice(1))
           expect(
-            entry?.refs.some((r) => {
-              const [c, v] = r.split(":");
-              return c === "3" && Number(v) >= from && Number(v) <= to;
-            }),
+            termsFor(key, g).filter(
+              (x) => x.en === t.en && x.headword === t.headword
+            ),
             `${tag} ${key} ${t.en}`
-          ).toBe(true);
-        }
-      }
+          ).toEqual([]);
     }
     // Absalom is linked only from the superscription.
-    const en = JSON.parse(read("data/glossaries/en/PSA.json")) as Glossary;
+    const en = psalmGlossary("en");
     const absalom = { en: "Absalom", headword: "Absalom" };
     expect(en.terms["names/absalom"]?.refs).toEqual(["3:front"]);
     expect(termsFor("PSA.3.1-2", en)).toContainEqual(absalom);
@@ -276,6 +295,86 @@ describe("translation runner", () => {
       expect(termsFor(key, en), key).not.toContainEqual(absalom);
     // Another chapter's front does not leak into chapter 3.
     expect(termsFor("PSA.4.1-1", en)).not.toContainEqual(absalom);
+  });
+
+  it("gives a term linked from both c:front and c:1 exactly once (#91)", () => {
+    const g: Glossary = {
+      language: "fr",
+      terms: {
+        "kt/both": {
+          en: "both",
+          headword: "les deux",
+          refs: ["3:front", "3:1"],
+        },
+        "kt/front": { en: "front", headword: "titre", refs: ["3:front"] },
+      },
+    };
+    expect(termsFor("PSA.3.1-2", g)).toEqual([
+      { en: "both", headword: "les deux" },
+      { en: "front", headword: "titre" },
+    ]);
+    expect(termsFor("PSA.P.3.1-8", g)).toEqual([
+      { en: "both", headword: "les deux" },
+      { en: "front", headword: "titre" },
+    ]);
+    expect(termsFor("PSA.3.3-4", g)).toEqual([]);
+    // In the data: pray (102:front and 102:1) and Yahweh (18:front and
+    // 18:1) reach the first segment once each.
+    const en = psalmGlossary("en");
+    for (const [id, c] of [
+      ["kt/pray", 102],
+      ["kt/yahweh", 18],
+      ["kt/yahweh", 102],
+    ] as const) {
+      const term = defined(en.terms[id], id);
+      expect(term.refs, id).toContain(`${c}:front`);
+      expect(term.refs, id).toContain(`${c}:1`);
+      const first = defined(
+        psalms.segments.find((s) => s.start[0] === c && s.start[1] === 1),
+        `${c}:1 segment`
+      );
+      expect(
+        termsFor(first.key, en).filter(
+          (t) => t.en === term.en && t.headword === term.headword
+        ),
+        `${id} ${first.key}`
+      ).toEqual([{ en: term.en, headword: term.headword }]);
+    }
+  });
+
+  it("has a verse-1 segment for every c:front ref in each Psalms glossary (#91)", () => {
+    // termsFor drops a c:front ref silently when no span in chapter c starts
+    // at verse 1, so the structure must have one for every such chapter.
+    const firsts = new Map(
+      psalms.segments
+        .filter((s) => s.start[1] === 1)
+        .map((s) => [s.start[0], s.key])
+    );
+    expect(psalmTags.length).toBeGreaterThanOrEqual(9);
+    for (const tag of psalmTags) {
+      const g = psalmGlossary(tag);
+      const chapters = new Set<number>();
+      for (const t of Object.values(g.terms))
+        for (const r of t.refs) {
+          const m = /^(\d+):front$/.exec(r);
+          if (m) chapters.add(Number(m[1]));
+        }
+      expect(chapters.size, tag).toBeGreaterThan(0);
+      for (const c of chapters) {
+        const key = defined(
+          firsts.get(c),
+          `${tag} ${c}:front: no verse-1 segment`
+        );
+        // And the superscription's terms reach that segment.
+        const got = termsFor(key, g);
+        for (const t of Object.values(g.terms))
+          if (usableTerm(t) && t.refs.includes(`${c}:front`))
+            expect(got, `${tag} ${key} ${t.en}`).toContainEqual({
+              en: t.en,
+              headword: t.headword,
+            });
+      }
+    }
   });
 
   it("leaves out AI-drafted terms no person has reviewed", () => {
