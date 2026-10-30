@@ -8,7 +8,8 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { describe, expect, it } from "vitest";
+import { format } from "prettier";
+import { beforeAll, describe, expect, it } from "vitest";
 import { clearJson, writeJson } from "../scripts/lib/write.ts";
 
 // The build clears its output directories first, so a book dropped from the
@@ -30,6 +31,13 @@ describe("clearJson", () => {
 });
 
 describe("writeJson", () => {
+  // writeJson formats with prettier, whose first call loads its JSON parser.
+  // That one-time load is setup, not the behaviour under test, and on a
+  // loaded host it alone outran the test timeout (issue #111).
+  beforeAll(async () => {
+    await format("{}", { parser: "json" });
+  });
+
   it("replaces a file whole and leaves no temporary file", async () => {
     const dir = mkdtempSync(join(tmpdir(), "write-json-"));
     const file = pathToFileURL(join(dir, "run.json"));
