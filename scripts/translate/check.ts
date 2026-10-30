@@ -18,7 +18,7 @@
 // the translation run has no translations file. Exit 1: an error; the
 // ledger still holds what was spent.
 import { existsSync, readFileSync } from "node:fs";
-import { isAbsolute, relative, resolve } from "node:path";
+import { isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { checkBook, family, type TranslatedFile } from "../lib/check.ts";
@@ -197,12 +197,15 @@ for (const tag of tags) {
   glossaries[tag] = JSON.parse(text) as Glossary;
 }
 
-// Where the translation run is, relative to the repository; null outside it.
+// Where the translation run is, relative to the repository, with `/`
+// separators on every platform; null outside it (an absolute path, as
+// across Windows drives, or any `..` segment under the host's separator).
 const runInRepo = relative(fileURLToPath(root), fileURLToPath(runDir));
+const runParts = runInRepo.split(sep);
 const runPath =
-  runInRepo === ".." || runInRepo.startsWith("../") || isAbsolute(runInRepo)
+  isAbsolute(runInRepo) || runParts.includes("..")
     ? null
-    : `${runInRepo === "" ? "." : runInRepo}/`;
+    : `${runInRepo === "" ? "." : runParts.join("/")}/`;
 
 const startedAt = new Date();
 const runId = `${startedAt.toISOString().replace(/[:.]/g, "-")}-${model.replace(/[^A-Za-z0-9.-]/g, "_")}`;
