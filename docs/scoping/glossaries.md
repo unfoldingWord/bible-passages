@@ -230,7 +230,9 @@ review.
 ### Not done
 
 - A Chinese reader is not yet named (the maintainer names one on #31). Their
-  review is recorded as a later change to the record.
+  review is recorded as a later change to the record: each term they accept
+  is raised to `human-reviewed` with `review` (`by`, `at`), which the build
+  accepts (#53; `docs/schema.md`, `data/glossary-drafts/`).
 - Names are not checked against a pinned Chinese Bible. `zh_cuv` on Door43
   could be pinned for that; it would have flagged 革哩底 against 克里特.
 - Traditional characters are not gated mechanically (no reliable offline
