@@ -265,10 +265,15 @@ repo:
 `node scripts/review/apply.ts <export.json>... [--dry-run]` checks every
 record before writing anything: an unknown language, book or key, a stale
 keep, a change without a reason, wording that fails the gates any title
-passes, a record more than an hour in the future or two records for one
-title stop the whole batch. Records apply oldest first, each against the
-wording the ones before it left; a keep never lowers a status, and a change
-is `human-reviewed`. A record saved no later than a title's `review.saved`
+passes, a record more than an hour in the future or two records from one
+reviewer for one title stop the whole batch. A translated title's wording is
+gated against the English title: its English draft, else the built
+`data/titles/en/` table. Records apply oldest first, each against the
+wording the ones before it left, so a second reviewer's keep of a first
+one's change applies, and a second change to one title is refused (above).
+A keep never lowers a status, and a change is `human-reviewed`. Each review
+replaces the title's `review` whole: a keep of an `approved` title stays
+`approved`, but `by` becomes the reviewer who kept it. A record saved no later than a title's `review.saved`
 was applied before (or overtaken) and is passed over, so the same export
 can be run again. It prints the table for the PR body.
 

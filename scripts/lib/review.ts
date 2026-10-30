@@ -89,8 +89,11 @@ const FIELDS = new Set([
 ]);
 const BOOK_CODES = new Set(ALL_BOOKS.map(([code]) => code));
 const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
-/** Bidirectional embeddings, overrides and isolates: they reorder a diff. */
-const BIDI = /[‪-‮⁦-⁩]/u;
+/**
+ * Bidirectional embeddings, overrides, isolates and marks (LRM, RLM, ALM):
+ * invisible, and they reorder a title or a reason in a diff.
+ */
+const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
 
 const isObject = (v: unknown): v is Record<string, unknown> =>
   typeof v === "object" && v !== null && !Array.isArray(v);
@@ -115,7 +118,7 @@ export function exportProblems(e: unknown): string[] {
 const plainWhy = (why: string) =>
   why
     .replace(/[\r\n\t]+/g, " ")
-    .replace(/[\p{Cc}‪-‮⁦-⁩]/gu, "")
+    .replace(/[\p{Cc}\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/gu, "")
     .trim();
 
 /** The shape problems of one answer record; none means it is a review. */
@@ -214,16 +217,25 @@ function reviewFor({ by, record: r }: Entry, draft: Draft, after: string) {
   return review;
 }
 
+/** English titles by book and key, from data/titles/en/<BOOK>.json. */
+export type EnglishTitles = ReadonlyMap<
+  string,
+  Readonly<Record<string, { text: string }>>
+>;
+
 /**
  * Applies exports to draft files, oldest record first, each against the
  * wording the ones before it left. Returns the files it changed, or every
  * problem and no files. `files` is keyed `<lang>/<BOOK>` and is not
- * modified.
+ * modified. `english` is the built English table, for a translated title
+ * whose key has no English draft (a pericope, or a segment that takes its
+ * pericope's title).
  */
 export function applyReviews(
   files: ReadonlyMap<string, DraftFile>,
   exports: readonly unknown[],
-  now: number = Date.now()
+  now: number = Date.now(),
+  english: EnglishTitles = new Map()
 ): Batch {
   const none = (problems: string[]): Batch => ({
     changed: new Map(),
@@ -335,10 +347,20 @@ export function applyReviews(
         problems.push(`${where}: a change that changes nothing`);
         continue;
       }
-      const en = (changed.get(`en/${book}`) ?? files.get(`en/${book}`))?.titles[
-        r.key
-      ];
-      const p = wordingProblems(r.lang, r.text, en && current(en));
+      // The English title as it stands in this batch: its draft, with any
+      // review applied so far, else the built table.
+      const enFile = changed.get(`en/${book}`) ?? files.get(`en/${book}`);
+      const enDraft =
+        enFile && Object.hasOwn(enFile.titles, r.key)
+          ? enFile.titles[r.key]
+          : undefined;
+      const enTitles = english.get(book);
+      const en = enDraft
+        ? current(enDraft)
+        : enTitles && Object.hasOwn(enTitles, r.key)
+          ? enTitles[r.key]?.text
+          : undefined;
+      const p = wordingProblems(r.lang, r.text, en);
       if (p.length) {
         problems.push(`${where}: ${p.join(", ")}`);
         continue;

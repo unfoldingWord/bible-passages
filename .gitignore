@@ -2,3 +2,5 @@ node_modules/
 .npmrc
 .DS_Store
 .cache/
+# Staged by scripts/review/apply.ts and renamed into place.
+*.review-tmp

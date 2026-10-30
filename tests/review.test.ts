@@ -407,16 +407,17 @@ describe("applyReviews", () => {
   });
 
   it("keeps reasons on one line without control characters; refuses bidi controls in wording", () => {
-    const note = " first line\nsecond ‮line\u0007 with ‍joiner ";
+    const note = " first line\nsecond \u202Eline\u0007 with \u200Djoiner ";
     const r = apply(
       files(),
       envelope([change("Paul greets his son", { note })])
     );
     expect(r.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(
-      "first line second line with ‍joiner"
+      "first line second line with \u200Djoiner"
     );
     expect(
-      apply(files(), envelope([change("Paul greets his ‮son")])).problems[0]
+      apply(files(), envelope([change("Paul greets his \u202Eson")]))
+        .problems[0]
     ).toMatch(/bidi control character/);
   });
 
@@ -460,6 +461,65 @@ describe("applyReviews", () => {
     expect(bad("بولس يسلّم على تيطس ابنه", "ar")).toEqual([]);
   });
 
+  it("gates a translated pericope against the built English table", () => {
+    // Translated drafts are keyed by every titled key; English drafts hold
+    // segments only, so a pericope's English title is in data/titles/en/.
+    const f = files();
+    f.get("ar/TIT")!.titles["TIT.P.1.1-4"] = draft("تحية بولس");
+    const r = change("تحية بولس إلى تيطس", { lang: "ar", key: "TIT.P.1.1-4" });
+    expect(apply(f, envelope([r])).problems).toEqual([
+      "reviewer:reader-7 ar/TIT TIT.P.1.1-4: no English title to check it against",
+    ]);
+    const english = new Map([
+      ["TIT", { "TIT.P.1.1-4": { text: "Paul’s Greeting to Titus" } }],
+    ]);
+    const ok = applyReviews(f, [envelope([r])], NOW, english);
+    expect(ok.problems).toEqual([]);
+    expect(ok.applied).toHaveLength(1);
+    // The table's English is gated against like a draft's: a copy leaks.
+    const leak = change("Paul’s Greeting to Titus", {
+      lang: "ar",
+      key: "TIT.P.1.1-4",
+    });
+    expect(
+      applyReviews(f, [envelope([leak])], NOW, english).problems[0]
+    ).toMatch(/equals the English|outside Arabic/);
+    // An English draft, with this batch's change applied, wins over the table.
+    const g = files();
+    const both = applyReviews(
+      g,
+      [
+        envelope([change("Paul greets his son")]),
+        envelope(
+          [
+            change("Paul greets his son", {
+              lang: "ar",
+              at: "2026-10-29T11:00:00.000Z",
+            }),
+          ],
+          "reviewer:second"
+        ),
+      ],
+      NOW,
+      new Map([["TIT", { "TIT.1.4-4": { text: "something else" } }]])
+    );
+    expect(both.problems[0]).toMatch(/^reviewer:second .*equals the English/);
+  });
+
+  it("drops bidi marks from a note and refuses them in wording", () => {
+    const r = apply(
+      files(),
+      envelope([change("Paul greets his son", { note: "a\u200Fb\u061Cc" })])
+    );
+    expect(r.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(
+      "abc"
+    );
+    expect(
+      apply(files(), envelope([change("Paul greets his\u200E son")]))
+        .problems[0]
+    ).toMatch(/bidi control character/);
+  });
+
   it("summarises a batch for the PR body, pipes escaped", () => {
     const { applied } = apply(
       files(),
@@ -472,7 +532,7 @@ describe("applyReviews", () => {
     expect(s).toContain("Time on these reviews: 12 s in all, median 12 s");
     const { applied: bidi } = apply(
       files(),
-      envelope([change("Paul greets his son", { note: "a‮b\u001B[31m" })])
+      envelope([change("Paul greets his son", { note: "a\u202Eb\u001B[31m" })])
     );
     expect(summary(bidi)).toMatch(/\| ab\[31m \|$/m);
   });

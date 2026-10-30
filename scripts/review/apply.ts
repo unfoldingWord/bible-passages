@@ -55,7 +55,24 @@ for (const lang of existsSync(drafts) ? readdirSync(drafts) : []) {
   }
 }
 
-const { changed, applied, skipped, problems } = applyReviews(files, exports);
+// The built English titles, for a translation whose key has no English
+// draft (pericopes, and segments that take their pericope's title).
+const titlesEn = new URL("../../data/titles/en/", import.meta.url);
+const english = new Map<string, Record<string, { text: string }>>();
+for (const name of existsSync(titlesEn) ? readdirSync(titlesEn) : []) {
+  if (!name.endsWith(".json")) continue;
+  const table = JSON.parse(readFileSync(new URL(name, titlesEn), "utf8")) as {
+    titles: Record<string, { text: string }>;
+  };
+  english.set(name.slice(0, -5), table.titles);
+}
+
+const { changed, applied, skipped, problems } = applyReviews(
+  files,
+  exports,
+  Date.now(),
+  english
+);
 if (problems.length) {
   console.error(`Refused; nothing written (${problems.length} problems):`);
   for (const p of problems) console.error(`- ${p}`);
@@ -76,7 +93,10 @@ if (!dry) {
       await format(JSON.stringify(value, null, 2), {
         ...options,
         parser: "json",
-      })
+      }),
+      // A leftover temp file (an interrupted run, or a link) is refused,
+      // not followed or overwritten.
+      { flag: "wx" }
     );
     staged.push([temp, target]);
   }
