@@ -558,11 +558,14 @@ export type DraftGlossary = {
  * Refuses built terms that are not exactly the record's and the TWL's, with
  * each term's verses the TWL's. buildDraftGlossary runs it on what it is about
  * to return, so a later change to how the terms are assembled cannot drop,
- * add or re-verse a term without failing the build.
+ * add or re-verse a term without failing the build. In the message, `+x`
+ * is a term built but absent from the named side (record or TWL), `-x` one
+ * the named side has and the build lacks, and `verses of x` a term present
+ * in both whose verses differ, or whose built value is missing.
  */
 export function assertBuiltTerms(
   where: string,
-  built: Record<string, { refs: string[] }>,
+  built: Record<string, { refs: string[] } | undefined>,
   recordTerms: Record<string, unknown>,
   linked: Map<string, string[]>
 ): void {
@@ -577,8 +580,8 @@ export function assertBuiltTerms(
     ...[...linked]
       .filter(
         ([a, refs]) =>
-          built[a] !== undefined &&
-          JSON.stringify(built[a].refs) !== JSON.stringify(refs)
+          Object.hasOwn(built, a) &&
+          JSON.stringify(built[a]?.refs) !== JSON.stringify(refs)
       )
       .map(([a]) => `verses of ${a}`),
   ];

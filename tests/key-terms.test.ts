@@ -625,7 +625,7 @@ describe("assertBuiltTerms", () => {
   it("refuses built terms that drop, add or re-verse a term", () => {
     const cases: [
       string,
-      Record<string, { refs: string[] }>,
+      Record<string, { refs: string[] } | undefined>,
       string,
       Record<string, unknown>?,
     ][] = [
@@ -647,6 +647,11 @@ describe("assertBuiltTerms", () => {
       [
         "verses out of order",
         { ...built(), "other/elder": { refs: ["1:6", "1:5"] } },
+        "verses of other/elder",
+      ],
+      [
+        "a term with no value",
+        { ...built(), "other/elder": undefined },
         "verses of other/elder",
       ],
       // The record must agree with the TWL too.
