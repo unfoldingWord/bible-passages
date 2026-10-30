@@ -2,26 +2,55 @@
 // (docs/schema.md, "Releases"). Pure apart from reading `dir`.
 import { type Dirent, readdirSync, readFileSync } from "node:fs";
 import { basename, join, relative, resolve, sep } from "node:path";
+import { STRUCTURE_BOOKS } from "./books.ts";
 
 /** A file to attach: `file` on disk, attached under the asset `name`. */
 export type Asset = { file: string; name: string };
 export type Assets = { assets: Asset[]; problems: string[] };
 
-/** A title table's path under dist/tc-mobile/: titles/<lang>/<BOOK>.json. */
+/**
+ * The asset grammar is an allowlist: a package is `<BOOK>.json` and a title
+ * table `titles/<lang>/<BOOK>.json`, attached as `titles.<lang>.<BOOK>.json`,
+ * where `<BOOK>` is a known book code (scripts/lib/books.ts) and `<lang>`
+ * matches LANGUAGE_TAG. Neither alphabet holds a tab, CR, LF or `#`, which
+ * run.sh's "<name><TAB><file>" lines and `gh release create`'s
+ * "file#label" would misread, and a package name cannot equal a table's.
+ */
 const LANGUAGE_TAG = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
-const BOOK = /^[0-9A-Z]{3}$/;
-/** Characters an asset name may not hold (see the end of checkAssets). */
-const UNSAFE_NAME = /[\t\r\n#]/;
+const isBook = (code: string): boolean => STRUCTURE_BOOKS.includes(code);
+/** The book code of a package file name `<BOOK>.json`, or null. */
+const packageBook = (name: string): string | null => {
+  const book = name.slice(0, -".json".length);
+  return name === `${book}.json` && isBook(book) ? book : null;
+};
+
+/**
+ * Whether `name` is in the asset grammar: `<BOOK>.json`, or
+ * `titles.<lang>.<BOOK>.json`.
+ */
+export const isAssetName = (name: string): boolean => {
+  const table = /^titles\.([^.]*)\.([^.]*\.json)$/.exec(name);
+  return table === null
+    ? packageBook(name) !== null
+    : LANGUAGE_TAG.test(table[1]!) && packageBook(table[2]!) !== null;
+};
 
 const isObject = (v: unknown): boolean =>
   typeof v === "object" && v !== null && !Array.isArray(v);
 
 /**
- * A title table's body (scripts/lib/title-table.ts, TitleTable): `chapters`
- * and `segments` are objects and there is no `source` block.
+ * Why a title table's body is not a table's (scripts/lib/title-table.ts,
+ * TitleTable), one message per failing limb: `chapters` and `segments` are
+ * objects and there is no `source` block.
  */
-const isTableBody = (t: Record<string, unknown>): boolean =>
-  isObject(t.chapters) && isObject(t.segments) && !Object.hasOwn(t, "source");
+const bodyProblems = (t: Record<string, unknown>): string[] => [
+  ...(["chapters", "segments"] as const)
+    .filter((field) => !isObject(t[field]))
+    .map((field) => `${field} is ${JSON.stringify(t[field])}, not an object`),
+  ...(Object.hasOwn(t, "source")
+    ? ["has a source block; a title table has none"]
+    : []),
+];
 
 /** The release asset name of a title table: `titles.<lang>.<BOOK>.json`. */
 export const titleAssetName = (language: string, book: string): string =>
@@ -38,11 +67,11 @@ export const titleAssetName = (language: string, book: string): string =>
  *   (decided by the maintainer, #61). Any other nested file, or a nested
  *   entry that is not a regular file, stops the release rather than being
  *   left out silently.
- * - The top level holds only regular `.json` files (the packages), the
- *   regular file `.gitkeep` that keeps the directory in git, and
- *   directories (whose nested files are checked as above). Anything else, a
- *   symlink or a directory named `x.json` included, would be neither
- *   checked nor attached, so it is reported.
+ * - The top level holds only regular files `<BOOK>.json` with a known book
+ *   code (the packages), the regular file `.gitkeep` that keeps the
+ *   directory in git, and directories (whose nested files are checked as
+ *   above). Anything else, `ab.json`, a symlink or a directory named
+ *   `x.json` included, is reported and neither read nor attached.
  * - There is at least one package.
  * - Every package's `source.revision` is the tag: a file built without
  *   RELEASE_TAG says "unreleased", and must never be attached.
@@ -52,12 +81,14 @@ export const titleAssetName = (language: string, book: string): string =>
  *   `version` must equal the `id` and `version` of `<BOOK>.json`, a package
  *   in this release (whose revision is checked), and its `language` must
  *   be the `<lang>` it sits under. Its body must be a table's:
- *   `chapters` and `segments` objects and no `source`. When `<BOOK>.json`
- *   is present but unreadable (it does not parse as JSON, or parses to
+ *   `chapters` and `segments` objects and no `source`, each failing limb
+ *   reported on its own, and checked even when the package is missing or
+ *   unreadable, so one pass lists every reason. When `<BOOK>.json` is
+ *   present but unreadable (it does not parse as JSON, or parses to
  *   something other than an object), the table says the package failed
  *   validation rather than that it is missing.
- * - No asset name holds a tab, CR, LF or `#` (run.sh and `gh` would misread
- *   it).
+ * - Every asset name is in the allowlisted grammar above, so none holds a
+ *   tab, CR, LF or `#`, and no two share a name.
  */
 const kind = (e: Dirent) =>
   e.isDirectory() ? "directory" : e.isSymbolicLink() ? "symlink" : "entry";
@@ -83,8 +114,7 @@ export function checkAssets(dir: string, tag: string): Assets {
       parts.length === 3 &&
       titles === "titles" &&
       LANGUAGE_TAG.test(language) &&
-      name === `${book}.json` &&
-      BOOK.test(book)
+      packageBook(name) === book
     )
       tables.push({ file: join(e.parentPath, e.name), language, book });
     else problems.push(`${at(e)}: nested file has no release asset name`);
@@ -95,12 +125,15 @@ export function checkAssets(dir: string, tag: string): Assets {
     a.name < b.name ? -1 : a.name > b.name ? 1 : 0
   );
   for (const e of top) {
-    const json = e.name.endsWith(".json");
-    if (e.isFile() && json) files.push(join(dir, e.name));
+    if (e.isFile() && packageBook(e.name) !== null)
+      files.push(join(dir, e.name));
     else if (e.isFile() && e.name === ".gitkeep") continue;
-    else if (e.isDirectory() && !json) continue;
+    else if (e.isDirectory() && !e.name.endsWith(".json")) continue;
     else if (e.isFile())
-      problems.push(`${e.name}: top-level file is not a .json package`);
+      // Quoted: the name may hold a tab, CR or LF.
+      problems.push(
+        `${JSON.stringify(e.name)}: top-level file is not a package <BOOK>.json`
+      );
     else problems.push(`${e.name}: top-level ${kind(e)} is not a regular file`);
   }
   if (files.length === 0) problems.push(`${dir} has no packages`);
@@ -146,6 +179,7 @@ export function checkAssets(dir: string, tag: string): Assets {
     const where = relative(dir, file);
     const table = read(file);
     if (table === null) continue;
+    for (const p of bodyProblems(table)) problems.push(`${where}: ${p}`);
     const pkg = packages.get(`${book}.json`);
     if (pkg === undefined) {
       problems.push(
@@ -155,10 +189,6 @@ export function checkAssets(dir: string, tag: string): Assets {
       );
       continue;
     }
-    if (!isTableBody(table))
-      problems.push(
-        `${where}: body must have object chapters and segments, and no source`
-      );
     for (const [field, want] of [
       ["packageId", pkg.id],
       ["version", pkg.version],
@@ -175,16 +205,14 @@ export function checkAssets(dir: string, tag: string): Assets {
     assets.push({ file, name });
   }
   assets.sort(byName);
-  // A top-level file named like a title table's asset would be overwritten.
-  for (let i = 1; i < assets.length; i++)
-    if (assets[i]!.name === assets[i - 1]!.name)
-      problems.push(`${assets[i]!.name}: two files share this asset name`);
-  // run.sh splits "<name><TAB><file>" lines and `gh release create` reads
-  // "file#label", so these characters would split a line or become a label.
-  for (const { name } of assets)
-    if (UNSAFE_NAME.test(name))
-      problems.push(
-        `${JSON.stringify(name)}: asset name contains a tab, CR, LF or "#"`
-      );
+  // Already true of every name built above; checked here because run.sh and
+  // `gh` rely on it.
+  for (let i = 0; i < assets.length; i++) {
+    const { name } = assets[i]!;
+    if (!isAssetName(name))
+      problems.push(`${JSON.stringify(name)}: not a release asset name`);
+    else if (i > 0 && name === assets[i - 1]!.name)
+      problems.push(`${name}: two files share this asset name`);
+  }
   return { assets, problems };
 }

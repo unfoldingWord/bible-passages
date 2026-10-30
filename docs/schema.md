@@ -351,24 +351,30 @@ check the bump yet.
    tracked file after the files are restored; an untracked file is named,
    not shown.
 4. `dist/` is regenerated with `source.revision` set to the tag. The release
-   stops unless every top-level `.json` package in `dist/tc-mobile/` has
-   `"revision": "<tag>"` (`scripts/lib/release.ts`). The empty `.gitkeep`
-   that keeps the directory in git is exempt and is not attached. Any other
-   top-level entry stops the release unless it is a regular `.json` file or a
-   directory whose name does not end in `.json` (a symlink stops it).
+   stops unless every top-level package in `dist/tc-mobile/` has
+   `"revision": "<tag>"` (`scripts/lib/release.ts`). A package is a regular
+   file `<BOOK>.json` whose `<BOOK>` is one of the 66 book codes in
+   `scripts/lib/books.ts`. The empty `.gitkeep` that keeps the directory in
+   git is exempt and is not attached. Any other top-level entry stops the
+   release unless it is a directory whose name does not end in `.json` (a
+   symlink, or a file such as `ab.json`, stops it).
    Title tables `dist/tc-mobile/titles/<lang>/<BOOK>.json` are checked too.
    A table has no `source` block, so it carries no revision; it is tied to
    the release through its package instead: its `packageId` and `version`
    must equal the `id` and `version` of `<BOOK>.json` in the same release
    (whose revision was just checked), its `language` must be the `<lang>`
    it sits under, and its body must be a table's: `chapters` and `segments`
-   are objects and there is no `source`. A table whose package is present
-   but unreadable (it does not parse as JSON, or is not a JSON object) is
-   reported as its package failing validation, not
-   as a missing package. Any other nested file, or a nested entry that is
-   not a regular file, stops the release. So does an asset name holding a
-   tab, CR, LF or `#`, which the release script's `<name><TAB><file>` lines
-   or `gh release create`'s `file#label` would misread.
+   are objects and there is no `source`. Each of those that fails is
+   reported on its own, and the body is checked even when the package is
+   missing or unreadable, so one run lists every reason. A table whose
+   package is present but unreadable (it does not parse as JSON, or is not a
+   JSON object) is reported as its package failing validation, not as a
+   missing package. Any other nested file, or a nested entry that is
+   not a regular file, stops the release. Asset names are an allowlist,
+   `<BOOK>.json` and `titles.<lang>.<BOOK>.json` with a known book code, so
+   no name holds a tab, CR, LF or `#`, which the release script's
+   `<name><TAB><file>` lines or `gh release create`'s `file#label` would
+   misread.
 5. The packages and title tables are attached to a **draft** release,
    published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as
