@@ -652,7 +652,9 @@ describe("buildDraftGlossary", () => {
       headword: "长老",
       source: by,
       status: "human-reviewed",
+      // The checker's verdict stays, with the headword it judged.
       check: r.terms["other/elder"]!.check,
+      drafted: "长者",
       review,
       refs: ["1:5"],
     });
@@ -661,6 +663,7 @@ describe("buildDraftGlossary", () => {
       headword: "长老",
       source: by,
       reference: "elder",
+      drafted: "使徒",
     });
     expect(g.terms["kt/apostle"]?.gates).toBeUndefined();
     expect(g.review).toEqual([]);
@@ -675,6 +678,7 @@ describe("buildDraftGlossary", () => {
       headword: "提多",
       source: "ai:google/draft",
     });
+    expect(g.terms["names/titus"]?.drafted).toBeUndefined();
   });
 
   describe("refuses human-reviewed without a reviewer and a date, and any status above the evidence", () => {
@@ -1067,6 +1071,10 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
         review?.text !== undefined
           ? { headword: review.text, source: review.by }
           : { headword: drafted?.headword, source: drafted?.source }
+      );
+      // A changed term names the model's headword, the one its check judged.
+      expect(t.drafted, a).toBe(
+        review?.text !== undefined ? drafted?.headword : undefined
       );
       expect(t.en).toBe(drafted?.en);
     }

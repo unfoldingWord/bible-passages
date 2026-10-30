@@ -606,7 +606,14 @@ export async function draftKeyTerms(args: {
 }
 
 /** One term of a built AI glossary: the record's term with its verses. */
-export type DraftGlossaryTerm = DraftRecordTerm & { refs: string[] };
+export type DraftGlossaryTerm = DraftRecordTerm & {
+  refs: string[];
+  /**
+   * Only when a reader changed the headword: the model's headword, the one
+   * `check` judged. `headword` is then the reader's (`review.text`).
+   */
+  drafted?: string;
+};
 
 /** data/glossaries/<lang>/<BOOK>.json for an AI-drafted language. */
 export type DraftGlossary = {
@@ -789,9 +796,16 @@ export function buildDraftGlossary(args: {
         `${where} ${article}: review.text fails gates (${failed.join(", ")})`
       );
     // `gates` described the model's headword; the reviewer's passes them all,
-    // so the built term has none. `check` stays: the model's verdict on its
-    // own headword, kept beside the review as for an unchanged term.
-    const built: DraftGlossaryTerm = { ...t, headword: text, source: by, refs };
+    // so the built term has none. `check` stays, the checker's verdict on the
+    // model's headword, and `drafted` names that headword, since `check`
+    // does not record what it judged and `headword` is now the reader's.
+    const built: DraftGlossaryTerm = {
+      ...t,
+      headword: text,
+      source: by,
+      drafted: t.headword,
+      refs,
+    };
     delete built.gates;
     terms[article] = built;
   }

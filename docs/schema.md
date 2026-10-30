@@ -277,8 +277,8 @@ review is recorded yet; the committed Titus term is `ai-checked`):
   `headword`, with `review.by` as its `source`. For the illustration above
   with the checker's 长老 replacing a drafted 长者, the record keeps
   `"headword": "长者"` and `"source": "ai:<model>"`, and adds
-  `"text": "长老"` to `review`; the built term has `"headword": "长老"` and
-  `"source": "reviewer:zh-hans-reader"`.
+  `"text": "长老"` to `review`; the built term has `"headword": "长老"`,
+  `"source": "reviewer:zh-hans-reader"` and `"drafted": "长者"`.
 - Everything the models recorded stays as it was: `headword`, `source`
   (`ai:<model>`), `check` and `gates`. AI output is never relabelled.
 - Git keeps the history: the commit that adds the review is the record of
@@ -292,8 +292,10 @@ would relabel AI output) and pass every gate the drafted one was put through
 (`script`, `latin-letters`, `line-break`, `reference`); a title review's
 `text` is held to non-empty and trimmed by tests/drafts.test.ts, and a term's
 `text` is also held to NFC, as a drafted headword is. The built term carries
-no `gates` once its headword is the reader's (they described the model's);
-it keeps `check`, the model's verdict on its own headword.
+no `gates` once its headword is the reader's (they described the model's).
+It keeps `check`, and gains `drafted`, the model's headword: `check` does not
+record the headword it judged, and on a changed term that is `drafted`, not
+`headword`. `drafted` is present only on a changed term.
 
 The build refuses `human-reviewed` without a `review`; a `review` without a
 `by` and `at` in those forms, with any field but `by`, `at` and `text`, or
