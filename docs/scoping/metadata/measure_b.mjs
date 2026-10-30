@@ -299,6 +299,8 @@ const TOK =
 const bsb = {};
 const bsbNumeric = [
   "rMarkers",
+  "rAfterS1",
+  "s1Markers",
   "dMarkers",
   "verses",
   "poeticVerses",
@@ -347,6 +349,14 @@ for (const b of books) {
       pre = null;
     }
   };
+  // \r lines whose previous line, skipping \b and blank lines, is \s1
+  let prevMarker = null;
+  for (const line of lines) {
+    if (/^\\s1(\s|$)/.test(line)) r.s1Markers++;
+    if (/^\\r(\s|$)/.test(line) && prevMarker === "s1") r.rAfterS1++;
+    if (line.trim() !== "" && !/^\\b(\s|$)/.test(line))
+      prevMarker = (line.match(/^\\([a-z]+\d?)/) || [])[1] ?? null;
+  }
   for (const line of lines) {
     if (/^\\r(\s|$)/.test(line)) r.rMarkers++;
     if (/^\\d(\s|$)/.test(line)) r.dMarkers++;
@@ -491,6 +501,7 @@ const difficulty = {};
 
 // ---------- TA languages ----------
 const taLang = {};
+// "Used": the figures some note names (allF), as in the doc's language table
 const readTitle = (dir, id) => {
   const f = `${dir}/translate/${id}/title.md`;
   return fs.existsSync(f) ? read(f).trim() : null;
@@ -505,6 +516,9 @@ for (const lang of ["en", "ar", "fr", "hi", "id", "ru", "es-419"]) {
     translatedStrict: 0,
     of: F.size,
     ofStrict: F_strict.size,
+    presentUsed: 0,
+    translatedUsed: 0,
+    ofUsed: allF.size,
   };
   for (const id of F) {
     const t = readTitle(dir, id);
@@ -515,6 +529,10 @@ for (const lang of ["en", "ar", "fr", "hi", "id", "ru", "es-419"]) {
     if (F_strict.has(id)) {
       o.presentStrict++;
       if (tr) o.translatedStrict++;
+    }
+    if (allF.has(id)) {
+      o.presentUsed++;
+      if (tr) o.translatedUsed++;
     }
   }
   taLang[lang] = o;

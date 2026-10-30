@@ -9,25 +9,26 @@ data that needs no new writing. Key terms are built (glossaries for 59 books,
 pinned, because no build reads these files yet.
 
 Everything below was measured on 2026-10-29 at the commits named, unless it
-is labelled **estimated**. Every count except one marked approximate was
-produced by two scripts written separately (see "How it was measured"); they
-agree on every one.
+is labelled **estimated**, and the counts were re-run on 2026-10-30 (#84).
+The measures both scripts compute (see "How it was measured") were produced
+by two scripts written separately, and agree on every one. A few counts come
+from script A alone or from one-off commands; that section lists them.
 
 ## The answer, in plain words
 
-| Kind                       | Already in the data? | Source                                 | v0.1                                                   |
-| -------------------------- | -------------------- | -------------------------------------- | ------------------------------------------------------ |
-| Key terms                  | yes                  | Translation Word Links and Words       | **in** (built, #62)                                    |
-| Figures of speech          | yes                  | Translation Notes `SupportReference`   | **in**: 59 books; names exist in 6 of 9 languages      |
-| Literary form (poetry)     | yes                  | BSB `\q1` `\q2` `\qr` line markers     | **in**, proposed: poetry, prose or mixed per segment   |
-| Parallel passages          | yes                  | BSB `\r` lines under section headings  | **in**, proposed: per pericope                         |
-| Difficulty                 | book level only      | Translation Academy, one article       | **in**, proposed: one rating per book, as a book field |
-| Topics                     | no                   | nothing structured found               | out: would need new writing                            |
-| Difficulty per passage     | no                   | nothing found                          | out: would need new writing                            |
-| Comprehension questions    | yes, but content     | Translation Questions                  | out: questions and answers, not labels for a passage   |
-| Other translation issues   | yes                  | Translation Notes, non-figure `figs-*` | out: grammar, not figures of speech; later candidate   |
-| Discourse features         | yes, sparse          | Translation Notes, "Writing Styles"    | out: overlaps literary form; later candidate           |
-| Book and chapter overviews | yes, as prose        | Translation Notes introductions        | out: turning prose into labels is new writing          |
+| Kind                       | Already in the data? | Source                                 | v0.1                                                                            |
+| -------------------------- | -------------------- | -------------------------------------- | ------------------------------------------------------------------------------- |
+| Key terms                  | yes                  | Translation Word Links and Words       | **in** (built, #62)                                                             |
+| Figures of speech          | yes                  | Translation Notes `SupportReference`   | **in**: 59 books; names complete in 4 of 9 languages, partial in 2, absent in 3 |
+| Literary form (poetry)     | yes                  | BSB `\q1` `\q2` `\qr` line markers     | **in**, proposed: poetry, prose or mixed per segment                            |
+| Parallel passages          | yes                  | BSB `\r` lines under section headings  | **in**, proposed: per pericope                                                  |
+| Difficulty                 | book level only      | Translation Academy, one article       | **in**, proposed: one rating per book, as a book field                          |
+| Topics                     | no                   | nothing structured found               | out: would need new writing                                                     |
+| Difficulty per passage     | no                   | nothing found                          | out: would need new writing                                                     |
+| Comprehension questions    | yes, but content     | Translation Questions                  | out: questions and answers, not labels for a passage                            |
+| Other translation issues   | yes                  | Translation Notes, non-figure `figs-*` | out: grammar, not figures of speech; later candidate                            |
+| Discourse features         | yes, sparse          | Translation Notes, "Writing Styles"    | out: overlaps literary form; later candidate                                    |
+| Book and chapter overviews | yes, as prose        | Translation Notes introductions        | out: turning prose into labels is new writing                                   |
 
 "Proposed" rows are this measurement's recommendation; the requirements
 owner decides them. Effort is under "Build effort" (estimated).
@@ -167,10 +168,11 @@ Catalog search, subject `Translation Academy`:
 | Chinese    | none                                  |            |              | 0: none on Door43                                      |
 
 ¹ Three French titles are the same as the English ("Doublet", "Hendiadys",
-"Hyperbole"), and are also French words. One Indonesian title is the same as
-the English ("Litotes"), also an Indonesian word. The three Spanish ones
-("Aside", "Litany", "Predictive Past") are English. This reading is the
-measurer's, not a native reader's; no name was checked for accuracy.
+"Hyperbole"), and are also French words. One Indonesian title and one
+Spanish title are the same as the English ("Litotes"), also a word in each
+language. The three other Spanish ones ("Aside", "Litany", "Predictive Past")
+are English. This reading is the measurer's, not a native reader's; no name
+was checked for accuracy.
 
 Not used: `ar_gt/ar_ta` v3.3 (the same organisation's `ar_tw` is Persian;
 see [glossaries.md](glossaries.md)); `unfoldingWord/fr_ta` v10 and
@@ -211,11 +213,13 @@ names them in its own language.
 ## Parallel passages
 
 BSB prints a line of references under 1,325 of its 3,016 section headings
-(`\r (Matthew 5:3–12; Luke 6:20–23)`). Every `\r` line follows an `\s1`, so
-each belongs to one pericope. Titus has 4; under 1:5–9, for example:
-1 Timothy 3:1–7; 1 Peter 5:1–4. The lines hold about 2,032 references
-(approximate and not re-derived: split at `;` and `,`, so a list of verses in
-one chapter counts more than once). They use English book names, so a build
+(`\r (Matthew 5:3–12; Luke 6:20–23)`). Every `\r` line follows an `\s1`
+(the previous line, skipping `\b` and blank lines, is the `\s1`: 1,325 of
+1,325 `\r` lines), so each belongs to one pericope. The number of `\s1`
+headings, 3,016, equals the number of pericopes in `data/structure/`. Titus
+has 4; under 1:5–9, for example: 1 Timothy 3:1–7; 1 Peter 5:1–4. The lines
+hold about 2,032 references (approximate and not re-derived: split at `;`
+and `,`, so a list of verses in one chapter counts more than once). They use English book names, so a build
 parses them to book codes and checks each against the versification.
 Licence: public domain.
 
@@ -322,44 +326,80 @@ Two scripts, kept here so the counts can be run again:
 [`metadata/measure_a.py`](metadata/measure_a.py) (Python, by the author of
 this file) and [`metadata/measure_b.mjs`](metadata/measure_b.mjs) (Node,
 written by a second model from a written specification, without seeing
-script A). They read the same files and agree on every per-book count for
-notes, questions, BSB markers, poetry and the segment mapping, and on the
-difficulty and language counts. Script A also writes
-[`metadata/counts.tsv`](metadata/counts.tsv).
+script A). Script A also writes [`metadata/counts.tsv`](metadata/counts.tsv).
+[`metadata/compare.py`](metadata/compare.py) compares their output; its field
+map is the list of measures both compute.
+
+- **Both scripts, compared: 0 differences in 1,568 values.** Per book and in
+  total: note rows, verse rows, rows naming an article, `figs-` rows, figure
+  rows, distinct figures, segments, segments with a figure, segment–figure
+  pairs, unparsed references; question rows and segments with a question;
+  BSB `\r`, `\s1` and `\d` lines, `\r` lines after an `\s1`, verses,
+  poetic verses and poetry, prose and mixed segments; the figure lists from
+  the table of contents; the difficulty levels; and, per language, the
+  figure names present and differing from English. For poetry, A's counts
+  are compared with B's `...Text` counts, which follow the same rule (a bare
+  `\q1` before `\v` belongs to the next verse); B's other poetry counts use
+  the other rule and give the 8,336 above.
+- **Script A only:** rows per figure, most figures in one segment, the
+  Psalms `c:front` rows, the discourse counts and the approximate count of
+  parallel references.
+- **One-off commands, neither script:** the 66 `figs-` articles in
+  Translation Academy, the 59 book and 856 chapter introductions, the Titus
+  segment table, the BSB verse set against `ufw.json`, and the catalog
+  results.
+
+The `\r`-after-`\s1`, `\s1` and per-language "used figures" counters were
+added to both scripts later (#84) by one author. For those counters the two
+scripts are two implementations (a regular expression in A, a line walk in
+B), not two independent readings of a specification.
 
 They sit under `docs/`, not `scripts/`, on purpose: no build reads them and
 no data is made from them, so they carry no tests. A build of any of this is
 new code under `scripts/` with tests.
 
 ```sh
+set -euo pipefail
 W=$(mktemp -d)
-for r in en_tn en_tq en_ta; do
-  git clone -q --depth 1 --branch v91 https://git.door43.org/unfoldingWord/$r.git $W/src/$r
-done
-for x in BSOJ/ar_ta:v3 Xenizo/fr_ta:v2.0 translationCore-Create-BCS/hi_ta:v7 \
-         bahtraku/id_ta:v30 ru_gl/ru_ta:v13.3 es-419_gl/es-419_ta:v4; do
-  repo=${x%%:*}; tag=${x##*:}
-  git clone -q --depth 1 --branch "$tag" https://git.door43.org/$repo.git $W/src/ta_${repo##*/}
-done
-# The 66 pinned BSB files, checked against sources.json
+# clone <owner/repo> <tag> <commit> <dir>: the tag, then the named commit. If the tag has
+# moved, the commit is not in the shallow clone and the checkout fails, which stops the run.
+clone() {
+  git -c advice.detachedHead=false clone -q --depth 1 --branch "$2" "https://git.door43.org/$1.git" "$4"
+  git -C "$4" checkout -q --detach "$3"
+  test "$(git -C "$4" rev-parse HEAD)" = "$3"
+}
+clone unfoldingWord/en_tn v91 e586762e330f482a60c52aedd1c7b3a2f155df8a $W/src/en_tn
+clone unfoldingWord/en_tq v91 8be02772584ff5a5fea893a392b4f019e3efcc77 $W/src/en_tq
+clone unfoldingWord/en_ta v91 ce9a1bb9431317ca888e8c1f9620caa7f5fe45fd $W/src/en_ta
+clone BSOJ/ar_ta v3 a25e9ac3d19bdef1923a758cbcf86154e809d28e $W/src/ta_ar_ta
+clone Xenizo/fr_ta v2.0 358e294289264493399638fdbd0025df6397b2bb $W/src/ta_fr_ta
+clone translationCore-Create-BCS/hi_ta v7 63a00a283591a7f0e7b2bad52755331207f3d645 $W/src/ta_hi_ta
+clone bahtraku/id_ta v30 f80201223ab26f79913e0caa6b7d126dea39924e $W/src/ta_id_ta
+clone ru_gl/ru_ta v13.3 815b9d95ca21b3efe6a8a922fea52e9a7cdd2861 $W/src/ta_ru_ta
+clone es-419_gl/es-419_ta v4 26606b578c37cc2c0ee09bb7b9a291860ff59444 $W/src/ta_es-419_ta
+
+# The 66 pinned BSB files, each checked against its SHA-256 in sources.json
 mkdir -p $W/bsb $W/out
 jq -r '.sources[] | select(.id | startswith("bsb-")) | [.id, .url, .sha256] | @tsv' sources.json |
   while IFS=$'\t' read -r id url sha; do
     f=$W/bsb/$(echo "${id#bsb-}" | tr a-z A-Z).usfm
-    curl -s "$url" -o "$f" && echo "$sha  $f" | sha256sum -c --quiet
+    curl -fsS "$url" -o "$f"
+    echo "$sha  $f" | sha256sum -c --quiet
   done
+test "$(ls $W/bsb | wc -l)" -eq 66
 
 python3 -I docs/scoping/metadata/measure_a.py $W/src $W/bsb data/structure \
   docs/scoping/metadata/counts.tsv > $W/out/a.json
-node docs/scoping/metadata/measure_b.mjs $W data/structure   # writes $W/out/b.json
+node docs/scoping/metadata/measure_b.mjs $W data/structure > $W/out/b.txt   # writes $W/out/b.json
+python3 -I docs/scoping/metadata/compare.py $W/out/a.json $W/out/b.json    # ends "diffs 0"
 
 # Catalog queries for the language table (released; then unreleased for the three with none)
 for l in ar fr hi id ru es-419 pt-br sw zh zh-hans; do
-  curl -s "https://git.door43.org/api/v1/catalog/search?subject=Translation%20Academy&lang=$l" |
+  curl -fsS "https://git.door43.org/api/v1/catalog/search?subject=Translation%20Academy&lang=$l" |
     jq -r '.data[] | [.full_name, .release.tag_name, .commit_sha] | @tsv'
 done
 for l in pt-br sw zh zh-hans; do
-  curl -s "https://git.door43.org/api/v1/catalog/search?subject=Translation%20Academy&lang=$l&stage=latest" |
+  curl -fsS "https://git.door43.org/api/v1/catalog/search?subject=Translation%20Academy&lang=$l&stage=latest" |
     jq -r '.data[] | [.full_name, .branch_or_tag_name, .stage] | @tsv'
 done
 ```

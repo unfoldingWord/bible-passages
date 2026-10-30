@@ -174,7 +174,7 @@ def bsb_book(book):
     for m in re.finditer(r"\\([a-z]+\d?)\*?(?:\s+(\d+))?", text):
         name, num = m.group(1), m.group(2)
         if name == "c":
-            chap, verse = int(num), 0
+            chap, verse, style = int(num), 0, None  # a chapter starts with no paragraph style
             continue
         if name == "v":
             verse = int(num)
@@ -206,6 +206,9 @@ def bsb_book(book):
         vs = [cv for cv in seen if a <= cv <= b]
         n = sum(poetic.get(cv, False) for cv in vs)
         kinds["segmentsPoetry" if vs and n == len(vs) else "segmentsProse" if n == 0 else "segmentsMixed"] += 1
+    # Section headings, and \r lines whose previous line (skipping \b and blank lines) is \s1
+    r["s1Markers"] = len(re.findall(r"^\\s1\b", text, re.M))
+    r["rAfterS1"] = len(re.findall(r"^\\s1\b[^\n]*\n(?:[ \t]*\n|\\b[ \t]*\n)*\\r\b", text, re.M))
     out = dict(r)
     out.update(verses=len(seen), poeticVerses=sum(poetic.values()), **kinds)
     return out
@@ -230,12 +233,13 @@ def difficulty():
     return levels
 
 
-def ta_lang(repo):
+def ta_lang(repo, used):
     def title(root, i):
         p = f"{root}/translate/{i}/title.md"
         return open(p, encoding="utf-8").read().strip().lstrip("\ufeff") if os.path.exists(p) else None
     out = {}
-    for name, ids in (("", F), ("Strict", set(F_STRICT))):
+    # "Used": the figures some note names (20 in v91), as in the doc's language table
+    for name, ids in (("", F), ("Strict", set(F_STRICT)), ("Used", set(used))):
         present = [i for i in ids if title(f"{SRC}/{repo}", i) is not None]
         out["present" + name] = len(present)
         out["translated" + name] = sum(title(f"{SRC}/{repo}", i) != title(f"{SRC}/en_ta", i) for i in present)
@@ -268,7 +272,7 @@ json.dump(dict(F_strict=F_STRICT, F_imagery=F_IMAGERY,
                tn=tn, tnTotals=tn_tot, articleRows=dict(all_used.most_common()), F_writing=F_WRITING,
                writingRows=dict(all_ws.most_common()),
                tq=tq, tqTotals=totals(tq), bsb=bsb, bsbTotals=totals(bsb),
-               difficulty=difficulty(), taLang={k: ta_lang(v) for k, v in langs.items()}),
+               difficulty=difficulty(), taLang={k: ta_lang(v, all_used) for k, v in langs.items()}),
           sys.stdout, indent=1)
 
 # Optional: a per-book TSV beside the JSON (argv[4]).
