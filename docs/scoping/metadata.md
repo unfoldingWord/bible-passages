@@ -370,10 +370,13 @@ specification:
   `\b` line with text after it (of 17,466 `\b` lines) and no line of only
   whitespace other than spaces and tabs (measured on 2026-10-30 with `tr`,
   `grep -P` and a short Python check). So a corpus run cannot tell whether
-  the rule holds: `tests/metadata-markers.test.ts` (in `npm test`) runs
-  each script's `--line-markers` mode on a synthetic file of those cases,
-  `tests/fixtures/metadata/line-markers.usfm`, and checks it against a
-  count made by hand: 6 `\s1`, 7 `\r`, 4 `\r` after `\s1`, 2 `\d`. The
+  the rule holds. A synthetic file of those cases,
+  `tests/fixtures/metadata/line-markers.usfm`, has a count made by hand:
+  6 `\s1`, 7 `\r`, 4 `\r` after `\s1`, 2 `\d`. Each script's
+  `--line-markers` mode prints its helper's counts for one file. For B,
+  `tests/metadata-markers.test.ts` checks them in `npm test`, which stays
+  Node-only; for A, the first command of the recipe below checks them and
+  stops the run on a mismatch. The
   counts were re-run with the recipe below after the change (#119): 3,016
   `\s1`, 1,325 `\r`, 1,325 `\r` after `\s1`, 117 `\d` in both scripts,
   `compare.py` "compared 1568, diffs 0", and every value both scripts
@@ -385,10 +388,14 @@ specification:
 
 They sit under `docs/`, not `scripts/`, on purpose: no build reads them and
 no data is made from them, so they carry no tests beyond the marker-line
-check above. A build of any of this is new code under `scripts/` with tests.
+checks above. A build of any of this is new code under `scripts/` with tests.
 
 ```sh
 set -euo pipefail
+# Script A's marker-line helper on the synthetic edge cases, against the hand count
+# (npm test checks script B on the same file; see "How it was measured"). A mismatch stops the run.
+test "$(python3 -I docs/scoping/metadata/measure_a.py --line-markers tests/fixtures/metadata/line-markers.usfm)" \
+  = '{"dMarkers": 2, "rAfterS1": 4, "rMarkers": 7, "s1Markers": 6}'
 W=$(mktemp -d)
 # clone <owner/repo> <tag> <commit> <dir>: the tag, then the named commit. If the tag has
 # moved, the commit is not in the shallow clone and the checkout fails, which stops the run.

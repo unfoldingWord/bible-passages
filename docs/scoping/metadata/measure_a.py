@@ -46,7 +46,7 @@ def read_usfm(path):
 
 
 # python3 -I measure_a.py --line-markers <file.usfm>: print line_markers() of one file as
-# JSON and stop. tests/metadata-markers.test.ts runs it on a synthetic file of edge cases.
+# JSON and stop. The recipe in metadata.md runs it on a synthetic file of edge cases.
 if sys.argv[1:2] == ["--line-markers"]:
     json.dump(line_markers(read_usfm(sys.argv[2])), sys.stdout, sort_keys=True)
     sys.exit(0)

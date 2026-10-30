@@ -7,9 +7,11 @@ import { describe, expect, it } from "vitest";
 // lines with one shared rule, written twice: line_markers in measure_a.py and
 // lineMarkers in measure_b.mjs. The 66 pinned BSB files hold none of the edge
 // cases the rule is written for, so the corpus run cannot catch a change to
-// either helper. This runs both on a synthetic file of those edge cases and
-// checks each against a count made by hand from the file. No network: each
-// script stops after printing the counts for the one file it is given.
+// either helper. This runs measure_b.mjs on a synthetic file of those edge
+// cases and checks it against a count made by hand from the file. npm test
+// stays Node-only: measure_a.py gets the same check, against the same file
+// and count, in the reproduction recipe in docs/scoping/metadata.md. No
+// network: the script stops after printing the counts for the one file.
 const repo = new URL("../", import.meta.url);
 const path = (p: string): string => fileURLToPath(new URL(p, repo));
 const fixture = path("tests/fixtures/metadata/line-markers.usfm");
@@ -42,20 +44,6 @@ describe("metadata sizing: shared marker-line rule", () => {
     expect(t).toContain("\n\\s1\t");
     expect(t).toContain("\n\\r\u00a0");
     expect(t).toContain("\n\\d\u00a0");
-  });
-
-  it("measure_a.py line_markers gives the hand count", () => {
-    const out = execFileSync(
-      "python3",
-      [
-        "-I",
-        path("docs/scoping/metadata/measure_a.py"),
-        "--line-markers",
-        fixture,
-      ],
-      { encoding: "utf8" }
-    );
-    expect(JSON.parse(out)).toEqual(HAND);
   });
 
   it("measure_b.mjs lineMarkers gives the hand count", () => {
