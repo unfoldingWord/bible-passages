@@ -165,6 +165,30 @@ def has_text(text, start):
 PARA = {"m", "q1", "q2", "qr", "qa", "li", "li1", "li2", "pmo", "pc", "d", "s1", "s2", "r", "ms", "mr"}
 
 
+def is_marker(line, name):
+    """The line starts with \\<name> followed by a space, a tab or the end of the line."""
+    tag = "\\" + name
+    return line.startswith(tag) and line[len(tag):len(tag) + 1] in ("", " ", "\t")
+
+
+def s1_and_r_after_s1(text):
+    """(\\s1 lines, \\r lines whose previous line is an \\s1 line), walking lines and skipping
+    blank lines and \\b lines. The same rule, step for step, as measure_b.mjs's
+    s1AndRAfterS1: lines split at \\r\\n, \\r or \\n; blank means only spaces and tabs; a
+    marker is followed by a space, a tab or the end of the line (so a \\b line may carry
+    trailing text and is still skipped)."""
+    s1 = r_after = 0
+    prev_s1 = False
+    for line in re.split(r"\r\n|\r|\n", text):
+        if re.fullmatch(r"[ \t]*", line) or is_marker(line, "b"):
+            continue
+        here_s1 = is_marker(line, "s1")
+        s1 += here_s1
+        r_after += is_marker(line, "r") and prev_s1
+        prev_s1 = here_s1
+    return s1, r_after
+
+
 def bsb_book(book):
     text = open(f"{BSB}/{book}.usfm", encoding="utf-8").read()
     r = Counter(rMarkers=0, dMarkers=0)
@@ -206,9 +230,7 @@ def bsb_book(book):
         vs = [cv for cv in seen if a <= cv <= b]
         n = sum(poetic.get(cv, False) for cv in vs)
         kinds["segmentsPoetry" if vs and n == len(vs) else "segmentsProse" if n == 0 else "segmentsMixed"] += 1
-    # Section headings, and \r lines whose previous line (skipping \b and blank lines) is \s1
-    r["s1Markers"] = len(re.findall(r"^\\s1\b", text, re.M))
-    r["rAfterS1"] = len(re.findall(r"^\\s1\b[^\n]*\n(?:[ \t]*\n|\\b[ \t]*\n)*\\r\b", text, re.M))
+    r["s1Markers"], r["rAfterS1"] = s1_and_r_after_s1(text)
     out = dict(r)
     out.update(verses=len(seen), poeticVerses=sum(poetic.values()), **kinds)
     return out

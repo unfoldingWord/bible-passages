@@ -16,19 +16,19 @@ from script A alone or from one-off commands; that section lists them.
 
 ## The answer, in plain words
 
-| Kind                       | Already in the data? | Source                                 | v0.1                                                                            |
-| -------------------------- | -------------------- | -------------------------------------- | ------------------------------------------------------------------------------- |
-| Key terms                  | yes                  | Translation Word Links and Words       | **in** (built, #62)                                                             |
-| Figures of speech          | yes                  | Translation Notes `SupportReference`   | **in**: 59 books; names complete in 4 of 9 languages, partial in 2, absent in 3 |
-| Literary form (poetry)     | yes                  | BSB `\q1` `\q2` `\qr` line markers     | **in**, proposed: poetry, prose or mixed per segment                            |
-| Parallel passages          | yes                  | BSB `\r` lines under section headings  | **in**, proposed: per pericope                                                  |
-| Difficulty                 | book level only      | Translation Academy, one article       | **in**, proposed: one rating per book, as a book field                          |
-| Topics                     | no                   | nothing structured found               | out: would need new writing                                                     |
-| Difficulty per passage     | no                   | nothing found                          | out: would need new writing                                                     |
-| Comprehension questions    | yes, but content     | Translation Questions                  | out: questions and answers, not labels for a passage                            |
-| Other translation issues   | yes                  | Translation Notes, non-figure `figs-*` | out: grammar, not figures of speech; later candidate                            |
-| Discourse features         | yes, sparse          | Translation Notes, "Writing Styles"    | out: overlaps literary form; later candidate                                    |
-| Book and chapter overviews | yes, as prose        | Translation Notes introductions        | out: turning prose into labels is new writing                                   |
+| Kind                       | Already in the data? | Source                                 | v0.1                                                                                                                                                                     |
+| -------------------------- | -------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Key terms                  | yes                  | Translation Word Links and Words       | **in** (built, #62)                                                                                                                                                      |
+| Figures of speech          | yes                  | Translation Notes `SupportReference`   | **in**: 59 books; figure names complete (all 20 named) in 4 of 9 languages, partial (some missing or still English) in 2, absent (no Translation Academy on Door43) in 3 |
+| Literary form (poetry)     | yes                  | BSB `\q1` `\q2` `\qr` line markers     | **in**, proposed: poetry, prose or mixed per segment                                                                                                                     |
+| Parallel passages          | yes                  | BSB `\r` lines under section headings  | **in**, proposed: per pericope                                                                                                                                           |
+| Difficulty                 | book level only      | Translation Academy, one article       | **in**, proposed: one rating per book, as a book field                                                                                                                   |
+| Topics                     | no                   | nothing structured found               | out: would need new writing                                                                                                                                              |
+| Difficulty per passage     | no                   | nothing found                          | out: would need new writing                                                                                                                                              |
+| Comprehension questions    | yes, but content     | Translation Questions                  | out: questions and answers, not labels for a passage                                                                                                                     |
+| Other translation issues   | yes                  | Translation Notes, non-figure `figs-*` | out: grammar, not figures of speech; later candidate                                                                                                                     |
+| Discourse features         | yes, sparse          | Translation Notes, "Writing Styles"    | out: overlaps literary form; later candidate                                                                                                                             |
+| Book and chapter overviews | yes, as prose        | Translation Notes introductions        | out: turning prose into labels is new writing                                                                                                                            |
 
 "Proposed" rows are this measurement's recommendation; the requirements
 owner decides them. Effort is under "Build effort" (estimated).
@@ -336,8 +336,10 @@ map is the list of measures both compute.
   pairs, unparsed references; question rows and segments with a question;
   BSB `\r`, `\s1` and `\d` lines, `\r` lines after an `\s1`, verses,
   poetic verses and poetry, prose and mixed segments; the figure lists from
-  the table of contents; the difficulty levels; and, per language, the
-  figure names present and differing from English. For poetry, A's counts
+  the table of contents; the difficulty levels; and, per language, six
+  counts of figure names: how many are present and how many differ from
+  English, among all 32 figure articles, among the 19 figures of speech, and
+  among the 20 figures the notes use. For poetry, A's counts
   are compared with B's `...Text` counts, which follow the same rule (a bare
   `\q1` before `\v` belongs to the next verse); B's other poetry counts use
   the other rule and give the 8,336 above.
@@ -351,8 +353,27 @@ map is the list of measures both compute.
 
 The `\r`-after-`\s1`, `\s1` and per-language "used figures" counters were
 added to both scripts later (#84) by one author. For those counters the two
-scripts are two implementations (a regular expression in A, a line walk in
-B), not two independent readings of a specification.
+scripts are two implementations, not two independent readings of a
+specification:
+
+- **`\s1` and `\r` after `\s1`** (#110): both scripts run the same line
+  walk (`s1_and_r_after_s1` in A, `s1AndRAfterS1` in B). Lines are split at
+  `\r\n`, `\r` or `\n`; a line of only spaces and tabs is blank; a marker
+  line starts with the marker followed by a space, a tab or the end of the
+  line. Blank lines and `\b` lines (with or without text after `\b`) are
+  skipped, and an `\r` line counts if the line before it is an `\s1` line.
+  So CRLF line ends, a lone `\r`, other whitespace (a no-break space line is
+  not blank) and text after `\b` are read the same way by both. None of
+  these occurs in the 66 pinned BSB files: they hold no `\r` character, no
+  `\b` line with text after it (of 17,466 `\b` lines) and no line of only
+  whitespace other than spaces and tabs (measured on 2026-10-30 with `tr`,
+  `grep -P` and a short Python check). The counts were re-run with the
+  recipe below after the change: 3,016 `\s1`, 1,325 `\r` after `\s1`,
+  `compare.py` "compared 1568, diffs 0".
+- **Used figures per language:** A counts over the set of figures the notes
+  use; B counts over the figures in the table of contents that the notes
+  use. These are the same set, because both scripts count a note's figure
+  only if it is in the table of contents.
 
 They sit under `docs/`, not `scripts/`, on purpose: no build reads them and
 no data is made from them, so they carry no tests. A build of any of this is

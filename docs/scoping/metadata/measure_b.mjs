@@ -316,6 +316,32 @@ const bsbNumeric = [
   "implicitVerse1Chapters",
   "implicitButFirstVIs1",
 ];
+// The line starts with \<name> followed by a space, a tab or the end of the line.
+const isMarker = (line, name) => {
+  const tag = "\\" + name;
+  return (
+    line.startsWith(tag) &&
+    ["", " ", "\t"].includes(line.slice(tag.length, tag.length + 1))
+  );
+};
+// [\s1 lines, \r lines whose previous line is an \s1 line], walking lines and skipping
+// blank lines and \b lines. The same rule, step for step, as measure_a.py's
+// s1_and_r_after_s1: lines split at \r\n, \r or \n; blank means only spaces and tabs; a
+// marker is followed by a space, a tab or the end of the line (so a \b line may carry
+// trailing text and is still skipped).
+const s1AndRAfterS1 = (text) => {
+  let s1 = 0,
+    rAfter = 0,
+    prevS1 = false;
+  for (const line of text.split(/\r\n|\r|\n/)) {
+    if (/^[ \t]*$/.test(line) || isMarker(line, "b")) continue;
+    const hereS1 = isMarker(line, "s1");
+    if (hereS1) s1++;
+    if (isMarker(line, "r") && prevS1) rAfter++;
+    prevS1 = hereS1;
+  }
+  return [s1, rAfter];
+};
 for (const b of books) {
   const lines = read(`${BSB}/${b}.usfm`)
     .split("\n")
@@ -349,14 +375,7 @@ for (const b of books) {
       pre = null;
     }
   };
-  // \r lines whose previous line, skipping \b and blank lines, is \s1
-  let prevMarker = null;
-  for (const line of lines) {
-    if (/^\\s1(\s|$)/.test(line)) r.s1Markers++;
-    if (/^\\r(\s|$)/.test(line) && prevMarker === "s1") r.rAfterS1++;
-    if (line.trim() !== "" && !/^\\b(\s|$)/.test(line))
-      prevMarker = (line.match(/^\\([a-z]+\d?)/) || [])[1] ?? null;
-  }
+  [r.s1Markers, r.rAfterS1] = s1AndRAfterS1(read(`${BSB}/${b}.usfm`));
   for (const line of lines) {
     if (/^\\r(\s|$)/.test(line)) r.rMarkers++;
     if (/^\\d(\s|$)/.test(line)) r.dMarkers++;
