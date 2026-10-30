@@ -4,6 +4,52 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-10-30 — bench follow-ups cleared, human review wired into the data
+
+Four waves of 4–7 lanes, each a background agent in its own worktree; every PR reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 24 PRs merged, #100 to #143.
+
+### Shipped
+
+| What                                                                                                                                                                                                                                 | Evidence                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| A person's review of a key term is recorded in the same record (`human-reviewed`, `review.by`/`at`); a changed headword is recorded like a reworded title (`review.text`, reviewer as built source, model wording kept as `drafted`) | #124, #136                         |
+| `apply.ts` turns an export of the review artifact's answers into one change to `data/drafts/`; blind-comparison answers, stale keeps and changes without a reason refuse the whole batch                                             | #137, #141                         |
+| Test suite steady under parallel load: downloads retry, cache writes are atomic, missing pins fetched once before tests, 4 workers; 18 concurrent warm runs went from 17/18 failed to 0/18                                           | #121 (measurements in PR body)     |
+| A cached input whose bytes do not match its pin is downloaded again; a wrong pin still fails                                                                                                                                         | #142                               |
+| Release checks: asset names are an allowlist of the real grammar; each table-body problem named; names quoted; `::error::` data escaped; the same 68 assets attach (counted two ways)                                                | #103, #117, #123, #143             |
+| Key-term record invariants each shown to have a test that fails without them (the checks themselves were already in #76)                                                                                                             | #113, #102, #112, #131, #132, #140 |
+| `termsFor` contract over every glossary (532 files, 116,025 keys); one verse-1 segment and pericope per chapter in all 66 books (1,189 chapters)                                                                                     | #100, #116, #126                   |
+| Metadata sizing scripts share one marker rule; `npm test` stays Node-only, script A's check runs in the recipe; recipe still gives `diffs 0`                                                                                         | #105, #115, #127                   |
+| Check ledger stores no absolute paths; `rederive.py` guards                                                                                                                                                                          | #104                               |
+| Registry entry wording follow-ups                                                                                                                                                                                                    | #101                               |
+| PR #49 split: its site Review tab closed as superseded by the review artifact; `apply.ts` landed in #137. #68 closed with it                                                                                                         | #49, #68 comments                  |
+| Project site live snapshot refreshed hourly again, from a script that reads GitHub and the tree at `origin/main` (outside the repo, in the session's handoff folder)                                                                 | site `live/snapshot` v36           |
+
+`main` at `06f0d8d`: `npm run verify` 10,431 passed, 2 todo, 20 test files (run in the main checkout at `06f0d8d`).
+
+### Decisions (the maintainer, 30 Oct)
+
+- Merge on clean + green, pinned to the reviewed head, for 30 Oct only.
+- #91: a heading whose span starts at verse 1 also gets the superscription's terms. #92: private-use language tags are not supported in release asset names yet. #86: the README's project-home link stays (the artifact is restricted to the organization).
+- #53: a person's review is recorded in the same record; a changed headword is recorded like a title; the FIA rendering stays binding for a linked term; the built glossary keeps `drafted`.
+- #49: split; the site Review tab is dropped.
+- #127: keep both metadata scripts; `npm test` stays Node-only.
+
+### Open
+
+- Blind Titus review (#64): only the maintainer's answers are saved (en 25/25, pt-BR 33/33). A reviewer reports finishing Hindi, but the review database holds no Hindi answers and no visit record for that reviewer; recovery needs them to reopen the page (answers kept in their browser, or "Copy my answers").
+- No real export from the review artifact has gone through `apply.ts` yet; the first needs a reviewer handle and a dry run.
+- Low follow-ups from the bench: #56, #109, #129, #130, #134, #135, #138, #144, #145.
+- Unchanged from 29 Oct: chunk source (#4), `en_twl` for 7 books (#57), Arabic headwords (#21), a Chinese reader (#31), a Philippians reviewer (#32), the #44 questions, OBS O1–O5 (#78).
+
+### Next
+
+- Recover the Hindi answers; when enough blind answers are in, unblind and decide the translation model (ADR 0002).
+- First real review export through `apply.ts` (dry run, then one PR).
+- Release v0.1.0 when its gates pass (#13).
+
+---
+
 ## 2026-10-29 (evening) — Open Bible Stories questions to the requirements owner
 
 ### Shipped
