@@ -140,7 +140,8 @@ letters, digits and `. _ : -`, at most 64 characters).
 - `status`, in order: `unreviewed`, `ai-checked`, `human-reviewed`,
   `approved`. A release says what status it ships at; v0.1 could honestly ship
   marked `ai-checked`.
-- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<github-handle>`.
+- `source` is a `sources.json` id, `ai:<model id>` or `reviewer:<handle>`, a
+  handle the reviewer chose or the maintainer assigned, never a display name.
 - `name` is the book's name in this language; it becomes the package
   `title`. In English it is BSB's `\h` (`bsb-<book>`, `unreviewed`), except
   for two books whose BSB name reads wrong ("Psalm", "Song"): Psalms and
@@ -187,8 +188,14 @@ never calls a model. Such a record also has:
   even when the checker agreed.
 
 An English check's `criteria` are `accurate`, `covers`, `plain` and `style`.
-A person's review is recorded by a later change as `review` (`by`, `at`,
-`status`, and `text` when the reviewer reworded the title).
+A person's review is `review`: `by` (`reviewer:<handle>`), `at` (a date),
+`status`, and `text` only when their wording differs from the draft's, with
+`why` when they gave a reason and `saved`, the time the applied record was
+saved. A later review replaces the whole entry, its reason included. The
+build takes the review's status, and its wording with the reviewer as
+`source`. Reviews come from the review artifact through
+`scripts/review/apply.ts` (below, "Review exports";
+[scoping/review-apply.md](scoping/review-apply.md)).
 
 A translated draft (`<lang>` other than `en`) has the same record, keyed by
 every titled key in the English table (pericopes and segments), plus `from`,
@@ -205,6 +212,70 @@ for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 `ai-checked` only when the checker agreed (and, for a translation, every
 gate passed); anything else stays `unreviewed` and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
+
+### Review exports
+
+The review artifact (a claude.ai page with its own database, not in this
+repo) keeps one answer document per reviewer and title, at
+`reviews/<uid>/answers/<lang>~<key>`. A work session that can read the
+artifact's database exports one reviewer's answers to a file outside the
+repo:
+
+```json
+{
+  "schema": "bp.review-export",
+  "v": 2,
+  "reviewer": "reviewer:reader-7",
+  "records": [
+    {
+      "at": "2026-10-29T23:53:12.331Z",
+      "changed": false,
+      "key": "TIT.1.1-3",
+      "lang": "en",
+      "ms": 5826,
+      "note": "",
+      "pick": "keep",
+      "shown": [],
+      "text": "Paul introduces himself as God’s servant and apostle",
+      "v": 1
+    }
+  ]
+}
+```
+
+- `reviewer`: `reviewer:` and a handle the session assigns (lower-case
+  letters, digits and inner hyphens, at most 39 characters). The `<uid>` in
+  the document path is an account identifier: it stays out of the export and
+  the repo. One reviewer per file; `apply.ts` takes several files as one
+  batch.
+- `records`: the answer documents, unchanged, with exactly the fields above.
+  `v` is 1; `at` is an ISO 8601 UTC time; `ms` the milliseconds spent;
+  `shown` is empty.
+- `pick` is `keep` or `change`, and `changed` is true exactly for `change`.
+  For a keep, `text` is the wording the reviewer was shown, and a keep whose
+  `text` is no longer the title is stale. For a change, `text` is the
+  reviewer's wording and `note` (required) the reason. A change does not
+  record the wording it replaced, so it is applied only while the title is
+  still the draft's own wording; a title a person has already reworded is
+  refused.
+- The artifact's blind-comparison tabs write answers whose `pick` is a
+  candidate id or `both`, with `shown` listing candidates. They are not title
+  reviews: an export holding one is refused whole.
+
+`node scripts/review/apply.ts <export.json>... [--dry-run]` checks every
+record before writing anything: an unknown language, book or key, a stale
+keep, a change without a reason, wording that fails the gates any title
+passes, a record more than an hour in the future or two records from one
+reviewer for one title stop the whole batch. A translated title's wording is
+gated against the English title: its English draft, else the built
+`data/titles/en/` table. Records apply oldest first, each against the
+wording the ones before it left, so a second reviewer's keep of a first
+one's change applies, and a second change to one title is refused (above).
+A keep never lowers a status, and a change is `human-reviewed`. Each review
+replaces the title's `review` whole: a keep of an `approved` title stays
+`approved`, but `by` becomes the reviewer who kept it. A record saved no later than a title's `review.saved`
+was applied before (or overtaken) and is passed over, so the same export
+can be run again. It prints the table for the PR body.
 
 ## `data/glossaries/<lang>/<BOOK>.json`
 
