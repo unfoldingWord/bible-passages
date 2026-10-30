@@ -1,13 +1,24 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdtempSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { describe, expect, it } from "vitest";
-import { readSource, type Source } from "../scripts/lib/sources.ts";
+import {
+  fetchMissing,
+  readSource,
+  type Fetch,
+  type Source,
+} from "../scripts/lib/sources.ts";
 
 // scripts/lib/sources.ts, without the network: each case is decided by the
-// cache or before any request.
+// cache, before any request, or by a scripted fetch.
 const bytes = Buffer.from("\\c 1\n\\v 1 text\n");
 const sha = createHash("sha256").update(bytes).digest("hex");
 const pin = (over: Partial<Source> = {}): Source => ({
@@ -54,5 +65,166 @@ describe("readSource", () => {
         cache: cacheDir(),
       })
     ).rejects.toThrow(/not on an allowed host/);
+  });
+});
+
+/** A fetch that gives each answer in turn and counts its calls. */
+function scripted(...answers: (number | Error)[]) {
+  const seen = { calls: 0, waits: [] as number[] };
+  const f: Fetch = async () => {
+    const a = answers[seen.calls++];
+    if (a === undefined) throw new Error("no more answers");
+    if (a instanceof Error) throw a;
+    return new Response(a === 200 ? bytes : "error", { status: a });
+  };
+  const wait = async (ms: number) => void seen.waits.push(ms);
+  return { f, seen, wait };
+}
+
+describe("readSource downloads (#111)", () => {
+  it("retries a server error or a failed connection, then caches by rename", async () => {
+    const cache = cacheDir();
+    const { f, seen, wait } = scripted(500, new TypeError("fetch failed"), 200);
+    const text = await readSource("test-src", {
+      pin: pin(),
+      cache,
+      fetch: f,
+      waits: [10, 20, 30],
+      wait,
+    });
+    expect(text).toBe(bytes.toString());
+    expect(seen).toEqual({ calls: 3, waits: [10, 20] });
+    expect(readdirSync(cache)).toEqual([`test-src.${sha}`]);
+    expect(readFileSync(new URL(`test-src.${sha}`, cache))).toEqual(bytes);
+  });
+
+  it("retries a 429 and a body that fails after a 200", async () => {
+    let calls = 0;
+    const waits: number[] = [];
+    const f: Fetch = async () => {
+      calls++;
+      if (calls === 1) return new Response("slow down", { status: 429 });
+      if (calls === 2)
+        return new Response(
+          new ReadableStream({
+            start(c) {
+              c.error(new Error("connection reset"));
+            },
+          }),
+          { status: 200 }
+        );
+      return new Response(bytes, { status: 200 });
+    };
+    const text = await readSource("test-src", {
+      pin: pin(),
+      cache: cacheDir(),
+      fetch: f,
+      waits: [10, 20, 30],
+      wait: async (ms) => void waits.push(ms),
+    });
+    expect(text).toBe(bytes.toString());
+    expect({ calls, waits }).toEqual({ calls: 3, waits: [10, 20] });
+  });
+
+  it("cancels an error body before waiting to retry", async () => {
+    let cancelled = 0;
+    const f: Fetch = async (_url, init) => {
+      expect(init.signal).toBeInstanceOf(AbortSignal);
+      if (cancelled > 0) return new Response(bytes, { status: 200 });
+      return new Response(
+        new ReadableStream({
+          cancel() {
+            cancelled++;
+          },
+        }),
+        { status: 503 }
+      );
+    };
+    await readSource("test-src", {
+      pin: pin(),
+      cache: cacheDir(),
+      fetch: f,
+      waits: [10],
+      wait: async () => expect(cancelled).toBe(1),
+    });
+    expect(cancelled).toBe(1);
+  });
+
+  it("fails a 404 with no body on its first call, naming the status", async () => {
+    let calls = 0;
+    const f: Fetch = async () => {
+      calls++;
+      return new Response(null, { status: 404 });
+    };
+    await expect(
+      readSource("test-src", {
+        pin: pin(),
+        cache: cacheDir(),
+        fetch: f,
+        waits: [10],
+        wait: async () => {},
+      })
+    ).rejects.toThrow(/: 404$/);
+    expect(calls).toBe(1);
+  });
+
+  it("does not retry a client error such as a 404", async () => {
+    const { f, seen, wait } = scripted(404, 200);
+    await expect(
+      readSource("test-src", {
+        pin: pin(),
+        cache: cacheDir(),
+        fetch: f,
+        waits: [10],
+        wait,
+      })
+    ).rejects.toThrow(/: 404$/);
+    expect(seen.calls).toBe(1);
+  });
+
+  it("gives up after its retries, naming the last failure", async () => {
+    const cache = cacheDir();
+    const { f, seen, wait } = scripted(500, 503, 502);
+    await expect(
+      readSource("test-src", {
+        pin: pin(),
+        cache,
+        fetch: f,
+        waits: [10, 20],
+        wait,
+      })
+    ).rejects.toThrow(/: 502 \(after 3 attempts\)$/);
+    expect(seen.calls).toBe(3);
+    expect(existsSync(cache)).toBe(true);
+    expect(readdirSync(cache)).toEqual([]);
+  });
+
+  it("caches nothing when the download does not match the pin", async () => {
+    const cache = cacheDir();
+    const { f, wait } = scripted(200);
+    await expect(
+      readSource("test-src", {
+        pin: pin({ sha256: "0".repeat(64) }),
+        cache,
+        fetch: f,
+        wait,
+      })
+    ).rejects.toThrow(/does not match the pin/);
+    expect(readdirSync(cache)).toEqual([]);
+  });
+});
+
+describe("fetchMissing", () => {
+  it("fetches only the pins not already in the cache", async () => {
+    const cache = cacheDir();
+    writeFileSync(new URL(`test-src.${sha}`, cache), bytes);
+    const other = pin({ id: "other-src" });
+    const { f, seen } = scripted(200);
+    expect(await fetchMissing([pin(), other], { cache, fetch: f })).toBe(1);
+    expect(seen.calls).toBe(1);
+    expect(readdirSync(cache).sort()).toEqual([
+      `other-src.${sha}`,
+      `test-src.${sha}`,
+    ]);
   });
 });

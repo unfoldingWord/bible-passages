@@ -357,15 +357,22 @@ describe("translation runner", () => {
     }
   });
 
-  it("has a verse-1 segment for every c:front ref in each Psalms glossary (#91)", () => {
-    // termsFor drops a c:front ref silently when no span in chapter c starts
-    // at verse 1, so the structure must have one for every such chapter.
-    const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
-    // One verse-1 segment per chapter, in every book, is held by
-    // tests/structure.test.ts (#118), so this map drops nothing.
-    const firsts = new Map(verse1.map((s) => [s.start[0], s.key]));
+  it("has a Psalms glossary in at least nine languages (#91)", () => {
     expect(psalmTags.length).toBeGreaterThanOrEqual(9);
-    for (const tag of psalmTags) {
+  });
+
+  // One language per test: each reads a whole Psalms glossary, and all of
+  // them in one test outran the test timeout on a loaded host (#111).
+  it.each(psalmTags)(
+    "has a verse-1 segment for every c:front ref in the %s Psalms glossary (#91)",
+    (tag) => {
+      // termsFor drops a c:front ref silently when no span in chapter c
+      // starts at verse 1, so the structure must have one for every such
+      // chapter.
+      const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
+      // One verse-1 segment per chapter, in every book, is held by
+      // tests/structure.test.ts (#118), so this map drops nothing.
+      const firsts = new Map(verse1.map((s) => [s.start[0], s.key]));
       const g = psalmGlossary(tag);
       const chapters = new Set<number>();
       for (const t of Object.values(g.terms))
@@ -389,7 +396,7 @@ describe("translation runner", () => {
             });
       }
     }
-  });
+  );
 
   it("leaves out AI-drafted terms no person has reviewed", () => {
     const term = (status?: string) => ({

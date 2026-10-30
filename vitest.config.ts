@@ -13,5 +13,13 @@ export default defineConfig({
   },
   test: {
     include: ["tests/**/*.test.ts"],
+    // Fills .cache/sources/ before any test, so no test downloads.
+    globalSetup: ["tests/global-setup.ts"],
+    // At most four test files at once, as on a CI runner, rather than one
+    // per core. With several suites on one host, a worker per core each
+    // left every test a sliver of CPU and tests timed out. With four, and
+    // eighteen suites at once, every run passed and the slowest test took
+    // 3.3 s of its 5 s, at no cost to a lone run (issue #111).
+    maxWorkers: 4,
   },
 });

@@ -990,42 +990,45 @@ describe("key-terms command line", () => {
     "anthropic/b",
   ];
 
-  it("fails before any call without a key, for one family twice, an unknown book, or into data/", () => {
-    const cases: [string[], Record<string, string>, string][] = [
-      [base, {}, "OPENROUTER_API_KEY is not set"],
-      [base, { OPENROUTER_API_KEY: "   " }, "OPENROUTER_API_KEY is not set"],
-      [
-        [...base.slice(0, 6), "--check-model", "google/a"],
-        { OPENROUTER_API_KEY: KEY },
-        "different family",
-      ],
-      [
-        // NUM has no English glossary: refused before any input is read.
-        ["--book", "NUM", ...base.slice(2, 6), "--check-model", "google/b"],
-        { OPENROUTER_API_KEY: KEY },
-        "different family",
-      ],
-      [
-        ["--book", "../../package", ...base.slice(2)],
-        { OPENROUTER_API_KEY: KEY },
-        "not a book code: ../../package",
-      ],
-      [
-        [...base, "--out", "data/glossary-drafts"],
-        { OPENROUTER_API_KEY: KEY },
-        "must not be inside data/",
-      ],
-      [
-        [...base.slice(0, 2), "--lang", "fr", ...base.slice(4)],
-        { OPENROUTER_API_KEY: KEY },
-        "not a draft language",
-      ],
-    ];
-    for (const [args, env, message] of cases) {
+  // One spawn per test: each starts a Node process, and under a loaded
+  // host several in one test outran the test timeout (issue #111).
+  const cases: [string[], Record<string, string>, string][] = [
+    [base, {}, "OPENROUTER_API_KEY is not set"],
+    [base, { OPENROUTER_API_KEY: "   " }, "OPENROUTER_API_KEY is not set"],
+    [
+      [...base.slice(0, 6), "--check-model", "google/a"],
+      { OPENROUTER_API_KEY: KEY },
+      "different family",
+    ],
+    [
+      // NUM has no English glossary: refused before any input is read.
+      ["--book", "NUM", ...base.slice(2, 6), "--check-model", "google/b"],
+      { OPENROUTER_API_KEY: KEY },
+      "different family",
+    ],
+    [
+      ["--book", "../../package", ...base.slice(2)],
+      { OPENROUTER_API_KEY: KEY },
+      "not a book code: ../../package",
+    ],
+    [
+      [...base, "--out", "data/glossary-drafts"],
+      { OPENROUTER_API_KEY: KEY },
+      "must not be inside data/",
+    ],
+    [
+      [...base.slice(0, 2), "--lang", "fr", ...base.slice(4)],
+      { OPENROUTER_API_KEY: KEY },
+      "not a draft language",
+    ],
+  ];
+  it.each(cases)(
+    "fails before any call without a key, for one family twice, an unknown book, or into data/: %j",
+    (args, env, message) => {
       const r = run(args, env);
       expect(r.status, message).toBe(1);
       expect(r.stderr, message).toContain(message);
       expect(r.stderr + r.stdout).not.toContain(KEY);
     }
-  });
+  );
 });
