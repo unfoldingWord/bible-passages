@@ -14,6 +14,7 @@ import { BOOK_CODES } from "../scripts/lib/gates.ts";
 import {
   assetNameProblems,
   checkAssets,
+  escapeCommandData,
   isAssetName,
 } from "../scripts/lib/release.ts";
 
@@ -158,10 +159,17 @@ describe("release assets", () => {
     expect(assets.map((a) => a.name)).toEqual(["TIT.json"]);
   });
 
+  // The directory is the caller's argument, quoted like every other name
+  // (#128).
   it("fails on no packages", () => {
     const dir = dist([]);
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      `${dir} has no packages`,
+      `${JSON.stringify(dir)} has no packages`,
+    ]);
+    const odd = join(dir, "a\nb");
+    mkdirSync(odd);
+    expect(checkAssets(odd, "v0.1.0").problems).toEqual([
+      `${JSON.stringify(odd)} has no packages`,
     ]);
   });
 
@@ -337,11 +345,38 @@ describe("release assets", () => {
         "XYZ.json",
       ])
     ).toEqual([
-      '"TIT.json": two files share this asset name',
+      '"TIT.json": 2 files share this asset name',
       '"XYZ.json": not a release asset name',
       '"a\\tb.json": not a release asset name',
-      '"a\\tb.json": two files share this asset name',
+      '"a\\tb.json": 2 files share this asset name',
     ]);
+  });
+
+  // The message states how many files share the name (#128).
+  it("says how many files share an asset name (#128)", () => {
+    expect(
+      assetNameProblems([
+        "TIT.json",
+        "PHP.json",
+        "TIT.json",
+        "titles.en.TIT.json",
+        "TIT.json",
+        "PHP.json",
+      ])
+    ).toEqual([
+      '"PHP.json": 2 files share this asset name',
+      '"TIT.json": 3 files share this asset name',
+    ]);
+  });
+
+  // GitHub decodes %25, %0D and %0A in a workflow command's message, so
+  // the CLI encodes %, CR and LF as the runner expects (#128).
+  it("escapes %, CR and LF in a workflow command's message (#128)", () => {
+    expect(escapeCommandData("plain")).toBe("plain");
+    expect(escapeCommandData("a%0Ab")).toBe("a%250Ab");
+    expect(escapeCommandData("100%")).toBe("100%25");
+    expect(escapeCommandData("a\rb\nc\r\n")).toBe("a%0Db%0Ac%0D%0A");
+    expect(escapeCommandData("%\n")).toBe("%25%0A");
   });
 
   it("fails on a title table for an unknown book code (#108)", () => {
@@ -449,6 +484,30 @@ describe("release assets", () => {
     expect(run.stderr).toMatch(
       /source\.revision is "unreleased", not "v0\.1\.0"/
     );
+  });
+
+  // Each problem is one "::error::" line: a literal "%0A" in a name, or a
+  // raw LF in a JSON.parse message, must not split it (#128).
+  it("the CLI escapes %, CR and LF in each ::error:: line (#128)", () => {
+    const dir = release();
+    writeFileSync(join(dir, "a%0Ab.json"), "{}");
+    writeFileSync(join(dir, "TIT.json"), "x\r\ny%");
+    const run = spawnSync(
+      "node",
+      ["scripts/release/assets.ts", "v0.1.0", dir],
+      { encoding: "utf8" }
+    );
+    expect(run.status).toBe(1);
+    expect(run.stdout).toBe("");
+    const lines = run.stderr.split("\n");
+    expect(lines.pop()).toBe("");
+    expect(lines).toEqual([
+      '::error::"a%250Ab.json": top-level file is not a package <BOOK>.json',
+      expect.stringMatching(
+        /^::error::TIT\.json: not JSON \(SyntaxError: .*x%0D%0Ay%25.*\)$/
+      ),
+    ]);
+    for (const line of lines) expect(line).not.toMatch(/[\r\n]/);
   });
 
   // The build overwrites data/, so a dry run must stop before it rather than
