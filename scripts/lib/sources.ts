@@ -96,10 +96,12 @@ async function download(
 
 /**
  * The pinned bytes of a source. The cache file is named by id and hash, so
- * a new pin is a cache miss; bytes that do not match the pin are deleted
- * and refused, never returned. A download is checked before it is cached
- * and lands by rename, so a run reading the cache at the same time never
- * sees a partial file.
+ * a new pin is a cache miss. A cache file whose bytes do not match the pin
+ * is never returned: it is deleted, reported through `warn`, and downloaded
+ * again, and the download must match the pin too, so a wrong pin still
+ * fails (issue #125). A download is checked before it is cached and lands
+ * by rename, so a run reading the cache at the same time never sees a
+ * partial file.
  */
 export async function readSource(
   id: string,
@@ -109,12 +111,14 @@ export async function readSource(
     fetch: fetchImpl = fetch as Fetch,
     waits = RETRY_WAITS,
     wait = sleep,
+    warn = console.warn,
   }: {
     pin?: Source;
     cache?: URL;
     fetch?: Fetch;
     waits?: readonly number[];
     wait?: (ms: number) => Promise<unknown>;
+    warn?: (message: string) => void;
   } = {}
 ): Promise<string> {
   if (!ID.test(pin.id) || pin.id !== id)
@@ -132,11 +136,11 @@ export async function readSource(
   }
   if (cached !== undefined) {
     const actual = sha256(cached);
-    if (actual !== pin.sha256) {
-      rmSync(file, { force: true });
-      throw new Error(`${id}: sha256 ${actual} does not match the pin`);
-    }
-    return cached.toString("utf8");
+    if (actual === pin.sha256) return cached.toString("utf8");
+    rmSync(file, { force: true });
+    warn(
+      `${id}: cached sha256 ${actual} does not match the pin; deleted it and downloading again`
+    );
   }
   const bytes = await download(url, fetchImpl, waits, wait);
   const actual = sha256(bytes);

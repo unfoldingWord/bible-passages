@@ -42,16 +42,6 @@ describe("readSource", () => {
     );
   });
 
-  it("refuses and deletes cached bytes that do not match", async () => {
-    const cache = cacheDir();
-    const file = new URL(`test-src.${sha}`, cache);
-    writeFileSync(file, Buffer.concat([bytes, Buffer.from("x")]));
-    await expect(readSource("test-src", { pin: pin(), cache })).rejects.toThrow(
-      /does not match the pin/
-    );
-    expect(existsSync(file)).toBe(false);
-  });
-
   it("refuses an id that is not a plain slug", async () => {
     await expect(
       readSource("../x", { pin: pin({ id: "../x" }), cache: cacheDir() })
@@ -65,6 +55,89 @@ describe("readSource", () => {
         cache: cacheDir(),
       })
     ).rejects.toThrow(/not on an allowed host/);
+  });
+});
+
+// A cache file whose bytes do not match its pin (an older writer, a crash
+// before the data reached disk, an outside edit) is deleted, reported and
+// downloaded again in the same call; the pin's hash still decides what is
+// returned (issue #125).
+describe("readSource repairs a cache file that does not match (#125)", () => {
+  const bad = Buffer.concat([bytes, Buffer.from("x")]);
+  const badSha = createHash("sha256").update(bad).digest("hex");
+  const reported = new RegExp(
+    `^test-src: cached sha256 ${badSha} does not match the pin`
+  );
+  const corrupt = (cache: URL) => {
+    const file = new URL(`test-src.${sha}`, cache);
+    writeFileSync(file, bad);
+    return file;
+  };
+
+  it("deletes it, downloads the pinned bytes again and caches them", async () => {
+    const cache = cacheDir();
+    const file = corrupt(cache);
+    const { f, seen, wait } = scripted(200);
+    const warned: string[] = [];
+    expect(
+      await readSource("test-src", {
+        pin: pin(),
+        cache,
+        fetch: f,
+        wait,
+        warn: (m) => void warned.push(m),
+      })
+    ).toBe(bytes.toString());
+    expect(seen.calls).toBe(1);
+    expect(readdirSync(cache)).toEqual([`test-src.${sha}`]);
+    expect(readFileSync(file)).toEqual(bytes);
+    expect(warned).toHaveLength(1);
+    expect(warned[0]).toMatch(reported);
+  });
+
+  it("never returns the bad bytes when the download fails, and reports them", async () => {
+    const cache = cacheDir();
+    const file = corrupt(cache);
+    const { f, wait } = scripted(404);
+    const warned: string[] = [];
+    await expect(
+      readSource("test-src", {
+        pin: pin(),
+        cache,
+        fetch: f,
+        wait,
+        warn: (m) => void warned.push(m),
+      })
+    ).rejects.toThrow(/: 404$/);
+    expect(existsSync(file)).toBe(false);
+    expect(warned).toHaveLength(1);
+    expect(warned[0]).toMatch(reported);
+  });
+
+  it("still fails, caching nothing, when the download does not match either", async () => {
+    // A wrong pin: the cache file is named by the pin, and no bytes from the
+    // source match it, so the repair cannot hide it.
+    const wrong = "0".repeat(64);
+    const cache = cacheDir();
+    const file = new URL(`test-src.${wrong}`, cache);
+    writeFileSync(file, bytes);
+    const { f, seen, wait } = scripted(200);
+    const warned: string[] = [];
+    await expect(
+      readSource("test-src", {
+        pin: pin({ sha256: wrong }),
+        cache,
+        fetch: f,
+        wait,
+        warn: (m) => void warned.push(m),
+      })
+    ).rejects.toThrow(new RegExp(`test-src: sha256 ${sha} does not match`));
+    expect(seen.calls).toBe(1);
+    expect(existsSync(file)).toBe(false);
+    expect(readdirSync(cache)).toEqual([]);
+    expect(warned).toEqual([
+      expect.stringMatching(`^test-src: cached sha256 ${sha} does not match`),
+    ]);
   });
 });
 
