@@ -4,11 +4,16 @@
 Usage: python3 -I compare.py <a.json> <b.json>
 
 Prints one line per difference, then the number of values compared and of differences.
-Exits 1 if any value differs. The field map below is every measure the two scripts both
-compute; anything not listed is computed by script A only and is not compared.
+Exits 1 if any value differs, and 2, with a usage line, if not given two files. A book or a
+language on one side only is a difference; the comparison goes on past it. The field map
+below is every measure the two scripts both compute; anything not listed is computed by
+script A only and is not compared.
 """
 import json, sys
 
+if len(sys.argv) != 3:
+    print("usage: python3 -I compare.py <a.json> <b.json>", file=sys.stderr)
+    sys.exit(2)
 A = json.load(open(sys.argv[1], encoding="utf-8"))
 B = json.load(open(sys.argv[2], encoding="utf-8"))
 
@@ -52,20 +57,22 @@ def fields(where, a, b, fmap):
 
 check("figures of speech (toc)", sorted(A["F_strict"]), sorted(B["F"]["strict"]))
 check("biblical imagery (toc)", sorted(A["F_imagery"]), sorted(B["F"]["imagery"]))
-books = [k for k in B["tn"] if k != "totals"]
-check("book list", sorted(A["tn"]), sorted(books))
-for bk in books:
-    fields(f"tn {bk}", A["tn"][bk], B["tn"][bk], TN)
-    fields(f"tq {bk}", A["tq"][bk], B["tq"][bk], TQ)
-    fields(f"bsb {bk}", A["bsb"][bk], B["bsb"][bk], BSB)
+books_b = [k for k in B["tn"] if k != "totals"]
+check("book list", sorted(A["tn"]), sorted(books_b))
+# A book on one side only is reported by fields() as a "(file present)" DIFF, and the run
+# goes on to the next book.
+for bk in sorted(set(A["tn"]) | set(books_b)):
+    fields(f"tn {bk}", A["tn"].get(bk), B["tn"].get(bk), TN)
+    fields(f"tq {bk}", A["tq"].get(bk), B["tq"].get(bk), TQ)
+    fields(f"bsb {bk}", A["bsb"].get(bk), B["bsb"].get(bk), BSB)
 fields("tn totals", A["tnTotals"], B["tn"]["totals"], TN)
 fields("tq totals", A["tqTotals"], B["tq"]["totals"], TQ)
 fields("bsb totals", A["bsbTotals"], B["bsb"]["totals"], BSB)
 for lvl in "12345":
     check(f"difficulty level {lvl}", A["difficulty"].get(lvl, 0), B["difficulty"].get(lvl, 0))
 check("taLang languages", sorted(A["taLang"]), sorted(B["taLang"]))
-for lang in B["taLang"]:
-    fields(f"taLang {lang}", A["taLang"].get(lang), B["taLang"][lang], TA)
+for lang in sorted(set(A["taLang"]) | set(B["taLang"])):
+    fields(f"taLang {lang}", A["taLang"].get(lang), B["taLang"].get(lang), TA)
 
 print(f"compared {compared}")
 print(f"diffs {diffs}")

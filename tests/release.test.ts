@@ -9,7 +9,7 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { checkAssets } from "../scripts/lib/release.ts";
+import { checkAssets, isAssetName } from "../scripts/lib/release.ts";
 
 // A dist/tc-mobile/ with one package per [file, revision].
 function dist(packages: [string, unknown][]): string {
@@ -102,7 +102,7 @@ describe("release assets", () => {
     writeFileSync(join(dir, ".gitkeep"), "");
     writeFileSync(join(dir, "README.txt"), "x");
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      "README.txt: top-level file is not a .json package",
+      '"README.txt": top-level file is not a package <BOOK>.json',
     ]);
   });
 
@@ -206,32 +206,82 @@ describe("release assets", () => {
     expect(assets.map((a) => a.name)).toEqual(["PHP.json", "TIT.json"]);
   });
 
-  it("fails when two files would share an asset name", () => {
+  // Asset names are an allowlist (#108): a package is <BOOK>.json with a
+  // known book code, a table titles.<lang>.<BOOK>.json. Anything else at the
+  // top level stops the release; it is neither read nor attached. That
+  // covers run.sh's TAB-split lines and gh's "file#label" (#92), and a
+  // top-level file named like a table's asset.
+  it("fails on a top-level .json file not named <BOOK>.json (#108)", () => {
+    const names = [
+      "ab.json",
+      "a#b.json",
+      "a\tb.json",
+      "a\nb.json",
+      "a\rb.json",
+      "XYZ.json",
+      "tit.json",
+      "TITUS.json",
+      "TIT.JSON",
+      "titles.en.TIT.json",
+    ];
     const dir = release();
     table(dir, "en", "TIT");
-    writeFileSync(
-      join(dir, "titles.en.TIT.json"),
-      JSON.stringify({ source: { revision: "v0.1.0" } })
-    );
-    expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      "titles.en.TIT.json: two files share this asset name",
-    ]);
-  });
-
-  // run.sh splits "<asset name><TAB><file>" lines, and `gh release create`
-  // reads "file#label": a tab, CR, LF or "#" in a name would break either.
-  it("fails on an asset name with a tab, CR, LF or # (#92)", () => {
-    const names = ["a#b.json", "a\tb.json", "a\nb.json", "a\rb.json"];
-    const dir = dist(names.map((n) => [n, "v0.1.0"]));
-    const { problems } = checkAssets(dir, "v0.1.0");
+    for (const n of names)
+      writeFileSync(
+        join(dir, n),
+        JSON.stringify({ source: { revision: "v0.1.0" } })
+      );
+    const { assets, problems } = checkAssets(dir, "v0.1.0");
     expect(problems).toEqual(
       [...names]
         .sort()
         .map(
           (n) =>
-            `${JSON.stringify(n)}: asset name contains a tab, CR, LF or "#"`
+            `${JSON.stringify(n)}: top-level file is not a package <BOOK>.json`
         )
     );
+    expect(assets.map((a) => a.name)).toEqual([
+      "PHP.json",
+      "TIT.json",
+      "titles.en.TIT.json",
+    ]);
+  });
+
+  it("allows only <BOOK>.json and titles.<lang>.<BOOK>.json (#108)", () => {
+    for (const n of [
+      "TIT.json",
+      "1CO.json",
+      "titles.en.TIT.json",
+      "titles.es-419.PHP.json",
+    ])
+      expect(isAssetName(n), n).toBe(true);
+    for (const n of [
+      "ab.json",
+      "a#b.json",
+      "a\tb.json",
+      "a\rb.json",
+      "a\nb.json",
+      "XYZ.json",
+      "TIT.json\n",
+      "TIT#x.json",
+      "titles.en.XYZ.json",
+      "titles.EN.TIT.json",
+      "titles.en.TIT#x.json",
+      "titles.e\tn.TIT.json",
+      "titles.el-x-koine.TIT.json",
+      "titles..TIT.json",
+      "titles.en.TIT",
+      "titles/en/TIT.json",
+    ])
+      expect(isAssetName(n), JSON.stringify(n)).toBe(false);
+  });
+
+  it("fails on a title table for an unknown book code (#108)", () => {
+    const dir = release();
+    table(dir, "en", "XYZ");
+    expect(checkAssets(dir, "v0.1.0").problems).toEqual([
+      "titles/en/XYZ.json: nested file has no release asset name",
+    ]);
   });
 
   // The package's own problem is reported; the table must not claim the
@@ -253,21 +303,46 @@ describe("release assets", () => {
   });
 
   // The table body tc-mobile reads (scripts/lib/title-table.ts, TitleTable).
-  it("fails on a title table whose body is not chapters and segments (#92)", () => {
+  // Each failing limb is its own problem (#108).
+  it("names each way a title table's body is not chapters and segments (#108)", () => {
     const dir = release();
     table(dir, "en", "TIT", { chapters: [] });
     table(dir, "es", "TIT", { segments: null });
     table(dir, "fr", "TIT", { chapters: undefined });
     table(dir, "hi", "TIT", { source: { revision: "v0.1.0" } });
     table(dir, "en", "PHP", { segments: "x" });
+    table(dir, "id", "TIT", {
+      chapters: undefined,
+      segments: 1,
+      source: null,
+    });
     table(dir, "ru", "TIT");
-    const shape = "body must have object chapters and segments, and no source";
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      `titles/en/PHP.json: ${shape}`,
-      `titles/en/TIT.json: ${shape}`,
-      `titles/es/TIT.json: ${shape}`,
-      `titles/fr/TIT.json: ${shape}`,
-      `titles/hi/TIT.json: ${shape}`,
+      'titles/en/PHP.json: segments is "x", not an object',
+      "titles/en/TIT.json: chapters is [], not an object",
+      "titles/es/TIT.json: segments is null, not an object",
+      "titles/fr/TIT.json: chapters is undefined, not an object",
+      "titles/hi/TIT.json: has a source block; a title table has none",
+      "titles/id/TIT.json: chapters is undefined, not an object",
+      "titles/id/TIT.json: segments is 1, not an object",
+      "titles/id/TIT.json: has a source block; a title table has none",
+    ]);
+  });
+
+  // One pass lists every reason: the body is checked even when the table's
+  // package is missing or unreadable (#108).
+  it("checks a table's body when its package is missing or unreadable (#108)", () => {
+    const dir = release();
+    writeFileSync(join(dir, "PHP.json"), "{");
+    table(dir, "en", "PHP", { chapters: [] });
+    table(dir, "en", "GEN", { source: {} });
+    const { problems } = checkAssets(dir, "v0.1.0");
+    expect(problems[0]).toMatch(/^PHP\.json: not JSON/);
+    expect(problems.slice(1)).toEqual([
+      "titles/en/GEN.json: has a source block; a title table has none",
+      "titles/en/GEN.json: no package GEN.json in this release",
+      "titles/en/PHP.json: chapters is [], not an object",
+      "titles/en/PHP.json: package PHP.json failed validation",
     ]);
   });
 
