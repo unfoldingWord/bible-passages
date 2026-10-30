@@ -217,8 +217,9 @@ translation reads it.
 
 For zh-Hans, which has no Translation Words, the file is built from
 `data/glossary-drafts/zh-Hans/<BOOK>.json` (below) instead: each term also
-carries `source` (`ai:<model>`), `status` and the check, the file names both
-models under `models`, and `review` lists the terms that are `unreviewed`
+carries `source` (`ai:<model>`), `status`, the check and, once a person has
+reviewed it, the term's `review` (below); the file names both models under
+`models`, and the file's own `review` lists the terms that are `unreviewed`
 (the checker disagreed or a gate failed). Title translation uses a term with
 a `status` only once it is `human-reviewed` or `approved`.
 
@@ -245,8 +246,40 @@ commit, not a rebuild.
   `check` (`by`, `verdict`, and for a disagreement `why` and `suggestion`).
   A term is `ai-checked` only when the checker agreed and every gate passed.
 
-A reader's review is recorded here by a later change; until then nothing is
-above `ai-checked`.
+A reader's review is recorded in this same file, by hand, as the maintainer
+decided on #53: the term's `status` is raised to `human-reviewed` and the term
+gains `review`, with exactly two fields, named as a title's review is in
+`data/drafts/`. An illustration (no review is recorded yet; the committed
+Titus term is `ai-checked`):
+
+```json
+"other/elder": {
+  "en": "elder",
+  "headword": "长老",
+  "source": "ai:google/gemini-3.8-flash",
+  "status": "human-reviewed",
+  "reference": "elder",
+  "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
+  "review": { "by": "reviewer:zh-hans-reader", "at": "2026-10-30" }
+}
+```
+
+- `by`: `reviewer:<role>` (letters, digits and hyphens), or
+  `reviewer:<github-handle>` for a contributor who chose to be named. No
+  personal names (AGENTS.md, "Privacy").
+- `at`: the date of the review, `YYYY-MM-DD`.
+- The reviewer accepts the headword as drafted. Everything the models
+  recorded stays as it was: `source` is still `ai:<model>`, and `check` and
+  `gates` stay on record. A reworded headword is not covered yet, so a
+  `review` with any other field fails the build.
+- Git keeps the history: the commit that adds the review is the record of
+  the change.
+
+The build refuses `human-reviewed` without a `review`, a `review` without a
+`by` and `at` in those forms, a `review` on a term whose status is not
+`human-reviewed`, and any status above `human-reviewed`. Without a review,
+nothing is above `ai-checked`. The built term keeps its `status` and `review`,
+so title translation can use it.
 
 ## `dist/tc-mobile/`
 
@@ -374,7 +407,9 @@ check the bump yet.
    `<BOOK>.json` and `titles.<lang>.<BOOK>.json` with a known book code, so
    no name holds a tab, CR, LF or `#`, which the release script's
    `<name><TAB><file>` lines or `gh release create`'s `file#label` would
-   misread.
+   misread. The release also stops if two files would share an asset name,
+   since the script copies each file under its name and a second copy would
+   replace the first. A name in a problem message is JSON-quoted.
 5. The packages and title tables are attached to a **draft** release,
    published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as

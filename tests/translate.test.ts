@@ -357,13 +357,7 @@ describe("translation runner", () => {
     }
   });
 
-  it("has one verse-1 segment per Psalm and a Psalms glossary in at least nine languages (#91)", () => {
-    const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
-    const firsts = new Map(verse1.map((s) => [s.start[0], s.key]));
-    // One verse-1 segment per chapter: a second would be dropped silently by
-    // this map (and by the same map in each per-language test below), and
-    // termsFor would give the superscription's terms to both.
-    expect(firsts.size).toBe(verse1.length);
+  it("has a Psalms glossary in at least nine languages (#91)", () => {
     expect(psalmTags.length).toBeGreaterThanOrEqual(9);
   });
 
@@ -375,11 +369,10 @@ describe("translation runner", () => {
       // termsFor drops a c:front ref silently when no span in chapter c
       // starts at verse 1, so the structure must have one for every such
       // chapter.
-      const firsts = new Map(
-        psalms.segments
-          .filter((s) => s.start[1] === 1)
-          .map((s) => [s.start[0], s.key])
-      );
+      const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
+      // One verse-1 segment per chapter, in every book, is held by
+      // tests/structure.test.ts (#118), so this map drops nothing.
+      const firsts = new Map(verse1.map((s) => [s.start[0], s.key]));
       const g = psalmGlossary(tag);
       const chapters = new Set<number>();
       for (const t of Object.values(g.terms))
@@ -592,22 +585,27 @@ describe("translation runner", () => {
   });
 });
 
-// Every glossary whose book has a structure: [tag, book].
+// Every glossary file, as [tag, book], and those whose book has a structure.
 type Range = { key: string; start: [number, number]; end: [number, number] };
-const structured = readdirSync(new URL("data/glossaries/", root))
+const glossaryFiles = readdirSync(new URL("data/glossaries/", root))
   .sort()
   .flatMap((tag) =>
     readdirSync(new URL(`data/glossaries/${tag}/`, root))
       .sort()
-      .map((file) => file.replace(/\.json$/, ""))
-      .filter((book) =>
-        existsSync(new URL(`data/structure/${book}.json`, root))
-      )
-      .map((book) => [tag, book] as const)
+      .map((file) => [tag, file.replace(/\.json$/, "")] as const)
   );
+const hasStructure = ([, book]: readonly [string, string]) =>
+  existsSync(new URL(`data/structure/${book}.json`, root));
+const structured = glossaryFiles.filter(hasStructure);
 
 describe("termsFor contract, over every glossary with a structure (#106)", () => {
-  it("runs over every Psalms glossary and the other books", () => {
+  it("runs over every glossary: Psalms and the other books", () => {
+    // Nothing is skipped: a glossary with no structure fails here instead
+    // of dropping out of the loop below (#118).
+    expect(
+      glossaryFiles.filter((f) => !hasStructure(f)),
+      "glossary with no structure file"
+    ).toEqual([]);
     expect(structured.length).toBeGreaterThan(psalmTags.length);
     for (const tag of psalmTags)
       expect(structured).toContainEqual([tag, "PSA"]);
