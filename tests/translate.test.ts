@@ -54,6 +54,21 @@ const psalmTags = [...Object.keys(LANGUAGES), "en"].filter((t) =>
   existsSync(new URL(`data/glossaries/${t}/PSA.json`, root))
 );
 
+type Term = { en: string; headword: string };
+const byTerm = (a: Term, b: Term) =>
+  a.en < b.en
+    ? -1
+    : a.en > b.en
+      ? 1
+      : a.headword < b.headword
+        ? -1
+        : a.headword > b.headword
+          ? 1
+          : 0;
+/** Terms in a fixed order, so lists compare as multisets. */
+const multiset = (ts: Term[]): Term[] =>
+  ts.map(({ en, headword }) => ({ en, headword })).sort(byTerm);
+
 /** The value, or a failure naming what is missing. */
 function defined<T>(value: T | undefined, what: string): T {
   if (value === undefined) throw new Error(`missing: ${what}`);
@@ -309,14 +324,14 @@ describe("translation runner", () => {
         "kt/front": { en: "front", headword: "titre", refs: ["3:front"] },
       },
     };
-    expect(termsFor("PSA.3.1-2", g)).toEqual([
+    // Compared as multisets: termsFor promises which terms, and each once,
+    // not their order (its callers only list them for the model).
+    const both = [
       { en: "both", headword: "les deux" },
       { en: "front", headword: "titre" },
-    ]);
-    expect(termsFor("PSA.P.3.1-8", g)).toEqual([
-      { en: "both", headword: "les deux" },
-      { en: "front", headword: "titre" },
-    ]);
+    ];
+    expect(multiset(termsFor("PSA.3.1-2", g))).toEqual(multiset(both));
+    expect(multiset(termsFor("PSA.P.3.1-8", g))).toEqual(multiset(both));
     expect(termsFor("PSA.3.3-4", g)).toEqual([]);
     // In the data: pray (102:front and 102:1) and Yahweh (18:front and
     // 18:1) reach the first segment once each.
@@ -342,7 +357,12 @@ describe("translation runner", () => {
     }
   });
 
-  it("has a Psalms glossary in at least nine languages (#91)", () => {
+  it("has one verse-1 segment per Psalm and a Psalms glossary in at least nine languages (#91)", () => {
+    // One verse-1 segment per chapter: a second would be dropped silently by
+    // the map below, and termsFor would give the superscription's terms to
+    // both.
+    const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
+    expect(new Set(verse1.map((s) => s.start[0])).size).toBe(verse1.length);
     expect(psalmTags.length).toBeGreaterThanOrEqual(9);
   });
 
@@ -569,6 +589,63 @@ describe("translation runner", () => {
       ["ar", "es-419", "fr", "hi", "id", "pt-BR", "ru", "sw", "zh-Hans"].sort()
     );
   });
+});
+
+// Every glossary whose book has a structure: [tag, book].
+type Range = { key: string; start: [number, number]; end: [number, number] };
+const structured = readdirSync(new URL("data/glossaries/", root))
+  .sort()
+  .flatMap((tag) =>
+    readdirSync(new URL(`data/glossaries/${tag}/`, root))
+      .sort()
+      .map((file) => file.replace(/\.json$/, ""))
+      .filter((book) =>
+        existsSync(new URL(`data/structure/${book}.json`, root))
+      )
+      .map((book) => [tag, book] as const)
+  );
+
+describe("termsFor contract, over every glossary with a structure (#106)", () => {
+  it("runs over every Psalms glossary and the other books", () => {
+    expect(structured.length).toBeGreaterThan(psalmTags.length);
+    for (const tag of psalmTags)
+      expect(structured).toContainEqual([tag, "PSA"]);
+  });
+
+  it.each(structured)(
+    "%s %s: each key gets exactly the usable terms with a ref in its span",
+    (tag, book) => {
+      const g = JSON.parse(
+        read(`data/glossaries/${tag}/${book}.json`)
+      ) as Glossary;
+      const s = JSON.parse(read(`data/structure/${book}.json`)) as {
+        pericopes: Range[];
+        segments: Range[];
+      };
+      // The oracle never parses a ref: it builds the ref strings a span
+      // covers ("c:v" for each verse, and "c:front" only when the span
+      // starts at verse 1) from the structure's own start and end, and looks
+      // each term's refs up by exact string.
+      const terms = Object.values(g.terms);
+      const byRef = new Map<string, number[]>();
+      terms.forEach((t, i) => {
+        for (const r of t.refs) byRef.set(r, [...(byRef.get(r) ?? []), i]);
+      });
+      for (const k of [...s.pericopes, ...s.segments]) {
+        const [c, from] = k.start;
+        const [endC, to] = k.end;
+        expect(endC, `${k.key} crosses a chapter`).toBe(c);
+        const covered = [];
+        for (let v = from; v <= to; v++) covered.push(`${c}:${v}`);
+        if (from === 1) covered.push(`${c}:front`);
+        const hits = new Set(covered.flatMap((r) => byRef.get(r) ?? []));
+        const want = terms.filter((t, i) => hits.has(i) && usableTerm(t));
+        expect(multiset(termsFor(k.key, g)), `${tag} ${k.key}`).toEqual(
+          multiset(want)
+        );
+      }
+    }
+  );
 });
 
 /** A fake model answering each call in turn from `answers`. */
