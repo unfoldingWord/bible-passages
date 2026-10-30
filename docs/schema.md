@@ -363,7 +363,8 @@ check the bump yet.
    (whose revision was just checked), its `language` must be the `<lang>`
    it sits under, and its body must be a table's: `chapters` and `segments`
    are objects and there is no `source`. A table whose package is present
-   but not a JSON object is reported as its package failing validation, not
+   but unreadable (it does not parse as JSON, or is not a JSON object) is
+   reported as its package failing validation, not
    as a missing package. Any other nested file, or a nested entry that is
    not a regular file, stops the release. So does an asset name holding a
    tab, CR, LF or `#`, which the release script's `<name><TAB><file>` lines

@@ -53,7 +53,8 @@ export const titleAssetName = (language: string, book: string): string =>
  *   in this release (whose revision is checked), and its `language` must
  *   be the `<lang>` it sits under. Its body must be a table's:
  *   `chapters` and `segments` objects and no `source`. When `<BOOK>.json`
- *   is present but not a JSON object, the table says the package failed
+ *   is present but unreadable (it does not parse as JSON, or parses to
+ *   something other than an object), the table says the package failed
  *   validation rather than that it is missing.
  * - No asset name holds a tab, CR, LF or `#` (run.sh and `gh` would misread
  *   it).
@@ -114,7 +115,8 @@ export function checkAssets(dir: string, tag: string): Assets {
     return null;
   };
   const packages = new Map<string, Record<string, unknown>>();
-  // Present but not a JSON object: its own problem is already reported.
+  // Present but unreadable, whether it does not parse as JSON or parses to
+  // a non-object; its own problem is already reported.
   const invalid = new Set<string>();
   for (const file of files) {
     const pkg = read(file);
