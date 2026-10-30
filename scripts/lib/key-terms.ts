@@ -19,8 +19,11 @@
 // is listed under `review` for the reader. The run sets nothing higher. A
 // person's review is recorded by hand in the committed record (#53): the
 // term's status raised to `human-reviewed`, with `review` saying who (a
-// `reviewer:` role or handle) and when. The build accepts that status only
-// with such a review, and no status above it.
+// `reviewer:` role or handle), when and, if the reader changed the headword,
+// `text`, the new headword. The build accepts that status only with such a
+// review, and no status above it. As data/drafts/ does for a title, the
+// record keeps the model's headword and `source: ai:<model>`; the built term
+// takes the reviewer's headword, with the reviewer as its source.
 import { STRUCTURE_BOOKS } from "./books.ts";
 import { family } from "./check.ts";
 import {
@@ -190,25 +193,33 @@ export type DraftRecordTerm = {
  * Who reviewed a term and when, as data/drafts/ records a title's review:
  * `by` is `reviewer:<role>`, or `reviewer:<github-handle>` for a contributor
  * who chose to be named (AGENTS.md, "Privacy"); `at` is the date,
- * `YYYY-MM-DD`. The reviewer accepts the headword as drafted.
+ * `YYYY-MM-DD`. Without `text` the reviewer accepts the headword as drafted;
+ * with it, `text` is the reviewer's headword, which the build gives the term
+ * in place of the model's, with `by` as its source.
  */
-export type TermReview = { by: string; at: string };
+export type TermReview = { by: string; at: string; text?: string };
 
 const REVIEWER = /^reviewer:[A-Za-z0-9-]+$/;
 
 /**
  * What is wrong with a term's recorded review, or an empty list. Anything
- * but exactly `by` and `at` is refused, so a field the build would ignore
- * (a reworded headword, say) cannot look recorded.
+ * but `by`, `at` and an optional `text` is refused, so a field the build
+ * would ignore cannot look recorded. `text`, the reviewer's headword, is a
+ * non-empty string with no surrounding space, as a title review's `text` is
+ * (tests/drafts.test.ts), and in NFC, as a drafted headword is. Whether it
+ * differs from the drafted headword and passes the gates is checked by
+ * buildDraftGlossary, which has the term and the reference list.
  */
 export function reviewProblems(review: unknown): string[] {
   const r = asObject(review);
   if (!r) return ["review is not an object"];
   const problems: string[] = [];
-  const extra = Object.keys(r).filter((k) => k !== "by" && k !== "at");
+  const extra = Object.keys(r).filter(
+    (k) => k !== "by" && k !== "at" && k !== "text"
+  );
   if (extra.length > 0)
     problems.push(
-      `review has fields other than by and at (${extra.join(", ")})`
+      `review has fields other than by, at and text (${extra.join(", ")})`
     );
   if (typeof r.by !== "string" || !REVIEWER.test(r.by))
     problems.push("review.by is not reviewer:<role or handle>");
@@ -222,6 +233,14 @@ export function reviewProblems(review: unknown): string[] {
     day.toISOString().slice(0, 10) !== at
   )
     problems.push("review.at is not a date YYYY-MM-DD");
+  if (
+    r.text !== undefined &&
+    (typeof r.text !== "string" ||
+      r.text === "" ||
+      r.text !== r.text.trim() ||
+      r.text !== r.text.normalize("NFC"))
+  )
+    problems.push("review.text is not a trimmed, non-empty NFC headword");
   return problems;
 }
 
@@ -653,7 +672,9 @@ export function assertBuiltTerms(
  * wrong); name only reference terms the pinned list has, with any headword
  * that does not use its reference's rendering gated; and keep the status
  * rules: `human-reviewed` only with a well-formed review, otherwise nothing
- * above `ai-checked`. A term keeps its review in the built file. Verses come
+ * above `ai-checked`. A term keeps its review in the built file; a review
+ * with `text` (a changed headword, which must differ and pass every gate)
+ * gives the built term that headword with the reviewer as source. Verses come
  * from the TWL, not the record. Credits: the TWL file, the
  * English articles and the reference list, which must share one licence.
  */
@@ -743,7 +764,36 @@ export function buildDraftGlossary(args: {
       throw new Error(
         `${where} ${article}: status ${t.status} breaks the rules`
       );
-    terms[article] = { ...t, refs };
+    // A reader's changed headword, as data/drafts/ records a reworded title:
+    // the record keeps the model's headword and source; the built term takes
+    // `review.text`, with the reviewer as its source. It must be a change
+    // (the same headword under the reviewer's name would relabel AI output)
+    // and pass every gate the model's headword was put through.
+    const { review } = t;
+    if (review?.text === undefined) {
+      terms[article] = { ...t, refs };
+      continue;
+    }
+    const { text, by } = review;
+    if (text === t.headword)
+      throw new Error(
+        `${where} ${article}: review.text is the drafted headword; leave text out to accept it`
+      );
+    const failed = gateProblems(
+      { headword: text, reference: t.reference },
+      lang.script,
+      args.reference
+    );
+    if (failed.length > 0)
+      throw new Error(
+        `${where} ${article}: review.text fails gates (${failed.join(", ")})`
+      );
+    // `gates` described the model's headword; the reviewer's passes them all,
+    // so the built term has none. `check` stays: the model's verdict on its
+    // own headword, kept beside the review as for an unchanged term.
+    const built: DraftGlossaryTerm = { ...t, headword: text, source: by, refs };
+    delete built.gates;
+    terms[article] = built;
   }
   // Unreachable while the loop above builds terms from `linked` after the
   // TWL check; it guards later changes to that loop, so removing this call
