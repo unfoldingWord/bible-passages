@@ -248,6 +248,14 @@ describe("reviewProblems", () => {
   it("accepts a reviewer role or handle and a calendar date", () => {
     for (const by of ["reviewer:zh-hans-reader", "reviewer:Some-Handle1"])
       expect(reviewProblems({ by, at: "2026-10-30" }), by).toEqual([]);
+    // A leap day (#129).
+    const by = "reviewer:zh-hans-reader";
+    expect(reviewProblems({ by, at: "2024-02-29" })).toEqual([]);
+  });
+
+  it("accepts the reviewer's changed headword as text", () => {
+    const review = { by: "reviewer:zh-hans-reader", at: "2026-10-30" };
+    expect(reviewProblems({ ...review, text: "长老" })).toEqual([]);
   });
 
   it("refuses a review without a reviewer:<role> or a real date, or with other fields", () => {
@@ -255,6 +263,7 @@ describe("reviewProblems", () => {
     const at = "2026-10-30";
     const BY = "review.by is not reviewer:<role or handle>";
     const AT = "review.at is not a date YYYY-MM-DD";
+    const TEXT = "review.text is not a trimmed, non-empty NFC headword";
     const cases: [unknown, string[]][] = [
       [{ at }, [BY]],
       [{ by }, [AT]],
@@ -267,10 +276,21 @@ describe("reviewProblems", () => {
       [{ by, at: "30 Oct 2026" }, [AT]],
       [{ by, at: "2026-02-30" }, [AT]],
       [{ by, at: "2026-10-30T12:00:00Z" }, [AT]],
+      // Not a leap year (#129).
+      [{ by, at: "1900-02-29" }, [AT]],
       [
         { by, at, headword: "长老" },
-        ["review has fields other than by and at (headword)"],
+        ["review has fields other than by, at and text (headword)"],
       ],
+      // A changed headword is text, as a reworded title is in data/drafts/.
+      [{ by, at, text: "" }, [TEXT]],
+      [{ by, at, text: " 长老" }, [TEXT]],
+      [{ by, at, text: "长老\n" }, [TEXT]],
+      [{ by, at, text: 1 }, [TEXT]],
+      [{ by, at, text: null }, [TEXT]],
+      // Decomposed (NFD), not NFC: the drafted headword is held to NFC.
+      [{ by, at, text: "e\u0301" }, [TEXT]],
+      [{ at, text: "长老" }, [BY]],
       ["reviewer:zh-hans-reader", ["review is not an object"]],
       [null, ["review is not an object"]],
     ];
@@ -609,6 +629,58 @@ describe("buildDraftGlossary", () => {
     expect(g.terms["kt/apostle"]?.review).toBeUndefined();
   });
 
+  it("builds a reader's changed headword with the reviewer as source, the record keeping the model's", () => {
+    const r = record();
+    const by = "reviewer:zh-hans-reader";
+    const review = { by, at: "2026-10-30", text: "长老" };
+    // The checker disagreed with 长者; the reader changed it to 长老.
+    Object.assign(r.terms["other/elder"]!, {
+      status: "human-reviewed",
+      review,
+    });
+    // A gated headword the reader changed to one that passes the gate.
+    Object.assign(r.terms["kt/apostle"]!, {
+      reference: "elder",
+      gates: ["reference"],
+      status: "human-reviewed",
+      review: { ...review, text: "长老" },
+    });
+    const before = JSON.stringify(r);
+    const g = build(r);
+    expect(g.terms["other/elder"]).toEqual({
+      en: "elder",
+      headword: "长老",
+      source: by,
+      status: "human-reviewed",
+      // The checker's verdict stays, with the headword it judged.
+      check: r.terms["other/elder"]!.check,
+      drafted: "长者",
+      review,
+      refs: ["1:5"],
+    });
+    // The gates were the model's headword's; the reader's passes them all.
+    expect(g.terms["kt/apostle"]).toMatchObject({
+      headword: "长老",
+      source: by,
+      reference: "elder",
+      drafted: "使徒",
+    });
+    expect(g.terms["kt/apostle"]?.gates).toBeUndefined();
+    expect(g.review).toEqual([]);
+    // AI output is never relabelled: the record still has the model's
+    // headword and source, and an unchanged term keeps them when built.
+    expect(JSON.stringify(r)).toBe(before);
+    expect(r.terms["other/elder"]).toMatchObject({
+      headword: "长者",
+      source: "ai:google/draft",
+    });
+    expect(g.terms["names/titus"]).toMatchObject({
+      headword: "提多",
+      source: "ai:google/draft",
+    });
+    expect(g.terms["names/titus"]?.drafted).toBeUndefined();
+  });
+
   describe("refuses human-reviewed without a reviewer and a date, and any status above the evidence", () => {
     const by = "reviewer:zh-hans-reader";
     const at = "2026-10-30";
@@ -635,8 +707,50 @@ describe("buildDraftGlossary", () => {
         reviewed({ by, at: "2026-13-01" }),
       ],
       [
-        elder + "review has fields other than by and at (headword)",
+        elder + "review has fields other than by, at and text (headword)",
         reviewed({ by, at, headword: "长老" }),
+      ],
+      // A changed headword: text that is not a headword, no change at all,
+      // one that fails a gate, or a change with no reviewed status.
+      [
+        elder + "review.text is not a trimmed, non-empty NFC headword",
+        reviewed({ by, at, text: "" }),
+      ],
+      [
+        elder + "review.text is not a trimmed, non-empty NFC headword",
+        reviewed({ by, at, text: "长老 " }),
+      ],
+      [
+        elder + "review.by is not reviewer:<role or handle>",
+        reviewed({ at, text: "长老" }),
+      ],
+      [
+        elder +
+          "review.text is the drafted headword; leave text out to accept it",
+        reviewed({ by, at, text: "长者" }),
+      ],
+      [
+        elder + "review.text fails gates (script, latin-letters)",
+        reviewed({ by, at, text: "Elder" }),
+      ],
+      [
+        elder + "review.text fails gates (line-break)",
+        reviewed({ by, at, text: "长\n老" }),
+      ],
+      [
+        apostle + "review.text fails gates (reference)",
+        (r) => {
+          Object.assign(r.terms["kt/apostle"]!, {
+            reference: "elder",
+            gates: ["reference"],
+            status: "human-reviewed",
+            review: { by, at, text: "使者" },
+          });
+        },
+      ],
+      [
+        elder + "status ai-checked breaks the rules",
+        reviewed({ by, at, text: "长老" }, "ai-checked"),
       ],
       // A review recorded without raising the status, or a status above it.
       [
@@ -669,6 +783,19 @@ describe("buildDraftGlossary", () => {
             source: by,
             status: "human-reviewed",
             review: { by, at },
+          });
+        },
+      ],
+      [
+        // A change leaves the record's source as the model; the build, not
+        // the record, names the reviewer as the source of the new headword.
+        apostle + "source reviewer:zh-hans-reader",
+        (r) => {
+          Object.assign(r.terms["kt/apostle"]!, {
+            headword: "使者",
+            source: by,
+            status: "human-reviewed",
+            review: { by, at, text: "使者" },
           });
         },
       ],
@@ -916,7 +1043,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       if (t.reference) expect(names.has(t.reference), t.reference).toBe(true);
   });
 
-  it("is built into data/glossaries/ with nothing above ai-checked unless a person's review is recorded", () => {
+  it("is built into data/glossaries/ with nothing above ai-checked unless a person's review is recorded, and a changed headword in its place", () => {
     expect(built.drafts).toBe(path);
     expect(built.models).toEqual({
       draft: `ai:${record.calls[0]?.model}`,
@@ -926,20 +1053,30 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     for (const [a, t] of Object.entries(built.terms)) {
       // AGENTS.md: an AI-written term is no higher than ai-checked until a
       // person reviews it; a reviewed one names who and when.
-      const review = record.terms[a]?.review;
+      const drafted = record.terms[a];
+      const review = drafted?.review;
       if (review === undefined) {
         expect(["unreviewed", "ai-checked"], a).toContain(t.status);
         expect(t.review, a).toBeUndefined();
       } else {
         expect(t.status, a).toBe("human-reviewed");
         expect(t.review, a).toEqual(review);
-        expect(Object.keys(review).sort(), a).toEqual(["at", "by"]);
-        expect(review.by, a).toMatch(/^reviewer:[A-Za-z0-9-]+$/);
-        expect(review.at, a).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+        expect(reviewProblems(review), a).toEqual([]);
       }
-      expect(t.source, a).toBe(`ai:${record.calls[0]?.model}`);
-      expect(t.en).toBe(record.terms[a]?.en);
-      expect(t.headword).toBe(record.terms[a]?.headword);
+      // As tests/drafts.test.ts holds a title: a review's text, when it gave
+      // one, is the headword, with the reviewer as source; otherwise the
+      // model's headword and source, never relabelled.
+      expect(drafted?.source, a).toBe(`ai:${record.calls[0]?.model}`);
+      expect({ headword: t.headword, source: t.source }, a).toEqual(
+        review?.text !== undefined
+          ? { headword: review.text, source: review.by }
+          : { headword: drafted?.headword, source: drafted?.source }
+      );
+      // A changed term names the model's headword, the one its check judged.
+      expect(t.drafted, a).toBe(
+        review?.text !== undefined ? drafted?.headword : undefined
+      );
+      expect(t.en).toBe(drafted?.en);
     }
     expect(built.review).toEqual(
       Object.entries(built.terms)

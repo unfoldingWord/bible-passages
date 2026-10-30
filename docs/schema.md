@@ -217,7 +217,8 @@ translation reads it.
 
 For zh-Hans, which has no Translation Words, the file is built from
 `data/glossary-drafts/zh-Hans/<BOOK>.json` (below) instead: each term also
-carries `source` (`ai:<model>`), `status`, the check and, once a person has
+carries `source` (`ai:<model>`, or the reviewer's `reviewer:<…>` once a
+person has changed its headword), `status`, the check and, once a person has
 reviewed it, the term's `review` (below); the file names both models under
 `models`, and the file's own `review` lists the terms that are `unreviewed`
 (the checker disagreed or a gate failed). Title translation uses a term with
@@ -248,9 +249,9 @@ commit, not a rebuild.
 
 A reader's review is recorded in this same file, by hand, as the maintainer
 decided on #53: the term's `status` is raised to `human-reviewed` and the term
-gains `review`, with exactly two fields, named as a title's review is in
-`data/drafts/`. An illustration (no review is recorded yet; the committed
-Titus term is `ai-checked`):
+gains `review`, with `by`, `at` and, when the reader changed the headword,
+`text`, named as a title's review is in `data/drafts/`. An illustration (no
+review is recorded yet; the committed Titus term is `ai-checked`):
 
 ```json
 "other/elder": {
@@ -268,16 +269,40 @@ Titus term is `ai-checked`):
   `reviewer:<github-handle>` for a contributor who chose to be named. No
   personal names (AGENTS.md, "Privacy").
 - `at`: the date of the review, `YYYY-MM-DD`.
-- The reviewer accepts the headword as drafted. Everything the models
-  recorded stays as it was: `source` is still `ai:<model>`, and `check` and
-  `gates` stay on record. A reworded headword is not covered yet, so a
-  `review` with any other field fails the build.
+- Without `text`, the reviewer accepts the headword as drafted.
+- `text`: the reader's headword, when they changed it, as the maintainer
+  decided on #53 (30 Oct). Recorded as a reworded title is in `data/drafts/`
+  (`review.text`): the term's `headword` and `source` in this file stay the
+  model's, and the built term in `data/glossaries/` takes `text` as its
+  `headword`, with `review.by` as its `source`. For the illustration above
+  with the checker's 长老 replacing a drafted 长者, the record keeps
+  `"headword": "长者"` and `"source": "ai:<model>"`, and adds
+  `"text": "长老"` to `review`; the built term has `"headword": "长老"`,
+  `"source": "reviewer:zh-hans-reader"` and `"drafted": "长者"`.
+- Everything the models recorded stays as it was: `headword`, `source`
+  (`ai:<model>`), `check` and `gates`. AI output is never relabelled.
 - Git keeps the history: the commit that adds the review is the record of
   the change.
 
-The build refuses `human-reviewed` without a `review`, a `review` without a
-`by` and `at` in those forms, a `review` on a term whose status is not
-`human-reviewed`, and any status above `human-reviewed`. Without a review,
+Where this differs from a title's review, and why: a title's `review` also
+carries its own `status`; a term's status is the term's `status`, raised to
+`human-reviewed` (decided on #53), so `review` has none. A changed headword
+must differ from the drafted one (the same headword under the reviewer's name
+would relabel AI output) and pass every gate the drafted one was put through
+(`script`, `latin-letters`, `line-break`, `reference`); a title review's
+`text` is held to non-empty and trimmed by tests/drafts.test.ts, and a term's
+`text` is also held to NFC, as a drafted headword is. The built term carries
+no `gates` once its headword is the reader's (they described the model's).
+It keeps `check`, and gains `drafted`, the model's headword: `check` does not
+record the headword it judged, and on a changed term that is `drafted`, not
+`headword`. `drafted` is present only on a changed term.
+
+The build refuses `human-reviewed` without a `review`; a `review` without a
+`by` and `at` in those forms, with any field but `by`, `at` and `text`, or
+with a `text` that is not a trimmed, non-empty NFC string; a `review` on a
+term whose status is not `human-reviewed`; a `text` equal to the drafted
+headword or failing a gate; a term whose `source` in this file is not the
+drafting model; and any status above `human-reviewed`. Without a review,
 nothing is above `ai-checked`. The built term keeps its `status` and `review`,
 so title translation can use it.
 
