@@ -8,7 +8,7 @@ import {
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { join, posix, win32 } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it, vi } from "vitest";
 import {
@@ -18,6 +18,7 @@ import {
   checkMessage,
   family,
   readVerdict,
+  translationRunPath,
   type TranslatedFile,
 } from "../scripts/lib/check.ts";
 import {
@@ -552,6 +553,29 @@ describe("cross-model check: a book, ledger and spend fuse", () => {
     expect(complete).toHaveBeenCalledTimes(1);
     // fr has nothing to check, so the fuse fires at fr, before any call.
     expect(stop).toEqual({ maxCost: 0.5, spent: 0.6, before: "fr" });
+  });
+});
+
+describe("check ledger: where the translation run is (#83)", () => {
+  it("is relative with / on POSIX and Windows, and null outside the repository", () => {
+    expect(translationRunPath("/repo/", "/repo/.cache/run/", posix)).toBe(
+      ".cache/run/"
+    );
+    expect(translationRunPath("/repo/", "/tmp/run/", posix)).toBeNull();
+    expect(translationRunPath("/repo/", "/repo/../x/", posix)).toBeNull();
+    expect(translationRunPath("/repo/", "/repo/..x/run/", posix)).toBe(
+      "..x/run/"
+    );
+    expect(translationRunPath("/repo/", "/repo/", posix)).toBe("./");
+    expect(
+      translationRunPath("C:\\repo\\", "C:\\repo\\.cache\\run\\", win32)
+    ).toBe(".cache/run/");
+    expect(
+      translationRunPath("C:\\repo\\", "C:\\Users\\a\\Temp\\run\\", win32)
+    ).toBeNull();
+    expect(
+      translationRunPath("C:\\repo\\", "D:\\runs\\run\\", win32)
+    ).toBeNull();
   });
 });
 

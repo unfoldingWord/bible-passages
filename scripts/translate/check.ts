@@ -18,10 +18,15 @@
 // the translation run has no translations file. Exit 1: an error; the
 // ledger still holds what was spent.
 import { existsSync, readFileSync } from "node:fs";
-import { isAbsolute, relative, resolve, sep } from "node:path";
+import { relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
-import { checkBook, family, type TranslatedFile } from "../lib/check.ts";
+import {
+  checkBook,
+  family,
+  translationRunPath,
+  type TranslatedFile,
+} from "../lib/check.ts";
 import { complete } from "../lib/openrouter.ts";
 import { BOOK_CODES } from "../lib/gates.ts";
 import {
@@ -197,15 +202,8 @@ for (const tag of tags) {
   glossaries[tag] = JSON.parse(text) as Glossary;
 }
 
-// Where the translation run is, relative to the repository, with `/`
-// separators on every platform; null outside it (an absolute path, as
-// across Windows drives, or any `..` segment under the host's separator).
-const runInRepo = relative(fileURLToPath(root), fileURLToPath(runDir));
-const runParts = runInRepo.split(sep);
-const runPath =
-  isAbsolute(runInRepo) || runParts.includes("..")
-    ? null
-    : `${runInRepo === "" ? "." : runParts.join("/")}/`;
+// Where the translation run is, relative to the repository; null outside it.
+const runPath = translationRunPath(fileURLToPath(root), fileURLToPath(runDir));
 
 const startedAt = new Date();
 const runId = `${startedAt.toISOString().replace(/[:.]/g, "-")}-${model.replace(/[^A-Za-z0-9.-]/g, "_")}`;
