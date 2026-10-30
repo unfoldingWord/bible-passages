@@ -95,6 +95,26 @@ const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
  */
 const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
 
+/**
+ * Text as a refusal shows it: control, format, surrogate, private-use,
+ * unassigned and line or paragraph separator characters written as
+ * `\u{XXXX}`, so none can reorder, recolour or break the line the maintainer
+ * reads. Plain text is unchanged.
+ */
+export const printable = (s: string): string =>
+  s.replace(
+    /[\p{C}\p{Zl}\p{Zp}]/gu,
+    (c) => `\\u{${c.codePointAt(0)!.toString(16).toUpperCase()}}`
+  );
+/** Text from a record or a title, quoted and printable, for a refusal. */
+export const quoted = (s: string): string =>
+  `"${printable(s.replace(/["\\]/g, "\\$&"))}"`;
+/** A record's lang or key in a refusal: as is when plain, else quoted. */
+const label = (v: unknown): string => {
+  const s = String(v);
+  return /^[\w.-]+$/.test(s) ? s : quoted(s);
+};
+
 const isObject = (v: unknown): v is Record<string, unknown> =>
   typeof v === "object" && v !== null && !Array.isArray(v);
 const str = (v: unknown): v is string => typeof v === "string";
@@ -105,7 +125,8 @@ export const bookOf = (key: string): string => key.split(".")[0] ?? "";
 export function exportProblems(e: unknown): string[] {
   if (!isObject(e)) return ["not an object"];
   const p: string[] = [];
-  for (const f of Object.keys(e)) if (!ENVELOPE.has(f)) p.push(`field "${f}"`);
+  for (const f of Object.keys(e))
+    if (!ENVELOPE.has(f)) p.push(`field ${quoted(f)}`);
   if (e.schema !== EXPORT_SCHEMA) p.push(`schema is not "${EXPORT_SCHEMA}"`);
   if (e.v !== EXPORT_V) p.push(`v is not ${EXPORT_V}`);
   if (!str(e.reviewer) || !REVIEWER.test(e.reviewer))
@@ -114,10 +135,14 @@ export function exportProblems(e: unknown): string[] {
   return p;
 }
 
-/** A reason as kept in data/drafts/: one line, no control or bidi marks. */
+/**
+ * A reason as kept in data/drafts/: one line, no control or bidi marks. Line
+ * breaks of every kind (CR, LF, NEL, U+2028, U+2029) and tabs become a space,
+ * as they separate words; other control and bidi characters are dropped.
+ */
 const plainWhy = (why: string) =>
   why
-    .replace(/[\r\n\t]+/g, " ")
+    .replace(/[\r\n\t\v\f\u{85}\u{2028}\u{2029}]+/gu, " ")
     .replace(/[\p{Cc}\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/gu, "")
     .trim();
 
@@ -128,10 +153,11 @@ export function recordProblems(r: unknown): string[] {
   // of its fields differ from a review's.
   if (r.pick !== "keep" && r.pick !== "change")
     return [
-      `pick ${JSON.stringify(r.pick)} is not "keep" or "change": a blind-comparison answer, not a title review`,
+      `pick ${typeof r.pick === "string" ? quoted(r.pick) : printable(String(JSON.stringify(r.pick)))} is not "keep" or "change": a blind-comparison answer, not a title review`,
     ];
   const p: string[] = [];
-  for (const f of Object.keys(r)) if (!FIELDS.has(f)) p.push(`field "${f}"`);
+  for (const f of Object.keys(r))
+    if (!FIELDS.has(f)) p.push(`field ${quoted(f)}`);
   if (r.v !== 1) p.push("v is not 1");
   if (!str(r.at) || !ISO.test(r.at) || Number.isNaN(Date.parse(r.at)))
     p.push("at");
@@ -139,7 +165,9 @@ export function recordProblems(r: unknown): string[] {
     p.push("changed does not match pick");
   if (
     !str(r.key) ||
-    !/^[A-Z0-9]{3}\.\S+$/.test(r.key) ||
+    // The forms in docs/schema.md, "Keys": ASCII letters, digits, dots and
+    // hyphens, so a key is safe to print as is.
+    !/^[A-Z0-9]{3}\.[A-Za-z0-9.-]+$/.test(r.key) ||
     !BOOK_CODES.has(bookOf(r.key))
   )
     p.push("key");
@@ -167,6 +195,10 @@ export function wordingProblems(
 ): string[] {
   const p = leakProblems(value);
   if (BIDI.test(value)) p.push("bidi control character");
+  // Line breaks and tabs have their own gate; any other control character,
+  // and U+2028 and U+2029, which break a line, are refused like bidi marks.
+  if (/[\p{Cc}\u{2028}\u{2029}]/u.test(value.replace(/[\r\n\t]/g, "")))
+    p.push("control or separator character");
   if (lang === "en") {
     for (const q of gateProblems(value)) if (!p.includes(q)) p.push(q);
   } else if (english === undefined) {
@@ -270,7 +302,7 @@ export function applyReviews(
       if (p.length === 0 && seen.has(id))
         p.push("a second record for this title");
       seen.add(id);
-      const where = isObject(r) ? ` (${String(r.lang)}~${String(r.key)})` : "";
+      const where = isObject(r) ? ` (${label(r.lang)}~${label(r.key)})` : "";
       if (p.length) problems.push(`${by} record ${i}${where}: ${p.join(", ")}`);
       else valid.push({ by, record: a });
     });
@@ -329,7 +361,7 @@ export function applyReviews(
     if (r.pick === "keep" && r.text !== before) {
       // A keep's `text` is the wording the reviewer was shown.
       problems.push(
-        `${where}: stale, kept "${r.text}" but the title is now "${before}"`
+        `${where}: stale, kept ${quoted(r.text)} but the title is now ${quoted(before)}`
       );
       continue;
     }
@@ -339,7 +371,7 @@ export function applyReviews(
       // is refused rather than overwritten (docs/scoping/review-apply.md).
       if (before !== draft.text) {
         problems.push(
-          `${where}: the title is a person's wording ("${before}"), and a change does not say which wording it replaced`
+          `${where}: the title is a person's wording (${quoted(before)}), and a change does not say which wording it replaced`
         );
         continue;
       }
@@ -362,7 +394,8 @@ export function applyReviews(
           : undefined;
       const p = wordingProblems(r.lang, r.text, en);
       if (p.length) {
-        problems.push(`${where}: ${p.join(", ")}`);
+        // A gate may name a run of the wording (`stray "..."`).
+        problems.push(`${where}: ${printable(p.join(", "))}`);
         continue;
       }
     }

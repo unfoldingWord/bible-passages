@@ -1,4 +1,16 @@
-import { readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
+import {
+  copyFileSync,
+  cpSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  symlinkSync,
+  writeFileSync,
+} from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
   applyReviews,
@@ -536,4 +548,146 @@ describe("applyReviews", () => {
     );
     expect(summary(bidi)).toMatch(/\| ab\[31m \|$/m);
   });
+});
+
+describe("refusal messages", () => {
+  // Text from a refused record is shown quoted, with control, format and
+  // separator characters escaped: a bidi override or a terminal escape in it
+  // cannot reorder or recolour the line the maintainer reads (#139).
+  const hidden = /[\p{C}\p{Zl}\p{Zp}]/u;
+  const printable = (problems: string[]) => {
+    expect(problems.length).toBeGreaterThan(0);
+    for (const p of problems) expect(p).not.toMatch(hidden);
+  };
+
+  it("quotes a stale keep's wording and the title, escaped", () => {
+    const r = apply(
+      files(),
+      envelope([keep({ text: "Paul \u{202E}greets\u{1B}[31m Titus" })])
+    );
+    expect(r.problems).toEqual([
+      'reviewer:reader-7 en/TIT TIT.1.4-4: stale, kept "Paul \\u{202E}greets\\u{1B}[31m Titus" but the title is now "Paul greets Titus"',
+    ]);
+  });
+
+  it("quotes a person's wording when a change to it is refused", () => {
+    const f = files();
+    f.get("en/TIT")!.titles["TIT.1.4-4"]!.review = {
+      by: "reviewer:owner",
+      at: "2026-10-28",
+      status: "human-reviewed",
+      text: 'Paul \u{2067}greets\u{2069} "his" son\u{2028}',
+    };
+    const r = apply(f, envelope([change("Paul greets Titus warmly")]));
+    expect(r.problems).toEqual([
+      'reviewer:reader-7 en/TIT TIT.1.4-4: the title is a person\'s wording ("Paul \\u{2067}greets\\u{2069} \\"his\\" son\\u{2028}"), and a change does not say which wording it replaced',
+    ]);
+  });
+
+  it("escapes field names, picks, keys and gate output", () => {
+    expect(recordProblems({ ...keep(), ["n\u{202E}x"]: 1 })).toContain(
+      'field "n\\u{202E}x"'
+    );
+    expect(recordProblems(keep({ pick: "c\u{202E}2" as "keep" }))[0]).toMatch(
+      /^pick "c\\u\{202E\}2" is not/
+    );
+    expect(exportProblems({ ...envelope([]), ["\u{1B}x"]: 1 })).toContain(
+      'field "\\u{1B}x"'
+    );
+    const key = apply(files(), envelope([keep({ key: "TIT.1.4-4\u{202E}" })]));
+    expect(key.problems).toEqual([
+      'reviewer:reader-7 record 0 (en~"TIT.1.4-4\\u{202E}"): key',
+    ]);
+    // The translation gates name a stray run of the wording; it is escaped.
+    printable(
+      apply(files(), envelope([change("بولس \u{202E}abc", { lang: "ar" })]))
+        .problems
+    );
+  });
+});
+
+describe("line and paragraph separators", () => {
+  it("are spaces in a note, and refused in wording", () => {
+    const note = "one\u{2028}two\u{2029}three\u{85}four";
+    const r = apply(
+      files(),
+      envelope([change("Paul greets his son", { note })])
+    );
+    expect(r.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(
+      "one two three four"
+    );
+    for (const text of [
+      "Paul greets\u{2028}his son",
+      "Paul greets\u{2029}his son",
+      "Paul greets\u{7}his son",
+    ])
+      expect(apply(files(), envelope([change(text)])).problems[0]).toMatch(
+        /control or separator character/
+      );
+  });
+});
+
+describe("apply.ts on the command line", () => {
+  // The library tests above hand applyReviews the English table themselves;
+  // only a run of the script shows that it loads data/titles/en/ and passes
+  // it on. A temporary copy of the repo's layout, so nothing real is touched.
+  const repo = new URL("../", import.meta.url);
+  const english = (
+    JSON.parse(
+      readFileSync(new URL("data/titles/en/TIT.json", repo), "utf8")
+    ) as { titles: Record<string, { text: string }> }
+  ).titles["TIT.P.1.1-4"]!.text;
+  const run = (records: Answer[]) => {
+    const dir = mkdtempSync(join(tmpdir(), "bp-review-"));
+    cpSync(new URL("scripts/", repo), join(dir, "scripts"), {
+      recursive: true,
+    });
+    copyFileSync(new URL("package.json", repo), join(dir, "package.json"));
+    symlinkSync(
+      fileURLToPath(new URL("node_modules", repo)),
+      join(dir, "node_modules"),
+      "dir"
+    );
+    mkdirSync(join(dir, "data/titles/en"), { recursive: true });
+    copyFileSync(
+      new URL("data/titles/en/TIT.json", repo),
+      join(dir, "data/titles/en/TIT.json")
+    );
+    mkdirSync(join(dir, "data/drafts/ar"), { recursive: true });
+    const drafts = JSON.stringify({
+      language: "ar",
+      book: "TIT",
+      titles: { "TIT.P.1.1-4": draft("تحية بولس") },
+    });
+    writeFileSync(join(dir, "data/drafts/ar/TIT.json"), drafts);
+    const exported = join(dir, "export.json");
+    writeFileSync(exported, JSON.stringify(envelope(records)));
+    const r = spawnSync(
+      process.execPath,
+      [join(dir, "scripts/review/apply.ts"), exported, "--dry-run"],
+      { encoding: "utf8" }
+    );
+    const after = readFileSync(join(dir, "data/drafts/ar/TIT.json"), "utf8");
+    return { ...r, untouched: after === drafts };
+  };
+  const pericope = (text: string) =>
+    change(text, { lang: "ar", key: "TIT.P.1.1-4" });
+
+  it("gates a translated pericope against the built English table", () => {
+    const ok = run([pericope("تحية بولس إلى تيطس")]);
+    expect(ok.stderr).toBe("");
+    expect(ok.status).toBe(0);
+    expect(ok.stdout).toContain("Dry run; nothing written.");
+    expect(ok.stdout).toContain(
+      "| ar | TIT.P.1.1-4 | change | reviewer:reader-7 | تحية بولس | تحية بولس إلى تيطس |"
+    );
+    expect(ok.untouched).toBe(true);
+    // A copy of the table's English is refused as a leak, not for want of
+    // an English title: the table reached the gate.
+    const leak = run([pericope(english)]);
+    expect(leak.status).toBe(1);
+    expect(leak.stderr).toMatch(/equals the English|outside Arabic/);
+    expect(leak.stderr).not.toMatch(/no English title/);
+    expect(leak.untouched).toBe(true);
+  }, 30_000);
 });
