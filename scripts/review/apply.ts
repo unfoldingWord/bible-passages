@@ -19,7 +19,12 @@ import {
 } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { format, resolveConfig } from "prettier";
-import { applyReviews, summary, type DraftFile } from "../lib/review.ts";
+import {
+  applyReviews,
+  printable,
+  summary,
+  type DraftFile,
+} from "../lib/review.ts";
 
 const args = process.argv.slice(2);
 const dry = args.includes("--dry-run");
@@ -36,7 +41,8 @@ for (const path of paths) {
   try {
     exports.push(JSON.parse(readFileSync(path, "utf8")));
   } catch (err) {
-    console.error(`${path}: ${(err as Error).message}`);
+    // A parse error quotes the file's text; shown printable.
+    console.error(printable(`${path}: ${(err as Error).message}`));
     process.exit(1);
   }
 }
