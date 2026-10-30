@@ -43,6 +43,17 @@ const read = (path: string) => readFileSync(new URL(path, root), "utf8");
 const HAN = /\p{Script=Han}/u;
 const KEY = "test-key-not-real-0000";
 
+// The message `fn` throws, compared whole: toThrow(string) only matches a
+// substring, so a message with something extra would pass it.
+function thrown(fn: () => unknown): string {
+  try {
+    fn();
+  } catch (e) {
+    return (e as Error).message;
+  }
+  throw new Error("expected a throw");
+}
+
 describe("parseFia", () => {
   it("reads name and localizedName, each pair once, sorted", () => {
     const json = JSON.stringify({
@@ -598,9 +609,11 @@ describe("buildDraftGlossary", () => {
     expect(g.terms["kt/apostle"]?.review).toBeUndefined();
   });
 
-  it("refuses human-reviewed without a reviewer and a date, and any status above the evidence", () => {
+  describe("refuses human-reviewed without a reviewer and a date, and any status above the evidence", () => {
     const by = "reviewer:zh-hans-reader";
     const at = "2026-10-30";
+    const elder = "zh-Hans TIT other/elder: ";
+    const apostle = "zh-Hans TIT kt/apostle: ";
     const reviewed =
       (review?: unknown, status = "human-reviewed") =>
       (r: DraftRecord) => {
@@ -610,38 +623,47 @@ describe("buildDraftGlossary", () => {
         });
       };
     const cases: [string, (r: DraftRecord) => void][] = [
-      ["human-reviewed with no review (by, at)", reviewed()],
-      ["review.by is not reviewer:<role or handle>", reviewed({ at })],
-      ["review.at is not a date YYYY-MM-DD", reviewed({ by })],
-      ["review.by is not reviewer:<role or handle>", reviewed({ by: "", at })],
+      [elder + "human-reviewed with no review (by, at)", reviewed()],
+      [elder + "review.by is not reviewer:<role or handle>", reviewed({ at })],
+      [elder + "review.at is not a date YYYY-MM-DD", reviewed({ by })],
       [
-        "review.at is not a date YYYY-MM-DD",
+        elder + "review.by is not reviewer:<role or handle>",
+        reviewed({ by: "", at }),
+      ],
+      [
+        elder + "review.at is not a date YYYY-MM-DD",
         reviewed({ by, at: "2026-13-01" }),
       ],
       [
-        "review has fields other than by and at (headword)",
+        elder + "review has fields other than by and at (headword)",
         reviewed({ by, at, headword: "长老" }),
       ],
       // A review recorded without raising the status, or a status above it.
       [
-        "status unreviewed breaks the rules",
+        elder + "status unreviewed breaks the rules",
         reviewed({ by, at }, "unreviewed"),
       ],
       [
-        "status ai-checked breaks the rules",
+        elder + "status ai-checked breaks the rules",
         reviewed({ by, at }, "ai-checked"),
       ],
-      ["status approved breaks the rules", reviewed({ by, at }, "approved")],
-      ["status approved breaks the rules", reviewed(undefined, "approved")],
+      [
+        elder + "status approved breaks the rules",
+        reviewed({ by, at }, "approved"),
+      ],
+      [
+        elder + "status approved breaks the rules",
+        reviewed(undefined, "approved"),
+      ],
       [
         // The reviewer is named in the review, never as the AI term's source.
-        "source reviewer:zh-hans-reader",
+        apostle + "source reviewer:zh-hans-reader",
         (r) => {
           r.terms["kt/apostle"]!.source = by;
         },
       ],
       [
-        "source reviewer:zh-hans-reader",
+        apostle + "source reviewer:zh-hans-reader",
         (r) => {
           Object.assign(r.terms["kt/apostle"]!, {
             source: by,
@@ -651,11 +673,11 @@ describe("buildDraftGlossary", () => {
         },
       ],
     ];
-    for (const [message, change] of cases) {
+    it.each(cases)("%#: %s", (message, change) => {
       const r = record();
       change(r);
-      expect(() => build(r), message).toThrow(message);
-    }
+      expect(thrown(() => build(r))).toBe(message);
+    });
   });
 
   it("refuses a record that no longer matches its inputs or breaks the rules", () => {
@@ -756,7 +778,7 @@ describe("assertBuiltTerms", () => {
     expect(() => assertBuiltTerms("w", built(), record, linked)).not.toThrow();
   });
 
-  it("refuses built terms that drop, add or re-verse a term", () => {
+  describe("refuses built terms that drop, add or re-verse a term", () => {
     const cases: [
       string,
       Record<string, { refs: string[] } | undefined>,
@@ -796,13 +818,11 @@ describe("assertBuiltTerms", () => {
         { "kt/apostle": {} },
       ],
     ];
-    for (const [name, terms, detail, recordTerms = record] of cases)
+    it.each(cases)("%s", (_name, terms, detail, recordTerms = record) => {
       expect(
-        () => assertBuiltTerms("w", terms, recordTerms, linked),
-        name
-      ).toThrow(
-        `w: the built terms do not match the record and TWL (${detail})`
-      );
+        thrown(() => assertBuiltTerms("w", terms, recordTerms, linked))
+      ).toBe(`w: the built terms do not match the record and TWL (${detail})`);
+    });
   });
 });
 
