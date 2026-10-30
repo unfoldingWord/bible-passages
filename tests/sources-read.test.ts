@@ -150,6 +150,24 @@ describe("readSource downloads (#111)", () => {
     expect(cancelled).toBe(1);
   });
 
+  it("fails a 404 with no body on its first call, naming the status", async () => {
+    let calls = 0;
+    const f: Fetch = async () => {
+      calls++;
+      return new Response(null, { status: 404 });
+    };
+    await expect(
+      readSource("test-src", {
+        pin: pin(),
+        cache: cacheDir(),
+        fetch: f,
+        waits: [10],
+        wait: async () => {},
+      })
+    ).rejects.toThrow(/: 404$/);
+    expect(calls).toBe(1);
+  });
+
   it("does not retry a client error such as a 404", async () => {
     const { f, seen, wait } = scripted(404, 200);
     await expect(
