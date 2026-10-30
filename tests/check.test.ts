@@ -4,6 +4,7 @@ import {
   mkdtempSync,
   readFileSync,
   readdirSync,
+  rmSync,
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
@@ -558,8 +559,8 @@ describe("checker command line", () => {
   const script = fileURLToPath(new URL("scripts/translate/check.ts", root));
   const env = { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY };
   /** A translation run directory with a ledger and one language file. */
-  const fakeRun = (ledger: Record<string, unknown> = {}) => {
-    const dir = mkdtempSync(join(tmpdir(), "check-run-"));
+  const fakeRun = (ledger: Record<string, unknown> = {}, parent = tmpdir()) => {
+    const dir = mkdtempSync(join(parent, "check-run-"));
     writeFileSync(
       join(dir, "run.json"),
       JSON.stringify({
@@ -708,6 +709,40 @@ describe("checker command line", () => {
     const ledger = JSON.parse(readFileSync(join(out, "run.json"), "utf8"));
     expect(ledger.notInRun).toEqual(["ar"]);
     expect(ledger.calls).toEqual([]);
+  });
+
+  it("records the translation run relative to the repository, or null outside it, never an absolute path (#83)", () => {
+    // fr has nothing to check, so no call is made and the ledger is written.
+    const ledgerOf = (dir: string) => {
+      writeFileSync(
+        join(dir, "fr", "TIT.json"),
+        JSON.stringify(fileOf("fr", {}))
+      );
+      const out = join(mkdtempSync(join(tmpdir(), "check-out-")), "new");
+      const r = run(["--run", dir, "--model", MODELS.claude, "--out", out]);
+      expect(r.status, r.stderr).toBe(0);
+      const text = readFileSync(join(out, "run.json"), "utf8");
+      expect(text).not.toContain(dir);
+      return JSON.parse(text) as {
+        translation: { run: string | null; sha256: string };
+      };
+    };
+    const outside = fakeRun();
+    const l1 = ledgerOf(outside);
+    expect(l1.translation.run).toBeNull();
+    expect(l1.translation.sha256).toBe(
+      sha256(readFileSync(join(outside, "run.json"), "utf8"))
+    );
+
+    const cache = fileURLToPath(new URL(".cache/", root));
+    mkdirSync(cache, { recursive: true });
+    const inside = fakeRun({}, cache);
+    try {
+      const l2 = ledgerOf(inside);
+      expect(l2.translation.run).toBe(`.cache/${inside.slice(cache.length)}/`);
+    } finally {
+      rmSync(inside, { recursive: true, force: true });
+    }
   });
 
   it("refuses an --out that exists or is inside data/ or dist/, before any call", () => {

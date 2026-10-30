@@ -10,12 +10,15 @@
 // printed. Output goes to --out, by default under .cache/ (not committed):
 // one `<lang>/<BOOK>.json` of checked titles per language, in the shape of
 // data/drafts/<lang>/<BOOK>.json, and `run.json`, the ledger of calls and
-// totals. Exit 0: every translation has a verdict. Exit 2: the run stopped
+// totals. The ledger pins the translation run by the SHA-256 of its
+// run.json (`translation.sha256`); `translation.run` is the run's path
+// relative to the repository, or null for a run kept outside it, so no
+// machine's absolute paths are written (#83). Exit 0: every translation has a verdict. Exit 2: the run stopped
 // early, some verdicts are missing, invalid or unreadable, or a language in
 // the translation run has no translations file. Exit 1: an error; the
 // ledger still holds what was spent.
 import { existsSync, readFileSync } from "node:fs";
-import { relative, resolve } from "node:path";
+import { isAbsolute, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { checkBook, family, type TranslatedFile } from "../lib/check.ts";
@@ -194,6 +197,13 @@ for (const tag of tags) {
   glossaries[tag] = JSON.parse(text) as Glossary;
 }
 
+// Where the translation run is, relative to the repository; null outside it.
+const runInRepo = relative(fileURLToPath(root), fileURLToPath(runDir));
+const runPath =
+  runInRepo === ".." || runInRepo.startsWith("../") || isAbsolute(runInRepo)
+    ? null
+    : `${runInRepo === "" ? "." : runInRepo}/`;
+
 const startedAt = new Date();
 const runId = `${startedAt.toISOString().replace(/[:.]/g, "-")}-${model.replace(/[^A-Za-z0-9.-]/g, "_")}`;
 const out = new URL(
@@ -226,7 +236,7 @@ try {
       book,
       startedAt: startedAt.toISOString(),
       translation: {
-        run: fileURLToPath(runDir),
+        run: runPath,
         model: ledger.model,
         sha256: sha256(ledgerText),
       },
