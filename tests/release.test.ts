@@ -192,6 +192,8 @@ describe("release assets", () => {
       "titles/EN/TIT.json",
       "other/en/TIT.json",
       "en/TIT.json",
+      // Private-use tags are not supported yet (#92, docs/schema.md).
+      "titles/el-x-koine/TIT.json",
     ];
     for (const f of bad) {
       mkdirSync(join(dir, f, ".."), { recursive: true });
@@ -213,6 +215,59 @@ describe("release assets", () => {
     );
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
       "titles.en.TIT.json: two files share this asset name",
+    ]);
+  });
+
+  // run.sh splits "<asset name><TAB><file>" lines, and `gh release create`
+  // reads "file#label": a tab, CR, LF or "#" in a name would break either.
+  it("fails on an asset name with a tab, CR, LF or # (#92)", () => {
+    const names = ["a#b.json", "a\tb.json", "a\nb.json", "a\rb.json"];
+    const dir = dist(names.map((n) => [n, "v0.1.0"]));
+    const { problems } = checkAssets(dir, "v0.1.0");
+    expect(problems).toEqual(
+      [...names]
+        .sort()
+        .map(
+          (n) =>
+            `${JSON.stringify(n)}: asset name contains a tab, CR, LF or "#"`
+        )
+    );
+  });
+
+  // The package's own problem is reported; the table must not claim the
+  // package is missing when it is present but unreadable.
+  it("says a table's package failed validation, not that it is missing (#92)", () => {
+    const dir = release();
+    writeFileSync(join(dir, "TIT.json"), "{");
+    writeFileSync(join(dir, "PHP.json"), "[1]");
+    table(dir, "en", "TIT");
+    table(dir, "en", "PHP");
+    const { problems } = checkAssets(dir, "v0.1.0");
+    expect(problems).toHaveLength(4);
+    expect(problems[0]).toBe("PHP.json: not a JSON object");
+    expect(problems[1]).toMatch(/^TIT\.json: not JSON/);
+    expect(problems.slice(2)).toEqual([
+      "titles/en/PHP.json: package PHP.json failed validation",
+      "titles/en/TIT.json: package TIT.json failed validation",
+    ]);
+  });
+
+  // The table body tc-mobile reads (scripts/lib/title-table.ts, TitleTable).
+  it("fails on a title table whose body is not chapters and segments (#92)", () => {
+    const dir = release();
+    table(dir, "en", "TIT", { chapters: [] });
+    table(dir, "es", "TIT", { segments: null });
+    table(dir, "fr", "TIT", { chapters: undefined });
+    table(dir, "hi", "TIT", { source: { revision: "v0.1.0" } });
+    table(dir, "en", "PHP", { segments: "x" });
+    table(dir, "ru", "TIT");
+    const shape = "body must have object chapters and segments, and no source";
+    expect(checkAssets(dir, "v0.1.0").problems).toEqual([
+      `titles/en/PHP.json: ${shape}`,
+      `titles/en/TIT.json: ${shape}`,
+      `titles/es/TIT.json: ${shape}`,
+      `titles/fr/TIT.json: ${shape}`,
+      `titles/hi/TIT.json: ${shape}`,
     ]);
   });
 

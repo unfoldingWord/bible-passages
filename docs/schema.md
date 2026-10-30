@@ -360,14 +360,24 @@ check the bump yet.
    A table has no `source` block, so it carries no revision; it is tied to
    the release through its package instead: its `packageId` and `version`
    must equal the `id` and `version` of `<BOOK>.json` in the same release
-   (whose revision was just checked), and its `language` must be the
-   `<lang>` it sits under. Any other nested file, or a nested entry that is
-   not a regular file, stops the release.
+   (whose revision was just checked), its `language` must be the `<lang>`
+   it sits under, and its body must be a table's: `chapters` and `segments`
+   are objects and there is no `source`. A table whose package is present
+   but not a JSON object is reported as its package failing validation, not
+   as a missing package. Any other nested file, or a nested entry that is
+   not a regular file, stops the release. So does an asset name holding a
+   tab, CR, LF or `#`, which the release script's `<name><TAB><file>` lines
+   or `gh release create`'s `file#label` would misread.
 5. The packages and title tables are attached to a **draft** release,
    published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as
    `titles.<lang>.<BOOK>.json` (for example `titles.en.TIT.json`,
    `titles.es-419.TIT.json`); a package keeps its own name (`TIT.json`).
+   `<lang>` must match `^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$`: a 2–3 letter
+   primary subtag and subtags of 2–8 letters or digits. Private-use tags
+   (an `x-` subtag, such as `el-x-koine`) are not supported in release asset
+   names yet; such a table stops the release, and allowing them needs a
+   decision first (#92).
    The script copies each file under its asset name into a temporary
    directory and attaches the copies.
 
