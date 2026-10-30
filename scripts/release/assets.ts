@@ -4,7 +4,7 @@
 // each file under its asset name.
 //
 //   node scripts/release/assets.ts <tag> [dir]
-import { checkAssets } from "../lib/release.ts";
+import { checkAssets, escapeCommandData } from "../lib/release.ts";
 
 const [tag, dir = "dist/tc-mobile"] = process.argv.slice(2);
 if (!tag) {
@@ -12,6 +12,8 @@ if (!tag) {
   process.exit(2);
 }
 const { assets, problems } = checkAssets(dir, tag);
-for (const p of problems) console.error(`::error::${p}`);
+// One "::error::" line per problem, encoded so the runner decodes it back
+// to the problem rather than splitting it.
+for (const p of problems) console.error(`::error::${escapeCommandData(p)}`);
 if (problems.length > 0) process.exit(1);
 for (const { name, file } of assets) console.log(`${name}\t${file}`);

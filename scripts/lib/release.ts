@@ -38,10 +38,11 @@ export const isAssetName = (name: string): boolean => {
 /**
  * Why `names`, the asset names of one release, cannot be attached: each
  * distinct name outside the grammar, and each name held by more than one
- * file, sorted by name. Names are JSON-quoted, as they may hold a tab, CR
- * or LF. run.sh copies each file to `<stage>/<name>`, so a repeated name
- * would overwrite the first copy and attach one file silently; checkAssets
- * cannot build such a list today, and this is the guard if that changes.
+ * file (saying how many), sorted by name. Names are JSON-quoted, as they
+ * may hold a tab, CR or LF. run.sh copies each file to `<stage>/<name>`,
+ * so a repeated name would overwrite the first copy and attach one file
+ * silently; checkAssets cannot build such a list today, and this is the
+ * guard if that changes.
  */
 export const assetNameProblems = (names: readonly string[]): string[] => {
   const count = new Map<string, number>();
@@ -53,10 +54,23 @@ export const assetNameProblems = (names: readonly string[]): string[] => {
         ? []
         : [`${JSON.stringify(name)}: not a release asset name`]),
       ...(count.get(name)! > 1
-        ? [`${JSON.stringify(name)}: two files share this asset name`]
+        ? [
+            `${JSON.stringify(name)}: ${count.get(name)} files share this asset name`,
+          ]
         : []),
     ]);
 };
+
+/**
+ * `message` as the data of a workflow command such as `::error::`: `%`,
+ * CR and LF encoded as `%25`, `%0D` and `%0A`. The runner decodes exactly
+ * these three in a command's data (actions/runner, ActionCommand.cs,
+ * `_escapeDataMappings`), so an unencoded `%0A` would become a line break
+ * and a raw LF would end the command. Same mapping, `%` first, as
+ * `escapeData` in actions/toolkit (packages/core/src/command.ts).
+ */
+export const escapeCommandData = (message: string): string =>
+  message.replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A");
 
 const isObject = (v: unknown): boolean =>
   typeof v === "object" && v !== null && !Array.isArray(v);
@@ -113,7 +127,9 @@ export const titleAssetName = (language: string, book: string): string =>
  * - Every asset name is in the allowlisted grammar above, so none holds a
  *   tab, CR, LF or `#`, and no two share a name (assetNameProblems).
  * - Every name in a message is JSON-quoted where it may hold a tab, CR or
- *   LF, which would split the CLI's "::error::" line.
+ *   LF, which would split the CLI's "::error::" line; `dir` is quoted too.
+ *   The CLI also encodes each message with escapeCommandData, since a
+ *   message can still hold `%` or, from JSON.parse, a raw CR or LF.
  */
 const kind = (e: Dirent) =>
   e.isDirectory() ? "directory" : e.isSymbolicLink() ? "symlink" : "entry";
@@ -168,7 +184,8 @@ export function checkAssets(dir: string, tag: string): Assets {
         `${JSON.stringify(e.name)}: top-level ${kind(e)} is not a regular file`
       );
   }
-  if (files.length === 0) problems.push(`${dir} has no packages`);
+  if (files.length === 0)
+    problems.push(`${JSON.stringify(dir)} has no packages`);
   const read = (file: string): Record<string, unknown> | null => {
     try {
       const value: unknown = JSON.parse(readFileSync(file, "utf8"));
