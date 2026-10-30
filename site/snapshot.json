@@ -1,227 +1,497 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-10-29T11:09:34.538Z",
+  "asOf": "2026-10-30T19:17:36.396Z",
   "repo": {
-    "pushedAt": "2026-10-29T01:50:04Z",
+    "pushedAt": "2026-10-30T18:49:08Z",
     "defaultBranch": "main",
-    "openIssues": 15
+    "openIssues": 31
   },
   "commits": [
     {
-      "sha": "ce92d4a",
-      "msg": "Merge pull request #27 from unfoldingWord/feat/site-refresh-29oct",
-      "at": "2026-10-29T01:50:04Z"
+      "sha": "06f0d8d",
+      "msg": "Merge pull request #142 from unfoldingWord/fix/source-cache-repair",
+      "at": "2026-10-30T18:34:00Z"
     },
     {
-      "sha": "cae59cd",
-      "msg": "Merge pull request #28 from unfoldingWord/docs/eod-2026-10-29-late",
-      "at": "2026-10-29T01:49:49Z"
+      "sha": "2bfbb4b",
+      "msg": "Merge pull request #141 from unfoldingWord/fix/review-apply-hygiene",
+      "at": "2026-10-30T18:29:59Z"
     },
     {
-      "sha": "ed9f36a",
-      "msg": "docs: progress tracker, late 29 Oct session",
-      "at": "2026-10-29T01:49:00Z"
+      "sha": "6bdcbd2",
+      "msg": "Merge pull request #143 from unfoldingWord/fix/release-message-hygiene",
+      "at": "2026-10-30T18:26:09Z"
     },
     {
-      "sha": "7ac93e9",
-      "msg": "Merge pull request #17 from unfoldingWord/feat/release-key-check",
-      "at": "2026-10-29T01:48:14Z"
+      "sha": "fb84ca3",
+      "msg": "test(sources): keep the slug and host cases in their own describe",
+      "at": "2026-10-30T18:20:28Z"
     },
     {
-      "sha": "eb8c6c2",
-      "msg": "fix(site): cite ADR 0003 for the Chinese key-term decision — bench round 2",
-      "at": "2026-10-29T01:38:53Z"
+      "sha": "1c456a3",
+      "msg": "Merge pull request #140 from unfoldingWord/test/key-term-guard-notes",
+      "at": "2026-10-30T18:10:32Z"
     },
     {
-      "sha": "22a43a5",
-      "msg": "feat(site): #26 is merged; restore the recorded wording",
-      "at": "2026-10-29T01:37:43Z"
+      "sha": "72a9e6d",
+      "msg": "Merge pull request #127 from unfoldingWord/docs/metadata-marker-rule",
+      "at": "2026-10-30T18:01:47Z"
     },
     {
-      "sha": "e0b3fa9",
-      "msg": "Merge remote-tracking branch 'origin/main' into feat/site-refresh-29oct",
-      "at": "2026-10-29T01:37:31Z"
+      "sha": "2211caf",
+      "msg": "fix(release): count shared asset names; escape ::error:: data",
+      "at": "2026-10-30T17:59:26Z"
     },
     {
-      "sha": "20ac202",
-      "msg": "Merge pull request #26 from unfoldingWord/feat/record-owner-decisions",
-      "at": "2026-10-29T01:37:12Z"
+      "sha": "5fad78a",
+      "msg": "fix(sources): download again a cached input whose bytes do not match its pin",
+      "at": "2026-10-30T17:58:24Z"
     },
     {
-      "sha": "c293c05",
-      "msg": "fix(review): the six Titus titles and scope/source ADRs are pending PR #26, not on main — bench round 1",
-      "at": "2026-10-29T01:33:08Z"
+      "sha": "dd79203",
+      "msg": "fix(review): print refused text safely; separators in notes and wording",
+      "at": "2026-10-30T17:58:22Z"
     },
     {
-      "sha": "e2af010",
-      "msg": "fix(review): fetch release tags before the key check in CI and release — bench round 6",
-      "at": "2026-10-29T01:32:09Z"
+      "sha": "76700c1",
+      "msg": "test(review): refusal text, line separators in notes, CLI English table",
+      "at": "2026-10-30T17:58:21Z"
     },
     {
-      "sha": "17361d5",
-      "msg": "feat(site): bring every page up to 29 Oct",
-      "at": "2026-10-29T01:21:28Z"
+      "sha": "514f926",
+      "msg": "test(key-terms): explain missing headwords and guard language directories",
+      "at": "2026-10-30T17:55:55Z"
     },
     {
-      "sha": "755886d",
-      "msg": "feat: record the requirements owner's v0.1 decisions and T1-T6 titles",
-      "at": "2026-10-29T01:19:47Z"
+      "sha": "8aabbe3",
+      "msg": "test(metadata): keep npm test Node-only; check script A in the recipe",
+      "at": "2026-10-30T17:47:10Z"
     },
     {
-      "sha": "a2cdd00",
-      "msg": "Merge pull request #25 from unfoldingWord/docs/eod-2026-10-29",
-      "at": "2026-10-29T01:14:08Z"
+      "sha": "3281d30",
+      "msg": "Merge remote-tracking branch 'origin/main' into docs/metadata-marker-rule",
+      "at": "2026-10-30T17:43:23Z"
     },
     {
-      "sha": "7d19f7c",
-      "msg": "docs: progress tracker for 29 Oct",
-      "at": "2026-10-29T01:13:02Z"
+      "sha": "b526636",
+      "msg": "Merge pull request #137 from unfoldingWord/feat/apply-artifact-reviews",
+      "at": "2026-10-30T17:43:15Z"
     },
     {
-      "sha": "162ba91",
-      "msg": "Merge origin/main into feat/release-key-check",
-      "at": "2026-10-29T01:11:39Z"
+      "sha": "b2033a6",
+      "msg": "Merge pull request #136 from unfoldingWord/feat/key-term-headword-edit",
+      "at": "2026-10-30T16:18:53Z"
     }
   ],
   "pulls": [
     {
-      "number": 28,
-      "title": "docs: progress tracker, late 29 Oct session",
-      "state": "closed",
+      "number": 146,
+      "title": "docs: progress tracker, 30 Oct session",
+      "state": "open",
       "draft": false,
-      "merged": true,
-      "at": "2026-10-29T01:49:50Z"
+      "merged": false,
+      "at": "2026-10-30T18:49:11Z"
     },
     {
-      "number": 27,
-      "title": "feat(site): bring every page up to 29 Oct",
+      "number": 142,
+      "title": "fix(sources): download again a cached input whose bytes do not match its pin",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T01:50:05Z"
+      "at": "2026-10-30T18:34:00Z"
     },
     {
-      "number": 26,
-      "title": "feat: record the requirements owner's v0.1 decisions and T1–T6 titles",
+      "number": 141,
+      "title": "fix(review): printable refusals, line separators in notes, CLI English-table test",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T01:37:13Z"
+      "at": "2026-10-30T18:30:00Z"
     },
     {
-      "number": 25,
-      "title": "docs: progress tracker for 29 Oct",
+      "number": 143,
+      "title": "fix(release): count shared asset names; escape ::error:: data",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T01:14:09Z"
+      "at": "2026-10-30T18:26:09Z"
     },
     {
-      "number": 20,
-      "title": "feat(glossaries): Titus key-term glossaries from Translation Words, with 6B",
+      "number": 140,
+      "title": "test(key-terms): explain missing headwords and guard language directories",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T01:06:55Z"
+      "at": "2026-10-30T18:10:32Z"
     },
     {
-      "number": 19,
-      "title": "feat(site): the 6 disputed Titus titles on the Decisions tab",
+      "number": 127,
+      "title": "fix(metadata): one marker-line rule for \\r and \\d, locked by a test",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T00:55:27Z"
+      "at": "2026-10-30T18:01:48Z"
     },
     {
-      "number": 18,
-      "title": "docs(decisions): span keys; measure both translation models",
+      "number": 137,
+      "title": "feat(review): apply review-artifact answers to data/drafts",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T01:11:27Z"
+      "at": "2026-10-30T17:43:15Z"
     },
     {
-      "number": 17,
-      "title": "feat: key-stability check and release workflow",
+      "number": 49,
+      "title": "feat(review): Review page on the site and apply.ts for reviews",
       "state": "closed",
-      "draft": false,
-      "merged": true,
-      "at": "2026-10-29T01:48:14Z"
+      "draft": true,
+      "merged": false,
+      "at": "2026-10-30T17:42:47Z"
     },
     {
-      "number": 16,
-      "title": "feat(data): provisional Titus segment titles, drafted and cross-checked",
+      "number": 136,
+      "title": "feat(key-terms): record a reader's changed headword as review.text",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T00:55:11Z"
+      "at": "2026-10-30T16:18:53Z"
     },
     {
-      "number": 15,
-      "title": "feat(data): Titus structure from pinned sources to dist",
+      "number": 132,
+      "title": "test(key-terms): exact refusal messages, one test per case",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T00:54:57Z"
+      "at": "2026-10-30T15:35:05Z"
     },
     {
-      "number": 1,
-      "title": "Scaffold: layout, draft schema, checks, CLAUDE.md",
+      "number": 121,
+      "title": "fix(test): keep the suite steady under parallel load",
       "state": "closed",
       "draft": false,
       "merged": true,
-      "at": "2026-10-29T00:52:26Z"
+      "at": "2026-10-30T15:34:46Z"
+    },
+    {
+      "number": 131,
+      "title": "test(key-terms): name symlinks, require a real English headword",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T15:33:50Z"
+    },
+    {
+      "number": 126,
+      "title": "test: pin the termsFor coverage floor and one verse-1 span per chapter",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T15:16:14Z"
+    },
+    {
+      "number": 124,
+      "title": "feat(key-terms): accept a person's review as human-reviewed in the record",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T15:14:02Z"
+    },
+    {
+      "number": 123,
+      "title": "fix(release): quote every name in messages; pin book codes; test the name guard",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T15:10:44Z"
+    },
+    {
+      "number": 113,
+      "title": "test(key-terms): a failing test for every #53 record invariant",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:48:06Z"
+    },
+    {
+      "number": 115,
+      "title": "docs(scoping): close metadata sizing follow-ups",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:38:57Z"
+    },
+    {
+      "number": 117,
+      "title": "fix(release): name each table-body problem; allowlist asset names",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:29:42Z"
+    },
+    {
+      "number": 116,
+      "title": "test(translate): termsFor contract over every glossary, psalm hygiene",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:23:22Z"
+    },
+    {
+      "number": 112,
+      "title": "test(key-terms): harden the record loader and the English lookup",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:07:24Z"
+    },
+    {
+      "number": 104,
+      "title": "fix(translate): no absolute paths in the check ledger; guard rederive.py",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T14:01:33Z"
+    },
+    {
+      "number": 103,
+      "title": "fix(release): tighten title-table and asset-name checks",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T13:58:44Z"
+    },
+    {
+      "number": 101,
+      "title": "docs(scoping): registry entry wording follow-ups (#86)",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T13:50:44Z"
+    },
+    {
+      "number": 105,
+      "title": "docs(scoping): metadata sizing follow-ups from the #75 review",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T13:50:26Z"
+    },
+    {
+      "number": 102,
+      "title": "test(key-terms): parse only JSON records and run the build on each",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T13:39:02Z"
+    },
+    {
+      "number": 100,
+      "title": "test(translate): guard psalm c:front refs and fix the PSA 3 oracle",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-30T13:34:30Z"
+    },
+    {
+      "number": 99,
+      "title": "docs(site): bring Home up to 29 Oct evening",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T21:08:14Z"
+    },
+    {
+      "number": 98,
+      "title": "docs: progress tracker, 29 Oct evening session",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T20:58:56Z"
+    },
+    {
+      "number": 97,
+      "title": "docs(site): Open Bible Stories questions O1-O5 on the Decisions tab",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T20:07:43Z"
+    },
+    {
+      "number": 96,
+      "title": "docs: progress tracker, 29 Oct day session",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T20:00:07Z"
+    },
+    {
+      "number": 95,
+      "title": "docs(decisions): ADR 0002, no winner when neither model delivers",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T19:42:23Z"
+    },
+    {
+      "number": 90,
+      "title": "docs(readme): link the project site without a share key",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T19:40:49Z"
+    },
+    {
+      "number": 93,
+      "title": "docs(decisions): record three edge cases of ADR 0002's choice rule",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:57:22Z"
+    },
+    {
+      "number": 82,
+      "title": "fix(translate): give a psalm superscription's terms to the chapter's first segment",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:57:13Z"
+    },
+    {
+      "number": 87,
+      "title": "feat(release): attach title tables as titles.<lang>.<BOOK>.json",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:39:35Z"
+    },
+    {
+      "number": 81,
+      "title": "feat(gates): no final full stop and no quotation marks in translated titles",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:39:25Z"
+    },
+    {
+      "number": 79,
+      "title": "docs(decisions): record the three choice-rule details in ADR 0002",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:39:15Z"
+    },
+    {
+      "number": 71,
+      "title": "docs(scoping): Servant.Bible registry entry for uw/bible-passages",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:27:31Z"
+    },
+    {
+      "number": 77,
+      "title": "docs(scoping): keep the Titus translation run ledgers and re-derivation script",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:25:23Z"
+    },
+    {
+      "number": 76,
+      "title": "fix(key-terms): one shared invariant check for every key-term record",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:25:14Z"
+    },
+    {
+      "number": 74,
+      "title": "fix(scripts): harden the translation runner and the cross-model check",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:25:03Z"
+    },
+    {
+      "number": 80,
+      "title": "fix(names): take Psalms and Song of Songs book names from ULT",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:11:39Z"
+    },
+    {
+      "number": 70,
+      "title": "fix(release): allowlist the top level of dist/tc-mobile, keep the build diff",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:09:44Z"
+    },
+    {
+      "number": 75,
+      "title": "docs(scoping): measure v0.1 metadata already in the data",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T18:09:24Z"
+    },
+    {
+      "number": 73,
+      "title": "fix(titles): say where the title-table check applies, hold data/ to it",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T17:49:54Z"
+    },
+    {
+      "number": 72,
+      "title": "fix(structure): pin BSB's LICENSE.md by hash, tie the writer to book ids",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T17:49:45Z"
+    },
+    {
+      "number": 69,
+      "title": "fix(glossaries): bench follow-ups from #33 and #34",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T17:47:07Z"
+    },
+    {
+      "number": 67,
+      "title": "feat(data): draft and cross-check English Philippians segment titles",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T16:38:57Z"
+    },
+    {
+      "number": 62,
+      "title": "data(glossaries): glossaries for the 59 books with a released TWL; cache CI downloads",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T15:35:39Z"
+    },
+    {
+      "number": 37,
+      "title": "feat(structure): build all 66 books (generated data; code in #40)",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-10-29T15:18:18Z"
     }
   ],
   "issues": [
     {
-      "number": 24,
-      "title": "ADR 0001: name the one publishable title record after a move-back",
+      "number": 64,
+      "title": "Sample human review of Titus translations from both models, to choose the model",
       "state": "open",
       "milestone": null,
-      "closedAt": null
-    },
-    {
-      "number": 23,
-      "title": "Release workflow follow-ups from #17 review",
-      "state": "open",
-      "milestone": null,
-      "closedAt": null
-    },
-    {
-      "number": 22,
-      "title": "Glossary hygiene follow-ups from #20 review",
-      "state": "open",
-      "milestone": null,
-      "closedAt": null
-    },
-    {
-      "number": 21,
-      "title": "Ask the Arabic tW team for 16 Titus headwords still in English",
-      "state": "open",
-      "milestone": "Sprint 2 (11-02 → 11-15)",
-      "closedAt": null
-    },
-    {
-      "number": 14,
-      "title": "Servant.Bible registry entry for uw/bible-passages",
-      "state": "open",
-      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
-      "closedAt": null
-    },
-    {
-      "number": 13,
-      "title": "Release v0.1.0 and hand it to tC Mobile (#1459)",
-      "state": "open",
-      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
-      "closedAt": null
-    },
-    {
-      "number": 12,
-      "title": "dist generator, key-stability check and release workflow",
-      "state": "open",
-      "milestone": "Sprint 2 (11-02 → 11-15)",
       "closedAt": null
     },
     {
@@ -232,22 +502,421 @@
       "closedAt": null
     },
     {
-      "number": 10,
-      "title": "Title translation runner with ported quality gates",
+      "number": 125,
+      "title": "sources: refetch a cached input whose bytes do not match its pin?",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T18:34:02Z"
+    },
+    {
+      "number": 139,
+      "title": "review apply: clean refusal messages, U+2028/9 in notes, CLI test for English table",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T18:30:02Z"
+    },
+    {
+      "number": 145,
+      "title": "review apply: shared line-break set, exact gate-escape test, closed CLI fixture",
       "state": "open",
-      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "milestone": null,
       "closedAt": null
     },
     {
-      "number": 9,
-      "title": "Glossaries for the 9 v0.1 languages from Translation Words",
+      "number": 128,
+      "title": "Release messages: count repeats; escape % in ::error:: lines",
       "state": "closed",
-      "milestone": "Sprint 2 (11-02 → 11-15)",
-      "closedAt": "2026-10-29T01:41:56Z"
+      "milestone": null,
+      "closedAt": "2026-10-30T18:26:11Z"
     },
     {
-      "number": 8,
-      "title": "Segment title drafting with a cross-model check",
+      "number": 133,
+      "title": "Key-term English lookup: three low notes from the #131 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T18:10:33Z"
+    },
+    {
+      "number": 144,
+      "title": "Key-term test guards: two low notes from the #140 review",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 119,
+      "title": "Metadata sizing: low follow-ups from the bench on #115",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T18:01:50Z"
+    },
+    {
+      "number": 53,
+      "title": "Key-term records: one shared invariant check before a second book",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 68,
+      "title": "Review page: paused state inside the edit form; chapter in cross-chapter verse labels",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T17:42:50Z"
+    },
+    {
+      "number": 138,
+      "title": "Key-term headword change: follow-ups from #136 review",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 56,
+      "title": "apply.ts: make a multi-file review batch atomic",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 122,
+      "title": "test(key-terms): exact messages and one test per case for assertBuiltTerms",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T15:35:07Z"
+    },
+    {
+      "number": 111,
+      "title": "Test suite: timeouts and failures under parallel load",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T15:34:48Z"
+    },
+    {
+      "number": 135,
+      "title": "test(key-terms): exact messages for the remaining buildDraftGlossary refusal table; instanceof in thrown()",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 114,
+      "title": "Key-term record tests: three low notes from the #112 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T15:33:52Z"
+    },
+    {
+      "number": 134,
+      "title": "sources: clean up .tmp files a killed download leaves in .cache/sources",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 130,
+      "title": "Metadata sizing: low follow-ups from the bench on #127",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 118,
+      "title": "termsFor contract test: fail on a glossary with no structure; one verse-1 segment per chapter in every book",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T15:16:16Z"
+    },
+    {
+      "number": 129,
+      "title": "Key-term review: one predicate for a well-formed review (#124 follow-ups)",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 120,
+      "title": "Release checks: quote non-file names; pin the book-code alphabet; test or drop the duplicate-name backstop",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T15:10:46Z"
+    },
+    {
+      "number": 110,
+      "title": "Metadata sizing: low follow-ups from the bench on #105",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T14:38:58Z"
+    },
+    {
+      "number": 108,
+      "title": "Release checks: name each failing table-body limb; allowlist asset names",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T14:29:44Z"
+    },
+    {
+      "number": 106,
+      "title": "Psalm c:front tests: two hygiene follow-ups from #100",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T14:23:25Z"
+    },
+    {
+      "number": 107,
+      "title": "Key-term record tests: two small loader hardenings from the #102 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T14:07:26Z"
+    },
+    {
+      "number": 92,
+      "title": "Release title-table assets: follow-ups from #87",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T13:58:45Z"
+    },
+    {
+      "number": 86,
+      "title": "Follow-ups from PR #71 review: registry entry scoping wording",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T13:50:45Z"
+    },
+    {
+      "number": 109,
+      "title": "rederive.py guards: fixture test on Verify",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 88,
+      "title": "Key-term record tests: follow-ups from the #76 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T13:39:03Z"
+    },
+    {
+      "number": 91,
+      "title": "Psalm superscription terms: follow-ups from #82",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-30T13:34:32Z"
+    },
+    {
+      "number": 78,
+      "title": "OBS template dataset: stories, frames and titles in the v0.1 languages (after v0.1)",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 94,
+      "title": "ADR 0002: both models deliver 0 titles in a language",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T19:42:25Z"
+    },
+    {
+      "number": 89,
+      "title": "Remove the site share key from README",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T19:40:50Z"
+    },
+    {
+      "number": 85,
+      "title": "ADR 0002 choice rule: three edge cases for the maintainer",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:57:24Z"
+    },
+    {
+      "number": 54,
+      "title": "translate: handle psalm superscription refs (c:front) in glossary terms",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:57:15Z"
+    },
+    {
+      "number": 61,
+      "title": "Decide release asset names for title tables (a release is blocked until then)",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:39:36Z"
+    },
+    {
+      "number": 41,
+      "title": "Decide whether title style rules (no final stop, no quotation marks) are translation gates",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:39:26Z"
+    },
+    {
+      "number": 50,
+      "title": "ADR 0002 choice rule: exact tie test, which costs count, and missing titles",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:39:17Z"
+    },
+    {
+      "number": 55,
+      "title": "Translation check: low-severity hardening from the #48 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:25:06Z"
+    },
+    {
+      "number": 46,
+      "title": "Translation runner hardening follow-ups from the #36 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:25:05Z"
+    },
+    {
+      "number": 39,
+      "title": "Book names for Psalms and Song of Songs from BSB headers",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:11:41Z"
+    },
+    {
+      "number": 42,
+      "title": "Release asset check follow-ups from #35 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T18:09:46Z"
+    },
+    {
+      "number": 84,
+      "title": "Metadata sizing: low follow-ups from the bench on #75",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 83,
+      "title": "Titus re-derivation script and check ledger: follow-ups from the #77 review",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 66,
+      "title": "Title tables: low follow-ups from the bench on #60",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T17:49:56Z"
+    },
+    {
+      "number": 43,
+      "title": "Structure pin writer follow-ups from #40 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T17:49:47Z"
+    },
+    {
+      "number": 38,
+      "title": "Low follow-ups from the bench on #33 and #34",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T17:47:08Z"
+    },
+    {
+      "number": 44,
+      "title": "Size v0.1 metadata: figures of speech, and what else is already in the data",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 14,
+      "title": "Servant.Bible registry entry for uw/bible-passages",
+      "state": "open",
+      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 6,
+      "title": "Pericope parser for all 66 books, with the Psalms verse-1 rule",
+      "state": "closed",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": "2026-10-29T15:18:20Z"
+    },
+    {
+      "number": 59,
+      "title": "Emit the English title table for Titus to dist/tc-mobile/titles/en/TIT.json",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T14:54:37Z"
+    },
+    {
+      "number": 63,
+      "title": "Keep the Titus translation run's ledgers and re-derivation script in the repo",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 57,
+      "title": "Glossaries: ask whether an en_twl release with NUM, 1CH, 2CH, ECC, ISA, JER, EZK is coming",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 31,
+      "title": "Chinese (zh-Hans) key-term list for Titus, AI-drafted and checked",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 23,
+      "title": "Release workflow follow-ups from #17 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T12:11:32Z"
+    },
+    {
+      "number": 12,
+      "title": "dist generator, key-stability check and release workflow",
+      "state": "closed",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": "2026-10-29T12:11:30Z"
+    },
+    {
+      "number": 22,
+      "title": "Glossary hygiene follow-ups from #20 review",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T11:44:46Z"
+    },
+    {
+      "number": 24,
+      "title": "ADR 0001: name the one publishable title record after a move-back",
+      "state": "closed",
+      "milestone": null,
+      "closedAt": "2026-10-29T11:44:42Z"
+    },
+    {
+      "number": 32,
+      "title": "Second sample book: Philippians segment titles, fully reviewed by a person",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 30,
+      "title": "Glossaries for every book",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
+      "number": 10,
+      "title": "Title translation runner with ported quality gates",
       "state": "open",
       "milestone": "Sprint 2 (11-02 → 11-15)",
       "closedAt": null
@@ -260,11 +929,11 @@
       "closedAt": null
     },
     {
-      "number": 6,
-      "title": "Pericope parser for all 66 books, with the Psalms verse-1 rule",
-      "state": "open",
+      "number": 9,
+      "title": "Glossaries for the 9 v0.1 languages from Translation Words",
+      "state": "closed",
       "milestone": "Sprint 2 (11-02 → 11-15)",
-      "closedAt": null
+      "closedAt": "2026-10-29T01:41:56Z"
     },
     {
       "number": 5,
@@ -274,10 +943,17 @@
       "closedAt": "2026-10-29T01:41:53Z"
     },
     {
-      "number": 4,
-      "title": "Ask the content team which chunk source is authoritative (1,184 differences)",
+      "number": 2,
+      "title": "Record the v0.1 decisions from servant.bible#1 as ADRs",
       "state": "open",
       "milestone": "Sprint 1 (10-19 → 11-01)",
+      "closedAt": null
+    },
+    {
+      "number": 8,
+      "title": "Segment title drafting with a cross-model check",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
       "closedAt": null
     },
     {
@@ -288,8 +964,22 @@
       "closedAt": null
     },
     {
-      "number": 2,
-      "title": "Record the v0.1 decisions from servant.bible#1 as ADRs",
+      "number": 21,
+      "title": "Ask the Arabic tW team for 16 Titus headwords still in English",
+      "state": "open",
+      "milestone": "Sprint 2 (11-02 → 11-15)",
+      "closedAt": null
+    },
+    {
+      "number": 13,
+      "title": "Release v0.1.0 and hand it to tC Mobile (#1459)",
+      "state": "open",
+      "milestone": "Sprint 3 (11-16 → 11-29) — v0.1.0",
+      "closedAt": null
+    },
+    {
+      "number": 4,
+      "title": "Ask the content team which chunk source is authoritative (1,184 differences)",
       "state": "open",
       "milestone": "Sprint 1 (10-19 → 11-01)",
       "closedAt": null
@@ -307,8 +997,8 @@
     {
       "number": 2,
       "title": "Sprint 2 (11-02 → 11-15)",
-      "open_issues": 7,
-      "closed_issues": 1,
+      "open_issues": 5,
+      "closed_issues": 3,
       "state": "open",
       "due": "2026-11-15T00:00:00Z"
     },
@@ -323,163 +1013,293 @@
   ],
   "runs": [
     {
-      "sha": "ce92d4a",
-      "branch": "main",
+      "sha": "8a96be1",
+      "branch": "docs/eod-2026-10-30",
       "conclusion": "success",
-      "at": "2026-10-29T01:50:07Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802784611"
+      "at": "2026-10-30T18:49:14Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41110137790"
     },
     {
-      "sha": "cae59cd",
-      "branch": "main",
-      "conclusion": "success",
-      "at": "2026-10-29T01:49:53Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802760040"
-    },
-    {
-      "sha": "ed9f36a",
-      "branch": "docs/eod-2026-10-29-late",
-      "conclusion": "success",
-      "at": "2026-10-29T01:49:07Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802683761"
-    },
-    {
-      "sha": "ed9f36a",
-      "branch": "docs/eod-2026-10-29-late",
-      "conclusion": "success",
-      "at": "2026-10-29T01:49:06Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802683738"
-    },
-    {
-      "sha": "ed9f36a",
-      "branch": "docs/eod-2026-10-29-late",
+      "sha": "8a96be1",
+      "branch": "docs/eod-2026-10-30",
       "conclusion": "cancelled",
-      "at": "2026-10-29T01:49:06Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802683078"
+      "at": "2026-10-30T18:49:12Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41110135001"
     },
     {
-      "sha": "7ac93e9",
+      "sha": "8a96be1",
+      "branch": "docs/eod-2026-10-30",
+      "conclusion": "success",
+      "at": "2026-10-30T18:49:12Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41110134988"
+    },
+    {
+      "sha": "06f0d8d",
       "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-29T01:48:17Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40802603252"
+      "at": "2026-10-30T18:34:03Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41108030954"
     },
     {
-      "sha": "eb8c6c2",
-      "branch": "feat/site-refresh-29oct",
-      "conclusion": "success",
-      "at": "2026-10-29T01:38:58Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801679364"
-    },
-    {
-      "sha": "eb8c6c2",
-      "branch": "feat/site-refresh-29oct",
-      "conclusion": "success",
-      "at": "2026-10-29T01:38:58Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801679343"
-    },
-    {
-      "sha": "22a43a5",
-      "branch": "feat/site-refresh-29oct",
-      "conclusion": "success",
-      "at": "2026-10-29T01:37:49Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801563529"
-    },
-    {
-      "sha": "22a43a5",
-      "branch": "feat/site-refresh-29oct",
-      "conclusion": "success",
-      "at": "2026-10-29T01:37:49Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801563370"
-    },
-    {
-      "sha": "20ac202",
+      "sha": "2bfbb4b",
       "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-29T01:37:15Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801509889"
+      "at": "2026-10-30T18:30:03Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41107452704"
     },
     {
-      "sha": "c293c05",
-      "branch": "feat/site-refresh-29oct",
+      "sha": "6bdcbd2",
+      "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-29T01:33:35Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144350"
+      "at": "2026-10-30T18:26:12Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41106919113"
     },
     {
-      "sha": "c293c05",
-      "branch": "feat/site-refresh-29oct",
+      "sha": "fb84ca3",
+      "branch": "fix/source-cache-repair",
       "conclusion": "success",
-      "at": "2026-10-29T01:33:35Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801144339"
+      "at": "2026-10-30T18:20:49Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41106138984"
     },
     {
-      "sha": "e2af010",
-      "branch": "feat/release-key-check",
+      "sha": "fb84ca3",
+      "branch": "fix/source-cache-repair",
       "conclusion": "success",
-      "at": "2026-10-29T01:32:30Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036508"
+      "at": "2026-10-30T18:20:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41106103129"
     },
     {
-      "sha": "e2af010",
-      "branch": "feat/release-key-check",
+      "sha": "fb84ca3",
+      "branch": "fix/source-cache-repair",
       "conclusion": "success",
-      "at": "2026-10-29T01:32:30Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40801036427"
+      "at": "2026-10-30T18:20:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41106103073"
     },
     {
-      "sha": "17361d5",
-      "branch": "feat/site-refresh-29oct",
+      "sha": "1c456a3",
+      "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-29T01:21:35Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938265"
+      "at": "2026-10-30T18:10:35Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41104602748"
     },
     {
-      "sha": "17361d5",
-      "branch": "feat/site-refresh-29oct",
+      "sha": "72a9e6d",
+      "branch": "main",
       "conclusion": "success",
-      "at": "2026-10-29T01:21:35Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938241"
+      "at": "2026-10-30T18:01:51Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41103314127"
     },
     {
-      "sha": "17361d5",
-      "branch": "feat/site-refresh-29oct",
+      "sha": "2211caf",
+      "branch": "fix/release-message-hygiene",
+      "conclusion": "success",
+      "at": "2026-10-30T17:59:56Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41103035499"
+    },
+    {
+      "sha": "2211caf",
+      "branch": "fix/release-message-hygiene",
+      "conclusion": "success",
+      "at": "2026-10-30T17:59:55Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41103033846"
+    },
+    {
+      "sha": "2211caf",
+      "branch": "fix/release-message-hygiene",
       "conclusion": "cancelled",
-      "at": "2026-10-29T01:21:35Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799938216"
+      "at": "2026-10-30T17:59:55Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41103033817"
     },
     {
-      "sha": "755886d",
-      "branch": "feat/record-owner-decisions",
+      "sha": "5fad78a",
+      "branch": "fix/source-cache-repair",
       "conclusion": "success",
-      "at": "2026-10-29T01:19:53Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799760893"
+      "at": "2026-10-30T17:58:53Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102897286"
     },
     {
-      "sha": "755886d",
-      "branch": "feat/record-owner-decisions",
+      "sha": "5fad78a",
+      "branch": "fix/source-cache-repair",
+      "conclusion": "cancelled",
+      "at": "2026-10-30T17:58:52Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102897056"
+    },
+    {
+      "sha": "5fad78a",
+      "branch": "fix/source-cache-repair",
       "conclusion": "success",
-      "at": "2026-10-29T01:19:53Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/40799760255"
+      "at": "2026-10-30T17:58:52Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102897017"
+    },
+    {
+      "sha": "dd79203",
+      "branch": "fix/review-apply-hygiene",
+      "conclusion": "success",
+      "at": "2026-10-30T17:58:49Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102890812"
+    },
+    {
+      "sha": "dd79203",
+      "branch": "fix/review-apply-hygiene",
+      "conclusion": "success",
+      "at": "2026-10-30T17:58:49Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102889063"
+    },
+    {
+      "sha": "dd79203",
+      "branch": "fix/review-apply-hygiene",
+      "conclusion": "cancelled",
+      "at": "2026-10-30T17:58:49Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41102888855"
     }
   ],
   "coverage": {
     "structure": [
-      "TIT"
+      "1CH",
+      "1CO",
+      "1JN",
+      "1KI",
+      "1PE",
+      "1SA",
+      "1TH",
+      "1TI",
+      "2CH",
+      "2CO",
+      "2JN",
+      "2KI",
+      "2PE",
+      "2SA",
+      "2TH",
+      "2TI",
+      "3JN",
+      "ACT",
+      "AMO",
+      "COL",
+      "DAN",
+      "DEU",
+      "ECC",
+      "EPH",
+      "EST",
+      "EXO",
+      "EZK",
+      "EZR",
+      "GAL",
+      "GEN",
+      "HAB",
+      "HAG",
+      "HEB",
+      "HOS",
+      "ISA",
+      "JAS",
+      "JDG",
+      "JER",
+      "JHN",
+      "JOB",
+      "JOL",
+      "JON",
+      "JOS",
+      "JUD",
+      "LAM",
+      "LEV",
+      "LUK",
+      "MAL",
+      "MAT",
+      "MIC",
+      "MRK",
+      "NAM",
+      "NEH",
+      "NUM",
+      "OBA",
+      "PHM",
+      "PHP",
+      "PRO",
+      "PSA",
+      "REV",
+      "ROM",
+      "RUT",
+      "SNG",
+      "TIT",
+      "ZEC",
+      "ZEP"
     ],
     "titles": {
-      "en": [
-        "TIT"
-      ],
       "ar": [],
+      "en": [
+        "1CH",
+        "1CO",
+        "1JN",
+        "1KI",
+        "1PE",
+        "1SA",
+        "1TH",
+        "1TI",
+        "2CH",
+        "2CO",
+        "2JN",
+        "2KI",
+        "2PE",
+        "2SA",
+        "2TH",
+        "2TI",
+        "3JN",
+        "ACT",
+        "AMO",
+        "COL",
+        "DAN",
+        "DEU",
+        "ECC",
+        "EPH",
+        "EST",
+        "EXO",
+        "EZK",
+        "EZR",
+        "GAL",
+        "GEN",
+        "HAB",
+        "HAG",
+        "HEB",
+        "HOS",
+        "ISA",
+        "JAS",
+        "JDG",
+        "JER",
+        "JHN",
+        "JOB",
+        "JOL",
+        "JON",
+        "JOS",
+        "JUD",
+        "LAM",
+        "LEV",
+        "LUK",
+        "MAL",
+        "MAT",
+        "MIC",
+        "MRK",
+        "NAM",
+        "NEH",
+        "NUM",
+        "OBA",
+        "PHM",
+        "PHP",
+        "PRO",
+        "PSA",
+        "REV",
+        "ROM",
+        "RUT",
+        "SNG",
+        "TIT",
+        "ZEC",
+        "ZEP"
+      ],
+      "es-419": [],
       "fr": [],
       "hi": [],
       "id": [],
-      "zh-Hans": [],
       "pt-BR": [],
       "ru": [],
-      "es-419": [],
-      "sw": []
+      "sw": [],
+      "zh-Hans": []
     }
   },
   "external": {
@@ -491,7 +1311,7 @@
     },
     "tcm1459": {
       "state": "open",
-      "milestone": "Sprint 7 (11-16 → 11-29) — v1.3.0"
+      "milestone": "Sprint 7 (2026-11-16 → 2026-11-29) — v1.4.0"
     }
   }
 }
