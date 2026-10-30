@@ -623,23 +623,47 @@ describe("assertBuiltTerms", () => {
   });
 
   it("refuses built terms that drop, add or re-verse a term", () => {
-    const cases: [string, Record<string, { refs: string[] }>][] = [
-      ["a term dropped", { "kt/apostle": { refs: ["1:1"] } }],
-      ["a term added", { ...built(), "names/titus": { refs: ["1:4"] } }],
-      ["a verse dropped", { ...built(), "other/elder": { refs: ["1:5"] } }],
+    const cases: [
+      string,
+      Record<string, { refs: string[] }>,
+      string,
+      Record<string, unknown>?,
+    ][] = [
+      [
+        "a term dropped",
+        { "kt/apostle": { refs: ["1:1"] } },
+        "record -other/elder, TWL -other/elder",
+      ],
+      [
+        "a term added",
+        { ...built(), "names/titus": { refs: ["1:4"] } },
+        "record +names/titus, TWL +names/titus",
+      ],
+      [
+        "a verse dropped",
+        { ...built(), "other/elder": { refs: ["1:5"] } },
+        "verses of other/elder",
+      ],
       [
         "verses out of order",
         { ...built(), "other/elder": { refs: ["1:6", "1:5"] } },
+        "verses of other/elder",
+      ],
+      // The record must agree with the TWL too.
+      [
+        "the record short of a term",
+        built(),
+        "record +other/elder",
+        { "kt/apostle": {} },
       ],
     ];
-    for (const [name, terms] of cases)
-      expect(() => assertBuiltTerms("w", terms, record, linked), name).toThrow(
-        "w: the built terms do not match the record and TWL"
+    for (const [name, terms, detail, recordTerms = record] of cases)
+      expect(
+        () => assertBuiltTerms("w", terms, recordTerms, linked),
+        name
+      ).toThrow(
+        `w: the built terms do not match the record and TWL (${detail})`
       );
-    // The record and the TWL must agree too.
-    expect(() =>
-      assertBuiltTerms("w", built(), { "kt/apostle": {} }, linked)
-    ).toThrow("do not match");
   });
 });
 

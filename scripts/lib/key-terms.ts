@@ -566,16 +566,25 @@ export function assertBuiltTerms(
   recordTerms: Record<string, unknown>,
   linked: Map<string, string[]>
 ): void {
-  const keys = JSON.stringify(Object.keys(built).sort());
-  if (
-    keys !== JSON.stringify(Object.keys(recordTerms).sort()) ||
-    keys !== JSON.stringify([...linked.keys()].sort()) ||
-    [...linked].some(
-      ([a, refs]) => JSON.stringify(built[a]?.refs) !== JSON.stringify(refs)
-    )
-  )
+  const differ = (a: string[], b: string[]) => [
+    ...a.filter((k) => !b.includes(k)).map((k) => `+${k}`),
+    ...b.filter((k) => !a.includes(k)).map((k) => `-${k}`),
+  ];
+  const keys = Object.keys(built);
+  const problems = [
+    ...differ(keys, Object.keys(recordTerms)).map((d) => `record ${d}`),
+    ...differ(keys, [...linked.keys()]).map((d) => `TWL ${d}`),
+    ...[...linked]
+      .filter(
+        ([a, refs]) =>
+          built[a] !== undefined &&
+          JSON.stringify(built[a].refs) !== JSON.stringify(refs)
+      )
+      .map(([a]) => `verses of ${a}`),
+  ];
+  if (problems.length > 0)
     throw new Error(
-      `${where}: the built terms do not match the record and TWL`
+      `${where}: the built terms do not match the record and TWL (${problems.join(", ")})`
     );
 }
 
@@ -670,6 +679,9 @@ export function buildDraftGlossary(args: {
       );
     terms[article] = { ...t, refs };
   }
+  // Unreachable while the loop above builds terms from `linked` after the
+  // TWL check; it guards later changes to that loop, so removing this call
+  // fails no test. assertBuiltTerms has its own tests.
   assertBuiltTerms(where, terms, record.terms, linked);
   const ids = [
     twlId(record.book),
