@@ -374,7 +374,9 @@ check the bump yet.
    `<BOOK>.json` and `titles.<lang>.<BOOK>.json` with a known book code, so
    no name holds a tab, CR, LF or `#`, which the release script's
    `<name><TAB><file>` lines or `gh release create`'s `file#label` would
-   misread.
+   misread. The release also stops if two files would share an asset name,
+   since the script copies each file under its name and a second copy would
+   replace the first. A name in a problem message is JSON-quoted.
 5. The packages and title tables are attached to a **draft** release,
    published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as
