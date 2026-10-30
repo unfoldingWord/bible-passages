@@ -9,7 +9,13 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { checkAssets, isAssetName } from "../scripts/lib/release.ts";
+import { STRUCTURE_BOOKS } from "../scripts/lib/books.ts";
+import { BOOK_CODES } from "../scripts/lib/gates.ts";
+import {
+  assetNameProblems,
+  checkAssets,
+  isAssetName,
+} from "../scripts/lib/release.ts";
 
 // A dist/tc-mobile/ with one package per [file, revision].
 function dist(packages: [string, unknown][]): string {
@@ -115,9 +121,9 @@ describe("release assets", () => {
     expect(checkAssets(dir, "v0.1.0")).toEqual({
       assets: [{ file: join(dir, "TIT.json"), name: "TIT.json" }],
       problems: [
-        "link: top-level symlink is not a regular file",
-        "link.json: top-level symlink is not a regular file",
-        "x.json: top-level directory is not a regular file",
+        '"link": top-level symlink is not a regular file',
+        '"link.json": top-level symlink is not a regular file',
+        '"x.json": top-level directory is not a regular file',
       ],
     });
   });
@@ -128,8 +134,28 @@ describe("release assets", () => {
     mkdirSync(join(dir, "titles/en"), { recursive: true });
     symlinkSync(join(dir, "TIT.json"), join(dir, "titles/en/TIT.json"));
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      "titles/en/TIT.json: nested symlink is not a regular file",
+      '"titles/en/TIT.json": nested symlink is not a regular file',
     ]);
+  });
+
+  // Every name in a message is JSON-quoted: a name may hold a tab, CR or LF,
+  // which would split the "::error::" line the CLI prints (#120).
+  it("quotes the name of every entry that is not attached (#120)", () => {
+    const dir = dist([["TIT.json", "v0.1.0"]]);
+    mkdirSync(join(dir, "a\nb.json"));
+    symlinkSync(join(dir, "TIT.json"), join(dir, "l\tk"));
+    mkdirSync(join(dir, "titles/en"), { recursive: true });
+    writeFileSync(join(dir, "titles/en/T\rT.json"), "{}");
+    symlinkSync(join(dir, "TIT.json"), join(dir, "titles/en/x\ny.json"));
+    const { assets, problems } = checkAssets(dir, "v0.1.0");
+    expect(problems).toEqual([
+      '"titles/en/T\\rT.json": nested file has no release asset name',
+      '"titles/en/x\\ny.json": nested symlink is not a regular file',
+      '"a\\nb.json": top-level directory is not a regular file',
+      '"l\\tk": top-level symlink is not a regular file',
+    ]);
+    for (const p of problems) expect(p).not.toMatch(/[\t\r\n]/);
+    expect(assets.map((a) => a.name)).toEqual(["TIT.json"]);
   });
 
   it("fails on no packages", () => {
@@ -201,7 +227,11 @@ describe("release assets", () => {
     }
     const { assets, problems } = checkAssets(dir, "v0.1.0");
     expect(problems).toEqual(
-      bad.map((f) => `${f}: nested file has no release asset name`).sort()
+      bad
+        .map(
+          (f) => `${JSON.stringify(f)}: nested file has no release asset name`
+        )
+        .sort()
     );
     expect(assets.map((a) => a.name)).toEqual(["PHP.json", "TIT.json"]);
   });
@@ -276,11 +306,49 @@ describe("release assets", () => {
       expect(isAssetName(n), JSON.stringify(n)).toBe(false);
   });
 
+  // The asset grammar's safety (no tab, CR, LF or "#") rests on the book-code
+  // alphabet, so pin it, and pin books.ts to the second list in gates.ts (#120).
+  it("every book code is [0-9A-Z]{3}, a package name, and in BOOK_CODES (#120)", () => {
+    expect(STRUCTURE_BOOKS).toHaveLength(66);
+    for (const code of STRUCTURE_BOOKS) {
+      expect(code).toMatch(/^[0-9A-Z]{3}$/);
+      expect(isAssetName(`${code}.json`), code).toBe(true);
+    }
+    expect(new Set(STRUCTURE_BOOKS)).toEqual(new Set(BOOK_CODES));
+    expect(new Set(STRUCTURE_BOOKS).size).toBe(STRUCTURE_BOOKS.length);
+    expect(new Set(BOOK_CODES).size).toBe(BOOK_CODES.length);
+  });
+
+  // The last guard before run.sh, which copies each file to <stage>/<name>:
+  // a repeated name would overwrite the first copy and attach one file
+  // silently. checkAssets cannot build such a list today, so the guard is
+  // tested here on lists directly (#120).
+  it("names every bad or repeated asset name, each once (#120)", () => {
+    expect(
+      assetNameProblems(["PHP.json", "TIT.json", "titles.en.TIT.json"])
+    ).toEqual([]);
+    expect(
+      assetNameProblems([
+        "TIT.json",
+        "a\tb.json",
+        "titles.en.TIT.json",
+        "TIT.json",
+        "a\tb.json",
+        "XYZ.json",
+      ])
+    ).toEqual([
+      '"TIT.json": two files share this asset name',
+      '"XYZ.json": not a release asset name',
+      '"a\\tb.json": not a release asset name',
+      '"a\\tb.json": two files share this asset name',
+    ]);
+  });
+
   it("fails on a title table for an unknown book code (#108)", () => {
     const dir = release();
     table(dir, "en", "XYZ");
     expect(checkAssets(dir, "v0.1.0").problems).toEqual([
-      "titles/en/XYZ.json: nested file has no release asset name",
+      '"titles/en/XYZ.json": nested file has no release asset name',
     ]);
   });
 
