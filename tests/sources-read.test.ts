@@ -98,6 +98,58 @@ describe("readSource downloads (#111)", () => {
     expect(readFileSync(new URL(`test-src.${sha}`, cache))).toEqual(bytes);
   });
 
+  it("retries a 429 and a body that fails after a 200", async () => {
+    let calls = 0;
+    const waits: number[] = [];
+    const f: Fetch = async () => {
+      calls++;
+      if (calls === 1) return new Response("slow down", { status: 429 });
+      if (calls === 2)
+        return new Response(
+          new ReadableStream({
+            start(c) {
+              c.error(new Error("connection reset"));
+            },
+          }),
+          { status: 200 }
+        );
+      return new Response(bytes, { status: 200 });
+    };
+    const text = await readSource("test-src", {
+      pin: pin(),
+      cache: cacheDir(),
+      fetch: f,
+      waits: [10, 20, 30],
+      wait: async (ms) => void waits.push(ms),
+    });
+    expect(text).toBe(bytes.toString());
+    expect({ calls, waits }).toEqual({ calls: 3, waits: [10, 20] });
+  });
+
+  it("cancels an error body before waiting to retry", async () => {
+    let cancelled = 0;
+    const f: Fetch = async (_url, init) => {
+      expect(init.signal).toBeInstanceOf(AbortSignal);
+      if (cancelled > 0) return new Response(bytes, { status: 200 });
+      return new Response(
+        new ReadableStream({
+          cancel() {
+            cancelled++;
+          },
+        }),
+        { status: 503 }
+      );
+    };
+    await readSource("test-src", {
+      pin: pin(),
+      cache: cacheDir(),
+      fetch: f,
+      waits: [10],
+      wait: async () => expect(cancelled).toBe(1),
+    });
+    expect(cancelled).toBe(1);
+  });
+
   it("does not retry a client error such as a 404", async () => {
     const { f, seen, wait } = scripted(404, 200);
     await expect(

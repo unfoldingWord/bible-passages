@@ -358,11 +358,12 @@ describe("translation runner", () => {
   });
 
   it("has one verse-1 segment per Psalm and a Psalms glossary in at least nine languages (#91)", () => {
-    // One verse-1 segment per chapter: a second would be dropped silently by
-    // the map below, and termsFor would give the superscription's terms to
-    // both.
     const verse1 = psalms.segments.filter((s) => s.start[1] === 1);
-    expect(new Set(verse1.map((s) => s.start[0])).size).toBe(verse1.length);
+    const firsts = new Map(verse1.map((s) => [s.start[0], s.key]));
+    // One verse-1 segment per chapter: a second would be dropped silently by
+    // this map (and by the same map in each per-language test below), and
+    // termsFor would give the superscription's terms to both.
+    expect(firsts.size).toBe(verse1.length);
     expect(psalmTags.length).toBeGreaterThanOrEqual(9);
   });
 

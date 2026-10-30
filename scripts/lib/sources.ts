@@ -53,6 +53,9 @@ export type Fetch = (url: URL, init: RequestInit) => Promise<Response>;
  */
 export const RETRY_WAITS = [1000, 3000, 9000];
 
+/** How long one attempt may take before it is abandoned and retried. */
+export const ATTEMPT_TIMEOUT_MS = 30_000;
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function download(
@@ -65,11 +68,17 @@ async function download(
     let res: Response | undefined;
     let failure: string;
     try {
-      res = await fetchImpl(url, { redirect: "error" });
+      // A stalled connection is abandoned and retried like a failed one.
+      res = await fetchImpl(url, {
+        redirect: "error",
+        signal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS),
+      });
       // The body is read here too, so a connection dropped mid-body is
       // retried like one dropped before the status.
       if (res.ok) return Buffer.from(await res.arrayBuffer());
       failure = `${res.status}`;
+      // An error body is not wanted; release its connection before waiting.
+      await res.body?.cancel().catch(() => {});
     } catch (e) {
       res = undefined;
       failure = e instanceof Error ? e.message : String(e);
