@@ -16,7 +16,11 @@
 //
 // Status follows docs/schema.md: a term is `ai-checked` only when the
 // checker agreed and every gate passed; anything else stays `unreviewed` and
-// is listed under `review` for the reader. Nothing here sets a higher status.
+// is listed under `review` for the reader. The run sets nothing higher. A
+// person's review is recorded by hand in the committed record (#53): the
+// term's status raised to `human-reviewed`, with `review` saying who (a
+// `reviewer:` role or handle) and when. The build accepts that status only
+// with such a review, and no status above it.
 import { STRUCTURE_BOOKS } from "./books.ts";
 import { family } from "./check.ts";
 import {
@@ -169,7 +173,7 @@ export type DraftRecordTerm = {
   en: string;
   headword: string;
   source: string;
-  status: "unreviewed" | "ai-checked";
+  status: "unreviewed" | "ai-checked" | "human-reviewed";
   /** The reference term (its English name) the draft says it follows. */
   reference?: string;
   /** The drafting model's note for the reader, if it gave one. */
@@ -178,7 +182,48 @@ export type DraftRecordTerm = {
   gates?: string[];
   /** Absent only when the checker gave no usable verdict for the term. */
   check?: Check;
+  /** A person's review, recorded by hand: present only when `human-reviewed`. */
+  review?: TermReview;
 };
+
+/**
+ * Who reviewed a term and when, as data/drafts/ records a title's review:
+ * `by` is `reviewer:<role>`, or `reviewer:<github-handle>` for a contributor
+ * who chose to be named (AGENTS.md, "Privacy"); `at` is the date,
+ * `YYYY-MM-DD`. The reviewer accepts the headword as drafted.
+ */
+export type TermReview = { by: string; at: string };
+
+const REVIEWER = /^reviewer:[A-Za-z0-9-]+$/;
+
+/**
+ * What is wrong with a term's recorded review, or an empty list. Anything
+ * but exactly `by` and `at` is refused, so a field the build would ignore
+ * (a reworded headword, say) cannot look recorded.
+ */
+export function reviewProblems(review: unknown): string[] {
+  const r = asObject(review);
+  if (!r) return ["review is not an object"];
+  const problems: string[] = [];
+  const extra = Object.keys(r).filter((k) => k !== "by" && k !== "at");
+  if (extra.length > 0)
+    problems.push(
+      `review has fields other than by and at (${extra.join(", ")})`
+    );
+  if (typeof r.by !== "string" || !REVIEWER.test(r.by))
+    problems.push("review.by is not reviewer:<role or handle>");
+  const at = typeof r.at === "string" ? r.at : "";
+  const day = /^\d{4}-\d{2}-\d{2}$/.test(at)
+    ? new Date(`${at}T00:00:00Z`)
+    : null;
+  if (
+    !day ||
+    Number.isNaN(day.getTime()) ||
+    day.toISOString().slice(0, 10) !== at
+  )
+    problems.push("review.at is not a date YYYY-MM-DD");
+  return problems;
+}
 
 export type CallRecord = {
   role: "draft" | "check";
@@ -353,14 +398,21 @@ export function assertFamilies(draftModel: string, checkModel: string): void {
     );
 }
 
-/** The status the rules give a term: see the comment at the top. */
+/**
+ * The status the rules give a term: see the comment at the top. A recorded
+ * review makes it `human-reviewed` (reviewProblems says whether the review is
+ * well formed); without one, nothing is above `ai-checked`.
+ */
 export const statusOf = (t: {
   gates?: string[];
   check?: Check;
+  review?: unknown;
 }): DraftRecordTerm["status"] =>
-  t.check?.verdict === "agree" && t.gates === undefined
-    ? "ai-checked"
-    : "unreviewed";
+  t.review !== undefined
+    ? "human-reviewed"
+    : t.check?.verdict === "agree" && t.gates === undefined
+      ? "ai-checked"
+      : "unreviewed";
 
 export const callRecord = (
   role: CallRecord["role"],
@@ -600,7 +652,9 @@ export function assertBuiltTerms(
  * tW has now (so an English change makes the record stale, not silently
  * wrong); name only reference terms the pinned list has, with any headword
  * that does not use its reference's rendering gated; and keep the status
- * rules. Verses come from the TWL, not the record. Credits: the TWL file, the
+ * rules: `human-reviewed` only with a well-formed review, otherwise nothing
+ * above `ai-checked`. A term keeps its review in the built file. Verses come
+ * from the TWL, not the record. Credits: the TWL file, the
  * English articles and the reference list, which must share one licence.
  */
 export function buildDraftGlossary(args: {
@@ -676,6 +730,15 @@ export function buildDraftGlossary(args: {
     const gates = gateProblems(t, lang.script, args.reference);
     if (JSON.stringify(gates) !== JSON.stringify(t.gates ?? []))
       throw new Error(`${where} ${article}: gates do not match the headword`);
+    if (t.status === "human-reviewed" && t.review === undefined)
+      throw new Error(
+        `${where} ${article}: human-reviewed with no review (by, at)`
+      );
+    if (t.review !== undefined) {
+      const problems = reviewProblems(t.review);
+      if (problems.length > 0)
+        throw new Error(`${where} ${article}: ${problems.join("; ")}`);
+    }
     if (t.status !== statusOf(t))
       throw new Error(
         `${where} ${article}: status ${t.status} breaks the rules`

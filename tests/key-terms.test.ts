@@ -24,6 +24,7 @@ import {
   promptPart,
   readCheck,
   readDraft,
+  reviewProblems,
   statusOf,
   type Complete,
   type DraftGlossary,
@@ -214,6 +215,56 @@ describe("gateProblems and statusOf", () => {
     expect(statusOf({ check: disagree })).toBe("unreviewed");
     expect(statusOf({ check: agree, gates: ["script"] })).toBe("unreviewed");
     expect(statusOf({})).toBe("unreviewed");
+  });
+
+  it("is human-reviewed only when a person's review is recorded", () => {
+    const review = { by: "reviewer:zh-hans-reader", at: "2026-10-30" };
+    const disagree = {
+      by: "ai:b",
+      verdict: "disagree",
+      why: "w",
+      suggestion: "s",
+    } as const;
+    // A person's review outranks the checker and the gates.
+    expect(statusOf({ check: disagree, gates: ["reference"], review })).toBe(
+      "human-reviewed"
+    );
+    expect(statusOf({ review })).toBe("human-reviewed");
+  });
+});
+
+describe("reviewProblems", () => {
+  it("accepts a reviewer role or handle and a calendar date", () => {
+    for (const by of ["reviewer:zh-hans-reader", "reviewer:Some-Handle1"])
+      expect(reviewProblems({ by, at: "2026-10-30" }), by).toEqual([]);
+  });
+
+  it("refuses a review without a reviewer:<role> or a real date, or with other fields", () => {
+    const by = "reviewer:zh-hans-reader";
+    const at = "2026-10-30";
+    const BY = "review.by is not reviewer:<role or handle>";
+    const AT = "review.at is not a date YYYY-MM-DD";
+    const cases: [unknown, string[]][] = [
+      [{ at }, [BY]],
+      [{ by }, [AT]],
+      [{}, [BY, AT]],
+      [{ by: "zh-hans-reader", at }, [BY]],
+      [{ by: "reviewer:", at }, [BY]],
+      // A name with a space is not a role or a handle.
+      [{ by: "reviewer:A Reader", at }, [BY]],
+      [{ by: "ai:anthropic/check", at }, [BY]],
+      [{ by, at: "30 Oct 2026" }, [AT]],
+      [{ by, at: "2026-02-30" }, [AT]],
+      [{ by, at: "2026-10-30T12:00:00Z" }, [AT]],
+      [
+        { by, at, headword: "长老" },
+        ["review has fields other than by and at (headword)"],
+      ],
+      ["reviewer:zh-hans-reader", ["review is not an object"]],
+      [null, ["review is not an object"]],
+    ];
+    for (const [review, problems] of cases)
+      expect(reviewProblems(review), JSON.stringify(review)).toEqual(problems);
   });
 });
 
@@ -524,6 +575,89 @@ describe("buildDraftGlossary", () => {
     expect(g.gaps).toEqual({});
   });
 
+  it("builds a term a person reviewed, keeping its status and review", () => {
+    const r = record();
+    const review = { by: "reviewer:zh-hans-reader", at: "2026-10-30" };
+    // The checker disagreed; the reader accepted the headword as drafted.
+    Object.assign(r.terms["other/elder"]!, {
+      status: "human-reviewed",
+      review,
+    });
+    const g = build(r);
+    expect(g.terms["other/elder"]).toMatchObject({
+      headword: "长者",
+      source: "ai:google/draft",
+      status: "human-reviewed",
+      review,
+      refs: ["1:5"],
+    });
+    // The AI check stays on record beside the review.
+    expect(g.terms["other/elder"]?.check?.verdict).toBe("disagree");
+    expect(g.review).toEqual([]);
+    expect(g.terms["kt/apostle"]?.status).toBe("ai-checked");
+    expect(g.terms["kt/apostle"]?.review).toBeUndefined();
+  });
+
+  it("refuses human-reviewed without a reviewer and a date, and any status above the evidence", () => {
+    const by = "reviewer:zh-hans-reader";
+    const at = "2026-10-30";
+    const reviewed =
+      (review?: unknown, status = "human-reviewed") =>
+      (r: DraftRecord) => {
+        Object.assign(r.terms["other/elder"]!, {
+          status,
+          ...(review === undefined ? {} : { review }),
+        });
+      };
+    const cases: [string, (r: DraftRecord) => void][] = [
+      ["human-reviewed with no review (by, at)", reviewed()],
+      ["review.by is not reviewer:<role or handle>", reviewed({ at })],
+      ["review.at is not a date YYYY-MM-DD", reviewed({ by })],
+      ["review.by is not reviewer:<role or handle>", reviewed({ by: "", at })],
+      [
+        "review.at is not a date YYYY-MM-DD",
+        reviewed({ by, at: "2026-13-01" }),
+      ],
+      [
+        "review has fields other than by and at (headword)",
+        reviewed({ by, at, headword: "长老" }),
+      ],
+      // A review recorded without raising the status, or a status above it.
+      [
+        "status unreviewed breaks the rules",
+        reviewed({ by, at }, "unreviewed"),
+      ],
+      [
+        "status ai-checked breaks the rules",
+        reviewed({ by, at }, "ai-checked"),
+      ],
+      ["status approved breaks the rules", reviewed({ by, at }, "approved")],
+      ["status approved breaks the rules", reviewed(undefined, "approved")],
+      [
+        // The reviewer is named in the review, never as the AI term's source.
+        "source reviewer:zh-hans-reader",
+        (r) => {
+          r.terms["kt/apostle"]!.source = by;
+        },
+      ],
+      [
+        "source reviewer:zh-hans-reader",
+        (r) => {
+          Object.assign(r.terms["kt/apostle"]!, {
+            source: by,
+            status: "human-reviewed",
+            review: { by, at },
+          });
+        },
+      ],
+    ];
+    for (const [message, change] of cases) {
+      const r = record();
+      change(r);
+      expect(() => build(r), message).toThrow(message);
+    }
+  });
+
   it("refuses a record that no longer matches its inputs or breaks the rules", () => {
     const cases: [string, (r: DraftRecord) => void][] = [
       ["does not match the TWL", (r) => delete r.terms["names/titus"]],
@@ -755,7 +889,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       if (t.reference) expect(names.has(t.reference), t.reference).toBe(true);
   });
 
-  it("is built into data/glossaries/ with nothing above ai-checked", () => {
+  it("is built into data/glossaries/ with nothing above ai-checked unless a person's review is recorded", () => {
     expect(built.drafts).toBe(path);
     expect(built.models).toEqual({
       draft: `ai:${record.calls[0]?.model}`,
@@ -763,7 +897,20 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     });
     expect(Object.keys(built.terms)).toEqual(Object.keys(built.terms).sort());
     for (const [a, t] of Object.entries(built.terms)) {
-      expect(["unreviewed", "ai-checked"]).toContain(t.status);
+      // AGENTS.md: an AI-written term is no higher than ai-checked until a
+      // person reviews it; a reviewed one names who and when.
+      const review = record.terms[a]?.review;
+      if (review === undefined) {
+        expect(["unreviewed", "ai-checked"], a).toContain(t.status);
+        expect(t.review, a).toBeUndefined();
+      } else {
+        expect(t.status, a).toBe("human-reviewed");
+        expect(t.review, a).toEqual(review);
+        expect(Object.keys(review).sort(), a).toEqual(["at", "by"]);
+        expect(review.by, a).toMatch(/^reviewer:[A-Za-z0-9-]+$/);
+        expect(review.at, a).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      }
+      expect(t.source, a).toBe(`ai:${record.calls[0]?.model}`);
       expect(t.en).toBe(record.terms[a]?.en);
       expect(t.headword).toBe(record.terms[a]?.headword);
     }
