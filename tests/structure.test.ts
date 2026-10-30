@@ -81,6 +81,24 @@ describe("data/structure", () => {
       }
     });
 
+    // termsFor gives a chapter's `c:front` terms (a Psalm's superscription)
+    // to every span that starts at verse 1, so a second verse-1 span in a
+    // chapter would get them too (#118). Each level has exactly one.
+    it("starts exactly one segment and one pericope at verse 1 of each chapter", () => {
+      const chapters = Array.from(
+        { length: vrs[book]?.length ?? 0 },
+        (_, i) => i + 1
+      );
+      for (const level of ["segments", "pericopes"] as const) {
+        const firsts = s[level]
+          .filter((x) => x.start[1] === 1)
+          .map((x) => x.start[0]);
+        expect(firsts, `${book} ${level} starting at verse 1`).toEqual(
+          chapters
+        );
+      }
+    });
+
     it("puts every segment inside the pericope it names", () => {
       for (const x of s.segments) {
         const p = s.pericopes.find((p) => p.key === x.pericope);
