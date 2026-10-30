@@ -675,17 +675,24 @@ const files = readdirSync(new URL("data/glossary-drafts/", root), {
 })
   .filter((e) => e.isDirectory())
   .flatMap((e) =>
-    readdirSync(new URL(`data/glossary-drafts/${e.name}/`, root)).map(
-      (f) => `${e.name}/${f}`
-    )
+    readdirSync(new URL(`data/glossary-drafts/${e.name}/`, root), {
+      withFileTypes: true,
+    }).map((f) => ({
+      name: `${e.name}/${f.name}`,
+      kind: f.isFile() ? "file" : f.isDirectory() ? "directory" : "other",
+    }))
   );
-// Only .json files are parsed below, while the file loads; anything else is
-// left to the next test, which fails with its name instead of a parse error.
-const records = files.filter((f) => f.endsWith(".json"));
+// Only .json files are parsed below, while the file loads; anything else,
+// including a directory named *.json, is left to the next test, which fails
+// with its name instead of a parse or read error.
+const records = files
+  .filter((f) => f.kind === "file" && f.name.endsWith(".json"))
+  .map((f) => f.name);
 
 it("has only JSON records for draft languages in data/glossary-drafts/", () => {
-  for (const name of files) {
+  for (const { name, kind } of files) {
     expect(name, name).toMatch(/\.json$/);
+    expect(kind, name).toBe("file");
     expect(DRAFT_LANGUAGES[name.split("/")[0]!], name).toBeDefined();
   }
 });
@@ -778,7 +785,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       file: path,
       rows,
       english: (a) => {
-        const word = en.terms[a]?.headword;
+        const word = en.terms?.[a]?.headword;
         if (word === undefined) throw new Error(`en: no headword for ${a}`);
         return word;
       },

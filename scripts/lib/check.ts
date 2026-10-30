@@ -8,6 +8,7 @@
 // A translation becomes `ai-checked` only when the checker agreed and every
 // gate passed; anything else stays `unreviewed` and goes to a person first.
 // Nothing here goes above `ai-checked` (AGENTS.md, "Label AI output").
+import * as nodePath from "node:path";
 import {
   LANGUAGES,
   MODELS,
@@ -24,6 +25,25 @@ import {
   type StopReason,
   type Translation,
 } from "./translate.ts";
+
+/**
+ * Where a translation run is, for the check ledger's `translation.run`
+ * (#83): its path relative to the repository root with `/` separators on
+ * every host, or null when it is outside the repository (an absolute
+ * relative path, as across Windows drives, or any `..` segment). No
+ * machine's absolute path is written; `translation.sha256` pins the run.
+ * `p` is the path implementation, so tests can run both POSIX and Windows.
+ */
+export function translationRunPath(
+  root: string,
+  run: string,
+  p: Pick<nodePath.PlatformPath, "relative" | "isAbsolute" | "sep"> = nodePath
+): string | null {
+  const rel = p.relative(root, run);
+  const parts = rel.split(p.sep);
+  if (p.isAbsolute(rel) || parts.includes("..")) return null;
+  return `${rel === "" ? "." : parts.join("/")}/`;
+}
 
 /** What a disagreement can name; the rules of prompts/translate-titles.md. */
 export const CRITERIA = [

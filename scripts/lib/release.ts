@@ -10,6 +10,18 @@ export type Assets = { assets: Asset[]; problems: string[] };
 /** A title table's path under dist/tc-mobile/: titles/<lang>/<BOOK>.json. */
 const LANGUAGE_TAG = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const BOOK = /^[0-9A-Z]{3}$/;
+/** Characters an asset name may not hold (see the end of checkAssets). */
+const UNSAFE_NAME = /[\t\r\n#]/;
+
+const isObject = (v: unknown): boolean =>
+  typeof v === "object" && v !== null && !Array.isArray(v);
+
+/**
+ * A title table's body (scripts/lib/title-table.ts, TitleTable): `chapters`
+ * and `segments` are objects and there is no `source` block.
+ */
+const isTableBody = (t: Record<string, unknown>): boolean =>
+  isObject(t.chapters) && isObject(t.segments) && !Object.hasOwn(t, "source");
 
 /** The release asset name of a title table: `titles.<lang>.<BOOK>.json`. */
 export const titleAssetName = (language: string, book: string): string =>
@@ -39,7 +51,13 @@ export const titleAssetName = (language: string, book: string): string =>
  *   What ties it to the release is its package: the table's `packageId` and
  *   `version` must equal the `id` and `version` of `<BOOK>.json`, a package
  *   in this release (whose revision is checked), and its `language` must
- *   be the `<lang>` it sits under.
+ *   be the `<lang>` it sits under. Its body must be a table's:
+ *   `chapters` and `segments` objects and no `source`. When `<BOOK>.json`
+ *   is present but unreadable (it does not parse as JSON, or parses to
+ *   something other than an object), the table says the package failed
+ *   validation rather than that it is missing.
+ * - No asset name holds a tab, CR, LF or `#` (run.sh and `gh` would misread
+ *   it).
  */
 const kind = (e: Dirent) =>
   e.isDirectory() ? "directory" : e.isSymbolicLink() ? "symlink" : "entry";
@@ -89,8 +107,7 @@ export function checkAssets(dir: string, tag: string): Assets {
   const read = (file: string): Record<string, unknown> | null => {
     try {
       const value: unknown = JSON.parse(readFileSync(file, "utf8"));
-      if (typeof value === "object" && value !== null && !Array.isArray(value))
-        return value as Record<string, unknown>;
+      if (isObject(value)) return value as Record<string, unknown>;
       problems.push(`${relative(dir, file)}: not a JSON object`);
     } catch (e) {
       problems.push(`${relative(dir, file)}: not JSON (${String(e)})`);
@@ -98,9 +115,15 @@ export function checkAssets(dir: string, tag: string): Assets {
     return null;
   };
   const packages = new Map<string, Record<string, unknown>>();
+  // Present but unreadable, whether it does not parse as JSON or parses to
+  // a non-object; its own problem is already reported.
+  const invalid = new Set<string>();
   for (const file of files) {
     const pkg = read(file);
-    if (pkg === null) continue;
+    if (pkg === null) {
+      invalid.add(basename(file));
+      continue;
+    }
     packages.set(basename(file), pkg);
     const revision = (pkg.source as { revision?: unknown } | undefined)
       ?.revision;
@@ -125,9 +148,17 @@ export function checkAssets(dir: string, tag: string): Assets {
     if (table === null) continue;
     const pkg = packages.get(`${book}.json`);
     if (pkg === undefined) {
-      problems.push(`${where}: no package ${book}.json in this release`);
+      problems.push(
+        invalid.has(`${book}.json`)
+          ? `${where}: package ${book}.json failed validation`
+          : `${where}: no package ${book}.json in this release`
+      );
       continue;
     }
+    if (!isTableBody(table))
+      problems.push(
+        `${where}: body must have object chapters and segments, and no source`
+      );
     for (const [field, want] of [
       ["packageId", pkg.id],
       ["version", pkg.version],
@@ -148,5 +179,12 @@ export function checkAssets(dir: string, tag: string): Assets {
   for (let i = 1; i < assets.length; i++)
     if (assets[i]!.name === assets[i - 1]!.name)
       problems.push(`${assets[i]!.name}: two files share this asset name`);
+  // run.sh splits "<name><TAB><file>" lines and `gh release create` reads
+  // "file#label", so these characters would split a line or become a label.
+  for (const { name } of assets)
+    if (UNSAFE_NAME.test(name))
+      problems.push(
+        `${JSON.stringify(name)}: asset name contains a tab, CR, LF or "#"`
+      );
   return { assets, problems };
 }
