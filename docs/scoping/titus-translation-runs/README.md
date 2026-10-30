@@ -47,7 +47,9 @@ Claude's 9 are in `ck-by-claude-2`, `-4`, `-5`, `-7-zh-Hans` and
 ledger names the translation run it read by the SHA-256 of that run's
 `run.json` (`translation.sha256`), which matches the committed
 `tr-*/run.json`. The `translation.run` paths are where the runs were kept
-on the machine that made them.
+on the machine that made them; the checker now writes that path relative to
+the repository, or null for a run kept outside it (#83), and these ledgers
+are left as written.
 
 Measured from these files, once with
 `jq -s '[.[].calls[].cost] | add'` over each group and once in Python:
@@ -88,8 +90,11 @@ replaced by `[redacted]`. Every other file is byte for byte as written.
 `rederive.py` is the independent second count used for the comparison: it
 reads per-call ledger entries and the per-language files, never a
 `summary` block. It needs the withheld `<lang>/TIT.json` files, so it can be
-run in full only once they are committed (#64). As it was run for the
-comparison, from this directory:
+run in full only once they are committed (#64). Before it reads any of
+them it stops if a check ledger's `translation.sha256` is not the SHA-256 of
+the translation run's `run.json`, or if two check ledgers both have a call
+for one language (#83); those guards need only the committed ledgers. As it
+was run for the comparison, from this directory:
 
 ```
 python3 rederive.py tr-gemini ck-by-claude-2 ck-by-claude-4 ck-by-claude-5 ck-by-claude-7-zh-Hans ck-by-claude-10-sw
