@@ -13,7 +13,14 @@ type Draft = Title & {
     criteria?: string[];
     suggestion?: string;
   };
-  review?: { by: string; at: string; status: string; text?: string };
+  review?: {
+    by: string;
+    at: string;
+    status: string;
+    text?: string;
+    why?: string;
+    saved?: string;
+  };
 };
 type Record = {
   language: string;
@@ -112,6 +119,13 @@ describe.each(["TIT", "PHP"])("English %s segment drafts", (book) => {
         expect(d.review.text.length).toBeGreaterThan(0);
         expect(d.review.text.length).toBeLessThanOrEqual(MAX);
         expect(d.review.text).toBe(d.review.text.trim());
+      }
+      // A reviewer's reason and save time (scripts/review/apply.ts).
+      if (d.review.saved !== undefined)
+        expect(d.review.saved).toMatch(/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/);
+      if (d.review.why !== undefined) {
+        expect(d.review.why.length).toBeGreaterThan(0);
+        expect(d.review.why).toBe(d.review.why.trim());
       }
     }
   });

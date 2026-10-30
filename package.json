@@ -16,7 +16,8 @@
     "verify": "npm run format:check && npm run typecheck && npm test",
     "build": "node scripts/data/build.ts && node scripts/data/glossaries.ts && node scripts/data/dist.ts",
     "translate": "node scripts/translate/titles.ts",
-    "check-translations": "node scripts/translate/check.ts"
+    "check-translations": "node scripts/translate/check.ts",
+    "review:apply": "node scripts/review/apply.ts"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",
