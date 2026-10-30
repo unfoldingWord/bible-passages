@@ -19,19 +19,21 @@ at `main` = `5472c7b` on 2026-10-29. `servers.json` there has the same blob
 - **Will be.** A pull request to servant.bible refines the entry (below),
   opened by the maintainer, not from this repo. `status` stays `planned`
   until the first release tag exists and servant.bible says what `available`
-  means for a dataset (question 3).
+  means for a dataset (question 3). #14 stays open until the upstream
+  refinement's merge commit is recorded on it ("Submitting it upstream",
+  step 5); its "done when" being met does not by itself close it.
 
 ## What the registry is
 
-| Fact                                                                                                                                                                                       | Where observed                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| One registry, `servers.json` at the repo root. The page, the router and `/mcp.json` are built from it. "There is no second place to register it."                                          | `docs/adding-a-server.md`                                 |
-| An entry is a `server` or a `dataset`. A dataset may be listed before any server exists, which reserves its slug.                                                                          | `docs/adr/0005-the-list-carries-datasets-and-a-status.md` |
-| `status` is `available`, `planned`, `degraded` or `retired`. `planned` is shown as coming and not routed. Only `kind: server` is ever routed.                                              | ADR 0005, decision 2                                      |
-| `servers.schema.json` (JSON Schema 2020-12, `additionalProperties: false`) guards every entry; `scripts/validate-servers.mjs` adds three cross-entry rules. Both run in pre-commit and CI. | ADR 0005, decision 5; `servers.schema.json`               |
-| A change is a pull request to servant.bible. Its merge rules are that repository's, not ours.                                                                                              | `docs/adding-a-server.md`, "Steps"                        |
-| DCS (Door43) is listed under `sources`, not as an entry. `sources` is the only place a relationship between entries is defined; the map draws from it.                                     | ADR 0005, decisions 3 and 6                               |
-| An address is earned by being listed and meeting the quality standard. The standard is a draft for MCP servers (servant.bible#20, open) and says nothing yet about datasets.               | `docs/adr/0004-hosting-agnostic-registry.md`; #20         |
+| Fact                                                                                                                                                                                                                                                                   | Where observed                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| One registry, `servers.json` at the repo root. The page, the router and `/mcp.json` are built from it. "There is no second place to register it."                                                                                                                      | `docs/adding-a-server.md`                                 |
+| An entry is a `server` or a `dataset`. A dataset may be listed before any server exists, which reserves its slug.                                                                                                                                                      | `docs/adr/0005-the-list-carries-datasets-and-a-status.md` |
+| `status` is `available`, `planned`, `degraded` or `retired`. `planned` is shown as coming and not routed. Only `kind: server` is ever routed.                                                                                                                          | ADR 0005, decision 2                                      |
+| `servers.schema.json` (JSON Schema 2020-12, `additionalProperties: false`) guards every entry; `scripts/validate-servers.mjs` adds three cross-entry rules: org + server unique, shorthand unique, `current` names a key of `versions`. Both run in pre-commit and CI. | ADR 0005, decision 5; `servers.schema.json`               |
+| A change is a pull request to servant.bible. Its merge rules are that repository's, not ours.                                                                                                                                                                          | `docs/adding-a-server.md`, "Steps"                        |
+| DCS (Door43) is listed under `sources`, not as an entry. `sources` is the only place a relationship between entries is defined; the map draws from it.                                                                                                                 | ADR 0005, decisions 3 and 6                               |
+| An address is earned by being listed and meeting the quality standard. The standard is a draft for MCP servers (servant.bible#20, open) and says nothing yet about datasets.                                                                                           | `docs/adr/0004-hosting-agnostic-registry.md`; #20         |
 
 ## What an entry contains
 
@@ -125,6 +127,9 @@ Changed, and why:
 | `sources`     | Added: DCS.                                                                | Every pinned input is on `git.door43.org`: BSB headings (`Worldview/en_bsb`), UFW versification and chunks (`Door43-Catalog/versification`), Translation Words and Translation Words Links (`unfoldingWord/en_tw`, `unfoldingWord/en_twl`, nine other `*_tw`). |
 | `repository`  | Added.                                                                     | The repository is public (`gh repo view --json visibility`: `PUBLIC`).                                                                                                                                                                                         |
 
+`purpose` is kept as merged, but its "finding a place in the story" is not
+checked: see question 1.
+
 Left out on purpose:
 
 - **`resources`.** None of the ten values describes passage divisions or
@@ -158,6 +163,16 @@ The draft entry was validated with ajv 8.17.1 and ajv-formats 3.0.1
 `servers.schema.json` at `5472c7b`, with the draft substituted for the
 merged entry in the full `servers.json`, plus the org+server and shorthand
 uniqueness rules. This re-implements the upstream gate; it is not the gate.
+
+`validate-servers.mjs` at `5472c7b` has a third cross-entry rule, "current
+names a key of versions" (header comment, lines 5–10; `currentError`, lines
+69–77). It was not re-implemented because it cannot fire on a dataset:
+`servers.schema.json` at `5472c7b` sets `current: false` and `versions: false`
+when `kind` is `dataset` (lines 126–138), `validateServers` runs the
+cross-entry rules only after the schema passes (lines 103–107), and
+`currentError` returns no error when `current` is absent (line 70). The
+"draft + versions/current" run below shows the schema rejecting both fields
+first.
 The `description` was reworded in review after this run (planned framing),
 and the run was not repeated; step 3 below is the check that counts.
 The upstream PR runs the real one (`pnpm validate:servers`) in its pre-commit
@@ -184,9 +199,17 @@ answered HTTP 200 on 2026-10-29 (`curl -L`).
 
 Questions for the maintainer, to settle before the upstream PR:
 
-1. **OBS in the description.** Keep "Open Bible Stories" (if tC Mobile's
-   template library expects this entry to stand for OBS too) or drop it as
-   the draft does? Nothing in this repo builds OBS passages.
+1. **OBS in the description and `purpose`.** Keep "Open Bible Stories" (if
+   tC Mobile's template library expects this entry to stand for OBS too) or
+   drop it as the draft does? Nothing in this repo builds OBS passages. The
+   same question covers `purpose`, kept as merged: its "finding a place in
+   the story without book, chapter, and verse" comes from servant.bible#1,
+   which ties it to a request from the field to find a place in a story
+   (its example: where Mephibosheth replies to David) without book, chapter
+   and verse. Inference, unconfirmed: that example is in 2 Samuel, so the
+   phrase reads as navigating Bible narrative by passage title, which this
+   dataset serves, and not as OBS. Confirm that reading before the upstream
+   PR keeps the wording.
 2. **Licence and release fields.** The schema has neither. Is a pointer
    through `repository` enough, or should servant.bible be asked for a field?
    That would be a schema change plus a note in `adding-a-server.md` (ADR
