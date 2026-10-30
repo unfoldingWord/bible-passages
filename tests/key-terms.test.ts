@@ -8,6 +8,7 @@ import {
   twId,
   twlId,
   type Credit,
+  type Glossary,
   type TwlRow,
 } from "../scripts/lib/glossaries.ts";
 import {
@@ -601,7 +602,7 @@ describe("buildDraftGlossary", () => {
 // Every committed record, whatever its language or book: the build
 // (buildDraftGlossary) enforces the invariants; these tests re-derive them
 // from the committed files.
-const records = readdirSync(new URL("data/glossary-drafts/", root), {
+const files = readdirSync(new URL("data/glossary-drafts/", root), {
   withFileTypes: true,
 })
   .filter((e) => e.isDirectory())
@@ -610,9 +611,12 @@ const records = readdirSync(new URL("data/glossary-drafts/", root), {
       (f) => `${e.name}/${f}`
     )
   );
+// Only .json files are parsed below, while the file loads; anything else is
+// left to the next test, which fails with its name instead of a parse error.
+const records = files.filter((f) => f.endsWith(".json"));
 
 it("has only JSON records for draft languages in data/glossary-drafts/", () => {
-  for (const name of records) {
+  for (const name of files) {
     expect(name, name).toMatch(/\.json$/);
     expect(DRAFT_LANGUAGES[name.split("/")[0]!], name).toBeDefined();
   }
@@ -690,6 +694,35 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     );
     for (const id of [twlId(record.book), record.reference])
       expect(built.attribution).toContain(pins.get(id)?.attribution);
+  });
+
+  it("is accepted by the build, which makes the committed file from it", async () => {
+    const rows = parseTwl(await readSource(twlId(record.book)));
+    // The English headwords the build passes come from its English glossary
+    // for the book, committed as data/glossaries/en/<BOOK>.json.
+    const en = JSON.parse(
+      read(`data/glossaries/en/${record.book}.json`)
+    ) as Glossary;
+    const lang = DRAFT_LANGUAGES[record.language];
+    if (!lang) throw new Error(`${path}: not a draft language`);
+    const glossary = buildDraftGlossary({
+      record,
+      file: path,
+      rows,
+      english: (a) => {
+        const word = en.terms[a]?.headword;
+        if (word === undefined) throw new Error(`en: no headword for ${a}`);
+        return word;
+      },
+      credit: (id) => {
+        const pin = pins.get(id);
+        if (!pin) throw new Error(`${id} is not pinned in sources.json`);
+        return pin;
+      },
+      prompt: read("prompts/key-terms.md"),
+      reference: parseFia(await readSource(lang.reference)),
+    });
+    expect(glossary).toEqual(built);
   });
 
   it("is built with the record's terms and the TWL's verses", async () => {
