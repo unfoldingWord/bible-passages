@@ -555,6 +555,31 @@ export type DraftGlossary = {
 };
 
 /**
+ * Refuses built terms that are not exactly the record's and the TWL's, with
+ * each term's verses the TWL's. buildDraftGlossary runs it on what it is about
+ * to return, so a later change to how the terms are assembled cannot drop,
+ * add or re-verse a term without failing the build.
+ */
+export function assertBuiltTerms(
+  where: string,
+  built: Record<string, { refs: string[] }>,
+  recordTerms: Record<string, unknown>,
+  linked: Map<string, string[]>
+): void {
+  const keys = JSON.stringify(Object.keys(built).sort());
+  if (
+    keys !== JSON.stringify(Object.keys(recordTerms).sort()) ||
+    keys !== JSON.stringify([...linked.keys()].sort()) ||
+    [...linked].some(
+      ([a, refs]) => JSON.stringify(built[a]?.refs) !== JSON.stringify(refs)
+    )
+  )
+    throw new Error(
+      `${where}: the built terms do not match the record and TWL`
+    );
+}
+
+/**
  * Builds a language's glossary from its committed AI record, offline, and is
  * the one check every record passes, whatever its language or book. The
  * record must have been made with the committed prompt (by SHA-256), by a
@@ -645,18 +670,7 @@ export function buildDraftGlossary(args: {
       );
     terms[article] = { ...t, refs };
   }
-  // The built terms are the record's and the TWL's, with the TWL's verses.
-  const keys = JSON.stringify(Object.keys(terms).sort());
-  if (
-    keys !== JSON.stringify(Object.keys(record.terms).sort()) ||
-    keys !== JSON.stringify([...linked.keys()].sort()) ||
-    [...linked].some(
-      ([a, refs]) => JSON.stringify(terms[a]?.refs) !== JSON.stringify(refs)
-    )
-  )
-    throw new Error(
-      `${where}: the built terms do not match the record and TWL`
-    );
+  assertBuiltTerms(where, terms, record.terms, linked);
   const ids = [
     twlId(record.book),
     ...Object.keys(terms).map((a) => twId("en", a)),
