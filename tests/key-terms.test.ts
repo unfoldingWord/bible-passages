@@ -986,6 +986,8 @@ describe("buildDraftGlossary", () => {
         status: "human-reviewed",
         review,
       });
+      // Accepted, so no gates on the built term: departures records it.
+      expect(g.terms["names/titus"]?.gates).toBeUndefined();
       expect(g.departures).toEqual(["names/titus"]);
       expect(build(record()).departures).toEqual([]);
     });
@@ -1021,6 +1023,8 @@ describe("buildDraftGlossary", () => {
       });
       const g = build(r);
       expect(g.terms["names/titus"]?.headword).toBe("提突");
+      // Kept as drafted: the model's cuv gate stays, and no departure.
+      expect(g.terms["names/titus"]?.gates).toEqual(["cuv"]);
       expect(g.departures).toEqual([]);
     });
 
