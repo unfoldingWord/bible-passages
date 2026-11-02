@@ -418,16 +418,19 @@ export function assertFamilies(draftModel: string, checkModel: string): void {
 }
 
 /**
- * The status the rules give a term: see the comment at the top. A recorded
- * review makes it `human-reviewed` (reviewProblems says whether the review is
- * well formed); without one, nothing is above `ai-checked`.
+ * The status the rules give a term: see the comment at the top. A
+ * well-formed review (one reviewProblems finds nothing wrong with, its `text`
+ * included) makes it `human-reviewed`; without one, a malformed one
+ * included, nothing is above `ai-checked`. buildDraftGlossary runs
+ * reviewProblems first, so a malformed review is refused with its own
+ * message, not as a status that breaks the rules (#129).
  */
 export const statusOf = (t: {
   gates?: string[];
   check?: Check;
   review?: unknown;
 }): DraftRecordTerm["status"] =>
-  t.review !== undefined
+  t.review !== undefined && reviewProblems(t.review).length === 0
     ? "human-reviewed"
     : t.check?.verdict === "agree" && t.gates === undefined
       ? "ai-checked"
