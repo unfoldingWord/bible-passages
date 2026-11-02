@@ -29,11 +29,20 @@ const headers = {
 
 // A token the API rejects (401) is dropped and the request retried without
 // it: some sandboxes export a GITHUB_TOKEN that only works through a proxy.
+// Redirects are refused, not followed: a 3xx would reach a URL that the
+// host check in getAll never saw.
 async function request(url) {
-  let res = await fetch(url, { headers });
+  const send = async (h) => {
+    try {
+      return await fetch(url, { headers: h, redirect: "error" });
+    } catch (e) {
+      throw new Error(`GET ${url}: ${e.cause?.message ?? e.message}`);
+    }
+  };
+  let res = await send(headers);
   if (res.status === 401 && headers.Authorization) {
     const { Authorization, ...anonymous } = headers;
-    res = await fetch(url, { headers: anonymous });
+    res = await send(anonymous);
   }
   if (!res.ok) throw new Error(`GET ${url}: ${res.status}`);
   return res;
@@ -46,20 +55,32 @@ async function get(path) {
 // A list read in full: every page, following the Link header's rel="next"
 // until there is none. A partial list would show as if it were complete
 // (on 30 Oct a one-page read showed 17 open issues where GitHub had 30).
-// Only api.github.com links are followed, and a link seen twice stops the
-// run rather than loop.
+// Only api.github.com links are followed. The run stops, rather than return
+// a partial list, when a link is seen twice, when a Link header names a next
+// page in a shape the parser does not read, or after MAX_PAGES pages.
+// 100 pages of 100 is 10,000 items; the repo had 161 issues and pull
+// requests on 2 Nov 2026.
+const MAX_PAGES = 100;
+
 async function getAll(path) {
   const all = [];
   const seen = new Set();
   let url = `${API}/${path}`;
   while (url) {
     if (seen.has(url)) throw new Error(`GET ${url}: pagination repeats`);
+    if (seen.size === MAX_PAGES) {
+      throw new Error(`GET ${path}: more than ${MAX_PAGES} pages`);
+    }
     seen.add(url);
     const res = await request(url);
     const page = await res.json();
     if (!Array.isArray(page)) throw new Error(`GET ${url}: not a list`);
     all.push(...page);
-    url = /<([^>]+)>;\s*rel="next"/.exec(res.headers.get("link") ?? "")?.[1];
+    const link = res.headers.get("link") ?? "";
+    url = /<([^>]+)>;\s*rel="next"/.exec(link)?.[1];
+    if (!url && /\brel\s*=\s*"?[^",;]*\bnext\b/i.test(link)) {
+      throw new Error(`GET ${path}: Link names a next page it cannot read: ${link}`);
+    }
     if (url && !url.startsWith(`${API}/`)) {
       throw new Error(`GET ${path}: next page outside ${API}: ${url}`);
     }
