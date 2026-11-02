@@ -34,6 +34,7 @@ import {
   type Credit,
   type TwlRow,
 } from "./glossaries.ts";
+import { FORMAT_ALLOWED, hasFormat } from "./format.ts";
 import { LINE_BREAK } from "./line-breaks.ts";
 import type { Completion, Message } from "./openrouter.ts";
 import { parseReply, sha256 } from "./translate.ts";
@@ -45,8 +46,10 @@ import { parseReply, sha256 } from "./translate.ts";
  * needs (ZWNJ in Persian, ZWJ in Devanagari) or a format character that is
  * visible (the Arabic number sign). Every other such character in a headword
  * is refused. It is a required field, so a language cannot be added without
- * deciding it; tests/key-terms.test.ts refuses an entry whose script is known
- * to need one of these characters and does not allow it.
+ * deciding it, and its value is the language's entry in FORMAT_ALLOWED
+ * (format.ts), the one list the translation gates use too;
+ * tests/key-terms.test.ts refuses an entry whose script is known to need one
+ * of these characters and does not allow it.
  */
 export type DraftLanguage = {
   name: string;
@@ -60,8 +63,7 @@ export const DRAFT_LANGUAGES: Readonly<Record<string, DraftLanguage>> = {
   "zh-Hans": {
     name: "Simplified Chinese",
     script: /\p{Script=Han}/u,
-    // Han needs no joiner and has no visible format character.
-    formatAllowed: "",
+    formatAllowed: FORMAT_ALLOWED["zh-Hans"]!,
     // FIA Key Terms in Simplified Chinese: a professionally reviewed,
     // CC BY-SA 4.0 term list the models are given as a reference
     // (docs/scoping/glossaries.md, "Chinese (zh-Hans)").
@@ -403,37 +405,15 @@ export function usesReference(
 }
 
 /**
- * A character the `format` gate refuses unless the language allows it: a
- * format character (\p{Cf}: a zero-width space, a joiner, a bidi control), a
- * default-ignorable one (\p{Default_Ignorable_Code_Point}: the same, and the
- * combining grapheme joiner, variation selectors and Hangul fillers, which
- * are not Cf), or a control other than a line break (\p{Cc}: NUL, tab).
- * Combining marks a script writes with (U+0301, an Arabic vowel sign, a
- * Devanagari virama) are none of these.
- */
-const FORMAT = /[\p{Cf}\p{Default_Ignorable_Code_Point}\p{Cc}]/u;
-
-/**
- * Whether `text` has a character the `format` gate refuses for `allowed`.
- * Membership is by code point, as the scan walks: a substring test would also
- * match one half of a supplementary-plane character in `allowed`.
- */
-const hasFormat = (text: string, allowed: string): boolean => {
-  const allow = new Set(allowed);
-  return [...text].some(
-    (c) => FORMAT.test(c) && !LINE_BREAK.test(c) && !allow.has(c)
-  );
-};
-
-/**
  * Mechanical checks on a drafted term: its headword written mostly in the
  * language's script (`inScript`), with no Latin letters (a name left in
  * English), on one line (`line-break`: any line break, U+2028 and U+2029
- * included), with no invisible character (`format`: see FORMAT, which
- * neither `trim` nor NFC removes, so a headword could differ from another
- * only invisibly) except those the language allows (`formatAllowed`); and,
- * when it names a reference term, using that term's rendering (`reference`),
- * so a mismatch is recorded and the term goes to the reader.
+ * included), with no invisible character (`format`: see FORMAT in
+ * format.ts, which neither `trim` nor NFC removes, so a headword could
+ * differ from another only invisibly) except those the language allows
+ * (`formatAllowed`); and, when it names a reference term, using that term's
+ * rendering (`reference`), so a mismatch is recorded and the term goes to
+ * the reader.
  */
 export function gateProblems(
   t: { headword: string; reference?: string },

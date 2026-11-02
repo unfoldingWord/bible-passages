@@ -104,7 +104,28 @@
       "tag": "fr",
       "en": "Heirs of Grace",
       "value": "Héritiers\nde la grâce",
-      "problem": "line break or tab"
+      "problem": "line break"
+    },
+    {
+      "why": "(d) a line separator, U+2028",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers\u2028de la grâce",
+      "problem": "line break"
+    },
+    {
+      "why": "(g) a zero-width space",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers\u200bde la grâce",
+      "problem": "format or control character U+200B"
+    },
+    {
+      "why": "(g) a tab",
+      "tag": "fr",
+      "en": "Heirs of Grace",
+      "value": "Héritiers\tde la grâce",
+      "problem": "format or control character U+0009"
     },
     {
       "why": "(d) surrounding whitespace",

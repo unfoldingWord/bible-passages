@@ -183,7 +183,9 @@ never calls a model. Such a record also has:
 - `calls`: the draft and the check call, each with its OpenRouter generation
   id, model, tokens and cost in US dollars.
 - per title, `gates`: the mechanical rules it breaks (`length` over 60
-  characters, `full-stop`, `quotes`, `straight-apostrophe`, `line-break`,
+  characters, `full-stop`, `quotes`, `straight-apostrophe`, `line-break`
+  (any mandatory line break), `format` (any other control or invisible
+  format character, as for key terms below; English allows none),
   `markup`), absent when it breaks none. A gated title stays `unreviewed`
   even when the checker agreed.
 
@@ -326,7 +328,9 @@ commit, not a rebuild.
   `\p{Default_Ignorable_Code_Point}`, such as the combining grapheme joiner
   or a variation selector; or another control, `\p{Cc}`; all left in place
   by trimming and NFC; except the characters the language's
-  `formatAllowed` lists, such as Persian's ZWNJ, none for zh-Hans) and
+  `formatAllowed` lists, such as Persian's ZWNJ, none for zh-Hans; one
+  per-language list, `FORMAT_ALLOWED` in `scripts/lib/format.ts`, shared
+  with the English and translation title gates) and
   `reference` (does not use the rendering of the reference term it names).
   A term is `ai-checked` only when the checker agreed and every gate passed.
 

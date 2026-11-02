@@ -25,6 +25,7 @@ import {
   type Answer,
   type DraftFile,
 } from "../scripts/lib/review.ts";
+import { hex, LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
 
 const fixture = JSON.parse(
   readFileSync(
@@ -433,7 +434,7 @@ describe("applyReviews", () => {
     expect(
       apply(files(), envelope([change("Paul greets his \u202Eson")]))
         .problems[0]
-    ).toMatch(/bidi control character/);
+    ).toMatch(/: format or control character U\+202E$/);
   });
 
   it("never lowers a status on a keep; a change is human-reviewed", () => {
@@ -532,7 +533,7 @@ describe("applyReviews", () => {
     expect(
       apply(files(), envelope([change("Paul greets his\u200E son")]))
         .problems[0]
-    ).toMatch(/bidi control character/);
+    ).toMatch(/: format or control character U\+200E$/);
   });
 
   it("summarises a batch for the PR body, pipes escaped", () => {
@@ -611,7 +612,7 @@ describe("refusal messages", () => {
       ])
     );
     expect(stray.problems).toEqual([
-      'reviewer:reader-7 ar/TIT TIT.1.4-4: bidi control character, stray "abc" outside Arabic',
+      'reviewer:reader-7 ar/TIT TIT.1.4-4: format or control character U+202E, stray "abc" outside Arabic',
     ]);
   });
 });
@@ -626,37 +627,51 @@ describe("line and paragraph separators", () => {
     expect(r.changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(
       "one two three four"
     );
-    for (const text of [
-      "Paul greets\u{2028}his son",
-      "Paul greets\u{2029}his son",
-      "Paul greets\u{7}his son",
-    ])
+    for (const [text, message] of [
+      ["Paul greets\u{2028}his son", "line break"],
+      ["Paul greets\u{2029}his son", "line break"],
+      ["Paul greets\u{7}his son", "format or control character U+0007"],
+    ] as const)
       expect(apply(files(), envelope([change(text)])).problems[0]).toMatch(
-        /control or separator character/
+        new RegExp(`: ${message.replace("+", "\\+")}$`)
       );
   });
 });
 
-describe("wording with a line break", () => {
-  // CR, LF and tab are the leak gate's ("line break or tab"); the applier
-  // refuses the rest of its line-break list itself. One message each, so the
-  // two lists cannot drift apart unnoticed.
-  it("gives each line break one message", () => {
-    const leak = "line break or tab";
-    const own = "control or separator character";
-    for (const [c, message] of [
-      ["\r", leak],
-      ["\n", leak],
-      ["\t", leak],
-      ["\v", own],
-      ["\f", own],
-      ["\u{85}", own],
-      ["\u{2028}", own],
-      ["\u{2029}", own],
-    ] as const) {
-      const p = wordingProblems("en", `Paul greets${c}his son`, undefined);
-      expect(p.filter((q) => q === leak || q === own)).toEqual([message]);
-    }
+describe("wording with a line break, control or invisible character", () => {
+  // #181: the leak gate refuses every line break ("line break") and the
+  // format gate every other control and invisible format character the
+  // language does not allow, by code point. The applier has no list of its
+  // own, so each character gets exactly one message, in English (whose
+  // drafting gates name the same characters `line-break` and `format`) and
+  // in a translation.
+  const added = (lang: string, plain: string, value: string, en?: string) => {
+    const base = wordingProblems(lang, plain, en);
+    return wordingProblems(lang, value, en).filter((q) => !base.includes(q));
+  };
+  it.each([
+    ...LINE_BREAKS.map(([n, c]) => [n, c, "line break"] as const),
+    ...REFUSED.map(
+      ([n, c]) => [n, c, `format or control character ${hex(c)}`] as const
+    ),
+  ])("gives %s one message", (_name, c, message) => {
+    expect(
+      added("en", "Paul greets his son", `Paul greets${c}his son`)
+    ).toEqual([message]);
+    expect(
+      added("ar", "بولس يحيي ابنه", `بولس يحيي${c}ابنه`, "Paul greets his son")
+    ).toEqual([message]);
+  });
+
+  it("lets Arabic and Hindi joiners through, and no other language's", () => {
+    const en = "The grace of God";
+    expect(wordingProblems("hi", "परमेश्\u{200D}वर का अनुग्रह", en)).toEqual(
+      []
+    );
+    expect(wordingProblems("ar", "بولس يحيي\u{200C} ابنه", en)).toEqual([]);
+    expect(
+      wordingProblems("en", "Paul greets\u{200C}his son", undefined)
+    ).toEqual(["format or control character U+200C"]);
   });
 });
 

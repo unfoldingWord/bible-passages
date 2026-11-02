@@ -10,6 +10,7 @@
 // A segment that is its pericope's only segment is not drafted: it reuses
 // the pericope title (decision 12, docs/decisions/0003), which the build
 // fills in (scripts/data/build.ts).
+import { FORMAT_ALLOWED, hasFormat } from "./format.ts";
 import { callRecord, type CallRecord } from "./key-terms.ts";
 import { LINE_BREAK } from "./line-breaks.ts";
 import type { Completion, Message } from "./openrouter.ts";
@@ -250,7 +251,10 @@ export function readCheck(
 /**
  * The mechanical rules a title must meet (prompts/segment-titles.md, rules
  * 3, 6 and 7). Sentence case and the rest need a reader: the checker and
- * then a person.
+ * then a person. A title is also on one line (`line-break`: every mandatory
+ * break) and has no control or invisible format character (`format`: see
+ * FORMAT in format.ts; English allows none), as the key-term and translation
+ * gates require.
  */
 export function gateProblems(text: string): string[] {
   const problems: string[] = [];
@@ -259,6 +263,7 @@ export function gateProblems(text: string): string[] {
   if (/["“”]/.test(text)) problems.push("quotes");
   if (/'/.test(text)) problems.push("straight-apostrophe");
   if (LINE_BREAK.test(text)) problems.push("line-break");
+  if (hasFormat(text, FORMAT_ALLOWED.en!)) problems.push("format");
   if (/[<>\\*_`]/.test(text)) problems.push("markup");
   return problems;
 }

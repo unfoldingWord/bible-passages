@@ -30,6 +30,8 @@ import {
   type DraftRecord,
   type TermInput,
 } from "../scripts/lib/key-terms.ts";
+import { FORMAT_ALLOWED } from "../scripts/lib/format.ts";
+import { SCRIPT_BY_TAG } from "../scripts/lib/gates.ts";
 import type { Completion } from "../scripts/lib/openrouter.ts";
 import { readSource, sources } from "../scripts/lib/sources.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
@@ -1324,6 +1326,18 @@ describe("formatAllowed", () => {
   it("allows what each draft language's script needs", () => {
     for (const [tag, lang] of Object.entries(DRAFT_LANGUAGES))
       expect(unallowed(lang), tag).toEqual([]);
+  });
+
+  it("allows what each translation language's script needs (#181)", () => {
+    // The translation gates read the same list (FORMAT_ALLOWED), by tag.
+    for (const [tag, script] of Object.entries(SCRIPT_BY_TAG))
+      expect(
+        unallowed({
+          script: new RegExp(`\\p{Script=${script}}`, "u"),
+          formatAllowed: FORMAT_ALLOWED[tag] ?? "",
+        }),
+        tag
+      ).toEqual([]);
   });
 
   it("allows only characters the format gate would refuse", () => {
