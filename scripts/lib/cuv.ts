@@ -32,8 +32,12 @@ const NUMBER = /\\(c|v)[ \t]+(\d+)(?:-(\d+))?/g;
  */
 const MARKER = /\\\+?[a-z][a-z0-9]*\*?/g;
 
-/** A word's attributes, `\w 克里特|lemma="x"\w*`: the part after `|`. */
-const ATTRIBUTES = /\|[^\\]*/g;
+/**
+ * A word's attributes, `\w 克里特|lemma="x"\w*`: the part after `|`, only
+ * where a closing character marker follows, so a `|` in the text itself is
+ * kept.
+ */
+const ATTRIBUTES = /\|[^\\|]*(?=\\\+?[a-z][a-z0-9]*\*)/g;
 
 /**
  * How a name is compared on both sides: whitespace removed (U+3000, the

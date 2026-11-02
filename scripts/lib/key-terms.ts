@@ -950,8 +950,10 @@ export function buildDraftGlossary(args: {
         `${where} ${article}: review.reason is only for a spelling the cuv gate flags`
       );
     if (departs) departures.push(article);
-    // `gates` described the model's headword; the reviewer's passes them all,
-    // so the built term has none. `check` stays, the checker's verdict on the
+    // `gates` described the model's headword. The reviewer's was accepted:
+    // it passes every gate, or fails only `cuv` with a `reason`, which is
+    // recorded under `departures` and in `review.reason`, not in `gates`.
+    // So the built term has none. `check` stays, the checker's verdict on the
     // model's headword, and `drafted` names that headword, since `check`
     // does not record what it judged and `headword` is now the reader's.
     const built: DraftGlossaryTerm = {

@@ -365,7 +365,11 @@ review is recorded yet; the committed Titus term is `ai-checked`):
   `reviewer:<github-handle>` for a contributor who chose to be named. No
   personal names (AGENTS.md, "Privacy").
 - `at`: the date of the review, `YYYY-MM-DD`.
-- Without `text`, the reviewer accepts the headword as drafted.
+- Without `text`, the reviewer accepts the headword as drafted. Its built
+  term keeps the model's `gates` (a kept `cuv`-flagged name still shows
+  `cuv`), and it is not listed under `departures`, which lists only a
+  reader's own spelling accepted with a `reason`; `status` and `review`
+  say the reader decided.
 - `text`: the reader's headword, when they changed it, as the maintainer
   decided on #53 (30 Oct). Recorded as a reworded title is in `data/drafts/`
   (`review.text`): the term's `headword` and `source` in this file stay the
