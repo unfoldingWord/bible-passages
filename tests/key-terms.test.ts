@@ -48,7 +48,9 @@ function thrown(fn: () => unknown): string {
   try {
     fn();
   } catch (e) {
-    return (e as Error).message;
+    // Anything other than an Error is rethrown as it was, not read as one.
+    if (e instanceof Error) return e.message;
+    throw e;
   }
   throw new Error("expected a throw");
 }
@@ -63,16 +65,22 @@ function englishHeadword(en: unknown, a: string): string {
   };
   const isObject = (v: unknown): v is Record<string, unknown> =>
     typeof v === "object" && v !== null && !Array.isArray(v);
-  if (!isObject(en))
-    return fail(`no glossary: ${en === null ? "null" : typeof en}`);
+  // The runtime type, naming null and arrays, which typeof calls "object".
+  const kind = (v: unknown) =>
+    v === null ? "null" : Array.isArray(v) ? "array" : typeof v;
+  // The same, with its article: "an array", "a number"; null has none.
+  const aKind = (v: unknown) => {
+    const k = kind(v);
+    return k === "null" ? k : /^[aeiou]/.test(k) ? `an ${k}` : `a ${k}`;
+  };
+  if (!isObject(en)) return fail(`no glossary: ${kind(en)}`);
   const terms = en.terms;
   if (!isObject(terms)) return fail("glossary has no terms");
   const term = Object.hasOwn(terms, a) ? terms[a] : undefined;
   if (!isObject(term)) return fail("term not in the glossary");
   const word = term.headword;
   if (word === undefined) return fail("headword missing");
-  if (typeof word !== "string")
-    return fail(`headword is ${word === null ? "null" : `a ${typeof word}`}`);
+  if (typeof word !== "string") return fail(`headword is ${aKind(word)}`);
   if (word.trim() === "") return fail("headword blank");
   return word;
 }
@@ -82,6 +90,7 @@ describe("englishHeadword (the English lookup the record test gives the build)",
   const cases: [string, unknown, string][] = [
     ["a null glossary", null, "no glossary: null"],
     ["a glossary that is not an object", "x", "no glossary: string"],
+    ["a glossary that is an array", [], "no glossary: array"],
     ["a glossary with no terms", {}, "glossary has no terms"],
     ["a missing term", { terms: {} }, "term not in the glossary"],
     ["a null term", g(null), "term not in the glossary"],
@@ -90,6 +99,8 @@ describe("englishHeadword (the English lookup the record test gives the build)",
     ["an empty headword", g({ headword: "" }), "headword blank"],
     ["a blank headword", g({ headword: "  " }), "headword blank"],
     ["a number", g({ headword: 0 }), "headword is a number"],
+    ["an array", g({ headword: ["apostle"] }), "headword is an array"],
+    ["an object", g({ headword: {} }), "headword is an object"],
   ];
   it.each(cases)("refuses %s, saying why", (_name, en, why) => {
     expect(thrown(() => englishHeadword(en, "kt/apostle"))).toBe(
@@ -300,7 +311,9 @@ describe("gateProblems and statusOf", () => {
     );
   });
 
-  it("is not raised by a malformed review, which reviewProblems refuses (#129)", () => {
+  // reviewProblems' exact messages for these rows are pinned in its own
+  // table below; here it is enough that it reports some problem.
+  it("is not raised by a malformed review, for which reviewProblems reports problems (#129)", () => {
     const by = "reviewer:zh-hans-reader";
     const at = "2026-10-30";
     const agree = { by: "ai:b", verdict: "agree" } as const;
@@ -316,6 +329,10 @@ describe("gateProblems and statusOf", () => {
       expect(reviewProblems(review), a).not.toEqual([]);
       expect(statusOf({ review }), a).toBe("unreviewed");
       expect(statusOf({ check: agree, review }), a).toBe("ai-checked");
+      // A gated draft falls back to unreviewed, as it would with no review.
+      expect(statusOf({ check: agree, gates: ["script"], review }), a).toBe(
+        "unreviewed"
+      );
     }
   });
 });
@@ -883,49 +900,63 @@ describe("buildDraftGlossary", () => {
     });
   });
 
-  it("refuses a record that no longer matches its inputs or breaks the rules", () => {
+  describe("refuses a record that no longer matches its inputs or breaks the rules", () => {
+    const tit = "zh-Hans TIT: ";
+    const elder = "zh-Hans TIT other/elder: ";
+    const apostle = "zh-Hans TIT kt/apostle: ";
+    const titus = "zh-Hans TIT names/titus: ";
+    const prompt =
+      tit + "made with a prompt other than the committed prompts/key-terms.md";
     const cases: [string, (r: DraftRecord) => void][] = [
-      ["does not match the TWL", (r) => delete r.terms["names/titus"]],
       [
-        "English tW now says",
+        tit +
+          "the record does not match the TWL (not linked: none; no term: names/titus)",
+        (r) => delete r.terms["names/titus"],
+      ],
+      [
+        apostle + 'drafted from "apostles", English tW now says "apostle"',
         (r) => {
           r.terms["kt/apostle"]!.en = "apostles";
         },
       ],
       [
-        "breaks the rules",
+        elder + "status ai-checked breaks the rules",
         (r) => {
           r.terms["other/elder"]!.status = "ai-checked";
         },
       ],
       [
-        "gates do not match",
+        titus + "gates do not match the headword",
         (r) => {
           r.terms["names/titus"]!.headword = "Titus";
         },
       ],
       [
-        "same model",
+        tit + "drafted and checked by the same model",
         (r) => {
           r.calls[1]!.model = "google/draft";
         },
       ],
-      ["one draft and one check", (r) => r.calls.pop()],
       [
-        "a prompt other than the committed",
+        tit + "the record needs one draft and one check call",
+        (r) => r.calls.pop(),
+      ],
+      [
+        prompt,
         (r) => {
           r.prompt.sha256 = sha256("an older prompt");
         },
       ],
       [
         // The committed prompt's text, filed under another name.
-        "a prompt other than the committed",
+        prompt,
         (r) => {
           r.prompt.file = "prompts/translate-titles.md";
         },
       ],
       [
-        "different family",
+        tit +
+          "the checking model (google/check) must be of a different family from the drafting model (google/draft)",
         (r) => {
           r.calls[1]!.model = "google/check";
           for (const t of Object.values(r.terms))
@@ -933,36 +964,41 @@ describe("buildDraftGlossary", () => {
         },
       ],
       [
-        'reference "presbyter" is not in fia-kt-zhs',
+        elder + 'reference "presbyter" is not in fia-kt-zhs',
         (r) => {
           r.terms["other/elder"]!.reference = "presbyter";
         },
       ],
       [
         // Names a reference it does not use, with no gate recorded.
-        "gates do not match",
+        apostle + "gates do not match the headword",
         (r) => {
           r.terms["kt/apostle"]!.reference = "elder";
         },
       ],
       [
-        "checked by",
+        apostle + "checked by ai:other",
         (r) => {
           r.terms["kt/apostle"]!.check = { by: "ai:other", verdict: "agree" };
         },
       ],
     ];
-    for (const [message, change] of cases) {
+    it.each(cases)("%#: %s", (message, change) => {
       const r = record();
       change(r);
-      expect(() => build(r), message).toThrow(message);
-    }
-    expect(() =>
-      build(record(), (id) => ({
-        licence: id === "fia-kt-zhs" ? "CC-BY-4.0" : "CC-BY-SA-4.0",
-        attribution: id,
-      }))
-    ).toThrow("licences");
+      expect(thrown(() => build(r))).toBe(message);
+    });
+
+    it("refuses sources under more than one licence", () => {
+      expect(
+        thrown(() =>
+          build(record(), (id) => ({
+            licence: id === "fia-kt-zhs" ? "CC-BY-4.0" : "CC-BY-SA-4.0",
+            attribution: id,
+          }))
+        )
+      ).toBe(tit + "sources under 2 licences");
+    });
   });
 });
 
@@ -1063,10 +1099,15 @@ const records = files
   .filter((f) => f.kind === "file" && f.name.endsWith(".json"))
   .map((f) => f.name);
 
+// The draft language named `name`, read only as an own key: a name such as
+// "toString" is not a draft language (#144).
+const draftLanguage = (name: string) =>
+  Object.hasOwn(DRAFT_LANGUAGES, name) ? DRAFT_LANGUAGES[name] : undefined;
+
 it("has only draft-language directories in data/glossary-drafts/", () => {
   for (const { name, kind } of languages) {
     expect(kind, name).toBe("directory");
-    expect(DRAFT_LANGUAGES[name], name).toBeDefined();
+    expect(Object.hasOwn(DRAFT_LANGUAGES, name), name).toBe(true);
   }
 });
 
@@ -1074,7 +1115,9 @@ it("has only JSON records for draft languages in data/glossary-drafts/", () => {
   for (const { name, kind } of files) {
     expect(name, name).toMatch(/\.json$/);
     expect(kind, name).toBe("file");
-    expect(DRAFT_LANGUAGES[name.split("/")[0]!], name).toBeDefined();
+    expect(Object.hasOwn(DRAFT_LANGUAGES, name.split("/")[0]!), name).toBe(
+      true
+    );
   }
 });
 
@@ -1108,7 +1151,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       parseTwl(await readSource(twlId(record.book)))
     );
     expect(Object.keys(record.terms).sort()).toEqual([...links.keys()].sort());
-    const lang = DRAFT_LANGUAGES[record.language];
+    const lang = draftLanguage(record.language);
     if (!lang) throw new Error(`${path}: not a draft language`);
     const script = lang.script;
     const fia = parseFia(await readSource(record.reference));
@@ -1182,7 +1225,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     const en: unknown = JSON.parse(
       read(`data/glossaries/en/${record.book}.json`)
     );
-    const lang = DRAFT_LANGUAGES[record.language];
+    const lang = draftLanguage(record.language);
     if (!lang) throw new Error(`${path}: not a draft language`);
     const glossary = buildDraftGlossary({
       record,
