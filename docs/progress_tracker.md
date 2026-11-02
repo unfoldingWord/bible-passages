@@ -4,6 +4,47 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-02 — checks tightened across every gate; Chinese names checked against the CUV
+
+Waves of 3–6 lanes, each a background agent in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 27 PRs merged, #146 to #191. 26 issues closed.
+
+### Shipped
+
+| What                                                                                                                                                                                                                                                                                                                                                                                           | Evidence                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| zh-Hans key-term names are checked against the Chinese Union Version (pinned Door43 `zh_cuv` Titus at a full sha). A mismatch is flagged and goes to the reader rather than failing the build. Titus: 4 of 5 names agree; `names/crete` (革哩底 vs 克里特, 1:5, 1:12) is flagged and listed under `review`. A reader's third spelling needs a `review.reason` and is listed under `departures` | #184 (6B), #187 (ADR 0004, pin), #191; count re-derived by a second script |
+| One list of the seven mandatory line breaks, shared by every gate. Titles, AI translations and key terms refuse controls and invisible format characters; each language's allowance is explicit (Hindi ZWJ measured 266× in Door43 tW; Hindi ZWNJ and Arabic signs are inference)                                                                                                              | #155, #173, #183, #185, #188, #190                                         |
+| Review apply: one line-break list; `printable()` proven load-bearing; a batch stopped between renames is detected, refused and recoverable by re-running                                                                                                                                                                                                                                       | #154, #156, #168                                                           |
+| Key terms: `human-reviewed` only for a well-formed review; exact refusal messages; own-key language lookups                                                                                                                                                                                                                                                                                    | #150, #155, #162                                                           |
+| Source cache: stale `.tmp` files removed (threshold 163 s covers a whole download with retries); only removed files reported; listing, stat and unlink errors other than ENOENT rethrown, each pinned by a test                                                                                                                                                                                | #149, #157, #164, #170                                                     |
+| Site snapshot script reads every page (the one on main failed once issues passed one page), parses Link headers per RFC 8288, refuses redirects and caps paging; CI checks `site/index.html` matches its source                                                                                                                                                                                | #152, #166, #171, #177                                                     |
+| Metadata sizing notes: the text-mode CR read is enforced in the recipe; the #75 bench follow-ups closed (5 of 7 already done in #105; item 7 split to #174)                                                                                                                                                                                                                                    | #151, #172, #175, #182                                                     |
+| 30 Oct tracker                                                                                                                                                                                                                                                                                                                                                                                 | #146                                                                       |
+
+`main` at `ddcdcbe`: `npm run verify` 10,618 passed, 2 todo, 26 test files (run in the main checkout at `ddcdcbe`).
+
+### Decisions (the maintainer, 2 Nov)
+
+- Merge on clean + green, pinned to the reviewed head, for 2 Nov only.
+- #53: treat the Chinese Union Version as public domain and build the names check (ADR 0004). The licence evidence conflicts and is recorded in the ADR: Door43 and eBible say public domain, while YouVersion names the Hong Kong Bible Society as copyright agent for the 1988 New Punctuation edition.
+- #53: a reader may record a third spelling for a flagged name with a reason; the build lists those terms.
+
+### Open
+
+- Blind Titus review (#64): still 58 answers, all from the maintainer (en 25, pt-BR 33), checked 2 Nov. No Hindi answers saved.
+- Go/no-go 1 is on 4 Nov. Review minutes per title are still not measured.
+- Follow-ups: #174 (empty figure set, when metadata is built); #179 item 2 (Arabic and Syriac signs, when an Arabic-script language is drafted). Watch item, inferred and not observed: the `cuv` gate fails closed on a TWL reference to verse 0, which no Titus name has.
+- The hourly site refresh runs a session script outside the repo; `scripts/site/snapshot.mjs` is not scheduled anywhere.
+- Unchanged since 30 Oct, re-checked 2 Nov: chunk source (#4), `en_twl` for 7 books (#57), Arabic headwords (#21), a Chinese reader (#31), a Philippians reviewer (#32), the #44 questions, OBS O1–O5 (#78). No release tagged.
+
+### Next
+
+- Get the blind review answered in more languages, and read review minutes in time for go/no-go 1 on 4 Nov.
+- Name a Chinese reader (#31); Crete is now the first flagged term.
+- First real review export through `apply.ts` (dry run, then one PR).
+
+---
+
 ## 2026-10-30 — bench follow-ups cleared, human review wired into the data
 
 Four waves of 4–7 lanes, each a background agent in its own worktree; every PR reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 24 PRs merged, #100 to #143.
