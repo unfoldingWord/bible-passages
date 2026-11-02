@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { ALL_BOOKS, BOOKS, STRUCTURE_BOOKS } from "../scripts/lib/books.ts";
 
@@ -119,6 +119,46 @@ describe("structure inputs", () => {
         tit.chunks?.revision,
         tit.chunks?.licence,
         tit.chunks?.attribution,
+      ]);
+    }
+  );
+});
+
+// The Chinese Union Version, read by the zh-Hans names check under
+// docs/decisions/0004-cuv-names-check.md: one book file of Door43-Catalog/zh_cuv
+// (release 1989) per book whose zh-Hans key terms are drafted, no more.
+describe("CUV inputs", () => {
+  const cuv = sources.filter((s) => s.id.startsWith("zh-cuv-"));
+  const tit = cuv.find((s) => s.id === "zh-cuv-tit");
+
+  it("pins Titus at the 1989 release, public domain by ADR 0004", () => {
+    expect(tit?.revision).toBe("b993881167d730846cf2efcc1e0a1f58a3cd8b65");
+    expect(tit?.licence).toBe("Public domain");
+    expect(tit?.attribution).toContain("0004-cuv-names-check.md");
+  });
+
+  it("pins one book file per drafted zh-Hans book", () => {
+    const drafted = readdirSync(
+      new URL("../data/glossary-drafts/zh-Hans/", import.meta.url)
+    )
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => `zh-cuv-${f.slice(0, -5).toLowerCase()}`);
+    expect(cuv.map((s) => s.id).sort()).toEqual(drafted.sort());
+  });
+
+  it.each(cuv.map((s) => [s.id, s] as const))(
+    "%s: the book's file, pinned like Titus's",
+    (id, s) => {
+      const book = id.slice("zh-cuv-".length).toUpperCase();
+      const file = ALL_BOOKS.find(([b]) => b === book)?.[1];
+      expect(file).toBeDefined();
+      expect(s.url).toBe(
+        `https://git.door43.org/Door43-Catalog/zh_cuv/raw/commit/${tit?.revision}/${file}-${book}.usfm`
+      );
+      expect([s.revision, s.licence, s.attribution]).toEqual([
+        tit?.revision,
+        tit?.licence,
+        tit?.attribution,
       ]);
     }
   );
