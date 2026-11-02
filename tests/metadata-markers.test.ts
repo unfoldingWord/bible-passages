@@ -44,6 +44,8 @@ describe("metadata sizing: shared marker-line rule", () => {
     expect(t).toContain("\n\\s1\t");
     expect(t).toContain("\n\\r\u00a0");
     expect(t).toContain("\n\\d\u00a0");
+    expect(t).toContain("\n\\s1\n"); // a bare \s1 at the end of a line
+    expect(t).toContain("\n\\d\r\n"); // a bare \d before CRLF
   });
 
   it("measure_b.mjs lineMarkers gives the hand count", () => {
