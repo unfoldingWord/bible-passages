@@ -37,13 +37,30 @@ import {
 import type { Completion, Message } from "./openrouter.ts";
 import { parseReply, sha256 } from "./translate.ts";
 
-/** Languages whose glossary is AI-drafted, with the script its terms use. */
-export const DRAFT_LANGUAGES: Readonly<
-  Record<string, { name: string; script: RegExp; reference: string }>
-> = {
+/**
+ * A draft language: its name, the script its terms use, the reference list
+ * the models are given, and `formatAllowed`, the characters of the `format`
+ * gate (see gateProblems) its words legitimately use: a joiner its script
+ * needs (ZWNJ in Persian, ZWJ in Devanagari) or a format character that is
+ * visible (the Arabic number sign). Every other such character in a headword
+ * is refused. It is a required field, so a language cannot be added without
+ * deciding it; tests/key-terms.test.ts refuses an entry whose script is known
+ * to need one of these characters and does not allow it.
+ */
+export type DraftLanguage = {
+  name: string;
+  script: RegExp;
+  reference: string;
+  formatAllowed: string;
+};
+
+/** Languages whose glossary is AI-drafted. */
+export const DRAFT_LANGUAGES: Readonly<Record<string, DraftLanguage>> = {
   "zh-Hans": {
     name: "Simplified Chinese",
     script: /\p{Script=Han}/u,
+    // Han needs no joiner and has no visible format character.
+    formatAllowed: "",
     // FIA Key Terms in Simplified Chinese: a professionally reviewed,
     // CC BY-SA 4.0 term list the models are given as a reference
     // (docs/scoping/glossaries.md, "Chinese (zh-Hans)").
@@ -385,27 +402,50 @@ export function usesReference(
 }
 
 /**
+ * A line break: the characters Unicode's line-breaking algorithm (UAX #14)
+ * always breaks at, LF, CR, VT, FF, NEL and the line and paragraph
+ * separators U+2028 and U+2029, not only `\r` and `\n`.
+ */
+const LINE_BREAK = /[\n\v\f\r\u0085\u2028\u2029]/u;
+
+/**
+ * A character the `format` gate refuses unless the language allows it: a
+ * format character (\p{Cf}: a zero-width space, a joiner, a bidi control), a
+ * default-ignorable one (\p{Default_Ignorable_Code_Point}: the same, and the
+ * combining grapheme joiner, variation selectors and Hangul fillers, which
+ * are not Cf), or a control other than a line break (\p{Cc}: NUL, tab).
+ * Combining marks a script writes with (U+0301, an Arabic vowel sign, a
+ * Devanagari virama) are none of these.
+ */
+const FORMAT = /[\p{Cf}\p{Default_Ignorable_Code_Point}\p{Cc}]/u;
+
+/** Whether `text` has a character the `format` gate refuses for `allowed`. */
+const hasFormat = (text: string, allowed: string): boolean =>
+  [...text].some(
+    (c) => FORMAT.test(c) && !LINE_BREAK.test(c) && !allowed.includes(c)
+  );
+
+/**
  * Mechanical checks on a drafted term: its headword written mostly in the
  * language's script (`inScript`), with no Latin letters (a name left in
- * English), on one line, with no format characters (`format`: \p{Cf}, such
- * as a zero-width space or a bidi control, which neither `trim` nor NFC
- * removes, so a headword could differ from another only invisibly); and,
+ * English), on one line (`line-break`: any line break, U+2028 and U+2029
+ * included), with no invisible character (`format`: see FORMAT, which
+ * neither `trim` nor NFC removes, so a headword could differ from another
+ * only invisibly) except those the language allows (`formatAllowed`); and,
  * when it names a reference term, using that term's rendering (`reference`),
- * so a mismatch is recorded and the term goes to the reader. `format` suits
- * the draft languages so far (zh-Hans); a script whose words need a joiner
- * (ZWNJ in Persian, ZWJ in some Indic scripts) needs it narrowed first.
+ * so a mismatch is recorded and the term goes to the reader.
  */
 export function gateProblems(
   t: { headword: string; reference?: string },
-  script: RegExp,
+  lang: Pick<DraftLanguage, "script" | "formatAllowed">,
   reference: ReferenceTerm[]
 ): string[] {
   const { headword } = t;
   const problems: string[] = [];
-  if (!inScript(headword, script)) problems.push("script");
+  if (!inScript(headword, lang.script)) problems.push("script");
   if (/\p{Script=Latin}/u.test(headword)) problems.push("latin-letters");
-  if (/[\r\n]/.test(headword)) problems.push("line-break");
-  if (/\p{Cf}/u.test(headword)) problems.push("format");
+  if (LINE_BREAK.test(headword)) problems.push("line-break");
+  if (hasFormat(headword, lang.formatAllowed)) problems.push("format");
   if (!usesReference(t, reference)) problems.push("reference");
   return problems;
 }
@@ -577,7 +617,7 @@ export async function draftKeyTerms(args: {
     for (const input of inputs) {
       const d = draft.terms[input.article];
       if (!d) continue;
-      const problems = gateProblems(d, lang.script, args.reference.terms);
+      const problems = gateProblems(d, lang, args.reference.terms);
       const gates = problems.length > 0 ? problems : undefined;
       const c = check.checks[input.article];
       terms[input.article] = {
@@ -763,7 +803,7 @@ export function buildDraftGlossary(args: {
       throw new Error(
         `${where} ${article}: reference "${t.reference}" is not in ${record.reference}`
       );
-    const gates = gateProblems(t, lang.script, args.reference);
+    const gates = gateProblems(t, lang, args.reference);
     if (JSON.stringify(gates) !== JSON.stringify(t.gates ?? []))
       throw new Error(`${where} ${article}: gates do not match the headword`);
     if (t.status === "human-reviewed" && t.review === undefined)
@@ -796,7 +836,7 @@ export function buildDraftGlossary(args: {
       );
     const failed = gateProblems(
       { headword: text, reference: t.reference },
-      lang.script,
+      lang,
       args.reference
     );
     if (failed.length > 0)

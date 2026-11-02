@@ -40,6 +40,8 @@ import { sha256 } from "../scripts/lib/translate.ts";
 const root = new URL("../", import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, root), "utf8");
 const HAN = /\p{Script=Han}/u;
+// zh-Hans as gateProblems sees it: Han, with no format character allowed.
+const ZH = { script: HAN, formatAllowed: "" };
 const KEY = "test-key-not-real-0000";
 
 // The message `fn` throws, compared whole: toThrow(string) only matches a
@@ -246,7 +248,7 @@ describe("readCheck", () => {
 
 describe("gateProblems and statusOf", () => {
   it("flags non-Han headwords, Latin letters and line breaks", () => {
-    const g = (headword: string) => gateProblems({ headword }, HAN, []);
+    const g = (headword: string) => gateProblems({ headword }, ZH, []);
     expect(g("使徒、使徒职分")).toEqual([]);
     expect(g("Titus")).toEqual(["script", "latin-letters"]);
     expect(g("革哩底 (Crete)")).toEqual(["script", "latin-letters"]);
@@ -255,7 +257,7 @@ describe("gateProblems and statusOf", () => {
   });
 
   it("flags format characters, which trim and NFC leave in place", () => {
-    const g = (headword: string) => gateProblems({ headword }, HAN, []);
+    const g = (headword: string) => gateProblems({ headword }, ZH, []);
     // Zero-width space, joiner and non-joiner, soft hyphen, a bidi mark, an
     // override and an isolate: each invisible, each \p{Cf}.
     for (const headword of [
@@ -272,13 +274,77 @@ describe("gateProblems and statusOf", () => {
     }
   });
 
+  // #165: invisible characters the #155 gate did not see. Each is inside the
+  // headword, where trim does not reach, and survives NFC.
+  it("flags every line break, U+2028 and U+2029 included", () => {
+    const g = (headword: string) => gateProblems({ headword }, ZH, []);
+    for (const headword of [
+      "长\u{2028}者",
+      "长\u{2029}者",
+      "长\u{000B}者",
+      "长\u{000C}者",
+      "长\u{0085}者",
+    ]) {
+      expect(headword.trim().normalize("NFC"), headword).toBe(headword);
+      expect(g(headword), headword).toEqual(["line-break"]);
+    }
+  });
+
+  it("flags invisible characters that are not \\p{Cf}", () => {
+    const g = (headword: string) => gateProblems({ headword }, ZH, []);
+    // The combining grapheme joiner (Mn), a variation selector, an
+    // ideographic variation selector, a Hangul filler: default-ignorable,
+    // not Cf. NUL and a tab: controls (Cc).
+    for (const headword of [
+      "长\u{034F}者",
+      "长\u{FE0F}者",
+      "长\u{E0100}者",
+      "长\u{3164}者",
+      "长\u{0000}者",
+      "长\u{0009}者",
+    ]) {
+      expect(headword.trim().normalize("NFC"), headword).toBe(headword);
+      expect(g(headword), headword).toEqual(["format"]);
+    }
+  });
+
+  it("keeps the combining marks a script writes with", () => {
+    const as = (script: RegExp) => ({ script, formatAllowed: "" });
+    const g = (headword: string, script: RegExp) =>
+      gateProblems({ headword }, as(script), []);
+    // An Arabic shadda, a Devanagari virama, a Greek acute (U+0301).
+    expect(g("رَبّ", /\p{Script=Arabic}/u)).toEqual([]);
+    expect(g("क्षमा", /\p{Script=Devanagari}/u)).toEqual([]);
+    expect(g("α\u{0301}γιος", /\p{Script=Greek}/u)).toEqual([]);
+  });
+
+  it("allows only the format characters the language allows", () => {
+    const arabic = /\p{Script=Arabic}/u;
+    const fa = { script: arabic, formatAllowed: "\u{200C}\u{06DD}" };
+    const none = { script: arabic, formatAllowed: "" };
+    // Persian "I want", written with a ZWNJ; and an end-of-ayah sign.
+    for (const headword of ["می\u{200C}خواهم", "آیه\u{06DD}"]) {
+      expect(gateProblems({ headword }, fa, []), headword).toEqual([]);
+      expect(gateProblems({ headword }, none, []), headword).toEqual([
+        "format",
+      ]);
+    }
+    // Allowing ZWNJ allows nothing else.
+    for (const headword of ["می\u{200B}خواهم", "می\u{200D}خواهم"])
+      expect(gateProblems({ headword }, fa, []), headword).toEqual(["format"]);
+    // zh-Hans allows none.
+    expect(gateProblems({ headword: "长\u{200C}者" }, ZH, [])).toEqual([
+      "format",
+    ]);
+  });
+
   it("flags a headword that does not use the rendering of the reference it names", () => {
     const fia = [
       { en: "apostle", term: "使徒" },
       { en: "Lord", term: "主、耶和华" },
     ];
     const g = (headword: string, reference: string) =>
-      gateProblems({ headword, reference }, HAN, fia);
+      gateProblems({ headword, reference }, ZH, fia);
     expect(g("使徒、使徒职分", "apostle")).toEqual([]);
     expect(g("耶和华", "Lord")).toEqual([]);
     expect(g("差徒", "apostle")).toEqual(["reference"]);
@@ -294,7 +360,7 @@ describe("gateProblems and statusOf", () => {
     // and the build refuse it.
     expect(g("差徒", "presbyter")).toEqual([]);
     // A headword with no reference is not compared.
-    expect(gateProblems({ headword: "差徒" }, HAN, fia)).toEqual([]);
+    expect(gateProblems({ headword: "差徒" }, ZH, fia)).toEqual([]);
   });
 
   it("is ai-checked only for an agreed draft that passed every gate", () => {
@@ -859,6 +925,16 @@ describe("buildDraftGlossary", () => {
         elder + "review.text fails gates (format)",
         reviewed({ by, at, text: "\u{2067}长者\u{2069}" }),
       ],
+      // #165: a line or paragraph separator, and a combining grapheme
+      // joiner, which the \p{Cf} gate alone did not see.
+      [
+        elder + "review.text fails gates (line-break)",
+        reviewed({ by, at, text: "长\u{2028}者" }),
+      ],
+      [
+        elder + "review.text fails gates (format)",
+        reviewed({ by, at, text: "长\u{034F}者" }),
+      ],
       [
         apostle + "review.text fails gates (reference)",
         (r) => {
@@ -1158,6 +1234,96 @@ it("has only JSON records for draft languages in data/glossary-drafts/", () => {
   }
 });
 
+// #165: the scripts known to need a character the `format` gate refuses, with
+// a letter of each and the characters a language in it must be allowed.
+// Without them its headwords would be gated by mistake. ZWNJ and ZWJ shape
+// the words of Persian and of the Brahmic scripts (Door43's Hindi tW
+// headwords in data/glossaries/hi/ use ZWJ); the Arabic and Syriac signs are
+// format characters that are visible; Mongolian needs its variation
+// selectors. A new draft language must also state formatAllowed (a required
+// field), so a script not listed here is still a decision, not a default.
+const JOINERS = "\u{200C}\u{200D}";
+const SCRIPT_NEEDS: [string, string, string][] = [
+  [
+    "Arabic",
+    "ب",
+    "\u{200C}\u{0600}\u{0601}\u{0602}\u{0603}\u{0604}\u{0605}\u{06DD}\u{0890}\u{0891}\u{08E2}",
+  ],
+  ["Syriac", "ܐ", "\u{070F}" + JOINERS],
+  ["Devanagari", "क", JOINERS],
+  ["Bengali", "ক", JOINERS],
+  ["Gurmukhi", "ਕ", JOINERS],
+  ["Gujarati", "ક", JOINERS],
+  ["Oriya", "କ", JOINERS],
+  ["Tamil", "க", JOINERS],
+  ["Telugu", "క", JOINERS],
+  ["Kannada", "ಕ", JOINERS],
+  ["Malayalam", "ക", JOINERS],
+  ["Sinhala", "ක", JOINERS],
+  ["Mongolian", "ᠠ", "\u{180B}\u{180C}\u{180D}\u{180E}\u{180F}\u{200D}"],
+];
+
+// What a language whose script is in SCRIPT_NEEDS is not allowed but needs.
+const unallowed = (lang: { script: RegExp; formatAllowed: string }) => {
+  const re = new RegExp(
+    lang.script.source,
+    lang.script.flags.replace(/[gy]/g, "")
+  );
+  return SCRIPT_NEEDS.filter(([, letter]) => re.test(letter)).flatMap(
+    ([script, , needs]) =>
+      [...needs]
+        .filter((c) => !lang.formatAllowed.includes(c))
+        .map(
+          (c) =>
+            `${script} U+${c.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")}`
+        )
+  );
+};
+
+describe("formatAllowed", () => {
+  it("lists only characters, each one the format gate refuses", () => {
+    for (const row of SCRIPT_NEEDS)
+      for (const c of row[2])
+        expect(
+          gateProblems(
+            { headword: `${row[1]}${c}${row[1]}` },
+            { script: /./u, formatAllowed: "" },
+            []
+          ),
+          `${row[0]} U+${c.codePointAt(0)!.toString(16)}`
+        ).toEqual(["format"]);
+  });
+
+  it("refuses a language whose script needs a character it does not allow", () => {
+    // Persian with nothing allowed, as an entry copied from zh-Hans would be.
+    expect(
+      unallowed({ script: /\p{Script=Arabic}/u, formatAllowed: "" })
+    ).toContain("Arabic U+200C");
+    expect(
+      unallowed({ script: /\p{Script=Devanagari}/u, formatAllowed: "\u{200C}" })
+    ).toEqual(["Devanagari U+200D"]);
+    expect(unallowed(ZH)).toEqual([]);
+  });
+
+  it("allows what each draft language's script needs", () => {
+    for (const [tag, lang] of Object.entries(DRAFT_LANGUAGES))
+      expect(unallowed(lang), tag).toEqual([]);
+  });
+
+  it("allows only characters the format gate would refuse", () => {
+    for (const [tag, lang] of Object.entries(DRAFT_LANGUAGES))
+      for (const c of lang.formatAllowed)
+        expect(
+          gateProblems(
+            { headword: c },
+            { script: /./u, formatAllowed: "" },
+            []
+          ),
+          tag
+        ).toContain("format");
+  });
+});
+
 it("has at least one committed key-term record", () => {
   expect(records).toContain("zh-Hans/TIT.json");
 });
@@ -1190,11 +1356,10 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     expect(Object.keys(record.terms).sort()).toEqual([...links.keys()].sort());
     const lang = draftLanguage(record.language);
     if (!lang) throw new Error(`${path}: not a draft language`);
-    const script = lang.script;
     const fia = parseFia(await readSource(record.reference));
     for (const [a, t] of Object.entries(record.terms)) {
       expect(t.headword, a).toBe(t.headword.normalize("NFC"));
-      expect(t.gates ?? [], a).toEqual(gateProblems(t, script, fia));
+      expect(t.gates ?? [], a).toEqual(gateProblems(t, lang, fia));
       expect(t.status, a).toBe(statusOf(t));
       expect(t.source).toBe(`ai:${record.calls[0]?.model}`);
       if (t.check) expect(t.check.by).toBe(`ai:${record.calls[1]?.model}`);

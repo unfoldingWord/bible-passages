@@ -319,11 +319,15 @@ commit, not a rebuild.
   (the reference term it follows), `note` (for the reader), `gates` and
   `check` (`by`, `verdict`, and for a disagreement `why` and `suggestion`).
   The gates are `script` (not mostly in the language's script),
-  `latin-letters`, `line-break`, `format` (a format character, `\p{Cf}`,
-  such as a zero-width space or a bidi control: invisible, and left in place
-  by trimming and NFC; right for zh-Hans, to be narrowed before a language
-  whose words need a joiner, such as Persian's ZWNJ) and `reference` (does
-  not use the rendering of the reference term it names).
+  `latin-letters`, `line-break` (any line break: LF, CR, VT, FF, NEL, and
+  the line and paragraph separators U+2028 and U+2029), `format` (an
+  invisible character: a format character, `\p{Cf}`, such as a zero-width
+  space or a bidi control; a default-ignorable one,
+  `\p{Default_Ignorable_Code_Point}`, such as the combining grapheme joiner
+  or a variation selector; or another control, `\p{Cc}`; all left in place
+  by trimming and NFC; except the characters the language's
+  `formatAllowed` lists, such as Persian's ZWNJ, none for zh-Hans) and
+  `reference` (does not use the rendering of the reference term it names).
   A term is `ai-checked` only when the checker agreed and every gate passed.
 
 A reader's review is recorded in this same file, by hand, as the maintainer
