@@ -41,7 +41,11 @@ def line_markers(text):
 
 
 def read_usfm(path):
-    """A BSB file as text, read the same way here and in the --line-markers check."""
+    """A BSB file as text, read the same way here and in the --line-markers check.
+    Text mode turns \\r\\n and a lone \\r into \\n, so line_markers' \\r\\n and \\r split
+    alternatives never see a CR here (B's readFileSync keeps CR; the lines come out the
+    same). Keep the plain read: newline="" would change bsb_book's tokeniser, which
+    treats only \\n as a line start."""
     return open(path, encoding="utf-8").read()
 
 
