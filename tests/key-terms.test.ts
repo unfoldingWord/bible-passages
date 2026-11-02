@@ -18,7 +18,10 @@ import {
   draftKeyTerms,
   DRAFT_LANGUAGES,
   draftMessage,
+  assertNamesText,
   gateProblems,
+  namesId,
+  namesProblem,
   parseFia,
   promptPart,
   readCheck,
@@ -30,10 +33,11 @@ import {
   type DraftRecord,
   type TermInput,
 } from "../scripts/lib/key-terms.ts";
+import { verseTexts } from "../scripts/lib/cuv.ts";
 import { FORMAT_ALLOWED } from "../scripts/lib/format.ts";
 import { SCRIPT_BY_TAG } from "../scripts/lib/gates.ts";
 import type { Completion } from "../scripts/lib/openrouter.ts";
-import { readSource, sources } from "../scripts/lib/sources.ts";
+import { readSource, source, sources } from "../scripts/lib/sources.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
 
 // AI-drafted key-term glossaries (zh-Hans): scripts/lib/key-terms.ts and
@@ -458,6 +462,8 @@ describe("reviewProblems", () => {
     const BY = "review.by is not reviewer:<role or handle>";
     const AT = "review.at is not a date YYYY-MM-DD";
     const TEXT = "review.text is not a trimmed, non-empty NFC headword";
+    const REASON = "review.reason is not a trimmed, non-empty NFC sentence";
+    const ONLY_TEXT = "review.reason is only for a changed headword (text)";
     const cases: [unknown, string[]][] = [
       [{ at }, [BY]],
       [{ by }, [AT]],
@@ -474,7 +480,7 @@ describe("reviewProblems", () => {
       [{ by, at: "1900-02-29" }, [AT]],
       [
         { by, at, headword: "长老" },
-        ["review has fields other than by, at and text (headword)"],
+        ["review has fields other than by, at, text and reason (headword)"],
       ],
       // A changed headword is text, as a reworded title is in data/drafts/.
       [{ by, at, text: "" }, [TEXT]],
@@ -485,6 +491,14 @@ describe("reviewProblems", () => {
       // Decomposed (NFD), not NFC: the drafted headword is held to NFC.
       [{ by, at, text: "e\u0301" }, [TEXT]],
       [{ at, text: "长老" }, [BY]],
+      // A reason explains a changed headword that departs from CUV (2 Nov).
+      [{ by, at, text: "长老", reason: "the content team's spelling" }, []],
+      [{ by, at, reason: "kept" }, [ONLY_TEXT]],
+      [{ by, at, text: "长老", reason: "" }, [REASON]],
+      [{ by, at, text: "长老", reason: "   " }, [REASON]],
+      [{ by, at, text: "长老", reason: " why" }, [REASON]],
+      [{ by, at, text: "长老", reason: 1 }, [REASON]],
+      [{ by, at, text: "长老", reason: "e\u0301" }, [REASON]],
       ["reviewer:zh-hans-reader", ["review is not an object"]],
       [null, ["review is not an object"]],
     ];
@@ -492,6 +506,104 @@ describe("reviewProblems", () => {
       expect(reviewProblems(review), JSON.stringify(review)).toEqual(problems);
   });
 });
+
+describe("the cuv gate (namesProblem, gateProblems, assertNamesText)", () => {
+  const verses: ReadonlyMap<string, string> = new Map([
+    ["1:5", "我从前留你在克里特"],
+    ["1:12", "有克里特人中的一个本地先知说"],
+    ["2:1", "凯撒利亚·腓立比"],
+  ]);
+  const crete = { article: "names/crete", refs: ["1:5", "1:12"], verses };
+  const flag = (headword: string, check = crete, reference?: string) =>
+    gateProblems(
+      reference === undefined ? { headword } : { headword, reference },
+      ZH,
+      [{ en: "Crete", term: "革哩底" }],
+      check
+    );
+
+  it("flags a name CUV does not write at its verses, and passes one it does", () => {
+    expect(flag("革哩底、革哩底人")).toEqual(["cuv"]);
+    expect(flag("克里特")).toEqual([]);
+    // One rendering found at each verse is enough.
+    expect(flag("革哩底、克里特")).toEqual([]);
+  });
+
+  it("flags a name found at only one of its verses", () => {
+    const two = { ...crete, refs: ["1:5", "2:1"] };
+    expect(flag("克里特", two)).toEqual(["cuv"]);
+  });
+
+  it("reads U+2022 as U+00B7 on both sides", () => {
+    const one = { article: "names/caesareaphilippi", refs: ["2:1"], verses };
+    expect(flag("凯撒利亚•腓立比", one)).toEqual([]);
+  });
+
+  it("skips a term that names an FIA reference, because FIA is binding", () => {
+    expect(flag("革哩底", crete, "Crete")).toEqual([]);
+  });
+
+  it("does not touch an article that is not a name", () => {
+    expect(flag("长者", { ...crete, article: "other/elder" })).toEqual([]);
+  });
+
+  it("refuses a verse the names text does not have, and a name with no verses", () => {
+    expect(
+      thrown(() => flag("克里特", { ...crete, refs: ["1:5", "9:9"] }))
+    ).toBe("names/crete: verse 9:9 is not in the names text");
+    expect(thrown(() => flag("克里特", { ...crete, refs: [] }))).toBe(
+      "names/crete: no verses to check the name against"
+    );
+    expect(thrown(() => assertNamesText([crete], new Map()))).toBe(
+      "names/crete: verse 1:5 is not in the names text"
+    );
+    // Not a name: its verses are not the names text's business.
+    expect(() =>
+      assertNamesText([{ article: "kt/god", refs: ["9:9"] }], new Map())
+    ).not.toThrow();
+  });
+
+  it("does not count a name that occurs only in a footnote or cross-reference", () => {
+    const usfm = [
+      "\\c 1",
+      "\\v 5 我从前留你\\f + \\fr 1:5 \\ft 克里特\\f*在那里。",
+      "\\v 12 有人说\\x - \\xo 1:12 \\xt 克里特\\x*。",
+    ].join("\n");
+    const notes = { ...crete, verses: verseTexts(usfm) };
+    expect(flag("克里特", notes)).toEqual(["cuv"]);
+  });
+
+  it("flags Crete and passes the other four Titus names on the pinned inputs", async () => {
+    const tit = verseTexts(await readSource("zh-cuv-tit"));
+    const links = linkedArticles(parseTwl(await readSource(twlId("TIT"))));
+    const record = JSON.parse(
+      read("data/glossary-drafts/zh-Hans/TIT.json")
+    ) as DraftRecord;
+    const flagged = [...links]
+      .filter(([a]) => {
+        const t = record.terms[a];
+        return (
+          t && namesProblem(t, { article: a, refs: links.get(a)!, verses: tit })
+        );
+      })
+      .map(([a]) => a);
+    expect(flagged).toEqual(["names/crete"]);
+    expect([...links.keys()].filter((a) => a.startsWith("names/"))).toEqual([
+      "names/apollos",
+      "names/crete",
+      "names/paul",
+      "names/titus",
+      "names/tychicus",
+    ]);
+  });
+});
+
+// The names text the `cuv` gate reads in these tests: CUV's spellings.
+const cuvVerses: ReadonlyMap<string, string> = new Map([
+  ["1:1", "神的仆人，耶稣基督的使徒保罗"],
+  ["1:4", "现在写信给提多"],
+  ["1:5", "我从前留你在克里特"],
+]);
 
 const inputs: TermInput[] = [
   { article: "kt/apostle", en: "apostle", definition: "d", refs: ["1:1"] },
@@ -538,6 +650,7 @@ const run = (
     book: "TIT",
     inputs,
     reference: { id: "fia-kt-zhs", terms: reference },
+    names: cuvVerses,
     prompt: { file: "prompts/key-terms.md", text: promptText },
     draftModel: "google/draft",
     checkModel: "anthropic/check",
@@ -602,7 +715,8 @@ describe("draftKeyTerms", () => {
         headword: "Titus",
         source: "ai:google/draft",
         status: "unreviewed",
-        gates: ["script", "latin-letters"],
+        // Not CUV's 提多 at 1:4 either.
+        gates: ["script", "latin-letters", "cuv"],
         check: { by: "ai:anthropic/check", verdict: "agree" },
       },
       "other/elder": {
@@ -681,6 +795,22 @@ describe("draftKeyTerms", () => {
     await expect(run(complete, [], { book: "../x" })).rejects.toThrow(
       "not a book"
     );
+    expect(sent).toHaveLength(0);
+  });
+
+  it("refuses a book with no names pin: zh-cuv-<book> must be in sources.json", () => {
+    const zh = DRAFT_LANGUAGES["zh-Hans"]!;
+    expect(namesId(zh, "TIT")).toBe("zh-cuv-tit");
+    expect(thrown(() => source(namesId(zh, "PHM")))).toBe(
+      "zh-cuv-phm is not pinned in sources.json"
+    );
+  });
+
+  it("refuses a names text without a name's verse, before any call", async () => {
+    const { complete, sent } = fakeModels([]);
+    await expect(
+      run(complete, [], { names: new Map([["1:1", "保罗"]]) })
+    ).rejects.toThrow("names/titus: verse 1:4 is not in the names text");
     expect(sent).toHaveLength(0);
   });
 });
@@ -771,6 +901,7 @@ describe("buildDraftGlossary", () => {
       credit: c,
       prompt: promptText,
       reference: fia,
+      names: cuvVerses,
     });
 
   it("keeps a headword that does not use its reference's rendering when the gate records it", () => {
@@ -821,6 +952,104 @@ describe("buildDraftGlossary", () => {
     expect(g.review).toEqual([]);
     expect(g.terms["kt/apostle"]?.status).toBe("ai-checked");
     expect(g.terms["kt/apostle"]?.review).toBeUndefined();
+  });
+
+  describe("a reader's spelling that CUV does not use (the maintainer, 2 Nov, #53)", () => {
+    const by = "reviewer:zh-hans-reader";
+    const at = "2026-11-02";
+    const reason = "the content team's spelling for this book";
+    const titus = (term: Partial<DraftRecord["terms"][string]>) => {
+      const r = record();
+      Object.assign(r.terms["names/titus"]!, term);
+      return r;
+    };
+    const where = "zh-Hans TIT names/titus: ";
+
+    it("is refused without a reason", () => {
+      const r = titus({
+        status: "human-reviewed",
+        review: { by, at, text: "提突" },
+      });
+      expect(thrown(() => build(r))).toBe(
+        where +
+          "review.text fails gates (cuv); a spelling CUV does not use needs review.reason"
+      );
+    });
+
+    it("is accepted with a reason, and the built glossary lists it under departures", () => {
+      const review = { by, at, text: "提突", reason };
+      const g = build(titus({ status: "human-reviewed", review }));
+      expect(g.terms["names/titus"]).toMatchObject({
+        headword: "提突",
+        source: by,
+        drafted: "提多",
+        status: "human-reviewed",
+        review,
+      });
+      // Accepted, so no gates on the built term: departures records it.
+      expect(g.terms["names/titus"]?.gates).toBeUndefined();
+      expect(g.departures).toEqual(["names/titus"]);
+      expect(build(record()).departures).toEqual([]);
+    });
+
+    it("does not excuse any other gate", () => {
+      const r = titus({
+        status: "human-reviewed",
+        review: { by, at, text: "Titus", reason },
+      });
+      expect(thrown(() => build(r))).toBe(
+        where + "review.text fails gates (script, latin-letters, cuv)"
+      );
+    });
+
+    it("is refused beside a spelling CUV uses, which needs no reason", () => {
+      const r = titus({
+        headword: "提突",
+        gates: ["cuv"],
+        status: "human-reviewed",
+        review: { by, at, text: "提多", reason },
+      });
+      expect(thrown(() => build(r))).toBe(
+        where + "review.reason is only for a spelling the cuv gate flags"
+      );
+    });
+
+    it("may keep a flagged spelling as drafted, with no text and no reason", () => {
+      const r = titus({
+        headword: "提突",
+        gates: ["cuv"],
+        status: "human-reviewed",
+        review: { by, at },
+      });
+      const g = build(r);
+      expect(g.terms["names/titus"]?.headword).toBe("提突");
+      // Kept as drafted: the model's cuv gate stays, and no departure.
+      expect(g.terms["names/titus"]?.gates).toEqual(["cuv"]);
+      expect(g.departures).toEqual([]);
+    });
+
+    it("refuses a record whose flagged name lacks its cuv gate", () => {
+      const r = titus({ headword: "提突" });
+      expect(thrown(() => build(r))).toBe(
+        where + "gates do not match the headword"
+      );
+    });
+
+    it("refuses a name whose verse the names text lacks", () => {
+      const r = record();
+      expect(() =>
+        buildDraftGlossary({
+          record: r,
+          file: "data/glossary-drafts/zh-Hans/TIT.json",
+          rows,
+          english,
+          credit,
+          prompt: promptText,
+          reference: fia,
+          names: new Map([["1:1", "保罗"]]),
+        })
+      ).toThrow("zh-Hans TIT: names/titus: verse 1:4 is not in the names text");
+    });
   });
 
   it("builds a reader's changed headword with the reviewer as source, the record keeping the model's", () => {
@@ -901,7 +1130,8 @@ describe("buildDraftGlossary", () => {
         reviewed({ by, at: "2026-13-01" }),
       ],
       [
-        elder + "review has fields other than by, at and text (headword)",
+        elder +
+          "review has fields other than by, at, text and reason (headword)",
         reviewed({ by, at, headword: "长老" }),
       ],
       // A changed headword: text that is not a headword, no change at all,
@@ -1393,7 +1623,14 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
     const fia = parseFia(await readSource(record.reference));
     for (const [a, t] of Object.entries(record.terms)) {
       expect(t.headword, a).toBe(t.headword.normalize("NFC"));
-      expect(t.gates ?? [], a).toEqual(gateProblems(t, lang, fia));
+      const verses = verseTexts(await readSource(namesId(lang, record.book)));
+      expect(t.gates ?? [], a).toEqual(
+        gateProblems(t, lang, fia, {
+          article: a,
+          refs: links.get(a) ?? [],
+          verses,
+        })
+      );
       expect(t.status, a).toBe(statusOf(t));
       expect(t.source).toBe(`ai:${record.calls[0]?.model}`);
       if (t.check) expect(t.check.by).toBe(`ai:${record.calls[1]?.model}`);
@@ -1477,6 +1714,7 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
       },
       prompt: read("prompts/key-terms.md"),
       reference: parseFia(await readSource(lang.reference)),
+      names: verseTexts(await readSource(namesId(lang, record.book))),
     });
     expect(glossary).toEqual(built);
   });

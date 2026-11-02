@@ -34,6 +34,7 @@ import {
   type Credit,
   type TwlRow,
 } from "./glossaries.ts";
+import { compareForm } from "./cuv.ts";
 import { FORMAT_ALLOWED, hasFormat } from "./format.ts";
 import { LINE_BREAK } from "./line-breaks.ts";
 import type { Completion, Message } from "./openrouter.ts";
@@ -50,12 +51,17 @@ import { parseReply, sha256 } from "./translate.ts";
  * (format.ts), the one list the translation gates use too;
  * tests/key-terms.test.ts refuses an entry whose script is known to need one
  * of these characters and does not allow it.
+ *
+ * `names` is the `sources.json` id prefix of the Bible text its `names/*`
+ * headwords are checked against, one pin per book, `<names>-<book>` (the
+ * `cuv` gate, see namesProblem).
  */
 export type DraftLanguage = {
   name: string;
   script: RegExp;
   reference: string;
   formatAllowed: string;
+  names: string;
 };
 
 /** Languages whose glossary is AI-drafted. */
@@ -68,8 +74,15 @@ export const DRAFT_LANGUAGES: Readonly<Record<string, DraftLanguage>> = {
     // CC BY-SA 4.0 term list the models are given as a reference
     // (docs/scoping/glossaries.md, "Chinese (zh-Hans)").
     reference: "fia-kt-zhs",
+    // The Chinese Union Version, New Punctuation, treated as public domain
+    // (docs/decisions/0004-cuv-names-check.md): zh-cuv-tit and so on.
+    names: "zh-cuv",
   },
 };
+
+/** The `sources.json` id of a draft language's names text for a book. */
+export const namesId = (lang: Pick<DraftLanguage, "names">, book: string) =>
+  `${lang.names}-${book.toLowerCase()}`;
 
 /** One reference term: its English name and its rendering in the language. */
 export type ReferenceTerm = { en: string; term: string };
@@ -216,8 +229,18 @@ export type DraftRecordTerm = {
  * `YYYY-MM-DD`. Without `text` the reviewer accepts the headword as drafted;
  * with it, `text` is the reviewer's headword, which the build gives the term
  * in place of the model's, with `by` as its source.
+ *
+ * `reason`, only beside `text`, is why the reviewer's headword departs from
+ * the names text: a spelling the `cuv` gate flags is accepted only with one
+ * (the maintainer, 2 Nov, #53; docs/decisions/0004-cuv-names-check.md), and
+ * the built glossary lists such terms under `departures`.
  */
-export type TermReview = { by: string; at: string; text?: string };
+export type TermReview = {
+  by: string;
+  at: string;
+  text?: string;
+  reason?: string;
+};
 
 const REVIEWER = /^reviewer:[A-Za-z0-9-]+$/;
 
@@ -235,11 +258,11 @@ export function reviewProblems(review: unknown): string[] {
   if (!r) return ["review is not an object"];
   const problems: string[] = [];
   const extra = Object.keys(r).filter(
-    (k) => k !== "by" && k !== "at" && k !== "text"
+    (k) => k !== "by" && k !== "at" && k !== "text" && k !== "reason"
   );
   if (extra.length > 0)
     problems.push(
-      `review has fields other than by, at and text (${extra.join(", ")})`
+      `review has fields other than by, at, text and reason (${extra.join(", ")})`
     );
   if (typeof r.by !== "string" || !REVIEWER.test(r.by))
     problems.push("review.by is not reviewer:<role or handle>");
@@ -261,6 +284,16 @@ export function reviewProblems(review: unknown): string[] {
       r.text !== r.text.normalize("NFC"))
   )
     problems.push("review.text is not a trimmed, non-empty NFC headword");
+  if (
+    r.reason !== undefined &&
+    (typeof r.reason !== "string" ||
+      r.reason.trim() === "" ||
+      r.reason !== r.reason.trim() ||
+      r.reason !== r.reason.normalize("NFC"))
+  )
+    problems.push("review.reason is not a trimmed, non-empty NFC sentence");
+  if (r.reason !== undefined && r.text === undefined)
+    problems.push("review.reason is only for a changed headword (text)");
   return problems;
 }
 
@@ -413,12 +446,15 @@ export function usesReference(
  * differ from another only invisibly) except those the language allows
  * (`formatAllowed`); and, when it names a reference term, using that term's
  * rendering (`reference`), so a mismatch is recorded and the term goes to
- * the reader.
+ * the reader. Given `names`, also the `cuv` gate (namesProblem): a
+ * `names/*` term with no reference whose headword the names text does not
+ * use at its verses, recorded the same way.
  */
 export function gateProblems(
   t: { headword: string; reference?: string },
   lang: Pick<DraftLanguage, "script" | "formatAllowed">,
-  reference: ReferenceTerm[]
+  reference: ReferenceTerm[],
+  names?: NamesCheck
 ): string[] {
   const { headword } = t;
   const problems: string[] = [];
@@ -427,7 +463,63 @@ export function gateProblems(
   if (LINE_BREAK.test(headword)) problems.push("line-break");
   if (hasFormat(headword, lang.formatAllowed)) problems.push("format");
   if (!usesReference(t, reference)) problems.push("reference");
+  if (names !== undefined && namesProblem(t, names)) problems.push("cuv");
   return problems;
+}
+
+/**
+ * What the `cuv` gate needs for one term: its article, its TWL verses
+ * (`<chapter>:<verse>`), and the book's names text as verseTexts (cuv.ts)
+ * reads it.
+ */
+export type NamesCheck = {
+  article: string;
+  refs: readonly string[];
+  verses: ReadonlyMap<string, string>;
+};
+
+/**
+ * The `cuv` gate (docs/decisions/0004-cuv-names-check.md): true when a
+ * `names/*` term that names no FIA reference has, at one of its verses, none
+ * of its renderings (split on 、, in compareForm) in that verse's text. A
+ * term with a `reference` is skipped, because FIA is binding (#53); any other
+ * article is not a name. A verse the text lacks, or a name with no verses,
+ * is an error, not a pass. One rendering found at a verse is enough there,
+ * and a hit may sit inside a longer name: the gate catches a spelling the
+ * text does not use at all, and the reader still reads every term.
+ */
+export function namesProblem(
+  t: { headword: string; reference?: string },
+  names: NamesCheck
+): boolean {
+  const { article, refs, verses } = names;
+  if (!article.startsWith("names/") || t.reference !== undefined) return false;
+  if (refs.length === 0)
+    throw new Error(`${article}: no verses to check the name against`);
+  const forms = renderings(t.headword)
+    .map(compareForm)
+    .filter((f) => f !== "");
+  let missing = false;
+  for (const ref of refs) {
+    const text = verses.get(ref);
+    if (text === undefined)
+      throw new Error(`${article}: verse ${ref} is not in the names text`);
+    if (!forms.some((f) => text.includes(f))) missing = true;
+  }
+  return missing;
+}
+
+/**
+ * Refuses a names text that cannot check a book's names: every `names/*`
+ * input must have verses, and each of them must be in the text. The run
+ * calls it before any model call, so a missing verse costs nothing.
+ */
+export function assertNamesText(
+  inputs: readonly { article: string; refs: readonly string[] }[],
+  verses: ReadonlyMap<string, string>
+): void {
+  for (const { article, refs } of inputs)
+    namesProblem({ headword: "" }, { article, refs, verses });
 }
 
 /**
@@ -497,6 +589,8 @@ export async function draftKeyTerms(args: {
   book: string;
   inputs: TermInput[];
   reference: { id: string; terms: ReferenceTerm[] };
+  /** The book's names text (`namesId`), as verseTexts reads it. */
+  names: ReadonlyMap<string, string>;
   prompt: { file: string; text: string };
   draftModel: string;
   checkModel: string;
@@ -509,6 +603,7 @@ export async function draftKeyTerms(args: {
   if (!lang) throw new Error(`not a draft language: ${tag}`);
   if (!STRUCTURE_BOOKS.includes(book)) throw new Error(`not a book: ${book}`);
   assertFamilies(draftModel, checkModel);
+  assertNamesText(inputs, args.names);
   const articles = inputs.map((t) => t.article);
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
   const calls: CallRecord[] = [];
@@ -597,7 +692,11 @@ export async function draftKeyTerms(args: {
     for (const input of inputs) {
       const d = draft.terms[input.article];
       if (!d) continue;
-      const problems = gateProblems(d, lang, args.reference.terms);
+      const problems = gateProblems(d, lang, args.reference.terms, {
+        article: input.article,
+        refs: input.refs,
+        verses: args.names,
+      });
       const gates = problems.length > 0 ? problems : undefined;
       const c = check.checks[input.article];
       terms[input.article] = {
@@ -658,6 +757,11 @@ export type DraftGlossary = {
   gaps: Record<string, never>;
   /** Articles whose term is `unreviewed`: the reader looks at these first. */
   review: string[];
+  /**
+   * Articles whose reviewer's headword departs from the names text (the
+   * `cuv` gate flags it) with a recorded `review.reason`.
+   */
+  departures: string[];
 };
 
 /**
@@ -705,7 +809,9 @@ export function assertBuiltTerms(
  * the book's TWL links, once, with the English headword the pinned English
  * tW has now (so an English change makes the record stale, not silently
  * wrong); name only reference terms the pinned list has, with any headword
- * that does not use its reference's rendering gated; and keep the status
+ * that does not use its reference's rendering gated, and any name the
+ * book's pinned names text does not use at its verses gated (`cuv`); and
+ * keep the status
  * rules: `human-reviewed` only with a well-formed review, otherwise nothing
  * above `ai-checked`. A term keeps its review in the built file; a review
  * with `text` (a changed headword, which must differ and pass every gate)
@@ -723,6 +829,8 @@ export function buildDraftGlossary(args: {
   prompt: string;
   /** The pinned reference list the record names, parsed with parseFia. */
   reference: ReferenceTerm[];
+  /** The book's pinned names text (`namesId`), as verseTexts reads it. */
+  names: ReadonlyMap<string, string>;
 }): DraftGlossary {
   const { record } = args;
   const where = `${record.language} ${record.book}`;
@@ -767,6 +875,7 @@ export function buildDraftGlossary(args: {
     );
 
   const terms: Record<string, DraftGlossaryTerm> = {};
+  const departures: string[] = [];
   for (const [article, refs] of linked) {
     const t = record.terms[article];
     if (!t) continue;
@@ -783,7 +892,13 @@ export function buildDraftGlossary(args: {
       throw new Error(
         `${where} ${article}: reference "${t.reference}" is not in ${record.reference}`
       );
-    const gates = gateProblems(t, lang, args.reference);
+    const named = { article, refs, verses: args.names };
+    let gates: string[];
+    try {
+      gates = gateProblems(t, lang, args.reference, named);
+    } catch (e) {
+      throw new Error(`${where}: ${(e as Error).message}`);
+    }
     if (JSON.stringify(gates) !== JSON.stringify(t.gates ?? []))
       throw new Error(`${where} ${article}: gates do not match the headword`);
     if (t.status === "human-reviewed" && t.review === undefined)
@@ -817,14 +932,28 @@ export function buildDraftGlossary(args: {
     const failed = gateProblems(
       { headword: text, reference: t.reference },
       lang,
-      args.reference
+      args.reference,
+      named
     );
-    if (failed.length > 0)
+    // A spelling the names text does not use is the reader's to choose,
+    // with a reason (2 Nov, #53); every other gate still holds, and a
+    // reason with nothing to explain is refused rather than left looking
+    // recorded.
+    const departs = failed.length === 1 && failed[0] === "cuv";
+    if (failed.length > 0 && !(departs && review.reason !== undefined))
       throw new Error(
-        `${where} ${article}: review.text fails gates (${failed.join(", ")})`
+        `${where} ${article}: review.text fails gates (${failed.join(", ")})` +
+          (departs ? "; a spelling CUV does not use needs review.reason" : "")
       );
-    // `gates` described the model's headword; the reviewer's passes them all,
-    // so the built term has none. `check` stays, the checker's verdict on the
+    if (review.reason !== undefined && !departs)
+      throw new Error(
+        `${where} ${article}: review.reason is only for a spelling the cuv gate flags`
+      );
+    if (departs) departures.push(article);
+    // `gates` described the model's headword. The reviewer's was accepted:
+    // it passes every gate, or fails only `cuv` with a `reason`, which is
+    // recorded under `departures` and in `review.reason`, not in `gates`.
+    // So the built term has none. `check` stays, the checker's verdict on the
     // model's headword, and `drafted` names that headword, since `check`
     // does not record what it judged and `headword` is now the reader's.
     const built: DraftGlossaryTerm = {
@@ -864,5 +993,6 @@ export function buildDraftGlossary(args: {
     review: Object.entries(terms)
       .filter(([, t]) => t.status === "unreviewed")
       .map(([a]) => a),
+    departures,
   };
 }

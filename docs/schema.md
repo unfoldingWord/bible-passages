@@ -295,7 +295,9 @@ person has changed its headword), `status`, the check and, once a person has
 reviewed it, the term's `review` (below); a term whose headword a person
 changed also carries `drafted` (the model's headword) and no `gates`. The
 file names both models under `models`, and the file's own `review` lists the
-terms that are `unreviewed` (the checker disagreed or a gate failed). Title
+terms that are `unreviewed` (the checker disagreed or a gate failed), and
+its `departures` lists the names whose reader's headword departs from the
+Chinese Union Version with a recorded reason (below). Title
 translation uses a term with a `status` only once it is `human-reviewed` or
 `approved`.
 
@@ -330,8 +332,15 @@ commit, not a rebuild.
   by trimming and NFC; except the characters the language's
   `formatAllowed` lists, such as Persian's ZWNJ, none for zh-Hans; one
   per-language list, `FORMAT_ALLOWED` in `scripts/lib/format.ts`, shared
-  with the English and translation title gates) and
-  `reference` (does not use the rendering of the reference term it names).
+  with the English and translation title gates),
+  `reference` (does not use the rendering of the reference term it names)
+  and `cuv` (a `names/*` term with no `reference` whose headword the
+  Chinese Union Version does not write at one of its TWL verses: none of its
+  renderings, split on 、, in that verse's plain text, read from the pinned
+  `zh-cuv-<book>` by `scripts/lib/cuv.ts`; ADR
+  [0004](decisions/0004-cuv-names-check.md)). A book with a record and no
+  `zh-cuv-<book>` pin, or a name whose verse the pinned text lacks, stops the
+  build.
   A term is `ai-checked` only when the checker agreed and every gate passed.
 
 A reader's review is recorded in this same file, by hand, as the maintainer
@@ -356,7 +365,11 @@ review is recorded yet; the committed Titus term is `ai-checked`):
   `reviewer:<github-handle>` for a contributor who chose to be named. No
   personal names (AGENTS.md, "Privacy").
 - `at`: the date of the review, `YYYY-MM-DD`.
-- Without `text`, the reviewer accepts the headword as drafted.
+- Without `text`, the reviewer accepts the headword as drafted. Its built
+  term keeps the model's `gates` (a kept `cuv`-flagged name still shows
+  `cuv`), and it is not listed under `departures`, which lists only a
+  reader's own spelling accepted with a `reason`; `status` and `review`
+  say the reader decided.
 - `text`: the reader's headword, when they changed it, as the maintainer
   decided on #53 (30 Oct). Recorded as a reworded title is in `data/drafts/`
   (`review.text`): the term's `headword` and `source` in this file stay the
@@ -366,6 +379,11 @@ review is recorded yet; the committed Titus term is `ai-checked`):
   `"headword": "长者"` and `"source": "ai:<model>"`, and adds
   `"text": "长老"` to `review`; the built term has `"headword": "长老"`,
   `"source": "reviewer:zh-hans-reader"` and `"drafted": "长者"`.
+- `reason`, only beside `text`: why the reader's headword is a spelling the
+  `cuv` gate flags, as the maintainer decided on #53 (2 Nov). With a
+  non-empty reason the gate accepts that spelling, and the built file lists
+  the term under `departures`; without one it is refused. A reader may also
+  keep a flagged headword as drafted, with no `text` and no reason.
 - Everything the models recorded stays as it was: `headword`, `source`
   (`ai:<model>`), `check` and `gates`. AI output is never relabelled.
 - Git keeps the history: the commit that adds the review is the record of
@@ -376,7 +394,8 @@ carries its own `status`; a term's status is the term's `status`, raised to
 `human-reviewed` (decided on #53), so `review` has none. A changed headword
 must differ from the drafted one (the same headword under the reviewer's name
 would relabel AI output) and pass every gate the drafted one was put through
-(`script`, `latin-letters`, `line-break`, `format`, `reference`), so it
+(`script`, `latin-letters`, `line-break`, `format`, `reference`, `cuv`;
+`cuv` alone may be answered by a `reason`), so it
 cannot differ from the drafted one only by an invisible character; a title
 review's `text` is held to non-empty and trimmed by tests/drafts.test.ts,
 and a term's `text` is also held to NFC, as a drafted headword is. The built
@@ -387,10 +406,12 @@ record the headword it judged, and on a changed term that is `drafted`, not
 `headword`. `drafted` is present only on a changed term.
 
 The build refuses `human-reviewed` without a `review`; a `review` without a
-`by` and `at` in those forms, with any field but `by`, `at` and `text`, or
-with a `text` that is not a trimmed, non-empty NFC string; a `review` on a
+`by` and `at` in those forms, with any field but `by`, `at`, `text` and
+`reason`, with a `text` that is not a trimmed, non-empty NFC string, or with
+a `reason` that is not a trimmed, non-empty NFC string, has no `text`, or
+sits beside a `text` the `cuv` gate does not flag; a `review` on a
 term whose status is not `human-reviewed`; a `text` equal to the drafted
-headword or failing a gate; a term whose `source` in this file is not the
+headword or failing a gate (but `cuv` with a `reason`); a term whose `source` in this file is not the
 drafting model; and any status above `human-reviewed`. Without a review,
 nothing is above `ai-checked`. The built term keeps its `status` and `review`,
 so title translation can use it.

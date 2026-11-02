@@ -434,7 +434,8 @@
       "en": "Crete, Cretan",
       "headword": "革哩底、革哩底人",
       "source": "ai:google/gemini-3.8-flash",
-      "status": "ai-checked",
+      "status": "unreviewed",
+      "gates": ["cuv"],
       "check": { "by": "ai:anthropic/claude-sonnet-5.5", "verdict": "agree" },
       "refs": ["1:5", "1:12"]
     },
@@ -806,5 +807,6 @@
     }
   },
   "gaps": {},
-  "review": []
+  "review": ["names/crete"],
+  "departures": []
 }

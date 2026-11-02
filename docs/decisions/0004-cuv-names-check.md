@@ -93,3 +93,20 @@ do not depend on it.
 - **Leave names to the reader alone.** The reader still reads every term;
   the check makes sure a spelling that differs from CUV is put in front of
   them as such.
+
+## Addendum, 2026-11-02: a reader's third spelling
+
+Decided by the maintainer on #53, after the check was scoped. A reader may
+record a spelling for a `cuv`-flagged name that is neither the drafted one
+nor one the CUV writes, if they record a reason in the term's review
+(`review.reason`, beside `review.text`). The gate then accepts that
+spelling, and the built glossary lists the term under `departures`. With no
+reason, such a spelling is still refused. Every other gate still holds, and
+a reason beside a spelling the gate does not flag is refused, so a reason is
+never recorded with nothing to explain.
+
+Why a field in the built glossary rather than a line in the build's printed
+report: `data/glossaries/<lang>/<BOOK>.json` is committed and is what title
+translation and the reader's tools read, so the list is kept with the terms
+and seen in every diff that adds one. A printed line is gone after the run.
+The field sits beside `review`, the list of terms the reader looks at first.

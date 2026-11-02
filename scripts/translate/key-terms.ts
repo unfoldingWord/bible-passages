@@ -10,7 +10,8 @@
 //
 // Inputs, all offline apart from the two calls: the English glossary
 // (data/glossaries/en/<BOOK>.json, built from pins), each linked English tW
-// article and the reference term list, both read through their pins.
+// article, the reference term list and the book's names text (the `cuv`
+// gate), all read through their pins.
 //
 // The key is read only from the environment and is never written or printed.
 // Output goes to --out, by default under .cache/ (not committed):
@@ -24,12 +25,14 @@ import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
+import { verseTexts } from "../lib/cuv.ts";
 import { twId } from "../lib/glossaries.ts";
 import {
   assertFamilies,
   definition,
   draftKeyTerms,
   DRAFT_LANGUAGES,
+  namesId,
   parseFia,
   PROMPT_FILE,
   type TermInput,
@@ -110,6 +113,9 @@ const reference = {
   id: lang.reference,
   terms: parseFia(await readSource(lang.reference)),
 };
+// The names text the `cuv` gate reads; a book with no pin stops here, before
+// any call (docs/decisions/0004-cuv-names-check.md).
+const names = verseTexts(await readSource(namesId(lang, book)));
 
 const promptPath = PROMPT_FILE;
 const promptText = readFileSync(new URL(promptPath, root), "utf8");
@@ -120,6 +126,7 @@ try {
     book,
     inputs,
     reference,
+    names,
     prompt: { file: promptPath, text: promptText },
     draftModel,
     checkModel,
