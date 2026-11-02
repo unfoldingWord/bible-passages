@@ -174,6 +174,21 @@ describe("gateProblems", () => {
     expect(gateProblems("Paul\nprays")).toEqual(["line-break"]);
     expect(gateProblems("Paul *prays*")).toEqual(["markup"]);
   });
+
+  // #180: every UAX #14 mandatory break, as the key-term gate refuses, not
+  // only CR and LF. Each is inside the title, where trim does not reach, and
+  // survives NFC.
+  it.each([
+    ["VT", "\u{000B}"],
+    ["FF", "\u{000C}"],
+    ["NEL", "\u{0085}"],
+    ["LINE SEPARATOR", "\u{2028}"],
+    ["PARAGRAPH SEPARATOR", "\u{2029}"],
+  ])("flags %s as a line break", (_name, c) => {
+    const title = `Paul${c}prays`;
+    expect(title.trim().normalize("NFC")).toBe(title);
+    expect(gateProblems(title)).toEqual(["line-break"]);
+  });
 });
 
 /** A model that answers each call in turn with a JSON reply and a cost. */
