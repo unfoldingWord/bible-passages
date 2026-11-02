@@ -456,8 +456,9 @@ describe("fetchMissing removes stale .tmp files (#134)", () => {
       if (String(path) === String(locked))
         throw (err = denied("EACCES", "stat", path));
     };
-    expect(thrownBy(() => removeStaleTmp(cache))).toBe(err);
-    expect(err).toMatchObject({ code: "EACCES" });
+    const thrown = thrownBy(() => removeStaleTmp(cache));
+    expect(thrown).toMatchObject({ code: "EACCES" });
+    expect(thrown).toBe(err);
     expect(existsSync(locked)).toBe(true);
   });
 
@@ -469,8 +470,9 @@ describe("fetchMissing removes stale .tmp files (#134)", () => {
       if (String(path) === String(locked))
         throw (err = denied("EPERM", "unlink", path));
     };
-    expect(thrownBy(() => removeStaleTmp(cache))).toBe(err);
-    expect(err).toMatchObject({ code: "EPERM" });
+    const thrown = thrownBy(() => removeStaleTmp(cache));
+    expect(thrown).toMatchObject({ code: "EPERM" });
+    expect(thrown).toBe(err);
     expect(existsSync(locked)).toBe(true);
   });
 });
