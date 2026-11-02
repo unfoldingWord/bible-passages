@@ -22,11 +22,13 @@ import {
 import {
   buildDraftGlossary,
   DRAFT_LANGUAGES,
+  namesId,
   parseFia,
   PROMPT_FILE,
   type DraftGlossary,
   type DraftRecord,
 } from "../lib/key-terms.ts";
+import { verseTexts } from "../lib/cuv.ts";
 import { readSource, sources, type Source } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 
@@ -110,6 +112,9 @@ for (const book of GLOSSARY_BOOKS) {
         "utf8"
       ),
       reference: parseFia(await read(DRAFT_LANGUAGES[language]!.reference)),
+      // The names text the `cuv` gate reads: a book with a record and no
+      // pin stops here (docs/decisions/0004-cuv-names-check.md).
+      names: verseTexts(await read(namesId(DRAFT_LANGUAGES[language]!, book))),
       english: (a) => {
         const word = englishHeadwords.get(a);
         if (word === undefined) throw new Error(`en: no headword for ${a}`);
