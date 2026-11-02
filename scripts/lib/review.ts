@@ -8,6 +8,7 @@
 // Ported from PR #49; scoping in docs/scoping/review-apply.md.
 import { ALL_BOOKS } from "./books.ts";
 import { leakProblems, titleProblems } from "./gates.ts";
+import { LINE_BREAKS } from "./line-breaks.ts";
 import { gateProblems } from "./segment-titles.ts";
 
 export const EXPORT_SCHEMA = "bp.review-export";
@@ -96,19 +97,20 @@ const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
 
 /**
- * Characters that break a line or separate words: CR, LF, tab, VT, FF, NEL,
- * U+2028 and U+2029. One list, as a character-class body, for both places
- * that act on them: a note turns them into a space (`plainWhy`), and wording
- * refuses them (`wordingProblems`). A new separator is added here only.
+ * Characters that break a line or separate words: the mandatory line breaks
+ * (LINE_BREAKS: LF, VT, FF, CR, NEL, U+2028 and U+2029) and tab. One list, as
+ * a character-class body, for both places that act on them: a note turns
+ * them into a space (`plainWhy`), and wording refuses them
+ * (`wordingProblems`). A new line break is added to LINE_BREAKS only.
  *
- * The first three, `LEAK_BREAKS`, are the ones the leak gate already refuses
+ * Of these, `LEAK_BREAKS` (CR, LF and tab) are the ones the leak gate refuses
  * as "line break or tab" (`leakProblems` in gates.ts); `wordingProblems`
  * leaves them to that message. A separator added to the leak gate's list is
  * moved into `LEAK_BREAKS`, and the test "gives each line break one message"
  * fails until it is.
  */
 const LEAK_BREAKS = "\\r\\n\\t";
-const BREAKS = `${LEAK_BREAKS}\\v\\f\\u{85}\\u{2028}\\u{2029}`;
+const BREAKS = `${LINE_BREAKS}\\t`;
 const BREAK_RUNS = new RegExp(`[${BREAKS}]+`, "gu");
 /** The line breaks the leak gate names itself. */
 const LEAK_BREAK = new RegExp(`[${LEAK_BREAKS}]`, "gu");

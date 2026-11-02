@@ -11,6 +11,7 @@
 // the pericope title (decision 12, docs/decisions/0003), which the build
 // fills in (scripts/data/build.ts).
 import { callRecord, type CallRecord } from "./key-terms.ts";
+import { LINE_BREAK } from "./line-breaks.ts";
 import type { Completion, Message } from "./openrouter.ts";
 import type { Heading, Structure } from "./structure.ts";
 import { parseReply, sha256 } from "./translate.ts";
@@ -257,7 +258,7 @@ export function gateProblems(text: string): string[] {
   if (/[.]$/.test(text)) problems.push("full-stop");
   if (/["“”]/.test(text)) problems.push("quotes");
   if (/'/.test(text)) problems.push("straight-apostrophe");
-  if (/[\r\n]/.test(text)) problems.push("line-break");
+  if (LINE_BREAK.test(text)) problems.push("line-break");
   if (/[<>\\*_`]/.test(text)) problems.push("markup");
   return problems;
 }

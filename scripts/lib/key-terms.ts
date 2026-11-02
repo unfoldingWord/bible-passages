@@ -34,6 +34,7 @@ import {
   type Credit,
   type TwlRow,
 } from "./glossaries.ts";
+import { LINE_BREAK } from "./line-breaks.ts";
 import type { Completion, Message } from "./openrouter.ts";
 import { parseReply, sha256 } from "./translate.ts";
 
@@ -400,13 +401,6 @@ export function usesReference(
   const fia = new Set(named.flatMap((r) => renderings(r.term)));
   return renderings(t.headword).some((r) => fia.has(r));
 }
-
-/**
- * A line break: the characters Unicode's line-breaking algorithm (UAX #14)
- * always breaks at, LF, CR, VT, FF, NEL and the line and paragraph
- * separators U+2028 and U+2029, not only `\r` and `\n`.
- */
-const LINE_BREAK = /[\n\v\f\r\u0085\u2028\u2029]/u;
 
 /**
  * A character the `format` gate refuses unless the language allows it: a
