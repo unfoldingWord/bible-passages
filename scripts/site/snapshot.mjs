@@ -29,28 +29,51 @@ const headers = {
 
 // A token the API rejects (401) is dropped and the request retried without
 // it: some sandboxes export a GITHUB_TOKEN that only works through a proxy.
-// `whole` lists must fit in one page: the snapshot fails rather than show a
-// partial list as if it were complete.
-async function get(path, { whole = false } = {}) {
-  let res = await fetch(`${API}/${path}`, { headers });
+async function request(url) {
+  let res = await fetch(url, { headers });
   if (res.status === 401 && headers.Authorization) {
     const { Authorization, ...anonymous } = headers;
-    res = await fetch(`${API}/${path}`, { headers: anonymous });
+    res = await fetch(url, { headers: anonymous });
   }
-  if (!res.ok) throw new Error(`GET ${path}: ${res.status}`);
-  if (whole && /rel="next"/.test(res.headers.get("link") ?? "")) {
-    throw new Error(`GET ${path}: more than one page; the snapshot would be partial`);
+  if (!res.ok) throw new Error(`GET ${url}: ${res.status}`);
+  return res;
+}
+
+async function get(path) {
+  return (await request(`${API}/${path}`)).json();
+}
+
+// A list read in full: every page, following the Link header's rel="next"
+// until there is none. A partial list would show as if it were complete
+// (on 30 Oct a one-page read showed 17 open issues where GitHub had 30).
+// Only api.github.com links are followed, and a link seen twice stops the
+// run rather than loop.
+async function getAll(path) {
+  const all = [];
+  const seen = new Set();
+  let url = `${API}/${path}`;
+  while (url) {
+    if (seen.has(url)) throw new Error(`GET ${url}: pagination repeats`);
+    seen.add(url);
+    const res = await request(url);
+    const page = await res.json();
+    if (!Array.isArray(page)) throw new Error(`GET ${url}: not a list`);
+    all.push(...page);
+    url = /<([^>]+)>;\s*rel="next"/.exec(res.headers.get("link") ?? "")?.[1];
+    if (url && !url.startsWith(`${API}/`)) {
+      throw new Error(`GET ${path}: next page outside ${API}: ${url}`);
+    }
   }
-  return res.json();
+  return all;
 }
 
 const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
 
 const [repo, pulls, issues, milestones, runs, commits] = await Promise.all([
   get(`repos/${REPO}`),
-  get(`repos/${REPO}/pulls?state=all&per_page=100`, { whole: true }),
-  get(`repos/${REPO}/issues?state=all&per_page=100`, { whole: true }),
-  get(`repos/${REPO}/milestones?state=all&per_page=100`, { whole: true }),
+  getAll(`repos/${REPO}/pulls?state=all&per_page=100`),
+  getAll(`repos/${REPO}/issues?state=all&per_page=100`),
+  getAll(`repos/${REPO}/milestones?state=all&per_page=100`),
   // The latest runs and commits only, by design: the page shows recent ones.
   get(`repos/${REPO}/actions/runs?per_page=20`),
   get(`repos/${REPO}/commits?per_page=15`),
@@ -82,9 +105,7 @@ const titles = Object.fromEntries(
 
 const [s1, s1comments, tcm] = await Promise.all([
   get("repos/unfoldingWord/servant.bible/issues/1"),
-  get("repos/unfoldingWord/servant.bible/issues/1/comments?per_page=100", {
-    whole: true,
-  }),
+  getAll("repos/unfoldingWord/servant.bible/issues/1/comments?per_page=100"),
   get("repos/unfoldingWord/tc-mobile/issues/1459"),
 ]);
 
