@@ -59,7 +59,7 @@ section headings, which the check ignores.
 | Break  | observed                          | (1) Licence: see Borrow; settled by ADR 0004, so it no longer constrains the Build. (2) Edition: the record's 革哩底 and `zh_cuv`'s 克里特 are two spellings of one place; which spellings the glossary follows (1919 original or New Punctuation) is a content decision, not a check. (3) FIA versus CUV: run over CUV Mark, 7 of the 37 capitalised FIA names have no hit for any form. 3 are real wording differences (无酵节 / 除酵节, 希律党人 / 希律一党的人, 叙利亚腓尼基 / 叙利腓尼基), 2 are form differences (U+2022 in 凯撒利亚•腓立比 against U+00B7; 加利利的海 against 加利利海), 1 is absent from Mark's wording (弥赛亚), and 1 is a parse artefact of the annotated Judea entry. FIA is binding (maintainer decision on #53), so a CUV check would have to exempt every term that names an FIA `reference`.                                                                                                              |
 | Beget  | skipped                           | No uW or partner team carries a zh-Hans names list or a CUV check. The licence question, the one piece only the maintainer could carry, is answered (ADR 0004).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Bide   | inspected-and-rejected            | **Superseded 2026-11-02 by [ADR 0004](../decisions/0004-cuv-names-check.md):** the maintainer chose to build now rather than wait for a written licence answer, and the hold on the next book's zh-Hans key terms is moot. The earlier row, kept for the record: ~~Reason: in Titus the check covers 5 terms, and the Chinese reader (#31, not yet named) is to read all 93 ([glossaries.md](glossaries.md), "Not done"). Tripwire: before the zh-Hans key terms of a second book are drafted (#53's own gate). Outcomes then: (1) a written answer says the New Punctuation text is public domain or otherwise usable as an input under AGENTS.md, and the content team has chosen its spellings over the 1919 ones: Build. (2) A written answer says it may not be used: drop the check and leave names to the reader. (3) No written answer yet: keep biding, and do not draft the next book's zh-Hans key terms until there is one.~~ |
-| Build  | minimal                           | The check under "Build" below: one `zh-cuv-<book>` pin per drafted book, and a `cuv` gate on each `names/*` term with no FIA `reference`, recorded so the term goes to the reader, not a hard failure. Traced to Breaks (2) and (3): (2) is why a mismatch is a flag for the reader, not an error; (3) is why FIA terms are skipped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Build  | minimal                           | Not built yet: this PR pins Titus and sets the bar. The check under "Build" below: one `zh-cuv-<book>` pin per drafted book, and a `cuv` gate on each `names/*` term with no FIA `reference`, recorded so the term goes to the reader, not a hard failure. Traced to Breaks (2) and (3): (2) is why a mismatch is a flag for the reader, not an error; (3) is why FIA terms are skipped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 Reversibility: forward = low; backward = low. One pin per drafted book and
 one gate; removing them (ADR 0004, "What would reopen it") leaves the records
@@ -94,14 +94,22 @@ named `cuv`.
    names an FIA `reference` is skipped, whatever CUV writes (FIA is binding,
    ADR 0004). No other term is touched.
 3. **The rule.** For each of the term's TWL verses (its `refs`), take that
-   verse's text from the CUV file: the words after `\v N` up to the next
-   `\v` or `\c`, with every USFM marker removed (`\pn`, `\pn*`, `\add`,
-   `\add*` and any other `\name` or `\name*`), section headings (`\s1`,
-   `\s5` and the like) and other lines outside verses ignored, and
-   whitespace (U+3000 included) removed. Renderings are the headword split
-   on 、, as `usesReference` splits them. Both sides map U+2022 (•) to U+00B7
-   (·). The term passes when, at every verse, at least one rendering is a
-   substring of that verse's text. Otherwise its gates include `cuv`.
+   verse's text from the CUV file: the plain verse body only. That is the
+   words after `\v N` up to the next `\v` or `\c`, with notes discarded
+   whole (footnotes `\f`…`\f*`, cross-references `\x`…`\x*`, and their
+   `\fr`, `\ft` and other parts: Titus has 5 footnotes, at 2:13, 3:3, 3:7,
+   3:8 and 3:14), word attributes discarded (`\w word|attrs\w*` keeps
+   `word`), every other USFM marker removed with its text kept (`\pn`,
+   `\pn*`, `\add`, `\add*` and any other `\name` or `\name*`), section
+   headings (`\s1`, `\s5` and the like) and other lines outside verses
+   ignored, and whitespace (U+3000 included) removed. Renderings are the
+   headword split on 、, as `usesReference` splits them. Both sides map
+   U+2022 (•) to U+00B7 (·). The term passes when, at every verse, at least
+   one rendering is a substring of that verse's text. Otherwise its gates
+   include `cuv`. Two accepted limits, as for `usesReference`: one rendering
+   found clears the others (保罗、扫罗 passes at 1:1 on 保罗 alone), and a
+   substring hit can sit inside a longer name. The check catches a spelling
+   CUV does not use at all; the reader still reads every term.
 4. **A missing verse is an error,** not a pass: a TWL verse the CUV file
    does not have stops the build (and the run) naming the term and verse.
 5. **Same gate everywhere.** `cuv` is computed by the drafting run and
@@ -125,7 +133,8 @@ named `cuv`.
    the use"). `sources.json` carries its attribution.
 8. **Tests that fail on `main`:** Crete flagged and the other four Titus
    names passing, on the pinned inputs; a term with a `reference` skipped
-   even when CUV differs; marker stripping, headings ignored, and `·`/`•`;
+   even when CUV differs; marker stripping, headings ignored, a name that
+   occurs only in a footnote or cross-reference flagged, and `·`/`•`;
    a name found at one of two verses flagged; a missing verse refused; a
    missing `zh-cuv-<book>` pin refused; a `review.text` that fails `cuv`
    refused; a record whose Crete term lacks the gate refused.

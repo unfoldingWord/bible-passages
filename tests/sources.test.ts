@@ -133,8 +133,20 @@ describe("CUV inputs", () => {
 
   it("pins Titus at the 1989 release, public domain by ADR 0004", () => {
     expect(tit?.revision).toBe("b993881167d730846cf2efcc1e0a1f58a3cd8b65");
+    // The bytes the decision covers: 57-TIT.usfm as fetched on 2026-11-02.
+    expect(tit?.sha256).toBe(
+      "a78a9a3e84b433d94eab09f503c4d94dd0c535039063ea89823383073a06dde2"
+    );
     expect(tit?.licence).toBe("Public domain");
-    expect(tit?.attribution).toContain("0004-cuv-names-check.md");
+    // The basis travels with the pin: who labels it public domain, the
+    // decision, and that the check copies no text (ADR 0004).
+    for (const part of [
+      "Door43",
+      "cmn-cu89s",
+      "0004-cuv-names-check.md",
+      "no text is copied",
+    ])
+      expect(tit?.attribution).toContain(part);
   });
 
   it("pins one book file per drafted zh-Hans book", () => {
