@@ -8,6 +8,7 @@ import {
   readFileSync,
   renameSync,
   rmSync,
+  statSync,
   writeFileSync,
 } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -55,6 +56,18 @@ export const RETRY_WAITS = [1000, 3000, 9000];
 
 /** How long one attempt may take before it is abandoned and retried. */
 export const ATTEMPT_TIMEOUT_MS = 30_000;
+
+/**
+ * How old a `.tmp` file in the cache must be before it is taken as left by a
+ * killed process and removed (issue #134). readSource creates its `.tmp`
+ * only once a download is complete, writes it in one synchronous call and
+ * renames it at once, so a live writer's file is milliseconds old. The
+ * threshold still allows a whole attempt, in case a writer ever streams a
+ * download into its `.tmp`: each write moves the mtime, and the attempt
+ * timeout bounds the time between them. The 30 s margin is for a starved
+ * host (load average near 60 in #111) and coarse mtimes.
+ */
+export const STALE_TMP_MS = ATTEMPT_TIMEOUT_MS + 30_000;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -160,8 +173,39 @@ export async function readSource(
 }
 
 /**
- * Downloads every pin not yet in the cache, `concurrency` at a time, and
- * returns how many it fetched. The tests call it once before any test runs
+ * Removes every `*.tmp` file in the cache whose mtime is more than
+ * `STALE_TMP_MS` old, and returns their names. A newer one may belong to a
+ * run still writing in the same cache, so it is kept.
+ */
+export function removeStaleTmp(cache: URL): string[] {
+  const now = Date.now();
+  let names: string[];
+  try {
+    names = readdirSync(cache);
+  } catch {
+    return [];
+  }
+  const removed: string[] = [];
+  for (const name of names) {
+    if (!name.endsWith(".tmp")) continue;
+    const file = new URL(name, cache);
+    let stat;
+    try {
+      stat = statSync(file);
+    } catch {
+      continue; // renamed into place or removed since the listing
+    }
+    if (!stat.isFile() || now - stat.mtimeMs <= STALE_TMP_MS) continue;
+    rmSync(file, { force: true });
+    removed.push(name);
+  }
+  return removed;
+}
+
+/**
+ * Removes stale `.tmp` files (removeStaleTmp), then downloads every pin not
+ * yet in the cache, `concurrency` at a time, and returns how many it
+ * fetched. The tests call it once before any test runs
  * (tests/global-setup.ts), so no test waits on the network under its own
  * timeout.
  */
@@ -173,6 +217,7 @@ export async function fetchMissing(
     fetch: fetchImpl = fetch as Fetch,
   }: { cache?: URL; concurrency?: number; fetch?: Fetch } = {}
 ): Promise<number> {
+  removeStaleTmp(cache);
   let present: Set<string>;
   try {
     present = new Set(readdirSync(cache));
