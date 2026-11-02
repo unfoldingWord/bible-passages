@@ -387,9 +387,13 @@ export function usesReference(
 /**
  * Mechanical checks on a drafted term: its headword written mostly in the
  * language's script (`inScript`), with no Latin letters (a name left in
- * English), on one line; and, when it names a reference term, using that
- * term's rendering (`reference`), so a mismatch is recorded and the term goes
- * to the reader.
+ * English), on one line, with no format characters (`format`: \p{Cf}, such
+ * as a zero-width space or a bidi control, which neither `trim` nor NFC
+ * removes, so a headword could differ from another only invisibly); and,
+ * when it names a reference term, using that term's rendering (`reference`),
+ * so a mismatch is recorded and the term goes to the reader. `format` suits
+ * the draft languages so far (zh-Hans); a script whose words need a joiner
+ * (ZWNJ in Persian, ZWJ in some Indic scripts) needs it narrowed first.
  */
 export function gateProblems(
   t: { headword: string; reference?: string },
@@ -401,6 +405,7 @@ export function gateProblems(
   if (!inScript(headword, script)) problems.push("script");
   if (/\p{Script=Latin}/u.test(headword)) problems.push("latin-letters");
   if (/[\r\n]/.test(headword)) problems.push("line-break");
+  if (/\p{Cf}/u.test(headword)) problems.push("format");
   if (!usesReference(t, reference)) problems.push("reference");
   return problems;
 }
