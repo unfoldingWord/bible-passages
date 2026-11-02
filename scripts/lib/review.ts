@@ -100,9 +100,18 @@ const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
  * U+2028 and U+2029. One list, as a character-class body, for both places
  * that act on them: a note turns them into a space (`plainWhy`), and wording
  * refuses them (`wordingProblems`). A new separator is added here only.
+ *
+ * The first three, `LEAK_BREAKS`, are the ones the leak gate already refuses
+ * as "line break or tab" (`leakProblems` in gates.ts); `wordingProblems`
+ * leaves them to that message. A separator added to the leak gate's list is
+ * moved into `LEAK_BREAKS`, and the test "gives each line break one message"
+ * fails until it is.
  */
-const BREAKS = "\\r\\n\\t\\v\\f\\u{85}\\u{2028}\\u{2029}";
+const LEAK_BREAKS = "\\r\\n\\t";
+const BREAKS = `${LEAK_BREAKS}\\v\\f\\u{85}\\u{2028}\\u{2029}`;
 const BREAK_RUNS = new RegExp(`[${BREAKS}]+`, "gu");
+/** The line breaks the leak gate names itself. */
+const LEAK_BREAK = new RegExp(`[${LEAK_BREAKS}]`, "gu");
 /** Any control character or line break, in wording. */
 const CONTROL_OR_BREAK = new RegExp(`[\\p{Cc}${BREAKS}]`, "u");
 
@@ -206,9 +215,9 @@ export function wordingProblems(
 ): string[] {
   const p = leakProblems(value);
   if (BIDI.test(value)) p.push("bidi control character");
-  // CR, LF and tab have the leak gate's own message ("line break or tab");
+  // The leak gate's line breaks have its own message ("line break or tab");
   // any other control character or line break is refused like bidi marks.
-  if (CONTROL_OR_BREAK.test(value.replace(/[\r\n\t]/g, "")))
+  if (CONTROL_OR_BREAK.test(value.replace(LEAK_BREAK, "")))
     p.push("control or separator character");
   if (lang === "en") {
     for (const q of gateProblems(value)) if (!p.includes(q)) p.push(q);

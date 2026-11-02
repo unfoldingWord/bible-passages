@@ -21,6 +21,7 @@ import {
   MAX_SKEW_MS,
   recordProblems,
   summary,
+  wordingProblems,
   type Answer,
   type DraftFile,
 } from "../scripts/lib/review.ts";
@@ -636,6 +637,29 @@ describe("line and paragraph separators", () => {
   });
 });
 
+describe("wording with a line break", () => {
+  // CR, LF and tab are the leak gate's ("line break or tab"); the applier
+  // refuses the rest of its line-break list itself. One message each, so the
+  // two lists cannot drift apart unnoticed.
+  it("gives each line break one message", () => {
+    const leak = "line break or tab";
+    const own = "control or separator character";
+    for (const [c, message] of [
+      ["\r", leak],
+      ["\n", leak],
+      ["\t", leak],
+      ["\v", own],
+      ["\f", own],
+      ["\u{85}", own],
+      ["\u{2028}", own],
+      ["\u{2029}", own],
+    ] as const) {
+      const p = wordingProblems("en", `Paul greets${c}his son`, undefined);
+      expect(p.filter((q) => q === leak || q === own)).toEqual([message]);
+    }
+  });
+});
+
 describe("apply.ts on the command line", () => {
   // The library tests above hand applyReviews the English table themselves;
   // only a run of the script shows that it loads data/titles/en/ and passes
@@ -681,6 +705,9 @@ describe("apply.ts on the command line", () => {
     const r = spawnSync(
       process.execPath,
       [join(dir, "scripts/review/apply.ts"), exported, "--dry-run"],
+      // Run from the temporary copy, so a relative path in the script can
+      // only reach the copy, never the real tree. apply.ts finds data/ from
+      // its own path today, so no test fails without this; it is a guard.
       { cwd: dir, encoding: "utf8" }
     );
     const after = readFileSync(join(dir, "data/drafts/ar/TIT.json"), "utf8");
