@@ -12,9 +12,10 @@ Everything below was measured on 2026-10-29 at the commits named, unless it
 is labelled **estimated**, and the counts were re-run on 2026-10-30 (#84).
 The measures both scripts compute (see "How it was measured") were produced
 by two scripts, and agree on every one. The scripts were written separately,
-except for the marker-line and used-figure counters, which one author later
-added to both; that section names them. A few counts come from script A alone
-or from one-off commands; that section lists them too.
+except for later changes one author made to both: the `\s1`, `\r`-after-`\s1`
+and per-language "used figures" counters were added (#84), and the `\r` and
+`\d` counters were rewritten to one rule (#119). A few counts come from script
+A alone or from one-off commands; that section lists them.
 
 ## The answer, in plain words
 
@@ -353,9 +354,10 @@ map is the list of measures both compute.
   segment table, the BSB verse set against `ufw.json`, and the catalog
   results.
 
-The `\s1`, `\r`-after-`\s1` and per-language "used figures" counters were
-added to both scripts later (#84), and the `\r` and `\d` counters were
-rewritten in both to one rule (#119), by one author. For those counters the two
+One author later made the same changes to both scripts: the `\s1`,
+`\r`-after-`\s1` and per-language "used figures" counters were added to both
+(#84), and the `\r` and `\d` counters were rewritten in both to one rule
+(#119). For those counters the two
 scripts are two implementations, not two independent readings of a
 specification:
 
