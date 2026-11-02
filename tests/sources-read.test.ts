@@ -4,22 +4,55 @@ import {
   mkdtempSync,
   readFileSync,
   readdirSync,
+  unlinkSync,
   utimesSync,
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   ATTEMPT_TIMEOUT_MS,
   fetchMissing,
   readSource,
   removeStaleTmp,
+  RETRY_WAITS,
   STALE_TMP_MS,
   type Fetch,
   type Source,
 } from "../scripts/lib/sources.ts";
+
+// node:fs as sources.ts sees it, unchanged unless a test sets a hook. A hook
+// runs just before the real call, so a test can make a file vanish between
+// removeStaleTmp's listing and its stat, or between its stat and its unlink,
+// as another cleaner or a writer's rename would.
+const fsHooks = vi.hoisted(
+  () =>
+    ({}) as { stat?: (path: unknown) => void; unlink?: (path: unknown) => void }
+);
+vi.mock("node:fs", async (importOriginal) => {
+  const fs = await importOriginal<typeof import("node:fs")>();
+  return {
+    ...fs,
+    statSync: ((path: Parameters<typeof fs.statSync>[0], ...rest: []) => {
+      fsHooks.stat?.(path);
+      return fs.statSync(path, ...rest);
+    }) as typeof fs.statSync,
+    unlinkSync: (path: Parameters<typeof fs.unlinkSync>[0]) => {
+      fsHooks.unlink?.(path);
+      return fs.unlinkSync(path);
+    },
+    rmSync: (...args: Parameters<typeof fs.rmSync>) => {
+      fsHooks.unlink?.(args[0]);
+      return fs.rmSync(...args);
+    },
+  };
+});
+afterEach(() => {
+  delete fsHooks.stat;
+  delete fsHooks.unlink;
+});
 
 // scripts/lib/sources.ts, without the network: each case is decided by the
 // cache, before any request, or by a scripted fetch.
@@ -337,10 +370,20 @@ describe("fetchMissing removes stale .tmp files (#134)", () => {
     expect(readFileSync(pinned)).toEqual(bytes);
   });
 
-  it("keeps one as old as a whole download attempt may run", async () => {
-    expect(STALE_TMP_MS).toBeGreaterThan(ATTEMPT_TIMEOUT_MS);
+  // Re-derived here from the retry constants: the longest one download may
+  // take is every attempt timing out, plus every wait between them.
+  const wholeDownloadMs =
+    (RETRY_WAITS.length + 1) * ATTEMPT_TIMEOUT_MS +
+    RETRY_WAITS.reduce((a, b) => a + b, 0);
+
+  it("waits a whole download, with every retry, plus a 30 s margin", () => {
+    expect(wholeDownloadMs).toBe(133_000);
+    expect(STALE_TMP_MS - wholeDownloadMs).toBe(30_000);
+  });
+
+  it("keeps one as old as a whole download may run", async () => {
     const cache = cacheDir();
-    const slow = plant(cache, tmpName(3), ATTEMPT_TIMEOUT_MS);
+    const slow = plant(cache, tmpName(3), wholeDownloadMs);
     const stale = plant(cache, tmpName(4), STALE_TMP_MS + 1000);
     const { f } = scripted();
     expect(await fetchMissing([], { cache, fetch: f })).toBe(0);
@@ -354,5 +397,37 @@ describe("fetchMissing removes stale .tmp files (#134)", () => {
     expect(removeStaleTmp(cache)).toEqual([tmpName(5)]);
     expect(readdirSync(cache)).toEqual([]);
     expect(removeStaleTmp(new URL("missing/", cache))).toEqual([]);
+  });
+
+  it("throws a listing error other than a missing cache", () => {
+    const cache = cacheDir();
+    writeFileSync(new URL("file", cache), "");
+    expect(() => removeStaleTmp(new URL("file/", cache))).toThrow(
+      expect.objectContaining({ code: "ENOTDIR" })
+    );
+  });
+
+  it("skips a name that vanishes between the listing and its stat", () => {
+    const cache = cacheDir();
+    const gone = plant(cache, tmpName(6), STALE_TMP_MS + 1000);
+    plant(cache, tmpName(7), STALE_TMP_MS + 1000);
+    fsHooks.stat = (path) => {
+      if (String(path) === String(gone)) unlinkSync(gone);
+    };
+    expect(removeStaleTmp(cache)).toEqual([tmpName(7)]);
+    expect(readdirSync(cache)).toEqual([]);
+  });
+
+  it("does not report a file another cleaner unlinked first", () => {
+    const cache = cacheDir();
+    const raced = plant(cache, tmpName(8), STALE_TMP_MS + 1000);
+    plant(cache, tmpName(9), STALE_TMP_MS + 1000);
+    fsHooks.unlink = (path) => {
+      if (String(path) !== String(raced)) return;
+      delete fsHooks.unlink; // this test's own unlink goes through the mock too
+      unlinkSync(raced);
+    };
+    expect(removeStaleTmp(cache)).toEqual([tmpName(9)]);
+    expect(readdirSync(cache)).toEqual([]);
   });
 });
