@@ -9,22 +9,14 @@
 // Each file is {"schema": "bp.review-export", "v": 2,
 // "reviewer": "reviewer:<handle>", "records": [...]}, one reviewer's answer
 // documents unchanged (docs/schema.md, "Review exports").
-import {
-  existsSync,
-  readdirSync,
-  readFileSync,
-  renameSync,
-  statSync,
-  writeFileSync,
-} from "node:fs";
-import { fileURLToPath } from "node:url";
-import { format, resolveConfig } from "prettier";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import {
   applyReviews,
   printable,
   summary,
   type DraftFile,
 } from "../lib/review.ts";
+import { leftovers, recovery, writeBatch } from "../lib/review-write.ts";
 
 const args = process.argv.slice(2);
 const dry = args.includes("--dry-run");
@@ -36,6 +28,17 @@ if (paths.length === 0 || unknown.length) {
   );
   process.exit(2);
 }
+
+const drafts = new URL("../../data/drafts/", import.meta.url);
+// A staged file left by an interrupted run means data/drafts/ may hold part
+// of a batch (#56). Nothing is read or written, a dry run included, until
+// it is cleared.
+const staged = leftovers(drafts);
+if (staged.length) {
+  console.error(`Refused; nothing written.\n${recovery(staged)}`);
+  process.exit(1);
+}
+
 const exports: unknown[] = [];
 for (const path of paths) {
   try {
@@ -47,7 +50,6 @@ for (const path of paths) {
   }
 }
 
-const drafts = new URL("../../data/drafts/", import.meta.url);
 const files = new Map<string, DraftFile>();
 for (const lang of existsSync(drafts) ? readdirSync(drafts) : []) {
   if (!statSync(new URL(lang, drafts)).isDirectory()) continue;
@@ -84,29 +86,16 @@ if (problems.length) {
   for (const p of problems) console.error(`- ${p}`);
   process.exit(1);
 }
-// Every file is written beside its target first and renamed only when all
-// are written. The renames still run one file at a time (#56).
+// All files are staged, then renamed into place (scripts/lib/review-write.ts).
 if (!dry) {
-  const staged: [URL, URL][] = [];
-  for (const [id, value] of changed) {
-    const target = new URL(`${id}.json`, drafts);
-    const temp = new URL(`${id}.json.review-tmp`, drafts);
-    // Indented before prettier, which keeps an object expanded when its
-    // source is: the diff shows the reviews, not a reflowed file.
-    const options = (await resolveConfig(fileURLToPath(target))) ?? {};
-    writeFileSync(
-      temp,
-      await format(JSON.stringify(value, null, 2), {
-        ...options,
-        parser: "json",
-      }),
-      // A leftover temp file (an interrupted run, or a link) is refused,
-      // not followed or overwritten.
-      { flag: "wx" }
-    );
-    staged.push([temp, target]);
+  try {
+    await writeBatch(drafts, changed);
+  } catch (err) {
+    // An fs error names a path; each line shown printable.
+    const lines = `Write failed: ${(err as Error).message}`.split("\n");
+    console.error(lines.map(printable).join("\n"));
+    process.exit(1);
   }
-  for (const [temp, target] of staged) renameSync(temp, target);
 }
 console.log(
   (dry ? "Dry run; nothing written.\n\n" : "") +

@@ -75,5 +75,9 @@ and their CI step.
   the title to later reviews. A clock running behind can save a new answer
   with a time before one already applied; it is passed over and listed in
   the output. Untested in use.
-- **Multi-file atomicity** (#56): the renames still run one file at a time.
-  Open, out of scope here.
+- **Multi-file atomicity** (#56): the renames still run one file at a time,
+  so a run stopped between two of them leaves part of a batch applied. It
+  also leaves a staged `*.review-tmp` file, and `apply.ts` then refuses to
+  start, a dry run included, until it is cleared; the refusal says how to
+  recover (delete the staged files and run the same batch again, or discard
+  the batch's changes). Fixed in `scripts/lib/review-write.ts`.
