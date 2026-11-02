@@ -94,15 +94,16 @@ named `cuv`.
    names an FIA `reference` is skipped, whatever CUV writes (FIA is binding,
    ADR 0004). No other term is touched.
 3. **The rule.** For each of the term's TWL verses (its `refs`), take that
-   verse's text from the CUV file: the plain verse body only. That is the
-   words after `\v N` up to the next `\v` or `\c`, with notes discarded
-   whole (footnotes `\f`…`\f*`, cross-references `\x`…`\x*`, and their
-   `\fr`, `\ft` and other parts: Titus has 5 footnotes, at 2:13, 3:3, 3:7,
-   3:8 and 3:14), word attributes discarded (`\w word|attrs\w*` keeps
-   `word`), every other USFM marker removed with its text kept (`\pn`,
-   `\pn*`, `\add`, `\add*` and any other `\name` or `\name*`), section
-   headings (`\s1`, `\s5` and the like) and other lines outside verses
-   ignored, and whitespace (U+3000 included) removed. Renderings are the
+   verse's text from the CUV file: the plain verse body only. The verse runs
+   from `\v N` to the next `\v`, the next `\c` or the end of the file (so
+   the book's last verse, Titus 3:15, is found). Within it, note-like and
+   embedded-content markers are discarded whole with their text (footnotes
+   `\f`…`\f*`, endnotes `\fe`…`\fe*`, cross-references `\x`…`\x*`,
+   figures `\fig`…`\fig*`, with all their parts; Titus has 5 footnotes,
+   at 2:13, 3:3, 3:7, 3:8 and 3:14), and only character styles keep their
+   inner text (`\pn`, `\add`, `\w`, whose `|attrs` are dropped). Section
+   headings (`\s1`, `\s5` and the like) and other lines outside verses are
+   ignored, and whitespace (U+3000 included) is removed. Renderings are the
    headword split on 、, as `usesReference` splits them. Both sides map
    U+2022 (•) to U+00B7 (·). The term passes when, at every verse, at least
    one rendering is a substring of that verse's text. Otherwise its gates
@@ -111,7 +112,9 @@ named `cuv`.
    substring hit can sit inside a longer name. The check catches a spelling
    CUV does not use at all; the reader still reads every term.
 4. **A missing verse is an error,** not a pass: a TWL verse the CUV file
-   does not have stops the build (and the run) naming the term and verse.
+   does not have stops the build (and the run) naming the term and verse. So
+   is a checked term with no verses at all (empty `refs`), which cannot pass
+   by having nothing to check.
 5. **Same gate everywhere.** `cuv` is computed by the drafting run and
    written into new records, recomputed by `buildDraftGlossary`, which
    refuses a record whose recorded gates differ (as it does today), and
@@ -134,7 +137,8 @@ named `cuv`.
 8. **Tests that fail on `main`:** Crete flagged and the other four Titus
    names passing, on the pinned inputs; a term with a `reference` skipped
    even when CUV differs; marker stripping, headings ignored, a name that
-   occurs only in a footnote or cross-reference flagged, and `·`/`•`;
+   occurs only in a footnote or cross-reference flagged, the book's last
+   verse found, and `·`/`•`; a term with empty `refs` refused;
    a name found at one of two verses flagged; a missing verse refused; a
    missing `zh-cuv-<book>` pin refused; a `review.text` that fails `cuv`
    refused; a record whose Crete term lacks the gate refused.
