@@ -94,9 +94,15 @@ jobs:
       # from the cache several at a time, and the tests then read the same
       # files from the cache instead of one by one from Door43.
       - run: npm run build
+      # site/index.html is generated too, from site/index.src.html and the
+      # committed site/snapshot.json and site/books.json, offline. The
+      # snapshot itself is read from GitHub's API (scripts/site/snapshot.mjs)
+      # and changes by the hour, so it is an input here, not rebuilt.
+      - name: Build the project site
+        run: node scripts/site/build.mjs
       - name: Generated files match a fresh build
         run: |
-          git status --porcelain --untracked-files=all -- data dist
-          test -z "$(git status --porcelain --untracked-files=all -- data dist)"
+          git status --porcelain --untracked-files=all -- data dist site
+          test -z "$(git status --porcelain --untracked-files=all -- data dist site)"
 
       - run: npm run verify
