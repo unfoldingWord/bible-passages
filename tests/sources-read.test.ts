@@ -4,6 +4,7 @@ import {
   mkdtempSync,
   readFileSync,
   readdirSync,
+  utimesSync,
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
@@ -11,8 +12,11 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
+  ATTEMPT_TIMEOUT_MS,
   fetchMissing,
   readSource,
+  removeStaleTmp,
+  STALE_TMP_MS,
   type Fetch,
   type Source,
 } from "../scripts/lib/sources.ts";
@@ -299,5 +303,56 @@ describe("fetchMissing", () => {
       `other-src.${sha}`,
       `test-src.${sha}`,
     ]);
+  });
+});
+
+// readSource writes a download to a unique .tmp file and renames it into
+// place. A process killed between the two leaves the .tmp behind, and CI's
+// cache would carry it into later runs (issue #134). fetchMissing removes
+// one only when it is too old to belong to a writer still running.
+describe("fetchMissing removes stale .tmp files (#134)", () => {
+  const tmpName = (n: number) =>
+    `test-src.${sha}.${1000 + n}.00000000-0000-4000-8000-00000000000${n}.tmp`;
+  const plant = (cache: URL, name: string, ageMs: number) => {
+    const file = new URL(name, cache);
+    writeFileSync(file, "partial");
+    const t = (Date.now() - ageMs) / 1000;
+    utimesSync(file, t, t);
+    return file;
+  };
+
+  it("removes one left by a killed writer and keeps a live writer's", async () => {
+    const cache = cacheDir();
+    const pinned = new URL(`test-src.${sha}`, cache);
+    writeFileSync(pinned, bytes);
+    utimesSync(pinned, 0, 0);
+    const killed = plant(cache, tmpName(1), 3600_000);
+    const live = plant(cache, tmpName(2), 0);
+    const { f, seen } = scripted();
+    expect(await fetchMissing([pin()], { cache, fetch: f })).toBe(0);
+    expect(seen.calls).toBe(0);
+    expect(existsSync(killed)).toBe(false);
+    expect(existsSync(live)).toBe(true);
+    // An old pinned file, as a CI cache restore leaves it, is not touched.
+    expect(readFileSync(pinned)).toEqual(bytes);
+  });
+
+  it("keeps one as old as a whole download attempt may run", async () => {
+    expect(STALE_TMP_MS).toBeGreaterThan(ATTEMPT_TIMEOUT_MS);
+    const cache = cacheDir();
+    const slow = plant(cache, tmpName(3), ATTEMPT_TIMEOUT_MS);
+    const stale = plant(cache, tmpName(4), STALE_TMP_MS + 1000);
+    const { f } = scripted();
+    expect(await fetchMissing([], { cache, fetch: f })).toBe(0);
+    expect(existsSync(slow)).toBe(true);
+    expect(existsSync(stale)).toBe(false);
+  });
+
+  it("returns what it removed, and ignores a missing cache", () => {
+    const cache = cacheDir();
+    plant(cache, tmpName(5), STALE_TMP_MS + 1000);
+    expect(removeStaleTmp(cache)).toEqual([tmpName(5)]);
+    expect(readdirSync(cache)).toEqual([]);
+    expect(removeStaleTmp(new URL("missing/", cache))).toEqual([]);
   });
 });
