@@ -290,10 +290,12 @@ For zh-Hans, which has no Translation Words, the file is built from
 `data/glossary-drafts/zh-Hans/<BOOK>.json` (below) instead: each term also
 carries `source` (`ai:<model>`, or the reviewer's `reviewer:<…>` once a
 person has changed its headword), `status`, the check and, once a person has
-reviewed it, the term's `review` (below); the file names both models under
-`models`, and the file's own `review` lists the terms that are `unreviewed`
-(the checker disagreed or a gate failed). Title translation uses a term with
-a `status` only once it is `human-reviewed` or `approved`.
+reviewed it, the term's `review` (below); a term whose headword a person
+changed also carries `drafted` (the model's headword) and no `gates`. The
+file names both models under `models`, and the file's own `review` lists the
+terms that are `unreviewed` (the checker disagreed or a gate failed). Title
+translation uses a term with a `status` only once it is `human-reviewed` or
+`approved`.
 
 ## `data/glossary-drafts/<lang>/<BOOK>.json`
 
@@ -316,6 +318,12 @@ commit, not a rebuild.
   from), `headword`, `source`, `status`, and where they apply `reference`
   (the reference term it follows), `note` (for the reader), `gates` and
   `check` (`by`, `verdict`, and for a disagreement `why` and `suggestion`).
+  The gates are `script` (not mostly in the language's script),
+  `latin-letters`, `line-break`, `format` (a format character, `\p{Cf}`,
+  such as a zero-width space or a bidi control: invisible, and left in place
+  by trimming and NFC; right for zh-Hans, to be narrowed before a language
+  whose words need a joiner, such as Persian's ZWNJ) and `reference` (does
+  not use the rendering of the reference term it names).
   A term is `ai-checked` only when the checker agreed and every gate passed.
 
 A reader's review is recorded in this same file, by hand, as the maintainer
@@ -360,9 +368,11 @@ carries its own `status`; a term's status is the term's `status`, raised to
 `human-reviewed` (decided on #53), so `review` has none. A changed headword
 must differ from the drafted one (the same headword under the reviewer's name
 would relabel AI output) and pass every gate the drafted one was put through
-(`script`, `latin-letters`, `line-break`, `reference`); a title review's
-`text` is held to non-empty and trimmed by tests/drafts.test.ts, and a term's
-`text` is also held to NFC, as a drafted headword is. The built term carries
+(`script`, `latin-letters`, `line-break`, `format`, `reference`), so it
+cannot differ from the drafted one only by an invisible character; a title
+review's `text` is held to non-empty and trimmed by tests/drafts.test.ts,
+and a term's `text` is also held to NFC, as a drafted headword is. The built
+term carries
 no `gates` once its headword is the reader's (they described the model's).
 It keeps `check`, and gains `drafted`, the model's headword: `check` does not
 record the headword it judged, and on a changed term that is `drafted`, not
