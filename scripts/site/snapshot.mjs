@@ -52,14 +52,50 @@ async function get(path) {
   return (await request(`${API}/${path}`)).json();
 }
 
-// A list read in full: every page, following the Link header's rel="next"
+// A Link header (RFC 8288, section 3) is a list of link-values: a URL in
+// angle brackets, then parameters, each value a token or a quoted string.
+const LINK_VALUE =
+  /\s*<([^>]*)>((?:\s*;\s*[^\s=;,]+(?:\s*=\s*(?:"(?:[^"\\]|\\.)*"|[^\s";,]*))?)*)\s*(?:,|$)/y;
+const PARAM =
+  /;\s*([^\s=;,]+)(?:\s*=\s*(?:"((?:[^"\\]|\\.)*)"|([^\s";,]*)))?/g;
+
+// The URL of the first link whose relation types include "next", or
+// undefined when there is none. A rel value holds relation types separated
+// by spaces, compared without case; only a link's first rel counts (RFC 8288,
+// section 3.3). A header that does not parse throws if it says "next"
+// anywhere, rather than end the list early.
+function nextLink(header, path) {
+  LINK_VALUE.lastIndex = 0;
+  while (/\S/.test(header.slice(LINK_VALUE.lastIndex))) {
+    const at = LINK_VALUE.lastIndex;
+    const m = LINK_VALUE.exec(header);
+    if (!m) {
+      if (/next/i.test(header.slice(at))) {
+        throw new Error(
+          `GET ${path}: Link names a next page it cannot read: ${header}`
+        );
+      }
+      return undefined;
+    }
+    const rel = [...m[2].matchAll(PARAM)].find(
+      (p) => p[1].toLowerCase() === "rel"
+    );
+    const value = rel ? (rel[2]?.replace(/\\(.)/g, "$1") ?? rel[3] ?? "") : "";
+    if (value.toLowerCase().split(/\s+/).includes("next")) return m[1];
+  }
+  return undefined;
+}
+
+// A list read in full: every page, following the Link header's next link
 // until there is none. A partial list would show as if it were complete
 // (on 30 Oct a one-page read showed 17 open issues where GitHub had 30).
 // Only api.github.com links are followed. The run stops, rather than return
-// a partial list, when a link is seen twice, when a Link header names a next
-// page in a shape the parser does not read, or after MAX_PAGES pages.
-// 100 pages of 100 is 10,000 items; the repo had 161 issues and pull
-// requests on 2 Nov 2026.
+// a partial list, when a link is seen twice, when a Link header that does
+// not parse mentions a next page, or after MAX_PAGES pages.
+// 100 pages of 100 is 10,000 items. The longest list, issues with pull
+// requests, held 169 items on 2 Nov 2026, measured with
+// gh api -X GET search/issues -f q='repo:unfoldingWord/bible-passages'
+// (total_count; 81 issues and 88 pull requests), so 2 pages.
 const MAX_PAGES = 100;
 
 async function getAll(path) {
@@ -77,10 +113,7 @@ async function getAll(path) {
     if (!Array.isArray(page)) throw new Error(`GET ${url}: not a list`);
     all.push(...page);
     const link = res.headers.get("link") ?? "";
-    url = /<([^>]+)>;\s*rel="next"/.exec(link)?.[1];
-    if (!url && /\brel\s*=\s*"?[^",;]*\bnext\b/i.test(link)) {
-      throw new Error(`GET ${path}: Link names a next page it cannot read: ${link}`);
-    }
+    url = nextLink(link, path);
     if (url && !url.startsWith(`${API}/`)) {
       throw new Error(`GET ${path}: next page outside ${API}: ${url}`);
     }

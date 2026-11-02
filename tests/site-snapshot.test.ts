@@ -29,8 +29,13 @@ const endless = API + "/repositories/1/issues?state=all&per_page=100&endless=";
 const first = {
   // A next link to another host.
   foreign: '<https://example.org/issues?page=2>; rel="next"',
-  // A next relation the parser does not read (unquoted).
+  // RFC 8288: a rel value may be a bare token, holds space-separated
+  // relation types, and relation types compare without case.
   unquoted: '<' + next + '>; rel=next',
+  prevnext: '<' + next + '>; rel="prev next"',
+  capital: '<' + next + '>; rel="Next"',
+  // A next relation whose URL the parser cannot read (no angle brackets).
+  unreadable: next + '; rel="next"',
   // A next link on api.github.com that answers with a redirect.
   redirect: '<' + redirect + '>; rel="next"',
   // A next link to a new page, every time, without end.
@@ -42,9 +47,12 @@ const routes = {
     open_issues_count: 0 }],
   [API + "/" + REPO + "/pulls?state=all&per_page=100"]: [[]],
   [API + "/" + REPO + "/issues?state=all&per_page=100"]: [page1, first],
-  // LOOP=1 makes the last page point back at the first.
-  [next]: [page2, '<' + API + "/" + REPO + '/issues?state=all&per_page=100>; ' +
-    (process.env.LOOP ? 'rel="next"' : 'rel="first"')],
+  // LOOP=1 makes the last page point back at the first. PAGING=urlrel puts
+  // "rel=next" inside the last page's URL, where it is not a relation.
+  [next]: [page2, process.env.PAGING === "urlrel"
+    ? '<' + API + '/repositories/1/issues?page=1&rel=next>; rel="first"'
+    : '<' + API + "/" + REPO + '/issues?state=all&per_page=100>; ' +
+      (process.env.LOOP ? 'rel="next"' : 'rel="first"')],
   [API + "/" + REPO + "/milestones?state=all&per_page=100"]: [[]],
   [API + "/" + REPO + "/actions/runs?per_page=20"]: [{ workflow_runs: [] }],
   [API + "/" + REPO + "/commits?per_page=15"]: [[]],
@@ -133,10 +141,26 @@ describe("site snapshot paging", () => {
     );
   });
 
+  // Each Link header shape below is a next page, read as such.
+  it.each([
+    ["unquoted", "rel=next"],
+    ["prevnext", 'rel="prev next"'],
+    ["capital", 'rel="Next"'],
+  ])("follows a next link written %s (%s)", (paging) => {
+    const numbers = run({ PAGING: paging }).issues.map((i) => i.number);
+    expect(numbers).toHaveLength(101);
+    expect(numbers).toContain(102);
+  });
+
   it("stops at a next relation it cannot read", () => {
-    expect(() => run({ PAGING: "unquoted" })).toThrow(
+    expect(() => run({ PAGING: "unreadable" })).toThrow(
       /Link names a next page it cannot read/
     );
+  });
+
+  it("ends at a last page whose URL contains rel=next", () => {
+    const numbers = run({ PAGING: "urlrel" }).issues.map((i) => i.number);
+    expect(numbers).toHaveLength(101);
   });
 
   it("refuses a redirect rather than follow it", () => {
