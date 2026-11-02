@@ -430,4 +430,47 @@ describe("fetchMissing removes stale .tmp files (#134)", () => {
     expect(removeStaleTmp(cache)).toEqual([tmpName(9)]);
     expect(readdirSync(cache)).toEqual([]);
   });
+
+  // Only a vanished name (ENOENT) is skipped. Any other error from the stat
+  // or the unlink, such as a permission error, is thrown as it came, so a
+  // bare catch put back on either call fails these (issue #163).
+  const denied = (code: string, syscall: string, path: unknown) =>
+    Object.assign(new Error(`${code}: ${syscall} '${String(path)}'`), {
+      code,
+      syscall,
+    });
+  const thrownBy = (f: () => unknown) => {
+    try {
+      f();
+    } catch (e) {
+      return e;
+    }
+    throw new Error("removeStaleTmp did not throw");
+  };
+
+  it("throws a stat error other than a vanished name", () => {
+    const cache = cacheDir();
+    const locked = plant(cache, tmpName(1), STALE_TMP_MS + 1000);
+    let err: unknown;
+    fsHooks.stat = (path) => {
+      if (String(path) === String(locked))
+        throw (err = denied("EACCES", "stat", path));
+    };
+    expect(thrownBy(() => removeStaleTmp(cache))).toBe(err);
+    expect(err).toMatchObject({ code: "EACCES" });
+    expect(existsSync(locked)).toBe(true);
+  });
+
+  it("throws an unlink error other than a vanished name", () => {
+    const cache = cacheDir();
+    const locked = plant(cache, tmpName(2), STALE_TMP_MS + 1000);
+    let err: unknown;
+    fsHooks.unlink = (path) => {
+      if (String(path) === String(locked))
+        throw (err = denied("EPERM", "unlink", path));
+    };
+    expect(thrownBy(() => removeStaleTmp(cache))).toBe(err);
+    expect(err).toMatchObject({ code: "EPERM" });
+    expect(existsSync(locked)).toBe(true);
+  });
 });
