@@ -233,10 +233,11 @@ review.
   review is recorded as a later change to the record: each term they accept
   is raised to `human-reviewed` with `review` (`by`, `at`), which the build
   accepts (#53; `docs/schema.md`, `data/glossary-drafts/`).
-- Names are not checked against a pinned Chinese Bible. `zh_cuv` on Door43
-  could be pinned for that; it would have flagged 革哩底 against 克里特.
-  Its 6B, with a Bide until the edition's licence is settled:
-  [zh-names-check.md](zh-names-check.md).
+- Names are not checked against a pinned Chinese Bible yet. The maintainer
+  decided to treat `zh_cuv` as public domain and build the check
+  ([ADR 0004](../decisions/0004-cuv-names-check.md)); Titus is pinned
+  (`zh-cuv-tit`), and the check's 6B and definition of done are in
+  [zh-names-check.md](zh-names-check.md). It will flag 革哩底 against 克里特.
 - Traditional characters are not gated mechanically (no reliable offline
   test); the checker caught one in calibration.
 - Other books: one run per book, after the reader has seen Titus.

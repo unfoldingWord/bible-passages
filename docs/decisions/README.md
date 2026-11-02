@@ -9,8 +9,9 @@ A decision is recorded here once it is made, normally on
 Until then it stays in the "Open decisions" list at the end of
 [`../schema.md`](../schema.md).
 
-| #                                          | Decision                                                | Status   |
-| ------------------------------------------ | ------------------------------------------------------- | -------- |
-| [0001](0001-span-keys.md)                  | Keys name their span                                    | accepted |
-| [0002](0002-measure-translation-models.md) | Choose the translation model by measuring both on Titus | accepted |
-| [0003](0003-v0.1-scope-and-titles.md)      | v0.1 scope, sources and title rules                     | accepted |
+| #                                          | Decision                                                   | Status   |
+| ------------------------------------------ | ---------------------------------------------------------- | -------- |
+| [0001](0001-span-keys.md)                  | Keys name their span                                       | accepted |
+| [0002](0002-measure-translation-models.md) | Choose the translation model by measuring both on Titus    | accepted |
+| [0003](0003-v0.1-scope-and-titles.md)      | v0.1 scope, sources and title rules                        | accepted |
+| [0004](0004-cuv-names-check.md)            | Treat CUV as public domain; check zh-Hans names against it | accepted |
