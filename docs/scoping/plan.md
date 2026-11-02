@@ -30,6 +30,18 @@ decision 1's to settle, and release notes say what was reviewed.
 
 ## Review hours
 
-167,860 strings at an assumed 10 seconds each is about 466 hours, or about
-47 hours per language. The 10 seconds is an assumption until Titus is timed.
+165,230 strings at an assumed 10 seconds each is about 459 hours, or about
+46 hours per language _(estimated, recomputed 2026-11-02)_. The strings are
+16,523 English titles (decision 12, ADR 0003: 3,016 pericopes + 13,770
+segments − 263 single-segment pericopes, whose segment reuses the pericope
+title) × 10 languages including English, the per-language count in
+[sizing.md](sizing.md). The 16,523 uses the UFW chunk files; decision 8
+(chunk source) is still open and would change it. The 10 seconds is an
+assumption until a review is timed; no timing is recorded in the repo as of
+2026-11-02.
+
+Superseded 2026-11-02 (#148): "167,860 strings at an assumed 10 seconds each
+is about 466 hours, or about 47 hours per language." That figure counted
+16,786 titles a language, from before decision 12 (recorded 2026-10-29).
+
 Reviewer assignments per language are open (schema.md, decision 7).

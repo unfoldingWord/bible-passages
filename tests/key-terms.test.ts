@@ -295,6 +295,28 @@ describe("gateProblems and statusOf", () => {
       "human-reviewed"
     );
     expect(statusOf({ review })).toBe("human-reviewed");
+    expect(statusOf({ review: { ...review, text: "长老" } })).toBe(
+      "human-reviewed"
+    );
+  });
+
+  it("is not raised by a malformed review, which reviewProblems refuses (#129)", () => {
+    const by = "reviewer:zh-hans-reader";
+    const at = "2026-10-30";
+    const agree = { by: "ai:b", verdict: "agree" } as const;
+    const malformed: unknown[] = [
+      { by, at: "2026-02-30" },
+      { by: "reviewer:A Reader", at },
+      { by, at, headword: "长老" },
+      { by, at, text: " 长老" },
+      null,
+    ];
+    for (const review of malformed) {
+      const a = JSON.stringify(review);
+      expect(reviewProblems(review), a).not.toEqual([]);
+      expect(statusOf({ review }), a).toBe("unreviewed");
+      expect(statusOf({ check: agree, review }), a).toBe("ai-checked");
+    }
   });
 });
 
