@@ -9,6 +9,7 @@ import {
   renameSync,
   rmSync,
   statSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -58,16 +59,29 @@ export const RETRY_WAITS = [1000, 3000, 9000];
 export const ATTEMPT_TIMEOUT_MS = 30_000;
 
 /**
- * How old a `.tmp` file in the cache must be before it is taken as left by a
- * killed process and removed (issue #134). readSource creates its `.tmp`
- * only once a download is complete, writes it in one synchronous call and
- * renames it at once, so a live writer's file is milliseconds old. The
- * threshold still allows a whole attempt, in case a writer ever streams a
- * download into its `.tmp`: each write moves the mtime, and the attempt
- * timeout bounds the time between them. The 30 s margin is for a starved
- * host (load average near 60 in #111) and coarse mtimes.
+ * The longest one download with the default retries may take: every attempt
+ * times out and every wait runs, 4 × 30 s + (1 + 3 + 9) s = 133 s.
  */
-export const STALE_TMP_MS = ATTEMPT_TIMEOUT_MS + 30_000;
+const WHOLE_DOWNLOAD_MS =
+  (RETRY_WAITS.length + 1) * ATTEMPT_TIMEOUT_MS +
+  RETRY_WAITS.reduce((a, b) => a + b, 0);
+
+/**
+ * How old a `.tmp` file in the cache must be before it is taken as left by a
+ * killed process and removed (issue #134): a whole download plus a 30 s
+ * margin, 133 s + 30 s = 163 s.
+ *
+ * readSource creates its `.tmp` only once a download is complete, writes it
+ * in one synchronous call and renames it at once, so a live writer's file is
+ * milliseconds old. The threshold does not rely on that. Even a writer that
+ * made its `.tmp` when a download started, and did not write to it again
+ * across every retry, holds it no longer than one whole download. One
+ * attempt alone (30 s) is not enough: two timed-out attempts and the wait
+ * between them already take 30 + 9 + 30 s (issue #153). The margin is for a
+ * starved host (load average near 60 in #111) and coarse mtimes. A caller
+ * passing longer `waits` to readSource is not covered.
+ */
+export const STALE_TMP_MS = WHOLE_DOWNLOAD_MS + 30_000;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -172,18 +186,26 @@ export async function readSource(
   return bytes.toString("utf8");
 }
 
+/** True for the error a file system call throws when its path is gone. */
+const isMissing = (e: unknown) =>
+  e instanceof Error && (e as NodeJS.ErrnoException).code === "ENOENT";
+
 /**
  * Removes every `*.tmp` file in the cache whose mtime is more than
- * `STALE_TMP_MS` old, and returns their names. A newer one may belong to a
- * run still writing in the same cache, so it is kept.
+ * `STALE_TMP_MS` old, and returns the names this call unlinked. A newer one
+ * may belong to a run still writing in the same cache, so it is kept. A
+ * missing cache has nothing to remove; any other error listing it is thrown.
+ * A name that is gone before its stat or its unlink (another cleaner, or a
+ * writer's rename) is skipped and not reported.
  */
 export function removeStaleTmp(cache: URL): string[] {
   const now = Date.now();
   let names: string[];
   try {
     names = readdirSync(cache);
-  } catch {
-    return [];
+  } catch (e) {
+    if (isMissing(e)) return [];
+    throw e;
   }
   const removed: string[] = [];
   for (const name of names) {
@@ -192,11 +214,17 @@ export function removeStaleTmp(cache: URL): string[] {
     let stat;
     try {
       stat = statSync(file);
-    } catch {
-      continue; // renamed into place or removed since the listing
+    } catch (e) {
+      if (isMissing(e)) continue;
+      throw e;
     }
     if (!stat.isFile() || now - stat.mtimeMs <= STALE_TMP_MS) continue;
-    rmSync(file, { force: true });
+    try {
+      unlinkSync(file);
+    } catch (e) {
+      if (isMissing(e)) continue;
+      throw e;
+    }
     removed.push(name);
   }
   return removed;
