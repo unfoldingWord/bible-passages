@@ -379,7 +379,9 @@ specification:
   `--line-markers` mode prints its helper's counts for one file. For B,
   `tests/metadata-markers.test.ts` checks them in `npm test`, which stays
   Node-only; for A, the first command of the recipe below checks them and
-  stops the run on a mismatch. The
+  stops the run on a mismatch. The second command checks that A's
+  `read_usfm` returns the file's text with no CR (`--read-usfm` mode), so
+  a change to its text-mode read stops the run too (#159). The
   counts were re-run with the recipe below after the change (#119): 3,016
   `\s1`, 1,325 `\r`, 1,325 `\r` after `\s1`, 117 `\d` in both scripts,
   `compare.py` "compared 1568, diffs 0", and every value both scripts
@@ -399,6 +401,10 @@ set -euo pipefail
 # (npm test checks script B on the same file; see "How it was measured"). A mismatch stops the run.
 test "$(python3 -I docs/scoping/metadata/measure_a.py --line-markers tests/fixtures/metadata/line-markers.usfm)" \
   = '{"dMarkers": 2, "rAfterS1": 4, "rMarkers": 7, "s1Markers": 6}'
+# Script A's read_usfm on the same file: the file holds 5 CRs and the text it returns holds
+# none, because bsb_book's tokeniser needs the text-mode read. A mismatch stops the run.
+test "$(python3 -I docs/scoping/metadata/measure_a.py --read-usfm tests/fixtures/metadata/line-markers.usfm)" \
+  = '{"crInFile": 5, "crInText": 0}'
 W=$(mktemp -d)
 # clone <owner/repo> <tag> <commit> <dir>: the tag, then the named commit. If the tag has
 # moved, the commit is not in the shallow clone and the checkout fails, which stops the run.
