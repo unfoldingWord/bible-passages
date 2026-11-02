@@ -290,6 +290,14 @@ describe("gateProblems and statusOf", () => {
     }
   });
 
+  // #179: the file, group and record separators are controls, not
+  // mandatory breaks (see scripts/lib/line-breaks.ts), so they are refused
+  // as `format`.
+  it("flags U+001C..U+001E as format, not line-break", () => {
+    for (const headword of ["长\u{1C}者", "长\u{1D}者", "长\u{1E}者"])
+      expect(gateProblems({ headword }, ZH, []), headword).toEqual(["format"]);
+  });
+
   it("flags invisible characters that are not \\p{Cf}", () => {
     const g = (headword: string) => gateProblems({ headword }, ZH, []);
     // The combining grapheme joiner (Mn), a variation selector, an
@@ -332,6 +340,13 @@ describe("gateProblems and statusOf", () => {
     // Allowing ZWNJ allows nothing else.
     for (const headword of ["می\u{200B}خواهم", "می\u{200D}خواهم"])
       expect(gateProblems({ headword }, fa, []), headword).toEqual(["format"]);
+    // A supplementary-plane character is allowed by code point: allowing the
+    // ideographic variation selector U+E0100 allows it, and not U+E0101.
+    const ivs = { script: HAN, formatAllowed: "\u{E0100}" };
+    expect(gateProblems({ headword: "葛\u{E0100}" }, ivs, [])).toEqual([]);
+    expect(gateProblems({ headword: "葛\u{E0101}" }, ivs, [])).toEqual([
+      "format",
+    ]);
     // zh-Hans allows none.
     expect(gateProblems({ headword: "长\u{200C}者" }, ZH, [])).toEqual([
       "format",
@@ -1269,10 +1284,11 @@ const unallowed = (lang: { script: RegExp; formatAllowed: string }) => {
     lang.script.source,
     lang.script.flags.replace(/[gy]/g, "")
   );
+  const allow = new Set(lang.formatAllowed);
   return SCRIPT_NEEDS.filter(([, letter]) => re.test(letter)).flatMap(
     ([script, , needs]) =>
       [...needs]
-        .filter((c) => !lang.formatAllowed.includes(c))
+        .filter((c) => !allow.has(c))
         .map(
           (c) =>
             `${script} U+${c.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")}`

@@ -413,11 +413,17 @@ export function usesReference(
  */
 const FORMAT = /[\p{Cf}\p{Default_Ignorable_Code_Point}\p{Cc}]/u;
 
-/** Whether `text` has a character the `format` gate refuses for `allowed`. */
-const hasFormat = (text: string, allowed: string): boolean =>
-  [...text].some(
-    (c) => FORMAT.test(c) && !LINE_BREAK.test(c) && !allowed.includes(c)
+/**
+ * Whether `text` has a character the `format` gate refuses for `allowed`.
+ * Membership is by code point, as the scan walks: a substring test would also
+ * match one half of a supplementary-plane character in `allowed`.
+ */
+const hasFormat = (text: string, allowed: string): boolean => {
+  const allow = new Set(allowed);
+  return [...text].some(
+    (c) => FORMAT.test(c) && !LINE_BREAK.test(c) && !allow.has(c)
   );
+};
 
 /**
  * Mechanical checks on a drafted term: its headword written mostly in the
