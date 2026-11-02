@@ -34,6 +34,11 @@ const first = {
   unquoted: '<' + next + '>; rel=next',
   prevnext: '<' + next + '>; rel="prev next"',
   capital: '<' + next + '>; rel="Next"',
+  // A middle page as GitHub sends it: the next link is the second
+  // link-value, after a prev link (to a page with no route, so following
+  // prev fails the run).
+  prevfirst: '<' + API + '/repositories/1/issues?state=all&per_page=100' +
+    '&page=1>; rel="prev", <' + next + '>; rel="next"',
   // A next relation whose URL the parser cannot read (no angle brackets).
   unreadable: next + '; rel="next"',
   // A next link on api.github.com that answers with a redirect.
@@ -146,6 +151,7 @@ describe("site snapshot paging", () => {
     ["unquoted", "rel=next"],
     ["prevnext", 'rel="prev next"'],
     ["capital", 'rel="Next"'],
+    ["prevfirst", 'rel="prev", then rel="next"'],
   ])("follows a next link written %s (%s)", (paging) => {
     const numbers = run({ PAGING: paging }).issues.map((i) => i.number);
     expect(numbers).toHaveLength(101);
@@ -161,6 +167,7 @@ describe("site snapshot paging", () => {
   it("ends at a last page whose URL contains rel=next", () => {
     const numbers = run({ PAGING: "urlrel" }).issues.map((i) => i.number);
     expect(numbers).toHaveLength(101);
+    expect(numbers).toContain(102);
   });
 
   it("refuses a redirect rather than follow it", () => {
