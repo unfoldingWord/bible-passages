@@ -18,7 +18,8 @@ import {
   titleProblems,
 } from "../scripts/lib/gates.ts";
 import { LANGUAGES } from "../scripts/lib/translate.ts";
-import { hex, LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
+import { codePoint } from "../scripts/lib/format.ts";
+import { LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
 
 const fixture = <T>(name: string): T =>
   JSON.parse(
@@ -146,7 +147,7 @@ describe("title translation gates (ported from tc-mobile)", () => {
       const value = inside(p, c);
       expect(value.trim().normalize("NFC"), p.tag).toBe(value);
       expect(titleProblems(p.tag, p.en, value), p.tag).toEqual([
-        `format or control character ${hex(c)}`,
+        `format or control character ${codePoint(c)}`,
       ]);
     }
   });
@@ -172,7 +173,7 @@ describe("title translation gates (ported from tc-mobile)", () => {
     for (const p of correct.filter((p) => p.tag !== "ar" && p.tag !== "hi"))
       for (const c of [zwnj, zwj])
         expect(titleProblems(p.tag, p.en, inside(p, c)), p.tag).toEqual([
-          `format or control character ${hex(c)}`,
+          `format or control character ${codePoint(c)}`,
         ]);
   });
 

@@ -1,7 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { readdirSync, readFileSync, type Dirent } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { describe, expect, it } from "vitest";
+import { assert, describe, expect, it } from "vitest";
 import {
   linkedArticles,
   parseTwl,
@@ -1329,15 +1329,19 @@ describe("formatAllowed", () => {
   });
 
   it("allows what each translation language's script needs (#181)", () => {
-    // The translation gates read the same list (FORMAT_ALLOWED), by tag.
-    for (const [tag, script] of Object.entries(SCRIPT_BY_TAG))
+    // The translation gates read the same list (FORMAT_ALLOWED), by tag. A
+    // tag with no entry fails here rather than passing as an empty allowance.
+    for (const [tag, script] of Object.entries(SCRIPT_BY_TAG)) {
+      const formatAllowed = FORMAT_ALLOWED[tag];
+      assert(formatAllowed !== undefined, `${tag} has no FORMAT_ALLOWED entry`);
       expect(
         unallowed({
           script: new RegExp(`\\p{Script=${script}}`, "u"),
-          formatAllowed: FORMAT_ALLOWED[tag] ?? "",
+          formatAllowed,
         }),
         tag
       ).toEqual([]);
+    }
   });
 
   it("allows only characters the format gate would refuse", () => {

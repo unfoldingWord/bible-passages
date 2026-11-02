@@ -25,7 +25,8 @@ import {
   type Answer,
   type DraftFile,
 } from "../scripts/lib/review.ts";
-import { hex, LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
+import { codePoint } from "../scripts/lib/format.ts";
+import { LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
 
 const fixture = JSON.parse(
   readFileSync(
@@ -652,7 +653,7 @@ describe("wording with a line break, control or invisible character", () => {
   it.each([
     ...LINE_BREAKS.map(([n, c]) => [n, c, "line break"] as const),
     ...REFUSED.map(
-      ([n, c]) => [n, c, `format or control character ${hex(c)}`] as const
+      ([n, c]) => [n, c, `format or control character ${codePoint(c)}`] as const
     ),
   ])("gives %s one message", (_name, c, message) => {
     expect(

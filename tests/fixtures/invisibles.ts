@@ -38,7 +38,3 @@ export const LINE_BREAKS: readonly (readonly [string, string])[] = [
   ["LINE SEPARATOR", "\u{2028}"],
   ["PARAGRAPH SEPARATOR", "\u{2029}"],
 ];
-
-/** A code point as a gate message names it. */
-export const hex = (c: string): string =>
-  `U+${c.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")}`;
