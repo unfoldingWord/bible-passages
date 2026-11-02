@@ -3,6 +3,7 @@
 
 Usage: python3 -I measure_a.py <src-dir> <bsb-dir> <structure-dir> > a.json
        python3 -I measure_a.py --line-markers <file.usfm>   (the marker-line counts of one file)
+       python3 -I measure_a.py --read-usfm <file.usfm>      (CR counts in the file and in read_usfm)
   <src-dir>        holds en_tn, en_tq, en_ta (v91 clones) and ta_<repo> clones
   <bsb-dir>        <BOOK>.usfm, the pinned BSB files (sha256 checked against sources.json)
   <structure-dir>  data/structure/ of this repo
@@ -53,6 +54,17 @@ def read_usfm(path):
 # JSON and stop. The recipe in metadata.md runs it on a synthetic file of edge cases.
 if sys.argv[1:2] == ["--line-markers"]:
     json.dump(line_markers(read_usfm(sys.argv[2])), sys.stdout, sort_keys=True)
+    sys.exit(0)
+
+# python3 -I measure_a.py --read-usfm <file.usfm>: print the number of CR characters in the
+# file's bytes and in read_usfm()'s text as JSON and stop. The recipe in metadata.md runs it
+# on the synthetic file, which holds CRs, and expects none in the text: bsb_book's tokeniser
+# needs read_usfm to keep its text-mode read (see its docstring).
+if sys.argv[1:2] == ["--read-usfm"]:
+    with open(sys.argv[2], "rb") as f:
+        cr_in_file = f.read().count(b"\r")
+    json.dump(dict(crInFile=cr_in_file, crInText=read_usfm(sys.argv[2]).count("\r")),
+              sys.stdout, sort_keys=True)
     sys.exit(0)
 
 SRC, BSB, STRUCT = sys.argv[1:4]
