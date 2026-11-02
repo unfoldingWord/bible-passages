@@ -11,8 +11,10 @@ pinned, because no build reads these files yet.
 Everything below was measured on 2026-10-29 at the commits named, unless it
 is labelled **estimated**, and the counts were re-run on 2026-10-30 (#84).
 The measures both scripts compute (see "How it was measured") were produced
-by two scripts written separately, and agree on every one. A few counts come
-from script A alone or from one-off commands; that section lists them.
+by two scripts, and agree on every one. The scripts were written separately,
+except for the marker-line and used-figure counters, which one author later
+added to both; that section names them. A few counts come from script A alone
+or from one-off commands; that section lists them too.
 
 ## The answer, in plain words
 
@@ -266,7 +268,7 @@ meant.
 | Break  | observed | (1) `figs-` is not "figure of speech": 33,296 of 61,535 `figs-` rows are grammar. (2) 7 books have no released notes (3,213 segments). (3) No figure names for Portuguese, Swahili or Chinese; 3 missing in Indonesian, 3 still English in Spanish. (4) 113 Psalms rows on `c:front`. All measured; commands below. |
 | Beget  | skipped  | No owner yet. To ask alongside #57: an `en_tn` release with the 7 books.                                                                                                                                                                                                                                            |
 | Bide   | waiting  | The 7 books. Tripwire: go/no-go 2 (13 Nov) in [plan.md](plan.md). If no release has them by then, they ship without figures, listed in the release notes. The other 59 books do not wait.                                                                                                                           |
-| Build  | not-yet  | A per-book metadata file built from pinned `en_tn` (59 files) and `en_ta` titles, traced to Breaks 1, 2 and 4; 66 figure names AI-drafted, checked by a second model and reviewed, traced to Break 3.                                                                                                               |
+| Build  | not-yet  | A per-book metadata file built from pinned `en_tn` (59 files) and `en_ta` titles, traced to Breaks 1, 2 and 4; the 7 books without notes get an explicit empty figure set, not a missing file (#174); 66 figure names AI-drafted, checked by a second model and reviewed, traced to Break 3.                        |
 
 Reversibility: forward = low; backward = medium once released. Figure ids are
 Translation Academy's, so a later release can add or drop a figure without
@@ -351,8 +353,9 @@ map is the list of measures both compute.
   segment table, the BSB verse set against `ufw.json`, and the catalog
   results.
 
-The `\r`-after-`\s1`, `\s1` and per-language "used figures" counters were
-added to both scripts later (#84) by one author. For those counters the two
+The `\s1`, `\r`-after-`\s1` and per-language "used figures" counters were
+added to both scripts later (#84), and the `\r` and `\d` counters were
+rewritten in both to one rule (#119), by one author. For those counters the two
 scripts are two implementations, not two independent readings of a
 specification:
 
