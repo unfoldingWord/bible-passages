@@ -96,6 +96,17 @@ const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
 
 /**
+ * Characters that break a line or separate words: CR, LF, tab, VT, FF, NEL,
+ * U+2028 and U+2029. One list, as a character-class body, for both places
+ * that act on them: a note turns them into a space (`plainWhy`), and wording
+ * refuses them (`wordingProblems`). A new separator is added here only.
+ */
+const BREAKS = "\\r\\n\\t\\v\\f\\u{85}\\u{2028}\\u{2029}";
+const BREAK_RUNS = new RegExp(`[${BREAKS}]+`, "gu");
+/** Any control character or line break, in wording. */
+const CONTROL_OR_BREAK = new RegExp(`[\\p{Cc}${BREAKS}]`, "u");
+
+/**
  * Text as a refusal shows it: control, format, surrogate, private-use,
  * unassigned and line or paragraph separator characters written as
  * `\u{XXXX}`, so none can reorder, recolour or break the line the maintainer
@@ -142,7 +153,7 @@ export function exportProblems(e: unknown): string[] {
  */
 const plainWhy = (why: string) =>
   why
-    .replace(/[\r\n\t\v\f\u{85}\u{2028}\u{2029}]+/gu, " ")
+    .replace(BREAK_RUNS, " ")
     .replace(/[\p{Cc}\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/gu, "")
     .trim();
 
@@ -195,9 +206,9 @@ export function wordingProblems(
 ): string[] {
   const p = leakProblems(value);
   if (BIDI.test(value)) p.push("bidi control character");
-  // Line breaks and tabs have their own gate; any other control character,
-  // and U+2028 and U+2029, which break a line, are refused like bidi marks.
-  if (/[\p{Cc}\u{2028}\u{2029}]/u.test(value.replace(/[\r\n\t]/g, "")))
+  // CR, LF and tab have the leak gate's own message ("line break or tab");
+  // any other control character or line break is refused like bidi marks.
+  if (CONTROL_OR_BREAK.test(value.replace(/[\r\n\t]/g, "")))
     p.push("control or separator character");
   if (lang === "en") {
     for (const q of gateProblems(value)) if (!p.includes(q)) p.push(q);

@@ -2,9 +2,11 @@ import { spawnSync } from "node:child_process";
 import {
   copyFileSync,
   cpSync,
+  existsSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
+  rmSync,
   symlinkSync,
   writeFileSync,
 } from "node:fs";
@@ -598,11 +600,18 @@ describe("refusal messages", () => {
     expect(key.problems).toEqual([
       'reviewer:reader-7 record 0 (en~"TIT.1.4-4\\u{202E}"): key',
     ]);
-    // The translation gates name a stray run of the wording; it is escaped.
-    printable(
-      apply(files(), envelope([change("بولس \u{202E}abc", { lang: "ar" })]))
-        .problems
+    // The translation gates name a stray run of the wording. A run is letters
+    // only (\p{L}), so today no gate output carries a character printable()
+    // escapes; the exact message pins what the maintainer reads.
+    const stray = apply(
+      files(),
+      envelope([
+        change("\u{628}\u{648}\u{644}\u{633} \u{202E}abc", { lang: "ar" }),
+      ])
     );
+    expect(stray.problems).toEqual([
+      'reviewer:reader-7 ar/TIT TIT.1.4-4: bidi control character, stray "abc" outside Arabic',
+    ]);
   });
 });
 
@@ -639,6 +648,13 @@ describe("apply.ts on the command line", () => {
   ).titles["TIT.P.1.1-4"]!.text;
   const run = (records: Answer[]) => {
     const dir = mkdtempSync(join(tmpdir(), "bp-review-"));
+    try {
+      return runIn(dir, records);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  };
+  const runIn = (dir: string, records: Answer[]) => {
     cpSync(new URL("scripts/", repo), join(dir, "scripts"), {
       recursive: true,
     });
@@ -665,10 +681,10 @@ describe("apply.ts on the command line", () => {
     const r = spawnSync(
       process.execPath,
       [join(dir, "scripts/review/apply.ts"), exported, "--dry-run"],
-      { encoding: "utf8" }
+      { cwd: dir, encoding: "utf8" }
     );
     const after = readFileSync(join(dir, "data/drafts/ar/TIT.json"), "utf8");
-    return { ...r, untouched: after === drafts };
+    return { ...r, dir, untouched: after === drafts };
   };
   const pericope = (text: string) =>
     change(text, { lang: "ar", key: "TIT.P.1.1-4" });
@@ -689,5 +705,8 @@ describe("apply.ts on the command line", () => {
     expect(leak.stderr).toMatch(/equals the English|outside Arabic/);
     expect(leak.stderr).not.toMatch(/no English title/);
     expect(leak.untouched).toBe(true);
+    // Each run's temporary copy is removed once it is done.
+    expect(existsSync(ok.dir)).toBe(false);
+    expect(existsSync(leak.dir)).toBe(false);
   }, 30_000);
 });
