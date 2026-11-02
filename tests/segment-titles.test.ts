@@ -15,6 +15,7 @@ import {
   type SegmentInput,
 } from "../scripts/lib/segment-titles.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
+import { REFUSED } from "./fixtures/invisibles.ts";
 
 const read = (path: string) =>
   readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -188,6 +189,18 @@ describe("gateProblems", () => {
     const title = `Paul${c}prays`;
     expect(title.trim().normalize("NFC")).toBe(title);
     expect(gateProblems(title)).toEqual(["line-break"]);
+  });
+
+  // #181: no other control or invisible format character either; English
+  // allows none (FORMAT_ALLOWED.en in scripts/lib/format.ts).
+  it.each([
+    ...REFUSED,
+    ["ZWNJ", "\u{200C}"] as const,
+    ["ZWJ", "\u{200D}"] as const,
+  ])("flags %s as format", (_name, c) => {
+    const title = `Paul${c}prays`;
+    expect(title.trim().normalize("NFC")).toBe(title);
+    expect(gateProblems(title)).toEqual(["format"]);
   });
 });
 

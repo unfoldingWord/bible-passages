@@ -11,12 +11,14 @@ import {
   LENGTH_RATIO_MAX,
   SCRIPT_BY_TAG,
   englishLeak,
+  formatProblems,
   leakProblems,
   lengthProblems,
   scriptProblems,
   titleProblems,
 } from "../scripts/lib/gates.ts";
 import { LANGUAGES } from "../scripts/lib/translate.ts";
+import { hex, LINE_BREAKS, REFUSED } from "./fixtures/invisibles.ts";
 
 const fixture = <T>(name: string): T =>
   JSON.parse(
@@ -118,6 +120,72 @@ describe("title translation gates (ported from tc-mobile)", () => {
   it("(d) passes plain text, typographic apostrophes and punctuation", () => {
     expect(leakProblems("L’héritage de la grâce, selon Paul")).toEqual([]);
     expect(leakProblems("保罗问候提多，他在信仰上的真儿子")).toEqual([]);
+  });
+
+  // #181: the leak gate refused only CR, LF and tab, so an AI translation
+  // with any other line break, control or invisible format character passed.
+  // Each character goes inside a correct title, where trim() cannot hide it.
+  const inside = (p: Pair, c: string) => {
+    const at = [...p.value].findIndex((x) => /\s/u.test(x));
+    const chars = [...p.value];
+    // Chinese has no spaces: put it after the second character.
+    const i = at > 0 ? at : 2;
+    return [...chars.slice(0, i), c, ...chars.slice(i)].join("");
+  };
+
+  it.each(LINE_BREAKS)("(d) refuses %s as a line break", (_name, c) => {
+    for (const p of correct) {
+      const value = inside(p, c);
+      expect(value.trim().normalize("NFC"), p.tag).toBe(value);
+      expect(titleProblems(p.tag, p.en, value), p.tag).toEqual(["line break"]);
+    }
+  });
+
+  it.each(REFUSED)("(g) refuses %s in every v0.1 language", (_name, c) => {
+    for (const p of correct) {
+      const value = inside(p, c);
+      expect(value.trim().normalize("NFC"), p.tag).toBe(value);
+      expect(titleProblems(p.tag, p.en, value), p.tag).toEqual([
+        `format or control character ${hex(c)}`,
+      ]);
+    }
+  });
+
+  it("(g) allows the joiners Hindi and Arabic use, and only there", () => {
+    const zwnj = "\u{200C}";
+    const zwj = "\u{200D}";
+    // परमेश्वर (God) as Door43's Hindi tW writes it, with ZWJ after the
+    // virama: data/glossaries/hi/1CO.json, kt/god.
+    const god = "परमेश्\u{200D}वर";
+    expect(
+      titleProblems("hi", "The grace of God", `${god} का अनुग्रह`)
+    ).toEqual([]);
+    expect(
+      titleProblems("hi", "The grace of God", `परमेश्${zwnj}वर का अनुग्रह`)
+    ).toEqual([]);
+    expect(
+      titleProblems("ar", "Paul greets Titus", `بولس يُحيّي${zwnj} تيطس`)
+    ).toEqual([]);
+    expect(
+      titleProblems("ar", "Paul greets Titus", `بولس يُحيّي${zwj} تيطس`)
+    ).toEqual(["format or control character U+200D"]);
+    for (const p of correct.filter((p) => p.tag !== "ar" && p.tag !== "hi"))
+      for (const c of [zwnj, zwj])
+        expect(titleProblems(p.tag, p.en, inside(p, c)), p.tag).toEqual([
+          `format or control character ${hex(c)}`,
+        ]);
+  });
+
+  it("(g) names each refused character once, by code point", () => {
+    expect(
+      formatProblems("fr", "Héritiers\u{200B}de\u{200B}la\u{202E} grâce")
+    ).toEqual([
+      "format or control character U+200B",
+      "format or control character U+202E",
+    ]);
+    expect(formatProblems("xx", "a")).toEqual([
+      "no format allowance known for xx",
+    ]);
   });
 
   it("(e)(f) start with an empty exception list", () => {

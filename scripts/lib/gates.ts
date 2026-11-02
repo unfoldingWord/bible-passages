@@ -18,15 +18,21 @@
 //   script, since a Chinese title has no spaces to split words at.
 // - (c) Length: the ratio is re-tuned for titles (LENGTH_RATIO_MAX below).
 // - (d) Leak: titles have no placeholders, so any brace is a leak; markup,
-//   line breaks and surrounding whitespace are leaks too.
+//   line breaks (every mandatory one, line-breaks.ts) and surrounding
+//   whitespace are leaks too.
 //
 // Added here, not in tc-mobile (decided by the maintainer, #41):
 //
 // - (e) No final full stop, in any script's form of it.
 // - (f) No quotation marks, in any language's form of them.
+// - (g) No control or invisible format character, other than those the
+//   language's words use (FORMAT_ALLOWED in format.ts, the list the key-term
+//   gate uses too; #181).
 //
 // A heading convention that needs one of those marks is let through by a
 // reasoned per-language entry in ALLOW_PUNCTUATION, never by editing the sets.
+import { codePoint, FORMAT_ALLOWED, formatChars } from "./format.ts";
+import { LINE_BREAK } from "./line-breaks.ts";
 
 /** The script each v0.1 language's letters must come from. */
 export const SCRIPT_BY_TAG: Readonly<Record<string, string>> = {
@@ -219,12 +225,16 @@ export function lengthProblems(en: string, value: string): string[] {
     : [];
 }
 
-/** (d) No braces, markup, line breaks, null-ish text or outer whitespace. */
+/**
+ * (d) No braces, markup, line breaks, null-ish text or outer whitespace. A
+ * line break is any mandatory one (LINE_BREAK: LF, VT, FF, CR, NEL, U+2028,
+ * U+2029); a tab, like every other control, is (g)'s.
+ */
 export function leakProblems(value: string): string[] {
   const problems: string[] = [];
   if (/[{}]/.test(value)) problems.push("stray brace");
   if (/<\/?[A-Za-z][^>]*>|\\[a-z]+\d*\*?/.test(value)) problems.push("markup");
-  if (/[\r\n\t]/.test(value)) problems.push("line break or tab");
+  if (LINE_BREAK.test(value)) problems.push("line break");
   if (value !== value.trim()) problems.push("surrounding whitespace");
   if (/\b(undefined|null|NaN)\b|\[object /i.test(value))
     problems.push("leaked null-ish text");
@@ -333,6 +343,23 @@ export function quoteProblems(
   return [...seen].map((m) => `quotation mark ${JSON.stringify(m)}`);
 }
 
+/**
+ * (g) No control or invisible format character (FORMAT in format.ts: Cf,
+ * default-ignorable, and Cc other than the line breaks, which are (d)'s),
+ * except those the language allows. Each character is named once, by code
+ * point, as nothing else in the message would show it.
+ */
+export function formatProblems(
+  tag: string,
+  value: string,
+  allowed: string | undefined = FORMAT_ALLOWED[tag]
+): string[] {
+  if (allowed === undefined) return [`no format allowance known for ${tag}`];
+  return formatChars(value, allowed).map(
+    (c) => `format or control character ${codePoint(c)}`
+  );
+}
+
 /** Every gate over one English title and its translation. */
 export function titleProblems(
   tag: string,
@@ -344,6 +371,7 @@ export function titleProblems(
     ...scriptProblems(tag, value),
     ...lengthProblems(en, value),
     ...leakProblems(value),
+    ...formatProblems(tag, value),
     ...finalStopProblems(tag, value),
     ...quoteProblems(tag, value),
   ];

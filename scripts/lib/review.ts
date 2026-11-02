@@ -7,7 +7,7 @@
 // changed, or one that is not a title review stops the whole batch.
 // Ported from PR #49; scoping in docs/scoping/review-apply.md.
 import { ALL_BOOKS } from "./books.ts";
-import { leakProblems, titleProblems } from "./gates.ts";
+import { formatProblems, leakProblems, titleProblems } from "./gates.ts";
 import { LINE_BREAKS } from "./line-breaks.ts";
 import { gateProblems } from "./segment-titles.ts";
 
@@ -91,31 +91,14 @@ const FIELDS = new Set([
 const BOOK_CODES = new Set(ALL_BOOKS.map(([code]) => code));
 const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 /**
- * Bidirectional embeddings, overrides, isolates and marks (LRM, RLM, ALM):
- * invisible, and they reorder a title or a reason in a diff.
- */
-const BIDI = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/u;
-
-/**
  * Characters that break a line or separate words: the mandatory line breaks
- * (LINE_BREAKS: LF, VT, FF, CR, NEL, U+2028 and U+2029) and tab. One list, as
- * a character-class body, for both places that act on them: a note turns
- * them into a space (`plainWhy`), and wording refuses them
- * (`wordingProblems`). A new line break is added to LINE_BREAKS only.
- *
- * Of these, `LEAK_BREAKS` (CR, LF and tab) are the ones the leak gate refuses
- * as "line break or tab" (`leakProblems` in gates.ts); `wordingProblems`
- * leaves them to that message. A separator added to the leak gate's list is
- * moved into `LEAK_BREAKS`, and the test "gives each line break one message"
- * fails until it is.
+ * (LINE_BREAKS: LF, VT, FF, CR, NEL, U+2028 and U+2029) and tab. A note turns
+ * them into a space (`plainWhy`). Wording does not act on them itself: the
+ * leak gate refuses the line breaks and the format gate the tab, with every
+ * other control and invisible character (`wordingProblems`).
  */
-const LEAK_BREAKS = "\\r\\n\\t";
 const BREAKS = `${LINE_BREAKS}\\t`;
 const BREAK_RUNS = new RegExp(`[${BREAKS}]+`, "gu");
-/** The line breaks the leak gate names itself. */
-const LEAK_BREAK = new RegExp(`[${LEAK_BREAKS}]`, "gu");
-/** Any control character or line break, in wording. */
-const CONTROL_OR_BREAK = new RegExp(`[\\p{Cc}${BREAKS}]`, "u");
 
 /**
  * Text as a refusal shows it: control, format, surrogate, private-use,
@@ -207,27 +190,30 @@ export function recordProblems(r: unknown): string[] {
 
 /**
  * Problems with a reviewer's own wording for a title: the gates an AI title
- * passes. English: the drafting gates (`gateProblems`) and the leak gate.
- * Other languages: the translation gates against the English title.
+ * passes. Every language: the leak gate and the format gate, which refuse
+ * every line break, control and invisible format character (bidi controls
+ * included) the language does not allow, one message per character.
+ * English: the drafting gates (`gateProblems`) too. Other languages: the
+ * translation gates against the English title.
  */
 export function wordingProblems(
   lang: string,
   value: string,
   english: string | undefined
 ): string[] {
-  const p = leakProblems(value);
-  if (BIDI.test(value)) p.push("bidi control character");
-  // The leak gate's line breaks have its own message ("line break or tab");
-  // any other control character or line break is refused like bidi marks.
-  if (CONTROL_OR_BREAK.test(value.replace(LEAK_BREAK, "")))
-    p.push("control or separator character");
+  const p = [...leakProblems(value), ...formatProblems(lang, value)];
+  const add = (q: string) => {
+    if (!p.includes(q)) p.push(q);
+  };
   if (lang === "en") {
-    for (const q of gateProblems(value)) if (!p.includes(q)) p.push(q);
+    // `line-break` and `format` are the two gates above under the drafting
+    // gate's names: the same characters, so one message each.
+    for (const q of gateProblems(value))
+      if (q !== "line-break" && q !== "format") add(q);
   } else if (english === undefined) {
     p.push("no English title to check it against");
   } else {
-    for (const q of titleProblems(lang, english, value))
-      if (!p.includes(q)) p.push(q);
+    for (const q of titleProblems(lang, english, value)) add(q);
   }
   return p;
 }
