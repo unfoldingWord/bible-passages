@@ -359,8 +359,9 @@ specification:
 - **`\s1`, `\r` and `\d` lines, and `\r` after `\s1`** (#110, #119): both
   scripts count all four with the same line walk (`line_markers` in A,
   `lineMarkers` in B). Lines are split at `\r\n`, `\r` or `\n` (A reads
-  the file in text mode, which has already turned each CR into `\n`; the
-  lines are the same); a line of
+  in text mode, which turns `\r\n` and a lone `\r` into `\n` before the
+  split; B's `readFileSync` keeps the CR bytes; the lines come out the
+  same); a line of
   only spaces and tabs is blank; a marker line starts with the marker
   followed by a space, a tab or the end of the line, so `\s1x`, `\r-` and
   `\d` followed by a no-break space are not marker lines. Blank lines and
