@@ -243,6 +243,24 @@ describe("gateProblems and statusOf", () => {
     expect(g("使徒\n长老")).toEqual(["line-break"]);
   });
 
+  it("flags format characters, which trim and NFC leave in place", () => {
+    const g = (headword: string) => gateProblems({ headword }, HAN, []);
+    // Zero-width space, joiner and non-joiner, soft hyphen, a bidi mark, an
+    // override and an isolate: each invisible, each \p{Cf}.
+    for (const headword of [
+      "长者\u{200B}",
+      "长\u{200D}者",
+      "长\u{200C}者",
+      "长\u{00AD}者",
+      "长者\u{200E}",
+      "\u{202E}长者",
+      "\u{2067}长者\u{2069}",
+    ]) {
+      expect(headword.trim().normalize("NFC"), headword).toBe(headword);
+      expect(g(headword), headword).toEqual(["format"]);
+    }
+  });
+
   it("flags a headword that does not use the rendering of the reference it names", () => {
     const fia = [
       { en: "apostle", term: "使徒" },
@@ -791,6 +809,17 @@ describe("buildDraftGlossary", () => {
         elder + "review.text fails gates (line-break)",
         reviewed({ by, at, text: "长\n老" }),
       ],
+      // The drafted headword with only an invisible character added: no
+      // other gate refuses it when the term names no reference, and it
+      // would put the reviewer's name on a headword that looks unchanged.
+      [
+        elder + "review.text fails gates (format)",
+        reviewed({ by, at, text: "长者\u{200B}" }),
+      ],
+      [
+        elder + "review.text fails gates (format)",
+        reviewed({ by, at, text: "\u{2067}长者\u{2069}" }),
+      ],
       [
         apostle + "review.text fails gates (reference)",
         (r) => {
@@ -843,10 +872,11 @@ describe("buildDraftGlossary", () => {
       [
         // A change leaves the record's source as the model; the build, not
         // the record, names the reviewer as the source of the new headword.
+        // Apart from the source this is a valid change (使徒 to 使者), so
+        // the source rule alone refuses it.
         apostle + "source reviewer:zh-hans-reader",
         (r) => {
           Object.assign(r.terms["kt/apostle"]!, {
-            headword: "使者",
             source: by,
             status: "human-reviewed",
             review: { by, at, text: "使者" },
@@ -880,6 +910,13 @@ describe("buildDraftGlossary", () => {
         "gates do not match",
         (r) => {
           r.terms["names/titus"]!.headword = "Titus";
+        },
+      ],
+      [
+        // A model's headword with an invisible character, no gate recorded.
+        "gates do not match",
+        (r) => {
+          r.terms["names/titus"]!.headword = "提多\u{200B}";
         },
       ],
       [
@@ -1138,10 +1175,12 @@ describe.each(records)("data/glossary-drafts/%s", (name) => {
           ? { headword: review.text, source: review.by }
           : { headword: drafted?.headword, source: drafted?.source }
       );
-      // A changed term names the model's headword, the one its check judged.
+      // A changed term names the model's headword, the one its check judged,
+      // and has no gates: they described the model's headword.
       expect(t.drafted, a).toBe(
         review?.text !== undefined ? drafted?.headword : undefined
       );
+      if (review?.text !== undefined) expect(t.gates, a).toBeUndefined();
       expect(t.en).toBe(drafted?.en);
     }
     expect(built.review).toEqual(
