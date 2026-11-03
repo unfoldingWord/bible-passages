@@ -26,7 +26,21 @@ Observed on 2026-11-03 unless marked.
 | Break  | observed | (1) **Saving needed edit access.** A reviewer whose access was view-only (the maintainer's account, 3 Nov) answered all 33 Hindi Titus titles; nothing reached the database, and the answers were recovered only from their "Copy my answers" export on 3 Nov (#64). (2) **One book, no navigation.** The Titus page shows Titus only, in a fixed order, with no way to jump to a book or chapter (noted 30 Oct; not re-read today). [review.md](review.md) recorded the same Break for the pilot artifact (3 books).     |
 | Beget  | skipped  | No uW team owns a title-review screen (review.md, Beget). The tc-mobile team owns the books-screen pattern, but not a review tool.                                                                                                                                                                                                                                                                                                                                                                                        |
 | Bide   | n/a      | Nothing in the field is converging on this.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Build  | minimal  | A new artifact page: the book column, chapter columns and keep-or-reword card, writing the same answer documents as the Titus page (so `apply.ts` needs no change). Traced to Break 2. Its database rules let any signed-in viewer write their own `reviews/<uid>`, and a save is confirmed on screen. Traced to Break 1. Comment mode is not built in; see below.                                                                                                                                                        |
+| Build  | minimal  | A new artifact page: the book column, chapter columns and keep-or-reword card, writing the same answer documents as the Titus page, and an `apply.ts` change (both below). Traced to Break 2. Database rules that let a reviewer write only their own answers, and a save confirmed only when acknowledged (below). Traced to Break 1. Comment mode is not built in; see below.                                                                                                                                           |
+
+The Build, required and not yet observed:
+
+- **Answers.** Keep is `pick: "keep"`, `changed: false`, `text` the wording
+  shown. Reword is `pick: "change"`, `changed: true`, `text` the new wording,
+  with a `note`. `lang` is `en`.
+- **Apply.** `scripts/lib/review.ts` applies only keys with an entry in
+  `data/drafts/<lang>/`. English drafts exist for PHP and TIT segment keys
+  only; any other key refuses the batch (`unknown key`). Where those answers
+  are written is open. Acceptance: a keep answer for `TIT.P.1.1-4` applies.
+- **Rules.** A signed-in user may write `reviews/<uid>` only when `uid` is
+  their auth uid, and may read or write no one else's.
+- **Saving.** A save is shown as saved only when the database acknowledges
+  it, and as failed otherwise. "Copy my answers" stays.
 
 Reversibility: forward = low; backward = low. Answers are the same documents
 `apply.ts` already reads; the page can be replaced without losing them.
