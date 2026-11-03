@@ -1,7 +1,7 @@
 // Builds data/ from the pinned sources: the structure of every book, the
-// English titles of the books in BOOKS (the book name only for the others;
-// two names come from ULT, see NAME_OVERRIDES),
-// and the verse counts the checks use.
+// English book name and pericope titles of every book (BSB; two names come
+// from ULT, see NAME_OVERRIDES), the English segment titles of the books in
+// BOOKS, and the verse counts the checks use.
 //
 //   node scripts/data/build.ts
 import { existsSync, readFileSync } from "node:fs";
@@ -80,11 +80,12 @@ for (const book of STRUCTURE_BOOKS) {
     string,
     { text: string; status: string; source: string }
   > = {};
-  // Titles are built one book at a time (AGENTS.md); until a book is in
-  // BOOKS its table holds the book name, which its package needs, and no
-  // titles.
+  // Every book's pericope titles are BSB's \s1 headings, the same headings
+  // its pericopes were cut at, so each pericope gets exactly one (#196).
+  // Segment titles are built one book at a time (AGENTS.md): only a book in
+  // BOOKS has drafts or reuses a pericope title for a segment (decision 12).
   const titled = BOOKS.includes(book);
-  for (const h of titled ? headings : []) {
+  for (const h of headings) {
     const p = structure.pericopes.find(
       (p) => p.start[0] === h.chapter && p.start[1] === h.verse
     );
@@ -92,8 +93,12 @@ for (const book of STRUCTURE_BOOKS) {
       throw new Error(
         `${book} ${h.chapter}:${h.verse}: heading without a pericope`
       );
+    if (titles[p.key])
+      throw new Error(`${book} ${h.chapter}:${h.verse}: two headings`);
     titles[p.key] = { text: h.text, status: "unreviewed", source };
   }
+  for (const p of structure.pericopes)
+    if (!titles[p.key]) throw new Error(`${p.key}: pericope without a title`);
   // AI drafts are committed inputs in data/drafts/, which the build never
   // clears, so a rebuild cannot wipe them. A draft for a key that is not a
   // segment fails the build.
@@ -137,7 +142,7 @@ for (const book of STRUCTURE_BOOKS) {
   const ordered: typeof titles = {};
   for (const p of structure.pericopes)
     if (titles[p.key]) ordered[p.key] = titles[p.key]!;
-  for (const s of structure.segments) {
+  for (const s of titled ? structure.segments : []) {
     const only =
       structure.segments.filter((t) => t.pericope === s.pericope).length === 1;
     const title = titles[s.key] ?? (only ? titles[s.pericope] : undefined);
