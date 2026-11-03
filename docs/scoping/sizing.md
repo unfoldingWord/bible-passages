@@ -457,6 +457,50 @@ same results.
 The check reasoned 15,709 tokens here against 5,592 on the committed
 Colossians run, and cost more than the draft; why is not measured.
 
+## Measured: English segment titles, 2 Timothy, committed run (#207)
+
+One plain run of the CLI on 2026-11-03 (21:35:12 to 21:36:15 UTC), with the
+code at `e383b1d` (batched drafting of #213, the batched check of #201) and
+the current prompt, `prompts/segment-titles.md` SHA-256 `838516080c8f…`
+(#216's readers rule; the first committed record made with it), and the
+same models as Philippians, Colossians and 1 Thessalonians. It was drafted
+to enlarge #207's blind sample, which had 5 disputes (Colossians 4,
+1 Thessalonians 1). 2 Timothy was chosen as the unseen short book with the
+most segments that still drafts and checks in one batch each (30 to
+draft; 2 Peter has 23, 2 Thessalonians 18, Philemon 5; 1 Timothy's 40 need
+two batches of at most 35), counted from `data/structure/`. It is
+a pastoral letter like Titus, whose reviewed titles are the third check's
+voice, so the voice examples come from a sibling letter; that may make the
+third model's titles read closer to Titus than they did on Colossians or
+1 Thessalonians (inference, not measured). The record was copied unchanged
+to `data/drafts/en/2TI.json` (`cmp` with the run's `en/2TI.json` reported
+no difference).
+
+```
+node scripts/translate/segment-titles.ts --book 2TI \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.30 \
+  --out .cache/segment-titles/l2ti-2TI
+```
+
+The runner exited 0: 30 of 30 segments drafted, 2 reusing their pericope
+title, 26 `ai-checked`, 4 disagreements, 0 gate failures. The numbers below
+were counted twice from the record, with `jq` and with Python, which gave
+the same results. The checker's suggestions and reasons were not read
+before the third check ran (#207); only counts and criteria were.
+
+| Quantity                     | Value                                    | Label               | Source and method                                                                                  |
+| ---------------------------- | ---------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
+| Segments drafted             | 30 of 32                                 | measured 2026-11-03 | the 2 others (`2TI.1.1-2`, `2TI.4.19-22`) are their pericope's only segment                        |
+| Calls                        | 1 draft, 1 check (one batch of 30)       | measured 2026-11-03 | `calls`; draft `gen-1793741713-mvgAcGc7H2fGO5YJ0SlD`, check `gen-1793741747-8MJ151FmeLGzL5r771dB`  |
+| Cost                         | $0.0780 ($0.0638 draft, $0.0143 check)   | measured 2026-11-03 | OpenRouter's billed `cost` per call ($0.063760 + $0.014274 = $0.078034)                            |
+| Cost per drafted title       | $0.0026                                  | measured 2026-11-03 | $0.0780 / 30                                                                                       |
+| Tokens                       | 18,244 (10,077 prompt, 8,167 completion) | measured 2026-11-03 | draft 5,545 + 5,267 (4,370 reasoning); check 4,532 + 2,900 (1,899 reasoning)                       |
+| Model time                   | 62.2 s (34.2 s draft, 28.0 s check)      | measured 2026-11-03 | `ms` per call, summed                                                                              |
+| Checker agreed               | 26 of 30 (`ai-checked`)                  | measured 2026-11-03 | 4 disagreements; criteria `accurate` 2, `covers` 1, `plain` 1, `style` 1 (a title can name more)   |
+| Drafts over 60 characters    | 0 of 30 (longest 57, mean 50.3)          | measured 2026-11-03 | the `length` gate and `text` lengths                                                               |
+| Titles in the tC Mobile file | 26 of 32 segments                        | measured 2026-11-03 | `npm run build`: the 4 disputed drafts and the 2 reused pericope titles are `unreviewed`, left out |
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

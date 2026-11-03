@@ -110,8 +110,8 @@ describe("prompts/history/", () => {
     expect(keptPrompt("")).toBeUndefined();
   });
 
-  // The branch a record made with the live prompt takes; the scripted
-  // records committed so far all take the history branch (#204).
+  // The branch a record made with the live prompt takes (2TI, #207); the
+  // earlier scripted records take the history branch (#204).
   it("finds the current prompt by its own digest", () => {
     const current = sha256(fileText("prompts/segment-titles.md"));
     expect(keptPrompt(current)).toBe("prompts/segment-titles.md");
@@ -160,7 +160,7 @@ describe("the Titus examples in prompts/segment-titles.md", () => {
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
 // scripts/translate/segment-titles.ts, whose records carry their calls.
-describe.each(["TIT", "PHP", "COL", "1TH"])(
+describe.each(["TIT", "PHP", "COL", "1TH", "2TI"])(
   "English %s segment drafts",
   (book) => {
     const structure = read(`data/structure/${book}.json`) as {
@@ -320,6 +320,15 @@ describe.each([
     drafted: 31,
     // Drafted for #207 before the readers rule of #216 merged.
     prompt: "prompts/history/segment-titles-cc76a816652a.md",
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "2TI",
+    reused: ["2TI.1.1-2", "2TI.4.19-22"],
+    drafted: 30,
+    // Drafted for #207 with the current prompt, after #216's readers rule.
+    prompt: "prompts/segment-titles.md",
     checks: 1,
     batched: true,
   },

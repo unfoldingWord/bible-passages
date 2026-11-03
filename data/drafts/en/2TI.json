@@ -1,0 +1,237 @@
+{
+  "language": "en",
+  "book": "2TI",
+  "bible": "bsb-2ti",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "838516080c8fd8226e545d9c79673f823fb091b09795dd1baacf7988e13bd3b8"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793741713-mvgAcGc7H2fGO5YJ0SlD",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5545,
+      "completionTokens": 5267,
+      "reasoningTokens": 4370,
+      "cost": 0.06376,
+      "ms": 34171
+    },
+    {
+      "role": "check",
+      "id": "gen-1793741747-8MJ151FmeLGzL5r771dB",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4532,
+      "completionTokens": 2900,
+      "reasoningTokens": 1899,
+      "cost": 0.014274,
+      "ms": 28008
+    }
+  ],
+  "titles": {
+    "2TI.1.3-5": {
+      "text": "Paul thanks God for Timothy’s sincere faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.1.6-7": {
+      "text": "Paul urges Timothy to use God’s gift without fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.1.8-11": {
+      "text": "Timothy must not be ashamed but suffer for the gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.1.12-12": {
+      "text": "Paul is not ashamed of suffering because he trusts God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.1.13-14": {
+      "text": "Timothy must hold to sound teaching and guard it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.1.15-18": {
+      "text": "Many left Paul, but Onesiphorus helped him often",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.1-2": {
+      "text": "Timothy must be strong and train faithful men to teach",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.3-5": {
+      "text": "Timothy must suffer like a soldier and a competitor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses speak of competing according to the rules, not of suffering like an athlete.",
+        "suggestion": "Timothy must suffer as a soldier and compete by the rules"
+      }
+    },
+    "2TI.2.6-7": {
+      "text": "Paul says a hardworking farmer shares the crops first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The text says the farmer should be the first to receive and eat the crops, not give them away to others.",
+        "suggestion": "A hardworking farmer should be first to receive the crops"
+      }
+    },
+    "2TI.2.8-10": {
+      "text": "Paul suffers in chains, but God’s word is not chained",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.11-13": {
+      "text": "A trusted saying about living and reigning with Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence.",
+        "suggestion": "A trustworthy saying tells of dying and living with Christ"
+      }
+    },
+    "2TI.2.14-15": {
+      "text": "Timothy must remind believers not to quarrel over words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only verse 14 and leaves out the command to be an approved worker who correctly handles the truth.",
+        "suggestion": "Timothy must warn against quarreling and handle truth well"
+      }
+    },
+    "2TI.2.16-18": {
+      "text": "Timothy must avoid empty talk and false teachers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.19-21": {
+      "text": "Believers who clean themselves are useful to the Master",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.22-23": {
+      "text": "Timothy must flee youthful passions and pursue peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.2.24-26": {
+      "text": "The Lord’s servant must be kind and teach gently",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.1-4": {
+      "text": "In the last days men will be selfish and evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.5-7": {
+      "text": "Timothy must turn away from men who only seem godly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.8-9": {
+      "text": "False teachers oppose the truth like Jannes and Jambres",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.10-13": {
+      "text": "The Lord rescued Paul; godly believers will be persecuted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.14-15": {
+      "text": "Timothy must continue in what he learned from Scripture",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.3.16-17": {
+      "text": "Scripture is from God and equips believers for good work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.1-2": {
+      "text": "Paul charges Timothy to preach the word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.3-5": {
+      "text": "Men will reject truth, but Timothy must do his work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.6-8": {
+      "text": "Paul has kept the faith and expects a crown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.9-10": {
+      "text": "Paul asks Timothy to come quickly; Demas left Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.11-13": {
+      "text": "Paul asks Timothy to bring Mark, his cloak and scrolls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.14-15": {
+      "text": "Paul warns Timothy about Alexander, who harmed Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.16-16": {
+      "text": "No one stood with Paul at his first defense",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TI.4.17-18": {
+      "text": "The Lord stood by Paul and will rescue him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
