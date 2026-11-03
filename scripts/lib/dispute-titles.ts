@@ -421,28 +421,33 @@ export async function settleDisputes(args: {
 }): Promise<{ record: DisputedRecord | null; outcome: DisputeOutcome }> {
   const { record, model } = args;
   const book = record.book;
-  const draftCall = record.calls.find((c) => c.role === "draft");
-  const checkCall = record.calls.find((c) => c.role === "check");
-  const drafted = draftCall?.model;
-  const checked = checkCall?.model;
-  if (drafted === undefined || checked === undefined)
+  // Every model that answered a draft or a check call: since #208 a book
+  // can have several draft calls as well as several check calls.
+  const models = (role: "draft" | "check") => [
+    ...new Set(record.calls.filter((c) => c.role === role).map((c) => c.model)),
+  ];
+  const drafted = models("draft");
+  const checked = models("check");
+  if (drafted.length === 0 || checked.length === 0)
     throw new Error(`${book}: the record has no draft and check call`);
-  const third = (m: string) =>
-    family(m) !== family(drafted) && family(m) !== family(checked);
+  const used = new Set([...drafted, ...checked].map(family));
+  const third = (m: string) => !used.has(family(m));
   if (!third(model))
     throw new Error(
-      `${model} must be of a family other than the drafting (${drafted}) and checking (${checked}) model's`
+      `${model} must be of a family other than the drafting (${drafted.join(", ")}) and checking (${checked.join(", ")}) model's`
     );
-  const recheckModel = args.recheck.model ?? checked;
-  // The recheck is the record's checker (#207): of the checking model's
-  // family, which the third model and the drafting model are not.
+  const recheckModel = args.recheck.model ?? checked[0]!;
+  // The recheck is the record's checker (#207): of a checking model's
+  // family, and of neither the third model's nor any drafting model's.
+  const checkFamilies = new Set(checked.map(family));
+  const draftFamilies = new Set(drafted.map(family));
   const checker = (m: string, by: string) =>
-    family(m) === family(checked) &&
+    checkFamilies.has(family(m)) &&
     family(m) !== family(by) &&
-    family(m) !== family(drafted);
+    !draftFamilies.has(family(m));
   if (!checker(recheckModel, model))
     throw new Error(
-      `the recheck model ${recheckModel} must be of the checking model's family (${checked}), not the third (${model}) or drafting (${drafted}) model's`
+      `the recheck model ${recheckModel} must be of the checking model's family (${checked.join(", ")}), not the third (${model}) or drafting (${drafted.join(", ")}) model's`
     );
   const recheckPrompt = {
     file: args.recheck.prompt.file,

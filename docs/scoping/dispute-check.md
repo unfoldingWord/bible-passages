@@ -151,7 +151,8 @@ or replacing a verse's main point, no checker suggestion in the input, and
 the recheck. Prompt SHA-256 `4ef5bbc9…`, committed in `9711b49`
 (19:20:34 UTC) before any run below; ULT `ult-col` and `ult-1th` pinned in
 the same commit (en_ult v91, `35d2159`); voice `data/drafts/en/TIT.json`
-(`091e772f…`). Third model `openai/gpt-6.1-sol`; recheck by each record's
+(`091e772f…`, as it stood before #221 recorded the Titus keeps; a rerun now
+reads `c7d207ae…`). Third model `openai/gpt-6.1-sol`; recheck by each record's
 checker, `google/gemini-3.8-flash`.
 
 ```

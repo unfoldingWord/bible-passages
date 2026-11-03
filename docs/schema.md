@@ -185,9 +185,11 @@ never calls a model. Such a record also has:
   (Philippians was made with `f132f2195f80`; the prompt changed after it,
   #197. Colossians was made with `cc76a816652a`; the prompt changed after
   it, #209).
-- `calls`: the draft call, then the check calls (one before #201; one per
-  batch of at most 35 titles since), each with its OpenRouter generation id,
-  model, tokens and cost in US dollars.
+- `calls`: the draft calls (one before #208; one per batch of at most 35
+  segments since), then the check calls (one before #201; one per batch of
+  at most 35 titles since), each with its OpenRouter generation id, model,
+  tokens and cost in US dollars. Each title's `source` names the model that
+  answered its own draft call.
 - per title, `gates`: the mechanical rules it breaks (`length` over 60
   characters, `full-stop`, `quotes`, `straight-apostrophe`, `line-break`
   (any mandatory line break), `format` (any other control or invisible
