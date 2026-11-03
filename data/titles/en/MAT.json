@@ -2,5 +2,771 @@
   "language": "en",
   "book": "MAT",
   "name": { "text": "Matthew", "status": "unreviewed", "source": "bsb-mat" },
-  "titles": {}
+  "titles": {
+    "MAT.P.1.1-17": {
+      "text": "The Genealogy of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.1.18-25": {
+      "text": "The Birth of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.2.1-12": {
+      "text": "The Pilgrimage of the Magi",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.2.13-15": {
+      "text": "The Flight to Egypt",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.2.16-18": {
+      "text": "Weeping and Great Mourning",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.2.19-23": {
+      "text": "The Return to Nazareth",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.3.1-12": {
+      "text": "The Mission of John the Baptist",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.3.13-17": {
+      "text": "The Baptism of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.4.1-11": {
+      "text": "The Temptation of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.4.12-17": {
+      "text": "Jesus Begins His Ministry",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.4.18-22": {
+      "text": "The First Disciples",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.4.23-25": {
+      "text": "Jesus Heals the Multitudes",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.1-2": {
+      "text": "The Sermon on the Mount",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.3-12": {
+      "text": "The Beatitudes",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.13-16": {
+      "text": "Salt and Light",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.17-20": {
+      "text": "The Fulfillment of the Law",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.21-26": {
+      "text": "Anger and Reconciliation",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.27-30": {
+      "text": "Adultery",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.31-32": {
+      "text": "Divorce",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.33-37": {
+      "text": "Oaths and Vows",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.5.38-48": {
+      "text": "Love Your Enemies",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.1-4": {
+      "text": "Giving to the Needy",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.5-15": {
+      "text": "The Lord’s Prayer",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.16-18": {
+      "text": "Proper Fasting",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.19-21": {
+      "text": "Treasures in Heaven",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.22-24": {
+      "text": "The Lamp of the Body",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.6.25-34": {
+      "text": "Do Not Worry",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.1-6": {
+      "text": "Judging Others",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.7-12": {
+      "text": "Ask, Seek, Knock",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.13-14": {
+      "text": "The Narrow Gate",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.15-23": {
+      "text": "A Tree and Its Fruit",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.24-27": {
+      "text": "The House on the Rock",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.7.28-29": {
+      "text": "The Authority of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.1-4": {
+      "text": "The Leper’s Prayer",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.5-13": {
+      "text": "The Faith of the Centurion",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.14-17": {
+      "text": "Jesus Heals at Peter’s House",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.18-22": {
+      "text": "The Cost of Discipleship",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.23-27": {
+      "text": "Jesus Calms the Storm",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.8.28-34": {
+      "text": "The Demons and the Pigs",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.1-8": {
+      "text": "Jesus Heals a Paralytic",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.9-13": {
+      "text": "Jesus Calls Matthew",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.14-15": {
+      "text": "Questions about Fasting",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.16-17": {
+      "text": "The Patches and the Wineskins",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.18-26": {
+      "text": "The Healing Touch of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.27-34": {
+      "text": "Jesus Heals the Blind and Mute",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.9.35-38": {
+      "text": "The Lord of the Harvest",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.1-4": {
+      "text": "The Twelve Apostles",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.5-15": {
+      "text": "The Ministry of the Twelve",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.16-25": {
+      "text": "Sheep among Wolves",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.26-31": {
+      "text": "Fear God Alone",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.32-33": {
+      "text": "Confessing Christ",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.34-39": {
+      "text": "Not Peace but a Sword",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.10.40-42": {
+      "text": "The Reward of Service",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.11.1-6": {
+      "text": "John’s Inquiry",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.11.7-19": {
+      "text": "Jesus Testifies about John",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.11.20-24": {
+      "text": "Woe to the Unrepentant",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.11.25-30": {
+      "text": "Rest for the Weary",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.1-8": {
+      "text": "The Lord of the Sabbath",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.9-14": {
+      "text": "Jesus Heals on the Sabbath",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.15-21": {
+      "text": "God’s Chosen Servant",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.22-30": {
+      "text": "A House Divided",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.31-32": {
+      "text": "The Unpardonable Sin",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.33-37": {
+      "text": "Good and Bad Fruit",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.38-42": {
+      "text": "The Sign of Jonah",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.43-45": {
+      "text": "An Unclean Spirit Returns",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.12.46-50": {
+      "text": "Jesus’ Mother and Brothers",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.1-9": {
+      "text": "The Parable of the Sower",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.10-17": {
+      "text": "The Purpose of Jesus’ Parables",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.18-23": {
+      "text": "The Parable of the Sower Explained",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.24-30": {
+      "text": "The Parable of the Weeds",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.31-32": {
+      "text": "The Parable of the Mustard Seed",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.33-33": {
+      "text": "The Parable of the Leaven",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.34-35": {
+      "text": "I Will Open My Mouth in Parables",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.36-43": {
+      "text": "The Parable of the Weeds Explained",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.44-46": {
+      "text": "The Parables of the Treasure and the Pearl",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.47-52": {
+      "text": "The Parable of the Net",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.13.53-58": {
+      "text": "The Rejection at Nazareth",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.14.1-12": {
+      "text": "The Beheading of John",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.14.13-21": {
+      "text": "The Feeding of the Five Thousand",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.14.22-33": {
+      "text": "Jesus Walks on Water",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.14.34-36": {
+      "text": "Jesus Heals at Gennesaret",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.15.1-9": {
+      "text": "The Tradition of the Elders",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.15.10-20": {
+      "text": "What Defiles a Man",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.15.21-28": {
+      "text": "The Faith of the Canaanite Woman",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.15.29-39": {
+      "text": "The Feeding of the Four Thousand",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.16.1-4": {
+      "text": "The Demand for a Sign",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.16.5-12": {
+      "text": "The Leaven of the Pharisees and Sadducees",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.16.13-20": {
+      "text": "Peter’s Confession of Christ",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.16.21-23": {
+      "text": "Christ’s Passion Foretold",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.16.24-28": {
+      "text": "Take Up Your Cross",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.17.1-13": {
+      "text": "The Transfiguration",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.17.14-18": {
+      "text": "The Boy with a Demon",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.17.19-20": {
+      "text": "The Power of Faith",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.17.21-23": {
+      "text": "The Second Prediction of the Passion",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.17.24-27": {
+      "text": "The Temple Tax",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.1-5": {
+      "text": "The Greatest in the Kingdom",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.6-9": {
+      "text": "Temptations and Trespasses",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.10-14": {
+      "text": "The Parable of the Lost Sheep",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.15-18": {
+      "text": "A Brother Who Sins",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.19-20": {
+      "text": "Ask in My Name",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.18.21-35": {
+      "text": "The Unforgiving Servant",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.19.1-12": {
+      "text": "Teachings about Divorce",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.19.13-15": {
+      "text": "Jesus Blesses the Children",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.19.16-30": {
+      "text": "The Rich Young Man",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.20.1-16": {
+      "text": "The Parable of the Workers",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.20.17-19": {
+      "text": "The Third Prediction of the Passion",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.20.20-28": {
+      "text": "A Mother’s Request",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.20.29-34": {
+      "text": "The Blind Men by the Road",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.1-11": {
+      "text": "The Triumphal Entry",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.12-17": {
+      "text": "Jesus Cleanses the Temple",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.18-22": {
+      "text": "The Barren Fig Tree",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.23-27": {
+      "text": "Jesus’ Authority Challenged",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.28-32": {
+      "text": "The Parable of the Two Sons",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.21.33-46": {
+      "text": "The Parable of the Wicked Tenants",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.22.1-14": {
+      "text": "The Parable of the Banquet",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.22.15-22": {
+      "text": "Paying Taxes to Caesar",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.22.23-33": {
+      "text": "The Sadducees and the Resurrection",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.22.34-40": {
+      "text": "The Greatest Commandment",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.22.41-46": {
+      "text": "Whose Son Is the Christ?",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.23.1-36": {
+      "text": "Woes to Scribes and Pharisees",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.23.37-39": {
+      "text": "Lament over Jerusalem",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.1-8": {
+      "text": "Temple Destruction and Other Signs",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.9-14": {
+      "text": "Witnessing to All Nations",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.15-25": {
+      "text": "The Abomination of Desolation",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.26-31": {
+      "text": "The Return of the Son of Man",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.32-35": {
+      "text": "The Lesson of the Fig Tree",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.24.36-51": {
+      "text": "Readiness at Any Hour",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.25.1-13": {
+      "text": "The Parable of the Ten Virgins",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.25.14-30": {
+      "text": "The Parable of the Talents",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.25.31-46": {
+      "text": "The Sheep and the Goats",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.1-5": {
+      "text": "The Plot to Kill Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.6-13": {
+      "text": "Jesus Anointed at Bethany",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.14-16": {
+      "text": "Judas Agrees to Betray Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.17-19": {
+      "text": "Preparing the Passover",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.20-30": {
+      "text": "The Last Supper",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.31-35": {
+      "text": "Jesus Predicts Peter’s Denial",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.36-46": {
+      "text": "Jesus Prays at Gethsemane",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.47-56": {
+      "text": "The Betrayal of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.57-68": {
+      "text": "Jesus before the Sanhedrin",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.26.69-75": {
+      "text": "Peter Denies Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.1-2": {
+      "text": "Jesus Delivered to Pilate",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.3-10": {
+      "text": "Judas Hangs Himself",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.11-14": {
+      "text": "Jesus before Pilate",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.15-23": {
+      "text": "The Crowd Chooses Barabbas",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.24-26": {
+      "text": "Pilate Washes His Hands",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.27-31": {
+      "text": "The Soldiers Mock Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.32-44": {
+      "text": "The Crucifixion",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.45-56": {
+      "text": "The Death of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.57-61": {
+      "text": "The Burial of Jesus",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.27.62-66": {
+      "text": "The Guards at the Tomb",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.28.1-10": {
+      "text": "The Resurrection",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.28.11-15": {
+      "text": "The Report of the Guards",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    },
+    "MAT.P.28.16-20": {
+      "text": "The Great Commission",
+      "status": "unreviewed",
+      "source": "bsb-mat"
+    }
+  }
 }

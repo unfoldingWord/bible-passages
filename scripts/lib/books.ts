@@ -79,8 +79,8 @@ export const ALL_BOOKS: readonly (readonly [code: string, file: string])[] = [
 export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
 
 /**
- * Books whose titles are built so far: one book end to end before the next
- * (AGENTS.md). Every other book has its structure and its book name only,
- * until its titles are built.
+ * Books whose segment titles are built so far: one book end to end before
+ * the next (AGENTS.md). Every book has its structure, its book name and its
+ * pericope titles (BSB `\s1`); only these have drafts and segment titles.
  */
 export const BOOKS = ["PHP", "TIT"];
