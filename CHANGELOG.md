@@ -34,6 +34,15 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   recorded with its calls (`scripts/translate/segment-titles.ts`); 23 `ai-checked`,
   14 disputed and `unreviewed` until a person reviews them. The 2 segments
   that are their pericope's only segment reuse its title (decision 12).
+- A third check on disputed English titles (#198, ADR 0005 item 6): a model
+  of a third family (OpenAI GPT-6.1 Sol) reads the verses in ULT
+  (`ult-php`, `unfoldingWord/en_ult` v91) and sorts each dispute as taste
+  (its title replaces the draft, `ai-checked`) or factual (a proposal,
+  `unreviewed`, listed by `npm run disputes`). Philippians: 12 taste, 2
+  factual; 35 of 39 segments now `ai-checked`. The Philippians package
+  credits ULT in `attribution`. Known issue: PHP 2:12–13 ships `ai-checked`
+  though ADR 0005's hand sort calls it factual
+  (`docs/scoping/dispute-check.md`).
 
 ### Changed
 

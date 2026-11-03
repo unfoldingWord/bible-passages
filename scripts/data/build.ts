@@ -6,7 +6,12 @@
 //   node scripts/data/build.ts
 import { existsSync, readFileSync } from "node:fs";
 import { BOOKS, STRUCTURE_BOOKS } from "../lib/books.ts";
-import { readSource } from "../lib/sources.ts";
+import {
+  builtTitle,
+  disputeProblems,
+  type DisputedRecord,
+} from "../lib/dispute-titles.ts";
+import { readSource, source as source_ } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 import {
   buildStructure,
@@ -100,34 +105,26 @@ for (const book of STRUCTURE_BOOKS) {
   const draftFile = new URL(`drafts/en/${book}.json`, data);
   if (existsSync(draftFile)) {
     if (!titled) throw new Error(`${book}: drafts for a book not in BOOKS`);
-    const drafts = (
-      JSON.parse(readFileSync(draftFile, "utf8")) as {
-        titles: Record<
-          string,
-          {
-            text: string;
-            status: string;
-            source: string;
-            review?: { by: string; status: string; text?: string };
-          }
-        >;
-      }
-    ).titles;
+    const record = JSON.parse(
+      readFileSync(draftFile, "utf8")
+    ) as DisputedRecord;
+    // A third check's answers name the ULT they read; it must be pinned.
+    if (record.disputeCheck) source_(record.disputeCheck.verses);
     const segmentKeys = new Set(structure.segments.map((s) => s.key));
-    for (const [key, draft] of Object.entries(drafts)) {
+    for (const [key, draft] of Object.entries(record.titles)) {
       if (!segmentKeys.has(key))
         throw new Error(`${book}: draft for unknown segment key ${key}`);
+      const problems = disputeProblems(draft);
+      if (problems.length > 0)
+        throw new Error(`${book} ${key}: dispute: ${problems.join("; ")}`);
+      if (draft.dispute && !record.disputeCheck)
+        throw new Error(`${book} ${key}: a dispute with no disputeCheck`);
       // The check's details stay in data/drafts/; the table gets the title.
       // A person's review, when there is one, decides the title: its status,
       // and its own wording (with the reviewer as source) if it gave one.
-      const { review } = draft;
-      titles[key] = review
-        ? {
-            text: review.text ?? draft.text,
-            status: review.status,
-            source: review.text ? review.by : draft.source,
-          }
-        : { text: draft.text, status: draft.status, source: draft.source };
+      // Else the third model's answer on a disputed title (ADR 0005 item 6):
+      // its wording, status and model. Else the draft.
+      titles[key] = builtTitle(draft);
     }
   }
   // Decision 12 (docs/decisions/0003): a segment that is its pericope's only

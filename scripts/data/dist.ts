@@ -19,6 +19,15 @@ const read = (path: string) =>
 const VERSION = (read("package.json") as { version: string }).version;
 const REVISION = process.env.RELEASE_TAG ?? "unreleased";
 
+/** The `disputeCheck.verses` source of a book's English draft record, if any. */
+const disputeVerses = (book: string): string[] => {
+  const path = `data/drafts/en/${book}.json`;
+  if (!existsSync(new URL(path, root))) return [];
+  const verses = (read(path) as { disputeCheck?: { verses: string } })
+    .disputeCheck?.verses;
+  return verses === undefined ? [] : [verses];
+};
+
 type Titles = { name: { text: string; source: string }; titles: TitleEntries };
 
 // A book or language dropped from the build leaves no stale package or table.
@@ -38,6 +47,8 @@ for (const book of STRUCTURE_BOOKS) {
       titles.name.source,
       "ufw-vrs",
       `ufw-chunks-${id}`,
+      // The ULT a third check read to settle disputed titles (ADR 0005).
+      ...disputeVerses(book),
     ]),
   ].map(source);
 

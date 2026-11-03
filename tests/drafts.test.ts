@@ -1,6 +1,11 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { BOOKS } from "../scripts/lib/books.ts";
+import {
+  builtTitle,
+  disputeProblems,
+  type Title as Settled,
+} from "../scripts/lib/dispute-titles.ts";
 import { CRITERIA, gateProblems } from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
 
@@ -21,12 +26,25 @@ type Draft = Title & {
     why?: string;
     saved?: string;
   };
+  dispute?: {
+    by: string;
+    kind: string;
+    text: string;
+    why: string;
+    status: string;
+    gates?: string[];
+  };
 };
 type Record = {
   language: string;
   book: string;
   bible?: string;
   prompt?: { file: string; sha256: string };
+  disputeCheck?: {
+    prompt: { file: string; sha256: string };
+    verses: string;
+    voice: { file: string; sha256: string };
+  };
   calls?: {
     role: string;
     id: string;
@@ -130,18 +148,37 @@ describe.each(["TIT", "PHP"])("English %s segment drafts", (book) => {
     }
   });
 
-  it("is merged into the built title table, a review deciding", () => {
+  it("is merged into the built title table, a review deciding, else a third model's dispute", () => {
     for (const [key, d] of Object.entries(drafts)) {
       const r = d.review;
+      const ai = d.dispute
+        ? {
+            text: d.dispute.text,
+            status: d.dispute.status,
+            source: d.dispute.by,
+          }
+        : { text: d.text, status: d.status, source: d.source };
       expect(built[key]).toEqual(
         r
           ? {
-              text: r.text ?? d.text,
+              text: r.text ?? ai.text,
               status: r.status,
-              source: r.text ? r.by : d.source,
+              source: r.text ? r.by : ai.source,
             }
-          : { text: d.text, status: d.status, source: d.source }
+          : ai
       );
+      // Re-derived above by hand; the build's own function must agree.
+      expect(builtTitle(d as Settled)).toEqual(built[key]);
+    }
+  });
+
+  it("settles only disputed titles, by a third family, never above ai-checked (ADR 0005 item 6)", () => {
+    for (const [key, d] of Object.entries(drafts)) {
+      expect(disputeProblems(d as Settled), key).toEqual([]);
+      if (d.dispute) {
+        expect(record.disputeCheck, key).toBeDefined();
+        expect(["unreviewed", "ai-checked"]).toContain(d.dispute.status);
+      }
     }
   });
 
@@ -183,21 +220,46 @@ describe("a scripted segment-title record (PHP)", () => {
     expect(record.bible).toBe("bsb-php");
   });
 
-  it("records both calls: a draft and a check by models of different families", () => {
+  it("records every call: a draft, a check and the third check, by models of three families", () => {
     const calls = record.calls ?? [];
-    expect(calls.map((c) => c.role)).toEqual(["draft", "check"]);
+    expect(calls.map((c) => c.role)).toEqual(["draft", "check", "dispute"]);
     for (const c of calls) {
       expect(c.id).toMatch(/^gen-/);
       expect(c.promptTokens).toBeGreaterThan(0);
       expect(c.cost).toBeGreaterThan(0);
     }
     const family = (m: string) => m.split("/")[0];
-    expect(family(calls[0]!.model)).not.toBe(family(calls[1]!.model));
+    expect(new Set(calls.map((c) => family(c.model))).size).toBe(3);
     for (const d of Object.values(record.titles)) {
       expect(d.source).toBe(`ai:${calls[0]!.model}`);
       expect(d.check?.by).toBe(`ai:${calls[1]!.model}`);
       for (const c of d.check?.criteria ?? [])
         expect(CRITERIA).toContain(c as (typeof CRITERIA)[number]);
+      if (d.dispute) expect(d.dispute.by).toBe(`ai:${calls[2]!.model}`);
     }
+  });
+
+  it("settles every title the checker disagreed with: the 14 of the 29 Oct run", () => {
+    const disputed = Object.entries(record.titles).filter(
+      ([, d]) => d.check?.verdict === "disagree"
+    );
+    expect(disputed).toHaveLength(14);
+    for (const [k, d] of disputed) expect(d.dispute, k).toBeDefined();
+  });
+
+  it("was settled with the committed prompt, the pinned ULT and the Titus voice", () => {
+    const hash = (path: string) =>
+      sha256(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
+    expect(record.disputeCheck).toEqual({
+      prompt: {
+        file: "prompts/dispute-titles.md",
+        sha256: hash("prompts/dispute-titles.md"),
+      },
+      verses: "ult-php",
+      voice: { file: "data/drafts/en/TIT.json", sha256: expect.any(String) },
+    });
+    // The Titus record changes as people review it, so its hash records the
+    // voice the model saw rather than being held to today's file.
+    expect(record.disputeCheck?.voice.sha256).toMatch(/^[0-9a-f]{64}$/);
   });
 });
