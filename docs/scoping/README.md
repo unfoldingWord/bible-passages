@@ -21,6 +21,7 @@ pieces around it.
 | 7c  | Translation check  | the other model's verdict on each translation              | [translation-check.md](translation-check.md)                                  |
 | 8   | Review             | people approve, flag or suggest each title                 | [review.md](review.md)                                                        |
 | 8a  | Review apply       | the review artifact's answers to one PR per batch          | [review-apply.md](review-apply.md)                                            |
+| 8b  | Review navigator   | the whole Bible by book and chapter, for the read-through  | [review-navigator.md](review-navigator.md)                                    |
 | 9   | Publish            | `dist/tc-mobile/` packages and title tables, release tags  | [pipeline.md](pipeline.md#9-publish)                                          |
 | 10  | Project site       | live scope, sizing, sprints, decisions, coverage           | [site.md](site.md)                                                            |
 | 11  | Registry entry     | the `uw/bible-passages` entry on Servant.Bible             | [servant-bible-entry.md](servant-bible-entry.md)                              |
