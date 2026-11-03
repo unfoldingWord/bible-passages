@@ -234,8 +234,9 @@ and `check` stay the drafting and checking models' own.
   model's title: the replacement for `taste`, the proposed fix for
   `factual`), `why`, `status`, `gates` (the gate problems of its `text`,
   absent when none) and `recheck` (#207): the checker's verdict on `text`,
-  in the shape of `check`, by a model of neither the third nor the
-  drafting model's family; absent when the recheck gave none. `status` is
+  in the shape of `check`, by a model of the checking model's family
+  (so neither the third nor the drafting model's). A run whose recheck
+  fails for any title writes no record, so every committed dispute has one. `status` is
   `ai-checked` only for a `taste` title that passes every gate and that
   the recheck agreed with; anything else is `unreviewed`. No AI title is
   above `ai-checked`.

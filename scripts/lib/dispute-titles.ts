@@ -187,14 +187,16 @@ export function disputeProblems(t: Title): string[] {
       p.push("by is of the drafting model's family");
     if (t.check && fam === family(t.check.by.replace(/^ai:/, "")))
       p.push("by is of the checking model's family");
-    // The recheck is the checker's; never the third model's own family,
-    // nor the drafting model's.
+    // The recheck is the checker's: of the checking model's family, so
+    // never the third model's own nor the drafting model's.
     const r = d.recheck as { by?: unknown } | undefined;
     if (r !== undefined && typeof r.by === "string") {
       const rf = family(r.by.replace(/^ai:/, ""));
       if (rf === fam) p.push("recheck is by the third model's family");
       if (rf === family(t.source.replace(/^ai:/, "")))
         p.push("recheck is by the drafting model's family");
+      if (t.check && rf !== family(t.check.by.replace(/^ai:/, "")))
+        p.push("recheck is not by the checking model's family");
     }
   }
   if (d.recheck !== undefined) p.push(...recheckProblems(d.recheck));
@@ -375,8 +377,8 @@ export type Complete = (request: {
 
 /**
  * `incomplete` names the titles with no readable answer from the third
- * model, or none from the recheck; a title without a recheck stays
- * `unreviewed`.
+ * model; they have no dispute and a later run settles them. A recheck that
+ * fails for any title stops the run with no record.
  */
 export type DisputeOutcome =
   "done" | "nothing to settle" | { stopped: string } | { incomplete: string[] };
@@ -432,11 +434,15 @@ export async function settleDisputes(args: {
       `${model} must be of a family other than the drafting (${drafted}) and checking (${checked}) model's`
     );
   const recheckModel = args.recheck.model ?? checked;
+  // The recheck is the record's checker (#207): of the checking model's
+  // family, which the third model and the drafting model are not.
   const checker = (m: string, by: string) =>
-    family(m) !== family(by) && family(m) !== family(drafted);
+    family(m) === family(checked) &&
+    family(m) !== family(by) &&
+    family(m) !== family(drafted);
   if (!checker(recheckModel, model))
     throw new Error(
-      `the recheck model ${recheckModel} must be of a family other than the third (${model}) and drafting (${drafted}) model's`
+      `the recheck model ${recheckModel} must be of the checking model's family (${checked}), not the third (${model}) or drafting (${drafted}) model's`
     );
   const recheckPrompt = {
     file: args.recheck.prompt.file,
@@ -574,7 +580,7 @@ export async function settleDisputes(args: {
     let why: string | null = null;
     if (r.problem !== undefined) why = `no reply: ${r.problem}`;
     else if (!checker(r.model, answered))
-      why = `answered by ${r.model}, of the third or drafting model's family`;
+      why = `answered by ${r.model}, not of the checking model's family`;
     else
       try {
         recheckReply = parseReply(r.text);
@@ -587,14 +593,25 @@ export async function settleDisputes(args: {
       unchecked.push(...v.missing, ...v.invalid);
     } else unchecked.push(...settled);
 
+    // A dispute with no recheck is never returned: a later run skips a
+    // title that has a dispute, so it would never be rechecked. The third
+    // model's answers are in the ledger; the titles stay as drafted.
+    if (why !== null) {
+      outcome = { stopped: `recheck: ${why}` };
+      return { record: null, outcome };
+    }
+    if (unchecked.length > 0) {
+      outcome = {
+        stopped: `recheck gave no verdict on ${unchecked.join(", ")}`,
+      };
+      return { record: null, outcome };
+    }
     const titles: Record<string, Title> = {};
     for (const [k, t] of Object.entries(record.titles)) {
       const d = read.disputes[k];
       titles[k] = d ? { ...t, dispute: withRecheck(d, rechecks[k]) } : t;
     }
-    const incomplete = [...unread, ...unchecked];
-    if (why !== null) outcome = { stopped: `recheck: ${why}` };
-    else if (incomplete.length > 0) outcome = { incomplete };
+    if (unread.length > 0) outcome = { incomplete: unread };
     return {
       record: {
         ...record,
@@ -623,6 +640,8 @@ export type Listed = {
   by: string;
   /** The checker's verdict on `text` (#207), or `none` if it gave none. */
   recheck: "agree" | "disagree" | "none";
+  /** For a disagreeing recheck, its criteria and reason. */
+  recheckWhy?: string;
 };
 
 /**
@@ -644,6 +663,9 @@ export function listDisputes(record: DisputedRecord, all = false): Listed[] {
       why: d.why,
       by: d.by,
       recheck: d.recheck?.verdict ?? "none",
+      ...(d.recheck?.verdict === "disagree"
+        ? { recheckWhy: `${d.recheck.criteria.join(", ")}: ${d.recheck.why}` }
+        : {}),
     });
   }
   return out;

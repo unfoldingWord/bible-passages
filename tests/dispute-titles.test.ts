@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   builtTitle,
@@ -312,9 +312,9 @@ describe("the third check (ADR 0005 item 6)", () => {
     expect(r!.titles["XYZ.1.5-6"]!.dispute!.status).toBe("ai-checked");
     for (const t of Object.values(r!.titles))
       expect(disputeProblems(t)).toEqual([]);
-    expect(listDisputes(r!).map((d) => [d.key, d.recheck])).toEqual([
-      ["XYZ.1.3-4", "disagree"],
-    ]);
+    expect(
+      listDisputes(r!).map((d) => [d.key, d.recheck, d.recheckWhy])
+    ).toEqual([["XYZ.1.3-4", "disagree", "covers: Drops the prayer."]]);
     expect(r!.calls.map((c) => c.role)).toEqual([
       "draft",
       "check",
@@ -323,7 +323,7 @@ describe("the third check (ADR 0005 item 6)", () => {
     ]);
   });
 
-  it("keeps every title unreviewed when the recheck gives no reply", async () => {
+  it("returns no record when the recheck gives no reply, so a retry rechecks every title", async () => {
     const { complete } = fakeModel(
       {
         "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
@@ -332,15 +332,36 @@ describe("the third check (ADR 0005 item 6)", () => {
       undefined,
       "not json"
     );
-    const { record: r, outcome } = await settle(complete).run;
+    const { run, ledgers } = settle(complete);
+    const { record: r, outcome } = await run;
     expect(outcome).toMatchObject({
       stopped: expect.stringContaining("recheck"),
     });
-    for (const t of Object.values(r!.titles))
-      if (t.dispute) {
-        expect(t.dispute.status).toBe("unreviewed");
-        expect(t.dispute.recheck).toBeUndefined();
-      }
+    // Nothing to commit: a record with unrechecked disputes would make a
+    // later run report "nothing to settle".
+    expect(r).toBeNull();
+    const last = ledgers.at(-1) as {
+      calls: { role: string }[];
+      reply: unknown;
+    };
+    expect(last.calls.map((c) => c.role)).toEqual(["dispute", "recheck"]);
+    expect(last.reply).not.toBeNull();
+  });
+
+  it("returns no record when the recheck leaves any title without a verdict", async () => {
+    const { complete } = fakeModel(
+      {
+        "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+        "XYZ.1.5-6": { kind: "taste", title: "Paul hopes", why: "x" },
+      },
+      undefined,
+      { "XYZ.1.3-4": { verdict: "agree" } }
+    );
+    const { record: r, outcome } = await settle(complete).run;
+    expect(r).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "recheck gave no verdict on XYZ.1.5-6",
+    });
   });
 
   it("refuses a recheck answered by the third model's family", async () => {
@@ -352,14 +373,15 @@ describe("the third check (ADR 0005 item 6)", () => {
     );
     const { record: r, outcome } = await settle(complete).run;
     expect(outcome).toMatchObject({
-      stopped: expect.stringContaining("third or drafting"),
+      stopped: expect.stringContaining("not of the checking model's family"),
     });
-    expect(r!.titles["XYZ.1.3-4"]!.dispute!.status).toBe("unreviewed");
+    expect(r).toBeNull();
   });
 
   it.each([
     ["the third model's family", { model: "openai/gpt-6.1-mini" }],
     ["the drafting model's family", { model: DRAFTER }],
+    ["a fourth family, not the checker's", { model: "x-ai/grok-4.7" }],
   ])(
     "refuses a recheck model of %s before any spend",
     async (_name, change) => {
@@ -696,6 +718,11 @@ describe("disputeProblems", () => {
       "drafting model's family",
     ],
     [
+      "a recheck by a family other than the checker's",
+      { recheck: { by: "ai:x-ai/grok-4.7", verdict: "agree" } },
+      "not by the checking model's family",
+    ],
+    [
       "a recheck with an unknown criterion",
       {
         recheck: {
@@ -834,11 +861,7 @@ describe("the third check is blind", () => {
   });
 
   const records = [
-    ...["COL", "1TH"]
-      .filter((b) =>
-        existsSync(new URL(`../data/drafts/en/${b}.json`, import.meta.url))
-      )
-      .map((b) => [b, `data/drafts/en/${b}.json`] as const),
+    ...["COL", "1TH"].map((b) => [b, `data/drafts/en/${b}.json`] as const),
     ["PHP", "tests/fixtures/disputes/PHP-run1.json"] as const,
   ];
   it.each(records)(

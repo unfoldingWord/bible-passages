@@ -47,5 +47,5 @@ console.log(
 );
 for (const r of rows)
   console.log(
-    `| ${r.key} | ${r.kind} | ${r.status} | ${cell(r.draft)} | ${cell(r.text)} | ${cell(r.why)} | ${r.recheck} | ${r.by} |`
+    `| ${r.key} | ${r.kind} | ${r.status} | ${cell(r.draft)} | ${cell(r.text)} | ${cell(r.why)} | ${r.recheckWhy ? `${r.recheck} (${cell(r.recheckWhy)})` : r.recheck} | ${r.by} |`
   );
