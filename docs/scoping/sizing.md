@@ -212,6 +212,47 @@ tokens for 33 titles, so the longest books will not fit in one draft call
 one call cannot hold them is estimated from the Colossians tokens per
 title).
 
+## Measured: English segment titles, Colossians, committed run (#209)
+
+One plain run of the CLI on 2026-11-03 (18:42:44 to 18:44:11 UTC), with the
+code at `e31447a` (the batched check of #201, the prompt of #197, SHA-256
+`cc76a816…`) and the same models as Philippians. The record was copied
+unchanged to `data/drafts/en/COL.json` (`cmp` with the run's `en/COL.json`
+reported no difference). Its ledger is `calls` in that file.
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.30
+```
+
+The runner exited 0: 33 of 33 segments drafted, 3 reusing their pericope
+title, 29 `ai-checked`, 4 disagreements, 0 gate failures. The numbers below
+were counted twice from the record, with `jq` and with Python, which gave the
+same results.
+
+| Quantity                     | Value                                     | Label               | Source and method                                                                                  |
+| ---------------------------- | ----------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
+| Segments drafted             | 33 of 36                                  | measured 2026-11-03 | the 3 others (`COL.1.1-2`, `COL.3.18-21`, `COL.3.22-25`) are their pericope's only segment         |
+| Calls                        | 1 draft, 1 check (one batch of 33)        | measured 2026-11-03 | `calls`; draft `gen-1793731365-pEHzq2yksb32aGBNTBy9`, check `gen-1793731391-2eNrQPnyWQrup8RmglCe`  |
+| Cost                         | $0.0761 ($0.0475 draft, $0.0286 check)    | measured 2026-11-03 | OpenRouter's billed `cost` per call                                                                |
+| Cost per drafted title       | $0.0023                                   | measured 2026-11-03 | $0.0761 / 33                                                                                       |
+| Tokens                       | 21,052 (10,847 prompt, 10,205 completion) | measured 2026-11-03 | draft 5,853 + 3,578 (2,668 reasoning); check 4,994 + 6,627 (5,592 reasoning)                       |
+| Model time                   | 86.1 s (26.5 s draft, 59.7 s check)       | measured 2026-11-03 | `ms` per call, summed                                                                              |
+| Checker agreed               | 29 of 33 (`ai-checked`)                   | measured 2026-11-03 | 4 disagreements, all `plain`; none `accurate`, `covers` or `style`                                 |
+| Drafts over 60 characters    | 0 of 33 (longest 59, mean 51.2)           | measured 2026-11-03 | the `length` gate and `text` lengths                                                               |
+| Titles in the tC Mobile file | 29 of 36 segments                         | measured 2026-11-03 | `npm run build`: the 4 disputed drafts and the 3 reused pericope titles are `unreviewed`, left out |
+
+The 4 disagreements stay `unreviewed`, as the checker left them. The third
+check (ADR 0005 item 6, #203) was not run on Colossians: #207 holds third-check
+data until rewrites keep their meaning and agreement is measured blind, and
+Colossians is the planned blind test book.
+
+This check reasoned far less than the #201 runs on Colossians (5,592 tokens
+against 15,727 to 24,806) and agreed more (29 of 33 against 22 to 26 of 33),
+on different drafts. Why is not measured; with the run-to-run spread seen in
+#201, one run does not show a trend.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |
