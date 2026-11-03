@@ -179,8 +179,11 @@ shortcut.
   again independently (a second script, a second model, a second source), not
   by reading the first result and agreeing with it.
 - **AI output is checked by a different model than the one that wrote it.**
-  A title drafted by one model is checked by another, and the disagreements
-  go to human review first.
+  A title drafted by one model is checked by another. For English titles in
+  v0.1.0, a disagreement goes to a third model, which sorts it as factual
+  (listed for a person) or taste (settled to the reviewed Titus voice); see
+  [ADR 0005](docs/decisions/0005-go-no-go-1-ai-checked-english.md). Other
+  disagreements go to human review first.
 - **Sample before scale.** Every AI step runs on one book and is checked by a
   person before it runs on 66.
 - **A known error is never shipped silently.** If a release ships with known
