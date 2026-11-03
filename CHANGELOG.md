@@ -34,6 +34,11 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   recorded with its calls (`scripts/translate/segment-titles.ts`); 23 `ai-checked`,
   14 disputed and `unreviewed` until a person reviews them. The 2 segments
   that are their pericope's only segment reuse its title (decision 12).
+- English pericope titles for all 66 books (#196): the 3,016 BSB `\s1`
+  headings the pericopes were cut at, from the inputs already pinned at
+  `Worldview/en_bsb@7abbfaf`, each `unreviewed` with source `bsb-<book>`, so
+  none ships in a title table yet. Segment titles, and decision 12's reuse
+  of a pericope title, stay with the books in `BOOKS` (PHP, TIT).
 
 ### Changed
 

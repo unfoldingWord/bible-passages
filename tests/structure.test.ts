@@ -1,7 +1,9 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { FORMAT_ALLOWED, formatChars } from "../scripts/lib/format.ts";
 import { checkHistory, spans, type Retired } from "../scripts/lib/keys.ts";
+import { LINE_BREAK } from "../scripts/lib/line-breaks.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
 
 // Checks on data/structure/ and data/titles/. See docs/schema.md, "Checks".
@@ -129,6 +131,25 @@ describe("data/structure", () => {
       else {
         expect(name.source).toBe(`bsb-${id}`);
         expect(name.status).toBe("unreviewed");
+      }
+    });
+
+    // Pericopes are cut at BSB's \s1 headings and each heading is its
+    // pericope's title (#196), held to the English format and line-break
+    // gates the segment titles meet (scripts/lib/segment-titles.ts).
+    it("has a BSB English title for every pericope", () => {
+      const { titles } = read(`data/titles/en/${book}.json`) as {
+        titles: Record<
+          string,
+          { text: string; status: string; source: string }
+        >;
+      };
+      for (const p of s.pericopes) {
+        const t = titles[p.key];
+        expect(t, `${p.key} has no English title`).toBeDefined();
+        expect(t?.source).toBe(`bsb-${book.toLowerCase()}`);
+        expect(formatChars(t?.text ?? "", FORMAT_ALLOWED.en!)).toEqual([]);
+        expect(LINE_BREAK.test(t?.text ?? ""), p.key).toBe(false);
       }
     });
 
