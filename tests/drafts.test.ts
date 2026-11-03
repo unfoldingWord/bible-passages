@@ -301,7 +301,8 @@ describe.each([
     book: "COL",
     reused: ["COL.1.1-2", "COL.3.18-21", "COL.3.22-25"],
     drafted: 33,
-    prompt: "prompts/segment-titles.md",
+    // Made before the prompt changed for #209 (docs/scoping/sizing.md).
+    prompt: "prompts/history/segment-titles-cc76a816652a.md",
     checks: 1,
   },
 ])("a scripted segment-title record ($book)", (t) => {
