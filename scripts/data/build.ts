@@ -119,7 +119,7 @@ for (const book of STRUCTURE_BOOKS) {
     // A third check's answers name the ULT they read; it must be the
     // book's own, and pinned. A record that names a recheck has one on
     // every dispute (#223).
-    const checkProblems = disputeCheckProblems(record);
+    const checkProblems = disputeCheckProblems(book, record);
     if (checkProblems.length > 0)
       throw new Error(`${book}: disputeCheck: ${checkProblems.join("; ")}`);
     if (record.disputeCheck) source_(record.disputeCheck.verses);

@@ -99,15 +99,15 @@ export const ultSource = (book: string): string => `ult-${book.toLowerCase()}`;
  * the runner never writes a dispute without it. That the ids are pinned is
  * checked against sources.json by the build.
  */
-export function disputeCheckProblems(record: {
-  book: string;
-  disputeCheck?: DisputeCheck;
-  titles: Record<string, Title>;
-}): string[] {
+export function disputeCheckProblems(
+  /** The book the record is filed as, not the record's own `book`. */
+  book: string,
+  record: { disputeCheck?: DisputeCheck; titles: Record<string, Title> }
+): string[] {
   const check = record.disputeCheck;
   if (check === undefined) return [];
   const p: string[] = [];
-  const ult = ultSource(record.book);
+  const ult = ultSource(book);
   if (check.verses !== ult) p.push(`verses is ${check.verses}, not ${ult}`);
   if (check.recheck)
     for (const [k, t] of Object.entries(record.titles))

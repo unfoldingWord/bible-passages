@@ -1002,26 +1002,39 @@ describe("the third check's guards and records (#206)", () => {
 
   it("holds disputeCheck.verses to the book's own ULT", () => {
     const at = (disputeCheck?: DisputeCheck) => ({
-      book: "XYZ",
       titles: {},
       ...(disputeCheck ? { disputeCheck } : {}),
     });
     expect(ultSource("PHP")).toBe("ult-php");
-    expect(disputeCheckProblems(at(same))).toEqual([]);
-    expect(disputeCheckProblems(at())).toEqual([]);
-    expect(disputeCheckProblems(at({ ...same, verses: "ult-php" }))).toEqual([
-      "verses is ult-php, not ult-xyz",
+    expect(disputeCheckProblems("XYZ", at(same))).toEqual([]);
+    expect(disputeCheckProblems("XYZ", at())).toEqual([]);
+    expect(
+      disputeCheckProblems("XYZ", at({ ...same, verses: "ult-php" }))
+    ).toEqual(["verses is ult-php, not ult-xyz"]);
+    expect(
+      disputeCheckProblems("XYZ", at({ ...same, verses: "bsb-xyz" }))
+    ).toEqual(["verses is bsb-xyz, not ult-xyz"]);
+  });
+
+  // From the bench on #222: the book is the file's, not the record's own
+  // field, so a record filed under another book cannot vouch for itself.
+  it("holds verses to the book the record is filed as", () => {
+    const col = {
+      book: "COL",
+      titles: {},
+      disputeCheck: { ...same, verses: "ult-col" },
+    };
+    expect(disputeCheckProblems("PHP", col)).toEqual([
+      "verses is ult-col, not ult-php",
     ]);
-    expect(disputeCheckProblems(at({ ...same, verses: "bsb-xyz" }))).toEqual([
-      "verses is bsb-xyz, not ult-xyz",
-    ]);
+    expect(disputeCheckProblems("COL", col)).toEqual([]);
   });
 
   // #223: the runner never writes a dispute without its recheck, so a record
   // that names one and holds a dispute without it was not made by the runner.
   it("requires a recheck on every dispute of a record that names disputeCheck.recheck", () => {
     const r = settled();
-    expect(disputeCheckProblems({ ...r, disputeCheck: same })).toEqual([
+    expect(disputeCheckProblems("XYZ", { ...r, disputeCheck: same })).toEqual([
       "XYZ.1.3-4: a dispute with no recheck",
       "XYZ.1.5-6: a dispute with no recheck",
     ]);
@@ -1029,12 +1042,14 @@ describe("the third check's guards and records (#206)", () => {
       by: `ai:${CHECKER}`,
       verdict: "agree",
     };
-    expect(disputeCheckProblems({ ...r, disputeCheck: same })).toEqual([
+    expect(disputeCheckProblems("XYZ", { ...r, disputeCheck: same })).toEqual([
       "XYZ.1.5-6: a dispute with no recheck",
     ]);
     // A record from before the recheck (the PHP trial run) names none.
     const { recheck: _, ...before } = same;
-    expect(disputeCheckProblems({ ...r, disputeCheck: before })).toEqual([]);
+    expect(disputeCheckProblems("XYZ", { ...r, disputeCheck: before })).toEqual(
+      []
+    );
   });
 });
 
