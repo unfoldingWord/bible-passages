@@ -148,8 +148,14 @@ describe("data/structure", () => {
         const t = titles[p.key];
         expect(t, `${p.key} has no English title`).toBeDefined();
         expect(t?.source).toBe(`bsb-${book.toLowerCase()}`);
-        expect(formatChars(t?.text ?? "", FORMAT_ALLOWED.en!)).toEqual([]);
-        expect(LINE_BREAK.test(t?.text ?? ""), p.key).toBe(false);
+        // The build writes every BSB heading unreviewed; no review of a
+        // pericope title exists yet (#205).
+        expect(t?.status, `${p.key}: status`).toBe("unreviewed");
+        expect(typeof t?.text, `${p.key}: text`).toBe("string");
+        const text = t!.text;
+        expect(text.trim(), `${p.key}: empty`).not.toBe("");
+        expect(formatChars(text, FORMAT_ALLOWED.en!)).toEqual([]);
+        expect(LINE_BREAK.test(text), p.key).toBe(false);
       }
     });
 
