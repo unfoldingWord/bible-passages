@@ -360,11 +360,12 @@ describe("draftSegmentTitles", () => {
       expect(outcome).toEqual({
         stopped:
           cost === null
-            ? "cost unknown; check batch 1 of 1 not run"
-            : "spent 1 of 1 before check batch 1 of 1",
+            ? "check batch 1 of 1: cost unknown, not run"
+            : "check batch 1 of 1: spent 1 of 1, not run",
       });
       expect(sent).toHaveLength(1);
       expect(ledgers.at(-1)).toMatchObject({
+        outcome,
         calls: [{ role: "draft" }],
         // The paid-for draft stays on record for a resumed run.
         draftTitles: draftReply,
@@ -389,9 +390,13 @@ describe("draftSegmentTitles", () => {
     expect(sent.map((s) => s.model)).toEqual(["a/draft", "g/check"]);
     expect(record).toBeNull();
     expect(outcome).toEqual({
-      stopped: "check answered by the drafting model x/same",
+      stopped: "check batch 1 of 1: answered by the drafting model x/same",
     });
-    expect(ledgers.at(-1)).toMatchObject({ draftTitles: draftReply });
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      draftTitles: draftReply,
+      checks: null,
+    });
   });
 
   it("refuses a check answered by a model of the drafting model's family", async () => {
@@ -406,11 +411,14 @@ describe("draftSegmentTitles", () => {
         answeredBy: "a/other",
       },
     ]);
-    const { record, outcome } = await run(complete, []);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers);
     expect(record).toBeNull();
     expect(outcome).toEqual({
-      stopped: "check answered by a/other, of the drafting model's family",
+      stopped:
+        "check batch 1 of 1: answered by a/other, of the drafting model's family",
     });
+    expect(ledgers.at(-1)).toMatchObject({ outcome });
   });
 
   it("reports titles the models left out", async () => {
@@ -492,12 +500,17 @@ describe("draftSegmentTitles", () => {
     });
     expect(record).toBeNull();
     expect(outcome).toEqual({
-      stopped: "spent 1 of 1 before check batch 2 of 2",
+      stopped: "check batch 2 of 2: spent 1 of 1, not run",
     });
     expect(sent).toHaveLength(2);
+    // Batch 1's paid-for verdict stays on record (#211), and the run is
+    // still stopped, so a partial book is never taken as finished.
     expect(ledgers.at(-1)).toMatchObject({
+      outcome,
       calls: [{ role: "draft" }, { role: "check" }],
       draftTitles: draftReply,
+      checks: { "XYZ.1.2-3": { by: "ai:g/check", verdict: "agree" } },
+      checkUnread: [],
     });
   });
 
@@ -513,11 +526,13 @@ describe("draftSegmentTitles", () => {
     });
     expect(record).toBeNull();
     expect(outcome).toMatchObject({
-      stopped: expect.stringMatching(/^check: unreadable reply/),
+      stopped: expect.stringMatching(/^check batch 2 of 2: unreadable reply/),
     });
     expect(sent).toHaveLength(3);
     expect(ledgers.at(-1)).toMatchObject({
+      outcome,
       calls: [{ role: "draft" }, { role: "check" }, { role: "check" }],
+      checks: { "XYZ.1.2-3": { by: "ai:g/check", verdict: "agree" } },
     });
   });
 
@@ -531,11 +546,69 @@ describe("draftSegmentTitles", () => {
         answeredBy: "a/other",
       },
     ]);
-    const { record, outcome } = await run(complete, [], { checkBatch: 1 });
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      checkBatch: 1,
+    });
     expect(record).toBeNull();
     expect(outcome).toEqual({
-      stopped: "check answered by a/other, of the drafting model's family",
+      stopped:
+        "check batch 2 of 2: answered by a/other, of the drafting model's family",
     });
+    // Batch 1's verdict, and the key batch 1 left out, stay on record.
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      checks: { "XYZ.1.2-3": { by: "ai:g/check", verdict: "agree" } },
+    });
+  });
+
+  it("keeps a batch's missing and unreadable keys in the ledger", async () => {
+    const { complete } = fakeModels([
+      { reply: draftReply, cost: 0.01 },
+      { reply: { "XYZ.1.2-3": { verdict: "maybe" } }, cost: 0.01 },
+      { reply: {}, cost: 0.01, answeredBy: "a/other" },
+    ]);
+    const ledgers: unknown[] = [];
+    const { outcome } = await run(complete, ledgers, { checkBatch: 1 });
+    expect(outcome).toMatchObject({
+      stopped: expect.stringMatching(/^check batch 2 of 2:/),
+    });
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      checks: {},
+      checkUnread: ["XYZ.1.2-3"],
+    });
+  });
+
+  // #211: with no draft read there is no check call, but the fuse still
+  // decides how the run ends.
+  it("stops, not incomplete, when no draft was read and the cap is reached or cost is unknown", async () => {
+    for (const cost of [1, null]) {
+      const { complete, sent } = fakeModels([{ reply: {}, cost }]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers);
+      expect(record).toBeNull();
+      expect(outcome).toEqual({
+        stopped:
+          cost === null
+            ? "check: cost unknown, not run"
+            : "check: spent 1 of 1, not run",
+      });
+      expect(sent).toHaveLength(1);
+      expect(ledgers.at(-1)).toMatchObject({ outcome, checks: null });
+    }
+  });
+
+  it("ends incomplete, with no check call, when no draft was read and the fuse allows", async () => {
+    const { complete, sent } = fakeModels([{ reply: {}, cost: 0.01 }]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers);
+    expect(sent).toHaveLength(1);
+    expect(record?.titles).toEqual({});
+    expect(outcome).toEqual({
+      incomplete: { draft: ["XYZ.1.2-3", "XYZ.1.4-4"], check: [] },
+    });
+    expect(ledgers.at(-1)).toMatchObject({ outcome });
   });
 
   // #208: a whole long book does not fit in one draft reply.
@@ -605,12 +678,13 @@ describe("draftSegmentTitles", () => {
       expect(outcome).toEqual({
         stopped:
           cost === null
-            ? "cost unknown; draft batch 2 of 2 not run"
-            : "spent 1 of 1 before draft batch 2 of 2",
+            ? "draft batch 2 of 2: cost unknown, not run"
+            : "draft batch 2 of 2: spent 1 of 1, not run",
       });
       expect(sent).toHaveLength(1);
       // The first batch's paid-for drafts stay on record.
       expect(ledgers.at(-1)).toMatchObject({
+        outcome,
         calls: [{ role: "draft" }],
         draftTitles: first,
       });
@@ -640,8 +714,11 @@ describe("draftSegmentTitles", () => {
 
   it("refuses a check of drafts a later draft batch's model, or its family, answered", async () => {
     for (const [answeredBy, stopped] of [
-      ["g/check", "check answered by the drafting model g/check"],
-      ["g/other", "check answered by g/check, of the drafting model's family"],
+      ["g/check", "check batch 1 of 1: answered by the drafting model g/check"],
+      [
+        "g/other",
+        "check batch 1 of 1: answered by g/check, of the drafting model's family",
+      ],
     ]) {
       const { complete } = fakeModels([
         { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
@@ -658,9 +735,13 @@ describe("draftSegmentTitles", () => {
           cost: 0.01,
         },
       ]);
-      const { record, outcome } = await run(complete, [], { draftBatch: 1 });
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers, {
+        draftBatch: 1,
+      });
       expect(record).toBeNull();
       expect(outcome).toEqual({ stopped });
+      expect(ledgers.at(-1)).toMatchObject({ outcome });
     }
   });
 

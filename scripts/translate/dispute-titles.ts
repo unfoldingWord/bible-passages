@@ -26,6 +26,7 @@ import { parseArgs } from "node:util";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import {
   settleDisputes,
+  ultSource,
   ultVerseTexts,
   voiceOf,
   type DisputedRecord,
@@ -84,7 +85,7 @@ const structure = JSON.parse(
   readFileSync(new URL(`data/structure/${book}.json`, root), "utf8")
 ) as Structure;
 const id = book.toLowerCase();
-const verses = `ult-${id}`;
+const verses = ultSource(book);
 const ult = ultVerseTexts(await readSource(verses));
 const { inputs } = segmentInputs(
   structure,
@@ -95,6 +96,9 @@ const { inputs } = segmentInputs(
 const voiceFile = "data/drafts/en/TIT.json";
 const voiceText = readFileSync(new URL(voiceFile, root), "utf8");
 const promptPath = "prompts/dispute-titles.md";
+// Whether a ledger was written: a run refused before its call writes none,
+// and must not point to one (#206).
+let ledgerWritten = false;
 
 try {
   const { record: settled, outcome } = await settleDisputes({
@@ -112,15 +116,22 @@ try {
     },
     model,
     complete: (request) => complete(request, { apiKey }),
-    write: (ledger) => writeJson(new URL("run.json", out), ledger),
+    write: async (ledger) => {
+      await writeJson(new URL("run.json", out), ledger);
+      ledgerWritten = true;
+    },
   });
   if (settled) {
     await writeJson(new URL(`en/${book}.json`, out), settled);
-    const ds = Object.entries(settled.titles).filter(([, t]) => t.dispute);
+    // Only what this run settled: a dispute already on the record was
+    // settled by an earlier run (#206).
+    const ds = Object.entries(settled.titles).filter(
+      ([k, t]) => t.dispute && !record.titles[k]?.dispute
+    );
     const count = (kind: string) =>
       ds.filter(([, t]) => t.dispute?.kind === kind).length;
     console.log(
-      `en ${book}: ${ds.length} disputes settled: ${count("taste")} taste, ` +
+      `en ${book}: ${ds.length} disputes settled in this run: ${count("taste")} taste, ` +
         `${count("factual")} factual, ` +
         `${ds.filter(([, t]) => t.dispute?.gates).length} gate failures`
     );
@@ -141,6 +152,10 @@ try {
   }
 } catch (e) {
   console.error(`dispute-titles: ${(e as Error).message}`);
-  console.error(`dispute-titles: the ledger is in ${out.pathname}run.json`);
+  console.error(
+    ledgerWritten
+      ? `dispute-titles: the ledger is in ${out.pathname}run.json`
+      : "dispute-titles: refused before any call; no ledger was written"
+  );
   process.exit(1);
 }

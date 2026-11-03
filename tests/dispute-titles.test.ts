@@ -1,13 +1,25 @@
-import { readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
+import {
+  existsSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
   builtTitle,
+  disputeCheckProblems,
   disputeInputs,
   disputeProblems,
   disputePrompt,
   listDisputes,
   readDisputes,
   settleDisputes,
+  ultSource,
   ultVerseTexts,
   voiceOf,
   type Complete,
@@ -509,5 +521,172 @@ describe("a recorded third check (fixture: the Philippians trial run)", () => {
       "PHP.1.18-19",
       "PHP.2.17-18",
     ]);
+  });
+});
+
+// Follow-ups from the #203 review bench (#206).
+describe("the third check's guards and records (#206)", () => {
+  const settled = (): DisputedRecord => {
+    const r = record();
+    for (const k of ["XYZ.1.3-4", "XYZ.1.5-6"])
+      r.titles[k]!.dispute = {
+        by: `ai:${THIRD}`,
+        kind: "factual",
+        text: "Paul thanks God",
+        why: "x",
+        status: "unreviewed",
+      };
+    return r;
+  };
+  const same = {
+    prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
+    verses: "ult-xyz",
+    voice: { file: "data/drafts/en/TIT.json", sha256: sha256("{}") },
+  };
+
+  it("refuses another run's disputeCheck even when nothing is left to settle", async () => {
+    const { complete, sent } = fakeModel({});
+    await expect(
+      settle(complete, {
+        record: { ...settled(), disputeCheck: { ...same, verses: "ult-abc" } },
+      }).run
+    ).rejects.toThrow("disputeCheck");
+    expect(sent).toHaveLength(0);
+    const ok = await settle(complete, {
+      record: { ...settled(), disputeCheck: same },
+    }).run;
+    expect(ok.outcome).toBe("nothing to settle");
+    expect(sent).toHaveLength(0);
+  });
+
+  it("keeps the raw text of a reply it cannot read in the ledger", async () => {
+    const { complete } = fakeModel("cut off");
+    const { run, ledgers } = settle(complete);
+    const { record: r, outcome } = await run;
+    expect(r).toBeNull();
+    expect(outcome).toMatchObject({
+      stopped: expect.stringMatching(/^unreadable reply/),
+    });
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      reply: null,
+      replyText: JSON.stringify("cut off"),
+    });
+  });
+
+  it("leaves the raw text out of the ledger when the reply was read", async () => {
+    const { complete } = fakeModel({
+      "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+      "XYZ.1.5-6": { kind: "factual", title: "Paul expects it", why: "x" },
+    });
+    const { run, ledgers } = settle(complete);
+    expect((await run).outcome).toBe("done");
+    expect(ledgers.at(-1)).not.toHaveProperty("replyText");
+  });
+
+  it("says gates must be absent when a title passes every gate", () => {
+    const t: Title = {
+      ...disputed("Paul thanks God for them", "s"),
+      dispute: {
+        by: `ai:${THIRD}`,
+        kind: "factual",
+        text: "Paul thanks God",
+        why: "x",
+        status: "unreviewed",
+        gates: [],
+      },
+    };
+    expect(disputeProblems(t)).toEqual(["gates must be absent"]);
+    expect(
+      disputeProblems({
+        ...t,
+        dispute: { ...t.dispute!, text: "Paul thanks God.", gates: undefined },
+      })
+    ).toEqual(['gates are not ["full-stop"]']);
+  });
+
+  it("holds disputeCheck.verses to the book's own ULT", () => {
+    expect(ultSource("PHP")).toBe("ult-php");
+    expect(disputeCheckProblems("XYZ", same)).toEqual([]);
+    expect(disputeCheckProblems("XYZ", undefined)).toEqual([]);
+    expect(disputeCheckProblems("XYZ", { ...same, verses: "ult-php" })).toEqual(
+      ["verses is ult-php, not ult-xyz"]
+    );
+    expect(disputeCheckProblems("XYZ", { ...same, verses: "bsb-xyz" })).toEqual(
+      ["verses is bsb-xyz, not ult-xyz"]
+    );
+  });
+});
+
+describe("dispute-titles command line (#206)", () => {
+  const script = fileURLToPath(
+    new URL("../scripts/translate/dispute-titles.ts", import.meta.url)
+  );
+  const KEY = "sk-or-test-not-a-key";
+  const run = (args: string[]) =>
+    spawnSync(process.execPath, [script, ...args], {
+      env: { PATH: process.env.PATH ?? "", OPENROUTER_API_KEY: KEY },
+      encoding: "utf8",
+    });
+
+  it("does not point to a ledger when it refuses before any call", () => {
+    const dir = mkdtempSync(join(tmpdir(), "dispute-cli-"));
+    try {
+      const r = run([
+        "--book",
+        "PHP",
+        "--model",
+        "anthropic/claude-opus-5",
+        "--out",
+        join(dir, "out"),
+      ]);
+      expect(r.status).toBe(1);
+      expect(r.stderr).toContain("family");
+      expect(r.stderr).toContain("refused before any call; no ledger");
+      expect(r.stderr).not.toContain("the ledger is in");
+      expect(existsSync(join(dir, "out", "run.json"))).toBe(false);
+      expect(r.stderr + r.stdout).not.toContain(KEY);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  // The Philippians trial record, with its disputeCheck set to this tree's
+  // prompt and voice, has nothing left to settle: no call is made, and the
+  // runner must not report its 14 disputes as settled by this run.
+  it("reports only what this run settled", () => {
+    const dir = mkdtempSync(join(tmpdir(), "dispute-cli-"));
+    try {
+      const r1 = JSON.parse(
+        read("tests/fixtures/disputes/PHP-run1.json")
+      ) as DisputedRecord;
+      r1.disputeCheck = {
+        prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
+        verses: "ult-php",
+        voice: {
+          file: "data/drafts/en/TIT.json",
+          sha256: sha256(read("data/drafts/en/TIT.json")),
+        },
+      };
+      const file = join(dir, "PHP.json");
+      writeFileSync(file, JSON.stringify(r1));
+      const r = run([
+        "--book",
+        "PHP",
+        "--model",
+        THIRD,
+        "--record",
+        file,
+        "--out",
+        join(dir, "out"),
+      ]);
+      expect(r.stderr).toBe("");
+      expect(r.status).toBe(0);
+      expect(r.stdout).toContain(
+        "en PHP: 0 disputes settled in this run: 0 taste, 0 factual"
+      );
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 });

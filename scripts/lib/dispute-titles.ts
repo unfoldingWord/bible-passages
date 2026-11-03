@@ -62,6 +62,22 @@ export type DisputeCheck = {
   voice: { file: string; sha256: string };
 };
 
+/** The sources.json id of a book's ULT text: what the third model reads. */
+export const ultSource = (book: string): string => `ult-${book.toLowerCase()}`;
+
+/**
+ * What is wrong with a record's `disputeCheck`, if anything: its ULT must be
+ * the book's own (`ult-<book>`), as the runner reads it (#206). That the id
+ * is pinned is checked against sources.json by the build.
+ */
+export const disputeCheckProblems = (
+  book: string,
+  check: DisputeCheck | undefined
+): string[] =>
+  check === undefined || check.verses === ultSource(book)
+    ? []
+    : [`verses is ${check.verses}, not ${ultSource(book)}`];
+
 export type DisputedRecord = Omit<DraftRecord, "calls" | "titles"> & {
   calls: (CallRecord | DisputeCall)[];
   disputeCheck?: DisputeCheck;
@@ -95,9 +111,6 @@ export function builtTitle(t: Title): {
     source: r.text ? r.by : ai.source,
   };
 }
-
-/** The AI wording a title stands on before any person's review. */
-export const aiText = (t: Title): string => t.dispute?.text ?? t.text;
 
 /**
  * What is wrong with a title's `dispute`, if anything: the rules the build
@@ -135,7 +148,11 @@ export function disputeProblems(t: Title): string[] {
   const problems = typeof d.text === "string" ? gateProblems(d.text) : [];
   const gates = problems.length > 0 ? problems : undefined;
   if (JSON.stringify(d.gates) !== JSON.stringify(gates))
-    p.push(`gates are not ${JSON.stringify(gates ?? [])}`);
+    p.push(
+      gates === undefined
+        ? "gates must be absent"
+        : `gates are not ${JSON.stringify(gates)}`
+    );
   if (d.status !== disputeStatus(d.kind, gates))
     p.push(`status is not ${disputeStatus(d.kind, gates)}`);
   return p;
@@ -322,7 +339,6 @@ export async function settleDisputes(args: {
     throw new Error(
       `${book}: ${disputed} titles to settle but ${segments.length} have verses`
     );
-  if (segments.length === 0) return { record, outcome: "nothing to settle" };
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
   const disputeCheck: DisputeCheck = {
     prompt,
@@ -338,9 +354,15 @@ export async function settleDisputes(args: {
     throw new Error(
       `${book}: the record's disputeCheck names another prompt, ULT pin or voice than this run's`
     );
+  // After the guard, so a run with nothing left to settle still refuses a
+  // record whose disputeCheck this run could not have produced (#206).
+  if (segments.length === 0) return { record, outcome: "nothing to settle" };
   const keys = segments.map((s) => s.key);
   const calls: DisputeCall[] = [];
   let reply: Record<string, unknown> | null = null;
+  // The reply as sent, kept only when it cannot be parsed, so the paid-for
+  // text is on record to read (#206).
+  let replyText: string | null = null;
   const ledger = (outcome: DisputeOutcome | "running") =>
     args.write({
       language: "en",
@@ -353,6 +375,7 @@ export async function settleDisputes(args: {
       updatedAt: new Date().toISOString(),
       calls,
       reply,
+      ...(replyText !== null ? { replyText } : {}),
     });
 
   let outcome: DisputeOutcome = "done";
@@ -376,6 +399,7 @@ export async function settleDisputes(args: {
     try {
       reply = parseReply(c.text);
     } catch (e) {
+      replyText = c.text;
       outcome = { stopped: `unreadable reply: ${(e as Error).message}` };
       return { record: null, outcome };
     }

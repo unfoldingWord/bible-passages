@@ -152,6 +152,9 @@ for byte.
   record, not a correction.
 - **A blind measure of agreement** (#207). The 12 of 14 is one book, one
   hand sort by another model, not a person, and not blind.
-- **Bench follow-ups** (#206): the `disputeCheck` guard before the empty
-  return, the ledger message on a pre-spend failure, and holding
-  `disputeCheck.verses` to `ult-<book>`.
+- **Known issues the list cannot show** (#206). `npm run disputes` lists
+  factual disputes only, so a taste title later found wrong (as PHP 2:12–13
+  would have been) is not on it. Nothing from the third check is in
+  `data/` (checked 3 Nov 2026), so there is no such title to list yet. When
+  results are written (#207), a title shipped with a known error goes in
+  `CHANGELOG.md`, "Known issues", as AGENTS.md requires of every release.
