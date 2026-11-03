@@ -192,9 +192,11 @@ written from #207's four losses.
 
 Costs are OpenRouter's billed `cost` per call, summed. Counts were made by
 the runner's summary and again by a Python script over each run's record,
-which agreed. Lane spend, all measured: $0.123561 for these six calls and
-$0.126988 for drafting and checking 1 Thessalonians
-([sizing.md](sizing.md)), $0.250549 in all.
+which agreed. Spend of the first lane (Colossians, 1 Thessalonians and
+Philippians), all measured: $0.123561 for their six calls and $0.126988
+for drafting and checking 1 Thessalonians ([sizing.md](sizing.md)),
+$0.250549 in all. 2 Timothy's spend is given below; the eight calls in the
+table cost $0.170469.
 
 **2 Timothy (blind, measured 3 Nov 2026).** Added to enlarge the blind
 sample, on the maintainer's decision of 3 Nov. Drafted and checked with the
