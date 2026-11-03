@@ -7,6 +7,7 @@ import {
   type Title as Settled,
 } from "../scripts/lib/dispute-titles.ts";
 import {
+  batches,
   CHECK_BATCH,
   CRITERIA,
   gateProblems,
@@ -85,22 +86,23 @@ const keptPrompt = (hash: string): string | undefined => {
 };
 
 describe("prompts/history/", () => {
-  it("names every kept prompt by the first 12 hex digits of its own SHA-256", () => {
+  it("names every kept prompt by its prompt and the first 12 hex digits of its own SHA-256", () => {
     const files = history();
     expect(files.length).toBeGreaterThan(0);
     for (const f of files) {
-      const m = /^segment-titles-([0-9a-f]{12})\.md$/.exec(f);
+      const m = /^(segment-titles|dispute-titles)-([0-9a-f]{12})\.md$/.exec(f);
       expect(m, f).not.toBeNull();
-      expect(sha256(fileText(`${HISTORY}/${f}`)).slice(0, 12), f).toBe(m![1]);
+      expect(sha256(fileText(`${HISTORY}/${f}`)).slice(0, 12), f).toBe(m![2]);
     }
   });
 
-  it("keeps no copy of the current prompt", () => {
-    const current = sha256(fileText("prompts/segment-titles.md"));
-    expect(history()).not.toContain(
-      `segment-titles-${current.slice(0, 12)}.md`
-    );
-  });
+  it.each(["segment-titles", "dispute-titles"])(
+    "keeps no copy of the current %s prompt",
+    (name) => {
+      const current = sha256(fileText(`prompts/${name}.md`));
+      expect(history()).not.toContain(`${name}-${current.slice(0, 12)}.md`);
+    }
+  );
 
   it("matches nothing for an unkept or malformed hash", () => {
     expect(keptPrompt(sha256("a prompt nobody kept"))).toBeUndefined();
@@ -250,6 +252,9 @@ describe.each([
     // Made before the prompt changed for #197 (docs/scoping/sizing.md).
     prompt: "prompts/history/segment-titles-f132f2195f80.md",
     checks: 1,
+    // Checked in one call before the batched check (#201): 37 titles, where
+    // the batching rule would give 2 calls (#215).
+    batched: false,
   },
   {
     book: "COL",
@@ -257,6 +262,7 @@ describe.each([
     drafted: 33,
     prompt: "prompts/segment-titles.md",
     checks: 1,
+    batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
   const record = read(`data/drafts/en/${t.book}.json`) as Record;
@@ -289,7 +295,11 @@ describe.each([
       "draft",
       ...Array<string>(t.checks).fill("check"),
     ]);
-    expect(t.checks).toBeLessThanOrEqual(Math.ceil(t.drafted / CHECK_BATCH));
+    // A record made with the batched check (#201) has exactly the check
+    // calls the runner's batching makes (#215); PHP, made before it, one.
+    expect(t.checks).toBe(
+      t.batched ? batches(Object.keys(record.titles), CHECK_BATCH).length : 1
+    );
     for (const c of calls) {
       expect(c.id).toMatch(/^gen-/);
       expect(c.promptTokens).toBeGreaterThan(0);

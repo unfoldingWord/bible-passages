@@ -115,6 +115,8 @@ for (const book of STRUCTURE_BOOKS) {
     ) as DisputedRecord;
     // A third check's answers name the ULT they read; it must be pinned.
     if (record.disputeCheck) source_(record.disputeCheck.verses);
+    if (record.disputeCheck?.recheck)
+      source_(record.disputeCheck.recheck.bible);
     const segmentKeys = new Set(structure.segments.map((s) => s.key));
     for (const [key, draft] of Object.entries(record.titles)) {
       if (!segmentKeys.has(key))
@@ -124,6 +126,11 @@ for (const book of STRUCTURE_BOOKS) {
         throw new Error(`${book} ${key}: dispute: ${problems.join("; ")}`);
       if (draft.dispute && !record.disputeCheck)
         throw new Error(`${book} ${key}: a dispute with no disputeCheck`);
+      // A recheck names the check it went through (#207).
+      if (draft.dispute?.recheck && !record.disputeCheck?.recheck)
+        throw new Error(
+          `${book} ${key}: a recheck with no disputeCheck.recheck`
+        );
       // The check's details stay in data/drafts/; the table gets the title.
       // A person's review, when there is one, decides the title: its status,
       // and its own wording (with the reviewer as source) if it gave one.
