@@ -307,6 +307,22 @@ describe("the third check (ADR 0005 item 6)", () => {
     }
   );
 
+  // #208: a book drafted in batches has several draft calls, and a later
+  // one can be answered by another model than the first.
+  it("refuses a third model of the family that answered any draft or check call", async () => {
+    const r = record();
+    r.calls = [
+      call("draft", DRAFTER),
+      call("draft", THIRD),
+      call("check", CHECKER),
+    ];
+    const { complete, sent } = fakeModel({});
+    await expect(settle(complete, { record: r }).run).rejects.toThrow(
+      `drafting (${DRAFTER}, ${THIRD})`
+    );
+    expect(sent).toHaveLength(0);
+  });
+
   it("stops when OpenRouter says another family answered, and keeps the call in the ledger", async () => {
     const { complete } = fakeModel({}, "google/gemini-3.8-pro");
     const { run, ledgers } = settle(complete);

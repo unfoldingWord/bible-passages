@@ -56,17 +56,17 @@ Ledger: `calls` in `data/drafts/en/PHP.json`. Derived twice, from the
 record with `jq` and from the run's own `run.json` with Python; both gave
 the numbers below.
 
-| Quantity                     | Value                                     | Label               | Source and method                                                                                                    |
-| ---------------------------- | ----------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Segments drafted             | 37 of 39                                  | measured 2026-10-29 | the 2 others are their pericope's only segment and reuse its title (decision 12)                                     |
-| Cost                         | $0.0771 ($0.0241 draft, $0.0531 check)    | measured 2026-10-29 | OpenRouter's billed `cost` per call                                                                                  |
-| Cost per drafted title       | $0.0021                                   | measured 2026-10-29 | $0.0771 / 37                                                                                                         |
-| Tokens                       | 25,978 (11,769 prompt, 14,209 completion) | measured 2026-10-29 | 11,297 of the completion tokens are the checker's reasoning                                                          |
-| Model time                   | 65.7 s (8.1 s draft, 57.5 s check)        | measured 2026-10-29 | `ms` per call, summed; the calls run one after the other                                                             |
-| Titles per hour (model time) | about 2,000                               | measured 2026-10-29 | 37 / 65.7 s; excludes the person's review                                                                            |
-| Checker agreed               | 23 of 37 (`ai-checked`)                   | measured 2026-10-29 | 14 disagreements: 11 `style`, all over 60 characters, and 3 `plain`, an unclear "them" or "this view"                |
-| Drafts over 60 characters    | 11 of 37 (longest 78)                     | measured 2026-10-29 | the `length` gate; every one also disputed by the checker                                                            |
-| Drafting cost, all 66 books  | about $28                                 | estimated           | 13,507 drafted titles (13,770 segments − 263 single-segment pericopes) × $0.0021; a second book's rate would test it |
+| Quantity                     | Value                                     | Label               | Source and method                                                                                                     |
+| ---------------------------- | ----------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Segments drafted             | 37 of 39                                  | measured 2026-10-29 | the 2 others are their pericope's only segment and reuse its title (decision 12)                                      |
+| Cost                         | $0.0771 ($0.0241 draft, $0.0531 check)    | measured 2026-10-29 | OpenRouter's billed `cost` per call                                                                                   |
+| Cost per drafted title       | $0.0021                                   | measured 2026-10-29 | $0.0771 / 37                                                                                                          |
+| Tokens                       | 25,978 (11,769 prompt, 14,209 completion) | measured 2026-10-29 | 11,297 of the completion tokens are the checker's reasoning                                                           |
+| Model time                   | 65.7 s (8.1 s draft, 57.5 s check)        | measured 2026-10-29 | `ms` per call, summed; the calls run one after the other                                                              |
+| Titles per hour (model time) | about 2,000                               | measured 2026-10-29 | 37 / 65.7 s; excludes the person's review                                                                             |
+| Checker agreed               | 23 of 37 (`ai-checked`)                   | measured 2026-10-29 | 14 disagreements: 11 `style`, all over 60 characters, and 3 `plain`, an unclear "them" or "this view"                 |
+| Drafts over 60 characters    | 11 of 37 (longest 78)                     | measured 2026-10-29 | the `length` gate; every one also disputed by the checker                                                             |
+| Drafting cost, all 66 books  | about $28                                 | estimated           | 13,507 drafted titles (13,770 segments − 263 single-segment pericopes) × $0.0021; replaced by the #208 estimate below |
 
 Review minutes per title: not yet measured; a person reviews every
 Philippians title next (#32).
@@ -205,12 +205,109 @@ drafting prompt's push to stay short (rule 6) meets rule 5 and the check's
 pronoun is clear. Philippians, drafted with the earlier prompt, had 3 `plain`
 disputes in 37.
 
-Not changed here, and its own issue: the draft call is still one call per
-book under 16,384 tokens. A Colossians draft used 5,622 to 6,311 completion
-tokens for 33 titles, so the longest books will not fit in one draft call
-(Genesis has 642 titles to draft and Psalms 1,134, measured as above; that
-one call cannot hold them is estimated from the Colossians tokens per
-title).
+The draft call was left as one call per book under 16,384 tokens here; it
+is batched in #208, below.
+
+## Measured: drafting a book in batches (#208)
+
+One draft call per book will not fit the longest books: a whole Colossians
+draft used 5,622 to 6,311 completion tokens for 33 titles (above), and
+Genesis has 642 titles to draft, Psalms 1,134. Estimated, not measured: at
+about 27 reply tokens per title, Genesis's reply alone would be about
+17,000 tokens, past the 16,384 limit before any reasoning.
+
+The fix: each draft call titles at most 35 segments (`DRAFT_BATCH`), in
+reading order, split as evenly as possible (`batches()`, as the check is),
+still under `MAX_TOKENS` (16,384). #208 does not change the prompt; it was
+measured with the prompt of the time (SHA-256 `cc76a816…`), which #209 has
+since changed (below). Each batch's user message is the same JSON as before, for
+its own segments only: each segment's verses and its pericope heading. The
+spend fuse runs before every draft and check call, an unreadable draft
+reply stops the run, and a check is refused when its answering model, or
+its family, answered the draft call of any title in its batch. Each title's
+`source` names the model that answered its own draft call.
+
+Why 35: it is the size of the whole-book drafts measured so far, which used
+at most 6,311 of 16,384 completion tokens (39%) for 33 titles (Colossians)
+and fitted 37 (Philippians). Over the 66 books it gives 420 draft calls,
+mean 32.2 titles; 49 books need more than one (measured with Python over
+`data/structure/` on 2026-11-03: titles to draft are segments less
+single-segment pericopes, 13,507 in all, the same total as `jq` gave above).
+
+### The live run
+
+To exercise several batches live for little money, Colossians was drafted
+with batches forced to 11 (`--draft-batch 11`, three batches of 11), not a
+long book. A long book (Genesis, 19 batches) would cost about $0.90 to $1.60
+to draft (estimated from the per-title range below) and was over this
+work's budget. Run on 2026-11-03 from this branch:
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.35 --draft-batch 11
+```
+
+Outcome `done`: 33 of 33 drafted and checked, 29 `ai-checked`, 4
+disagreements (all `plain`, one also `style`), 0 gate failures, longest
+draft 58 characters (mean 52.7). Each call, from the run's ledger (read
+with `jq` and again with Python; both gave these numbers):
+
+| Call    | Generation id                         | Titles | Prompt | Completion | Reasoning | Reply | Cost    | Time   |
+| ------- | ------------------------------------- | ------ | ------ | ---------- | --------- | ----- | ------- | ------ |
+| draft 1 | `gen-1793731799-OgGmgzaRmdQgtzP5eRIb` | 11     | 2,460  | 2,329      | 2,017     | 312   | $0.0282 | 16.4 s |
+| draft 2 | `gen-1793731815-IGH2pLfZItz1P4ZRtj69` | 11     | 2,538  | 2,008      | 1,712     | 296   | $0.0252 | 15.1 s |
+| draft 3 | `gen-1793731830-nV4BySfGX3me1MhjnABn` | 11     | 2,487  | 2,024      | 1,693     | 331   | $0.0252 | 14.4 s |
+| check   | `gen-1793731845-Wmt5DB469Ox02CTz0xPy` | 33     | 4,998  | 10,268     | 9,204     | 1,064 | $0.0423 | 52.8 s |
+| total   |                                       |        | 12,483 | 16,629     | 14,626    |       | $0.1208 | 98.7 s |
+
+All labelled measured 2026-11-03. Reply tokens are completion minus
+reasoning. The drafting part: $0.0786, 45.9 s, 939 reply tokens (28.5 per
+title). The run's spend, $0.1208, is all the OpenRouter spend of #208.
+
+For comparison, the committed whole-book Colossians draft from the same
+prompt and models on the same day (#212, below, one call,
+`gen-1793731365-pEHzq2yksb32aGBNTBy9`): 5,853 prompt and 3,578 completion
+tokens (2,668 reasoning, 910 reply, 27.6 per title), $0.0475, 26.5 s.
+Batches of 11 cost more than that one call, as each call repeats the
+system prompt (about 800 tokens, inferred from the prompt tokens: 22 more
+titles added 3,358) and each reasoned 1,693 to 2,017 tokens. They stayed
+within the four other whole-book drafts above ($0.0679 to $0.0813).
+
+### Does a batch boundary need neighbouring context?
+
+Not on this evidence, so none was added and the prompt is unchanged. The
+two boundaries fell after 1:28–29 (between pericopes) and after 3:5–8
+(inside the pericope 3:1–17). Read side by side with the whole-book draft:
+
+- no title repeats or contradicts the one across a boundary (3:5–8 "put
+  away evil desires, anger and slander", 3:9–11 "must not lie; Christ is in
+  all"; 1:28–29 "Paul teaches everyone", 2:1–3 "Paul struggles for the
+  Colossians");
+- none of the 4 disagreements is on a title next to a boundary (1:7–8,
+  2:4–5, 4:12–14, 4:18), against 4 in the whole-book run (1:7–8, 1:11–12,
+  1:21–23, 2:4–5);
+- who is named stays the same across batches ("believers", "the
+  Colossians", "Paul" in every batch); the batched drafts use "us" or
+  "you" in no title, where the whole-book one did twice (1:13–14, 1:21–23).
+
+Watch item, untested beyond one short book and one run: a long narrative
+book, where a batch boundary can fall inside a story, may need the last
+title of the batch before. The first long book drafted is where to look.
+
+### Whole-Bible drafting, re-derived
+
+| Quantity                        | Value                                      | Label     | Method                                                                                                                                                                                                                                                                                  |
+| ------------------------------- | ------------------------------------------ | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Draft cost per title            | $0.0014 to $0.0025                         | measured  | Colossians, six drafts with prompt `cc76a816…` on 2026-11-03: $0.0475 (#212), $0.0679 (A), $0.0699 and $0.0813 (#197 runs 1 and 2), $0.0748 (D), $0.0786 (three batches of 11); and two with the current prompt `838516080c8f…`: $0.0627 and $0.0764 (#209, below); each over 33 titles |
+| Drafting cost, all 66 books     | about $19 to $33                           | estimated | 13,507 titles × the per-title range. Production batches average 32.2 titles, the size measured; batches of 11 fell inside the range, so smaller batches are not assumed to cost more. One long book in full batches would test it.                                                      |
+| Drafting model time, all books  | about 3 to 5 hours, one call after another | estimated | 13,507 titles × 0.80 to 1.39 s per title (26.5 to 45.9 s over 33 in the runs above)                                                                                                                                                                                                     |
+| Draft completion, largest batch | 6,311 of 16,384 tokens (39%) for 33 titles | measured  | #197 run 2 (above); the batches of 11 used at most 2,329 (14%)                                                                                                                                                                                                                          |
+
+This replaces the Philippians estimate of about $28 (above), which used a
+draft that did not reason. With the check estimate (#201, about $19 to
+$42), drafting and checking the English titles is about $38 to $75
+(estimated, the two ranges added).
 
 ## Measured: English segment titles, Colossians, committed run (#209)
 
