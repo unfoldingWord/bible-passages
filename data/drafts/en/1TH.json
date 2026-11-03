@@ -1,0 +1,225 @@
+{
+  "language": "en",
+  "book": "1TH",
+  "bible": "bsb-1th",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "cc76a816652a11c859a8aa0bb24c7674d96202656478b93d9727970bef28879d"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793733641-n9cAAE8u5ljPELnx64nI",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5515,
+      "completionTokens": 5021,
+      "reasoningTokens": 4148,
+      "cost": 0.06124,
+      "ms": 30693
+    },
+    {
+      "role": "check",
+      "id": "gen-1793733671-3H9BLy0tZYH3C7pB3EZL",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4744,
+      "completionTokens": 16584,
+      "reasoningTokens": 15709,
+      "cost": 0.065748,
+      "ms": 69986
+    }
+  ],
+  "titles": {
+    "1TH.1.1-1": {
+      "text": "Paul, Silvanus, and Timothy greet the church",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.1.2-3": {
+      "text": "Paul thanks God for the believers’ faith, love, and hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.1.4-5": {
+      "text": "Paul knows God chose them; the gospel came with power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.1.6-7": {
+      "text": "The Thessalonians followed Paul and became an example",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.1.8-10": {
+      "text": "Everyone hears how the Thessalonians turned to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.1-2": {
+      "text": "Paul spoke the gospel boldly in spite of suffering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.3-4": {
+      "text": "Paul’s message came from God, not from trickery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.5-6": {
+      "text": "Paul never flattered them or sought praise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.7-9": {
+      "text": "Paul cared for them like a mother and worked hard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.10-12": {
+      "text": "Paul acted like a father to each of them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.13-13": {
+      "text": "The Thessalonians accepted the message as God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.2.14-16": {
+      "text": "The Thessalonians suffer as the Judean churches did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.3.1-3": {
+      "text": "Paul sent Timothy from Athens to strengthen them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.3.4-5": {
+      "text": "Paul feared the tempter had made his work useless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.3.6-7": {
+      "text": "Timothy brings good news about their faith and love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.3.8-10": {
+      "text": "Paul thanks God and prays to see them again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.3.11-13": {
+      "text": "Paul prays to visit them and that their love grows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.4.1-2": {
+      "text": "Paul urges believers to live to please God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.4.3-6": {
+      "text": "God wants believers to be holy and avoid sexual sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.4.7-8": {
+      "text": "God called believers to holiness, not impurity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.4.9-12": {
+      "text": "Paul urges believers to love more and work quietly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.4.13-15": {
+      "text": "Believers who died will be with Jesus; do not grieve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "style"],
+        "why": "The title ends with a command that names no one, and Paul does not forbid grieving entirely, only grieving without hope.",
+        "suggestion": "Believers who have died will be with Jesus"
+      }
+    },
+    "1TH.4.16-18": {
+      "text": "The Lord will come, and believers will meet him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.1-3": {
+      "text": "The Day of the Lord will come suddenly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.4-7": {
+      "text": "Believers belong to the day and must stay alert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.8-11": {
+      "text": "God has appointed believers to salvation, not wrath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.12-14": {
+      "text": "Paul urges believers to respect leaders and help the weak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.15-18": {
+      "text": "Believers should do good, rejoice, pray, and give thanks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.19-22": {
+      "text": "Believers must test everything and hold to what is good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.23-24": {
+      "text": "Paul prays that God will keep them blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TH.5.25-28": {
+      "text": "Paul asks them to pray and to read this letter to all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

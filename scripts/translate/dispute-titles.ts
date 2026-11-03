@@ -1,38 +1,46 @@
 // The third check (ADR 0005 item 6, issue #198): sends every English segment
 // title the checker disagreed with to a third model, which reads the verses
-// in the pinned ULT and sorts the dispute as factual or taste. See
+// in the pinned ULT and sorts the dispute as factual or taste, then sends
+// every title it gives back through the record's checker (#207). See
 // scripts/lib/dispute-titles.ts and prompts/dispute-titles.md.
 //
 //   OPENROUTER_API_KEY=... node scripts/translate/dispute-titles.ts \
 //     --book PHP --model openai/gpt-6.1-sol \
+//     [--recheck-model google/gemini-3.8-flash] \
 //     [--record data/drafts/en/PHP.json] [--out .cache/dispute-titles/<run>]
 //
 // Run after scripts/translate/segment-titles.ts, on its record. Inputs, all
-// offline apart from the one call: the record, the book's structure, its BSB
-// headings (context) and ULT text (`ult-<book>`), read through their pins,
-// and the Titus record for the voice (data/drafts/en/TIT.json).
+// offline apart from the two calls: the record, the book's structure, its
+// BSB text and headings and ULT text (`ult-<book>`), read through their pins,
+// the Titus record for the voice (data/drafts/en/TIT.json), and the
+// segment-title prompt the record's drafts were checked with (found by its
+// SHA-256 in prompts/ or prompts/history/). The recheck model is the
+// record's checking model unless --recheck-model names another.
 //
 // The key is read only from the environment and is never written or printed.
 // Output goes to --out, by default under .cache/ (not committed):
-// `en/<BOOK>.json`, the record with each answer added as `dispute`, and
-// `run.json`, the ledger of the call. To keep a run, copy the record
+// `en/<BOOK>.json`, the record with each answer added as `dispute`,
+// `run.json`, the ledger of both calls, and `review.md`, the review sheet
+// for a person (#207). To keep a run, copy the record
 // unchanged to data/drafts/en/<BOOK>.json and rebuild.
 // Exit 0: every disputed title settled (or none to settle). Exit 2: the run
 // stopped or some answers are missing or unreadable. Exit 1: an error.
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import {
   settleDisputes,
+  reviewSheet,
   ultSource,
   ultVerseTexts,
   voiceOf,
   type DisputedRecord,
 } from "../lib/dispute-titles.ts";
 import { complete } from "../lib/openrouter.ts";
-import { segmentInputs } from "../lib/segment-titles.ts";
+import { segmentInputs, verseTexts } from "../lib/segment-titles.ts";
+import { sha256 } from "../lib/translate.ts";
 import { readSource } from "../lib/sources.ts";
 import { parseHeadings, type Structure } from "../lib/structure.ts";
 import { writeJson } from "../lib/write.ts";
@@ -48,6 +56,7 @@ const { values } = parseArgs({
   options: {
     book: { type: "string" },
     model: { type: "string" },
+    "recheck-model": { type: "string" },
     record: { type: "string" },
     out: { type: "string" },
   },
@@ -87,11 +96,29 @@ const structure = JSON.parse(
 const id = book.toLowerCase();
 const verses = ultSource(book);
 const ult = ultVerseTexts(await readSource(verses));
-const { inputs } = segmentInputs(
+const bsbText = await readSource(record.bible);
+const headings = parseHeadings(bsbText);
+const { inputs } = segmentInputs(structure, headings, ult);
+const { inputs: bsbInputs } = segmentInputs(
   structure,
-  parseHeadings(await readSource(`bsb-${id}`)),
-  ult
+  headings,
+  verseTexts(bsbText)
 );
+
+// The segment-title prompt the record's drafts were checked with: the
+// current file or a kept one in prompts/history/, by SHA-256.
+const checkPromptFile = (() => {
+  const want = record.prompt.sha256;
+  if (!/^[0-9a-f]{64}$/.test(want)) return fail("the record's prompt hash");
+  for (const f of [
+    "prompts/segment-titles.md",
+    `prompts/history/segment-titles-${want.slice(0, 12)}.md`,
+  ]) {
+    const u = new URL(f, root);
+    if (existsSync(u) && sha256(readFileSync(u, "utf8")) === want) return f;
+  }
+  return fail("no kept prompt matches the record's prompt SHA-256");
+})();
 
 const voiceFile = "data/drafts/en/TIT.json";
 const voiceText = readFileSync(new URL(voiceFile, root), "utf8");
@@ -115,6 +142,14 @@ try {
       text: readFileSync(new URL(promptPath, root), "utf8"),
     },
     model,
+    recheck: {
+      prompt: {
+        file: checkPromptFile,
+        text: readFileSync(new URL(checkPromptFile, root), "utf8"),
+      },
+      inputs: bsbInputs,
+      ...(values["recheck-model"] ? { model: values["recheck-model"] } : {}),
+    },
     complete: (request) => complete(request, { apiKey }),
     write: async (ledger) => {
       await writeJson(new URL("run.json", out), ledger);
@@ -123,6 +158,7 @@ try {
   });
   if (settled) {
     await writeJson(new URL(`en/${book}.json`, out), settled);
+    writeFileSync(new URL("review.md", out), reviewSheet(settled, inputs));
     // Only what this run settled: a dispute already on the record was
     // settled by an earlier run (#206).
     const ds = Object.entries(settled.titles).filter(
@@ -133,15 +169,15 @@ try {
     console.log(
       `en ${book}: ${ds.length} disputes settled in this run: ${count("taste")} taste, ` +
         `${count("factual")} factual, ` +
-        `${ds.filter(([, t]) => t.dispute?.gates).length} gate failures`
+        `${ds.filter(([, t]) => t.dispute?.gates).length} gate failures; ` +
+        `the checker agreed with ${ds.filter(([, t]) => t.dispute?.recheck?.verdict === "agree").length}, ` +
+        `${ds.filter(([, t]) => t.dispute?.status === "ai-checked").length} ai-checked`
     );
-    for (const [k, t] of ds)
+    for (const c of settled.calls.filter(
+      (c) => c.role === "dispute" || c.role === "recheck"
+    ))
       console.log(
-        `${k}\t${t.dispute!.kind}\t${[...t.dispute!.text].length}\t${t.dispute!.text}\t${t.dispute!.why}`
-      );
-    for (const c of settled.calls.filter((c) => c.role === "dispute"))
-      console.log(
-        `dispute ${c.model}: ${c.promptTokens}+${c.completionTokens} tokens` +
+        `${c.role} ${c.model}: ${c.promptTokens}+${c.completionTokens} tokens` +
           ` (${c.reasoningTokens ?? "?"} reasoning), $${c.cost?.toFixed(6) ?? "unknown"}, ${c.ms} ms`
       );
   }

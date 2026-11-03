@@ -418,6 +418,45 @@ draft cost is not shown. Watch item, not measured: "believers" now names
 16 to 20 of 33 titles, so a list may read as repetitive; a person's review
 of a book drafted this way would show whether that matters.
 
+## Measured: English segment titles, 1 Thessalonians, committed run (#207)
+
+One plain run of the CLI on 2026-11-03 (19:20:40 to 19:22:22 UTC), with the
+code at `9711b49` (drafting and check code as at `361fb5a`, the prompt of
+#197, SHA-256 `cc76a816…`, before #216's readers rule; that prompt is kept
+as `prompts/history/segment-titles-cc76a816652a.md`) and the same models as Philippians and
+Colossians. It was drafted to give #207 a second blind book: 1 Thessalonians
+was chosen over 2 Thessalonians (18 drafted segments) and 2 Timothy (30) as
+the one with the most segments to draft (31), and, unlike 2 Timothy, not a
+pastoral letter like Titus, whose reviewed titles are the third check's
+voice. The record was copied unchanged to `data/drafts/en/1TH.json` (`cmp`
+with the run's `en/1TH.json` reported no difference).
+
+```
+node scripts/translate/segment-titles.ts --book 1TH \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.30
+```
+
+The runner exited 0: 31 of 31 segments drafted, 1 reusing its pericope
+title, 30 `ai-checked`, 1 disagreement, 0 gate failures. The numbers below
+were counted twice from the record, with `jq` and with Python, which gave the
+same results.
+
+| Quantity                     | Value                                     | Label               | Source and method                                                                                 |
+| ---------------------------- | ----------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------- |
+| Segments drafted             | 31 of 32                                  | measured 2026-11-03 | the other (`1TH.2.17-20`) is its pericope's only segment                                          |
+| Calls                        | 1 draft, 1 check (one batch of 31)        | measured 2026-11-03 | `calls`; draft `gen-1793733641-n9cAAE8u5ljPELnx64nI`, check `gen-1793733671-3H9BLy0tZYH3C7pB3EZL` |
+| Cost                         | $0.1270 ($0.0612 draft, $0.0657 check)    | measured 2026-11-03 | OpenRouter's billed `cost` per call                                                               |
+| Cost per drafted title       | $0.0041                                   | measured 2026-11-03 | $0.1270 / 31                                                                                      |
+| Tokens                       | 31,864 (10,259 prompt, 21,605 completion) | measured 2026-11-03 | draft 5,515 + 5,021 (4,148 reasoning); check 4,744 + 16,584 (15,709 reasoning)                    |
+| Model time                   | 100.7 s (30.7 s draft, 70.0 s check)      | measured 2026-11-03 | `ms` per call, summed                                                                             |
+| Checker agreed               | 30 of 31 (`ai-checked`)                   | measured 2026-11-03 | 1 disagreement (`accurate`, `style`)                                                              |
+| Drafts over 60 characters    | 0 of 31 (longest 57, mean 48.9)           | measured 2026-11-03 | the `length` gate and `text` lengths                                                              |
+| Titles in the tC Mobile file | 30 of 32 segments                         | measured 2026-11-03 | `npm run build`: the disputed draft and the reused pericope title are `unreviewed`, left out      |
+
+The check reasoned 15,709 tokens here against 5,592 on the committed
+Colossians run, and cost more than the draft; why is not measured.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

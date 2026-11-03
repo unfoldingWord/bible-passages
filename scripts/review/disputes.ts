@@ -1,14 +1,18 @@
-// Lists the English titles a third model sorted as factual disputes (ADR
-// 0005 item 6), for the content team and the release notes: one Markdown
-// table over every record in data/drafts/en/, and the count by kind.
+// Lists the English disputed titles a third model left `unreviewed` (ADR
+// 0005 item 6): every factual one, and every taste one the checker did not
+// agree with on its recheck (#207) or that failed a gate, for the content
+// team and the release notes: one Markdown table over every record in
+// data/drafts/en/, and the count by kind.
 //
 //   node scripts/review/disputes.ts [--all]
 //
-// --all lists the taste disputes too. Offline; reads committed files only.
+// --all lists the ai-checked taste disputes too. Offline; reads committed
+// files only.
 import { existsSync, readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { BOOKS } from "../lib/books.ts";
 import {
+  cell,
   listDisputes,
   type DisputedRecord,
   type Listed,
@@ -19,8 +23,6 @@ const { values } = parseArgs({
 });
 
 const root = new URL("../../", import.meta.url);
-const cell = (s: string) =>
-  s.replace(/\s+/g, " ").replace(/\p{C}/gu, "").replace(/\|/g, "\\|");
 
 const rows: Listed[] = [];
 const counts = { factual: 0, taste: 0 };
@@ -37,9 +39,13 @@ console.log(
     `${counts.factual} factual, ${counts.taste} taste.`
 );
 console.log("");
-console.log("| Key | Kind | Status | Draft | Third model’s title | Why | By |");
-console.log("| --- | ---- | ------ | ----- | ------------------- | --- | -- |");
+console.log(
+  "| Key | Kind | Status | Draft | Third model’s title | Why | Checker on the title | By |"
+);
+console.log(
+  "| --- | ---- | ------ | ----- | ------------------- | --- | -------------------- | -- |"
+);
 for (const r of rows)
   console.log(
-    `| ${r.key} | ${r.kind} | ${r.status} | ${cell(r.draft)} | ${cell(r.text)} | ${cell(r.why)} | ${r.by} |`
+    `| ${r.key} | ${r.kind} | ${r.status} | ${cell(r.draft)} | ${cell(r.text)} | ${cell(r.why)} | ${r.recheckWhy ? `${r.recheck} (${cell(r.recheckWhy)})` : r.recheck} | ${r.by} |`
   );

@@ -14,20 +14,28 @@ import {
   builtTitle,
   disputeCheckProblems,
   disputeInputs,
+  disputeMessage,
   disputeProblems,
   disputePrompt,
   listDisputes,
   readDisputes,
+  reviewSheet,
   settleDisputes,
   ultSource,
   ultVerseTexts,
   voiceOf,
   type Complete,
+  type DisputeCheck,
   type DisputedRecord,
   type Title,
 } from "../scripts/lib/dispute-titles.ts";
 import type { Completion } from "../scripts/lib/openrouter.ts";
-import type { SegmentInput } from "../scripts/lib/segment-titles.ts";
+import {
+  CHECK_MAX_TOKENS,
+  checkMessage,
+  promptPart,
+  type SegmentInput,
+} from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
 
 const read = (path: string) =>
@@ -68,11 +76,16 @@ const call = (role: "draft" | "check", model: string) => ({
   ms: 1,
 });
 
+const SEGMENT_PROMPT = readFileSync(
+  new URL("../prompts/segment-titles.md", import.meta.url),
+  "utf8"
+);
+
 const record = (): DisputedRecord => ({
   language: "en",
   book: "XYZ",
   bible: "bsb-xyz",
-  prompt: { file: "prompts/segment-titles.md", sha256: "0" },
+  prompt: { file: "prompts/segment-titles.md", sha256: sha256(SEGMENT_PROMPT) },
   calls: [call("draft", DRAFTER), call("check", CHECKER)],
   titles: {
     "XYZ.1.1-2": agreed("Paul greets the believers"),
@@ -93,19 +106,54 @@ const inputs: SegmentInput[] = ["1.1-2", "1.3-4", "1.5-6"].map((s) => ({
   pericope: "Greeting",
   text: `ULT text of ${s}`,
 }));
+const bsbInputs: SegmentInput[] = inputs.map((s) => ({
+  ...s,
+  text: s.text.replace("ULT", "BSB"),
+}));
 
-function fakeModel(reply: unknown, answeredBy?: string) {
-  const sent: { model: string; system: string; user: string }[] = [];
+/** The checker agreeing with every title it is sent. */
+const agreeAll = (user: string) =>
+  Object.fromEntries(
+    (JSON.parse(user) as { segments: { key: string }[] }).segments.map((s) => [
+      s.key,
+      { verdict: "agree" },
+    ])
+  );
+
+/**
+ * A fake OpenRouter: the first call gets `reply`, the second (the recheck)
+ * `recheck`, by default an agreement with every title sent.
+ */
+function fakeModel(
+  reply: unknown,
+  answeredBy?: string,
+  recheck: unknown | ((user: string) => unknown) = agreeAll,
+  recheckBy?: string
+) {
+  const sent: {
+    model: string;
+    system: string;
+    user: string;
+    maxTokens?: number;
+  }[] = [];
   const complete: Complete = async (request) => {
+    const user = request.messages[1]?.content ?? "";
     sent.push({
       model: request.model,
       system: request.messages[0]?.content ?? "",
-      user: request.messages[1]?.content ?? "",
+      user,
+      ...(request.maxTokens ? { maxTokens: request.maxTokens } : {}),
     });
+    const first = sent.length === 1;
+    const answer = first
+      ? reply
+      : typeof recheck === "function"
+        ? (recheck as (u: string) => unknown)(user)
+        : recheck;
     const c: Completion = {
-      id: "gen-3",
-      model: answeredBy ?? request.model,
-      text: JSON.stringify(reply),
+      id: first ? "gen-3" : "gen-4",
+      model: (first ? answeredBy : recheckBy) ?? request.model,
+      text: JSON.stringify(answer),
       usage: {
         promptTokens: 100,
         completionTokens: 10,
@@ -138,6 +186,10 @@ const settle = (
       },
       prompt: { file: "prompts/dispute-titles.md", text: PROMPT },
       model: THIRD,
+      recheck: {
+        prompt: { file: "prompts/segment-titles.md", text: SEGMENT_PROMPT },
+        inputs: bsbInputs,
+      },
       complete,
       write: async (l) => {
         ledgers.push(l);
@@ -148,7 +200,7 @@ const settle = (
 };
 
 describe("the third check (ADR 0005 item 6)", () => {
-  it("sends only the disputed titles, with their ULT verses, the checker's objection and the Titus voice", async () => {
+  it("sends only the disputed titles, with their ULT verses, the checker's objection and the Titus voice, never its suggestion", async () => {
     const { complete, sent } = fakeModel({
       "XYZ.1.3-4": {
         kind: "taste",
@@ -163,7 +215,7 @@ describe("the third check (ADR 0005 item 6)", () => {
     });
     const { run } = settle(complete);
     await run;
-    expect(sent).toHaveLength(1);
+    expect(sent).toHaveLength(2);
     expect(sent[0]!.model).toBe(THIRD);
     expect(sent[0]!.system).toBe(disputePrompt(PROMPT));
     const user = JSON.parse(sent[0]!.user);
@@ -174,12 +226,203 @@ describe("the third check (ADR 0005 item 6)", () => {
       "XYZ.1.3-4",
       "XYZ.1.5-6",
     ]);
-    expect(user.segments[0]).toMatchObject({
+    expect(user.segments[0]).toEqual({
+      key: "XYZ.1.3-4",
+      verses: "1:3-4",
+      pericope: "Greeting",
       text: "ULT text of 1.3-4",
       draft: "Paul thanks God for them",
       criteria: ["plain"],
-      suggestion: "Paul thanks God for the believers",
+      why: "Unclear them.",
     });
+    // Blind (#207): neither suggestion is anywhere in what the third model
+    // is sent.
+    for (const m of [sent[0]!.system, sent[0]!.user]) {
+      expect(m).not.toContain("Paul thanks God for the believers");
+      expect(m).not.toContain("Paul hopes they are freed");
+      expect(m).not.toContain("suggestion");
+    }
+  });
+
+  it("never sends a person's review or its wording to the third model", async () => {
+    const r = record();
+    r.titles["XYZ.1.1-2"] = {
+      ...disputed("Paul greets them", "Paul greets the church"),
+      review: {
+        by: "reviewer:a",
+        status: "human-reviewed",
+        text: "A reviewer’s own words",
+      },
+    };
+    const { complete, sent } = fakeModel({});
+    await settle(complete, { record: r }).run;
+    expect(sent[0]!.user).not.toContain("A reviewer’s own words");
+    expect(sent[0]!.user).not.toContain("human-reviewed");
+    expect(sent[0]!.user).not.toContain("Paul greets");
+  });
+
+  it("sends every title the third model gives back to the record's checker, as a draft is checked", async () => {
+    const { complete, sent } = fakeModel({
+      "XYZ.1.3-4": {
+        kind: "taste",
+        title: "Paul thanks God for the believers",
+        why: "Keeps the thanks.",
+      },
+      "XYZ.1.5-6": {
+        kind: "factual",
+        title: "Paul expects deliverance",
+        why: "Freed picks one reading.",
+      },
+    });
+    await settle(complete).run;
+    expect(sent[1]!.model).toBe(CHECKER);
+    expect(sent[1]!.maxTokens).toBe(CHECK_MAX_TOKENS);
+    expect(sent[1]!.system).toBe(promptPart(SEGMENT_PROMPT, "check"));
+    expect(sent[1]!.user).toBe(
+      checkMessage("XYZ", bsbInputs.slice(1), {
+        "XYZ.1.3-4": "Paul thanks God for the believers",
+        "XYZ.1.5-6": "Paul expects deliverance",
+      })
+    );
+    // Nothing else the third model said: not its kind, nor its reason.
+    expect(sent[1]!.user).not.toContain("Keeps the thanks");
+    expect(sent[1]!.user).not.toContain("factual");
+  });
+
+  it("leaves a taste title the checker does not agree with unreviewed, and lists it", async () => {
+    const { complete } = fakeModel(
+      {
+        "XYZ.1.3-4": {
+          kind: "taste",
+          title: "Paul thanks God",
+          why: "Shorter.",
+        },
+        "XYZ.1.5-6": {
+          kind: "taste",
+          title: "Paul hopes for deliverance",
+          why: "Plain.",
+        },
+      },
+      undefined,
+      {
+        "XYZ.1.3-4": {
+          verdict: "disagree",
+          criteria: ["covers"],
+          why: "Drops the prayer.",
+          suggestion: "Paul thanks God and prays for them",
+        },
+        "XYZ.1.5-6": { verdict: "agree" },
+      }
+    );
+    const { record: r, outcome } = await settle(complete).run;
+    expect(outcome).toBe("done");
+    const a = r!.titles["XYZ.1.3-4"]!.dispute!;
+    expect(a.status).toBe("unreviewed");
+    expect(a.recheck).toMatchObject({
+      by: `ai:${CHECKER}`,
+      verdict: "disagree",
+    });
+    expect(r!.titles["XYZ.1.5-6"]!.dispute!.status).toBe("ai-checked");
+    for (const t of Object.values(r!.titles))
+      expect(disputeProblems(t)).toEqual([]);
+    expect(
+      listDisputes(r!).map((d) => [d.key, d.recheck, d.recheckWhy])
+    ).toEqual([["XYZ.1.3-4", "disagree", "covers: Drops the prayer."]]);
+    expect(r!.calls.map((c) => c.role)).toEqual([
+      "draft",
+      "check",
+      "dispute",
+      "recheck",
+    ]);
+  });
+
+  it("returns no record when the recheck gives no reply, so a retry rechecks every title", async () => {
+    const { complete } = fakeModel(
+      {
+        "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+        "XYZ.1.5-6": { kind: "taste", title: "Paul hopes", why: "x" },
+      },
+      undefined,
+      "not json"
+    );
+    const { run, ledgers } = settle(complete);
+    const { record: r, outcome } = await run;
+    expect(outcome).toMatchObject({
+      stopped: expect.stringContaining("recheck"),
+    });
+    // Nothing to commit: a record with unrechecked disputes would make a
+    // later run report "nothing to settle".
+    expect(r).toBeNull();
+    const last = ledgers.at(-1) as {
+      calls: { role: string }[];
+      reply: unknown;
+    };
+    expect(last.calls.map((c) => c.role)).toEqual(["dispute", "recheck"]);
+    expect(last.reply).not.toBeNull();
+  });
+
+  it("returns no record when the recheck leaves any title without a verdict", async () => {
+    const { complete } = fakeModel(
+      {
+        "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+        "XYZ.1.5-6": { kind: "taste", title: "Paul hopes", why: "x" },
+      },
+      undefined,
+      { "XYZ.1.3-4": { verdict: "agree" } }
+    );
+    const { record: r, outcome } = await settle(complete).run;
+    expect(r).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "recheck gave no verdict on XYZ.1.5-6",
+    });
+  });
+
+  it("refuses a recheck answered by the third model's family", async () => {
+    const { complete } = fakeModel(
+      { "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" } },
+      undefined,
+      agreeAll,
+      "openai/gpt-6.1-mini"
+    );
+    const { record: r, outcome } = await settle(complete).run;
+    expect(outcome).toMatchObject({
+      stopped: expect.stringContaining("not of the checking model's family"),
+    });
+    expect(r).toBeNull();
+  });
+
+  it.each([
+    ["the third model's family", { model: "openai/gpt-6.1-mini" }],
+    ["the drafting model's family", { model: DRAFTER }],
+    ["a fourth family, not the checker's", { model: "x-ai/grok-4.7" }],
+  ])(
+    "refuses a recheck model of %s before any spend",
+    async (_name, change) => {
+      const { complete, sent } = fakeModel({});
+      await expect(
+        settle(complete, {
+          recheck: {
+            prompt: { file: "prompts/segment-titles.md", text: SEGMENT_PROMPT },
+            inputs: bsbInputs,
+            ...change,
+          },
+        }).run
+      ).rejects.toThrow("recheck model");
+      expect(sent).toHaveLength(0);
+    }
+  );
+
+  it("refuses a recheck prompt other than the one the drafts were checked with", async () => {
+    const { complete, sent } = fakeModel({});
+    await expect(
+      settle(complete, {
+        recheck: {
+          prompt: { file: "prompts/segment-titles.md", text: "another" },
+          inputs: bsbInputs,
+        },
+      }).run
+    ).rejects.toThrow("recheck prompt");
+    expect(sent).toHaveLength(0);
   });
 
   it("replaces a taste title as ai-checked, keeps a factual one unreviewed, and changes nothing the models recorded before", async () => {
@@ -211,6 +454,7 @@ describe("the third check (ADR 0005 item 6)", () => {
       text: "Paul thanks God for the believers",
       why: "Names them.",
       status: "ai-checked",
+      recheck: { by: `ai:${CHECKER}`, verdict: "agree" },
     });
     expect(builtTitle(r!.titles["XYZ.1.3-4"]!)).toEqual({
       text: "Paul thanks God for the believers",
@@ -222,12 +466,25 @@ describe("the third check (ADR 0005 item 6)", () => {
       status: "unreviewed",
       source: `ai:${THIRD}`,
     });
-    expect(r!.calls.map((c) => c.role)).toEqual(["draft", "check", "dispute"]);
+    expect(r!.calls.map((c) => c.role)).toEqual([
+      "draft",
+      "check",
+      "dispute",
+      "recheck",
+    ]);
     expect(r!.calls[2]).toMatchObject({ model: THIRD, cost: 0.02 });
+    expect(r!.calls[3]).toMatchObject({ id: "gen-4", model: CHECKER });
     expect(r!.disputeCheck).toEqual({
       prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
       verses: "ult-xyz",
       voice: { file: "data/drafts/en/TIT.json", sha256: sha256("{}") },
+      recheck: {
+        prompt: {
+          file: "prompts/segment-titles.md",
+          sha256: sha256(SEGMENT_PROMPT),
+        },
+        bible: "bsb-xyz",
+      },
     });
     expect(listDisputes(r!).map((d) => d.key)).toEqual(["XYZ.1.5-6"]);
     expect(listDisputes(r!, true).map((d) => d.kind)).toEqual([
@@ -272,7 +529,7 @@ describe("the third check (ADR 0005 item 6)", () => {
     expect(r!.titles["XYZ.1.5-6"]!.dispute).toBeUndefined();
   });
 
-  it("keeps one disputeCheck per record: a later run must use the same prompt, ULT and voice", async () => {
+  it("keeps one disputeCheck per record: a later run must use the same prompt, ULT, voice and recheck", async () => {
     const answer = {
       "XYZ.1.5-6": {
         kind: "factual",
@@ -287,11 +544,19 @@ describe("the third check (ADR 0005 item 6)", () => {
       text: "Paul thanks God",
       why: "x",
       status: "ai-checked",
+      recheck: { by: `ai:${CHECKER}`, verdict: "agree" },
     };
     const same = {
       prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
       verses: "ult-xyz",
       voice: { file: "data/drafts/en/TIT.json", sha256: sha256("{}") },
+      recheck: {
+        prompt: {
+          file: "prompts/segment-titles.md",
+          sha256: sha256(SEGMENT_PROMPT),
+        },
+        bible: "bsb-xyz",
+      },
     };
     const { complete, sent } = fakeModel(answer);
     const ok = await settle(complete, {
@@ -406,11 +671,30 @@ describe("disputeProblems", () => {
       text: "Paul thanks God",
       why: "x",
       status: "ai-checked",
+      recheck: { by: `ai:${CHECKER}`, verdict: "agree" },
     },
   };
 
   it("accepts a well-formed dispute", () => {
     expect(disputeProblems(ok)).toEqual([]);
+  });
+
+  it("accepts a taste title left unreviewed by a recheck that disagreed", () => {
+    const t = {
+      ...ok,
+      dispute: {
+        ...ok.dispute!,
+        status: "unreviewed",
+        recheck: {
+          by: `ai:${CHECKER}`,
+          verdict: "disagree",
+          criteria: ["covers"],
+          why: "Drops a verse.",
+          suggestion: "x",
+        },
+      },
+    } as Title;
+    expect(disputeProblems(t)).toEqual([]);
   });
 
   it.each([
@@ -434,6 +718,52 @@ describe("disputeProblems", () => {
       "gates",
     ],
     ["an extra field", { status2: "x" }, "field"],
+    [
+      "a taste title ai-checked with no recheck",
+      { recheck: undefined },
+      "status is not unreviewed",
+    ],
+    [
+      "a taste title ai-checked though the recheck disagreed",
+      {
+        recheck: {
+          by: `ai:${CHECKER}`,
+          verdict: "disagree",
+          criteria: ["covers"],
+          why: "x",
+          suggestion: "x",
+        },
+      },
+      "status is not unreviewed",
+    ],
+    [
+      "a recheck by the third model's family",
+      { recheck: { by: "ai:openai/gpt-6.1-mini", verdict: "agree" } },
+      "third model's family",
+    ],
+    [
+      "a recheck by the drafting model's family",
+      { recheck: { by: `ai:${DRAFTER}`, verdict: "agree" } },
+      "drafting model's family",
+    ],
+    [
+      "a recheck by a family other than the checker's",
+      { recheck: { by: "ai:x-ai/grok-4.7", verdict: "agree" } },
+      "not by the checking model's family",
+    ],
+    [
+      "a recheck with an unknown criterion",
+      {
+        recheck: {
+          by: `ai:${CHECKER}`,
+          verdict: "disagree",
+          criteria: ["taste"],
+          why: "x",
+          suggestion: "x",
+        },
+      },
+      "recheck criteria",
+    ],
   ])("refuses %s", (_name, change, problem) => {
     const t = { ...ok, dispute: { ...ok.dispute!, ...change } } as Title;
     expect(disputeProblems(t).join("; ")).toContain(problem);
@@ -485,9 +815,23 @@ describe("a recorded third check (fixture: the Philippians trial run)", () => {
     read("tests/fixtures/disputes/PHP-run1.json")
   ) as DisputedRecord;
 
-  it("passes every rule the build holds a dispute to", () => {
-    for (const [k, t] of Object.entries(r.titles))
-      expect(disputeProblems(t), k).toEqual([]);
+  it("is refused by the revised rules: no taste title reaches ai-checked without a recheck (#207)", () => {
+    const refused: string[] = [];
+    for (const [k, t] of Object.entries(r.titles)) {
+      const p = disputeProblems(t);
+      if (t.dispute?.kind === "taste")
+        expect(p, k).toEqual(["status is not unreviewed"]);
+      else expect(p, k).toEqual([]);
+      if (p.length > 0) refused.push(k);
+    }
+    expect(refused).toHaveLength(12);
+  });
+
+  it("was made with the first dispute prompt, kept in prompts/history/", () => {
+    const h = r.disputeCheck!.prompt.sha256;
+    const kept = read(`prompts/history/dispute-titles-${h.slice(0, 12)}.md`);
+    expect(sha256(kept)).toBe(h);
+    expect(sha256(PROMPT)).not.toBe(h);
   });
 
   it("settles every disputed title, and only those, by a third family", () => {
@@ -505,7 +849,7 @@ describe("a recorded third check (fixture: the Philippians trial run)", () => {
     });
   });
 
-  it("builds taste titles as ai-checked and factual ones as unreviewed proposals", () => {
+  it("was built, under the first rules, with taste titles ai-checked and factual ones unreviewed", () => {
     const kinds = { taste: 0, factual: 0 };
     for (const t of Object.values(r.titles)) {
       if (!t.dispute) continue;
@@ -542,6 +886,13 @@ describe("the third check's guards and records (#206)", () => {
     prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
     verses: "ult-xyz",
     voice: { file: "data/drafts/en/TIT.json", sha256: sha256("{}") },
+    recheck: {
+      prompt: {
+        file: "prompts/segment-titles.md",
+        sha256: sha256(SEGMENT_PROMPT),
+      },
+      bible: "bsb-xyz",
+    },
   };
 
   it("refuses another run's disputeCheck even when nothing is left to settle", async () => {
@@ -605,16 +956,64 @@ describe("the third check's guards and records (#206)", () => {
     ).toEqual(['gates are not ["full-stop"]']);
   });
 
+  it("keeps the raw text of a recheck reply it cannot read in the ledger", async () => {
+    const { complete } = fakeModel(
+      {
+        "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+        "XYZ.1.5-6": { kind: "factual", title: "Paul expects it", why: "x" },
+      },
+      undefined,
+      "cut off"
+    );
+    const { run, ledgers } = settle(complete);
+    const { record: r, outcome } = await run;
+    expect(r).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "recheck: unreadable reply: reply has no JSON object",
+    });
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      recheckReply: null,
+      recheckReplyText: JSON.stringify("cut off"),
+    });
+    expect(ledgers.at(-1)).not.toHaveProperty("replyText");
+  });
+
   it("holds disputeCheck.verses to the book's own ULT", () => {
+    const at = (disputeCheck?: DisputeCheck) => ({
+      book: "XYZ",
+      titles: {},
+      ...(disputeCheck ? { disputeCheck } : {}),
+    });
     expect(ultSource("PHP")).toBe("ult-php");
-    expect(disputeCheckProblems("XYZ", same)).toEqual([]);
-    expect(disputeCheckProblems("XYZ", undefined)).toEqual([]);
-    expect(disputeCheckProblems("XYZ", { ...same, verses: "ult-php" })).toEqual(
-      ["verses is ult-php, not ult-xyz"]
-    );
-    expect(disputeCheckProblems("XYZ", { ...same, verses: "bsb-xyz" })).toEqual(
-      ["verses is bsb-xyz, not ult-xyz"]
-    );
+    expect(disputeCheckProblems(at(same))).toEqual([]);
+    expect(disputeCheckProblems(at())).toEqual([]);
+    expect(disputeCheckProblems(at({ ...same, verses: "ult-php" }))).toEqual([
+      "verses is ult-php, not ult-xyz",
+    ]);
+    expect(disputeCheckProblems(at({ ...same, verses: "bsb-xyz" }))).toEqual([
+      "verses is bsb-xyz, not ult-xyz",
+    ]);
+  });
+
+  // #223: the runner never writes a dispute without its recheck, so a record
+  // that names one and holds a dispute without it was not made by the runner.
+  it("requires a recheck on every dispute of a record that names disputeCheck.recheck", () => {
+    const r = settled();
+    expect(disputeCheckProblems({ ...r, disputeCheck: same })).toEqual([
+      "XYZ.1.3-4: a dispute with no recheck",
+      "XYZ.1.5-6: a dispute with no recheck",
+    ]);
+    r.titles["XYZ.1.3-4"]!.dispute!.recheck = {
+      by: `ai:${CHECKER}`,
+      verdict: "agree",
+    };
+    expect(disputeCheckProblems({ ...r, disputeCheck: same })).toEqual([
+      "XYZ.1.5-6: a dispute with no recheck",
+    ]);
+    // A record from before the recheck (the PHP trial run) names none.
+    const { recheck: _, ...before } = same;
+    expect(disputeCheckProblems({ ...r, disputeCheck: before })).toEqual([]);
   });
 });
 
@@ -667,6 +1066,15 @@ describe("dispute-titles command line (#206)", () => {
           file: "data/drafts/en/TIT.json",
           sha256: sha256(read("data/drafts/en/TIT.json")),
         },
+        // The kept prompt the record's drafts were checked with, as the
+        // runner finds it by SHA-256.
+        recheck: {
+          prompt: {
+            file: `prompts/history/segment-titles-${r1.prompt.sha256.slice(0, 12)}.md`,
+            sha256: r1.prompt.sha256,
+          },
+          bible: r1.bible,
+        },
       };
       const file = join(dir, "PHP.json");
       writeFileSync(file, JSON.stringify(r1));
@@ -688,5 +1096,108 @@ describe("dispute-titles command line (#206)", () => {
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
+  });
+});
+
+// Blind (#207): the message built for every disputed title of every scripted
+// record holds neither the checker's suggestion nor any verdict from
+// ADR 0005's hand sort, and the instructions none of that sort's titles.
+describe("the third check is blind", () => {
+  const adr = read("docs/decisions/0005-go-no-go-1-ai-checked-english.md");
+  // The Proposed title column of the ADR's Philippians table.
+  const adrTitles = [
+    ...adr.matchAll(/^\| PHP\.[^|]+\|[^|]+\|[^|]+\| ([^|]+?) +\|/gm),
+  ].map((m) => m[1]!);
+
+  it("reads the ADR 0005 table", () => {
+    expect(adrTitles).toHaveLength(14);
+  });
+
+  it("has instructions with none of the ADR 0005 sort in them", () => {
+    const system = disputePrompt(PROMPT);
+    for (const t of adrTitles) expect(system).not.toContain(t);
+    expect(system).not.toContain("vindication");
+    expect(system).not.toContain("suggestion");
+  });
+
+  const records = [
+    ...["COL", "1TH"].map((b) => [b, `data/drafts/en/${b}.json`] as const),
+    ["PHP", "tests/fixtures/disputes/PHP-run1.json"] as const,
+  ];
+  it.each(records)(
+    "builds a message for %s without the checker's suggestions",
+    async (book, file) => {
+      const { readSource } = await import("../scripts/lib/sources.ts");
+      const { segmentInputs } =
+        await import("../scripts/lib/segment-titles.ts");
+      const { parseHeadings } = await import("../scripts/lib/structure.ts");
+      const full = JSON.parse(read(file)) as DisputedRecord;
+      // As before any third check: the drafted and checked record alone.
+      const r: DisputedRecord = {
+        ...full,
+        titles: Object.fromEntries(
+          Object.entries(full.titles).map(([k, t]) => {
+            const { dispute: _d, ...rest } = t;
+            return [k, rest];
+          })
+        ),
+      };
+      const id = book.toLowerCase();
+      const { inputs: ult } = segmentInputs(
+        JSON.parse(read(`data/structure/${book}.json`)),
+        parseHeadings(await readSource(`bsb-${id}`)),
+        ultVerseTexts(await readSource(`ult-${id}`))
+      );
+      const segments = disputeInputs(r, ult);
+      const suggestions = Object.values(r.titles).flatMap((t) =>
+        t.check?.verdict === "disagree" ? [t.check.suggestion] : []
+      );
+      expect(segments.length).toBe(suggestions.length);
+      expect(suggestions.length).toBeGreaterThan(0);
+      const message = disputeMessage(
+        book,
+        voiceOf(JSON.parse(read("data/drafts/en/TIT.json"))),
+        segments
+      );
+      // Counted, not matched one by one, so a failure never prints a
+      // suggestion into a test log before the blind run.
+      expect(suggestions.filter((sg) => message.includes(sg)).length).toBe(0);
+      for (const t of adrTitles) expect(message).not.toContain(t);
+      for (const seg of segments)
+        expect(Object.keys(seg).sort()).toEqual([
+          "criteria",
+          "draft",
+          "key",
+          "pericope",
+          "text",
+          "verses",
+          "why",
+        ]);
+      const voice = JSON.parse(message).voice as { key: string }[];
+      for (const v of voice) expect(v.key).toMatch(/^TIT\./);
+    }
+  );
+});
+
+describe("reviewSheet", () => {
+  it("gives a person each dispute with its verses, the rewrite, the checker's verdict and two empty answer columns", () => {
+    const r = record();
+    r.titles["XYZ.1.3-4"]!.dispute = {
+      by: `ai:${THIRD}`,
+      kind: "taste",
+      text: "Paul thanks God for the believers",
+      why: "Keeps the thanks.",
+      status: "ai-checked",
+      recheck: { by: `ai:${CHECKER}`, verdict: "agree" },
+    };
+    const sheet = reviewSheet(r, inputs);
+    const rows = sheet.trim().split("\n");
+    expect(rows).toHaveLength(3);
+    expect(rows[0]).toContain("Keeps every main point?");
+    expect(rows[2]).toBe(
+      "| XYZ.1.3-4 | 1:3-4 ULT text of 1.3-4 | Paul thanks God for them | plain: Unclear them. | taste | Paul thanks God for the believers | Keeps the thanks. | agree | ai-checked |  |  |"
+    );
+    // Never the checker's suggestion.
+    expect(sheet).not.toContain("Paul hopes they are freed");
   });
 });
