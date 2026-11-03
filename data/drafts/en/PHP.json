@@ -26,16 +26,6 @@
       "reasoningTokens": 11297,
       "cost": 0.05308725,
       "ms": 57540
-    },
-    {
-      "role": "dispute",
-      "id": "gen-1793725385-gXX8NtN3lTyDPa1sPVeA",
-      "model": "openai/gpt-6.1-sol",
-      "promptTokens": 4153,
-      "completionTokens": 1270,
-      "reasoningTokens": 481,
-      "cost": 0.023081,
-      "ms": 24316
     }
   ],
   "titles": {
@@ -56,13 +46,6 @@
         "criteria": ["style"],
         "why": "The draft has 62 characters, exceeding the 60-character limit.",
         "suggestion": "Paul loves the Philippians, who share in grace with him"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul loves the Philippians, who share in grace with him",
-        "why": "The shorter title preserves Paul’s love and their shared participation in grace",
-        "status": "ai-checked"
       }
     },
     "PHP.1.9-11": {
@@ -94,13 +77,6 @@
         "criteria": ["style"],
         "why": "The draft has 61 characters, exceeding the 60-character limit.",
         "suggestion": "Paul rejoices that Christ is preached and hopes to be freed"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "factual",
-        "text": "Paul rejoices that Christ is proclaimed",
-        "why": "Both versions limit deliverance to being freed, a meaning the verses leave open",
-        "status": "unreviewed"
       }
     },
     "PHP.1.20-20": {
@@ -174,13 +150,6 @@
         "criteria": ["style"],
         "why": "The draft has 61 characters, exceeding the 60-character limit.",
         "suggestion": "Paul tells the Philippians to obey, for God works in them"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul tells the Philippians to obey, for God works in them",
-        "why": "The shorter wording preserves the call to obey and God’s work in them",
-        "status": "ai-checked"
       }
     },
     "PHP.2.14-16": {
@@ -194,13 +163,6 @@
         "criteria": ["style"],
         "why": "The draft has 65 characters, exceeding the 60-character limit.",
         "suggestion": "Paul tells the Philippians to shine without complaining"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul tells the Philippians not to complain or argue",
-        "why": "Paul tells them to do everything without complaining or arguing",
-        "status": "ai-checked"
       }
     },
     "PHP.2.17-18": {
@@ -213,13 +175,6 @@
         "criteria": ["plain"],
         "why": "The pronoun “them” has no clear antecedent when read alone in a list.",
         "suggestion": "Paul rejoices if he dies and asks the Philippians to rejoice"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "factual",
-        "text": "Paul rejoices and urges the Philippians to rejoice with him",
-        "why": "Both versions turn Paul’s offering image into an explicit statement about dying",
-        "status": "unreviewed"
       }
     },
     "PHP.2.19-21": {
@@ -232,13 +187,6 @@
         "criteria": ["plain"],
         "why": "The pronoun “them” has no clear antecedent when read alone in a list.",
         "suggestion": "Paul hopes to send Timothy, who cares for the Philippians"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul hopes to send Timothy, who cares for the Philippians",
-        "why": "Naming the Philippians makes Timothy’s concern clear without surrounding context",
-        "status": "ai-checked"
       }
     },
     "PHP.2.22-24": {
@@ -258,13 +206,6 @@
         "criteria": ["style"],
         "why": "The draft has 64 characters, exceeding the 60-character limit.",
         "suggestion": "Paul sends back Epaphroditus, whom God spared from death"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul sends back Epaphroditus, whom God spared from death",
-        "why": "The shorter title retains Paul’s plan and God’s mercy toward Epaphroditus",
-        "status": "ai-checked"
       }
     },
     "PHP.2.28-30": {
@@ -284,13 +225,6 @@
         "criteria": ["style"],
         "why": "The draft has 63 characters, exceeding the 60-character limit.",
         "suggestion": "Paul warns against those who put confidence in the flesh"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul warns the Philippians against evil workers",
-        "why": "Paul explicitly warns his readers to beware of evil workers",
-        "status": "ai-checked"
       }
     },
     "PHP.3.4-5": {
@@ -327,13 +261,6 @@
         "criteria": ["plain"],
         "why": "The phrase “this view” is not clear to a reader seeing the title alone in a list.",
         "suggestion": "Paul urges believers to live up to what they have attained"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Believers should live according to what they have attained",
-        "why": "The title removes the unexplained reference to this view",
-        "status": "ai-checked"
       }
     },
     "PHP.3.17-19": {
@@ -347,13 +274,6 @@
         "criteria": ["style"],
         "why": "The draft has 76 characters, exceeding the 60-character limit.",
         "suggestion": "Paul says to follow his example, not enemies of the cross"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul tells the Philippians to follow his example",
-        "why": "The shorter title preserves Paul’s opening instruction to imitate him",
-        "status": "ai-checked"
       }
     },
     "PHP.3.20-21": {
@@ -367,13 +287,6 @@
         "criteria": ["style"],
         "why": "The draft has 65 characters, exceeding the 60-character limit.",
         "suggestion": "Citizens of heaven await Christ to transform their bodies"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Believers await Christ, who will change their bodies",
-        "why": "The title names those waiting and states what Christ will do",
-        "status": "ai-checked"
       }
     },
     "PHP.4.1-3": {
@@ -387,13 +300,6 @@
         "criteria": ["style"],
         "why": "The draft has 68 characters, exceeding the 60-character limit.",
         "suggestion": "Paul urges believers to stand firm and two women to agree"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul urges believers to stand firm and two women to agree",
-        "why": "The shorter wording retains both Paul’s general appeal and his appeal to the women",
-        "status": "ai-checked"
       }
     },
     "PHP.4.4-7": {
@@ -413,13 +319,6 @@
         "criteria": ["style"],
         "why": "The draft has 73 characters, exceeding the 60-character limit.",
         "suggestion": "Paul tells believers to think on good things and follow him"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Believers should think of good things and act as Paul did",
-        "why": "Paul calls for good thoughts and actions learned from his example",
-        "status": "ai-checked"
       }
     },
     "PHP.4.10-13": {
@@ -445,25 +344,7 @@
         "criteria": ["style"],
         "why": "The draft has 66 characters, exceeding the 60-character limit.",
         "suggestion": "Paul has enough, and God will meet the Philippians’ needs"
-      },
-      "dispute": {
-        "by": "ai:openai/gpt-6.1-sol",
-        "kind": "taste",
-        "text": "Paul has enough, and God will meet the Philippians’ needs",
-        "why": "The shorter title preserves Paul’s provision and God’s promised care for the Philippians",
-        "status": "ai-checked"
       }
-    }
-  },
-  "disputeCheck": {
-    "prompt": {
-      "file": "prompts/dispute-titles.md",
-      "sha256": "641cdbbb6d3d55b009581017d5d3a06aef145c4727e788495bd1ab7b7c4527a8"
-    },
-    "verses": "ult-php",
-    "voice": {
-      "file": "data/drafts/en/TIT.json",
-      "sha256": "091e772ffab017844de87830f70d252facc0d214bcb3282caff3a9fc9ce55434"
     }
   }
 }

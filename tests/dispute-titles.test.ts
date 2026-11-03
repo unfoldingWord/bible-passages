@@ -449,3 +449,49 @@ describe("voiceOf", () => {
     );
   });
 });
+
+// The Philippians trial run of 3 Nov (docs/scoping/dispute-check.md), kept
+// as a fixture: a real third-check record, not written to data/ (#207).
+describe("a recorded third check (fixture: the Philippians trial run)", () => {
+  const r = JSON.parse(
+    read("tests/fixtures/disputes/PHP-run1.json")
+  ) as DisputedRecord;
+
+  it("passes every rule the build holds a dispute to", () => {
+    for (const [k, t] of Object.entries(r.titles))
+      expect(disputeProblems(t), k).toEqual([]);
+  });
+
+  it("settles every disputed title, and only those, by a third family", () => {
+    const family = (m: string) => m.split("/")[0];
+    expect(r.calls.map((c) => c.role)).toEqual(["draft", "check", "dispute"]);
+    expect(new Set(r.calls.map((c) => family(c.model))).size).toBe(3);
+    for (const [k, t] of Object.entries(r.titles)) {
+      expect(t.dispute !== undefined, k).toBe(t.check?.verdict === "disagree");
+      if (t.dispute) expect(t.dispute.by).toBe(`ai:${r.calls[2]!.model}`);
+    }
+    expect(r.disputeCheck).toMatchObject({
+      prompt: { file: "prompts/dispute-titles.md" },
+      verses: "ult-php",
+      voice: { file: "data/drafts/en/TIT.json" },
+    });
+  });
+
+  it("builds taste titles as ai-checked and factual ones as unreviewed proposals", () => {
+    const kinds = { taste: 0, factual: 0 };
+    for (const t of Object.values(r.titles)) {
+      if (!t.dispute) continue;
+      kinds[t.dispute.kind]++;
+      expect(builtTitle(t)).toEqual({
+        text: t.dispute.text,
+        status: t.dispute.kind === "taste" ? "ai-checked" : "unreviewed",
+        source: t.dispute.by,
+      });
+    }
+    expect(kinds).toEqual({ taste: 12, factual: 2 });
+    expect(listDisputes(r).map((d) => d.key)).toEqual([
+      "PHP.1.18-19",
+      "PHP.2.17-18",
+    ]);
+  });
+});

@@ -71,6 +71,52 @@ the numbers below.
 Review minutes per title: not yet measured; a person reviews every
 Philippians title next (#32).
 
+## Measured: English segment-title length, Colossians, revised prompt (#197)
+
+The drafting part of `prompts/segment-titles.md` was changed so drafts stay
+within 60 characters. It now says how to stay short, gives eight Titus titles
+with their lengths as examples, and asks for a count before the reply. The
+check part was not changed. The Philippians version is kept as
+`prompts/history/segment-titles-f132f2195f80.md`.
+
+Colossians was the test book. It had not been drafted, and of the books not
+yet drafted it is closest to Philippians: a short letter of Paul to a church,
+with 33 titles to draft against Philippians' 37, and a long name for its
+readers ("the Colossians") that pushes against the limit. The command was run
+twice on 2026-11-03 with the same models as Philippians, with prompt SHA-256
+`cc76a816…`:
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.20
+```
+
+Both runs stopped at the check. The checker's reply was cut off at the
+16,384-token limit in `scripts/lib/openrouter.ts`, so it could not be read
+(#201). The drafts were kept in each run's `run.json` (`draftTitles`). The
+numbers below come from those ledgers and were counted twice: with Python
+`len()` and with `jq` `length`, which gave the same results.
+
+| Quantity                  | Run 1                                     | Run 2                                     | Label               | Source and method                                                     |
+| ------------------------- | ----------------------------------------- | ----------------------------------------- | ------------------- | --------------------------------------------------------------------- |
+| Drafts over 60 characters | 0 of 33 (longest 58, mean 51.7)           | 0 of 33 (longest 58, mean 52.7)           | measured 2026-11-03 | `draftTitles`; Philippians was 11 of 37, longest 78, mean 58.7        |
+| Checker agreed            | not measured                              | not measured                              | —                   | the check reply was cut off at the token limit (#201)                 |
+| Cost                      | $0.1351 ($0.0699 draft, $0.0652 check)    | $0.1465 ($0.0813 draft, $0.0652 check)    | measured 2026-11-03 | OpenRouter's billed `cost` per call                                   |
+| Tokens                    | 33,054 (10,853 prompt, 22,201 completion) | 34,189 (10,852 prompt, 23,337 completion) | measured 2026-11-03 | reasoning in the completion: draft 4,900 and 6,034, check 15,729 each |
+| Model time                | 161.5 s (39.0 s draft, 122.6 s check)     | 120.1 s (45.4 s draft, 74.6 s check)      | measured 2026-11-03 | `ms` per call, summed                                                 |
+
+Result against #197's target (at most 5% over 60): met in both runs on this
+one book, 0 of 33 each.
+
+Drafting cost went up. The Philippians draft call reported no reasoning
+tokens and cost $0.0241 (8.1 s). With the revised prompt, the Colossians draft
+calls reasoned (4,900 and 6,034 tokens) and cost $0.0699 and $0.0813 (39 to
+45 s), about $0.0021 to $0.0025 per title for the draft alone. Inference, not
+tested: the request to count characters before replying is what led the model
+to reason. A whole-run cost per title needs a check that completes (#201).
+The two runs together cost $0.2815.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |
