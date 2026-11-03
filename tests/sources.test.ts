@@ -65,14 +65,16 @@ describe("structure inputs", () => {
     expect(BOOKS.length).toBeGreaterThan(0);
   });
 
-  // Psalms and Song of Songs take their book name from ULT (#39), at one
-  // released commit (v91).
-  it("pins ULT for exactly the two book names decided on #39", () => {
+  // Psalms and Song of Songs take their book name from ULT (#39), and the
+  // third check on disputed titles reads Philippians in ULT (ADR 0005, #198),
+  // all at one released commit (v91).
+  it("pins ULT for the two book names decided on #39 and the third check's verses", () => {
     const ult = sources.filter((s) => s.id.startsWith("ult-"));
-    expect(ult.map((s) => s.id)).toEqual(["ult-psa", "ult-sng"]);
+    expect(ult.map((s) => s.id)).toEqual(["ult-psa", "ult-sng", "ult-php"]);
     for (const [s, file] of [
       [ult[0], "19-PSA"],
       [ult[1], "22-SNG"],
+      [ult[2], "51-PHP"],
     ] as const) {
       expect(s?.url).toBe(
         `https://git.door43.org/unfoldingWord/en_ult/raw/commit/35d215957f3203fd2e2fac5702ce14902d417f9d/${file}.usfm`

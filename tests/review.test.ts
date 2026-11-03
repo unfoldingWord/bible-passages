@@ -250,6 +250,44 @@ describe("applyReviews", () => {
     expect(current(t)).toBe("Paul greets his son");
   });
 
+  // A title a third model settled (ADR 0005 item 6) stands on the
+  // dispute's wording, not the draft's.
+  const disputed = () => {
+    const f = files();
+    f.get("en/TIT")!.titles["TIT.1.4-4"]!.dispute = {
+      by: "ai:model-c",
+      kind: "taste",
+      text: "Paul greets Titus, his child",
+      why: "x",
+      status: "ai-checked",
+    };
+    return f;
+  };
+
+  it("takes a disputed title's wording from its dispute: a keep of it carries no text", () => {
+    const stale = apply(disputed(), envelope([keep()]));
+    expect(stale.problems[0]).toContain("stale");
+    const { changed, problems } = apply(
+      disputed(),
+      envelope([keep({ text: "Paul greets Titus, his child" })])
+    );
+    expect(problems).toEqual([]);
+    const t = changed.get("en/TIT")!.titles["TIT.1.4-4"]!;
+    expect(t.review?.text).toBeUndefined();
+    expect(current(t)).toBe("Paul greets Titus, his child");
+  });
+
+  it("lets a person change a disputed title, recording their wording", () => {
+    const { changed, problems } = apply(
+      disputed(),
+      envelope([change("Paul greets his son")])
+    );
+    expect(problems).toEqual([]);
+    const t = changed.get("en/TIT")!.titles["TIT.1.4-4"]!;
+    expect(t.review?.text).toBe("Paul greets his son");
+    expect(current(t)).toBe("Paul greets his son");
+  });
+
   it("keeps a note on a keep as its reason", () => {
     const { changed } = apply(files(), envelope([keep({ note: "clear" })]));
     expect(changed.get("en/TIT")!.titles["TIT.1.4-4"]!.review?.why).toBe(

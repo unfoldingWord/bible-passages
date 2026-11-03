@@ -72,8 +72,17 @@ export type Answer = {
   text: string;
 };
 
-/** The title as it stands: a person's wording, else the draft's. */
-export const current = (d: Draft): string => d.review?.text ?? d.text;
+/**
+ * The AI wording a title stands on: the third model's, when it settled a
+ * dispute (ADR 0005 item 6), else the draft's.
+ */
+export const aiWording = (d: Draft): string => {
+  const dispute = d.dispute as { text?: unknown } | undefined;
+  return typeof dispute?.text === "string" ? dispute.text : d.text;
+};
+
+/** The title as it stands: a person's wording, else the AI wording. */
+export const current = (d: Draft): string => d.review?.text ?? aiWording(d);
 
 const ENVELOPE = new Set(["schema", "v", "reviewer", "records"]);
 const FIELDS = new Set([
@@ -248,9 +257,10 @@ function reviewFor({ by, record: r }: Entry, draft: Draft, after: string) {
     by,
     at: r.at.slice(0, 10),
     status,
-    // The draft keeps its own wording in `text`; the review carries one
-    // only when the person's title differs from it.
-    ...(after !== draft.text ? { text: after } : {}),
+    // The draft keeps its own wording in `text` (and a third model's in
+    // `dispute`); the review carries one only when the person's title
+    // differs from the AI wording it was shown.
+    ...(after !== aiWording(draft) ? { text: after } : {}),
     ...(why !== "" ? { why } : {}),
     saved: r.at,
   };
@@ -375,9 +385,9 @@ export function applyReviews(
     }
     if (r.pick === "change") {
       // The artifact does not record the wording a change replaced. It is
-      // taken to be the draft's own; a title a person has already reworded
+      // taken to be the AI's own; a title a person has already reworded
       // is refused rather than overwritten (docs/scoping/review-apply.md).
-      if (before !== draft.text) {
+      if (before !== aiWording(draft)) {
         problems.push(
           `${where}: the title is a person's wording (${quoted(before)}), and a change does not say which wording it replaced`
         );

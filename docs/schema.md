@@ -219,6 +219,37 @@ for a disagreement `criteria`, `why` and a `suggestion`). A draft is
 gate passed); anything else stays `unreviewed` and goes to a person first. The check's details stay here; the built table
 gets `text`, `status` and `source`.
 
+An English title the checker disagreed with goes to a third check (ADR
+[0005](decisions/0005-go-no-go-1-ai-checked-english.md) item 6;
+`scripts/translate/dispute-titles.ts`, `prompts/dispute-titles.md`;
+[scoping/dispute-check.md](scoping/dispute-check.md)). A model of a third
+family reads the segment in ULT and answers with `dispute`, added beside
+the draft as a person's `review` is: `text`, `source`, `status`, `gates`
+and `check` stay the drafting and checking models' own.
+
+- `dispute`: `by` (`ai:<model>`, of a family other than the drafting and
+  the checking model's), `kind` (`taste` or `factual`), `text` (the third
+  model's title: the replacement for `taste`, the proposed fix for
+  `factual`), `why`, `status` and `gates` (the gate problems of its `text`,
+  absent when none). `status` is `ai-checked` only for a `taste` title
+  that passes every gate; anything else is `unreviewed`. No AI title is
+  above `ai-checked`.
+- The record also has `disputeCheck`: the instructions file and its
+  SHA-256 (`prompt`), the `sources.json` id of the ULT text read
+  (`verses`, credited in the book's package attribution), and the Titus
+  record whose titles set the voice, with its SHA-256 at the run
+  (`voice`); and a third call in `calls`, with `role: "dispute"`.
+- The build takes a person's `review` first, else the `dispute` (its
+  `text`, `status`, and `by` as `source`), else the draft. A review that
+  keeps the third model's wording carries no `text`, and the title keeps
+  `by` as its source. The build refuses a `dispute` that breaks any rule
+  above (`disputeProblems` in `scripts/lib/dispute-titles.ts`).
+- `npm run disputes` lists the `factual` ones, for the content team and
+  the release notes (`--all` lists every dispute).
+- No committed record has a `dispute` yet: results are written only once
+  rewrites keep each verse's main point and agreement is measured blind
+  (#207).
+
 ### Review exports
 
 The review artifact (a claude.ai page with its own database, not in this

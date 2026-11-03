@@ -39,6 +39,15 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   `Worldview/en_bsb@7abbfaf`, each `unreviewed` with source `bsb-<book>`, so
   none ships in a title table yet. Segment titles, and decision 12's reuse
   of a pericope title, stay with the books in `BOOKS` (PHP, TIT).
+- A third check on disputed English titles (#198, ADR 0005 item 6), as a
+  step with no results in `data/` yet: a model of a third family reads the
+  verses in ULT (`ult-php` pinned, `unfoldingWord/en_ult` v91) and sorts
+  each dispute as taste (its title replaces the draft, `ai-checked`) or
+  factual (a proposal, `unreviewed`, listed by `npm run disputes`). A book
+  whose record carries results credits ULT in its package `attribution`.
+  Before any results are written, rewrites must keep each verse's main
+  point and agreement must be measured blind (#207). The Philippians trial
+  run is recorded as a measurement only (`docs/scoping/dispute-check.md`).
 
 ### Changed
 

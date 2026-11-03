@@ -1,6 +1,11 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { BOOKS } from "../scripts/lib/books.ts";
+import {
+  builtTitle,
+  disputeProblems,
+  type Title as Settled,
+} from "../scripts/lib/dispute-titles.ts";
 import { CRITERIA, gateProblems } from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
 
@@ -21,12 +26,25 @@ type Draft = Title & {
     why?: string;
     saved?: string;
   };
+  dispute?: {
+    by: string;
+    kind: string;
+    text: string;
+    why: string;
+    status: string;
+    gates?: string[];
+  };
 };
 type Record = {
   language: string;
   book: string;
   bible?: string;
   prompt?: { file: string; sha256: string };
+  disputeCheck?: {
+    prompt: { file: string; sha256: string };
+    verses: string;
+    voice: { file: string; sha256: string };
+  };
   calls?: {
     role: string;
     id: string;
@@ -176,18 +194,37 @@ describe.each(["TIT", "PHP"])("English %s segment drafts", (book) => {
     }
   });
 
-  it("is merged into the built title table, a review deciding", () => {
+  it("is merged into the built title table, a review deciding, else a third model's dispute", () => {
     for (const [key, d] of Object.entries(drafts)) {
       const r = d.review;
+      const ai = d.dispute
+        ? {
+            text: d.dispute.text,
+            status: d.dispute.status,
+            source: d.dispute.by,
+          }
+        : { text: d.text, status: d.status, source: d.source };
       expect(built[key]).toEqual(
         r
           ? {
-              text: r.text ?? d.text,
+              text: r.text ?? ai.text,
               status: r.status,
-              source: r.text ? r.by : d.source,
+              source: r.text ? r.by : ai.source,
             }
-          : { text: d.text, status: d.status, source: d.source }
+          : ai
       );
+      // Re-derived above by hand; the build's own function must agree.
+      expect(builtTitle(d as Settled)).toEqual(built[key]);
+    }
+  });
+
+  it("settles only disputed titles, by a third family, never above ai-checked (ADR 0005 item 6)", () => {
+    for (const [key, d] of Object.entries(drafts)) {
+      expect(disputeProblems(d as Settled), key).toEqual([]);
+      if (d.dispute) {
+        expect(record.disputeCheck, key).toBeDefined();
+        expect(["unreviewed", "ai-checked"]).toContain(d.dispute.status);
+      }
     }
   });
 
