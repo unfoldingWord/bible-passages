@@ -41,6 +41,27 @@ const read = (path: string) =>
   JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
 const MAX = 60;
 
+// A record keeps the SHA-256 of the prompt file it was made with. When
+// prompts/segment-titles.md changes, the earlier version is kept byte for
+// byte as prompts/history/segment-titles-<first 12 hex of its SHA-256>.md, so
+// every record traces to the text that produced it (#197). The file whose
+// hash is the record's, or undefined if none is kept.
+const text = (path: string): string | undefined => {
+  try {
+    return readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+  } catch {
+    return undefined;
+  }
+};
+const keptPrompt = (hash: string): string | undefined =>
+  [
+    "prompts/segment-titles.md",
+    `prompts/history/segment-titles-${hash.slice(0, 12)}.md`,
+  ].find((path) => {
+    const t = text(path);
+    return t !== undefined && sha256(t) === hash;
+  });
+
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
 // scripts/translate/segment-titles.ts, whose records carry their calls.
@@ -170,16 +191,10 @@ describe("a scripted segment-title record (PHP)", () => {
     expect(Object.keys(record.titles)).toHaveLength(37);
   });
 
-  it("was made with the committed prompt and the pinned BSB text", () => {
+  it("was made with a committed prompt and the pinned BSB text", () => {
     expect(record.prompt?.file).toBe("prompts/segment-titles.md");
-    expect(record.prompt?.sha256).toBe(
-      sha256(
-        readFileSync(
-          new URL("../prompts/segment-titles.md", import.meta.url),
-          "utf8"
-        )
-      )
-    );
+    expect(keptPrompt(record.prompt?.sha256 ?? "")).toBeDefined();
+    expect(keptPrompt(sha256("a prompt nobody kept"))).toBeUndefined();
     expect(record.bible).toBe("bsb-php");
   });
 
