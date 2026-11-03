@@ -106,8 +106,9 @@ not its rate.
 ## Rejected
 
 - **Hold every disputed title for a person.** At the Philippians rate (38%)
-  that is about 6,250 English titles across the Bible waiting on one review
-  queue.
+  that is about 5,100 English titles across the Bible waiting on one review
+  queue (estimated: 13,507 drafted segment titles × 14/37; pericope titles
+  are imported from BSB, not drafted, so they are never disputed).
 - **Ship disputed titles as drafted.** About 30% of drafts were over the
   60-character limit in the Philippians run.
 - **Copy section headings by majority vote across published translations.**
