@@ -107,6 +107,52 @@ describe("prompts/history/", () => {
     expect(keptPrompt("../../package.json")).toBeUndefined();
     expect(keptPrompt("")).toBeUndefined();
   });
+
+  // The branch a record made with the live prompt takes; the scripted
+  // records committed so far all take the history branch (#204).
+  it("finds the current prompt by its own digest", () => {
+    const current = sha256(fileText("prompts/segment-titles.md"));
+    expect(keptPrompt(current)).toBe("prompts/segment-titles.md");
+  });
+});
+
+// Rule 6's examples in the draft prompt are Titus titles as built, each with
+// its length in brackets, counted in code points like Python len() (#204).
+describe("the Titus examples in prompts/segment-titles.md", () => {
+  const prompt = fileText("prompts/segment-titles.md");
+  const draft = prompt.slice(
+    prompt.indexOf("<!-- draft:start -->"),
+    prompt.indexOf("<!-- draft:end -->")
+  );
+  const examples = [
+    ...draft
+      .slice(draft.indexOf("These titles from Titus"))
+      .matchAll(/^- (.+) \((\d+)\)$/gm),
+  ].map((m) => ({ text: m[1]!, count: Number(m[2]) }));
+  const built = new Set(
+    Object.values(
+      (
+        read("data/titles/en/TIT.json") as {
+          titles: { [key: string]: Title };
+        }
+      ).titles
+    ).map((t) => t.text)
+  );
+
+  it("lists eight examples", () => {
+    expect(examples).toHaveLength(8);
+  });
+
+  it("gives each example's true length and keeps it within the limit", () => {
+    for (const e of examples) {
+      expect([...e.text].length, e.text).toBe(e.count);
+      expect(e.count, e.text).toBeLessThanOrEqual(MAX);
+    }
+  });
+
+  it("uses only titles that are built for Titus", () => {
+    for (const e of examples) expect(built.has(e.text), e.text).toBe(true);
+  });
 });
 
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
