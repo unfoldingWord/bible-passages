@@ -29,6 +29,17 @@ gives just enough information to remind the reader which section follows"
   the 9 later languages often run longer than English, so English needs
   headroom. The number is a starting choice, revised on evidence (the tC
   Mobile display limit is not yet checked, a watch item).
+- Rule 6's guidance on how to stay under 60, the Titus examples and the
+  closing count were added after Philippians, where 11 of 37 drafts were over
+  60 characters (`docs/scoping/sizing.md`; issue #197). The examples are
+  Titus titles as built, one of them in the reviewer’s own wording (1:12–13,
+  `data/drafts/en/TIT.json`); their counts are Python `len()`. Only the draft
+  part changed; the check part is as Philippians was checked.
+- Each record keeps the SHA-256 of the whole file it was made with. When the
+  file changes, the earlier version is kept byte for byte in
+  `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
+  (Philippians: `f132f2195f80`), so every committed record can be traced to
+  the text that produced it.
 
 ## Input per segment
 
@@ -65,8 +76,21 @@ Rules:
 3. Sentence case: only the first word and proper names start with a capital. No final full stop.
 4. Do not repeat the pericope heading; the title covers only this segment.
 5. Name who acts or is addressed (Paul, Timothy, the Philippians, believers) so a title makes sense alone in a list. Do not write a command that names no one.
-6. Maximum 60 characters (about 9 words).
+6. At most 60 characters, counting spaces; most good titles are 35 to 55 characters (6 to 9 words). A title over 60 is rejected, so keep only the main point: drop a second clause or a detail rather than go over. A frame such as "Paul tells the Philippians to" uses half the limit; say it shorter, for example "Paul urges believers to", or let the people the verses are about be the subject ("Elders must be blameless").
 7. Straight text only: the typographic apostrophe (’), never ', no quotation marks, no markup.
+
+These titles from Titus, which a person has reviewed, show the voice and length wanted (characters in brackets):
+
+- Paul left Titus in Crete to appoint elders (42)
+- Elders must be blameless in family and character (48)
+- Titus must firmly correct false teachers (40)
+- Some say they know God but their actions deny him (49)
+- Older women are to teach the younger women (42)
+- Believers should obey rulers and be gentle to everyone (54)
+- God saved us because of his mercy, not our deeds (48)
+- Paul asks Titus to come and to help Zenas and Apollos (53)
+
+Before you reply, count the characters of every title, and shorten any that is over 60.
 
 Reply with only a JSON object mapping each item's `key` to its title as a string, for every item, and nothing else.
 

@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { BOOKS } from "../scripts/lib/books.ts";
 import { CRITERIA, gateProblems } from "../scripts/lib/segment-titles.ts";
@@ -40,6 +40,52 @@ type Record = {
 const read = (path: string) =>
   JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
 const MAX = 60;
+
+// A record keeps the SHA-256 of the prompt file it was made with. When
+// prompts/segment-titles.md changes, the earlier version is kept byte for
+// byte as prompts/history/segment-titles-<first 12 hex of its SHA-256>.md, so
+// every record traces to the text that produced it (#197). The path of the
+// file whose bytes hash to `hash`, or undefined if none is kept. A hash that
+// is not 64 hex digits matches nothing, so it never becomes part of a path.
+const fileText = (path: string): string =>
+  readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+const HISTORY = "prompts/history";
+const history = (): string[] =>
+  readdirSync(new URL(`../${HISTORY}/`, import.meta.url)).sort();
+const keptPrompt = (hash: string): string | undefined => {
+  if (!/^[0-9a-f]{64}$/.test(hash)) return undefined;
+  if (sha256(fileText("prompts/segment-titles.md")) === hash)
+    return "prompts/segment-titles.md";
+  const name = `segment-titles-${hash.slice(0, 12)}.md`;
+  if (!history().includes(name)) return undefined;
+  const path = `${HISTORY}/${name}`;
+  return sha256(fileText(path)) === hash ? path : undefined;
+};
+
+describe("prompts/history/", () => {
+  it("names every kept prompt by the first 12 hex digits of its own SHA-256", () => {
+    const files = history();
+    expect(files.length).toBeGreaterThan(0);
+    for (const f of files) {
+      const m = /^segment-titles-([0-9a-f]{12})\.md$/.exec(f);
+      expect(m, f).not.toBeNull();
+      expect(sha256(fileText(`${HISTORY}/${f}`)).slice(0, 12), f).toBe(m![1]);
+    }
+  });
+
+  it("keeps no copy of the current prompt", () => {
+    const current = sha256(fileText("prompts/segment-titles.md"));
+    expect(history()).not.toContain(
+      `segment-titles-${current.slice(0, 12)}.md`
+    );
+  });
+
+  it("matches nothing for an unkept or malformed hash", () => {
+    expect(keptPrompt(sha256("a prompt nobody kept"))).toBeUndefined();
+    expect(keptPrompt("../../package.json")).toBeUndefined();
+    expect(keptPrompt("")).toBeUndefined();
+  });
+});
 
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
@@ -170,15 +216,11 @@ describe("a scripted segment-title record (PHP)", () => {
     expect(Object.keys(record.titles)).toHaveLength(37);
   });
 
-  it("was made with the committed prompt and the pinned BSB text", () => {
+  it("was made with a committed prompt and the pinned BSB text", () => {
     expect(record.prompt?.file).toBe("prompts/segment-titles.md");
-    expect(record.prompt?.sha256).toBe(
-      sha256(
-        readFileSync(
-          new URL("../prompts/segment-titles.md", import.meta.url),
-          "utf8"
-        )
-      )
+    // Made before the prompt changed for #197 (docs/scoping/sizing.md).
+    expect(keptPrompt(record.prompt?.sha256 ?? "")).toBe(
+      "prompts/history/segment-titles-f132f2195f80.md"
     );
     expect(record.bible).toBe("bsb-php");
   });

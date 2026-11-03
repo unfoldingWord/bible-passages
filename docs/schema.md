@@ -179,7 +179,11 @@ never calls a model. Such a record also has:
 
 - `bible`: the `sources.json` id of the BSB text both models were given.
 - `prompt`: the instructions file and its SHA-256; a test holds it equal to
-  the committed `prompts/segment-titles.md`.
+  the committed `prompts/segment-titles.md` or to an earlier version of it
+  kept byte for byte as
+  `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
+  (Philippians was made with `f132f2195f80`; the prompt changed after it,
+  #197).
 - `calls`: the draft and the check call, each with its OpenRouter generation
   id, model, tokens and cost in US dollars.
 - per title, `gates`: the mechanical rules it breaks (`length` over 60
