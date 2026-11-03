@@ -2,6 +2,9 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import type { Completion } from "../scripts/lib/openrouter.ts";
 import {
+  batches,
+  CHECK_BATCH,
+  CHECK_MAX_TOKENS,
   checkMessage,
   draftMessage,
   draftSegmentTitles,
@@ -208,10 +211,16 @@ describe("gateProblems", () => {
 function fakeModels(
   replies: { reply: unknown; cost: number | null; answeredBy?: string }[]
 ) {
-  const sent: { model: string; system: string; user: string }[] = [];
+  const sent: {
+    model: string;
+    system: string;
+    user: string;
+    maxTokens?: number;
+  }[] = [];
   const complete: Complete = async (request) => {
     const next = replies[sent.length];
     sent.push({
+      maxTokens: request.maxTokens,
       model: request.model,
       system: request.messages[0]?.content ?? "",
       user: request.messages[1]?.content ?? "",
@@ -347,7 +356,12 @@ describe("draftSegmentTitles", () => {
       const ledgers: unknown[] = [];
       const { record, outcome } = await run(complete, ledgers);
       expect(record).toBeNull();
-      expect(outcome).toHaveProperty("stopped");
+      expect(outcome).toEqual({
+        stopped:
+          cost === null
+            ? "cost unknown; check batch 1 of 1 not run"
+            : "spent 1 of 1 before check batch 1 of 1",
+      });
       expect(sent).toHaveLength(1);
       expect(ledgers.at(-1)).toMatchObject({
         calls: [{ role: "draft" }],
@@ -409,6 +423,120 @@ describe("draftSegmentTitles", () => {
     });
   });
 
+  // #201: a whole book in one check call was cut off at the token limit.
+  it("checks in batches, each against its own verses, and records every call", async () => {
+    const agree = { verdict: "agree" };
+    const { complete, sent } = fakeModels([
+      { reply: draftReply, cost: 0.01 },
+      { reply: { "XYZ.1.2-3": agree }, cost: 0.02 },
+      {
+        reply: {
+          "XYZ.1.4-4": {
+            verdict: "disagree",
+            criteria: ["style"],
+            why: "Over 60 characters.",
+            suggestion: "Paul will come to see the believers soon",
+          },
+        },
+        cost: 0.03,
+        answeredBy: "g/check-2",
+      },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      checkBatch: 1,
+    });
+    expect(outcome).toBe("done");
+    expect(sent.map((s) => s.model)).toEqual(["a/draft", "g/check", "g/check"]);
+    expect(sent[1]?.system).toBe(promptPart(promptText, "check"));
+    // Only the check calls get the larger limit.
+    expect(sent.map((s) => s.maxTokens)).toEqual([
+      undefined,
+      CHECK_MAX_TOKENS,
+      CHECK_MAX_TOKENS,
+    ]);
+    expect(sent[1]?.user).toBe(
+      checkMessage("XYZ", inputs.slice(0, 1), draftReply)
+    );
+    expect(sent[2]?.user).toBe(
+      checkMessage("XYZ", inputs.slice(1, 2), draftReply)
+    );
+    // Each verdict is labelled with the model that answered its batch.
+    expect(record?.titles["XYZ.1.2-3"]?.check).toEqual({
+      by: "ai:g/check",
+      verdict: "agree",
+    });
+    expect(record?.titles["XYZ.1.4-4"]?.check?.by).toBe("ai:g/check-2");
+    expect(record?.calls.map((c) => [c.role, c.id, c.cost])).toEqual([
+      ["draft", "gen-1", 0.01],
+      ["check", "gen-2", 0.02],
+      ["check", "gen-3", 0.03],
+    ]);
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome: "done",
+      checkBatch: 1,
+      checkMaxTokens: CHECK_MAX_TOKENS,
+      totals: { cost: 0.06 },
+    });
+  });
+
+  it("stops before a later batch once the spend cap is reached", async () => {
+    const { complete, sent } = fakeModels([
+      { reply: draftReply, cost: 0.5 },
+      { reply: { "XYZ.1.2-3": { verdict: "agree" } }, cost: 0.5 },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      checkBatch: 1,
+    });
+    expect(record).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "spent 1 of 1 before check batch 2 of 2",
+    });
+    expect(sent).toHaveLength(2);
+    expect(ledgers.at(-1)).toMatchObject({
+      calls: [{ role: "draft" }, { role: "check" }],
+      draftTitles: draftReply,
+    });
+  });
+
+  it("stops when one batch's reply cannot be read, keeping the calls on record", async () => {
+    const { complete, sent } = fakeModels([
+      { reply: draftReply, cost: 0.01 },
+      { reply: { "XYZ.1.2-3": { verdict: "agree" } }, cost: 0.01 },
+      { reply: "cut off", cost: 0.01 },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      checkBatch: 1,
+    });
+    expect(record).toBeNull();
+    expect(outcome).toMatchObject({
+      stopped: expect.stringMatching(/^check: unreadable reply/),
+    });
+    expect(sent).toHaveLength(3);
+    expect(ledgers.at(-1)).toMatchObject({
+      calls: [{ role: "draft" }, { role: "check" }, { role: "check" }],
+    });
+  });
+
+  it("refuses a later batch answered by the drafting model's family", async () => {
+    const { complete } = fakeModels([
+      { reply: draftReply, cost: 0.01 },
+      { reply: { "XYZ.1.2-3": { verdict: "agree" } }, cost: 0.01 },
+      {
+        reply: { "XYZ.1.4-4": { verdict: "agree" } },
+        cost: 0.01,
+        answeredBy: "a/other",
+      },
+    ]);
+    const { record, outcome } = await run(complete, [], { checkBatch: 1 });
+    expect(record).toBeNull();
+    expect(outcome).toEqual({
+      stopped: "check answered by a/other, of the drafting model's family",
+    });
+  });
+
   it("refuses the same model, or one of its family, for drafting and checking", async () => {
     for (const checkModel of ["a/draft", "a/other"]) {
       const { complete, sent } = fakeModels([]);
@@ -417,5 +545,30 @@ describe("draftSegmentTitles", () => {
       );
       expect(sent).toHaveLength(0);
     }
+  });
+});
+
+describe("batches", () => {
+  it("splits in order into the fewest, most even batches", () => {
+    const n = (k: number) => Array.from({ length: k }, (_, i) => i);
+    const sizes = (k: number, size: number) =>
+      batches(n(k), size).map((b) => b.length);
+    // Colossians: 33 drafts.
+    expect(sizes(33, CHECK_BATCH)).toEqual([33]);
+    expect(sizes(37, CHECK_BATCH)).toEqual([19, 18]);
+    expect(sizes(33, 12)).toEqual([11, 11, 11]);
+    expect(sizes(37, 12)).toEqual([10, 9, 9, 9]);
+    expect(sizes(12, 12)).toEqual([12]);
+    expect(sizes(13, 12)).toEqual([7, 6]);
+    expect(sizes(0, 12)).toEqual([]);
+    expect(batches(n(1134), CHECK_BATCH).flat()).toEqual(n(1134));
+    expect(
+      Math.max(...batches(n(1134), CHECK_BATCH).map((b) => b.length))
+    ).toBeLessThanOrEqual(CHECK_BATCH);
+  });
+
+  it("refuses a size that is not a positive integer", () => {
+    for (const size of [0, -1, 1.5, Number.NaN])
+      expect(() => batches([1], size)).toThrow("positive integer");
   });
 });

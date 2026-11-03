@@ -117,6 +117,101 @@ tested: the request to count characters before replying is what led the model
 to reason. A whole-run cost per title needs a check that completes (#201).
 The two runs together cost $0.2815.
 
+## Measured: the segment-title check for a whole book (#201)
+
+The two Colossians runs above stopped because the check reply was cut off.
+Five more Colossians checks were run on 2026-11-03 to find out why and to
+choose a fix, with the same models and prompt (SHA-256 `cc76a816…`). Every
+number comes from OpenRouter's `usage` block (tokens, billed `cost`) as the
+ledger or the experiment's output file recorded it.
+
+How each was run. A and D used the CLI below, from this branch's working
+tree before its first commit (A with batches of at most 12 and the old limit, D with
+an 8,192-token reasoning budget, a lever later dropped). B and C were
+one-off scripts, not committed: one whole-book check call through
+`complete()` in `scripts/lib/openrouter.ts`, with the `check` part of the
+prompt and `checkMessage()` on run A's 33 drafts. E ran
+`draftSegmentTitles()` as committed, with D's paid-for draft replayed from
+D's ledger (no second draft call) and a real check call.
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.20
+```
+
+| Check                                        | Titles per call | Completion limit | Reasoning            | Reply tokens  | Readable | Cost                                |
+| -------------------------------------------- | --------------- | ---------------- | -------------------- | ------------- | -------- | ----------------------------------- |
+| earlier runs 1 and 2 (above)                 | 33              | 16,384           | 15,729 each          | 651 each      | no       | $0.0652 each                        |
+| A, three batches                             | 11, 11, 11      | 16,384           | 15,727; 2,625; 8,365 | 539; 339; 393 | yes      | $0.1095 ($0.0625, $0.0126, $0.0343) |
+| B, whole book, reasoning budget 8,192 asked  | 33              | 16,384           | 10,336               | 1,240         | yes      | $0.0472                             |
+| C, whole book, no budget                     | 33              | 32,768           | 17,252               | 1,261         | yes      | $0.0718                             |
+| D, first batch, reasoning budget 8,192 asked | 17              | 16,384           | 16,394               | 0             | no       | $0.0636                             |
+| E, whole book (one batch of 35 or fewer)     | 33              | 32,768           | 24,806               | 1,378         | yes      | $0.1019                             |
+
+All labelled measured 2026-11-03. Reply tokens are completion minus
+reasoning. Generation ids are in each ledger (`.cache/`, not committed);
+E's check is `gen-1793728977-y7Is5ripR9yJlSULzI0p`.
+
+What this shows:
+
+- **The cut-off was the limit, not a broken reply.** Given 32,768 tokens,
+  the same whole-book check finished: 17,252 and 24,806 reasoning tokens
+  (C, E), both above the 16,384 limit. Under 16,384 Gemini Flash stopped
+  reasoning at 15,727 to 15,729 tokens in three calls, about 96% of the
+  limit, which left about 650 tokens for 33 verdicts (inference from the
+  counts: the reasoning stopped at the same point whatever the titles).
+- **A reasoning budget does not hold for this model.** 8,192 asked gave
+  10,336 once (B) and 16,394, the whole limit with no reply, once (D).
+  OpenRouter's reasoning documentation says Gemini 3 maps a budget to a
+  thinking level and does not guarantee it. So it was not used.
+- **Smaller batches do not reason less.** One batch of 11 titles reasoned
+  to the limit (A), as the whole book had. Batches are for the reply, which
+  grows with the titles (38 to 42 tokens per title in B, C and E); the
+  longest book, Psalms, has 1,134 titles to draft (measured with `jq`
+  over `data/structure/`, segments less single-segment pericopes; the 66
+  books sum to 13,507, as above).
+- **Run-to-run spread is wide.** Two whole-book checks of 33 titles
+  reasoned 17,252 and 24,806 tokens (C and E, on different drafts). E used 80% of the 32,768
+  limit, as Philippians used 80% of 16,384 before Colossians went over.
+  Watch item: if a check is cut off again, the next step is the model's own
+  limit (65,536, from OpenRouter's model list on 2026-11-03).
+
+The fix: each check call gets 32,768 tokens (`CHECK_MAX_TOKENS`) and judges
+at most 35 titles (`CHECK_BATCH`), in reading order, split as evenly as
+possible. The check prompt and criteria did not change. Drafting still has
+16,384.
+
+| Quantity                             | Value                                                    | Label               | Source and method                                                                                                                                           |
+| ------------------------------------ | -------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| COL check readable with the fix      | yes, 33 of 33 verdicts read                              | measured 2026-11-03 | E: outcome `done`, no title without a check                                                                                                                 |
+| COL check tokens and cost (E)        | 31,180 (4,996 prompt, 26,184 completion), $0.1019, 188 s | measured 2026-11-03 | E's ledger                                                                                                                                                  |
+| COL run cost with the fix            | $0.1768 ($0.0748 draft, $0.1019 check)                   | measured 2026-11-03 | D's draft call plus E's check call                                                                                                                          |
+| Checker agreed (E)                   | 22 of 33 (`ai-checked`)                                  | measured 2026-11-03 | 11 disagreements, all `plain`; counted with Python from the record and listed with `jq`                                                                     |
+| Checker agreed (A, other drafts)     | 26 of 33                                                 | measured 2026-11-03 | 7 disagreements: 6 `plain`, 1 `accurate`; the same two ways                                                                                                 |
+| Checker agreed (B and C, A's drafts) | 26 of 33 each, the same 33 verdicts                      | measured 2026-11-03 | 6 `plain`, 1 `style` each; 31 of 33 verdicts match A's batched check (joined by key with `join`)                                                            |
+| Gate failures (A and E)              | 0 of 33 each (longest 58 characters)                     | measured 2026-11-03 | the records' `gates`                                                                                                                                        |
+| Check cost per title, one book       | $0.0014 to $0.0031                                       | measured 2026-11-03 | B, C, E: $0.0472 to $0.1019 over 33 titles                                                                                                                  |
+| Check cost, all 66 books             | about $19 to $42                                         | estimated           | 13,507 drafted titles × the per-title range; assumes a batch of 35 costs what a 33-title check did. A long book run in full batches would measure it.       |
+| Spend on these runs                  | $0.5367                                                  | measured 2026-11-03 | A $0.1774 (draft $0.0679, checks $0.1095), B $0.0472, C $0.0718, D $0.1384 (draft $0.0748, check $0.0636), E $0.1019; the earlier runs 1 and 2 not included |
+
+Why Colossians reasoned more than Philippians is not measured. Of the
+Colossians disagreements, all were `plain` in E, and all but one in A
+(`accurate`), B and C (`style` each): a "them", "they" or "you" with no one
+named (for example "Epaphras taught them and told
+Paul of their love"). None was `covers`. Inference, not tested: the revised
+drafting prompt's push to stay short (rule 6) meets rule 5 and the check's
+`plain` criterion, and the checker spends its reasoning on whether each
+pronoun is clear. Philippians, drafted with the earlier prompt, had 3 `plain`
+disputes in 37.
+
+Not changed here, and its own issue: the draft call is still one call per
+book under 16,384 tokens. A Colossians draft used 5,622 to 6,311 completion
+tokens for 33 titles, so the longest books will not fit in one draft call
+(Genesis has 642 titles to draft and Psalms 1,134, measured as above; that
+one call cannot hold them is estimated from the Colossians tokens per
+title).
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |
