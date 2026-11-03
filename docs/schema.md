@@ -168,7 +168,7 @@ key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
 into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
 rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
-`prompts/`. English Titus, Philippians and Colossians exist so far. A pericope's only
+`prompts/`. English Titus, Philippians, Colossians and 1 Thessalonians exist so far. A pericope's only
 segment has no draft (decision 12): it takes the pericope title in the build.
 
 Titus was drafted by an agent following `prompts/segment-titles.md`, before a
