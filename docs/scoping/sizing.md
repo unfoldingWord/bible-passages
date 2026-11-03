@@ -501,6 +501,12 @@ before the third check ran (#207); only counts and criteria were.
 | Drafts over 60 characters    | 0 of 30 (longest 57, mean 50.3)          | measured 2026-11-03 | the `length` gate and `text` lengths                                                               |
 | Titles in the tC Mobile file | 26 of 32 segments                        | measured 2026-11-03 | `npm run build`: the 4 disputed drafts and the 2 reused pericope titles are `unreviewed`, left out |
 
+The third check then ran blind on the 4 disputes: one dispute call and one
+recheck call, $0.046908, 85.2 s of model time, all 4 sorted factual
+([dispute-check.md](dispute-check.md#revised-step-measured-3-nov-2026)).
+The book cost $0.124942 from drafting to recheck, $0.0042 per drafted
+title (measured: OpenRouter's billed `cost` of the four calls, summed).
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |
