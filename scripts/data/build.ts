@@ -99,7 +99,9 @@ for (const book of STRUCTURE_BOOKS) {
         `${book} ${h.chapter}:${h.verse}: heading without a pericope`
       );
     if (titles[p.key])
-      throw new Error(`${book} ${h.chapter}:${h.verse}: two headings`);
+      throw new Error(
+        `${book} ${h.chapter}:${h.verse}: two headings for ${p.key}`
+      );
     titles[p.key] = { text: h.text, status: "unreviewed", source };
   }
   for (const p of structure.pericopes)
