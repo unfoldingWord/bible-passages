@@ -398,9 +398,10 @@ export async function draftSegmentTitles(args: {
   // The parsed verdicts, batch by batch, kept in the ledger for the same
   // reason: a later batch that stops the run does not lose earlier ones
   // (#211). `checkUnread` are the keys a batch left out or answered
-  // unreadably.
+  // unreadably; both stay null until a batch's reply is read, so an empty
+  // list never stands for a check that did not run.
   let checkVerdicts: Record<string, Check> | null = null;
-  let checkUnread: string[] = [];
+  let checkUnread: string[] | null = null;
   const ledger = (outcome: DraftOutcome | "running") =>
     args.write({
       language: "en",

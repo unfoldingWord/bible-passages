@@ -910,6 +910,27 @@ describe("the third check's guards and records (#206)", () => {
     expect(sent).toHaveLength(0);
   });
 
+  // The runner counts this run's disputes against the record it passed in,
+  // so settling must not write onto that record.
+  it("leaves the record it was given unchanged when it settles a title", async () => {
+    const r = record();
+    r.titles["XYZ.1.3-4"]!.dispute = {
+      by: `ai:${THIRD}`,
+      kind: "factual",
+      text: "Paul thanks God",
+      why: "x",
+      status: "unreviewed",
+    };
+    const before = structuredClone(r);
+    const { complete } = fakeModel({
+      "XYZ.1.5-6": { kind: "factual", title: "Paul expects it", why: "x" },
+    });
+    const { record: out, outcome } = await settle(complete, { record: r }).run;
+    expect(outcome).toBe("done");
+    expect(out!.titles["XYZ.1.5-6"]!.dispute?.text).toBe("Paul expects it");
+    expect(r).toEqual(before);
+  });
+
   it("keeps the raw text of a reply it cannot read in the ledger", async () => {
     const { complete } = fakeModel("cut off");
     const { run, ledgers } = settle(complete);

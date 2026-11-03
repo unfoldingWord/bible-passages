@@ -126,6 +126,13 @@ const promptPath = "prompts/dispute-titles.md";
 // Whether a ledger was written: a run refused before its call writes none,
 // and must not point to one (#206).
 let ledgerWritten = false;
+// The titles that had a dispute before this run, kept before the call so
+// the count below cannot depend on what the call returns (#206).
+const already = new Set(
+  Object.entries(record.titles)
+    .filter(([, t]) => t.dispute)
+    .map(([k]) => k)
+);
 
 try {
   const { record: settled, outcome } = await settleDisputes({
@@ -162,7 +169,7 @@ try {
     // Only what this run settled: a dispute already on the record was
     // settled by an earlier run (#206).
     const ds = Object.entries(settled.titles).filter(
-      ([k, t]) => t.dispute && !record.titles[k]?.dispute
+      ([k, t]) => t.dispute && !already.has(k)
     );
     const count = (kind: string) =>
       ds.filter(([, t]) => t.dispute?.kind === kind).length;

@@ -396,6 +396,7 @@ describe("draftSegmentTitles", () => {
       outcome,
       draftTitles: draftReply,
       checks: null,
+      checkUnread: null,
     });
   });
 
@@ -595,7 +596,13 @@ describe("draftSegmentTitles", () => {
             : "check: spent 1 of 1, not run",
       });
       expect(sent).toHaveLength(1);
-      expect(ledgers.at(-1)).toMatchObject({ outcome, checks: null });
+      expect(ledgers.at(-1)).toMatchObject({
+        outcome,
+        checks: null,
+        checkUnread: null,
+        // What the draft call left unread is still on record: no title.
+        draftTitles: {},
+      });
     }
   });
 
