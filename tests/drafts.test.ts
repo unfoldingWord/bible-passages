@@ -6,7 +6,11 @@ import {
   disputeProblems,
   type Title as Settled,
 } from "../scripts/lib/dispute-titles.ts";
-import { CRITERIA, gateProblems } from "../scripts/lib/segment-titles.ts";
+import {
+  CHECK_BATCH,
+  CRITERIA,
+  gateProblems,
+} from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
 
 type Title = { text: string; status: string; source: string };
@@ -103,12 +107,58 @@ describe("prompts/history/", () => {
     expect(keptPrompt("../../package.json")).toBeUndefined();
     expect(keptPrompt("")).toBeUndefined();
   });
+
+  // The branch a record made with the live prompt takes; the scripted
+  // records committed so far all take the history branch (#204).
+  it("finds the current prompt by its own digest", () => {
+    const current = sha256(fileText("prompts/segment-titles.md"));
+    expect(keptPrompt(current)).toBe("prompts/segment-titles.md");
+  });
+});
+
+// Rule 6's examples in the draft prompt are Titus titles as built, each with
+// its length in brackets, counted in code points like Python len() (#204).
+describe("the Titus examples in prompts/segment-titles.md", () => {
+  const prompt = fileText("prompts/segment-titles.md");
+  const draft = prompt.slice(
+    prompt.indexOf("<!-- draft:start -->"),
+    prompt.indexOf("<!-- draft:end -->")
+  );
+  const examples = [
+    ...draft
+      .slice(draft.indexOf("These titles from Titus"))
+      .matchAll(/^- (.+) \((\d+)\)$/gm),
+  ].map((m) => ({ text: m[1]!, count: Number(m[2]) }));
+  const built = new Set(
+    Object.values(
+      (
+        read("data/titles/en/TIT.json") as {
+          titles: { [key: string]: Title };
+        }
+      ).titles
+    ).map((t) => t.text)
+  );
+
+  it("lists eight examples", () => {
+    expect(examples).toHaveLength(8);
+  });
+
+  it("gives each example's true length and keeps it within the limit", () => {
+    for (const e of examples) {
+      expect([...e.text].length, e.text).toBe(e.count);
+      expect(e.count, e.text).toBeLessThanOrEqual(MAX);
+    }
+  });
+
+  it("uses only titles that are built for Titus", () => {
+    for (const e of examples) expect(built.has(e.text), e.text).toBe(true);
+  });
 });
 
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
 // scripts/translate/segment-titles.ts, whose records carry their calls.
-describe.each(["TIT", "PHP"])("English %s segment drafts", (book) => {
+describe.each(["TIT", "PHP", "COL"])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
     segments: { key: string; pericope: string }[];
@@ -235,9 +285,29 @@ describe.each(["TIT", "PHP"])("English %s segment drafts", (book) => {
   });
 });
 
-describe("a scripted segment-title record (PHP)", () => {
-  const record = read("data/drafts/en/PHP.json") as Record;
-  const structure = read("data/structure/PHP.json") as {
+// The books drafted by scripts/translate/segment-titles.ts. A record has one
+// draft call, then one check call per batch of at most CHECK_BATCH titles
+// (#201); `checks` is what each committed record holds.
+describe.each([
+  {
+    book: "PHP",
+    reused: ["PHP.1.1-2", "PHP.4.21-23"],
+    drafted: 37,
+    // Made before the prompt changed for #197 (docs/scoping/sizing.md).
+    prompt: "prompts/history/segment-titles-f132f2195f80.md",
+    checks: 1,
+  },
+  {
+    book: "COL",
+    reused: ["COL.1.1-2", "COL.3.18-21", "COL.3.22-25"],
+    drafted: 33,
+    // Made before the prompt changed for #209 (docs/scoping/sizing.md).
+    prompt: "prompts/history/segment-titles-cc76a816652a.md",
+    checks: 1,
+  },
+])("a scripted segment-title record ($book)", (t) => {
+  const record = read(`data/drafts/en/${t.book}.json`) as Record;
+  const structure = read(`data/structure/${t.book}.json`) as {
     segments: { key: string; pericope: string }[];
   };
 
@@ -248,33 +318,39 @@ describe("a scripted segment-title record (PHP)", () => {
     const reused = structure.segments.filter(
       (s) => count.get(s.pericope) === 1
     );
-    expect(reused.map((s) => s.key)).toEqual(["PHP.1.1-2", "PHP.4.21-23"]);
+    expect(reused.map((s) => s.key)).toEqual(t.reused);
     for (const s of reused) expect(record.titles[s.key]).toBeUndefined();
-    expect(Object.keys(record.titles)).toHaveLength(37);
+    expect(Object.keys(record.titles)).toHaveLength(t.drafted);
+    expect(t.drafted + t.reused.length).toBe(structure.segments.length);
   });
 
   it("was made with a committed prompt and the pinned BSB text", () => {
     expect(record.prompt?.file).toBe("prompts/segment-titles.md");
-    // Made before the prompt changed for #197 (docs/scoping/sizing.md).
-    expect(keptPrompt(record.prompt?.sha256 ?? "")).toBe(
-      "prompts/history/segment-titles-f132f2195f80.md"
-    );
-    expect(record.bible).toBe("bsb-php");
+    expect(keptPrompt(record.prompt?.sha256 ?? "")).toBe(t.prompt);
+    expect(record.bible).toBe(`bsb-${t.book.toLowerCase()}`);
   });
 
-  it("records both calls: a draft and a check by models of different families", () => {
+  it("records one draft call, then its check calls, by models of different families", () => {
     const calls = record.calls ?? [];
-    expect(calls.map((c) => c.role)).toEqual(["draft", "check"]);
+    expect(calls.map((c) => c.role)).toEqual([
+      "draft",
+      ...Array<string>(t.checks).fill("check"),
+    ]);
+    expect(t.checks).toBeLessThanOrEqual(Math.ceil(t.drafted / CHECK_BATCH));
     for (const c of calls) {
       expect(c.id).toMatch(/^gen-/);
       expect(c.promptTokens).toBeGreaterThan(0);
       expect(c.cost).toBeGreaterThan(0);
     }
     const family = (m: string) => m.split("/")[0];
-    expect(family(calls[0]!.model)).not.toBe(family(calls[1]!.model));
+    const [draft, ...checks] = calls;
+    for (const c of checks) {
+      expect(c.model).toBe(checks[0]!.model);
+      expect(family(draft!.model)).not.toBe(family(c.model));
+    }
     for (const d of Object.values(record.titles)) {
-      expect(d.source).toBe(`ai:${calls[0]!.model}`);
-      expect(d.check?.by).toBe(`ai:${calls[1]!.model}`);
+      expect(d.source).toBe(`ai:${draft!.model}`);
+      expect(d.check?.by).toBe(`ai:${checks[0]!.model}`);
       for (const c of d.check?.criteria ?? [])
         expect(CRITERIA).toContain(c as (typeof CRITERIA)[number]);
     }

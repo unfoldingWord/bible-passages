@@ -168,7 +168,7 @@ key with `text`, `source` (`ai:<model id>`) and `status`. The build merges them
 into `data/titles/<lang>/<BOOK>.json` and never clears this directory, so a
 rebuild cannot wipe a draft. A draft for a key that is not a segment in the
 structure fails the build. The instructions that produced them are in
-`prompts/`. English Titus and Philippians exist so far. A pericope's only
+`prompts/`. English Titus, Philippians and Colossians exist so far. A pericope's only
 segment has no draft (decision 12): it takes the pericope title in the build.
 
 Titus was drafted by an agent following `prompts/segment-titles.md`, before a
@@ -183,7 +183,8 @@ never calls a model. Such a record also has:
   kept byte for byte as
   `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
   (Philippians was made with `f132f2195f80`; the prompt changed after it,
-  #197).
+  #197. Colossians was made with `cc76a816652a`; the prompt changed after
+  it, #209).
 - `calls`: the draft calls (one before #208; one per batch of at most 35
   segments since), then the check calls (one before #201; one per batch of
   at most 35 titles since), each with its OpenRouter generation id, model,
