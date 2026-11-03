@@ -1157,7 +1157,9 @@ describe("the third check is blind", () => {
   });
 
   const records = [
-    ...["COL", "1TH"].map((b) => [b, `data/drafts/en/${b}.json`] as const),
+    ...["COL", "1TH", "2TI"].map(
+      (b) => [b, `data/drafts/en/${b}.json`] as const
+    ),
     ["PHP", "tests/fixtures/disputes/PHP-run1.json"] as const,
   ];
   it.each(records)(

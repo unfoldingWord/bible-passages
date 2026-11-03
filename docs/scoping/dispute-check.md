@@ -13,7 +13,8 @@ to merge the code without the data.
 keep each verse's main point, and agreement must be measured blind. The
 trial run failed the first (below) and was not blind. The step was revised
 for #207 on 3 Nov (rule 8, the recheck, a blind input) and run blind on
-Colossians and 1 Thessalonians ([below](#revised-step-measured-3-nov-2026));
+Colossians, 1 Thessalonians and 2 Timothy
+([below](#revised-step-measured-3-nov-2026));
 its answers wait on a person's sample check in
 [dispute-review.md](dispute-review.md), and are not in `data/`.
 
@@ -37,7 +38,7 @@ draft, with nothing else the third model said. Its verdict is kept as
 `dispute.recheck`. A taste title the checker does not agree with stays
 `unreviewed` and is listed with the factual ones. The third model is not
 sent the checker's suggestion (blind); a test builds the message for every
-disputed title of COL, 1TH and the PHP fixture and finds no suggestion, no
+disputed title of COL, 1TH, 2TI and the PHP fixture and finds no suggestion, no
 ADR 0005 proposed title and no person's review in it.
 
 The drafted and checked record is never rewritten: the answer is added as
@@ -187,12 +188,38 @@ written from #207's four losses.
 | Colossians            | yes   | 4        | 2 taste, 2 factual  | 3 of 4         | 2            | 2,246 + 1,712 (1,437), 43.5 s, `gen-1793733912-0P1ufXMNoLcZDpM2mLig` | 1,007 + 6,758 (6,593), 44.9 s, `gen-1793733955-X8BPc7z9jz5dEMglg1er` | $0.048831 |
 | 1 Thessalonians       | yes   | 1        | 0 taste, 1 factual  | 0 of 1         | 0            | 1,850 + 834 (759), 21.5 s, `gen-1793734000-UO8lZRa11GuXnu8qakxO`     | 671 + 831 (739), 8.2 s, `gen-1793734022-njfL9QALTmq4g3CQjUOt`        | $0.016583 |
 | Philippians (fixture) | no    | 14       | 2 taste, 12 factual | 14 of 14       | 2            | 4,010 + 3,996 (3,106), 99.3 s, `gen-1793734038-korznxG3yjKsuOeSb1w9` | 2,469 + 1,683 (1,319), 12.8 s, `gen-1793734137-ch9B22IuJ3KeJFJgct7D` | $0.058147 |
+| 2 Timothy             | yes   | 4        | 0 taste, 4 factual  | 3 of 4         | 0            | 2,250 + 2,218 (1,941), 51.7 s, `gen-1793741936-dnsgQnvQDk6Eb8eQQsI2` | 978 + 4,899 (4,729), 33.5 s, `gen-1793741988-Ja89oYMFPVLcRpQCP3Ko`   | $0.046908 |
 
 Costs are OpenRouter's billed `cost` per call, summed. Counts were made by
 the runner's summary and again by a Python script over each run's record,
-which agreed. Lane spend, all measured: $0.123561 for these six calls and
-$0.126988 for drafting and checking 1 Thessalonians
-([sizing.md](sizing.md)), $0.250549 in all.
+which agreed. Spend of the first lane (Colossians, 1 Thessalonians and
+Philippians), all measured: $0.123561 for their six calls and $0.126988
+for drafting and checking 1 Thessalonians ([sizing.md](sizing.md)),
+$0.250549 in all. 2 Timothy's spend is given below; the eight calls in the
+table cost $0.170469.
+
+**2 Timothy (blind, measured 3 Nov 2026).** Added to enlarge the blind
+sample, on the maintainer's decision of 3 Nov. Drafted and checked with the
+current prompt (`838516080c8f…`, #216's readers rule) and the code at
+`e383b1d` ([sizing.md](sizing.md)); ULT `ult-2ti` (en_ult v91, `35d2159`)
+pinned in `14ee5f7` and the record committed in `40360b7`, both before the
+run. Same third-check prompt (`4ef5bbc9…`, unchanged since `9711b49`),
+voice `data/drafts/en/TIT.json` at `c7d207ae…`, recheck with the record's
+own prompt (`prompts/segment-titles.md`, found by its hash) and checker
+`google/gemini-3.8-flash`. Run 21:38:55 to 21:40:21 UTC, exit 0:
+
+```
+node scripts/translate/dispute-titles.ts --book 2TI --model openai/gpt-6.1-sol \
+  --out .cache/dispute-titles/l2ti-2TI
+```
+
+Blind: before the run, the author saw the record's counts, its criteria
+counts (`accurate` 2, `covers` 1, `plain` 1, `style` 1) and the call
+ledger; never a checker suggestion or reason, a disputed key, or a title.
+The third model's answers were first read after these numbers were
+committed. Counts by the runner's summary and again by `jq` and Python
+over the record, which agreed. Lane spend, measured: $0.078034 drafting
+and checking, $0.046908 for the two calls above, $0.124942 in all.
 
 ### Philippians: the #207 cases under the revised step (NOT blind)
 
@@ -216,17 +243,24 @@ including 2:14–16 without its lights.
    detail (4:18–20, "omits verse 20’s praise"), which ADR 0005's sort
    calls taste. It errs safe (held for the content team) but leaves 2 of
    14 Philippians titles `ai-checked` where run 1 had 12. On the blind
-   books, 3 of 5 disputes are factual.
+   books, 7 of 9 disputes are factual (Colossians 2 of 4, 1 Thessalonians
+   1 of 1, 2 Timothy 4 of 4); each of 2 Timothy's four reasons names
+   something the draft omits (`review.md` of the run).
 2. **The recheck checks accuracy and style, not completeness.** It refused
    COL.1.21-23 (accurate: "God reconciled …, not … Christ") and
-   1TH.4.13-15 (plain, style), and agreed with everything else (17 of 19
-   over the three runs). The check prompt it reuses tells the checker not to
+   1TH.4.13-15 (plain, style) and 2TI.2.11-13 (plain: "gives life and
+   rule", "denies deniers"), and agreed with everything else (20 of 23
+   over the four runs). The check prompt it reuses tells the checker not to
    disagree because a detail is left out, so it cannot catch a lost verse
    point. A person's sample remains the only check of meaning.
-3. **The blind sample is small**: 5 disputes over two books (Colossians 4,
-   1 Thessalonians 1 of 31; its checker disagreed less than on any book so
-   far). Both blind taste titles, the only ones that would ship, are
-   COL.1.7-8 and COL.2.4-5.
+3. **The blind sample is small**: 9 disputes over three books (Colossians
+   4 of 33, 1 Thessalonians 1 of 31, 2 Timothy 4 of 30). 2 Timothy, the
+   first book drafted with #216's readers rule, has no dispute over a
+   pronoun, and its 4 are all factual, so it adds no taste title: the
+   blind taste titles, the only ones that would ship `ai-checked`, are
+   still the two of Colossians, COL.1.7-8 and COL.2.4-5. Its factual
+   titles are proposals the content team would see, and the person's
+   columns measure them too.
 
 Nothing from these runs is written to `data/`. #207's done-when needs the
 maintainer's yes/no on [dispute-review.md](dispute-review.md).
@@ -250,7 +284,7 @@ for byte.
 
 ## Watch items
 
-- **ULT pins per book.** `ult-php`, `ult-col` and `ult-1th` are pinned. Each later book needs
+- **ULT pins per book.** `ult-php`, `ult-col`, `ult-1th` and `ult-2ti` are pinned. Each later book needs
   its `ult-<book>` pin before its third check runs; `pin-structure.ts` pins
   BSB and the chunks, not ULT.
 - **Wording varies run to run** (8 of 14 the same on Philippians). Once
@@ -258,11 +292,12 @@ for byte.
   record, not a correction.
 - **A blind measure of agreement** (#207). The 12 of 14 is one book, one
   hand sort by another model, not a person, and not blind. The revised
-  step's blind runs (5 disputes) wait on a person's answers in
+  step's blind runs (9 disputes, 2 of them taste) wait on a person's answers in
   [dispute-review.md](dispute-review.md).
 - **Factual over-sorting under rule 8** (finding 1 above): measured on
-  Philippians only, not blind. Whether it holds on the blind books is the
-  person's "factual call correct" column.
+  Philippians only, not blind; on the blind books 7 of 9 are factual.
+  Whether those calls are right is the person's "factual call correct"
+  column.
 - **Known issues the list cannot show** (#206). `npm run disputes` lists
   the disputes that left a title `unreviewed` (every factual one, and a
   taste one the recheck did not agree with or that failed a gate), so an
