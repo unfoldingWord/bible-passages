@@ -187,12 +187,36 @@ written from #207's four losses.
 | Colossians            | yes   | 4        | 2 taste, 2 factual  | 3 of 4         | 2            | 2,246 + 1,712 (1,437), 43.5 s, `gen-1793733912-0P1ufXMNoLcZDpM2mLig` | 1,007 + 6,758 (6,593), 44.9 s, `gen-1793733955-X8BPc7z9jz5dEMglg1er` | $0.048831 |
 | 1 Thessalonians       | yes   | 1        | 0 taste, 1 factual  | 0 of 1         | 0            | 1,850 + 834 (759), 21.5 s, `gen-1793734000-UO8lZRa11GuXnu8qakxO`     | 671 + 831 (739), 8.2 s, `gen-1793734022-njfL9QALTmq4g3CQjUOt`        | $0.016583 |
 | Philippians (fixture) | no    | 14       | 2 taste, 12 factual | 14 of 14       | 2            | 4,010 + 3,996 (3,106), 99.3 s, `gen-1793734038-korznxG3yjKsuOeSb1w9` | 2,469 + 1,683 (1,319), 12.8 s, `gen-1793734137-ch9B22IuJ3KeJFJgct7D` | $0.058147 |
+| 2 Timothy             | yes   | 4        | 0 taste, 4 factual  | 3 of 4         | 0            | 2,250 + 2,218 (1,941), 51.7 s, `gen-1793741936-dnsgQnvQDk6Eb8eQQsI2` | 978 + 4,899 (4,729), 33.5 s, `gen-1793741988-Ja89oYMFPVLcRpQCP3Ko`   | $0.046908 |
 
 Costs are OpenRouter's billed `cost` per call, summed. Counts were made by
 the runner's summary and again by a Python script over each run's record,
 which agreed. Lane spend, all measured: $0.123561 for these six calls and
 $0.126988 for drafting and checking 1 Thessalonians
 ([sizing.md](sizing.md)), $0.250549 in all.
+
+**2 Timothy (blind, measured 3 Nov 2026).** Added to enlarge the blind
+sample, on the maintainer's decision of 3 Nov. Drafted and checked with the
+current prompt (`838516080c8f…`, #216's readers rule) and the code at
+`e383b1d` ([sizing.md](sizing.md)); ULT `ult-2ti` (en_ult v91, `35d2159`)
+pinned in `14ee5f7` and the record committed in `40360b7`, both before the
+run. Same third-check prompt (`4ef5bbc9…`, unchanged since `9711b49`),
+voice `data/drafts/en/TIT.json` at `c7d207ae…`, recheck with the record's
+own prompt (`prompts/segment-titles.md`, found by its hash) and checker
+`google/gemini-3.8-flash`. Run 21:38:55 to 21:40:21 UTC, exit 0:
+
+```
+node scripts/translate/dispute-titles.ts --book 2TI --model openai/gpt-6.1-sol \
+  --out .cache/dispute-titles/l2ti-2TI
+```
+
+Blind: before the run, the author saw the record's counts, its criteria
+counts (`accurate` 2, `covers` 1, `plain` 1, `style` 1) and the call
+ledger; never a checker suggestion or reason, a disputed key, or a title.
+The third model's answers were first read after these numbers were
+committed. Counts by the runner's summary and again by `jq` and Python
+over the record, which agreed. Lane spend, measured: $0.078034 drafting
+and checking, $0.046908 for the two calls above, $0.124942 in all.
 
 ### Philippians: the #207 cases under the revised step (NOT blind)
 
