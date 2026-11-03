@@ -35,10 +35,19 @@ gives just enough information to remind the reader which section follows"
   Titus titles as built, one of them in the reviewer’s own wording (1:12–13,
   `data/drafts/en/TIT.json`); their counts are Python `len()`. Only the draft
   part changed; the check part is as Philippians was checked.
+- Rule 5's sentences on "them", "they", "their" and "you", with short names
+  for the people, rule 6's "never drop the name", and the closing pronoun
+  pass were added after Colossians (issue #209), where every checker
+  disagreement was `plain`, about an unclear pronoun (4 of 33 in the
+  committed run, 6 to 11 in the runs of #201; `docs/scoping/sizing.md`).
+  The maintainer chose to fix this in the draft rather than leave it to the
+  third check. Only the draft part changed; the check part is as Philippians
+  and Colossians were checked. Titus's "us" and "we" titles are reviewed
+  titles kept as they are.
 - Each record keeps the SHA-256 of the whole file it was made with. When the
   file changes, the earlier version is kept byte for byte in
   `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
-  (Philippians: `f132f2195f80`), so every committed record can be traced to
+  (Philippians: `f132f2195f80`; Colossians: `cc76a816652a`), so every committed record can be traced to
   the text that produced it.
 
 ## Input per segment
@@ -75,8 +84,8 @@ Rules:
 2. Plain words for a reader of English as a second language. Use words the text itself uses; no theological terms beyond them. No idioms.
 3. Sentence case: only the first word and proper names start with a capital. No final full stop.
 4. Do not repeat the pericope heading; the title covers only this segment.
-5. Name who acts or is addressed (Paul, Timothy, the Philippians, believers) so a title makes sense alone in a list. Do not write a command that names no one.
-6. At most 60 characters, counting spaces; most good titles are 35 to 55 characters (6 to 9 words). A title over 60 is rejected, so keep only the main point: drop a second clause or a detail rather than go over. A frame such as "Paul tells the Philippians to" uses half the limit; say it shorter, for example "Paul urges believers to", or let the people the verses are about be the subject ("Elders must be blameless").
+5. Name who acts or is addressed (Paul, Timothy, the Philippians, believers) so a title makes sense alone in a list. Do not write a command that names no one. Each title is read alone, so "them", "they", "their" and "you" are never clear in it: name the people instead, even when the verses say "you". Short names keep a title within 60: "believers", "the church", "the Colossians", "Christians", "wives", "husbands", "children", "slaves", "masters". "Paul prays that God will make them strong" names no one; "Paul prays for the believers to be strong" does.
+6. At most 60 characters, counting spaces; most good titles are 35 to 55 characters (6 to 9 words). A title over 60 is rejected, so keep only the main point: drop a second clause or a detail rather than go over, but never drop the name of the people (rule 5) for a pronoun. A frame such as "Paul tells the Philippians to" uses half the limit; say it shorter, for example "Paul urges believers to", or let the people the verses are about be the subject ("Elders must be blameless").
 7. Straight text only: the typographic apostrophe (’), never ', no quotation marks, no markup.
 
 These titles from Titus, which a person has reviewed, show the voice and length wanted (characters in brackets):
@@ -90,7 +99,7 @@ These titles from Titus, which a person has reviewed, show the voice and length 
 - God saved us because of his mercy, not our deeds (48)
 - Paul asks Titus to come and to help Zenas and Apollos (53)
 
-Before you reply, count the characters of every title, and shorten any that is over 60.
+Before you reply, count the characters of every title, and shorten any that is over 60. Then replace any "them", "they", "their" or "you" with the people it means.
 
 Reply with only a JSON object mapping each item's `key` to its title as a string, for every item, and nothing else.
 
