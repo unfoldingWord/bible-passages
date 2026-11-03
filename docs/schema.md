@@ -231,22 +231,31 @@ and `check` stay the drafting and checking models' own.
 - `dispute`: `by` (`ai:<model>`, of a family other than the drafting and
   the checking model's), `kind` (`taste` or `factual`), `text` (the third
   model's title: the replacement for `taste`, the proposed fix for
-  `factual`), `why`, `status` and `gates` (the gate problems of its `text`,
-  absent when none). `status` is `ai-checked` only for a `taste` title
-  that passes every gate; anything else is `unreviewed`. No AI title is
+  `factual`), `why`, `status`, `gates` (the gate problems of its `text`,
+  absent when none) and `recheck` (#207): the checker's verdict on `text`,
+  in the shape of `check`, by a model of neither the third nor the
+  drafting model's family; absent when the recheck gave none. `status` is
+  `ai-checked` only for a `taste` title that passes every gate and that
+  the recheck agreed with; anything else is `unreviewed`. No AI title is
   above `ai-checked`.
 - The record also has `disputeCheck`: the instructions file and its
   SHA-256 (`prompt`), the `sources.json` id of the ULT text read
   (`verses`, credited in the book's package attribution), and the Titus
   record whose titles set the voice, with its SHA-256 at the run
-  (`voice`); and a third call in `calls`, with `role: "dispute"`.
+  (`voice`), and `recheck`: the segment-title prompt file whose check part
+  judged the third model's titles (the one the drafts were checked with,
+  by SHA-256) and the BSB `bible` it read; and two more calls in `calls`,
+  `role: "dispute"` and `role: "recheck"`. The third model is never sent
+  the checker's `suggestion` or any review.
 - The build takes a person's `review` first, else the `dispute` (its
   `text`, `status`, and `by` as `source`), else the draft. A review that
   keeps the third model's wording carries no `text`, and the title keeps
   `by` as its source. The build refuses a `dispute` that breaks any rule
   above (`disputeProblems` in `scripts/lib/dispute-titles.ts`).
-- `npm run disputes` lists the `factual` ones, for the content team and
-  the release notes (`--all` lists every dispute).
+- `npm run disputes` lists the ones left `unreviewed` (every `factual`
+  one, and a `taste` one the recheck did not agree with or that failed a
+  gate), for the content team and the release notes (`--all` lists every
+  dispute).
 - No committed record has a `dispute` yet: results are written only once
   rewrites keep each verse's main point and agreement is measured blind
   (#207).
