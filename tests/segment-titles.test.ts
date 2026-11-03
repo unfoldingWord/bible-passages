@@ -356,7 +356,12 @@ describe("draftSegmentTitles", () => {
       const ledgers: unknown[] = [];
       const { record, outcome } = await run(complete, ledgers);
       expect(record).toBeNull();
-      expect(outcome).toHaveProperty("stopped");
+      expect(outcome).toEqual({
+        stopped:
+          cost === null
+            ? "cost unknown; check batch 1 of 1 not run"
+            : "spent 1 of 1 before check batch 1 of 1",
+      });
       expect(sent).toHaveLength(1);
       expect(ledgers.at(-1)).toMatchObject({
         calls: [{ role: "draft" }],
@@ -485,7 +490,9 @@ describe("draftSegmentTitles", () => {
       checkBatch: 1,
     });
     expect(record).toBeNull();
-    expect(outcome).toEqual({ stopped: "spent 1 of 1 before check" });
+    expect(outcome).toEqual({
+      stopped: "spent 1 of 1 before check batch 2 of 2",
+    });
     expect(sent).toHaveLength(2);
     expect(ledgers.at(-1)).toMatchObject({
       calls: [{ role: "draft" }, { role: "check" }],

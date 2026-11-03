@@ -446,18 +446,21 @@ export async function draftSegmentTitles(args: {
     const draftedBy = calls[0]?.model ?? draftModel;
     const checks: Record<string, Check> = {};
     const unreadCheck: string[] = [];
-    for (const batch of batches(
+    const toCheck = batches(
       inputs.filter((s) => draft.titles[s.key] !== undefined),
       args.checkBatch ?? CHECK_BATCH
-    )) {
+    );
+    for (const [i, batch] of toCheck.entries()) {
+      // Which check call was refused; earlier ones are in the ledger.
+      const at = `check batch ${i + 1} of ${toCheck.length}`;
       const costs = calls.map((c) => c.cost);
       if (costs.some((c) => c === null)) {
-        outcome = { stopped: "cost unknown; check not run" };
+        outcome = { stopped: `cost unknown; ${at} not run` };
         return { record: null, outcome };
       }
       const spent = costs.reduce<number>((s, c) => s + (c ?? 0), 0);
       if (spent >= args.maxCost) {
-        outcome = { stopped: `spent ${spent} of ${args.maxCost} before check` };
+        outcome = { stopped: `spent ${spent} of ${args.maxCost} before ${at}` };
         return { record: null, outcome };
       }
       const checkReply = await ask(
