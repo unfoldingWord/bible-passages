@@ -395,6 +395,13 @@ export async function draftSegmentTitles(args: {
   // The parsed drafts, batch by batch, kept in the ledger so a run that
   // stops before the check does not lose titles already paid for.
   let draftTitles: Record<string, string> | null = null;
+  // The parsed verdicts, batch by batch, kept in the ledger for the same
+  // reason: a later batch that stops the run does not lose earlier ones
+  // (#211). `checkUnread` are the keys a batch left out or answered
+  // unreadably; both stay null until a batch's reply is read, so an empty
+  // list never stands for a check that did not run.
+  let checkVerdicts: Record<string, Check> | null = null;
+  let checkUnread: string[] | null = null;
   const ledger = (outcome: DraftOutcome | "running") =>
     args.write({
       language: "en",
@@ -411,6 +418,8 @@ export async function draftSegmentTitles(args: {
       updatedAt: new Date().toISOString(),
       calls,
       draftTitles,
+      checks: checkVerdicts,
+      checkUnread,
       totals: {
         promptTokens: calls.reduce((s, c) => s + c.promptTokens, 0),
         completionTokens: calls.reduce((s, c) => s + c.completionTokens, 0),
@@ -447,12 +456,13 @@ export async function draftSegmentTitles(args: {
 
   let outcome: DraftOutcome = "done";
   // The spend fuse, before every call: null when the call may go ahead.
+  // Every stop names the call it stopped at, as `<at>: <why>` (#211).
   const fuse = (at: string): string | null => {
     const costs = calls.map((c) => c.cost);
-    if (costs.some((c) => c === null)) return `cost unknown; ${at} not run`;
+    if (costs.some((c) => c === null)) return `${at}: cost unknown, not run`;
     const spent = costs.reduce<number>((s, c) => s + (c ?? 0), 0);
     return spent >= args.maxCost
-      ? `spent ${spent} of ${args.maxCost} before ${at}`
+      ? `${at}: spent ${spent} of ${args.maxCost}, not run`
       : null;
   };
   try {
@@ -498,9 +508,20 @@ export async function draftSegmentTitles(args: {
       inputs.filter((s) => titlesDrafted[s.key] !== undefined),
       args.checkBatch ?? CHECK_BATCH
     );
+    // With no draft to check no call follows, but a run whose cost is
+    // unknown or over the cap still ends stopped, as it did when the check
+    // was one call (#211).
+    if (toCheck.length === 0) {
+      const stop = fuse("check");
+      if (stop !== null) {
+        outcome = { stopped: stop };
+        return { record: null, outcome };
+      }
+    }
     for (const [i, batch] of toCheck.entries()) {
       // Which check call was refused; earlier ones are in the ledger.
-      const stop = fuse(`check batch ${i + 1} of ${toCheck.length}`);
+      const at = `check batch ${i + 1} of ${toCheck.length}`;
+      const stop = fuse(at);
       if (stop !== null) {
         outcome = { stopped: stop };
         return { record: null, outcome };
@@ -511,7 +532,7 @@ export async function draftSegmentTitles(args: {
         checkMessage(book, batch, titlesDrafted)
       );
       if (typeof checkReply === "string") {
-        outcome = { stopped: `check: ${checkReply}` };
+        outcome = { stopped: `${at}: ${checkReply}` };
         return { record: null, outcome };
       }
       // Two requested ids can resolve to one model. A model never checks
@@ -522,12 +543,14 @@ export async function draftSegmentTitles(args: {
       const drafters = new Set(batch.map((s) => draftedBy[s.key]!));
       for (const d of drafters) {
         if (d === checkedBy) {
-          outcome = { stopped: `check answered by the drafting model ${d}` };
+          outcome = {
+            stopped: `${at}: answered by the drafting model ${d}`,
+          };
           return { record: null, outcome };
         }
         if (family(d) === family(checkedBy)) {
           outcome = {
-            stopped: `check answered by ${checkedBy}, of the drafting model's family`,
+            stopped: `${at}: answered by ${checkedBy}, of the drafting model's family`,
           };
           return { record: null, outcome };
         }
@@ -540,6 +563,9 @@ export async function draftSegmentTitles(args: {
       );
       Object.assign(checks, check.checks);
       unreadCheck.push(...check.missing, ...check.invalid);
+      checkVerdicts = { ...checks };
+      checkUnread = [...unreadCheck];
+      await ledger("running");
     }
     const titles: Record<string, DraftTitle> = {};
     for (const k of drafted) {

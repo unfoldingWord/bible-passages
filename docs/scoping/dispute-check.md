@@ -263,6 +263,11 @@ for byte.
 - **Factual over-sorting under rule 8** (finding 1 above): measured on
   Philippians only, not blind. Whether it holds on the blind books is the
   person's "factual call correct" column.
-- **Bench follow-ups** (#206): the `disputeCheck` guard before the empty
-  return, the ledger message on a pre-spend failure, and holding
-  `disputeCheck.verses` to `ult-<book>`.
+- **Known issues the list cannot show** (#206). `npm run disputes` lists
+  the disputes that left a title `unreviewed` (every factual one, and a
+  taste one the recheck did not agree with or that failed a gate), so an
+  `ai-checked` taste title later found wrong (as PHP 2:12–13 would have
+  been) is not on it. Nothing from the third check is in
+  `data/` (checked 3 Nov 2026), so there is no such title to list yet. When
+  results are written (#207), a title shipped with a known error goes in
+  `CHANGELOG.md`, "Known issues", as AGENTS.md requires of every release.

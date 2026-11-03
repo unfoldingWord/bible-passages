@@ -33,6 +33,7 @@ import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import {
   settleDisputes,
   reviewSheet,
+  ultSource,
   ultVerseTexts,
   voiceOf,
   type DisputedRecord,
@@ -93,7 +94,7 @@ const structure = JSON.parse(
   readFileSync(new URL(`data/structure/${book}.json`, root), "utf8")
 ) as Structure;
 const id = book.toLowerCase();
-const verses = `ult-${id}`;
+const verses = ultSource(book);
 const ult = ultVerseTexts(await readSource(verses));
 const bsbText = await readSource(record.bible);
 const headings = parseHeadings(bsbText);
@@ -122,6 +123,16 @@ const checkPromptFile = (() => {
 const voiceFile = "data/drafts/en/TIT.json";
 const voiceText = readFileSync(new URL(voiceFile, root), "utf8");
 const promptPath = "prompts/dispute-titles.md";
+// Whether a ledger was written: a run refused before its call writes none,
+// and must not point to one (#206).
+let ledgerWritten = false;
+// The titles that had a dispute before this run, kept before the call so
+// the count below cannot depend on what the call returns (#206).
+const already = new Set(
+  Object.entries(record.titles)
+    .filter(([, t]) => t.dispute)
+    .map(([k]) => k)
+);
 
 try {
   const { record: settled, outcome } = await settleDisputes({
@@ -147,16 +158,23 @@ try {
       ...(values["recheck-model"] ? { model: values["recheck-model"] } : {}),
     },
     complete: (request) => complete(request, { apiKey }),
-    write: (ledger) => writeJson(new URL("run.json", out), ledger),
+    write: async (ledger) => {
+      await writeJson(new URL("run.json", out), ledger);
+      ledgerWritten = true;
+    },
   });
   if (settled) {
     await writeJson(new URL(`en/${book}.json`, out), settled);
     writeFileSync(new URL("review.md", out), reviewSheet(settled, inputs));
-    const ds = Object.entries(settled.titles).filter(([, t]) => t.dispute);
+    // Only what this run settled: a dispute already on the record was
+    // settled by an earlier run (#206).
+    const ds = Object.entries(settled.titles).filter(
+      ([k, t]) => t.dispute && !already.has(k)
+    );
     const count = (kind: string) =>
       ds.filter(([, t]) => t.dispute?.kind === kind).length;
     console.log(
-      `en ${book}: ${ds.length} disputes settled: ${count("taste")} taste, ` +
+      `en ${book}: ${ds.length} disputes settled in this run: ${count("taste")} taste, ` +
         `${count("factual")} factual, ` +
         `${ds.filter(([, t]) => t.dispute?.gates).length} gate failures; ` +
         `the checker agreed with ${ds.filter(([, t]) => t.dispute?.recheck?.verdict === "agree").length}, ` +
@@ -177,6 +195,10 @@ try {
   }
 } catch (e) {
   console.error(`dispute-titles: ${(e as Error).message}`);
-  console.error(`dispute-titles: the ledger is in ${out.pathname}run.json`);
+  console.error(
+    ledgerWritten
+      ? `dispute-titles: the ledger is in ${out.pathname}run.json`
+      : "dispute-titles: refused before any call; no ledger was written"
+  );
   process.exit(1);
 }

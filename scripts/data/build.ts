@@ -8,6 +8,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { BOOKS, STRUCTURE_BOOKS } from "../lib/books.ts";
 import {
   builtTitle,
+  disputeCheckProblems,
   disputeProblems,
   type DisputedRecord,
 } from "../lib/dispute-titles.ts";
@@ -115,7 +116,12 @@ for (const book of STRUCTURE_BOOKS) {
     const record = JSON.parse(
       readFileSync(draftFile, "utf8")
     ) as DisputedRecord;
-    // A third check's answers name the ULT they read; it must be pinned.
+    // A third check's answers name the ULT they read; it must be the
+    // book's own, and pinned. A record that names a recheck has one on
+    // every dispute (#223).
+    const checkProblems = disputeCheckProblems(book, record);
+    if (checkProblems.length > 0)
+      throw new Error(`${book}: disputeCheck: ${checkProblems.join("; ")}`);
     if (record.disputeCheck) source_(record.disputeCheck.verses);
     if (record.disputeCheck?.recheck)
       source_(record.disputeCheck.recheck.bible);

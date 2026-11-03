@@ -89,6 +89,33 @@ export type DisputeCheck = {
   recheck?: { prompt: { file: string; sha256: string }; bible: string };
 };
 
+/** The sources.json id of a book's ULT text: what the third model reads. */
+export const ultSource = (book: string): string => `ult-${book.toLowerCase()}`;
+
+/**
+ * What is wrong with a record's `disputeCheck`, if anything: its ULT must be
+ * the book's own (`ult-<book>`), as the runner reads it (#206), and when it
+ * names a recheck, every dispute in the record must carry one (#223), as
+ * the runner never writes a dispute without it. That the ids are pinned is
+ * checked against sources.json by the build.
+ */
+export function disputeCheckProblems(
+  /** The book the record is filed as, not the record's own `book`. */
+  book: string,
+  record: { disputeCheck?: DisputeCheck; titles: Record<string, Title> }
+): string[] {
+  const check = record.disputeCheck;
+  if (check === undefined) return [];
+  const p: string[] = [];
+  const ult = ultSource(book);
+  if (check.verses !== ult) p.push(`verses is ${check.verses}, not ${ult}`);
+  if (check.recheck)
+    for (const [k, t] of Object.entries(record.titles))
+      if (t.dispute && !t.dispute.recheck)
+        p.push(`${k}: a dispute with no recheck`);
+  return p;
+}
+
 export type DisputedRecord = Omit<DraftRecord, "calls" | "titles"> & {
   calls: (CallRecord | DisputeCall)[];
   disputeCheck?: DisputeCheck;
@@ -158,9 +185,6 @@ export function builtTitle(t: Title): {
   };
 }
 
-/** The AI wording a title stands on before any person's review. */
-export const aiText = (t: Title): string => t.dispute?.text ?? t.text;
-
 /**
  * What is wrong with a title's `dispute`, if anything: the rules the build
  * and the tests hold every committed record to.
@@ -217,7 +241,11 @@ export function disputeProblems(t: Title): string[] {
   const problems = typeof d.text === "string" ? gateProblems(d.text) : [];
   const gates = problems.length > 0 ? problems : undefined;
   if (JSON.stringify(d.gates) !== JSON.stringify(gates))
-    p.push(`gates are not ${JSON.stringify(gates ?? [])}`);
+    p.push(
+      gates === undefined
+        ? "gates must be absent"
+        : `gates are not ${JSON.stringify(gates)}`
+    );
   const want = disputeStatus(d.kind, gates, d.recheck);
   if (d.status !== want) p.push(`status is not ${want}`);
   return p;
@@ -465,11 +493,6 @@ export async function settleDisputes(args: {
     throw new Error(
       `${book}: ${disputed} titles to settle but ${segments.length} have verses`
     );
-  if (segments.length === 0) return { record, outcome: "nothing to settle" };
-  const keys = segments.map((s) => s.key);
-  const bsb = args.recheck.inputs.filter((s) => keys.includes(s.key));
-  if (bsb.length !== keys.length)
-    throw new Error(`${book}: the recheck has no BSB verses for some titles`);
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
   const disputeCheck: DisputeCheck = {
     prompt,
@@ -486,9 +509,20 @@ export async function settleDisputes(args: {
     throw new Error(
       `${book}: the record's disputeCheck names another prompt, ULT pin, voice or recheck than this run's`
     );
+  // After the guard, so a run with nothing left to settle still refuses a
+  // record whose disputeCheck this run could not have produced (#206).
+  if (segments.length === 0) return { record, outcome: "nothing to settle" };
+  const keys = segments.map((s) => s.key);
+  const bsb = args.recheck.inputs.filter((s) => keys.includes(s.key));
+  if (bsb.length !== keys.length)
+    throw new Error(`${book}: the recheck has no BSB verses for some titles`);
   const calls: DisputeCall[] = [];
   let reply: Record<string, unknown> | null = null;
+  // A reply as sent, kept only when it cannot be parsed, so the paid-for
+  // text is on record to read (#206); the same for the recheck's reply.
+  let replyText: string | null = null;
   let recheckReply: Record<string, unknown> | null = null;
+  let recheckReplyText: string | null = null;
   const ledger = (outcome: DisputeOutcome | "running") =>
     args.write({
       language: "en",
@@ -503,7 +537,9 @@ export async function settleDisputes(args: {
       updatedAt: new Date().toISOString(),
       calls,
       reply,
+      ...(replyText !== null ? { replyText } : {}),
       recheckReply,
+      ...(recheckReplyText !== null ? { recheckReplyText } : {}),
       totals: {
         promptTokens: calls.reduce((s, c) => s + c.promptTokens, 0),
         completionTokens: calls.reduce((s, c) => s + c.completionTokens, 0),
@@ -535,6 +571,7 @@ export async function settleDisputes(args: {
     try {
       reply = parseReply(c.text);
     } catch (e) {
+      replyText = c.text;
       outcome = { stopped: `unreadable reply: ${(e as Error).message}` };
       return { record: null, outcome };
     }
@@ -590,6 +627,7 @@ export async function settleDisputes(args: {
       try {
         recheckReply = parseReply(r.text);
       } catch (e) {
+        recheckReplyText = r.text;
         why = `unreadable reply: ${(e as Error).message}`;
       }
     if (recheckReply !== null) {
