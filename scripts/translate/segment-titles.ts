@@ -1,5 +1,6 @@
 // Drafts one book's English segment titles with one model and checks every
-// title with a second model, through OpenRouter. See
+// title with a second model, through OpenRouter: one draft call, then one
+// check call per batch of at most CHECK_BATCH titles (#201). See
 // scripts/lib/segment-titles.ts and prompts/segment-titles.md.
 //
 //   OPENROUTER_API_KEY=... node scripts/translate/segment-titles.ts \
@@ -13,7 +14,7 @@
 //
 // The key is read only from the environment and is never written or printed.
 // Output goes to --out, by default under .cache/ (not committed):
-// `en/<BOOK>.json`, the record, and `run.json`, the ledger of both calls,
+// `en/<BOOK>.json`, the record, and `run.json`, the ledger of every call,
 // rewritten after each call and on any failure. To keep a run, copy the record
 // unchanged to data/drafts/en/<BOOK>.json and rebuild.
 // Exit 0: every segment drafted and checked. Exit 2: the run stopped early or

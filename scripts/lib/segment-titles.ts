@@ -300,6 +300,7 @@ export const family = (model: string): string => model.split("/")[0] ?? model;
 export type Complete = (request: {
   model: string;
   messages: Message[];
+  maxTokens?: number;
 }) => Promise<Completion>;
 
 export type DraftOutcome =
@@ -308,11 +309,52 @@ export type DraftOutcome =
   | { incomplete: { draft: string[]; check: string[] } };
 
 /**
+ * The most drafts one check call judges (#201). One reply must hold every
+ * verdict of its batch, and the longest book has 1,134 titles to draft
+ * (Psalms), past what one reply can hold. Each draft is still judged against
+ * its own verses with the same criteria; only the number per call changes.
+ * 35 keeps a batch within the whole-book checks measured so far (Colossians
+ * 33, Philippians 37): docs/scoping/sizing.md.
+ */
+export const CHECK_BATCH = 35;
+
+/**
+ * The completion limit of each check call, reasoning included (#201). Under
+ * MAX_TOKENS (16,384) Gemini Flash reasoned to the limit on Colossians and
+ * its reply was cut off or empty; with this limit a whole Colossians check
+ * reasoned 17,252 tokens and replied in 1,261. A reasoning budget did not
+ * hold (8,192 asked, 16,394 used, no reply), so the call gets room instead
+ * of a cap. Measured: docs/scoping/sizing.md.
+ */
+export const CHECK_MAX_TOKENS = 32_768;
+
+/**
+ * `items` split, in order, into the fewest batches of at most `size`, as
+ * even as they can be (37 at 35 gives 19 and 18).
+ */
+export function batches<T>(items: T[], size: number): T[][] {
+  if (!(Number.isSafeInteger(size) && size > 0))
+    throw new Error(`batch size must be a positive integer: ${size}`);
+  const count = Math.ceil(items.length / size);
+  const out: T[][] = [];
+  let from = 0;
+  for (let i = 0; i < count; i++) {
+    const n = Math.ceil((items.length - from) / (count - i));
+    out.push(items.slice(from, from + n));
+    from += n;
+  }
+  return out;
+}
+
+/**
  * Drafts and checks one book's segment titles: one call to `draftModel`,
- * then one to `checkModel`, which must differ. `write` gets the ledger after
- * each call and before any throw, so money spent is on record. The check
- * call is not made once `maxCost` is spent, or when the draft's cost is
- * unknown (the fuse fails closed).
+ * then one call to `checkModel` per batch of at most `checkBatch` drafts
+ * (default CHECK_BATCH), each allowed CHECK_MAX_TOKENS. The two models must
+ * be of different families. `write` gets the ledger after each call and before any throw, so money
+ * spent is on record. No check call is made once `maxCost` is spent, or
+ * while any cost so far is unknown (the fuse fails closed). A check reply
+ * that cannot be read stops the run, as do a check answered by the drafting
+ * model or its family.
  */
 export async function draftSegmentTitles(args: {
   book: string;
@@ -322,6 +364,7 @@ export async function draftSegmentTitles(args: {
   draftModel: string;
   checkModel: string;
   maxCost: number;
+  checkBatch?: number;
   complete: Complete;
   write: (ledger: unknown) => Promise<void>;
 }): Promise<{ record: DraftRecord | null; outcome: DraftOutcome }> {
@@ -344,6 +387,8 @@ export async function draftSegmentTitles(args: {
       draftModel,
       checkModel,
       maxCost: args.maxCost,
+      checkBatch: args.checkBatch ?? CHECK_BATCH,
+      checkMaxTokens: CHECK_MAX_TOKENS,
       prompt,
       segments: keys.length,
       outcome,
@@ -371,6 +416,7 @@ export async function draftSegmentTitles(args: {
         { role: "system", content: promptPart(args.prompt.text, role) },
         { role: "user", content: user },
       ],
+      ...(role === "check" ? { maxTokens: CHECK_MAX_TOKENS } : {}),
     });
     calls.push(callRecord(role, c));
     await ledger("running");
@@ -396,51 +442,65 @@ export async function draftSegmentTitles(args: {
     const draft = readDraft(draftReply, keys);
     draftTitles = draft.titles;
     await ledger("running");
-    const spent = calls[0]?.cost ?? null;
-    if (spent === null) {
-      outcome = { stopped: "draft cost unknown; check not run" };
-      return { record: null, outcome };
-    }
-    if (spent >= args.maxCost) {
-      outcome = { stopped: `spent ${spent} of ${args.maxCost} before check` };
-      return { record: null, outcome };
-    }
-    const checkReply = await ask(
-      "check",
-      checkModel,
-      checkMessage(book, inputs, draft.titles)
-    );
-    if (typeof checkReply === "string") {
-      outcome = { stopped: `check: ${checkReply}` };
-      return { record: null, outcome };
-    }
-    // Two requested ids can resolve to one model. A model never checks its
-    // own drafts, nor one of its family, so judge by the models OpenRouter
-    // says answered.
-    const draftedBy = calls[0]?.model ?? draftModel;
-    const checkedBy = calls[1]?.model ?? checkModel;
-    if (draftedBy === checkedBy) {
-      outcome = {
-        stopped: `check answered by the drafting model ${draftedBy}`,
-      };
-      return { record: null, outcome };
-    }
-    if (family(draftedBy) === family(checkedBy)) {
-      outcome = {
-        stopped: `check answered by ${checkedBy}, of the drafting model's family`,
-      };
-      return { record: null, outcome };
-    }
     const drafted = keys.filter((k) => draft.titles[k] !== undefined);
-    // Labelled with the model OpenRouter says answered, as key-terms.ts does.
-    const check = readCheck(checkReply, drafted, `ai:${checkedBy}`);
+    const draftedBy = calls[0]?.model ?? draftModel;
+    const checks: Record<string, Check> = {};
+    const unreadCheck: string[] = [];
+    for (const batch of batches(
+      inputs.filter((s) => draft.titles[s.key] !== undefined),
+      args.checkBatch ?? CHECK_BATCH
+    )) {
+      const costs = calls.map((c) => c.cost);
+      if (costs.some((c) => c === null)) {
+        outcome = { stopped: "cost unknown; check not run" };
+        return { record: null, outcome };
+      }
+      const spent = costs.reduce<number>((s, c) => s + (c ?? 0), 0);
+      if (spent >= args.maxCost) {
+        outcome = { stopped: `spent ${spent} of ${args.maxCost} before check` };
+        return { record: null, outcome };
+      }
+      const checkReply = await ask(
+        "check",
+        checkModel,
+        checkMessage(book, batch, draft.titles)
+      );
+      if (typeof checkReply === "string") {
+        outcome = { stopped: `check: ${checkReply}` };
+        return { record: null, outcome };
+      }
+      // Two requested ids can resolve to one model. A model never checks
+      // its own drafts, nor one of its family, so judge by the models
+      // OpenRouter says answered.
+      const checkedBy = calls.at(-1)?.model ?? checkModel;
+      if (draftedBy === checkedBy) {
+        outcome = {
+          stopped: `check answered by the drafting model ${draftedBy}`,
+        };
+        return { record: null, outcome };
+      }
+      if (family(draftedBy) === family(checkedBy)) {
+        outcome = {
+          stopped: `check answered by ${checkedBy}, of the drafting model's family`,
+        };
+        return { record: null, outcome };
+      }
+      // Labelled with the model OpenRouter says answered, as key-terms.ts does.
+      const check = readCheck(
+        checkReply,
+        batch.map((s) => s.key),
+        `ai:${checkedBy}`
+      );
+      Object.assign(checks, check.checks);
+      unreadCheck.push(...check.missing, ...check.invalid);
+    }
     const source = `ai:${draftedBy}`;
     const titles: Record<string, DraftTitle> = {};
     for (const k of drafted) {
       const text = draft.titles[k]!;
       const problems = gateProblems(text);
       const gates = problems.length > 0 ? problems : undefined;
-      const c = check.checks[k];
+      const c = checks[k];
       titles[k] = {
         text,
         source,
@@ -453,7 +513,6 @@ export async function draftSegmentTitles(args: {
       };
     }
     const unreadDraft = [...draft.missing, ...draft.invalid];
-    const unreadCheck = [...check.missing, ...check.invalid];
     if (unreadDraft.length + unreadCheck.length > 0)
       outcome = { incomplete: { draft: unreadDraft, check: unreadCheck } };
     const record: DraftRecord = {
