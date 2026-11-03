@@ -253,11 +253,80 @@ against 15,727 to 24,806) and agreed more (29 of 33 against 22 to 26 of 33),
 on different drafts. Why is not measured; with the run-to-run spread seen in
 #201, one run does not show a trend.
 
+## Measured: naming the readers in the draft prompt, Colossians (#209)
+
+On 3 Nov the maintainer chose to change the drafting prompt so titles name
+who a passage addresses, rather than leave unclear pronouns to the third
+check. Rule 5 of the draft part of `prompts/segment-titles.md` now says
+"them", "they", "their" and "you" are never clear in a title read alone,
+and gives short names that fit within 60 ("believers", "the church", "the
+Colossians", "wives", "slaves", "masters" and others); rule 6 says to drop a
+detail, never the name; the closing step adds a pronoun pass. The check part
+did not change. The version the committed Colossians record was made with
+is kept as `prompts/history/segment-titles-cc76a816652a.md`.
+
+Colossians was re-drafted twice on 2026-11-03 (19:16:47 to 19:19:13 UTC)
+with the new prompt (SHA-256 `838516080c8f…`), the code at `361fb5a` and
+the same models as the committed run. Neither record was committed:
+`data/drafts/en/COL.json` stays as #212 committed it.
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.30 \
+  --out .cache/segment-titles/l209b-run<1|2>
+```
+
+Both runs exited 0. The numbers were counted twice from each record, with
+`jq` and with Python, which gave the same results. "Pronoun drafts" counts
+titles matching `\b(them|they|their|you|your)\b`, ignoring case, whatever
+the checker said.
+
+| Quantity                     | Committed run (#212, `cc76a816…`)      | New prompt, run 1                         | New prompt, run 2                         | Label               |
+| ---------------------------- | -------------------------------------- | ----------------------------------------- | ----------------------------------------- | ------------------- |
+| Checker agreed               | 29 of 33                               | 33 of 33                                  | 32 of 33                                  | measured 2026-11-03 |
+| `plain` disagreements        | 4                                      | 0                                         | 1                                         | measured 2026-11-03 |
+| Disputes over a pronoun      | 4 ("them" 2, "you" 1, "their" 1)       | 0                                         | 0                                         | measured 2026-11-03 |
+| Pronoun drafts               | 7 of 33                                | 0 of 33                                   | 0 of 33                                   | measured 2026-11-03 |
+| Drafts over 60 characters    | 0 of 33 (longest 59, mean 51.2)        | 0 of 33 (longest 59, mean 51.3)           | 0 of 33 (longest 59, mean 50.8)           | measured 2026-11-03 |
+| Titles naming "believers"    | 15                                     | 20                                        | 16                                        | measured 2026-11-03 |
+| Titles naming the Colossians | 4                                      | 7                                         | 10                                        | measured 2026-11-03 |
+| Cost                         | $0.0761 ($0.0475 draft, $0.0286 check) | $0.0852 ($0.0627 draft, $0.0225 check)    | $0.1039 ($0.0764 draft, $0.0276 check)    | measured 2026-11-03 |
+| Cost per drafted title       | $0.0023                                | $0.0026                                   | $0.0031                                   | measured 2026-11-03 |
+| Tokens                       | 21,052                                 | 21,084 (11,018 prompt, 10,066 completion) | 23,801 (11,019 prompt, 12,782 completion) | measured 2026-11-03 |
+| Reasoning tokens             | draft 2,668, check 5,592               | draft 4,156, check 4,160                  | draft 5,507, check 5,462                  | measured 2026-11-03 |
+| Model time                   | 86.1 s                                 | 59.7 s (34.2 s draft, 25.5 s check)       | 79.0 s (38.8 s draft, 40.2 s check)       | measured 2026-11-03 |
+
+Generation ids: run 1 draft `gen-1793733408-vxKmt3euTPRDqKYrESHx`, check
+`gen-1793733442-dAuM9rHN5gK2Vgbo06Zl`; run 2 draft
+`gen-1793733474-Npg9t9EIWrbHVYHuXPsj`, check
+`gen-1793733513-60JJ38Z0SycLjZ6CtCFN`. The two runs cost $0.1892 together.
+
+Run 2's one disagreement is not about a pronoun: "Epaphras prays for
+believers; Luke and Demas send greetings" (`COL.4.12-14`) was flagged
+`plain` because, in the checker's words, "greet" needs an object; the title
+it judged reads "send greetings", so the checker may have misread it
+(inference, not tested). Each of the 4 titles disputed in the committed run
+now names its people in both runs (for example `COL.1.7-8`, "Epaphras taught
+the Colossians the gospel").
+
+What this shows, on one book and two runs: the new rule removed every
+unclear pronoun from the drafts (7 of 33 to 0 of 33, twice) and every
+pronoun dispute, with no title over 60, so rule 5 and rule 6 did not
+collide here. Drafting cost more ($0.0627 and $0.0764 against $0.0475; the
+draft reasoned 4,156 and 5,507 tokens against 2,668), and the prompt grew
+by 177 tokens per call; with the spread seen in #201 (draft calls of
+$0.0679 to $0.0813 on the earlier prompt), whether the new rule raises the
+draft cost is not shown. Watch item, not measured: "believers" now names
+16 to 20 of 33 titles, so a list may read as repetitive; a person's review
+of a book drafted this way would show whether that matters.
+
 ## Measured: English segment titles, 1 Thessalonians, committed run (#207)
 
 One plain run of the CLI on 2026-11-03 (19:20:40 to 19:22:22 UTC), with the
 code at `9711b49` (drafting and check code as at `361fb5a`, the prompt of
-#197, SHA-256 `cc76a816…`) and the same models as Philippians and
+#197, SHA-256 `cc76a816…`, before #216's readers rule; that prompt is kept
+as `prompts/history/segment-titles-cc76a816652a.md`) and the same models as Philippians and
 Colossians. It was drafted to give #207 a second blind book: 1 Thessalonians
 was chosen over 2 Thessalonians (18 drafted segments) and 2 Timothy (30) as
 the one with the most segments to draft (31), and, unlike 2 Timothy, not a

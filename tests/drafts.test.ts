@@ -309,7 +309,8 @@ describe.each([
     book: "COL",
     reused: ["COL.1.1-2", "COL.3.18-21", "COL.3.22-25"],
     drafted: 33,
-    prompt: "prompts/segment-titles.md",
+    // Made before the prompt changed for #209 (docs/scoping/sizing.md).
+    prompt: "prompts/history/segment-titles-cc76a816652a.md",
     checks: 1,
     batched: true,
   },
@@ -317,7 +318,8 @@ describe.each([
     book: "1TH",
     reused: ["1TH.2.17-20"],
     drafted: 31,
-    prompt: "prompts/segment-titles.md",
+    // Drafted for #207 before the readers rule of #216 merged.
+    prompt: "prompts/history/segment-titles-cc76a816652a.md",
     checks: 1,
     batched: true,
   },

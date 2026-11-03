@@ -183,7 +183,8 @@ never calls a model. Such a record also has:
   kept byte for byte as
   `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
   (Philippians was made with `f132f2195f80`; the prompt changed after it,
-  #197).
+  #197. Colossians was made with `cc76a816652a`; the prompt changed after
+  it, #209).
 - `calls`: the draft call, then the check calls (one before #201; one per
   batch of at most 35 titles since), each with its OpenRouter generation id,
   model, tokens and cost in US dollars.

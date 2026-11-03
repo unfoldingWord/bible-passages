@@ -165,7 +165,10 @@ All three exited 0. The PHP record is the fixture
 `tests/fixtures/disputes/PHP-run1.json` with its `dispute` answers, its
 `disputeCheck` and its dispute call removed; `jq -S` showed it equal to
 `data/drafts/en/PHP.json`. Its recheck used the prompt PHP was checked
-with, `prompts/history/segment-titles-f132f2195f80.md`, found by its hash.
+with, `prompts/history/segment-titles-f132f2195f80.md`, found by its hash. COL and 1TH were drafted, checked and rechecked with the
+segment-title prompt `cc76a816…`, then `prompts/segment-titles.md`; since
+#216 it is kept as `prompts/history/segment-titles-cc76a816652a.md`, and
+a rerun finds it there by hash.
 
 **Blind, and what that covers.** Colossians and 1 Thessalonians are blind:
 the prompt was committed before either ran, by an author who had read
