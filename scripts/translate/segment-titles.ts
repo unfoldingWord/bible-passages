@@ -1,13 +1,18 @@
 // Drafts one book's English segment titles with one model and checks every
-// title with a second model, through OpenRouter: one draft call, then one
-// check call per batch of at most CHECK_BATCH titles (#201). See
-// scripts/lib/segment-titles.ts and prompts/segment-titles.md.
+// title with a second model, through OpenRouter: one draft call per batch
+// of at most DRAFT_BATCH segments (#208), then one check call per batch of
+// at most CHECK_BATCH titles (#201). See scripts/lib/segment-titles.ts and
+// prompts/segment-titles.md.
 //
 //   OPENROUTER_API_KEY=... node scripts/translate/segment-titles.ts \
 //     --book PHP \
 //     --draft-model anthropic/claude-sonnet-5.5 \
 //     --check-model google/gemini-3.8-flash \
-//     [--out .cache/segment-titles/<run>] [--max-cost 1.00]
+//     [--out .cache/segment-titles/<run>] [--max-cost 1.00] \
+//     [--draft-batch 35]
+//
+// --draft-batch sets a smaller draft batch than DRAFT_BATCH, to measure
+// batching on a short book; the ledger records the size used.
 //
 // Inputs, all offline apart from the two calls: the book's structure
 // (data/structure/<BOOK>.json) and its BSB text, read through its pin.
@@ -26,6 +31,7 @@ import { parseArgs } from "node:util";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import { complete } from "../lib/openrouter.ts";
 import {
+  DRAFT_BATCH,
   draftSegmentTitles,
   family,
   segmentInputs,
@@ -49,6 +55,7 @@ const { values } = parseArgs({
     "check-model": { type: "string" },
     out: { type: "string" },
     "max-cost": { type: "string", default: "1.00" },
+    "draft-batch": { type: "string" },
   },
 });
 
@@ -63,6 +70,14 @@ const checkModel = values["check-model"] ?? fail("--check-model is required");
 const maxCost = Number(values["max-cost"]);
 if (!(Number.isFinite(maxCost) && maxCost > 0))
   fail("--max-cost must be a positive number of dollars");
+const draftBatch =
+  values["draft-batch"] === undefined
+    ? DRAFT_BATCH
+    : Number(values["draft-batch"]);
+if (!(Number.isSafeInteger(draftBatch) && draftBatch > 0))
+  fail("--draft-batch must be a positive whole number");
+if (draftBatch > DRAFT_BATCH)
+  fail(`--draft-batch must be at most ${DRAFT_BATCH} (DRAFT_BATCH)`);
 if (family(draftModel) === family(checkModel))
   fail("--check-model must be of a different family from --draft-model");
 // The book code goes into file paths, so only a known code is accepted.
@@ -104,6 +119,7 @@ try {
     draftModel,
     checkModel,
     maxCost,
+    draftBatch,
     complete: (request) => complete(request, { apiKey }),
     write: (ledger) => writeJson(new URL("run.json", out), ledger),
   });

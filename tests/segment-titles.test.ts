@@ -5,6 +5,7 @@ import {
   batches,
   CHECK_BATCH,
   CHECK_MAX_TOKENS,
+  DRAFT_BATCH,
   checkMessage,
   draftMessage,
   draftSegmentTitles,
@@ -537,6 +538,132 @@ describe("draftSegmentTitles", () => {
     });
   });
 
+  // #208: a whole long book does not fit in one draft reply.
+  it("drafts in batches, each from its own verses, and labels each title with the model that drafted it", async () => {
+    const agree = { verdict: "agree" };
+    const { complete, sent } = fakeModels([
+      { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
+      {
+        reply: { "XYZ.1.4-4": draftReply["XYZ.1.4-4"] },
+        cost: 0.02,
+        answeredBy: "a/draft-2",
+      },
+      { reply: { "XYZ.1.2-3": agree, "XYZ.1.4-4": agree }, cost: 0.03 },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      draftBatch: 1,
+    });
+    expect(outcome).toBe("done");
+    expect(sent.map((s) => s.model)).toEqual(["a/draft", "a/draft", "g/check"]);
+    expect(sent[0]?.system).toBe(promptPart(promptText, "draft"));
+    expect(sent[1]?.system).toBe(promptPart(promptText, "draft"));
+    expect(sent[0]?.user).toBe(draftMessage("XYZ", inputs.slice(0, 1)));
+    expect(sent[1]?.user).toBe(draftMessage("XYZ", inputs.slice(1, 2)));
+    // The check is batched on its own size: one call for both drafts.
+    expect(sent[2]?.user).toBe(checkMessage("XYZ", inputs, draftReply));
+    expect(sent.map((s) => s.maxTokens)).toEqual([
+      undefined,
+      undefined,
+      CHECK_MAX_TOKENS,
+    ]);
+    expect(record?.titles["XYZ.1.2-3"]?.source).toBe("ai:a/draft");
+    expect(record?.titles["XYZ.1.4-4"]?.source).toBe("ai:a/draft-2");
+    expect(record?.calls.map((c) => [c.role, c.id, c.cost])).toEqual([
+      ["draft", "gen-1", 0.01],
+      ["draft", "gen-2", 0.02],
+      ["check", "gen-3", 0.03],
+    ]);
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome: "done",
+      draftBatch: 1,
+      draftTitles: draftReply,
+      totals: { cost: 0.06 },
+    });
+  });
+
+  it("drafts a book of DRAFT_BATCH segments or fewer in one call", async () => {
+    const { complete, sent } = fakeModels([
+      { reply: draftReply, cost: 0.01 },
+      { reply: {}, cost: 0.01 },
+    ]);
+    const ledgers: unknown[] = [];
+    await run(complete, ledgers);
+    expect(sent[0]?.user).toBe(draftMessage("XYZ", inputs));
+    expect(ledgers.at(-1)).toMatchObject({ draftBatch: DRAFT_BATCH });
+  });
+
+  it("stops before a later draft batch once the spend cap is reached, or when cost is unknown", async () => {
+    for (const cost of [1, null]) {
+      const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
+      const { complete, sent } = fakeModels([{ reply: first, cost }]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers, {
+        draftBatch: 1,
+      });
+      expect(record).toBeNull();
+      expect(outcome).toEqual({
+        stopped:
+          cost === null
+            ? "cost unknown; draft batch 2 of 2 not run"
+            : "spent 1 of 1 before draft batch 2 of 2",
+      });
+      expect(sent).toHaveLength(1);
+      // The first batch's paid-for drafts stay on record.
+      expect(ledgers.at(-1)).toMatchObject({
+        calls: [{ role: "draft" }],
+        draftTitles: first,
+      });
+    }
+  });
+
+  it("stops when a draft batch's reply cannot be read, keeping earlier drafts on record", async () => {
+    const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
+    const { complete, sent } = fakeModels([
+      { reply: first, cost: 0.01 },
+      { reply: "cut off", cost: 0.01 },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      draftBatch: 1,
+    });
+    expect(record).toBeNull();
+    expect(outcome).toMatchObject({
+      stopped: expect.stringMatching(/^draft batch 2 of 2: unreadable reply/),
+    });
+    expect(sent).toHaveLength(2);
+    expect(ledgers.at(-1)).toMatchObject({
+      calls: [{ role: "draft" }, { role: "draft" }],
+      draftTitles: first,
+    });
+  });
+
+  it("refuses a check of drafts a later draft batch's model, or its family, answered", async () => {
+    for (const [answeredBy, stopped] of [
+      ["g/check", "check answered by the drafting model g/check"],
+      ["g/other", "check answered by g/check, of the drafting model's family"],
+    ]) {
+      const { complete } = fakeModels([
+        { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
+        {
+          reply: { "XYZ.1.4-4": draftReply["XYZ.1.4-4"] },
+          cost: 0.01,
+          answeredBy,
+        },
+        {
+          reply: {
+            "XYZ.1.2-3": { verdict: "agree" },
+            "XYZ.1.4-4": { verdict: "agree" },
+          },
+          cost: 0.01,
+        },
+      ]);
+      const { record, outcome } = await run(complete, [], { draftBatch: 1 });
+      expect(record).toBeNull();
+      expect(outcome).toEqual({ stopped });
+    }
+  });
+
   it("refuses the same model, or one of its family, for drafting and checking", async () => {
     for (const checkModel of ["a/draft", "a/other"]) {
       const { complete, sent } = fakeModels([]);
@@ -565,6 +692,12 @@ describe("batches", () => {
     expect(
       Math.max(...batches(n(1134), CHECK_BATCH).map((b) => b.length))
     ).toBeLessThanOrEqual(CHECK_BATCH);
+    // The longest books' drafts (#208): Genesis 642, Psalms 1,134.
+    expect(sizes(642, DRAFT_BATCH)).toEqual([
+      ...Array<number>(15).fill(34),
+      ...Array<number>(4).fill(33),
+    ]);
+    expect(batches(n(1134), DRAFT_BATCH)).toHaveLength(33);
   });
 
   it("refuses a size that is not a positive integer", () => {
