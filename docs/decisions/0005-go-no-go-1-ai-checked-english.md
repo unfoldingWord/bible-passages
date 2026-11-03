@@ -95,14 +95,18 @@ not its rate.
   tested without real data for the whole Bible.
 - Waiting for a person to review 16,523 English titles first would hold the
   release for weeks of a reviewer's time (`../scoping/sizing.md`).
-- The checks that catch what a person would (length, plain wording, meaning)
-  are already in the pipeline; item 6 removes the one step that needed a
-  person before release.
+- The length and plain-wording checks are already in the pipeline; item 6
+  removes the one step that needed a person before release.
+- Meaning is not fully checked. Item 6 runs only when the checker disagrees,
+  and the checker can agree with a wrong draft: both Philippians factual
+  misses became disputes only because of length. `ai-checked` records "no
+  disagreement", not "meaning verified"; misses the models agree on are the
+  residual risk until the Q1 read-through.
 
 ## Rejected
 
 - **Hold every disputed title for a person.** At the Philippians rate (38%)
-  that is about 5,000 English titles across the Bible waiting on one review
+  that is about 6,250 English titles across the Bible waiting on one review
   queue.
 - **Ship disputed titles as drafted.** About 30% of drafts were over the
   60-character limit in the Philippians run.
