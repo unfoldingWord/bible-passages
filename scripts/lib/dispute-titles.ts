@@ -22,6 +22,7 @@ import {
   type DraftRecord,
   type DraftTitle,
   type SegmentInput,
+  verseTexts,
 } from "./segment-titles.ts";
 import { parseReply, sha256 } from "./translate.ts";
 
@@ -139,6 +140,15 @@ export function disputeProblems(t: Title): string[] {
     p.push(`status is not ${disputeStatus(d.kind, gates)}`);
   return p;
 }
+
+/**
+ * Each verse's text from a ULT USFM file, as `verseTexts` reads BSB. ULT
+ * also marks translation-section breaks with `\ts\*`, which BSB has not and
+ * `verseTexts` would refuse as unread markup; they carry no words, so they
+ * are removed first.
+ */
+export const ultVerseTexts = (usfm: string): Map<string, string> =>
+  verseTexts(usfm.replace(/\\ts\\\*/g, ""));
 
 /** One disputed title as the third model is told it. */
 export type DisputeInput = SegmentInput & {
@@ -309,6 +319,20 @@ export async function settleDisputes(args: {
     );
   if (segments.length === 0) return { record, outcome: "nothing to settle" };
   const prompt = { file: args.prompt.file, sha256: sha256(args.prompt.text) };
+  const disputeCheck: DisputeCheck = {
+    prompt,
+    verses: args.verses,
+    voice: { file: args.voice.file, sha256: sha256(args.voice.text) },
+  };
+  // A record has one disputeCheck, which every dispute in it answers to: a
+  // later run on the same record must use the same prompt, ULT and voice,
+  // or it would attest to answers it did not produce. Refused before any
+  // spend.
+  const prior = record.disputeCheck;
+  if (prior && JSON.stringify(prior) !== JSON.stringify(disputeCheck))
+    throw new Error(
+      `${book}: the record's disputeCheck names another prompt, ULT pin or voice than this run's`
+    );
   const keys = segments.map((s) => s.key);
   const calls: DisputeCall[] = [];
   let reply: Record<string, unknown> | null = null;
@@ -367,15 +391,15 @@ export async function settleDisputes(args: {
     }
     const unread = [...read.missing, ...read.invalid];
     if (unread.length > 0) outcome = { incomplete: unread };
+    // A run that settled nothing leaves nothing to commit; its call is in
+    // the ledger.
+    if (Object.keys(read.disputes).length === 0)
+      return { record: null, outcome };
     return {
       record: {
         ...record,
         calls: [...record.calls, ...calls],
-        disputeCheck: {
-          prompt,
-          verses: args.verses,
-          voice: { file: args.voice.file, sha256: sha256(args.voice.text) },
-        },
+        disputeCheck,
         titles,
       },
       outcome,

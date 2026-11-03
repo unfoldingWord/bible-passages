@@ -26,11 +26,12 @@ import { parseArgs } from "node:util";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import {
   settleDisputes,
+  ultVerseTexts,
   voiceOf,
   type DisputedRecord,
 } from "../lib/dispute-titles.ts";
 import { complete } from "../lib/openrouter.ts";
-import { segmentInputs, verseTexts } from "../lib/segment-titles.ts";
+import { segmentInputs } from "../lib/segment-titles.ts";
 import { readSource } from "../lib/sources.ts";
 import { parseHeadings, type Structure } from "../lib/structure.ts";
 import { writeJson } from "../lib/write.ts";
@@ -84,9 +85,7 @@ const structure = JSON.parse(
 ) as Structure;
 const id = book.toLowerCase();
 const verses = `ult-${id}`;
-// ULT marks translation-section breaks with `\ts\*`, which BSB has not;
-// verseTexts fails on any marker it does not know, so they are removed here.
-const ult = verseTexts((await readSource(verses)).replace(/\\ts\\\*/g, ""));
+const ult = ultVerseTexts(await readSource(verses));
 const { inputs } = segmentInputs(
   structure,
   parseHeadings(await readSource(`bsb-${id}`)),

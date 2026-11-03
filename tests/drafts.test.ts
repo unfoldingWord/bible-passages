@@ -256,10 +256,13 @@ describe("a scripted segment-title record (PHP)", () => {
         sha256: hash("prompts/dispute-titles.md"),
       },
       verses: "ult-php",
-      voice: { file: "data/drafts/en/TIT.json", sha256: expect.any(String) },
+      // The Titus record as the 3 Nov run read it. The file may change as
+      // people review it; the record keeps the hash of what the model saw.
+      voice: {
+        file: "data/drafts/en/TIT.json",
+        sha256:
+          "091e772ffab017844de87830f70d252facc0d214bcb3282caff3a9fc9ce55434",
+      },
     });
-    // The Titus record changes as people review it, so its hash records the
-    // voice the model saw rather than being held to today's file.
-    expect(record.disputeCheck?.voice.sha256).toMatch(/^[0-9a-f]{64}$/);
   });
 });

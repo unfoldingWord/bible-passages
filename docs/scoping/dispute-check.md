@@ -55,6 +55,15 @@ voice from `data/drafts/en/TIT.json` (SHA-256 `091e772f…`), prompt
 `prompts/dispute-titles.md` (SHA-256 `641cdbbb…`). The prompt was written
 before any run and was not changed after seeing results.
 
+**Not a blind test.** The prompt was written after reading ADR 0005, and
+its example of a factual dispute ("a word that could mean release from
+prison or final vindication") is the ADR's own reason for 1:18–19. So
+1:18–19's agreement is not independent evidence: on the other 13 titles,
+runs 1 and 2 agree with the ADR on 11. Only kinds are compared. A taste
+title can agree on kind and still lose part of the segment: run 1's 3:17–19
+("Paul tells the Philippians to follow his example") and 2:14–16 drop the
+"enemies of the cross" and the lights, which the ADR's proposed titles keep.
+
 | Run            | Model              | Kinds               | Agrees with ADR 0005 | Tokens (reasoning)      | Cost      |
 | -------------- | ------------------ | ------------------- | -------------------- | ----------------------- | --------- |
 | 1 (committed)  | openai/gpt-6.1-sol | 12 taste, 2 factual | 12 of 14             | 4,153 + 1,270 (481)     | $0.023081 |

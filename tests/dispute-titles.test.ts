@@ -8,6 +8,7 @@ import {
   listDisputes,
   readDisputes,
   settleDisputes,
+  ultVerseTexts,
   voiceOf,
   type Complete,
   type DisputedRecord,
@@ -241,10 +242,60 @@ describe("the third check (ADR 0005 item 6)", () => {
     const { complete } = fakeModel({
       "XYZ.1.3-4": { kind: "opinion", title: "Paul thanks God", why: "x" },
     });
-    const { run } = settle(complete);
+    const { run, ledgers } = settle(complete);
     const { record: r, outcome } = await run;
     expect(outcome).toEqual({ incomplete: ["XYZ.1.5-6", "XYZ.1.3-4"] });
-    expect(Object.values(r!.titles).filter((t) => t.dispute)).toHaveLength(0);
+    // Nothing settled, nothing to commit; the call is in the ledger.
+    expect(r).toBeNull();
+    expect((ledgers.at(-1) as { calls: unknown[] }).calls).toHaveLength(1);
+  });
+
+  it("settles what it can read when some answers are missing", async () => {
+    const { complete } = fakeModel({
+      "XYZ.1.3-4": { kind: "taste", title: "Paul thanks God", why: "x" },
+    });
+    const { record: r, outcome } = await settle(complete).run;
+    expect(outcome).toEqual({ incomplete: ["XYZ.1.5-6"] });
+    expect(r!.titles["XYZ.1.3-4"]!.dispute?.kind).toBe("taste");
+    expect(r!.titles["XYZ.1.5-6"]!.dispute).toBeUndefined();
+  });
+
+  it("keeps one disputeCheck per record: a later run must use the same prompt, ULT and voice", async () => {
+    const answer = {
+      "XYZ.1.5-6": {
+        kind: "factual",
+        title: "Paul expects deliverance",
+        why: "x",
+      },
+    };
+    const first = record();
+    first.titles["XYZ.1.3-4"]!.dispute = {
+      by: `ai:${THIRD}`,
+      kind: "taste",
+      text: "Paul thanks God",
+      why: "x",
+      status: "ai-checked",
+    };
+    const same = {
+      prompt: { file: "prompts/dispute-titles.md", sha256: sha256(PROMPT) },
+      verses: "ult-xyz",
+      voice: { file: "data/drafts/en/TIT.json", sha256: sha256("{}") },
+    };
+    const { complete, sent } = fakeModel(answer);
+    const ok = await settle(complete, {
+      record: { ...first, disputeCheck: same },
+    }).run;
+    expect(ok.record!.disputeCheck).toEqual(same);
+    expect(
+      JSON.parse(sent[0]!.user).segments.map((s: { key: string }) => s.key)
+    ).toEqual(["XYZ.1.5-6"]);
+    const other = fakeModel(answer);
+    await expect(
+      settle(other.complete, {
+        record: { ...first, disputeCheck: { ...same, verses: "ult-abc" } },
+      }).run
+    ).rejects.toThrow("disputeCheck");
+    expect(other.sent).toHaveLength(0);
   });
 
   it.each([DRAFTER.replace("sonnet", "opus"), "google/gemini-3.8-pro"])(
@@ -275,6 +326,14 @@ describe("the third check (ADR 0005 item 6)", () => {
       status: "human-reviewed",
     };
     expect(disputeInputs(r, inputs).map((s) => s.key)).toEqual(["XYZ.1.5-6"]);
+    r.titles["XYZ.1.5-6"]!.dispute = {
+      by: `ai:${THIRD}`,
+      kind: "factual",
+      text: "Paul expects deliverance",
+      why: "x",
+      status: "unreviewed",
+    };
+    expect(disputeInputs(r, inputs)).toEqual([]);
   });
 
   it("lets a person's review decide over a dispute, keeping the AI source when the wording is kept", () => {
@@ -356,6 +415,26 @@ describe("disputeProblems", () => {
     expect(disputeProblems({ ...agreed("x"), dispute: ok.dispute })).toContain(
       "no disagreement to settle"
     );
+  });
+});
+
+describe("ultVerseTexts", () => {
+  it("drops ULT's \\ts\\* section markers, which carry no words", () => {
+    const usfm =
+      "\\c 1\n\\v 1 \\w Paul|x=1\\w*,\n\\ts\\*\n\\v 2 \\w Grace|x=1\\w*.";
+    expect([...ultVerseTexts(usfm)]).toEqual([
+      ["1:1", "Paul,"],
+      ["1:2", "Grace."],
+    ]);
+  });
+
+  it("reads all 104 verses of Philippians from the pinned ULT", async () => {
+    const { readSource } = await import("../scripts/lib/sources.ts");
+    const usfm = await readSource("ult-php");
+    expect(usfm.match(/\\ts\\\*/g)).toHaveLength(37);
+    const v = ultVerseTexts(usfm);
+    expect(v.size).toBe(104);
+    expect(v.get("2:12")).toContain("work out your own salvation");
   });
 });
 
