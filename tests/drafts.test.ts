@@ -370,8 +370,9 @@ describe.each([
       "GEN.35.16-20",
     ],
     drafted: 642,
-    // The first long book, drafted in 19 batches for #208.
-    prompt: "prompts/segment-titles.md",
+    // The first long book, drafted in 19 batches for #208 with #216's
+    // prompt, before #228 revised it.
+    prompt: "prompts/history/segment-titles-838516080c8f.md",
     drafts: 19,
     checks: 19,
     batched: true,

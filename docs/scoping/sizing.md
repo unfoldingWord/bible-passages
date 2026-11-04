@@ -604,8 +604,12 @@ throwaway script calling `verseTexts` on each cached file); the rest are
 #226.
 
 The second run, one plain run of the CLI (15:29:34 to 15:53:04 UTC, code at
-`0107e82`, prompt `prompts/segment-titles.md` SHA-256 `838516080c8f…`, the
-same as 2 Timothy's, the same models as every committed book):
+`0107e82`, prompt `prompts/segment-titles.md` as it then stood, SHA-256
+`838516080c8f…`: #216's readers rule, the same prompt as 2 Timothy's,
+before #228 revised it; now kept as
+`prompts/history/segment-titles-838516080c8f.md`, where the record's hash
+resolves. Genesis was not re-drafted with the revised prompt. The same
+models as every committed book):
 
 ```
 node scripts/translate/segment-titles.ts --book GEN \
