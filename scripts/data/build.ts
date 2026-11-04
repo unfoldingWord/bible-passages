@@ -14,8 +14,8 @@ import {
   type DisputedRecord,
 } from "../lib/dispute-titles.ts";
 import {
-  BLANK_SEGMENTS,
   BLANK_TITLE,
+  blankProblems,
   blankSegments,
   verseTexts,
 } from "../lib/segment-titles.ts";
@@ -91,14 +91,9 @@ for (const book of STRUCTURE_BOOKS) {
   const name = await bookName(book, usfm);
   // A segment whose every verse BSB leaves blank has a person's fixed title
   // (#226), in every book, its segment titles built or not. Only the decided
-  // ones take it: a new one stops the build for a person to decide.
+  // ones take it: a new one, a listed one no longer blank, or a draft for
+  // one stops the build (blankProblems, once the drafts are read).
   const blank = blankSegments(structure, verseTexts(usfm));
-  const decided = BLANK_SEGMENTS.filter((k) => k.startsWith(`${book}.`));
-  if (blank.join() !== decided.join())
-    throw new Error(
-      `${book}: segments blank in BSB are [${blank.join(", ")}], ` +
-        `not the decided [${decided.join(", ")}] (BLANK_SEGMENTS)`
-    );
   const source = `bsb-${id}`;
   // Every book's pericope titles are BSB's \s1 headings, the same headings
   // its pericopes were cut at, so each pericope gets exactly one (#196).
@@ -110,6 +105,7 @@ for (const book of STRUCTURE_BOOKS) {
   // clears, so a rebuild cannot wipe them. A draft for a key that is not a
   // segment fails the build.
   const draftFile = new URL(`drafts/en/${book}.json`, data);
+  let drafted: string[] = [];
   if (existsSync(draftFile)) {
     if (!titled) throw new Error(`${book}: drafts for a book not in BOOKS`);
     const record = JSON.parse(
@@ -125,11 +121,10 @@ for (const book of STRUCTURE_BOOKS) {
     if (record.disputeCheck?.recheck)
       source_(record.disputeCheck.recheck.bible);
     const segmentKeys = new Set(structure.segments.map((s) => s.key));
+    drafted = Object.keys(record.titles);
     for (const [key, draft] of Object.entries(record.titles)) {
       if (!segmentKeys.has(key))
         throw new Error(`${book}: draft for unknown segment key ${key}`);
-      if (blank.includes(key))
-        throw new Error(`${book}: draft for ${key}, which has a fixed title`);
       const problems = disputeProblems(draft);
       if (problems.length > 0)
         throw new Error(`${book} ${key}: dispute: ${problems.join("; ")}`);
@@ -148,6 +143,9 @@ for (const book of STRUCTURE_BOOKS) {
       titles[key] = builtTitle(draft);
     }
   }
+  const blankIssues = blankProblems(book, blank, drafted);
+  if (blankIssues.length > 0)
+    throw new Error(`${book}: ${blankIssues.join("; ")}`);
   // Decision 12 (docs/decisions/0003): a segment that is its pericope's only
   // segment reuses the pericope title, unless a draft gives it its own
   // (Titus 3:9-11 was drafted before the decision). A blank segment takes

@@ -175,6 +175,30 @@ export function blankSegments(
 }
 
 /**
+ * Why a book's blank segments cannot take `BLANK_TITLE`: a blank segment
+ * not in `BLANK_SEGMENTS`, a listed one that is no longer blank (either goes
+ * to a person), or a draft for one (its title is a person's, not a model's).
+ * The build stops on any. `drafted` is the keys of the book's drafts.
+ */
+export function blankProblems(
+  book: string,
+  blank: readonly string[],
+  drafted: readonly string[]
+): string[] {
+  const problems: string[] = [];
+  const decided = BLANK_SEGMENTS.filter((k) => k.startsWith(`${book}.`));
+  if (blank.join() !== decided.join())
+    problems.push(
+      `segments blank in BSB are [${blank.join(", ")}], ` +
+        `not the decided [${decided.join(", ")}] (BLANK_SEGMENTS)`
+    );
+  for (const key of drafted)
+    if (blank.includes(key))
+      problems.push(`draft for ${key}, which has a fixed title`);
+  return problems;
+}
+
+/**
  * The segments to draft, in reading order, and the keys left out: `reused`
  * because the segment is its pericope's only one (decision 12), `blank`
  * because every verse of it is blank in the text, so there is nothing to
@@ -201,18 +225,19 @@ export function segmentInputs(
   const reused: string[] = [];
   const blank: string[] = [];
   for (const s of structure.segments) {
-    if (count.get(s.pericope) === 1) {
-      reused.push(s.key);
-      continue;
-    }
     // A blank verse adds no words: the title is drafted from the text as
     // the BSB prints it (#226).
     const text = segmentTexts(s, verses).filter((t) => t !== "");
     // Nothing to draft from: every verse of the segment is blank (Matthew
     // 17:21, Mark 11:26, Romans 16:24). It is skipped, not drafted; its
-    // title is a person's (`BLANK_TITLE`, #226).
+    // title is a person's (`BLANK_TITLE`, #226), even when it is its
+    // pericope's only segment, as `blankSegments` and the build have it.
     if (text.length === 0) {
       blank.push(s.key);
+      continue;
+    }
+    if (count.get(s.pericope) === 1) {
+      reused.push(s.key);
       continue;
     }
     const pericope = titleOf.get(s.pericope);

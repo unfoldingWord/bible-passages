@@ -168,9 +168,10 @@ letters, digits and `. _ : -`, at most 64 characters).
   maintainer's role). The build writes it in every book, its other segment
   titles built or not (`BLANK_TITLE` and `BLANK_SEGMENTS` in
   `scripts/lib/segment-titles.ts`), refuses a draft for such a key, and
-  stops if the pinned BSB has a blank segment not in that list, so a new
-  one goes to a person. The drafting run skips these segments; a verse the
-  text does not have at all still fails it.
+  stops if the pinned BSB has a blank segment not in that list or a listed
+  one is no longer blank, so either goes to a person. The drafting run
+  skips these segments, before decision 12's reuse; a verse the text does
+  not have at all still fails it.
 
 ## `data/drafts/<lang>/<BOOK>.json`
 

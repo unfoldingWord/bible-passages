@@ -15,6 +15,7 @@ import {
   readDraft,
   BLANK_SEGMENTS,
   BLANK_TITLE,
+  blankProblems,
   blankSegments,
   segmentInputs,
   verseTexts,
@@ -254,6 +255,15 @@ describe("segmentInputs", () => {
     expect(blankSegments(structure, blank)).toEqual(["XYZ.1.4-4"]);
   });
 
+  it("counts a blank segment that is its pericope's only one as blank, not reused", () => {
+    const blank = new Map(verses).set("1:1", "");
+    expect(segmentInputs(structure, headings, blank)).toMatchObject({
+      reused: [],
+      blank: ["XYZ.1.1-1"],
+    });
+    expect(blankSegments(structure, blank)).toEqual(["XYZ.1.1-1"]);
+  });
+
   it("fails on a verse with no text", () => {
     const short = new Map(verses);
     short.delete("1:3");
@@ -333,6 +343,21 @@ describe("segments BSB leaves blank (#226)", () => {
       expect(table.segments[key]).toBe(label.text);
     }
   );
+
+  // The build throws on any of these (scripts/data/build.ts).
+  it("stops on a blank segment not decided, a decided one not blank, or a draft for one", () => {
+    expect(blankProblems("MAT", ["MAT.17.21-21"], ["MAT.1.1-1"])).toEqual([]);
+    expect(blankProblems("GEN", [], [])).toEqual([]);
+    expect(blankProblems("MAT", ["MAT.17.21-21", "MAT.18.11-11"], [])).toEqual([
+      "segments blank in BSB are [MAT.17.21-21, MAT.18.11-11], not the decided [MAT.17.21-21] (BLANK_SEGMENTS)",
+    ]);
+    expect(blankProblems("MRK", [], [])).toEqual([
+      "segments blank in BSB are [], not the decided [MRK.11.26-26] (BLANK_SEGMENTS)",
+    ]);
+    expect(blankProblems("ROM", ["ROM.16.24-24"], ["ROM.16.24-24"])).toEqual([
+      "draft for ROM.16.24-24, which has a fixed title",
+    ]);
+  });
 
   it("passes the gates every English title passes", () => {
     expect(gateProblems(BLANK_TITLE.text)).toEqual([]);
