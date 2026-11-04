@@ -467,7 +467,10 @@ above, and lengths are counted in code points.
 | Model time                   | 59.7 s (34.2 s draft, 25.5 s check)       | 79.0 s (38.8 s draft, 40.2 s check)       | 80.9 s (29.5 s draft, 51.4 s check)       | 110.2 s (36.0 s draft, 74.2 s check)      | measured |
 
 The #216 columns are copied from the section above (measured 2026-11-03);
-the revised columns were measured 2026-11-04.
+the revised columns were measured 2026-11-04. Each cost is rounded to four
+places from the unrounded call costs, so a total can differ from the sum
+of its rounded parts by $0.0001 (revised run 2: $0.066064 + $0.040482 =
+$0.106546).
 
 Generation ids: run 1 draft `gen-1793806174-KQHl9Anpc4GLHZZIaave`, check
 `gen-1793806204-xwOwnYSBFr8pg57fceX9`; run 2 draft
@@ -490,9 +493,9 @@ against 33 and 32), and none of the new disagreements is about a pronoun.
 Inference, not tested: two runs a side cannot separate an effect of the
 change from run-to-run spread (#201 saw 6 to 11 disagreements across runs
 of one earlier prompt). The titles are shorter (means 47.3 and 48.3 against
-51.3 and 50.8), which may come from the shorter example; and "the
-Colossians" now names more titles than "believers" (16 and 12 against 9 and
-13), which eases the "believers" watch item above. Draft cost
+51.3 and 50.8), which may come from the shorter example; and "believers" names fewer
+titles (9 and 13 against 20 and 16) while "the Colossians" names more (16
+and 12 against 7 and 10), which eases the "believers" watch item above. Draft cost
 ($0.0558, $0.0661) is within the earlier spread.
 
 ## Measured: English segment titles, 1 Thessalonians, committed run (#207)
