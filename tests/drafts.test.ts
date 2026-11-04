@@ -123,15 +123,37 @@ describe("prompts/history/", () => {
 // its length in brackets, counted in code points like Python len() (#204).
 describe("the Titus examples in prompts/segment-titles.md", () => {
   const prompt = fileText("prompts/segment-titles.md");
-  const draft = prompt.slice(
-    prompt.indexOf("<!-- draft:start -->"),
-    prompt.indexOf("<!-- draft:end -->")
+  const start = prompt.indexOf("<!-- draft:start -->");
+  const end = prompt.indexOf("<!-- draft:end -->");
+  const draft = prompt.slice(start, end);
+  const intro = draft.indexOf("These titles from Titus");
+  const examples = [...draft.slice(intro).matchAll(/^- (.+) \((\d+)\)$/gm)].map(
+    (m) => ({ text: m[1]!, count: Number(m[2]) })
   );
-  const examples = [
-    ...draft
-      .slice(draft.indexOf("These titles from Titus"))
-      .matchAll(/^- (.+) \((\d+)\)$/gm),
-  ].map((m) => ({ text: m[1]!, count: Number(m[2]) }));
+
+  // indexOf gives -1 for a missing marker, and slice reads -1 as "one from
+  // the end", so each slice names its marker here rather than failing only
+  // through the count of eight (#218).
+  it("finds the markers it slices at", () => {
+    expect(start, "<!-- draft:start -->").toBeGreaterThanOrEqual(0);
+    expect(end, "<!-- draft:end -->").toBeGreaterThan(start);
+    expect(intro, "These titles from Titus").toBeGreaterThanOrEqual(0);
+  });
+
+  // The examples themselves, frozen: a change to them is a prompt change,
+  // made on purpose with this list (#218).
+  it("lists these eight examples", () => {
+    expect(examples.map((e) => e.text)).toEqual([
+      "Paul left Titus in Crete to appoint elders",
+      "Elders must be blameless in family and character",
+      "Titus must firmly correct false teachers",
+      "Some say they know God but their actions deny him",
+      "Older women are to teach the younger women",
+      "Believers should obey rulers and be gentle to everyone",
+      "God saved us because of his mercy, not our deeds",
+      "Paul asks Titus to come and to help Zenas and Apollos",
+    ]);
+  });
   const built = new Set(
     Object.values(
       (
@@ -395,6 +417,11 @@ describe.each([
     expect(t.checks).toBe(
       t.batched ? batches(Object.keys(record.titles), CHECK_BATCH).length : 1
     );
+    // PHP's exception holds only while the batching rule would give it more
+    // calls than its one: if CHECK_BATCH changed so that it gave 1, PHP
+    // would no longer be an exception and the row must be rewritten (#223).
+    if (!t.batched)
+      expect(batches(Object.keys(record.titles), CHECK_BATCH)).toHaveLength(2);
     for (const c of calls) {
       expect(c.id).toMatch(/^gen-/);
       expect(c.promptTokens).toBeGreaterThan(0);

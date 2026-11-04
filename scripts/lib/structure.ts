@@ -176,3 +176,40 @@ export function buildStructure(
   });
   return { book, versification: "ufw", pericopes, segments };
 }
+
+/**
+ * The pericope titles of one book: each heading titles the pericope that
+ * starts at its verse, and every pericope gets exactly one (#196). Status
+ * is `unreviewed`; `source` is the edition the headings came from.
+ */
+export function pericopeTitles(
+  book: string,
+  headings: Heading[],
+  pericopes: Pericope[],
+  source: string
+): Record<string, { text: string; status: string; source: string }> {
+  const titles: Record<
+    string,
+    { text: string; status: string; source: string }
+  > = {};
+  // Where each title's heading was, so a second heading names the first.
+  const at: Record<string, string> = {};
+  for (const h of headings) {
+    const p = pericopes.find(
+      (p) => p.start[0] === h.chapter && p.start[1] === h.verse
+    );
+    if (!p)
+      throw new Error(
+        `${book} ${h.chapter}:${h.verse}: heading without a pericope`
+      );
+    if (titles[p.key])
+      throw new Error(
+        `${book} ${h.chapter}:${h.verse}: two headings for ${p.key}, the first at ${at[p.key]}`
+      );
+    titles[p.key] = { text: h.text, status: "unreviewed", source };
+    at[p.key] = `${h.chapter}:${h.verse}`;
+  }
+  for (const p of pericopes)
+    if (!titles[p.key]) throw new Error(`${p.key}: pericope without a title`);
+  return titles;
+}
