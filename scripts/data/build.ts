@@ -19,6 +19,7 @@ import {
   parseChunks,
   parseHeadings,
   parseVrs,
+  pericopeTitles,
   plain,
 } from "../lib/structure.ts";
 
@@ -82,31 +83,12 @@ for (const book of STRUCTURE_BOOKS) {
 
   const name = await bookName(book, usfm);
   const source = `bsb-${id}`;
-  const titles: Record<
-    string,
-    { text: string; status: string; source: string }
-  > = {};
   // Every book's pericope titles are BSB's \s1 headings, the same headings
   // its pericopes were cut at, so each pericope gets exactly one (#196).
   // Segment titles are built one book at a time (AGENTS.md): only a book in
   // BOOKS has drafts or reuses a pericope title for a segment (decision 12).
+  const titles = pericopeTitles(book, headings, structure.pericopes, source);
   const titled = BOOKS.includes(book);
-  for (const h of headings) {
-    const p = structure.pericopes.find(
-      (p) => p.start[0] === h.chapter && p.start[1] === h.verse
-    );
-    if (!p)
-      throw new Error(
-        `${book} ${h.chapter}:${h.verse}: heading without a pericope`
-      );
-    if (titles[p.key])
-      throw new Error(
-        `${book} ${h.chapter}:${h.verse}: two headings for ${p.key}`
-      );
-    titles[p.key] = { text: h.text, status: "unreviewed", source };
-  }
-  for (const p of structure.pericopes)
-    if (!titles[p.key]) throw new Error(`${p.key}: pericope without a title`);
   // AI drafts are committed inputs in data/drafts/, which the build never
   // clears, so a rebuild cannot wipe them. A draft for a key that is not a
   // segment fails the build.

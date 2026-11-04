@@ -3,6 +3,7 @@ import {
   buildStructure,
   parseHeadings,
   parseVrs,
+  pericopeTitles,
 } from "../scripts/lib/structure.ts";
 
 // The rules in docs/scoping/pipeline.md, each on the smallest input that
@@ -91,5 +92,46 @@ describe("buildStructure", () => {
     expect(() => buildStructure("TIT", [6], headings, [[1, 9]])).toThrow(
       /past the last verse/
     );
+  });
+});
+
+describe("pericopeTitles", () => {
+  const pericopes = [
+    { key: "TIT.P.1.1-4", start: [1, 1], end: [1, 4] },
+    { key: "TIT.P.1.5-9", start: [1, 5], end: [1, 9] },
+  ] satisfies Parameters<typeof pericopeTitles>[2];
+
+  it("titles each pericope with the heading at its first verse", () => {
+    const titles = pericopeTitles(
+      "TIT",
+      [
+        { chapter: 1, verse: 1, text: "One" },
+        { chapter: 1, verse: 5, text: "Two" },
+      ],
+      pericopes,
+      "bsb-tit"
+    );
+    expect(titles).toEqual({
+      "TIT.P.1.1-4": { text: "One", status: "unreviewed", source: "bsb-tit" },
+      "TIT.P.1.5-9": { text: "Two", status: "unreviewed", source: "bsb-tit" },
+    });
+  });
+
+  // buildStructure refuses two headings at one verse first, so the build
+  // cannot reach this from today's sources; the message still names where
+  // the first heading was (#218).
+  it("names the first heading's verse when a pericope has two", () => {
+    expect(() =>
+      pericopeTitles(
+        "TIT",
+        [
+          { chapter: 1, verse: 1, text: "One" },
+          { chapter: 1, verse: 1, text: "Again" },
+          { chapter: 1, verse: 5, text: "Two" },
+        ],
+        pericopes,
+        "bsb-tit"
+      )
+    ).toThrow("TIT 1:1: two headings for TIT.P.1.1-4, the first at 1:1");
   });
 });
