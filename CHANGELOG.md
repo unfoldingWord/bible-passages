@@ -48,6 +48,12 @@ are the release tags (`vX.Y.Z`); see `docs/schema.md`, "Releases".
   Before any results are written, rewrites must keep each verse's main
   point and agreement must be measured blind (#207). The Philippians trial
   run is recorded as a measurement only (`docs/scoping/dispute-check.md`).
+- A fixed English title for the three segments whose only verse BSB leaves
+  blank (#226): `MAT.17.21-21`, `MRK.11.26-26` and `ROM.16.24-24` read "Not
+  in the oldest manuscripts", written by a person (`approved`,
+  `reviewer:maintainer`), never drafted. Matthew, Mark and Romans each ship
+  a title table with that one title; the segment-title drafting run skips
+  these segments instead of stopping.
 
 ### Changed
 

@@ -13,6 +13,9 @@ import {
   promptPart,
   readCheck,
   readDraft,
+  BLANK_SEGMENTS,
+  BLANK_TITLE,
+  blankSegments,
   segmentInputs,
   verseTexts,
   type Complete,
@@ -223,10 +226,11 @@ describe("segmentInputs", () => {
         { key: "XYZ.1.4-4", verses: "1:4", pericope: "Thanks", text: "Four." },
       ],
       reused: ["XYZ.1.1-1"],
+      blank: [],
     });
   });
 
-  it("leaves a blank verse out of the text, and fails when every verse is blank", () => {
+  it("leaves a blank verse out of the text, and skips a segment whose every verse is blank", () => {
     const blank = new Map(verses).set("1:3", "");
     expect(segmentInputs(structure, headings, blank).inputs[0]).toEqual({
       key: "XYZ.1.2-3",
@@ -235,9 +239,19 @@ describe("segmentInputs", () => {
       text: "Two.",
     });
     blank.set("1:4", "");
-    expect(() => segmentInputs(structure, headings, blank)).toThrow(
-      "XYZ.1.4-4: every verse is blank in the source text"
-    );
+    expect(segmentInputs(structure, headings, blank)).toEqual({
+      inputs: [
+        {
+          key: "XYZ.1.2-3",
+          verses: "1:2–3",
+          pericope: "Thanks",
+          text: "Two.",
+        },
+      ],
+      reused: ["XYZ.1.1-1"],
+      blank: ["XYZ.1.4-4"],
+    });
+    expect(blankSegments(structure, blank)).toEqual(["XYZ.1.4-4"]);
   });
 
   it("fails on a verse with no text", () => {
@@ -246,6 +260,82 @@ describe("segmentInputs", () => {
     expect(() => segmentInputs(structure, headings, short)).toThrow(
       "XYZ.1.2-3: no text for 1:3"
     );
+    expect(() => blankSegments(structure, short)).toThrow(
+      "XYZ.1.2-3: no text for 1:3"
+    );
+    // A segment with no verse in the text at all is not blank: it fails.
+    const none = new Map(verses).set("1:3", "");
+    none.delete("1:4");
+    expect(() => segmentInputs(structure, headings, none)).toThrow(
+      "XYZ.1.4-4: no text for 1:4"
+    );
+  });
+});
+
+// The maintainer's decision on #226 (4 Nov): the segments BSB leaves blank
+// take one fixed, human-written English title, and are not drafted.
+describe("segments BSB leaves blank (#226)", () => {
+  const books = ["MAT", "MRK", "ROM"] as const;
+  const label = {
+    text: "Not in the oldest manuscripts",
+    status: "approved",
+    source: "reviewer:maintainer",
+  };
+
+  it("are exactly MAT.17.21-21, MRK.11.26-26 and ROM.16.24-24 in all 66 pinned books", async () => {
+    const { readSource } = await import("../scripts/lib/sources.ts");
+    const { STRUCTURE_BOOKS } = await import("../scripts/lib/books.ts");
+    expect(STRUCTURE_BOOKS).toHaveLength(66);
+    const found: string[] = [];
+    for (const book of STRUCTURE_BOOKS) {
+      const s = JSON.parse(read(`data/structure/${book}.json`)) as Structure;
+      const v = verseTexts(await readSource(`bsb-${book.toLowerCase()}`));
+      found.push(...blankSegments(s, v));
+    }
+    expect(found).toEqual(["MAT.17.21-21", "MRK.11.26-26", "ROM.16.24-24"]);
+    expect(BLANK_SEGMENTS).toEqual(found);
+    expect(BLANK_TITLE).toEqual(label);
+  });
+
+  it.each(books)(
+    "%s: the drafting input skips the blank segment and builds the rest",
+    async (book) => {
+      const { readSource } = await import("../scripts/lib/sources.ts");
+      const { parseHeadings } = await import("../scripts/lib/structure.ts");
+      const s = JSON.parse(read(`data/structure/${book}.json`)) as Structure;
+      const usfm = await readSource(`bsb-${book.toLowerCase()}`);
+      const { inputs, reused, blank } = segmentInputs(
+        s,
+        parseHeadings(usfm),
+        verseTexts(usfm)
+      );
+      const key = BLANK_SEGMENTS.find((k) => k.startsWith(`${book}.`))!;
+      expect(blank).toEqual([key]);
+      expect(inputs.map((i) => i.key)).not.toContain(key);
+      expect(inputs.length + reused.length + blank.length).toBe(
+        s.segments.length
+      );
+      for (const i of inputs) expect(i.text.trim()).not.toBe("");
+    }
+  );
+
+  it.each(books)(
+    "%s: the built English title and the tc-mobile table carry the label",
+    (book) => {
+      const key = BLANK_SEGMENTS.find((k) => k.startsWith(`${book}.`))!;
+      const titles = JSON.parse(read(`data/titles/en/${book}.json`)) as {
+        titles: Record<string, unknown>;
+      };
+      expect(titles.titles[key]).toEqual(label);
+      const table = JSON.parse(
+        read(`dist/tc-mobile/titles/en/${book}.json`)
+      ) as { segments: Record<string, string> };
+      expect(table.segments[key]).toBe(label.text);
+    }
+  );
+
+  it("passes the gates every English title passes", () => {
+    expect(gateProblems(BLANK_TITLE.text)).toEqual([]);
   });
 });
 

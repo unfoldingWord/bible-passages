@@ -1,7 +1,8 @@
 // Builds data/ from the pinned sources: the structure of every book, the
 // English book name and pericope titles of every book (BSB; two names come
 // from ULT, see NAME_OVERRIDES), the English segment titles of the books in
-// BOOKS, and the verse counts the checks use.
+// BOOKS, the fixed title of every segment BSB leaves blank (BLANK_TITLE), and
+// the verse counts the checks use.
 //
 //   node scripts/data/build.ts
 import { existsSync, readFileSync } from "node:fs";
@@ -12,6 +13,12 @@ import {
   disputeProblems,
   type DisputedRecord,
 } from "../lib/dispute-titles.ts";
+import {
+  BLANK_SEGMENTS,
+  BLANK_TITLE,
+  blankSegments,
+  verseTexts,
+} from "../lib/segment-titles.ts";
 import { readSource, source as source_ } from "../lib/sources.ts";
 import { clearJson, writeJson } from "../lib/write.ts";
 import {
@@ -82,6 +89,16 @@ for (const book of STRUCTURE_BOOKS) {
   await write(`structure/${book}.json`, structure);
 
   const name = await bookName(book, usfm);
+  // A segment whose every verse BSB leaves blank has a person's fixed title
+  // (#226), in every book, its segment titles built or not. Only the decided
+  // ones take it: a new one stops the build for a person to decide.
+  const blank = blankSegments(structure, verseTexts(usfm));
+  const decided = BLANK_SEGMENTS.filter((k) => k.startsWith(`${book}.`));
+  if (blank.join() !== decided.join())
+    throw new Error(
+      `${book}: segments blank in BSB are [${blank.join(", ")}], ` +
+        `not the decided [${decided.join(", ")}] (BLANK_SEGMENTS)`
+    );
   const source = `bsb-${id}`;
   // Every book's pericope titles are BSB's \s1 headings, the same headings
   // its pericopes were cut at, so each pericope gets exactly one (#196).
@@ -111,6 +128,8 @@ for (const book of STRUCTURE_BOOKS) {
     for (const [key, draft] of Object.entries(record.titles)) {
       if (!segmentKeys.has(key))
         throw new Error(`${book}: draft for unknown segment key ${key}`);
+      if (blank.includes(key))
+        throw new Error(`${book}: draft for ${key}, which has a fixed title`);
       const problems = disputeProblems(draft);
       if (problems.length > 0)
         throw new Error(`${book} ${key}: dispute: ${problems.join("; ")}`);
@@ -131,12 +150,18 @@ for (const book of STRUCTURE_BOOKS) {
   }
   // Decision 12 (docs/decisions/0003): a segment that is its pericope's only
   // segment reuses the pericope title, unless a draft gives it its own
-  // (Titus 3:9-11 was drafted before the decision). Pericope titles first,
-  // then segment titles, each in reading order.
+  // (Titus 3:9-11 was drafted before the decision). A blank segment takes
+  // its fixed title, in any book. Pericope titles first, then segment
+  // titles, each in reading order.
   const ordered: typeof titles = {};
   for (const p of structure.pericopes)
     if (titles[p.key]) ordered[p.key] = titles[p.key]!;
-  for (const s of titled ? structure.segments : []) {
+  for (const s of structure.segments) {
+    if (blank.includes(s.key)) {
+      ordered[s.key] = { ...BLANK_TITLE };
+      continue;
+    }
+    if (!titled) continue;
     const only =
       structure.segments.filter((t) => t.pericope === s.pericope).length === 1;
     const title = titles[s.key] ?? (only ? titles[s.pericope] : undefined);
