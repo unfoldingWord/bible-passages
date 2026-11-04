@@ -601,7 +601,10 @@ paragraph with `\pmo` after the heading "The First Day". `0107e82` drops
 verses (a test checks it). It cost nothing. Over the 66 pinned BSB files,
 31 books failed to read before this fix and 24 after (measured with a
 throwaway script calling `verseTexts` on each cached file); the rest are
-#226.
+#226. Since #226, `verseTexts` reads all 66 books, 31,104 verses, the same
+verses as the ufw versification (a test checks it); 18 of them BSB numbers
+but leaves blank, and three segments are only such a verse (`MAT.17.21-21`,
+`MRK.11.26-26`, `ROM.16.24-24`), which drafting still refuses.
 
 The second run, one plain run of the CLI (15:29:34 to 15:53:04 UTC, code at
 `0107e82`, prompt `prompts/segment-titles.md` as it then stood, SHA-256

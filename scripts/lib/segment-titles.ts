@@ -25,14 +25,21 @@ export const CRITERIA = ["accurate", "covers", "plain", "style"] as const;
 export type Criterion = (typeof CRITERIA)[number];
 
 // Lines that are not verse text: identification, book names, section
-// headings and their cross-references.
-const SKIP = /^\\(id|usfm|ide|h|toc\d|mt\d?|ms\d?|s\d?|r|d|sp|cl)(\s|$)/;
+// headings and their cross-references, and the acrostic letters of Psalm 119
+// (`\qa BETH`, which BSB puts inside the previous verse's run; #226).
+const SKIP = /^\\(id|usfm|ide|h|toc\d|mt\d?|ms\d?|mr|s\d?|r|d|sp|cl|qa)(\s|$)/;
 
 /**
  * Each verse's text, keyed `<chapter>:<verse>`, from a BSB USFM file:
  * alignment, word and paragraph markers removed, footnotes and headings
  * dropped, whitespace collapsed. Anything left that still looks like USFM
  * fails rather than reaching a model.
+ *
+ * A verse BSB numbers but leaves blank (a verse it omits on textual grounds,
+ * such as Matthew 17:21, noted in a footnote on the verse before, or a
+ * sentence it numbers with the verse before, such as Revelation 12:18) is
+ * kept as `""`: the verse exists and has no words, which is not the same as a
+ * verse the file does not have (#226).
  */
 export function verseTexts(usfm: string): Map<string, string> {
   const body = usfm
@@ -40,29 +47,50 @@ export function verseTexts(usfm: string): Map<string, string> {
     .filter((line) => !SKIP.test(line))
     .join("\n")
     .replace(/\\f\s.*?\\f\*/gs, "")
+    // Joshua 12:23 closes a footnote before its text: `\f + \f*\fr 12:23
+    // \ft …\f*`. The line above drops the empty `\f + \f*`; this drops
+    // the stray reference and text after it (#226).
+    .replace(/\\fr\s.*?\\f\*/gs, "")
     .replace(/\\x\s.*?\\x\*/gs, "")
     .replace(/\\zaln-s\s[^\\]*\\\*/g, "")
     .replace(/\\zaln-e\\\*/g, "")
-    .replace(/\\w\s+([^|\\]*)(\|[^\\]*)?\\w\*/g, "$1");
+    .replace(/\\w\s+([^|\\]*)(\|[^\\]*)?\\w\*/g, "$1")
+    // Italic (Habakkuk 3:19's closing note to the choirmaster) keeps its words.
+    .replace(/\\it(\*|(?=\s))/g, " ");
   const out = new Map<string, string>();
   let chapter = 0;
   let verse: string | null = null;
   const marker = /\\(c|v)\s+(\d+)\s?/g;
   let last = 0;
-  const flush = (end: number) => {
-    if (verse === null) return;
+  // `next` is the marker that ends the run: `v2` for a verse 2, else "".
+  const flush = (end: number, next: string) => {
+    if (verse === null && chapter === 0) return;
     const text = body
       .slice(last, end)
-      .replace(/\\(m|mi|p|pi\d?|pmo|q\d?|b|nb|pc|li\d?)(\s|$)/g, " ")
+      .replace(/\\(m|mi|p|pi\d?|pmo|q\d?|qr|b|nb|pc|li\d?)(\s|$)/g, " ")
       .replace(/\s+/g, " ")
       .replace(/ ([,.;:!?)’”])/g, "$1")
       .trim();
-    if (text === "" || text.includes("\\"))
-      throw new Error(`cannot read verse ${verse}: "${text.slice(0, 80)}"`);
-    out.set(verse, text);
+    let key = verse;
+    if (key === null) {
+      // Words after a chapter marker and before its first verse marker. The
+      // pinned BSB Psalms leaves out `\v 1` in 34 psalms that have no title
+      // (1, 2, 10, …, 150) and starts their numbering at `\v 2`; the words
+      // are verse 1, as BSB's own footnotes there say (`\fr 147:1`; #226).
+      // Words before any other first marker fail rather than be guessed.
+      if (text === "") return;
+      if (next !== "v2")
+        throw new Error(
+          `cannot read chapter ${chapter}: words before its first verse: "${text.slice(0, 80)}"`
+        );
+      key = `${chapter}:1`;
+    }
+    if (text.includes("\\"))
+      throw new Error(`cannot read verse ${key}: "${text.slice(0, 80)}"`);
+    out.set(key, text);
   };
   for (const m of body.matchAll(marker)) {
-    flush(m.index);
+    flush(m.index, m[1] === "v" && Number(m[2]) === 2 ? "v2" : "");
     if (m[1] === "c") {
       chapter = Number(m[2]);
       verse = null;
@@ -71,7 +99,7 @@ export function verseTexts(usfm: string): Map<string, string> {
     }
     last = m.index + m[0].length;
   }
-  flush(body.length);
+  flush(body.length, "");
   return out;
 }
 
@@ -120,11 +148,17 @@ export function segmentInputs(
     const text: string[] = [];
     for (let v = from; v <= to; v++) {
       const t = verses.get(`${c}:${v}`);
-      // A verse BSB leaves out (none in the New Testament books measured so
-      // far) would silently shorten the input, so it fails instead.
+      // A verse the file does not have would silently shorten the input, so
+      // it fails. A verse it numbers but leaves blank (`""`) adds no words:
+      // the title is drafted from the text as the BSB prints it (#226).
       if (t === undefined) throw new Error(`${s.key}: no text for ${c}:${v}`);
-      text.push(t);
+      if (t !== "") text.push(t);
     }
+    // Nothing to draft from: every verse of the segment is blank in the BSB
+    // (Matthew 17:21, Mark 11:26, Romans 16:24). What such a segment's title
+    // should be is not settled, so it fails rather than invent one (#226).
+    if (text.length === 0)
+      throw new Error(`${s.key}: every verse is blank in the source text`);
     const pericope = titleOf.get(s.pericope);
     if (pericope === undefined)
       throw new Error(`${s.key}: pericope ${s.pericope} has no heading`);
