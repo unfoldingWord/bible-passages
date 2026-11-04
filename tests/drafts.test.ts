@@ -10,6 +10,7 @@ import {
   batches,
   CHECK_BATCH,
   CRITERIA,
+  DRAFT_BATCH,
   gateProblems,
 } from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
@@ -160,7 +161,7 @@ describe("the Titus examples in prompts/segment-titles.md", () => {
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
 // scripts/translate/segment-titles.ts, whose records carry their calls.
-describe.each(["TIT", "PHP", "COL", "1TH", "2TI"])(
+describe.each(["TIT", "PHP", "COL", "1TH", "2TI", "GEN"])(
   "English %s segment drafts",
   (book) => {
     const structure = read(`data/structure/${book}.json`) as {
@@ -291,8 +292,9 @@ describe.each(["TIT", "PHP", "COL", "1TH", "2TI"])(
 );
 
 // The books drafted by scripts/translate/segment-titles.ts. A record has one
-// draft call, then one check call per batch of at most CHECK_BATCH titles
-// (#201); `checks` is what each committed record holds.
+// draft call per batch of at most DRAFT_BATCH segments (#208), then one check
+// call per batch of at most CHECK_BATCH titles (#201); `drafts` and `checks`
+// are what each committed record holds (`drafts` is 1 unless given).
 describe.each([
   {
     book: "PHP",
@@ -332,6 +334,25 @@ describe.each([
     checks: 1,
     batched: true,
   },
+  {
+    book: "GEN",
+    reused: [
+      "GEN.2.1-3",
+      "GEN.3.14-15",
+      "GEN.4.25-26",
+      "GEN.8.20-22",
+      "GEN.26.34-35",
+      "GEN.30.22-24",
+      "GEN.33.18-20",
+      "GEN.35.16-20",
+    ],
+    drafted: 642,
+    // The first long book, drafted in 19 batches for #208.
+    prompt: "prompts/segment-titles.md",
+    drafts: 19,
+    checks: 19,
+    batched: true,
+  },
 ])("a scripted segment-title record ($book)", (t) => {
   const record = read(`data/drafts/en/${t.book}.json`) as Record;
   const structure = read(`data/structure/${t.book}.json`) as {
@@ -357,12 +378,18 @@ describe.each([
     expect(record.bible).toBe(`bsb-${t.book.toLowerCase()}`);
   });
 
-  it("records one draft call, then its check calls, by models of different families", () => {
+  it("records its draft calls, then its check calls, by models of different families", () => {
     const calls = record.calls ?? [];
+    const drafts = t.drafts ?? 1;
     expect(calls.map((c) => c.role)).toEqual([
-      "draft",
+      ...Array<string>(drafts).fill("draft"),
       ...Array<string>(t.checks).fill("check"),
     ]);
+    // A record made with batched drafting (#213) has exactly the draft calls
+    // its batching makes; PHP, drafted whole before it, one.
+    expect(drafts).toBe(
+      t.batched ? batches(Object.keys(record.titles), DRAFT_BATCH).length : 1
+    );
     // A record made with the batched check (#201) has exactly the check
     // calls the runner's batching makes (#215); PHP, made before it, one.
     expect(t.checks).toBe(
@@ -374,7 +401,10 @@ describe.each([
       expect(c.cost).toBeGreaterThan(0);
     }
     const family = (m: string) => m.split("/")[0];
-    const [draft, ...checks] = calls;
+    const draftCalls = calls.slice(0, drafts);
+    const checks = calls.slice(drafts);
+    const draft = draftCalls[0];
+    for (const c of draftCalls) expect(c.model).toBe(draft!.model);
     for (const c of checks) {
       expect(c.model).toBe(checks[0]!.model);
       expect(family(draft!.model)).not.toBe(family(c.model));
