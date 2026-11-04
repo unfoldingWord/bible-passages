@@ -4,6 +4,59 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-03 — go/no-go 1 decided; English pericope titles for all 66 books; drafting and checking ready for the whole Bible
+
+The requirements owner set the direction in the project call, and the maintainer recorded it as ADR 0005. Lanes ran in two waves, each a background agent in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). A PR whose base was behind main was first built and verified merged with main. 14 PRs merged, #195 to #224.
+
+### Shipped
+
+| What                                                                                                                                                                                                                                               | Evidence                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Go/no-go 1, a day early: v0.1.0 carries AI-checked English titles for the whole Bible; Titus is the reviewed sample; the content team's Q1 read-through becomes 1.0; the tag stays v0.1.0; disputes go to a third model                            | #195 (ADR 0005), AGENTS.md "Correctness first" |
+| English pericope titles for all 66 books from the BSB headings: 3,016, re-derived independently with 0 mismatches                                                                                                                                  | #200                                           |
+| Segment drafting stays within 60 characters (Colossians: 0 of 33 over, against 11 of 37 in Philippians) and names the readers instead of an unclear pronoun (Colossians re-drafts: 0 pronoun disputes, 33 and 32 of 33 agreed)                     | #202, #216                                     |
+| Drafting and checking for any book: both run in batches of at most 35 titles; the check has 32,768 tokens and no longer cuts off                                                                                                                   | #210, #213                                     |
+| Segment titles for Colossians (29 of 33 agreed), 1 Thessalonians (30 of 31) and 2 Timothy (26 of 30), each from one plain run                                                                                                                      | #212, #217, #224                               |
+| Third-model dispute check (OpenAI as the third vendor): its input is blind to the first checker's suggestions; rule 8 says a rewrite must keep every verse's main point; the checker rechecks every rewrite. No third-check results are in `data/` | #203, #217, #222                               |
+| Six Titus keeps recorded through `apply.ts`; all eight drafting-prompt examples now have a review record                                                                                                                                           | #221                                           |
+| 6B for the whole-Bible review navigator: books, then chapters, then keep-or-reword                                                                                                                                                                 | #199                                           |
+| Bench follow-ups                                                                                                                                                                                                                                   | #214, #222                                     |
+
+`main` at `26f6857`: `npm run verify` 10,817 passed, 2 todo, 27 test files (run in the main checkout at `26f6857`).
+
+### Measured
+
+- **Review time per title** (first measurement): Hindi blind review of Titus, 33 titles in 16.4 min, mean 29.9 s. One reviewer, choosing between two candidates.
+- **Model choice, unblinded on #64:** reviewer changes needed for Gemini against Claude were pt-BR 5 to 12 and Hindi 15 to 16, pooled 20 to 28. One reviewer per language; p ≈ 0.27.
+- **Whole-Bible segment titles** (estimated from measured per-title rates, sizing.md): drafting $19–33, draft plus check $38–75.
+- **Model spend today:** each lane's cost is in its PR and sizing.md; the lanes' totals were each under their caps.
+
+### Decisions (the maintainer and the requirements owner, 3 Nov)
+
+- ADR 0005: the go/no-go and the dispute rule. The tag stays v0.1.0.
+- The repo stays at `unfoldingWord/bible-passages`, owned by unfoldingWord.
+- Merge on clean + green, pinned to the reviewed head, for 3 Nov only.
+- Model choice (#64): wait for an es-419 or French review.
+- #203: merge the third-check code, not its Philippians data (#207).
+- #209: the drafting prompt names the readers.
+- #219: record the requirements owner's Titus keeps.
+
+### Open
+
+- **#207:** the maintainer's sample check of `docs/scoping/dispute-review.md`: 9 blind disputes, 2 taste and 7 factual. Rule 8 sorted 12 of the 14 Philippians disputes as factual, so it may be too strict. The recheck doesn't catch dropped points.
+- **#208:** no long book drafted end to end yet (Genesis is estimated at $0.90–1.60).
+- **#64:** the model choice waits on a review in another language.
+- **Low follow-ups:** #209, #218, #220, #223.
+- **Not re-checked today:** chunk source (#4), `en_twl` for 7 books (#57), Arabic headwords (#21), a Chinese reader (#31), a Philippians reviewer (#32), the #44 questions, OBS O1–O5 (#78). No release tagged.
+
+### Next
+
+- The sample check of the dispute review sheet, then decide on rule 8.
+- A first long book end to end (#208), then the rest of the Bible in English.
+- Ask for an es-419 or French reviewer for the Titus blind review (#64).
+
+---
+
 ## 2026-11-02 — checks tightened across every gate; Chinese names checked against the CUV
 
 Waves of 3–6 lanes, each a background agent in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). 27 PRs merged, #146 to #191. 26 issues closed.
