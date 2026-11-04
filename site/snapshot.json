@@ -1,13 +1,28 @@
 {
   "schema": "bp.snapshot",
   "v": 1,
-  "asOf": "2026-11-04T22:06:42.702Z",
+  "asOf": "2026-11-04T22:27:49.793Z",
   "repo": {
-    "pushedAt": "2026-11-04T21:57:47Z",
+    "pushedAt": "2026-11-04T22:26:39Z",
     "defaultBranch": "main",
-    "openIssues": 27
+    "openIssues": 28
   },
   "commits": [
+    {
+      "sha": "3fd138d",
+      "msg": "Merge pull request #236 from unfoldingWord/feat/blank-verse-label",
+      "at": "2026-11-04T22:26:38Z"
+    },
+    {
+      "sha": "4b8d394",
+      "msg": "fix(titles): classify blank segments before reuse; test the build's stops",
+      "at": "2026-11-04T22:12:39Z"
+    },
+    {
+      "sha": "741b9d7",
+      "msg": "feat(titles): fixed English title for segments BSB leaves blank",
+      "at": "2026-11-04T21:57:46Z"
+    },
     {
       "sha": "92de3e8",
       "msg": "Merge pull request #234 from unfoldingWord/fix/bsb-verse-parser",
@@ -67,31 +82,24 @@
       "sha": "43d1150",
       "msg": "feat(titles): commit the Genesis English segment titles from one plain run",
       "at": "2026-11-04T15:56:34Z"
-    },
-    {
-      "sha": "0e662bf",
-      "msg": "docs(sizing): state the believers and Colossians counts per run, and the cost rounding",
-      "at": "2026-11-04T15:53:16Z"
-    },
-    {
-      "sha": "2936f1b",
-      "msg": "test(titles): freeze the revised Titus examples after merging main",
-      "at": "2026-11-04T15:52:25Z"
-    },
-    {
-      "sha": "4e66cfe",
-      "msg": "Merge remote-tracking branch 'origin/main' into feat/prompt-pronoun-followups",
-      "at": "2026-11-04T15:51:15Z"
     }
   ],
   "pulls": [
     {
-      "number": 236,
-      "title": "feat(titles): fixed English title for segments BSB leaves blank",
+      "number": 237,
+      "title": "docs(site): add a Health view and bring every page to 4 Nov",
       "state": "open",
       "draft": false,
       "merged": false,
-      "at": "2026-11-04T21:58:23Z"
+      "at": "2026-11-04T22:25:53Z"
+    },
+    {
+      "number": 236,
+      "title": "feat(titles): fixed English title for segments BSB leaves blank",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "at": "2026-11-04T22:26:39Z"
     },
     {
       "number": 234,
@@ -1088,6 +1096,13 @@
   ],
   "issues": [
     {
+      "number": 238,
+      "title": "Segment-title run summary: say blank segments are skipped, not titled",
+      "state": "open",
+      "milestone": null,
+      "closedAt": null
+    },
+    {
       "number": 235,
       "title": "verseTexts: make footnote/cross-reference span removal fail closed, and pin recovered verse strings",
       "state": "open",
@@ -1893,6 +1908,69 @@
   ],
   "runs": [
     {
+      "sha": "3fd138d",
+      "branch": "main",
+      "conclusion": "in_progress",
+      "at": "2026-11-04T22:26:42Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41925323594"
+    },
+    {
+      "sha": "86e839c",
+      "branch": "docs/site-health-2026-11-04",
+      "conclusion": "success",
+      "at": "2026-11-04T22:25:47Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41925191297"
+    },
+    {
+      "sha": "86e839c",
+      "branch": "docs/site-health-2026-11-04",
+      "conclusion": "success",
+      "at": "2026-11-04T22:25:47Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41925190938"
+    },
+    {
+      "sha": "41378b8",
+      "branch": "docs/site-health-2026-11-04",
+      "conclusion": "success",
+      "at": "2026-11-04T22:13:28Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923355149"
+    },
+    {
+      "sha": "41378b8",
+      "branch": "docs/site-health-2026-11-04",
+      "conclusion": "cancelled",
+      "at": "2026-11-04T22:13:27Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923353941"
+    },
+    {
+      "sha": "41378b8",
+      "branch": "docs/site-health-2026-11-04",
+      "conclusion": "success",
+      "at": "2026-11-04T22:13:27Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923353908"
+    },
+    {
+      "sha": "4b8d394",
+      "branch": "feat/blank-verse-label",
+      "conclusion": "success",
+      "at": "2026-11-04T22:13:02Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923291367"
+    },
+    {
+      "sha": "4b8d394",
+      "branch": "feat/blank-verse-label",
+      "conclusion": "success",
+      "at": "2026-11-04T22:12:45Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923247598"
+    },
+    {
+      "sha": "4b8d394",
+      "branch": "feat/blank-verse-label",
+      "conclusion": "success",
+      "at": "2026-11-04T22:12:45Z",
+      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41923247565"
+    },
+    {
       "sha": "741b9d7",
       "branch": "feat/blank-verse-label",
       "conclusion": "success",
@@ -1968,69 +2046,6 @@
       "conclusion": "success",
       "at": "2026-11-04T20:22:54Z",
       "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41906053443"
-    },
-    {
-      "sha": "6863ba0",
-      "branch": "fix/bsb-verse-parser",
-      "conclusion": "cancelled",
-      "at": "2026-11-04T20:22:54Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41906053388"
-    },
-    {
-      "sha": "6863ba0",
-      "branch": "fix/bsb-verse-parser",
-      "conclusion": "cancelled",
-      "at": "2026-11-04T20:22:54Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41906053372"
-    },
-    {
-      "sha": "44985a8",
-      "branch": "test/pericope-titles-throws",
-      "conclusion": "success",
-      "at": "2026-11-04T20:19:14Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41905467886"
-    },
-    {
-      "sha": "44985a8",
-      "branch": "test/pericope-titles-throws",
-      "conclusion": "cancelled",
-      "at": "2026-11-04T20:19:14Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41905467863"
-    },
-    {
-      "sha": "44985a8",
-      "branch": "test/pericope-titles-throws",
-      "conclusion": "success",
-      "at": "2026-11-04T20:19:14Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41905467409"
-    },
-    {
-      "sha": "c2959aa",
-      "branch": "main",
-      "conclusion": "success",
-      "at": "2026-11-04T17:02:27Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41873566366"
-    },
-    {
-      "sha": "5830f4d",
-      "branch": "data/genesis-titles",
-      "conclusion": "success",
-      "at": "2026-11-04T16:40:16Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41869690346"
-    },
-    {
-      "sha": "5830f4d",
-      "branch": "data/genesis-titles",
-      "conclusion": "success",
-      "at": "2026-11-04T16:40:16Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41869690244"
-    },
-    {
-      "sha": "3a3f2b0",
-      "branch": "data/genesis-titles",
-      "conclusion": "success",
-      "at": "2026-11-04T16:29:18Z",
-      "url": "https://github.com/unfoldingWord/bible-passages/actions/runs/41867693025"
     }
   ],
   "coverage": {
