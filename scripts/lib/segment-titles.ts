@@ -53,7 +53,7 @@ export function verseTexts(usfm: string): Map<string, string> {
     if (verse === null) return;
     const text = body
       .slice(last, end)
-      .replace(/\\(m|mi|p|pi\d?|q\d?|b|nb|pc|li\d?)(\s|$)/g, " ")
+      .replace(/\\(m|mi|p|pi\d?|pmo|q\d?|b|nb|pc|li\d?)(\s|$)/g, " ")
       .replace(/\s+/g, " ")
       .replace(/ ([,.;:!?)’”])/g, "$1")
       .trim();
