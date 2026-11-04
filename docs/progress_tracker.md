@@ -4,6 +4,57 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-04 — Genesis drafted in batches; all 66 BSB books read; the site shows project health
+
+Lanes ran as background agents, each in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). On #228 the bench's gate held the branch for removing a line from main; the maintainer accepted it, and it was acknowledged on the PR. 8 PRs merged, #225 to #237.
+
+### Shipped
+
+| What                                                                                                                                                                                            | Evidence                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Genesis English segment titles, the first long book, drafted and checked in batches: 642 drafted, 602 agreed, 40 disputed; 19 draft and 19 check calls, none cut off; $1.73, 23.5 min           | #231 (closes #208)                           |
+| The BSB verse reader reads every verse of all 66 pinned books: 31,104 verses, equal to the ufw versification (24 books failed before); 34 psalms without a `\v 1` marker no longer lose verse 1 | #234                                         |
+| The three segments BSB numbers but leaves blank (MAT 17:21, MRK 11:26, ROM 16:24) carry one fixed, human-written title, "Not in the oldest manuscripts"; drafting skips them                    | #236 (closes #226)                           |
+| Drafting prompt follow-ups: a pronoun-free Titus example, "your" in rule 5, "Christians" dropped; measured on Colossians, 0 pronoun disputes in two runs                                        | #228 (closes #220)                           |
+| Test follow-ups: prompt markers checked, Titus examples frozen, PHP's batch count pinned, the build's two-headings error gives the verse; `pericopeTitles`' other throws tested                 | #227 (closes #218, #223), #233 (closes #229) |
+| Project site: a Health view (overall verdict and one status per plan gate) and every page brought to 4 Nov; republished as version 23                                                           | #237                                         |
+
+`main` at `a0fb189`: `npm run verify` 10,858 passed, 2 todo, 27 test files (run in the main checkout at `a0fb189`).
+
+### Measured
+
+- **Genesis** (#231, sizing.md): $0.0027 per title; largest completion 6,784 of 16,384 tokens (draft) and 11,997 of 32,768 (check); 3 titles over 60 characters, all from one draft batch that used no reasoning tokens.
+- **Revised prompt on Colossians** (#228): agreed 30 and 31 of 33 (against 33 and 32 with #216's prompt); 0 pronoun disputes; $0.19 for two runs. With two runs per prompt the difference is not told apart from run-to-run variation.
+- **Whole-Bible English** (estimated from Genesis's per-title rates): about $36 to draft and check all segment titles, about 8 h of model time.
+- **Health, assessed 4 Nov on the site:** At risk. v0.1.0 can still ship on 16 Nov as an English release only if the #207 sample check lands by Thu 5 Nov.
+
+### Decisions (the maintainer, 4 Nov)
+
+- Merge on clean + green, pinned to the reviewed head, for 4 Nov only.
+- #207: review the dispute sheet as it is, without drafting another book first.
+- #208: run Genesis now. Merge #231 with the known wrong title GEN.9.11-13; it is listed on #232 and must be in the notes of any release that ships it.
+- #226: the blank-only segments get the fixed title "Not in the oldest manuscripts", not a model draft.
+- #230: keep the reviewed 27-character Titus example.
+- The whole-Bible English run starts after the #207 verdict and #226 (now done).
+- #228: accept the bench gate's stomp of #227's frozen example line.
+
+### Open
+
+- **#207:** the maintainer's sample check of `docs/scoping/dispute-review.md`, then a verdict on rule 8. This now gates the whole-Bible run and, by the site's Health view, the 8 Nov gate.
+- **#232:** GEN.9.11-13 ships `ai-checked` with a known error until a person reviews it.
+- **#64:** the model choice waits on an es-419 or French reviewer; the Zulip ask is the maintainer's to post.
+- **Low follow-ups:** #230, #235, #238.
+- **Not filed:** ULT Psalms fails to read at chapter 3 (a `\d` title's second line). It is used only by the dispute check.
+- **Not re-checked today:** chunk source (#4), `en_twl` for 7 books (#57), Arabic headwords (#21), a Chinese reader (#31), a Philippians reviewer (#32), OBS O1–O5 (#78). No release tagged.
+
+### Next
+
+- The #207 sample check and rule 8 verdict, then the whole-Bible English draft and check.
+- A person's review of GEN.9.11-13 (#232).
+- Ask for an es-419 or French reviewer (#64).
+
+---
+
 ## 2026-11-03 — go/no-go 1 decided; English pericope titles for all 66 books; drafting and checking ready for the whole Bible
 
 The requirements owner set the direction in the project call, and the maintainer recorded it as ADR 0005. Lanes ran in two waves, each a background agent in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). A PR whose base was behind main was first built and verified merged with main. 14 PRs merged, #195 to #224.
