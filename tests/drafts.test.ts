@@ -140,14 +140,15 @@ describe("the Titus examples in prompts/segment-titles.md", () => {
   });
 
   // The examples themselves, frozen: a change to them is a prompt change,
-  // made on purpose with this list (#218).
+  // made on purpose with this list (#218; the 1:15–16 example gave way to
+  // 2:6–8 in #220).
   it("lists these eight examples", () => {
     expect(examples.map((e) => e.text)).toEqual([
       "Paul left Titus in Crete to appoint elders",
       "Elders must be blameless in family and character",
       "Titus must firmly correct false teachers",
-      "Some say they know God but their actions deny him",
       "Older women are to teach the younger women",
+      "Titus instructs younger men",
       "Believers should obey rulers and be gentle to everyone",
       "God saved us because of his mercy, not our deeds",
       "Paul asks Titus to come and to help Zenas and Apollos",
