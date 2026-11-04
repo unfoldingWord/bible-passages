@@ -15,7 +15,9 @@
 // batching on a short book; the ledger records the size used.
 //
 // Inputs, all offline apart from the two calls: the book's structure
-// (data/structure/<BOOK>.json) and its BSB text, read through its pin.
+// (data/structure/<BOOK>.json) and its BSB text, read through its pin. A
+// segment whose every verse BSB leaves blank is not drafted: the build
+// gives it BLANK_TITLE (#226).
 //
 // The key is read only from the environment and is never written or printed.
 // Output goes to --out, by default under .cache/ (not committed):
@@ -101,7 +103,7 @@ if (!existsSync(structureFile)) fail(`no structure for ${book}`);
 const structure = JSON.parse(readFileSync(structureFile, "utf8")) as Structure;
 const bible = `bsb-${book.toLowerCase()}`;
 const usfm = await readSource(bible);
-const { inputs, reused } = segmentInputs(
+const { inputs, reused, blank } = segmentInputs(
   structure,
   parseHeadings(usfm),
   verseTexts(usfm)
@@ -128,7 +130,8 @@ try {
     const titles = Object.values(record.titles);
     console.log(
       `en ${book}: ${titles.length} of ${inputs.length} segments drafted ` +
-        `(${reused.length} reuse their pericope title), ` +
+        `(${reused.length} reuse their pericope title, ` +
+        `${blank.length} blank in BSB take the fixed title), ` +
         `${titles.filter((t) => t.status === "ai-checked").length} ai-checked, ` +
         `${titles.filter((t) => t.check?.verdict === "disagree").length} disagreements, ` +
         `${titles.filter((t) => t.gates).length} gate failures`
