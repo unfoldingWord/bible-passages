@@ -641,6 +641,12 @@ gave the same results.
 | Pronoun drafts               | 7 of 642, none disputed                                   | measured 2026-11-04 | titles matching `\b(them\|they\|their\|you\|your)\b`, ignoring case (as in #209)                             |
 | Titles in the tC Mobile file | 602 of 650 segments                                       | measured 2026-11-04 | `npm run build`: the 40 disputed drafts and the 8 reused pericope titles are `unreviewed`, left out          |
 
+The review bench found one `ai-checked` title that drops the scope of its
+verses: `GEN.9.11-13`, "God promises no more floods; the rainbow is the
+sign" (Genesis 9:11 limits the promise to a flood that destroys the earth).
+The record is AI output, kept unchanged; the fix is a person's review
+(#232).
+
 The third check (#203) was not run on Genesis and no dispute results are
 written: #207 holds third-check data until its sample check is done. This
 section reports counts only, not the checker's reasons or suggestions.
@@ -666,8 +672,9 @@ Observations from one run (not trends):
 Whole-Bible numbers from this book (estimated, these per-title rates over
 13,507 titles): drafting about $23, checking about $13, model time about
 8.2 hours one call after another. The drafting rate ($0.0017 per title)
-falls inside the Colossians range above ($0.0014 to $0.0025), so batches of
-35 did not cost more per title on a long book. The checking rate ($0.0010
+falls inside the Colossians range above ($0.0014 to $0.0025), so full
+batches (cap 35, `DRAFT_BATCH`; this run filled 33 or 34) did not cost more
+per title on a long book. The checking rate ($0.0010
 per title) gives less than the #201 estimate ($19 to $42 for all books); with the run-to-run spread of the
 check, one book does not move that range.
 
