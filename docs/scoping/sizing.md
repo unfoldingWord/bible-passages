@@ -297,12 +297,12 @@ title of the batch before. The first long book drafted is where to look.
 
 ### Whole-Bible drafting, re-derived
 
-| Quantity                        | Value                                      | Label     | Method                                                                                                                                                                                                                                                                                  |
-| ------------------------------- | ------------------------------------------ | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Draft cost per title            | $0.0014 to $0.0025                         | measured  | Colossians, six drafts with prompt `cc76a816…` on 2026-11-03: $0.0475 (#212), $0.0679 (A), $0.0699 and $0.0813 (#197 runs 1 and 2), $0.0748 (D), $0.0786 (three batches of 11); and two with the current prompt `838516080c8f…`: $0.0627 and $0.0764 (#209, below); each over 33 titles |
-| Drafting cost, all 66 books     | about $19 to $33                           | estimated | 13,507 titles × the per-title range. Production batches average 32.2 titles, the size measured; batches of 11 fell inside the range, so smaller batches are not assumed to cost more. One long book in full batches would test it.                                                      |
-| Drafting model time, all books  | about 3 to 5 hours, one call after another | estimated | 13,507 titles × 0.80 to 1.39 s per title (26.5 to 45.9 s over 33 in the runs above)                                                                                                                                                                                                     |
-| Draft completion, largest batch | 6,311 of 16,384 tokens (39%) for 33 titles | measured  | #197 run 2 (above); the batches of 11 used at most 2,329 (14%)                                                                                                                                                                                                                          |
+| Quantity                        | Value                                      | Label     | Method                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------- | ------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Draft cost per title            | $0.0014 to $0.0025                         | measured  | Colossians, six drafts with prompt `cc76a816…` on 2026-11-03: $0.0475 (#212), $0.0679 (A), $0.0699 and $0.0813 (#197 runs 1 and 2), $0.0748 (D), $0.0786 (three batches of 11); two with prompt `838516080c8f…`: $0.0627 and $0.0764 (#209, below); and two with prompt `e3e08e032d32…`: $0.0558 and $0.0661 (#220, below); each over 33 titles |
+| Drafting cost, all 66 books     | about $19 to $33                           | estimated | 13,507 titles × the per-title range. Production batches average 32.2 titles, the size measured; batches of 11 fell inside the range, so smaller batches are not assumed to cost more. One long book in full batches would test it.                                                                                                              |
+| Drafting model time, all books  | about 3 to 5 hours, one call after another | estimated | 13,507 titles × 0.80 to 1.39 s per title (26.5 to 45.9 s over 33 in the runs above)                                                                                                                                                                                                                                                             |
+| Draft completion, largest batch | 6,311 of 16,384 tokens (39%) for 33 titles | measured  | #197 run 2 (above); the batches of 11 used at most 2,329 (14%)                                                                                                                                                                                                                                                                                  |
 
 This replaces the Philippians estimate of about $28 (above), which used a
 draft that did not reason. With the check estimate (#201, about $19 to
@@ -418,6 +418,86 @@ draft cost is not shown. Watch item, not measured: "believers" now names
 16 to 20 of 33 titles, so a list may read as repetitive; a person's review
 of a book drafted this way would show whether that matters.
 
+## Measured: the draft prompt after #216's review, Colossians (#220)
+
+The review of #216 found three things in the draft part of
+`prompts/segment-titles.md`, taken in #220: a Titus example ("Some say they
+know God but their actions deny him") used the "they" and "their" that rule
+5 now forbids; rule 5 and the closing pass did not name "your", which the
+pronoun count above counts; and the short name "Christians" is not a word of
+the Colossians verses (rule 2). Measured 2026-11-04: in the pinned
+`bsb-col` (`989162f6…`) "Christian" occurs once, in the section heading
+`\s1 Christian Households`, not in verse text. The example became "Titus
+instructs younger men" (2:6–8), "your" joined rule 5 and the pass, and
+"Christians" left the list. The check part did not change. The prompt #216
+measured, which 2 Timothy was drafted with, is kept as
+`prompts/history/segment-titles-838516080c8f.md`.
+
+Colossians again, so the numbers sit beside #216's on the same verses and
+models; it is short (33 drafted titles) and its letter is full of "you".
+Re-drafted twice on 2026-11-04 (runs finished 15:30:55 and 15:32:46 UTC)
+with the revised prompt (SHA-256 `e3e08e032d32…`), the code at `47741d7`
+and the same models. Neither record was committed.
+
+```
+node scripts/translate/segment-titles.ts --book COL \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.20 \
+  --out .cache/segment-titles/l220-run<1|2>
+```
+
+Both runs exited 0. Counted twice from each record, with `jq` and with
+Python, which gave the same results; "pronoun drafts" is the same regex as
+above, and lengths are counted in code points.
+
+| Quantity                     | #216 prompt, run 1 (`838516080c8f…`)      | #216 prompt, run 2                        | Revised, run 1                            | Revised, run 2                            | Label    |
+| ---------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | -------- |
+| Checker agreed               | 33 of 33                                  | 32 of 33                                  | 30 of 33                                  | 31 of 33                                  | measured |
+| Disagreements, by criterion  | none                                      | `plain` 1                                 | `covers` 1, `accurate` 1, `plain` 1       | `plain` 2                                 | measured |
+| Disputes over a pronoun      | 0                                         | 0                                         | 0                                         | 0                                         | measured |
+| Pronoun drafts               | 0 of 33                                   | 0 of 33                                   | 0 of 33                                   | 0 of 33                                   | measured |
+| Drafts over 60 characters    | 0 of 33 (longest 59, mean 51.3)           | 0 of 33 (longest 59, mean 50.8)           | 0 of 33 (longest 57, mean 47.3)           | 0 of 33 (longest 58, mean 48.3)           | measured |
+| Titles naming "believers"    | 20                                        | 16                                        | 9                                         | 13                                        | measured |
+| Titles naming the Colossians | 7                                         | 10                                        | 16                                        | 12                                        | measured |
+| Titles naming "Christians"   | 0                                         | 0                                         | 0                                         | 0                                         | measured |
+| Cost                         | $0.0852 ($0.0627 draft, $0.0225 check)    | $0.1039 ($0.0764 draft, $0.0276 check)    | $0.0854 ($0.0558 draft, $0.0296 check)    | $0.1065 ($0.0661 draft, $0.0405 check)    | measured |
+| Cost per drafted title       | $0.0026                                   | $0.0031                                   | $0.0026                                   | $0.0032                                   | measured |
+| Tokens                       | 21,084 (11,018 prompt, 10,066 completion) | 23,801 (11,019 prompt, 12,782 completion) | 22,277 (10,999 prompt, 11,278 completion) | 26,204 (11,003 prompt, 15,201 completion) | measured |
+| Reasoning tokens             | draft 4,156, check 4,160                  | draft 5,507, check 5,462                  | draft 3,483, check 5,901                  | draft 4,502, check 8,845                  | measured |
+| Model time                   | 59.7 s (34.2 s draft, 25.5 s check)       | 79.0 s (38.8 s draft, 40.2 s check)       | 80.9 s (29.5 s draft, 51.4 s check)       | 110.2 s (36.0 s draft, 74.2 s check)      | measured |
+
+The #216 columns are copied from the section above (measured 2026-11-03);
+the revised columns were measured 2026-11-04. Each cost is rounded to four
+places from the unrounded call costs, so a total can differ from the sum
+of its rounded parts by $0.0001 (revised run 2: $0.066064 + $0.040482 =
+$0.106546).
+
+Generation ids: run 1 draft `gen-1793806174-KQHl9Anpc4GLHZZIaave`, check
+`gen-1793806204-xwOwnYSBFr8pg57fceX9`; run 2 draft
+`gen-1793806256-HgDxaLUt4nwkEqncFO75`, check
+`gen-1793806292-ZM8COFQCTy0qVN7dRFqC`. The two runs cost $0.1919 together.
+
+None of the 5 disagreements is about a pronoun. Two are the `COL.4.12-14`
+objection #216's run 2 also drew, that "greet" needs an object; this time
+the title it judged does end "Luke and Demas greet". Run 2's other `plain`
+is the same kind, "urges Archippus to finish" with no object. Run 1's
+`covers` says "Paul rejoices in suffering for the church" leaves out
+verses 25–27, and its `accurate` says "false humility and angels" should be
+the worship of angels. Each of the 4 titles disputed in the committed run
+(#212) names its people in both runs, all 4 with "the Colossians".
+
+What this shows, on one book and two runs: the revised prompt keeps what
+#216 gained (0 of 33 pronoun drafts, no pronoun disputes, none over 60)
+with no "Christians". The checker agreed a little less often (30 and 31
+against 33 and 32), and none of the new disagreements is about a pronoun.
+Inference, not tested: two runs a side cannot separate an effect of the
+change from run-to-run spread (#201 saw 6 to 11 disagreements across runs
+of one earlier prompt). The titles are shorter (means 47.3 and 48.3 against
+51.3 and 50.8), which may come from the shorter example; and "believers" names fewer
+titles (9 and 13 against 20 and 16) while "the Colossians" names more (16
+and 12 against 7 and 10), which eases the "believers" watch item above. Draft cost
+($0.0558, $0.0661) is within the earlier spread.
+
 ## Measured: English segment titles, 1 Thessalonians, committed run (#207)
 
 One plain run of the CLI on 2026-11-03 (19:20:40 to 19:22:22 UTC), with the
@@ -461,8 +541,9 @@ Colossians run, and cost more than the draft; why is not measured.
 
 One plain run of the CLI on 2026-11-03 (21:35:12 to 21:36:15 UTC), with the
 code at `e383b1d` (batched drafting of #213, the batched check of #201) and
-the current prompt, `prompts/segment-titles.md` SHA-256 `838516080c8f…`
-(#216's readers rule; the first committed record made with it), and the
+the prompt then current, SHA-256 `838516080c8f…` (#216's readers rule;
+the first committed record made with it; kept since #220 as
+`prompts/history/segment-titles-838516080c8f.md`), and the
 same models as Philippians, Colossians and 1 Thessalonians. It was drafted
 to enlarge #207's blind sample, which had 5 disputes (Colossians 4,
 1 Thessalonians 1). 2 Timothy was chosen as the unseen short book with the

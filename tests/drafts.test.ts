@@ -111,8 +111,8 @@ describe("prompts/history/", () => {
     expect(keptPrompt("")).toBeUndefined();
   });
 
-  // The branch a record made with the live prompt takes (2TI, #207); the
-  // earlier scripted records take the history branch (#204).
+  // The branch a record made with the live prompt takes (2TI took it until
+  // #220 changed the prompt); earlier records take the history branch (#204).
   it("finds the current prompt by its own digest", () => {
     const current = sha256(fileText("prompts/segment-titles.md"));
     expect(keptPrompt(current)).toBe("prompts/segment-titles.md");
@@ -141,14 +141,15 @@ describe("the Titus examples in prompts/segment-titles.md", () => {
   });
 
   // The examples themselves, frozen: a change to them is a prompt change,
-  // made on purpose with this list (#218).
+  // made on purpose with this list (#218; the 1:15–16 example gave way to
+  // 2:6–8 in #220).
   it("lists these eight examples", () => {
     expect(examples.map((e) => e.text)).toEqual([
       "Paul left Titus in Crete to appoint elders",
       "Elders must be blameless in family and character",
       "Titus must firmly correct false teachers",
-      "Some say they know God but their actions deny him",
       "Older women are to teach the younger women",
+      "Titus instructs younger men",
       "Believers should obey rulers and be gentle to everyone",
       "God saved us because of his mercy, not our deeds",
       "Paul asks Titus to come and to help Zenas and Apollos",
@@ -351,8 +352,8 @@ describe.each([
     book: "2TI",
     reused: ["2TI.1.1-2", "2TI.4.19-22"],
     drafted: 30,
-    // Drafted for #207 with the current prompt, after #216's readers rule.
-    prompt: "prompts/segment-titles.md",
+    // Drafted for #207 after #216's readers rule, before #220's follow-ups.
+    prompt: "prompts/history/segment-titles-838516080c8f.md",
     checks: 1,
     batched: true,
   },
