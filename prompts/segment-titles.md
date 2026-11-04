@@ -44,11 +44,22 @@ gives just enough information to remind the reader which section follows"
   third check. Only the draft part changed; the check part is as Philippians
   and Colossians were checked. Titus's "us" and "we" titles are reviewed
   titles kept as they are.
+- After the review of #216 (issue #220): rule 5 and the closing pass name
+  "your" too, as the pronoun count in `docs/scoping/sizing.md` does;
+  "Christians" left the short names, since rule 2 asks for the text's own
+  words and the Colossians verses do not use it; and the Titus example "Some
+  say they know God but their actions deny him" (1:15–16), whose "they" and
+  "their" rule 5 now forbids, gave way to "Titus instructs younger men"
+  (2:6–8, in the reviewer’s own wording), the one reviewed Titus title not
+  yet listed that is a full statement with no pronoun and no command. It is
+  shorter than the others; the length guidance is in rule 6. Only the draft
+  part changed.
 - Each record keeps the SHA-256 of the whole file it was made with. When the
   file changes, the earlier version is kept byte for byte in
   `prompts/history/segment-titles-<first 12 hex of its SHA-256>.md`
-  (Philippians: `f132f2195f80`; Colossians: `cc76a816652a`), so every committed record can be traced to
-  the text that produced it.
+  (Philippians: `f132f2195f80`; Colossians: `cc76a816652a`; 2 Timothy:
+  `838516080c8f`), so every committed record can be traced to the text that
+  produced it.
 
 ## Input per segment
 
@@ -84,7 +95,7 @@ Rules:
 2. Plain words for a reader of English as a second language. Use words the text itself uses; no theological terms beyond them. No idioms.
 3. Sentence case: only the first word and proper names start with a capital. No final full stop.
 4. Do not repeat the pericope heading; the title covers only this segment.
-5. Name who acts or is addressed (Paul, Timothy, the Philippians, believers) so a title makes sense alone in a list. Do not write a command that names no one. Each title is read alone, so "them", "they", "their" and "you" are never clear in it: name the people instead, even when the verses say "you". Short names keep a title within 60: "believers", "the church", "the Colossians", "Christians", "wives", "husbands", "children", "slaves", "masters". "Paul prays that God will make them strong" names no one; "Paul prays for the believers to be strong" does.
+5. Name who acts or is addressed (Paul, Timothy, the Philippians, believers) so a title makes sense alone in a list. Do not write a command that names no one. Each title is read alone, so "them", "they", "their", "you" and "your" are never clear in it: name the people instead, even when the verses say "you". Short names keep a title within 60: "believers", "the church", "the Colossians", "wives", "husbands", "children", "slaves", "masters". "Paul prays that God will make them strong" names no one; "Paul prays for the believers to be strong" does.
 6. At most 60 characters, counting spaces; most good titles are 35 to 55 characters (6 to 9 words). A title over 60 is rejected, so keep only the main point: drop a second clause or a detail rather than go over, but never drop the name of the people (rule 5) for a pronoun. A frame such as "Paul tells the Philippians to" uses half the limit; say it shorter, for example "Paul urges believers to", or let the people the verses are about be the subject ("Elders must be blameless").
 7. Straight text only: the typographic apostrophe (’), never ', no quotation marks, no markup.
 
@@ -93,13 +104,13 @@ These titles from Titus, which a person has reviewed, show the voice and length 
 - Paul left Titus in Crete to appoint elders (42)
 - Elders must be blameless in family and character (48)
 - Titus must firmly correct false teachers (40)
-- Some say they know God but their actions deny him (49)
 - Older women are to teach the younger women (42)
+- Titus instructs younger men (27)
 - Believers should obey rulers and be gentle to everyone (54)
 - God saved us because of his mercy, not our deeds (48)
 - Paul asks Titus to come and to help Zenas and Apollos (53)
 
-Before you reply, count the characters of every title, and shorten any that is over 60. Then replace any "them", "they", "their" or "you" with the people it means.
+Before you reply, count the characters of every title, and shorten any that is over 60. Then replace any "them", "they", "their", "you" or "your" with the people it means.
 
 Reply with only a JSON object mapping each item's `key` to its title as a string, for every item, and nothing else.
 

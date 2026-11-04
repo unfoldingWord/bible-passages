@@ -200,7 +200,7 @@ table cost $0.170469.
 
 **2 Timothy (blind, measured 3 Nov 2026).** Added to enlarge the blind
 sample, on the maintainer's decision of 3 Nov. Drafted and checked with the
-current prompt (`838516080c8f…`, #216's readers rule) and the code at
+prompt then current (`838516080c8f…`, #216's readers rule) and the code at
 `e383b1d` ([sizing.md](sizing.md)); ULT `ult-2ti` (en_ult v91, `35d2159`)
 pinned in `14ee5f7` and the record committed in `40360b7`, both before the
 run. Same third-check prompt (`4ef5bbc9…`, unchanged since `9711b49`),

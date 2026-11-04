@@ -122,6 +122,21 @@ describe("prompts/segment-titles.md", () => {
     }
     expect(() => promptPart("none", "check")).toThrow("markers");
   });
+
+  // Rule 5's pronoun sentence and the closing pronoun pass (#216, #220): the
+  // drafting model is sent only the draft part, so an accidental revert of
+  // either must fail here. "your" is named because the pronoun count in
+  // docs/scoping/sizing.md counts it.
+  it("tells the drafting model that no pronoun is clear in a title, and to replace each", () => {
+    const draft = promptPart(file, "draft");
+    expect(draft).toContain(
+      'Each title is read alone, so "them", "they", "their", "you" and "your" are never clear in it: name the people instead, even when the verses say "you".'
+    );
+    expect(draft).toContain(
+      'Then replace any "them", "they", "their", "you" or "your" with the people it means.'
+    );
+    expect(draft).not.toContain('"Christians"');
+  });
 });
 
 describe("readDraft and readCheck", () => {
