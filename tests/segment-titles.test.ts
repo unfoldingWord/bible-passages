@@ -73,6 +73,54 @@ describe("verseTexts", () => {
     ]);
   });
 
+  // #226: what kept 24 of the 66 pinned BSB books from being read, and the
+  // Psalms whose verse 1 has no marker.
+  it("keeps the words of \\qr and \\it, and drops \\qa acrostic letters", () => {
+    const usfm = [
+      "\\c 1",
+      "\\q1 \\v 1 \\w Many|x=1\\w* \\w say|x=1\\w*.",
+      "\\qr Selah",
+      "\\b",
+      "\\qa BETH",
+      "\\q1 \\v 2 \\w Heights|x=1\\w*!",
+      "\\pc",
+      "\\it For the choirmaster.",
+      "\\it* ",
+    ].join("\n");
+    expect([...verseTexts(usfm)]).toEqual([
+      ["1:1", "Many say. Selah"],
+      ["1:2", "Heights! For the choirmaster."],
+    ]);
+  });
+
+  it("drops a footnote whose text comes after its closing marker (Joshua 12:23)", () => {
+    const usfm =
+      "\\c 12\n\\v 23 \\w Gilgal|x=1\\w*,\\f + \\f*\\fr 12:23 \\ft Hebrew\\f*\n\\w one|x=1\\w*;";
+    expect([...verseTexts(usfm)]).toEqual([["12:23", "Gilgal, one;"]]);
+  });
+
+  it("keeps a verse the text numbers but leaves blank as an empty string", () => {
+    const usfm =
+      "\\c 17\n\\v 20 \\w Faith|x=1\\w*.\\f + \\fr 17:20 \\ft BYZ and TR include 21\\f*\n\\s1 Heading\n\\m\n\\v 21 \n\\v 22 \\w Next|x=1\\w*.";
+    expect([...verseTexts(usfm)]).toEqual([
+      ["17:20", "Faith."],
+      ["17:21", ""],
+      ["17:22", "Next."],
+    ]);
+  });
+
+  it("reads the words before a chapter's \\v 2 as verse 1, and nothing else", () => {
+    const usfm =
+      "\\c 1\n\\s1 Two Paths\n\\q1 \\w Blessed|x=1\\w*\n\\q1\n\\v 2 \\w Delight|x=1\\w*.";
+    expect([...verseTexts(usfm)]).toEqual([
+      ["1:1", "Blessed"],
+      ["1:2", "Delight."],
+    ]);
+    expect(() =>
+      verseTexts("\\c 1\n\\q1 Words\n\\v 3 \\w More|x=1\\w*.")
+    ).toThrow("cannot read chapter 1: words before its first verse");
+  });
+
   it("reads all 1,533 verses of Genesis from the pinned BSB text", async () => {
     const { readSource } = await import("../scripts/lib/sources.ts");
     const v = verseTexts(await readSource("bsb-gen"));
@@ -80,6 +128,61 @@ describe("verseTexts", () => {
     expect(v.get("1:2")).toBe(
       "Now the earth was formless and void, and darkness was over the surface of the deep. And the Spirit of God was hovering over the surface of the waters."
     );
+  });
+
+  // Every verse of every pinned BSB book, checked against the ufw
+  // versification the spans use: no verse missing, none extra, and the only
+  // blank ones are the 18 BSB leaves without words (#226).
+  it("reads every verse of all 66 pinned BSB books", async () => {
+    const { readSource, sources } = await import("../scripts/lib/sources.ts");
+    const vrs = JSON.parse(read("data/versification/ufw.json")) as Record<
+      string,
+      number[]
+    >;
+    const books = sources()
+      .filter((s) => s.id.startsWith("bsb-"))
+      .map((s) => s.id.slice(4).toUpperCase());
+    expect(books).toHaveLength(66);
+    const missing: string[] = [];
+    const extra: string[] = [];
+    const blank: string[] = [];
+    let total = 0;
+    for (const book of books) {
+      const v = verseTexts(await readSource(`bsb-${book.toLowerCase()}`));
+      const want = new Set(
+        vrs[book]!.flatMap((n, i) =>
+          Array.from({ length: n }, (_, k) => `${i + 1}:${k + 1}`)
+        )
+      );
+      total += v.size;
+      for (const k of want) if (!v.has(k)) missing.push(`${book} ${k}`);
+      for (const [k, t] of v) {
+        if (!want.has(k)) extra.push(`${book} ${k}`);
+        if (t === "") blank.push(`${book} ${k}`);
+      }
+    }
+    expect({ missing, extra }).toEqual({ missing: [], extra: [] });
+    expect(total).toBe(31104);
+    expect(blank).toEqual([
+      "MAT 17:21",
+      "MAT 18:11",
+      "MAT 23:14",
+      "MRK 7:16",
+      "MRK 9:44",
+      "MRK 9:46",
+      "MRK 11:26",
+      "MRK 15:28",
+      "LUK 17:36",
+      "LUK 23:17",
+      "JHN 5:4",
+      "ACT 8:37",
+      "ACT 15:34",
+      "ACT 24:7",
+      "ACT 28:29",
+      "ROM 16:24",
+      "3JN 1:15",
+      "REV 12:18",
+    ]);
   });
 });
 
@@ -121,6 +224,20 @@ describe("segmentInputs", () => {
       ],
       reused: ["XYZ.1.1-1"],
     });
+  });
+
+  it("leaves a blank verse out of the text, and fails when every verse is blank", () => {
+    const blank = new Map(verses).set("1:3", "");
+    expect(segmentInputs(structure, headings, blank).inputs[0]).toEqual({
+      key: "XYZ.1.2-3",
+      verses: "1:2–3",
+      pericope: "Thanks",
+      text: "Two.",
+    });
+    blank.set("1:4", "");
+    expect(() => segmentInputs(structure, headings, blank)).toThrow(
+      "XYZ.1.4-4: every verse is blank in the source text"
+    );
   });
 
   it("fails on a verse with no text", () => {
