@@ -1,0 +1,4488 @@
+{
+  "language": "en",
+  "book": "GEN",
+  "bible": "bsb-gen",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "838516080c8fd8226e545d9c79673f823fb091b09795dd1baacf7988e13bd3b8"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793806175-VzrY9mgoPE0y2K42mJkh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6046,
+      "completionTokens": 3602,
+      "reasoningTokens": 2705,
+      "cost": 0.048112,
+      "ms": 24445
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806199-oPC7usk1sR9UYnkHJbWA",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5696,
+      "completionTokens": 3827,
+      "reasoningTokens": 2839,
+      "cost": 0.049662,
+      "ms": 25235
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806224-AswdSOrNUTS2Q49hNtmo",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5698,
+      "completionTokens": 3637,
+      "reasoningTokens": 2694,
+      "cost": 0.047766,
+      "ms": 23772
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806248-9eJVQ4bY9RlsvT3dNlfX",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5960,
+      "completionTokens": 3931,
+      "reasoningTokens": 2906,
+      "cost": 0.05123,
+      "ms": 24768
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806273-6N9LsEzHOSi1XrX8GZTJ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6741,
+      "completionTokens": 5972,
+      "reasoningTokens": 4969,
+      "cost": 0.073202,
+      "ms": 39079
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806312-C5CsHysjCf2YjHsWyWXe",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6565,
+      "completionTokens": 5153,
+      "reasoningTokens": 4137,
+      "cost": 0.06466,
+      "ms": 32261
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806344-pwPMW5ChMrHoZmAIMKoN",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6438,
+      "completionTokens": 4156,
+      "reasoningTokens": 3106,
+      "cost": 0.054436,
+      "ms": 24468
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806369-sfBxMF7c2ZXKHYcbPMgR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6426,
+      "completionTokens": 4984,
+      "reasoningTokens": 3972,
+      "cost": 0.062692,
+      "ms": 30075
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806399-OLkn9QKFiyFGpadU6bJO",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6044,
+      "completionTokens": 6784,
+      "reasoningTokens": 5710,
+      "cost": 0.079928,
+      "ms": 40951
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806440-xWHSKH9iG9blDDBFQ122",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6034,
+      "completionTokens": 4889,
+      "reasoningTokens": 3804,
+      "cost": 0.060958,
+      "ms": 34521
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806474-h1GRFup1GQykHmd6Vs63",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5986,
+      "completionTokens": 4689,
+      "reasoningTokens": 3636,
+      "cost": 0.058862,
+      "ms": 28655
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806503-K73IuhfiCGPCeYwOD5hj",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6522,
+      "completionTokens": 4802,
+      "reasoningTokens": 3773,
+      "cost": 0.061064,
+      "ms": 28771
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806532-obf3HHggIkB76Ilyl0yh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6294,
+      "completionTokens": 5441,
+      "reasoningTokens": 4384,
+      "cost": 0.066998,
+      "ms": 34224
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806566-57y4FhUkWoZ8dWczC0cQ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6673,
+      "completionTokens": 5533,
+      "reasoningTokens": 4442,
+      "cost": 0.068676,
+      "ms": 33760
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806600-UdcJCdTV4QlbZDHbC19l",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6737,
+      "completionTokens": 4917,
+      "reasoningTokens": 3813,
+      "cost": 0.062644,
+      "ms": 30137
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806630-zt7lcSeru5HnTDulmRCi",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6533,
+      "completionTokens": 1054,
+      "reasoningTokens": 0,
+      "cost": 0.023606,
+      "ms": 7059
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806637-FCUDgbj9d44LwLLT62xO",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6650,
+      "completionTokens": 4573,
+      "reasoningTokens": 3583,
+      "cost": 0.05903,
+      "ms": 28169
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806665-ac501lKGzPrzoVCC3Vum",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6873,
+      "completionTokens": 5316,
+      "reasoningTokens": 4258,
+      "cost": 0.066906,
+      "ms": 33868
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793806699-QOFhl6vpKJxGBaemmC12",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5959,
+      "completionTokens": 4153,
+      "reasoningTokens": 3137,
+      "cost": 0.053448,
+      "ms": 25436
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806725-7PvRuhZmZG7l0QjGJa8d",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5139,
+      "completionTokens": 3131,
+      "reasoningTokens": 2211,
+      "cost": 0.0155955,
+      "ms": 17592
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806742-M8CnM5ZuTW2hhiHoglWO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4984,
+      "completionTokens": 7228,
+      "reasoningTokens": 6250,
+      "cost": 0.030843,
+      "ms": 41527
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806784-GxlDyUzeKLdob1bpG9kx",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4800,
+      "completionTokens": 5447,
+      "reasoningTokens": 4371,
+      "cost": 0.02402625,
+      "ms": 37189
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806821-kZ3774cM9KgFja6qmqBO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5158,
+      "completionTokens": 11204,
+      "reasoningTokens": 10197,
+      "cost": 0.0458835,
+      "ms": 79593
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806901-cf6Hvz8Sw0itmAcp09rp",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5572,
+      "completionTokens": 11997,
+      "reasoningTokens": 11043,
+      "cost": 0.04916775,
+      "ms": 76290
+    },
+    {
+      "role": "check",
+      "id": "gen-1793806977-mJtGPtabEGvDWst877Lr",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5472,
+      "completionTokens": 7381,
+      "reasoningTokens": 6276,
+      "cost": 0.03178275,
+      "ms": 51030
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807028-jb2ttVeci9T6mjGP1Xrz",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5325,
+      "completionTokens": 8959,
+      "reasoningTokens": 8007,
+      "cost": 0.03759,
+      "ms": 51086
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807079-GDB3ApeeYjuzkeuWhL6S",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5476,
+      "completionTokens": 5547,
+      "reasoningTokens": 4580,
+      "cost": 0.02490825,
+      "ms": 28569
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807108-wb0KodyOZLe5dY9dyFK3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5116,
+      "completionTokens": 9525,
+      "reasoningTokens": 8461,
+      "cost": 0.03955575,
+      "ms": 52055
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807160-U6gTcqU5pEnXcoRXb1to",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5135,
+      "completionTokens": 7070,
+      "reasoningTokens": 6101,
+      "cost": 0.03036375,
+      "ms": 33631
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807194-20F5NFroS7Glkx0lmm2p",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4994,
+      "completionTokens": 3439,
+      "reasoningTokens": 2532,
+      "cost": 0.01664175,
+      "ms": 18311
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807212-5idc7huFDodh4BkNHBwT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5456,
+      "completionTokens": 3807,
+      "reasoningTokens": 2894,
+      "cost": 0.01836825,
+      "ms": 20769
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807233-NRLfQAJF7vN6OZn4c9iE",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5258,
+      "completionTokens": 11119,
+      "reasoningTokens": 10116,
+      "cost": 0.04563975,
+      "ms": 65911
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807299-g4DBJDehM2MOwlhKUoe6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5563,
+      "completionTokens": 11074,
+      "reasoningTokens": 9645,
+      "cost": 0.04569975,
+      "ms": 71260
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807370-qkyDH77HxRPXTtT3Ij8u",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5553,
+      "completionTokens": 6829,
+      "reasoningTokens": 5930,
+      "cost": 0.0297735,
+      "ms": 35601
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807406-8oOxzLnfzPUi6AaqqKO9",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5309,
+      "completionTokens": 7569,
+      "reasoningTokens": 6547,
+      "cost": 0.0323655,
+      "ms": 37534
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807444-NprEFFWbuSR8NAC0OZVO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5460,
+      "completionTokens": 7460,
+      "reasoningTokens": 6528,
+      "cost": 0.03207,
+      "ms": 56936
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807501-bKy16g3zJl9Ztt5apNgU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5440,
+      "completionTokens": 7905,
+      "reasoningTokens": 6834,
+      "cost": 0.03372375,
+      "ms": 41946
+    },
+    {
+      "role": "check",
+      "id": "gen-1793807543-joX48S59TRCTpjyAUHCf",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4897,
+      "completionTokens": 6483,
+      "reasoningTokens": 5540,
+      "cost": 0.027984,
+      "ms": 41232
+    }
+  ],
+  "titles": {
+    "GEN.1.1-2": {
+      "text": "God created the heavens and the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.3-5": {
+      "text": "God makes light on the first day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.6-8": {
+      "text": "God makes the sky on the second day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.9-10": {
+      "text": "God gathers the waters and makes dry land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.11-13": {
+      "text": "God makes plants and trees on the third day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.14-15": {
+      "text": "God makes lights in the sky for days and seasons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.16-19": {
+      "text": "God makes two great lights and the stars on the fourth day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.20-21": {
+      "text": "God makes sea creatures and birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.22-23": {
+      "text": "God blesses sea creatures and birds to multiply",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.24-25": {
+      "text": "God makes livestock and animals of the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.26-27": {
+      "text": "God creates man and woman in his image",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.28-29": {
+      "text": "God blesses man and woman and gives plants for food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.1.30-31": {
+      "text": "God gives plants to animals and sees all is very good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.4-6": {
+      "text": "There was no rain and no man to work the ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.7-8": {
+      "text": "The LORD God forms man and plants a garden in Eden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.9-10": {
+      "text": "The garden has good trees and a river from Eden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.11-12": {
+      "text": "The river Pishon flows through Havilah, land of gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.13-14": {
+      "text": "The rivers Gihon, Hiddekel and Euphrates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading must be a full sentence.",
+        "suggestion": "Three other rivers are Gihon, Hiddekel, and Euphrates"
+      }
+    },
+    "GEN.2.15-17": {
+      "text": "God tells the man not to eat from one tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.18-20": {
+      "text": "Adam names the animals but has no helper",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.21-23": {
+      "text": "God makes the woman from the man’s rib",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.2.24-25": {
+      "text": "A man leaves his parents and joins his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.1-3": {
+      "text": "The serpent asks the woman about God’s command",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.4-6": {
+      "text": "The serpent lies, and the woman and man eat the fruit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.7-7": {
+      "text": "The man and woman make coverings of fig leaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.8-8": {
+      "text": "The man and woman hide from the LORD God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.9-11": {
+      "text": "God questions the man, who says he was afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.12-13": {
+      "text": "The man blames the woman, and the woman blames the serpent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.16-16": {
+      "text": "God tells the woman about pain in childbirth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.17-19": {
+      "text": "God tells Adam he will work hard and return to dust",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.20-20": {
+      "text": "Adam names his wife Eve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.21-21": {
+      "text": "God makes clothes of skin for Adam and Eve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.3.22-24": {
+      "text": "God sends Adam out of Eden and guards the tree of life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.1-2": {
+      "text": "Eve gives birth to Cain and Abel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.3-5": {
+      "text": "Cain and Abel bring offerings and Cain becomes angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.6-7": {
+      "text": "The LORD warns Cain to do right and master sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.8-9": {
+      "text": "Cain kills Abel and lies to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.10-12": {
+      "text": "The LORD curses Cain to be a wanderer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.13-15": {
+      "text": "Cain fears for his life and the LORD marks him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.16-16": {
+      "text": "Cain leaves the LORD and lives in the land of Nod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.17-17": {
+      "text": "Cain builds a city and names it after Enoch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.18-19": {
+      "text": "The family line from Enoch to Lamech, who has two wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft is a noun phrase rather than a full sentence.",
+        "suggestion": "Enoch’s line leads to Lamech, who marries two wives"
+      }
+    },
+    "GEN.4.20-22": {
+      "text": "Lamech’s sons start herding, music and metalwork",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.4.23-24": {
+      "text": "Lamech boasts to his wives about killing a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.1-2": {
+      "text": "God made man in his likeness, male and female",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.3-5": {
+      "text": "Adam has a son, Seth, and dies at 930 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.6-8": {
+      "text": "Seth fathers Enosh and dies at 912 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.9-11": {
+      "text": "Enosh fathers Kenan and dies at 905 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.12-14": {
+      "text": "Kenan fathers Mahalalel and dies at 910 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.15-17": {
+      "text": "Mahalalel fathers Jared and dies at 895 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.18-20": {
+      "text": "Jared fathers Enoch and dies at 962 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.21-24": {
+      "text": "Enoch walks with God, and God takes him away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.25-27": {
+      "text": "Methuselah fathers Lamech and dies at 969 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.28-29": {
+      "text": "Lamech names his son Noah, hoping for comfort",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.30-31": {
+      "text": "Lamech has more children and dies at 777 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.5.32-32": {
+      "text": "Noah becomes the father of Shem, Ham, and Japheth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.1-3": {
+      "text": "The sons of God take wives and the LORD limits life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.4-4": {
+      "text": "The Nephilim and mighty men live on the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.5-6": {
+      "text": "The LORD sees man’s great evil and is grieved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.7-7": {
+      "text": "The LORD decides to destroy man and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.8-8": {
+      "text": "Noah finds favor with the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.9-10": {
+      "text": "Noah is righteous, walks with God, and has three sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.11-12": {
+      "text": "God sees that the earth is full of violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.13-15": {
+      "text": "God tells Noah to build an ark of gopher wood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.16-17": {
+      "text": "God describes the ark and warns of a flood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.18-19": {
+      "text": "God promises a covenant and tells Noah to bring animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.6.20-22": {
+      "text": "Noah gathers food and animals as God commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Noah is told to gather food for the animals, not the animals themselves, which will come to him.",
+        "suggestion": "Noah gathers food and does everything God commands"
+      }
+    },
+    "GEN.7.1-3": {
+      "text": "The LORD tells Noah to enter the ark with animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.4-5": {
+      "text": "God tells Noah about the rain, and Noah obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.6-7": {
+      "text": "Noah and his family enter the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.8-10": {
+      "text": "The animals come to Noah and enter the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.11-12": {
+      "text": "The flood begins and rain falls for forty days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.13-14": {
+      "text": "Noah’s family and all kinds of animals enter the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.15-16": {
+      "text": "Pairs of animals enter the ark and God shuts Noah in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.17-18": {
+      "text": "The flood waters rise and lift the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.19-20": {
+      "text": "The waters cover even the highest mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.21-22": {
+      "text": "All living things on dry land die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.7.23-24": {
+      "text": "Only Noah and those in the ark are left alive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.1-3": {
+      "text": "God sends a wind and the waters begin to go down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.4-5": {
+      "text": "The ark rests on the mountains of Ararat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "style"],
+        "why": "It nearly repeats the section heading and leaves out the mountaintops appearing in verse 5.",
+        "suggestion": "The ark rests on Ararat and mountain tops appear"
+      }
+    },
+    "GEN.8.6-7": {
+      "text": "Noah opens the window and sends out a raven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.8-9": {
+      "text": "Noah sends a dove, but it finds no place to rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.10-12": {
+      "text": "The dove brings an olive leaf, then does not return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.13-14": {
+      "text": "Noah sees that the ground is dry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.15-17": {
+      "text": "God tells Noah and his family to leave the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.8.18-19": {
+      "text": "Noah, his family and all the animals leave the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.1-2": {
+      "text": "God blesses Noah and his sons to fill the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.3-4": {
+      "text": "God allows people to eat animals but not blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.5-7": {
+      "text": "God says taking human life must be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.8-10": {
+      "text": "God makes a covenant with Noah and all living creatures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.11-13": {
+      "text": "God promises no more floods; the rainbow is the sign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.14-15": {
+      "text": "God will remember his promise when the rainbow appears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.16-17": {
+      "text": "God says the rainbow is a sign of his everlasting covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.18-19": {
+      "text": "Noah’s three sons are the fathers of all people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.20-21": {
+      "text": "Noah plants a vineyard and becomes drunk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.22-23": {
+      "text": "Ham tells of Noah’s shame; Shem and Japheth cover Noah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.24-25": {
+      "text": "Noah wakes and curses Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.26-27": {
+      "text": "Noah blesses Shem and Japheth, and Canaan will serve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.9.28-29": {
+      "text": "Noah lives 950 years and then dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.1-1": {
+      "text": "The account of the sons of Noah after the flood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Noah’s sons have children after the flood"
+      }
+    },
+    "GEN.10.2-5": {
+      "text": "Japheth’s sons and the peoples of the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Japheth’s descendants become maritime peoples"
+      }
+    },
+    "GEN.10.6-7": {
+      "text": "The sons of Ham and the sons of Cush",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Ham, Cush, and Raamah have sons"
+      }
+    },
+    "GEN.10.8-10": {
+      "text": "Nimrod is a mighty hunter and starts a kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.11-14": {
+      "text": "Nimrod builds cities in Assyria; Mizraim’s sons listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The second clause is an incomplete sentence rather than a full statement.",
+        "suggestion": "Nimrod builds cities, and Mizraim’s sons are listed"
+      }
+    },
+    "GEN.10.15-18": {
+      "text": "Canaan’s descendants are listed and the clans scatter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.19-20": {
+      "text": "Canaan’s borders are given and Ham’s sons are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.21-23": {
+      "text": "Shem’s sons and grandsons are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.24-25": {
+      "text": "Eber has two sons, Peleg and Joktan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.26-29": {
+      "text": "Joktan is the father of thirteen sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.10.30-31": {
+      "text": "Where Joktan’s sons lived, and a summary of Shem’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a topic phrase rather than a complete sentence statement.",
+        "suggestion": "Joktan’s territory and Shem’s sons are listed"
+      }
+    },
+    "GEN.10.32-32": {
+      "text": "The nations spread from Noah’s sons after the flood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.1-2": {
+      "text": "People with one language settle in Shinar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.3-4": {
+      "text": "The people plan to build a city and a tower",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.5-7": {
+      "text": "The LORD plans to confuse the people’s language",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.8-9": {
+      "text": "The LORD scatters the people, and the city is called Babel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.10-11": {
+      "text": "Shem becomes the father of Arphaxad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.12-13": {
+      "text": "Arphaxad becomes the father of Shelah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.14-15": {
+      "text": "Shelah becomes the father of Eber",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.16-17": {
+      "text": "Eber becomes the father of Peleg",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.18-19": {
+      "text": "Peleg becomes the father of Reu",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.20-21": {
+      "text": "Reu becomes the father of Serug",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.22-23": {
+      "text": "Serug becomes the father of Nahor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.24-26": {
+      "text": "Nahor fathers Terah; Terah fathers Abram, Nahor, Haran",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.27-28": {
+      "text": "Terah’s sons are named, and Haran dies in Ur",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.29-30": {
+      "text": "Abram and Nahor marry, and Sarai has no children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.11.31-32": {
+      "text": "Terah takes his family toward Canaan but dies in Haran",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.1-3": {
+      "text": "The LORD tells Abram to leave and promises to bless him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.4-5": {
+      "text": "Abram leaves Haran with Sarai and Lot for Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.6-7": {
+      "text": "The LORD promises the land to Abram’s offspring",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.8-9": {
+      "text": "Abram builds an altar near Bethel and moves on",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.10-13": {
+      "text": "Abram asks Sarai to say she is his sister in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.14-16": {
+      "text": "Pharaoh takes Sarai and gives Abram many animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.12.17-20": {
+      "text": "The LORD sends plagues, and Pharaoh sends Abram away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.1-2": {
+      "text": "Abram returns from Egypt to the Negev, very rich",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.3-4": {
+      "text": "Abram returns to the altar between Bethel and Ai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.5-7": {
+      "text": "The herdsmen of Abram and Lot quarrel over land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.8-9": {
+      "text": "Abram asks Lot to separate to avoid quarrels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.10-11": {
+      "text": "Lot chooses the well-watered plain of the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.12-13": {
+      "text": "Lot lives near Sodom, whose men were wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.14-15": {
+      "text": "God promises Abram all the land he can see",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.13.16-18": {
+      "text": "Abram is promised many descendants and builds an altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.1-2": {
+      "text": "Four kings go to war against five kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.3-6": {
+      "text": "Chedorlaomer and his allies defeat many peoples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.7-9": {
+      "text": "The kings of Sodom and Gomorrah prepare for battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.10-12": {
+      "text": "The four kings capture Lot and take the goods of Sodom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.13-14": {
+      "text": "Abram hears about Lot and goes after the kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.15-16": {
+      "text": "Abram defeats the kings and rescues Lot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.17-18": {
+      "text": "Melchizedek, priest of God, brings Abram bread and wine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.19-20": {
+      "text": "Melchizedek blesses Abram and Abram gives a tenth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.14.21-24": {
+      "text": "Abram refuses to take anything from the king of Sodom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.1-3": {
+      "text": "God tells Abram not to fear; Abram asks about an heir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.4-5": {
+      "text": "God promises Abram descendants as many as the stars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.6-7": {
+      "text": "Abram believes the LORD and is counted righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions Abram’s faith in verse 6 but leaves out God’s promise of the land in verse 7.",
+        "suggestion": "Abram believes the LORD, who promises him the land"
+      }
+    },
+    "GEN.15.8-8": {
+      "text": "Abram asks how he can know he will have the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.9-11": {
+      "text": "Abram prepares animals and birds as the LORD says",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.12-13": {
+      "text": "God tells Abram his descendants will be slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.14-16": {
+      "text": "God will judge the nation and free Abram’s descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.15.17-21": {
+      "text": "God makes a covenant with Abram and gives him the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.1-4": {
+      "text": "Sarai gives Hagar to Abram, and Hagar despises Sarai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.5-6": {
+      "text": "Sarai treats Hagar harshly and Hagar runs away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.7-8": {
+      "text": "The angel of the LORD finds Hagar in the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.9-10": {
+      "text": "The angel tells Hagar to return and promises descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.11-12": {
+      "text": "The angel says Hagar will bear a son named Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.13-14": {
+      "text": "Hagar calls the LORD the God who sees her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.16.15-16": {
+      "text": "Hagar bears Abram a son named Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.1-2": {
+      "text": "God appears to Abram and promises a covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.3-6": {
+      "text": "God renames Abram Abraham, father of many nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.7-8": {
+      "text": "God promises Abraham an eternal covenant and the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.9-11": {
+      "text": "God tells Abraham that every male must be circumcised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.12-14": {
+      "text": "Every male must be circumcised when eight days old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.15-16": {
+      "text": "God renames Sarai Sarah and promises her a son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.17-18": {
+      "text": "Abraham laughs and asks God to bless Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.19-21": {
+      "text": "God promises his covenant to Isaac and blesses Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.22-23": {
+      "text": "Abraham circumcises all the males in his household",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.17.24-27": {
+      "text": "Abraham and Ishmael are circumcised on the same day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.1-2": {
+      "text": "The LORD appears to Abraham as three men come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.3-5": {
+      "text": "Abraham invites the three men to rest and eat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.6-8": {
+      "text": "Abraham prepares a meal for the three men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.9-10": {
+      "text": "The LORD promises Sarah will have a son in a year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.11-12": {
+      "text": "Sarah laughs because she is old and worn out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.13-15": {
+      "text": "The LORD asks why Sarah laughed and she denies it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.16-19": {
+      "text": "The LORD decides to tell Abraham his plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.20-21": {
+      "text": "The LORD says he will investigate Sodom and Gomorrah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.22-23": {
+      "text": "Abraham asks if the LORD will destroy the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.24-26": {
+      "text": "The LORD agrees to spare Sodom for fifty righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.27-28": {
+      "text": "The LORD agrees to spare Sodom for forty-five",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.18.29-31": {
+      "text": "The LORD agrees to spare Sodom for twenty righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft mentions only twenty righteous, leaving out the forty and thirty in verses 29 and 30.",
+        "suggestion": "The LORD agrees to spare Sodom for forty, thirty, or twenty"
+      }
+    },
+    "GEN.18.32-33": {
+      "text": "The LORD agrees to spare Sodom for ten righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.1-3": {
+      "text": "Lot insists that the two angels stay in his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.4-5": {
+      "text": "The men of Sodom demand that Lot send out his guests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.6-8": {
+      "text": "Lot offers his daughters to protect his guests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.9-9": {
+      "text": "The men of Sodom threaten Lot and try to break the door",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.10-11": {
+      "text": "The angels pull Lot inside and blind the men outside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.12-13": {
+      "text": "The angels tell Lot to get his family out of Sodom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.14-15": {
+      "text": "Lot warns his sons-in-law, who think he is joking",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 14 and leaves out the angels urging Lot to flee in verse 15.",
+        "suggestion": "Lot warns his sons-in-law, and the angels urge him to flee"
+      }
+    },
+    "GEN.19.16-17": {
+      "text": "The angels lead Lot and his family out of the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.18-20": {
+      "text": "Lot asks to flee to a small town, not the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.21-22": {
+      "text": "The angel agrees to spare the town of Zoar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.23-23": {
+      "text": "Lot reaches Zoar at sunrise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.24-25": {
+      "text": "The LORD destroys Sodom and Gomorrah with fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.26-28": {
+      "text": "Lot’s wife looks back and becomes a pillar of salt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 26 and ignores Abraham seeing the smoke of the destroyed cities in verses 27–28.",
+        "suggestion": "Lot’s wife looks back, and Abraham sees the smoke"
+      }
+    },
+    "GEN.19.29-29": {
+      "text": "God remembers Abraham and saves Lot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.30-30": {
+      "text": "Lot is afraid and moves to a cave in the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.31-33": {
+      "text": "Lot’s daughters get Lot drunk to have a child by him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.19.34-35": {
+      "text": "Lot’s daughters make Lot drunk again and sleep with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Only the younger daughter slept with Lot that night, not both daughters.",
+        "suggestion": "Lot’s younger daughter sleeps with him after he gets drunk"
+      }
+    },
+    "GEN.19.36-38": {
+      "text": "Lot’s daughters bear sons, Moab and Ben-ammi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.1-3": {
+      "text": "God warns Abimelech in a dream about Sarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.4-5": {
+      "text": "Abimelech says he did not know Sarah was married",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.6-7": {
+      "text": "God tells Abimelech to return Sarah to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.8-9": {
+      "text": "Abimelech asks Abraham what he has done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.10-12": {
+      "text": "Abraham explains why he said Sarah was his sister",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.13-14": {
+      "text": "Abimelech gives Abraham gifts and returns Sarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.15-16": {
+      "text": "Abimelech offers Abraham land and clears Sarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.20.17-18": {
+      "text": "God heals Abimelech’s household after Abraham prays",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.1-4": {
+      "text": "God gives Abraham and Sarah a son, Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.5-7": {
+      "text": "Sarah laughs with joy at the birth of Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.8-8": {
+      "text": "Abraham holds a feast when Isaac is weaned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.9-9": {
+      "text": "Sarah sees Ishmael mocking Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.10-11": {
+      "text": "Sarah tells Abraham to send away Hagar and Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.12-13": {
+      "text": "God comforts Abraham and promises a nation for Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.14-16": {
+      "text": "Hagar and Ishmael wander in the wilderness without water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.17-18": {
+      "text": "An angel tells Hagar that God hears Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.19-21": {
+      "text": "God shows Hagar a well and is with Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.22-24": {
+      "text": "Abimelech asks Abraham to swear to be kind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.25-27": {
+      "text": "Abraham and Abimelech settle the dispute over a well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.28-30": {
+      "text": "Abraham gives seven lambs as proof of his well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.31-32": {
+      "text": "The place is named Beersheba after the oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.21.33-34": {
+      "text": "Abraham plants a tree and worships the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.1-3": {
+      "text": "God tells Abraham to offer Isaac as a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.4-6": {
+      "text": "Abraham and Isaac go up the mountain with wood and fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.7-8": {
+      "text": "Isaac asks where the lamb is, and Abraham answers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.9-10": {
+      "text": "Abraham ties Isaac on the altar and takes the knife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.11-12": {
+      "text": "The angel of the LORD stops Abraham from harming Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.13-14": {
+      "text": "Abraham offers a ram instead of Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.15-17": {
+      "text": "The LORD promises Abraham many descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.18-19": {
+      "text": "All nations will be blessed through Abraham’s offspring",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.20-22": {
+      "text": "Abraham hears that Milcah bore sons to Nahor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.22.23-24": {
+      "text": "Bethuel fathers Rebekah, and Nahor has more sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.1-2": {
+      "text": "Sarah dies at Hebron and Abraham mourns her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.3-4": {
+      "text": "Abraham asks the Hittites for a burial place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.5-6": {
+      "text": "The Hittites offer Abraham the finest tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.7-9": {
+      "text": "Abraham asks to buy Ephron’s cave of Machpelah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.10-11": {
+      "text": "Ephron offers to give Abraham the field and cave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.12-13": {
+      "text": "Abraham insists on paying Ephron for the field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.14-16": {
+      "text": "Abraham pays Ephron four hundred shekels of silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.17-18": {
+      "text": "The field and cave become Abraham’s property",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.23.19-20": {
+      "text": "Abraham buries Sarah in the cave at Machpelah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.1-4": {
+      "text": "Abraham makes his servant swear to find a wife for Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.5-7": {
+      "text": "Abraham says God will send his angel before the servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.8-9": {
+      "text": "The servant swears an oath to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.10-11": {
+      "text": "Abraham’s servant arrives at the well near Nahor’s town",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.12-14": {
+      "text": "The servant prays that God will show him Isaac’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.15-16": {
+      "text": "Rebekah comes out to the spring with her jar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.17-18": {
+      "text": "Rebekah gives the servant a drink of water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.19-20": {
+      "text": "Rebekah draws water for all the servant’s camels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.21-23": {
+      "text": "The servant gives Rebekah gifts and asks about her family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.24-25": {
+      "text": "Rebekah says she is Bethuel’s daughter and offers lodging",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.26-27": {
+      "text": "The servant bows and praises God for leading him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.28-30": {
+      "text": "Rebekah tells her family, and Laban runs to the servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.31-32": {
+      "text": "Laban welcomes the servant into his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.33-35": {
+      "text": "The servant tells Laban how God blessed Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.36-38": {
+      "text": "The servant tells how Abraham sent him to find a wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.39-41": {
+      "text": "The servant repeats Abraham’s promise of God’s help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.42-44": {
+      "text": "The servant tells Laban about his prayer at the spring",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.45-46": {
+      "text": "The servant tells how Rebekah gave water as he asked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.47-48": {
+      "text": "The servant tells how he gave gifts and praised God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.49-49": {
+      "text": "The servant asks Laban and Bethuel for an answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.50-51": {
+      "text": "Laban and Bethuel agree that Rebekah may go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.52-53": {
+      "text": "The servant worships God and gives gifts to the family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.54-55": {
+      "text": "Rebekah’s family asks her to stay ten more days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The family asks the servant, not Rebekah, to let her stay ten more days.",
+        "suggestion": "Rebekah’s family asks to keep her for ten more days"
+      }
+    },
+    "GEN.24.56-58": {
+      "text": "Rebekah agrees to go with Abraham’s servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.59-60": {
+      "text": "Rebekah’s family blesses her and sends her away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.61-61": {
+      "text": "Rebekah and her servant girls follow Abraham’s servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.62-62": {
+      "text": "Isaac returns from Beer-lahai-roi to live in the Negev",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says Isaac already lived in the Negev, not that he returned there to live.",
+        "suggestion": "Isaac returns from Beer-lahai-roi to the Negev"
+      }
+    },
+    "GEN.24.63-65": {
+      "text": "Rebekah sees Isaac and covers herself with her veil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.24.66-67": {
+      "text": "The servant tells Isaac everything, and Isaac loves Rebekah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.1-4": {
+      "text": "Keturah bears six sons to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.5-6": {
+      "text": "Abraham gives everything to Isaac and gifts to other sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.7-8": {
+      "text": "Abraham dies old and contented at 175",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.9-11": {
+      "text": "Isaac and Ishmael bury Abraham beside Sarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.12-12": {
+      "text": "Ishmael is the son of Abraham and Hagar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.13-16": {
+      "text": "Ishmael had twelve sons who became princes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.17-18": {
+      "text": "Ishmael dies at 137 and his descendants settle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.19-20": {
+      "text": "Isaac, son of Abraham, marries Rebekah at age forty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.21-22": {
+      "text": "Isaac prays, Rebekah conceives, and the babies struggle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.23-23": {
+      "text": "The LORD tells Rebekah that two nations are in her womb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.24-26": {
+      "text": "Rebekah gives birth to twins, Esau and Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.27-28": {
+      "text": "Isaac loves Esau and Rebekah loves Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.29-30": {
+      "text": "Esau comes in hungry and asks Jacob for stew",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.25.31-34": {
+      "text": "Jacob gets Esau’s birthright for bread and stew",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.1-1": {
+      "text": "Famine comes, and Isaac goes to Abimelech in Gerar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.2-3": {
+      "text": "The LORD tells Isaac to stay and promises to bless him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.4-5": {
+      "text": "God promises Isaac many descendants and land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.6-8": {
+      "text": "Isaac says Rebekah is his sister because he is afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.9-11": {
+      "text": "Abimelech scolds Isaac and protects Isaac’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.12-14": {
+      "text": "The LORD blesses Isaac and the Philistines envy him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.15-17": {
+      "text": "The Philistines block the wells and Isaac moves away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.18-18": {
+      "text": "Isaac reopens Abraham’s wells and uses the old names",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.19-20": {
+      "text": "Isaac names the well Esek after a quarrel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.21-22": {
+      "text": "Isaac digs more wells and names the last one Rehoboth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.23-25": {
+      "text": "At Beersheba the LORD promises to be with Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.26-27": {
+      "text": "Abimelech visits Isaac, and Isaac asks why",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.28-29": {
+      "text": "Abimelech asks Isaac to make a peace covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.30-31": {
+      "text": "Isaac gives a feast and the men swear an oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.26.32-33": {
+      "text": "The well is named Shibah, and the city Beersheba",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The draft does not name who acts.",
+        "suggestion": "Isaac names the well Shibah, and the city is Beersheba"
+      }
+    },
+    "GEN.27.1-2": {
+      "text": "Isaac is old and almost blind, and calls Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says Isaac could no longer see, not that he was almost blind.",
+        "suggestion": "Isaac is old and blind, and calls Esau"
+      }
+    },
+    "GEN.27.3-4": {
+      "text": "Isaac asks Esau to hunt game and make him a meal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.5-7": {
+      "text": "Rebekah tells Jacob what she heard Isaac say to Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.8-10": {
+      "text": "Rebekah tells Jacob to bring goats for Isaac’s meal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.11-12": {
+      "text": "Jacob fears his father will curse him as a deceiver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.13-14": {
+      "text": "Jacob obeys Rebekah and brings the goats for the meal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.15-17": {
+      "text": "Rebekah dresses Jacob in Esau’s clothes and goat skins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.18-19": {
+      "text": "Jacob pretends to be Esau and brings food to Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.20-21": {
+      "text": "Isaac doubts that his son is really Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.22-23": {
+      "text": "Isaac does not recognize Jacob and blesses him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.24-25": {
+      "text": "Jacob again claims to be Esau; Isaac eats and drinks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.26-27": {
+      "text": "Isaac kisses Jacob and begins to bless him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.28-28": {
+      "text": "Isaac blesses Jacob with rich land and grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.29-29": {
+      "text": "Isaac blesses Jacob to rule over nations and brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.30-31": {
+      "text": "Esau returns from hunting and brings food to Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.32-33": {
+      "text": "Isaac trembles because he has blessed another son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.34-35": {
+      "text": "Esau cries out and asks Isaac for a blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.36-37": {
+      "text": "Esau complains that Jacob cheated him twice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 36 and ignores Isaac’s response in verse 37.",
+        "suggestion": "Esau asks for a blessing, but Isaac has none left"
+      }
+    },
+    "GEN.27.38-38": {
+      "text": "Esau weeps and begs Isaac to bless him too",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.39-40": {
+      "text": "Isaac says Esau will serve his brother Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.41-42": {
+      "text": "Esau plans to kill Jacob, and Rebekah hears of it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.43-45": {
+      "text": "Rebekah tells Jacob to flee to her brother Laban",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.27.46-46": {
+      "text": "Rebekah worries Jacob will marry a Hittite woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.1-2": {
+      "text": "Isaac tells Jacob to marry one of Laban’s daughters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.3-4": {
+      "text": "Isaac prays that God will give Jacob Abraham’s blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.5-5": {
+      "text": "Isaac sends Jacob to Paddan-aram to Laban",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.6-7": {
+      "text": "Esau learns that Jacob obeyed and went to Paddan-aram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.8-9": {
+      "text": "Esau marries Mahalath, a daughter of Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.10-11": {
+      "text": "Jacob leaves Beersheba and stops for the night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.12-13": {
+      "text": "Jacob dreams of a ladder and God speaks to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.14-15": {
+      "text": "God promises to bless Jacob and be with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.16-17": {
+      "text": "Jacob wakes and says the place is God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.18-19": {
+      "text": "Jacob sets up a pillar and names the place Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.28.20-22": {
+      "text": "Jacob vows to give God a tenth if God protects him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.1-3": {
+      "text": "Jacob comes to a well where shepherds water sheep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.4-6": {
+      "text": "The shepherds tell Jacob that Rachel is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.7-8": {
+      "text": "The shepherds wait for all the flocks before watering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.9-10": {
+      "text": "Jacob rolls the stone away and waters Laban’s sheep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.11-12": {
+      "text": "Jacob kisses Rachel and tells her he is a relative",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.13-13": {
+      "text": "Laban welcomes Jacob to his home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.14-14": {
+      "text": "Laban says Jacob is part of his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.15-18": {
+      "text": "Jacob offers to work seven years for Rachel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.19-20": {
+      "text": "Jacob works seven years for Rachel because he loves her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.21-22": {
+      "text": "Jacob asks for his wife and Laban prepares a feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.23-25": {
+      "text": "Laban tricks Jacob by giving him Leah instead of Rachel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.26-27": {
+      "text": "Laban offers Rachel for seven more years of work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.28-30": {
+      "text": "Jacob marries Rachel and works seven more years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.31-32": {
+      "text": "The LORD gives Leah a son, Reuben",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.33-34": {
+      "text": "Leah has two more sons, Simeon and Levi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.29.35-35": {
+      "text": "Leah bears Judah and stops having children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.1-2": {
+      "text": "Rachel envies Leah and asks Jacob for children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.3-4": {
+      "text": "Rachel gives her servant Bilhah to Jacob as a wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.5-6": {
+      "text": "Bilhah bears Jacob a son, and Rachel names him Dan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.7-8": {
+      "text": "Bilhah bears a second son, and Rachel names him Naphtali",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.9-11": {
+      "text": "Leah gives Zilpah to Jacob, and Zilpah bears Gad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.12-13": {
+      "text": "Zilpah bears a second son, Asher",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.14-15": {
+      "text": "Rachel trades a night with Jacob for Reuben’s mandrakes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.16-16": {
+      "text": "Leah hires Jacob for the night with the mandrakes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.17-18": {
+      "text": "God listens to Leah, and she bears Issachar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.19-21": {
+      "text": "Leah bears Zebulun and a daughter, Dinah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.25-26": {
+      "text": "Jacob asks Laban to send him home with his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.27-28": {
+      "text": "Laban asks Jacob to stay and name his wages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.29-30": {
+      "text": "Jacob says Laban’s wealth grew while Jacob worked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.31-32": {
+      "text": "Jacob asks for the speckled and spotted animals as wages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.33-34": {
+      "text": "Laban agrees to Jacob’s plan for his wages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.35-36": {
+      "text": "Laban takes the spotted animals away from Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.37-38": {
+      "text": "Jacob puts peeled branches by the flocks’ water troughs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.39-40": {
+      "text": "Jacob sets apart the spotted young animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.41-42": {
+      "text": "The stronger animals become Jacob’s, the weaker Laban’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.30.43-43": {
+      "text": "Jacob owns large flocks, servants, camels and donkeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.1-3": {
+      "text": "The LORD tells Jacob to go back to his own land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.4-6": {
+      "text": "Jacob tells Rachel and Leah that Laban has changed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.7-9": {
+      "text": "Laban cheated Jacob, but God gave Jacob the animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.10-11": {
+      "text": "Jacob tells of a dream from the angel of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.12-13": {
+      "text": "God tells Jacob in the dream to return to his land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.14-16": {
+      "text": "Rachel and Leah agree that Jacob should obey God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.17-18": {
+      "text": "Jacob sets out for Canaan with his family and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.19-21": {
+      "text": "Rachel steals Laban’s idols and Jacob runs away secretly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.22-23": {
+      "text": "Laban chases Jacob and catches him in Gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.24-25": {
+      "text": "God warns Laban in a dream not to speak to Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.26-28": {
+      "text": "Laban angrily asks Jacob why he left in secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.29-30": {
+      "text": "Laban asks Jacob why he stole the household gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.31-32": {
+      "text": "Jacob explains his fear and tells Laban to search",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.33-33": {
+      "text": "Laban searches the tents but finds nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.34-35": {
+      "text": "Rachel hides the idols in her camel saddlebag",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.36-37": {
+      "text": "Jacob angrily asks Laban what wrong he has done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.38-40": {
+      "text": "Jacob says he served Laban faithfully for twenty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.41-42": {
+      "text": "Jacob says God saw his hard work and gave judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.43-44": {
+      "text": "Laban proposes a covenant with Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.45-47": {
+      "text": "Jacob and Laban make a mound of stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.48-50": {
+      "text": "Laban warns Jacob to treat Laban’s daughters well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.51-53": {
+      "text": "Laban and Jacob promise not to harm each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.31.54-55": {
+      "text": "Jacob offers a sacrifice and Laban returns home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.1-2": {
+      "text": "Angels of God meet Jacob at Mahanaim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.3-5": {
+      "text": "Jacob sends messengers to his brother Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.6-8": {
+      "text": "Esau comes with four hundred men and Jacob is afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.9-10": {
+      "text": "Jacob prays to God and says he is unworthy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.11-12": {
+      "text": "Jacob asks God to save him from Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.13-16": {
+      "text": "Jacob chooses many animals as a gift for Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.17-18": {
+      "text": "Jacob tells the first servant what to say to Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.19-21": {
+      "text": "Jacob gives the other servants the same words for Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.22-23": {
+      "text": "Jacob sends his family and possessions across the Jabbok",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.24-26": {
+      "text": "A man wrestles with Jacob, and Jacob asks for a blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.27-28": {
+      "text": "God changes Jacob’s name to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.29-30": {
+      "text": "Jacob names the place Peniel after seeing God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.32.31-32": {
+      "text": "Jacob limps, and Israelites do not eat the hip tendon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.1-3": {
+      "text": "Jacob sees Esau coming and bows to him seven times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.4-5": {
+      "text": "Esau runs to hug Jacob, and they weep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.6-8": {
+      "text": "Jacob’s family bows to Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.9-11": {
+      "text": "Jacob urges Esau to accept his gift",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.12-14": {
+      "text": "Jacob asks Esau to go ahead while he travels slowly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.33.15-17": {
+      "text": "Esau returns to Seir, and Jacob goes to Succoth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.1-3": {
+      "text": "Shechem takes Dinah by force and says he loves her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.4-5": {
+      "text": "Shechem asks to marry Dinah, and Jacob stays silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.6-7": {
+      "text": "Jacob’s sons are furious about what Shechem did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.8-10": {
+      "text": "Hamor asks Jacob’s family to let Shechem marry Dinah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.11-12": {
+      "text": "Shechem offers to pay any price for Dinah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.13-13": {
+      "text": "Jacob’s sons answer Shechem and Hamor with deceit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.14-17": {
+      "text": "Jacob’s sons require Shechem’s men to be circumcised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.18-19": {
+      "text": "Hamor and Shechem agree to the condition",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.20-21": {
+      "text": "Hamor and Shechem ask the city men to accept the plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.22-23": {
+      "text": "Hamor says the city’s men must be circumcised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.24-26": {
+      "text": "Simeon and Levi kill the men of the city and take Dinah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.27-29": {
+      "text": "Jacob’s other sons loot the city and take its people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.34.30-31": {
+      "text": "Jacob fears trouble from Simeon and Levi’s attack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.1-3": {
+      "text": "God tells Jacob to go to Bethel and build an altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.4-5": {
+      "text": "Jacob buries the foreign gods, and God protects the family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.6-8": {
+      "text": "Jacob builds an altar at Bethel, and Deborah dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.9-10": {
+      "text": "God blesses Jacob and names him Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.11-13": {
+      "text": "God promises Jacob nations, kings and the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.14-15": {
+      "text": "Jacob sets up a stone pillar and names the place Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.21-22": {
+      "text": "Reuben sleeps with Bilhah, his father’s concubine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.23-25": {
+      "text": "Jacob’s sons born to Leah, Rachel and Bilhah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a sentence fragment rather than a complete sentence.",
+        "suggestion": "Jacob has sons with Leah, Rachel, and Bilhah"
+      }
+    },
+    "GEN.35.26-26": {
+      "text": "Gad and Asher are born to Jacob and Zilpah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.27-27": {
+      "text": "Jacob returns to his father Isaac at Mamre",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.35.28-29": {
+      "text": "Isaac dies at age 180, and his sons bury him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.36.1-3": {
+      "text": "Esau’s wives from the daughters of Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a complete sentence.",
+        "suggestion": "Esau takes wives from the daughters of Canaan"
+      }
+    },
+    "GEN.36.4-5": {
+      "text": "Esau’s sons were born in Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.36.6-8": {
+      "text": "Esau moves to Mount Seir away from Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.36.9-12": {
+      "text": "Esau’s sons Eliphaz and Reuel, and Eliphaz’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Esau has sons and grandsons in Mount Seir"
+      }
+    },
+    "GEN.36.13-14": {
+      "text": "The sons of Reuel and of Esau’s wife Oholibamah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Sons are born to Reuel and to Oholibamah"
+      }
+    },
+    "GEN.36.15-16": {
+      "text": "Chiefs who came from Esau’s son Eliphaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Chiefs descend from Esau’s son Eliphaz"
+      }
+    },
+    "GEN.36.17-19": {
+      "text": "Chiefs who came from Reuel and from Oholibamah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Chiefs descend from Reuel and Oholibamah"
+      }
+    },
+    "GEN.36.20-22": {
+      "text": "The sons of Seir the Horite, who lived in Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "The sons of Seir the Horite live in Edom"
+      }
+    },
+    "GEN.36.23-24": {
+      "text": "The sons of Shobal and Zibeon, and Anah’s hot springs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Shobal and Zibeon have sons, and Anah finds springs"
+      }
+    },
+    "GEN.36.25-28": {
+      "text": "The children of Anah, Dishon, Ezer, and Dishan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Anah, Dishon, Ezer, and Dishan have children"
+      }
+    },
+    "GEN.36.29-30": {
+      "text": "The chiefs of the Horites in the land of Seir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "The Horites have chiefs in the land of Seir"
+      }
+    },
+    "GEN.36.31-33": {
+      "text": "The first kings of Edom: Bela and Jobab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title contains a colon and is not a full sentence statement.",
+        "suggestion": "Bela and Jobab reign as the first kings of Edom"
+      }
+    },
+    "GEN.36.34-36": {
+      "text": "Husham, Hadad, and Samlah reign as kings of Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.36.37-39": {
+      "text": "Shaul, Baal-hanan, and Hadad reign as kings of Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.36.40-43": {
+      "text": "The chiefs of Edom, descended from Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Chiefs of Edom descend from Esau"
+      }
+    },
+    "GEN.37.1-2": {
+      "text": "Joseph tends the flock and reports on his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.3-4": {
+      "text": "Jacob loves Joseph most, so his brothers hate Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.5-6": {
+      "text": "Joseph tells a dream and his brothers hate him more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.7-8": {
+      "text": "Joseph dreams of sheaves bowing down to his sheaf",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.9-11": {
+      "text": "Joseph dreams of sun, moon, and stars bowing to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.12-14": {
+      "text": "Jacob sends Joseph to check on his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.15-17": {
+      "text": "A man helps Joseph find his brothers at Dothan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.18-20": {
+      "text": "Joseph’s brothers plan to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.21-22": {
+      "text": "Reuben tries to save Joseph’s life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.23-24": {
+      "text": "The brothers take Joseph’s robe and throw him in a pit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.25-26": {
+      "text": "Judah asks what the brothers gain by killing Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.27-28": {
+      "text": "The brothers sell Joseph to the Ishmaelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.29-30": {
+      "text": "Reuben finds the pit empty and tears his clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.31-33": {
+      "text": "Joseph’s brothers trick Jacob with the bloody robe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.37.34-36": {
+      "text": "Jacob mourns Joseph, who is sold to Potiphar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.1-2": {
+      "text": "Judah settles near Hirah and marries a Canaanite woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.3-5": {
+      "text": "Judah’s wife bears sons Er, Onan, and Shelah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.6-7": {
+      "text": "Er marries Tamar, but the LORD kills wicked Er",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.8-10": {
+      "text": "Onan refuses to give his brother a child, and dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.11-11": {
+      "text": "Judah sends Tamar to live in her father’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.12-14": {
+      "text": "Tamar disguises herself and sits beside the road",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.15-16": {
+      "text": "Judah asks the veiled Tamar to sleep with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.17-18": {
+      "text": "Judah gives Tamar his seal, cord and staff as a pledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.19-20": {
+      "text": "Tamar goes home, and Hirah cannot find her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.21-23": {
+      "text": "Judah lets the woman keep the pledge to avoid shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.24-26": {
+      "text": "Tamar shows Judah’s items, and he admits his wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.27-28": {
+      "text": "A midwife ties a scarlet thread on a twin’s wrist",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.38.29-30": {
+      "text": "Perez is born first, then Zerah with the scarlet thread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.1-2": {
+      "text": "Potiphar buys Joseph, and the LORD is with Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.3-4": {
+      "text": "Potiphar puts Joseph in charge of his household",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.5-6": {
+      "text": "The LORD blesses Potiphar’s house because of Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.7-9": {
+      "text": "Joseph refuses Potiphar’s wife and will not sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.10-12": {
+      "text": "Joseph runs away from Potiphar’s wife and leaves his cloak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.13-15": {
+      "text": "Potiphar’s wife lies to her servants about Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.16-18": {
+      "text": "Potiphar’s wife tells her husband the same false story",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.19-20": {
+      "text": "Potiphar is angry and puts Joseph in prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.39.21-23": {
+      "text": "The LORD gives Joseph favor with the prison warden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.1-3": {
+      "text": "Pharaoh puts his cupbearer and baker in prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.4-5": {
+      "text": "Joseph serves the two officers, who each have a dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.6-8": {
+      "text": "Joseph asks the sad officers to tell him their dreams",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.9-11": {
+      "text": "The cupbearer tells Joseph his dream about a vine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.12-13": {
+      "text": "Joseph says the cupbearer will be restored in three days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.14-15": {
+      "text": "Joseph asks the cupbearer to remember him to Pharaoh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.16-17": {
+      "text": "The baker tells Joseph his dream about three baskets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.18-19": {
+      "text": "Joseph says the baker will die in three days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.40.20-23": {
+      "text": "Pharaoh hangs the baker, and the cupbearer forgets Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.1-3": {
+      "text": "Pharaoh dreams of seven fat cows and seven thin cows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.4-6": {
+      "text": "Thin cows eat fat cows, then Pharaoh dreams of grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.7-8": {
+      "text": "No one in Egypt can explain Pharaoh’s dreams",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.9-11": {
+      "text": "The cupbearer remembers a dream he and the baker had",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.12-13": {
+      "text": "The cupbearer tells Pharaoh that Joseph explained dreams",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.14-16": {
+      "text": "Joseph comes to Pharaoh and says God will give an answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.17-18": {
+      "text": "Pharaoh tells Joseph about the seven well-fed cows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.19-21": {
+      "text": "Pharaoh tells Joseph how thin cows ate the fat cows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.22-24": {
+      "text": "Pharaoh tells Joseph his dream of the seven heads of grain (≤60)",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It includes an editorial note in parentheses and exceeds 60 characters.",
+        "suggestion": "Pharaoh tells Joseph his dream of seven heads of grain"
+      }
+    },
+    "GEN.41.25-26": {
+      "text": "Joseph says God has shown Pharaoh what he will do",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.27-29": {
+      "text": "Joseph explains seven years of plenty and seven of famine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.30-32": {
+      "text": "Joseph says the famine will be severe and God will do it soon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It exceeds 60 characters.",
+        "suggestion": "Joseph says God will soon bring a severe famine"
+      }
+    },
+    "GEN.41.33-34": {
+      "text": "Joseph tells Pharaoh to appoint a wise man over Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.35-36": {
+      "text": "Joseph tells Pharaoh to store food for the famine years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.37-38": {
+      "text": "Pharaoh and his officials like Joseph’s plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.39-41": {
+      "text": "Pharaoh puts Joseph in charge of all Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.42-43": {
+      "text": "Pharaoh gives Joseph his ring, fine clothes and a gold chain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.44-45": {
+      "text": "Pharaoh gives Joseph a new name and a wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.46-47": {
+      "text": "Joseph begins work for Pharaoh and travels through Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.48-49": {
+      "text": "Joseph stores huge amounts of grain in the cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.50-52": {
+      "text": "Joseph’s wife bears him sons Manasseh and Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.53-54": {
+      "text": "The famine begins, but Egypt has food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.41.55-57": {
+      "text": "Joseph sells grain to Egyptians and to people of every nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It exceeds 60 characters.",
+        "suggestion": "Joseph sells grain to Egyptians and to all nations"
+      }
+    },
+    "GEN.42.1-4": {
+      "text": "Jacob sends ten of his sons to buy grain in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.5-6": {
+      "text": "Joseph’s brothers come to Egypt and bow down to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.7-8": {
+      "text": "Joseph knows his brothers, but they do not know him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.9-11": {
+      "text": "Joseph accuses his brothers of being spies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.12-13": {
+      "text": "Joseph’s brothers tell him about their family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.14-17": {
+      "text": "Joseph puts his brothers in prison for three days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.18-20": {
+      "text": "Joseph tells his brothers to bring their youngest brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.21-22": {
+      "text": "Joseph’s brothers say they are being punished for Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.23-24": {
+      "text": "Joseph weeps and has Simeon tied up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.25-25": {
+      "text": "Joseph orders grain and silver put in his brothers’ bags",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.26-28": {
+      "text": "One brother finds his silver and all the brothers are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.29-32": {
+      "text": "Joseph’s brothers tell Jacob what the ruler of Egypt said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.33-34": {
+      "text": "The brothers tell Jacob the ruler wants Benjamin brought",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.35-36": {
+      "text": "The brothers find all their silver and Jacob is upset",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.42.37-38": {
+      "text": "Jacob refuses to let Benjamin go to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.1-2": {
+      "text": "Jacob tells his sons to go and buy more food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.3-5": {
+      "text": "Judah says the brothers cannot go without Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.6-7": {
+      "text": "Israel asks why his sons told the man about Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.8-10": {
+      "text": "Judah promises to keep Benjamin safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.11-12": {
+      "text": "Israel tells his sons to take gifts and double silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.13-15": {
+      "text": "Israel sends his sons and Benjamin to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.16-17": {
+      "text": "Joseph orders a meal for his brothers at his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.18-20": {
+      "text": "The brothers are afraid and speak to Joseph’s steward",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.21-23": {
+      "text": "The steward tells the brothers not to be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.24-25": {
+      "text": "The steward welcomes the brothers into Joseph’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.26-27": {
+      "text": "The brothers give gifts to Joseph and bow to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.28-29": {
+      "text": "Joseph asks about Benjamin and blesses him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.30-31": {
+      "text": "Joseph weeps alone, then orders the meal served",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.43.32-34": {
+      "text": "Joseph and his brothers eat; Benjamin gets more food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.1-2": {
+      "text": "Joseph has his cup put in Benjamin’s sack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.3-5": {
+      "text": "Joseph sends his steward to accuse the brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.6-7": {
+      "text": "The brothers deny stealing from Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.8-10": {
+      "text": "The steward says only the thief will be a slave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.11-13": {
+      "text": "The cup is found in Benjamin’s sack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.14-15": {
+      "text": "Judah and his brothers fall down before Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.16-17": {
+      "text": "Judah says all are guilty; Joseph keeps only Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.18-19": {
+      "text": "Judah asks Joseph to let him speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.20-22": {
+      "text": "Judah says his father loves the youngest brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.23-26": {
+      "text": "Judah says Joseph demanded that Benjamin come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.27-29": {
+      "text": "Judah says losing Benjamin would kill his father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.30-32": {
+      "text": "Judah says his father will die without the boy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.44.33-34": {
+      "text": "Judah offers to be Joseph’s slave in place of Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.1-3": {
+      "text": "Joseph tells his brothers who he is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.4-6": {
+      "text": "Joseph says God sent him to Egypt to save lives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.7-8": {
+      "text": "Joseph says God, not the brothers, sent him to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.9-11": {
+      "text": "Joseph tells his brothers to bring his father to Goshen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.12-13": {
+      "text": "Joseph asks his brothers to tell his father all this",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “this” is not clear when read alone in a list.",
+        "suggestion": "Joseph tells his brothers to report his splendor in Egypt"
+      }
+    },
+    "GEN.45.14-15": {
+      "text": "Joseph and Benjamin weep; Joseph kisses his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.16-18": {
+      "text": "Pharaoh is pleased and invites Joseph’s family to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.19-20": {
+      "text": "Pharaoh offers wagons for Joseph’s father and families",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.21-23": {
+      "text": "Joseph gives his brothers wagons, clothes and gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.24-24": {
+      "text": "Joseph tells his brothers not to quarrel on the way",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.25-26": {
+      "text": "The brothers say Joseph is alive, but Jacob doubts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.45.27-28": {
+      "text": "Jacob’s spirit revives and he decides to see Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.1-4": {
+      "text": "God tells Jacob not to fear going to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.5-6": {
+      "text": "Jacob and his family travel to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.7-7": {
+      "text": "Jacob takes all his family with him to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.8-11": {
+      "text": "The sons of Reuben, Simeon and Levi who went to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a sentence fragment rather than a full sentence.",
+        "suggestion": "The sons of Reuben, Simeon, and Levi go to Egypt"
+      }
+    },
+    "GEN.46.12-15": {
+      "text": "Leah’s descendants who went to Egypt number thirty-three",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.16-18": {
+      "text": "Jacob’s descendants through Zilpah, sixteen in all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a sentence fragment rather than a full sentence.",
+        "suggestion": "Jacob’s descendants through Zilpah number sixteen"
+      }
+    },
+    "GEN.46.19-22": {
+      "text": "Jacob’s descendants through Rachel, fourteen in all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a sentence fragment rather than a full sentence.",
+        "suggestion": "Jacob’s descendants through Rachel number fourteen"
+      }
+    },
+    "GEN.46.23-25": {
+      "text": "Jacob’s descendants through Bilhah, seven in all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a sentence fragment rather than a full sentence.",
+        "suggestion": "Jacob’s descendants through Bilhah number seven"
+      }
+    },
+    "GEN.46.26-27": {
+      "text": "Seventy members of Jacob’s family went to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.28-30": {
+      "text": "Joseph meets his father Jacob in Goshen and weeps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.31-32": {
+      "text": "Joseph will tell Pharaoh that his family are shepherds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.46.33-34": {
+      "text": "Joseph tells his brothers what to say to Pharaoh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.1-2": {
+      "text": "Joseph presents five of his brothers to Pharaoh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.3-4": {
+      "text": "The brothers ask Pharaoh for land in Goshen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.5-6": {
+      "text": "Pharaoh tells Joseph to settle his family in Goshen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.7-10": {
+      "text": "Jacob blesses Pharaoh and speaks of his years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.11-12": {
+      "text": "Joseph settles his family in the district of Rameses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.13-14": {
+      "text": "Joseph collects all the money for grain in the famine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.15-17": {
+      "text": "The Egyptians trade livestock to Joseph for food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.18-19": {
+      "text": "The Egyptians ask to be Pharaoh’s slaves for food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.20-22": {
+      "text": "Joseph buys all the land of Egypt for Pharaoh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.23-24": {
+      "text": "Joseph gives seed and says a fifth goes to Pharaoh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.25-26": {
+      "text": "The Egyptians thank Joseph and agree to give a fifth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.27-28": {
+      "text": "The Israelites settle in Goshen and increase in number",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.47.29-31": {
+      "text": "Jacob makes Joseph promise not to bury him in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.1-2": {
+      "text": "Joseph visits his sick father Jacob with his two sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.3-4": {
+      "text": "Jacob tells Joseph about God’s promise at Luz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.5-7": {
+      "text": "Jacob says Ephraim and Manasseh will be his sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.8-10": {
+      "text": "Jacob kisses and embraces Joseph’s two sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.11-13": {
+      "text": "Joseph brings Ephraim and Manasseh close to Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.14-16": {
+      "text": "Jacob crosses his hands and blesses Joseph’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.17-18": {
+      "text": "Joseph tries to move Jacob’s right hand to Manasseh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.19-20": {
+      "text": "Jacob refuses and says Ephraim will be greater",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.48.21-22": {
+      "text": "Jacob gives Joseph a ridge of land before he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.1-2": {
+      "text": "Jacob calls his sons to tell about the days to come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.3-4": {
+      "text": "Jacob tells Reuben he will no longer excel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.5-6": {
+      "text": "Jacob speaks of the violent anger of Simeon and Levi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.7-7": {
+      "text": "Jacob says Simeon and Levi will be scattered in Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.8-8": {
+      "text": "Jacob says Judah will rule his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.9-9": {
+      "text": "Jacob says Judah is like a young lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.10-10": {
+      "text": "Jacob says the scepter will stay with Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.11-12": {
+      "text": "Jacob says Judah will have plenty of wine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.13-13": {
+      "text": "Jacob says Zebulun will live by the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.14-15": {
+      "text": "Jacob says Issachar is like a strong donkey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.16-18": {
+      "text": "Jacob says Dan will judge and be like a snake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.19-21": {
+      "text": "Jacob blesses Gad, Asher and Naphtali",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.22-23": {
+      "text": "Jacob says Joseph is like a fruitful vine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.24-24": {
+      "text": "Jacob says God makes Joseph strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.25-25": {
+      "text": "Jacob says God will bless Joseph in many ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.26-26": {
+      "text": "Jacob prays that his blessings rest on Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.27-27": {
+      "text": "Jacob says Benjamin is like a hungry wolf",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.28-28": {
+      "text": "Jacob blesses the twelve tribes of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.29-30": {
+      "text": "Jacob tells his sons to bury him with his fathers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.49.31-33": {
+      "text": "Jacob finishes instructing his sons and dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.1-3": {
+      "text": "Joseph weeps for Jacob and the Egyptians mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.4-6": {
+      "text": "Pharaoh allows Joseph to bury his father in Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.7-9": {
+      "text": "A large group goes with Joseph to bury Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.10-11": {
+      "text": "Joseph mourns seven days at the threshing floor of Atad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.12-14": {
+      "text": "Jacob’s sons bury him at Machpelah and return to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.15-17": {
+      "text": "Joseph’s brothers fear him and ask for forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.18-21": {
+      "text": "Joseph tells his brothers not to be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.22-23": {
+      "text": "Joseph lives 110 years and sees his great-grandchildren",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GEN.50.24-26": {
+      "text": "Joseph makes Israel’s sons promise to carry his bones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verses 24–25 and leaves out Joseph’s death in verse 26.",
+        "suggestion": "Joseph makes Israel’s sons swear an oath and dies"
+      }
+    }
+  }
+}

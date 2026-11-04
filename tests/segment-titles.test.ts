@@ -61,6 +61,26 @@ describe("verseTexts", () => {
       "I can do all things through Christ who gives me strength."
     );
   });
+
+  // BSB opens some paragraphs inside a verse's run with \pmo (Genesis 1:2,
+  // before 1:3 under "The First Day"); it carries no words (#208).
+  it("drops \\pmo, the embedded opening paragraph marker", () => {
+    const usfm =
+      "\\c 1\n\\v 1 \\w Waters|x=1\\w*.\n\\s2 Day\n\\b\n\\pmo\n\\v 2 \\w Light|x=1\\w*.";
+    expect([...verseTexts(usfm)]).toEqual([
+      ["1:1", "Waters."],
+      ["1:2", "Light."],
+    ]);
+  });
+
+  it("reads all 1,533 verses of Genesis from the pinned BSB text", async () => {
+    const { readSource } = await import("../scripts/lib/sources.ts");
+    const v = verseTexts(await readSource("bsb-gen"));
+    expect(v.size).toBe(1533);
+    expect(v.get("1:2")).toBe(
+      "Now the earth was formless and void, and darkness was over the surface of the deep. And the Spirit of God was hovering over the surface of the waters."
+    );
+  });
 });
 
 const structure: Structure = {

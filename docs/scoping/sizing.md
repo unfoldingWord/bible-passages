@@ -588,6 +588,99 @@ recheck call, $0.046908, 85.2 s of model time, all 4 sorted factual
 The book cost $0.124942 from drafting to recheck, $0.0042 per drafted
 title (measured: OpenRouter's billed `cost` of the four calls, summed).
 
+## Measured: English segment titles, Genesis, the first long book (#208)
+
+#208's done-when: one long book drafts with a readable reply. Genesis was
+drafted on 2026-11-04 in full batches, the first book over 35 titles to
+run through batched drafting (#213) and the batched check (#201).
+
+The first plain run (15:26:12 UTC, code at `47741d7`) stopped before any
+model call: `verseTexts` could not read Genesis 1:2, where BSB opens a
+paragraph with `\pmo` after the heading "The First Day". `0107e82` drops
+`\pmo` like the other paragraph markers, and Genesis now reads all 1,533
+verses (a test checks it). It cost nothing. Over the 66 pinned BSB files,
+31 books failed to read before this fix and 24 after (measured with a
+throwaway script calling `verseTexts` on each cached file); the rest are
+#226.
+
+The second run, one plain run of the CLI (15:29:34 to 15:53:04 UTC, code at
+`0107e82`, prompt `prompts/segment-titles.md` as it then stood, SHA-256
+`838516080c8f…`: #216's readers rule, the same prompt as 2 Timothy's,
+before #228 revised it; now kept as
+`prompts/history/segment-titles-838516080c8f.md`, where the record's hash
+resolves. Genesis was not re-drafted with the revised prompt. The same
+models as every committed book):
+
+```
+node scripts/translate/segment-titles.ts --book GEN \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 2.80 \
+  --out .cache/segment-titles/l208-GEN-2
+```
+
+The runner exited 0 with outcome `done`: 642 of 642 segments drafted, 8
+reusing their pericope title, 602 `ai-checked`, 40 disagreements, 3 gate
+failures. Every draft and check reply was readable; no call was cut off
+or re-run. The record was copied unchanged to `data/drafts/en/GEN.json`
+(`cmp` with the run's `en/GEN.json` reported no difference). The numbers
+below were counted twice from the record, with `jq` and with Python, which
+gave the same results.
+
+| Quantity                     | Value                                                     | Label               | Source and method                                                                                            |
+| ---------------------------- | --------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Segments drafted             | 642 of 650                                                | measured 2026-11-04 | the 8 others are their pericope's only segment                                                               |
+| Calls                        | 19 draft, 19 check (batches of 33 or 34)                  | measured 2026-11-04 | `calls`; first draft `gen-1793806175-VzrY9mgoPE0y2K42mJkh`, last check `gen-1793807543-joX48S59TRCTpjyAUHCf` |
+| Cost                         | $1.7259 ($1.1139 draft, $0.6120 check)                    | measured 2026-11-04 | OpenRouter's billed `cost` per call, summed ($1.725863)                                                      |
+| Cost per drafted title       | $0.0027 ($0.0017 draft, $0.0010 check)                    | measured 2026-11-04 | the costs above / 642                                                                                        |
+| Cost per call                | draft $0.0236 to $0.0799; check $0.0156 to $0.0492        | measured 2026-11-04 | `cost` per call                                                                                              |
+| Tokens                       | 450,569 (219,982 prompt, 230,587 completion)              | measured 2026-11-04 | draft 119,875 + 87,413 (67,868 reasoning); check 100,107 + 143,174 (124,063 reasoning)                       |
+| Largest completion           | draft 6,784 of 16,384 (41%); check 11,997 of 32,768 (37%) | measured 2026-11-04 | `completionTokens` per call against `MAX_TOKENS` and `CHECK_MAX_TOKENS`                                      |
+| Model time                   | 1,407.7 s (549.7 s draft, 858.1 s check)                  | measured 2026-11-04 | `ms` per call, summed; one call after another, 23.5 minutes from start to end                                |
+| Checker agreed               | 602 of 642 (`ai-checked`)                                 | measured 2026-11-04 | 40 disagreements; criteria `style` 27, `covers` 7, `accurate` 5, `plain` 2 (a title can name more)           |
+| Drafts over 60 characters    | 3 of 642 (longest 64, mean 47.1)                          | measured 2026-11-04 | the `length` gate: `GEN.41.22-24` (64), `GEN.41.30-32` (61), `GEN.41.55-57` (61); all 3 also disputed        |
+| Pronoun drafts               | 7 of 642, none disputed                                   | measured 2026-11-04 | titles matching `\b(them\|they\|their\|you\|your)\b`, ignoring case (as in #209)                             |
+| Titles in the tC Mobile file | 602 of 650 segments                                       | measured 2026-11-04 | `npm run build`: the 40 disputed drafts and the 8 reused pericope titles are `unreviewed`, left out          |
+
+The review bench found one `ai-checked` title that drops the scope of its
+verses: `GEN.9.11-13`, "God promises no more floods; the rainbow is the
+sign" (Genesis 9:11 limits the promise to a flood that destroys the earth).
+The record is AI output, kept unchanged; the fix is a person's review
+(#232).
+
+The third check (#203) was not run on Genesis and no dispute results are
+written: #207 holds third-check data until its sample check is done. This
+section reports counts only, not the checker's reasons or suggestions.
+
+Observations from one run (not trends):
+
+- **One draft call did not reason.** Draft batch 16
+  (`gen-1793806630-zt7lcSeru5HnTDulmRCi`, `GEN.41.22-24` onward) used 0
+  reasoning tokens and 1,054 completion tokens in 7.1 s, against 2,694 to
+  5,710 reasoning tokens for the other 18. All 3 titles over 60 are in that
+  batch. Inference, not tested: the prompt's closing count ("count the characters of every title")
+  happens in the model's reasoning, so a call that skips reasoning skips it.
+  The gate caught all 3; none reaches the tC Mobile file.
+- **Disputes cluster.** Batch 14 (from `GEN.36.4-5`) holds 10 of the 40;
+  two batches hold none. Why is not measured.
+- **Batch boundaries (the #208 watch item).** 5 of the 40 disputes are on
+  one of the 36 titles next to a batch boundary (`GEN.10.6-7`,
+  `GEN.19.34-35`, `GEN.27.1-2`, `GEN.36.1-3`, `GEN.41.22-24`), against
+  about 2 if disputes fell evenly (40 × 36 / 642). Small numbers; whether
+  a boundary inside a story needs the title before it is still untested.
+  A person reading the titles across each boundary would settle it.
+
+Whole-Bible numbers from this book (estimated, these per-title rates over
+13,507 titles): drafting about $23, checking about $13, model time about
+8.2 hours one call after another. The drafting rate ($0.0017 per title)
+falls inside the Colossians range above ($0.0014 to $0.0025), so full
+batches (cap 35, `DRAFT_BATCH`; this run filled 33 or 34) did not cost more
+per title on a long book. The checking rate ($0.0010
+per title) gives less than the #201 estimate ($19 to $42 for all books); with the run-to-run spread of the
+check, one book does not move that range.
+
+Total OpenRouter spend of this work: $1.725863 (the second run; the first
+made no call).
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |
