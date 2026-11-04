@@ -134,4 +134,31 @@ describe("pericopeTitles", () => {
       )
     ).toThrow("TIT 1:1: two headings for TIT.P.1.1-4, the first at 1:1");
   });
+
+  // 1:3 is inside TIT.P.1.1-4 but no pericope starts there (#229).
+  it("refuses a heading at a verse where no pericope starts", () => {
+    expect(() =>
+      pericopeTitles(
+        "TIT",
+        [
+          { chapter: 1, verse: 1, text: "One" },
+          { chapter: 1, verse: 3, text: "Stray" },
+          { chapter: 1, verse: 5, text: "Two" },
+        ],
+        pericopes,
+        "bsb-tit"
+      )
+    ).toThrow("TIT 1:3: heading without a pericope");
+  });
+
+  it("refuses a pericope with no heading", () => {
+    expect(() =>
+      pericopeTitles(
+        "TIT",
+        [{ chapter: 1, verse: 1, text: "One" }],
+        pericopes,
+        "bsb-tit"
+      )
+    ).toThrow("TIT.P.1.5-9: pericope without a title");
+  });
 });
