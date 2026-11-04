@@ -160,6 +160,18 @@ letters, digits and `. _ : -`, at most 64 characters).
   `text`, `status` and `source` alike, unless a draft gives it its own
   (decision 12, [decisions/0003](decisions/0003-v0.1-scope-and-titles.md);
   Titus 3:9–11 was drafted before that decision). The build fills it in.
+- A segment whose every verse BSB numbers but leaves blank (`MAT.17.21-21`,
+  `MRK.11.26-26`, `ROM.16.24-24`) has one fixed English title, "Not in the
+  oldest manuscripts", written by a person and never drafted, as the
+  maintainer decided on #226: `approved` (a person chose the exact words,
+  as for the decided book names) with `source` `reviewer:maintainer` (the
+  maintainer's role). The build writes it in every book, its other segment
+  titles built or not (`BLANK_TITLE` and `BLANK_SEGMENTS` in
+  `scripts/lib/segment-titles.ts`), refuses a draft for such a key, and
+  stops if the pinned BSB has a blank segment not in that list or a listed
+  one is no longer blank, so either goes to a person. The drafting run
+  skips these segments, before decision 12's reuse; a verse the text does
+  not have at all still fails it.
 
 ## `data/drafts/<lang>/<BOOK>.json`
 

@@ -115,14 +115,100 @@ export type SegmentInput = {
 };
 
 /**
- * The segments to draft, in reading order, and the keys left out because
- * the segment is its pericope's only one (decision 12).
+ * The fixed English title of a segment whose every verse BSB numbers but
+ * leaves blank (a verse it omits on textual grounds): written by a person,
+ * not drafted, as the maintainer decided on #226 (4 Nov). `approved`
+ * because a person chose the exact words, as for the decided book names
+ * (`NAME_OVERRIDES` in scripts/data/build.ts); `reviewer:maintainer` is the
+ * maintainer's role, in the `reviewer:<handle>` form a person's title takes.
+ */
+export const BLANK_TITLE = {
+  text: "Not in the oldest manuscripts",
+  status: "approved",
+  source: "reviewer:maintainer",
+} as const;
+
+/**
+ * The segments that decision covers, as the pinned BSB has them. The build
+ * gives each `BLANK_TITLE` and stops if the pinned text has a blank-only
+ * segment not listed here, or a listed one that is not blank-only, so a new
+ * one goes to a person rather than taking the label unseen.
+ */
+export const BLANK_SEGMENTS: readonly string[] = [
+  "MAT.17.21-21",
+  "MRK.11.26-26",
+  "ROM.16.24-24",
+];
+
+/**
+ * A segment's verse texts, in order. A verse the file does not have would
+ * silently shorten a model's input, so it fails; a verse it numbers but
+ * leaves blank is `""` (#226).
+ */
+function segmentTexts(
+  s: Structure["segments"][number],
+  verses: Map<string, string>
+): string[] {
+  const [c, from] = s.start;
+  const to = s.end[1];
+  if (s.end[0] !== c) throw new Error(`${s.key} crosses a chapter`);
+  const text: string[] = [];
+  for (let v = from; v <= to; v++) {
+    const t = verses.get(`${c}:${v}`);
+    if (t === undefined) throw new Error(`${s.key}: no text for ${c}:${v}`);
+    text.push(t);
+  }
+  return text;
+}
+
+/**
+ * The keys of the segments whose every verse is blank in `verses`, in
+ * reading order. A verse the text does not have at all still fails.
+ */
+export function blankSegments(
+  structure: Structure,
+  verses: Map<string, string>
+): string[] {
+  return structure.segments
+    .filter((s) => segmentTexts(s, verses).every((t) => t === ""))
+    .map((s) => s.key);
+}
+
+/**
+ * Why a book's blank segments cannot take `BLANK_TITLE`: a blank segment
+ * not in `BLANK_SEGMENTS`, a listed one that is no longer blank (either goes
+ * to a person), or a draft for one (its title is a person's, not a model's).
+ * The build stops on any. `drafted` is the keys of the book's drafts.
+ */
+export function blankProblems(
+  book: string,
+  blank: readonly string[],
+  drafted: readonly string[]
+): string[] {
+  const problems: string[] = [];
+  const decided = BLANK_SEGMENTS.filter((k) => k.startsWith(`${book}.`));
+  if (blank.join() !== decided.join())
+    problems.push(
+      `segments blank in BSB are [${blank.join(", ")}], ` +
+        `not the decided [${decided.join(", ")}] (BLANK_SEGMENTS)`
+    );
+  for (const key of drafted)
+    if (blank.includes(key))
+      problems.push(`draft for ${key}, which has a fixed title`);
+  return problems;
+}
+
+/**
+ * The segments to draft, in reading order, and the keys left out: `reused`
+ * because the segment is its pericope's only one (decision 12), `blank`
+ * because every verse of it is blank in the text, so there is nothing to
+ * draft from and it takes `BLANK_TITLE` instead (#226).
  */
 export function segmentInputs(
   structure: Structure,
   headings: Heading[],
   verses: Map<string, string>
-): { inputs: SegmentInput[]; reused: string[] } {
+): { inputs: SegmentInput[]; reused: string[]; blank: string[] } {
   const titleOf = new Map<string, string>();
   for (const h of headings) {
     const p = structure.pericopes.find(
@@ -137,31 +223,28 @@ export function segmentInputs(
     count.set(s.pericope, (count.get(s.pericope) ?? 0) + 1);
   const inputs: SegmentInput[] = [];
   const reused: string[] = [];
+  const blank: string[] = [];
   for (const s of structure.segments) {
+    // A blank verse adds no words: the title is drafted from the text as
+    // the BSB prints it (#226).
+    const text = segmentTexts(s, verses).filter((t) => t !== "");
+    // Nothing to draft from: every verse of the segment is blank (Matthew
+    // 17:21, Mark 11:26, Romans 16:24). It is skipped, not drafted; its
+    // title is a person's (`BLANK_TITLE`, #226), even when it is its
+    // pericope's only segment, as `blankSegments` and the build have it.
+    if (text.length === 0) {
+      blank.push(s.key);
+      continue;
+    }
     if (count.get(s.pericope) === 1) {
       reused.push(s.key);
       continue;
     }
-    const [c, from] = s.start;
-    const to = s.end[1];
-    if (s.end[0] !== c) throw new Error(`${s.key} crosses a chapter`);
-    const text: string[] = [];
-    for (let v = from; v <= to; v++) {
-      const t = verses.get(`${c}:${v}`);
-      // A verse the file does not have would silently shorten the input, so
-      // it fails. A verse it numbers but leaves blank (`""`) adds no words:
-      // the title is drafted from the text as the BSB prints it (#226).
-      if (t === undefined) throw new Error(`${s.key}: no text for ${c}:${v}`);
-      if (t !== "") text.push(t);
-    }
-    // Nothing to draft from: every verse of the segment is blank in the BSB
-    // (Matthew 17:21, Mark 11:26, Romans 16:24). What such a segment's title
-    // should be is not settled, so it fails rather than invent one (#226).
-    if (text.length === 0)
-      throw new Error(`${s.key}: every verse is blank in the source text`);
     const pericope = titleOf.get(s.pericope);
     if (pericope === undefined)
       throw new Error(`${s.key}: pericope ${s.pericope} has no heading`);
+    const [c, from] = s.start;
+    const to = s.end[1];
     inputs.push({
       key: s.key,
       verses: from === to ? `${c}:${from}` : `${c}:${from}–${to}`,
@@ -169,7 +252,7 @@ export function segmentInputs(
       text: text.join(" "),
     });
   }
-  return { inputs, reused };
+  return { inputs, reused, blank };
 }
 
 /** The system prompt between `<!-- <part>:start -->` and `<!-- <part>:end -->`. */
