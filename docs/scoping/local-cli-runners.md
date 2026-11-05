@@ -233,7 +233,9 @@ gave every number below.
   model requests instead of 1 (65,732 input tokens). The OpenRouter model
   had no tool. None of the flags above removes it; disabling the
   `code_mode_host` feature makes it fail when called instead (the CLI's
-  warning: "Code mode will fail closed"). The other 5 calls made one request and no
+  warning: "Code mode will fail closed"). What that tool can reach under
+  `-s read-only` (files, network, environment) was not measured. The other
+  5 calls made one request and no
   tool call (from each call's Codex session file).
 
 ### Calls
@@ -280,20 +282,19 @@ A sketch for the separate PR, if one is chosen; not built here.
 
 OpenRouter, this lane, all measured (billed `cost` per call, summed by a
 Python script and again by `jq` over the run records): **$0.315362** in 12
-calls, under the lane's $0.50 cap. o1's draft $0.051020; checks a1
-$0.038093, a2 $0.019523, a3 $0.022478, o1 $0.067457, c1 $0.034743; rechecks
-(1 Thessalonians, Colossians, 2 Timothy) run 1 $0.002367, $0.033392,
-$0.018464 and run 2 $0.005085, $0.009577, $0.013166. These twelve figures
-as printed sum to $0.315365, $0.000003 above the total; the printed figures
-are rounded to six places (inference: the residual is within that rounding;
-the ledgers are not in the repo to confirm). The key's total usage
+calls, under the lane's $0.50 cap. The calls, unrounded as the ledgers
+hold them: o1's draft $0.05102; checks a1 $0.0380925, a2 $0.0195225, a3
+$0.0224775, o1 $0.0674565, c1 $0.034743; rechecks (1 Thessalonians,
+Colossians, 2 Timothy) run 1 $0.002367, $0.0333915, $0.01846425 and run 2
+$0.005085, $0.00957675, $0.0131655. These sum to $0.315362 exactly (Python
+`Decimal`). The key's total usage
 is shared with the English run going on at the same time, so it was not used
 to measure this lane.
 
 Claude subscription: 3 draft calls, about 10 short test calls; the CLI's
-list-price figure for the three drafts is $0.180291 (not billed); the three
-per-call figures in the Calls table sum to $0.180292 as printed (the same
-rounding inference). Codex
+list-price figure for the three drafts is $0.1802917 ($0.0639083 +
+$0.0595967 + $0.0567867 as the CLI reported them; the Calls table rounds
+each to six places; not billed). Codex
 subscription: 6 third-check calls and 5 short test calls; no cost
 reported.
 
