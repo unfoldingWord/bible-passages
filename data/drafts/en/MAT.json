@@ -1,0 +1,2888 @@
+{
+  "language": "en",
+  "book": "MAT",
+  "bible": "bsb-mat",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793901692-DB9XFjMkB9ZQBpONaKUl",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6498,
+      "completionTokens": 4823,
+      "reasoningTokens": 3753,
+      "cost": 0.061226,
+      "ms": 31882
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901724-SAkfE57HYW1KQkuQwVry",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6005,
+      "completionTokens": 5652,
+      "reasoningTokens": 4628,
+      "cost": 0.06853,
+      "ms": 36215
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901760-qGBOynO7N2u2tSY9NyhG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5979,
+      "completionTokens": 5832,
+      "reasoningTokens": 4807,
+      "cost": 0.070278,
+      "ms": 38568
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901798-mkSyPBQpuIQDM4mDx8uu",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5952,
+      "completionTokens": 4535,
+      "reasoningTokens": 3523,
+      "cost": 0.057254,
+      "ms": 27918
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901826-rx6ZlYtwTewbYrRQJc4H",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5852,
+      "completionTokens": 5464,
+      "reasoningTokens": 4437,
+      "cost": 0.066344,
+      "ms": 36225
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901863-100zERptFT8uYQdw6MrB",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6281,
+      "completionTokens": 4427,
+      "reasoningTokens": 3409,
+      "cost": 0.056832,
+      "ms": 27009
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901890-FB6WIZr1ucm3TLz5AdwY",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5757,
+      "completionTokens": 4707,
+      "reasoningTokens": 3676,
+      "cost": 0.058584,
+      "ms": 30089
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901920-YchkipMPvrCTDYiWarKz",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6383,
+      "completionTokens": 4001,
+      "reasoningTokens": 3010,
+      "cost": 0.052776,
+      "ms": 25718
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901946-1UhbqsgP3im6OKxdhxpS",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5672,
+      "completionTokens": 988,
+      "reasoningTokens": 0,
+      "cost": 0.021224,
+      "ms": 6137
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901952-rtGkAMRvg27rBhR48UlC",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6154,
+      "completionTokens": 1025,
+      "reasoningTokens": 0,
+      "cost": 0.022558,
+      "ms": 6760
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901958-Wj9uKrwhAdvq4VUnaKwU",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6273,
+      "completionTokens": 4519,
+      "reasoningTokens": 3530,
+      "cost": 0.057736,
+      "ms": 28574
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793901987-yMTTXITu8Qps5V2tVExf",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5985,
+      "completionTokens": 4076,
+      "reasoningTokens": 3055,
+      "cost": 0.05273,
+      "ms": 24824
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902012-mh6FDidv6RkCMci7TV6E",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5239,
+      "completionTokens": 25808,
+      "reasoningTokens": 24531,
+      "cost": 0.10070925,
+      "ms": 220352
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902232-V5SFrmQOwaLP6BjHJTFF",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5057,
+      "completionTokens": 10386,
+      "reasoningTokens": 9367,
+      "cost": 0.04274025,
+      "ms": 71920
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902304-meb1XPvpwVFolGlBRCnB",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4933,
+      "completionTokens": 16623,
+      "reasoningTokens": 15694,
+      "cost": 0.066036,
+      "ms": 83480
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902388-G4GC9pFnFKZBsKtKnIwA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5002,
+      "completionTokens": 5040,
+      "reasoningTokens": 4093,
+      "cost": 0.0226515,
+      "ms": 28106
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902416-QVhmPhOVNswYTKqyUld4",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4984,
+      "completionTokens": 18932,
+      "reasoningTokens": 17894,
+      "cost": 0.074733,
+      "ms": 144103
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902560-ba76zVYR2AkI7gt4S8VO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5183,
+      "completionTokens": 17255,
+      "reasoningTokens": 16214,
+      "cost": 0.0685935,
+      "ms": 115325
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902675-ENquWGGpnePBiHRdmZB8",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4904,
+      "completionTokens": 18374,
+      "reasoningTokens": 17286,
+      "cost": 0.0725805,
+      "ms": 120625
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902796-MqrFO1AyMGXkxuEhvlzR",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5341,
+      "completionTokens": 6207,
+      "reasoningTokens": 5239,
+      "cost": 0.027282,
+      "ms": 48396
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902844-Mq2l4N14eAI8HucC0Rhu",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4796,
+      "completionTokens": 9409,
+      "reasoningTokens": 8442,
+      "cost": 0.03888075,
+      "ms": 73396
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902918-17rKC4HUwvg1djkneIOz",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5259,
+      "completionTokens": 7309,
+      "reasoningTokens": 6157,
+      "cost": 0.031353,
+      "ms": 51068
+    },
+    {
+      "role": "check",
+      "id": "gen-1793902969-qELIQefvhyWBiYCRBBGU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5250,
+      "completionTokens": 5313,
+      "reasoningTokens": 4338,
+      "cost": 0.02386125,
+      "ms": 39039
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903008-q6E9UTfSWttHf6GQKWXT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5007,
+      "completionTokens": 15776,
+      "reasoningTokens": 14747,
+      "cost": 0.06291525,
+      "ms": 106810
+    }
+  ],
+  "titles": {
+    "MAT.1.1-3": {
+      "text": "The family record of Jesus from Abraham to Ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a complete sentence statement.",
+        "suggestion": "The record traces Jesus’ line from Abraham to Ram"
+      }
+    },
+    "MAT.1.4-6": {
+      "text": "Jesus’ ancestors from Ram to King David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "style"],
+        "why": "The title is a phrase rather than a sentence and leaves out Solomon in verse 6.",
+        "suggestion": "The record traces Jesus’ line from Ram to Solomon"
+      }
+    },
+    "MAT.1.7-8": {
+      "text": "Jesus’ ancestors from Solomon to Uzziah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a complete sentence statement.",
+        "suggestion": "The record traces Jesus’ line from Solomon to Uzziah"
+      }
+    },
+    "MAT.1.9-11": {
+      "text": "Jesus’ ancestors from Uzziah to the exile in Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a complete sentence statement.",
+        "suggestion": "The record traces Jesus’ line from Uzziah to the exile"
+      }
+    },
+    "MAT.1.12-14": {
+      "text": "Jesus’ ancestors from Jeconiah to Eliud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a complete sentence statement.",
+        "suggestion": "The record traces Jesus’ line from Jeconiah to Eliud"
+      }
+    },
+    "MAT.1.15-17": {
+      "text": "The family record reaches Joseph and then Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.1.18-19": {
+      "text": "Mary is with child, so Joseph plans a quiet divorce",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.1.20-21": {
+      "text": "An angel tells Joseph to take Mary as his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.1.22-23": {
+      "text": "Jesus’ birth fulfills the prophet’s word: God with us",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "style"],
+        "why": "Jesus has not yet been born in these verses, and a colon should not be used in the sentence.",
+        "suggestion": "Mary’s pregnancy fulfills what the prophet said"
+      }
+    },
+    "MAT.1.24-25": {
+      "text": "Joseph obeys the angel and names the Son Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.1-3": {
+      "text": "Magi come to Jerusalem looking for the King of the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.4-6": {
+      "text": "Herod learns the Christ will be born in Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.7-8": {
+      "text": "Herod secretly sends the Magi to find the Child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.9-10": {
+      "text": "The star leads the Magi to the Child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.11-12": {
+      "text": "The Magi worship Jesus and give gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.16-16": {
+      "text": "Herod angrily kills the young boys of Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.17-18": {
+      "text": "Jeremiah’s words about weeping for children come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.19-21": {
+      "text": "An angel tells Joseph in Egypt to return to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.2.22-23": {
+      "text": "Joseph settles his family in Nazareth in Galilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.1-3": {
+      "text": "John the Baptist preaches in the wilderness of Judea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.4-6": {
+      "text": "People come to John and are baptized in the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.7-9": {
+      "text": "John warns the Pharisees and Sadducees to repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.10-12": {
+      "text": "John says a more powerful One will baptize with the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.13-15": {
+      "text": "Jesus comes to John to be baptized in the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.3.16-17": {
+      "text": "God’s voice from heaven calls Jesus his beloved Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.1-4": {
+      "text": "The devil tempts Jesus to turn stones into bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.5-6": {
+      "text": "The devil tells Jesus to throw himself from the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.7-9": {
+      "text": "The devil offers Jesus the world’s kingdoms for worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title misses Jesus’ reply to the second temptation in verse 7.",
+        "suggestion": "Jesus refuses to test God, and the devil tempts him again"
+      }
+    },
+    "MAT.4.10-11": {
+      "text": "Jesus sends Satan away and angels serve him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.12-13": {
+      "text": "Jesus moves to Capernaum in Galilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.14-16": {
+      "text": "Isaiah’s words about a great light for Galilee come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.17-17": {
+      "text": "Jesus begins to preach that people must repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.18-20": {
+      "text": "Jesus calls Simon Peter and Andrew to follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.4.21-22": {
+      "text": "Jesus calls James and John to follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.3-4": {
+      "text": "Jesus says the poor in spirit and mourners are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.5-8": {
+      "text": "Jesus blesses the meek, the merciful and the pure in heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.9-10": {
+      "text": "Jesus blesses peacemakers and persecuted believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.11-12": {
+      "text": "Jesus tells his followers to rejoice when insulted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.13-14": {
+      "text": "Jesus says believers are the salt and light of the world",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.15-16": {
+      "text": "Jesus urges believers to show good deeds to all people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.17-18": {
+      "text": "Jesus came to fulfill the Law, not to abolish it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.19-20": {
+      "text": "Jesus says those who obey the commandments are called great",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.21-22": {
+      "text": "Jesus teaches that anger is as serious as murder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.23-24": {
+      "text": "Jesus tells believers to make peace before offering gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.25-26": {
+      "text": "Jesus urges believers to settle disputes before court",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.27-28": {
+      "text": "Jesus says lustful looking is the same as adultery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.29-30": {
+      "text": "Jesus says believers must remove whatever causes sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.33-35": {
+      "text": "Jesus tells believers not to swear oaths at all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.36-37": {
+      "text": "Jesus says believers should simply say yes or no",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.38-39": {
+      "text": "Jesus tells believers not to resist an evil person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.40-42": {
+      "text": "Jesus tells believers to give freely and go the extra mile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “go the extra mile” is an English idiom rather than plain words from the text.",
+        "suggestion": "Jesus tells believers to give freely and go two miles"
+      }
+    },
+    "MAT.5.43-45": {
+      "text": "Jesus tells believers to love and pray for enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.5.46-48": {
+      "text": "Jesus says believers must love more than tax collectors do",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.1-2": {
+      "text": "Jesus warns believers not to give to be seen by people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.3-4": {
+      "text": "Jesus says believers should give in secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.5-7": {
+      "text": "Jesus tells believers to pray privately, not to be seen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.8-10": {
+      "text": "Jesus teaches believers to pray to the Father in heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.11-13": {
+      "text": "Jesus teaches believers to ask for bread and forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.14-15": {
+      "text": "Jesus says God forgives only believers who forgive others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.25-26": {
+      "text": "Jesus tells believers not to worry about food or clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.27-29": {
+      "text": "Jesus points to the lilies to show worry is useless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.30-31": {
+      "text": "Jesus says God will provide clothes for believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.6.32-34": {
+      "text": "Jesus tells believers to seek God’s kingdom first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.1-2": {
+      "text": "Jesus tells believers not to judge others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.3-5": {
+      "text": "Jesus tells believers to correct themselves before others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.6-6": {
+      "text": "Jesus warns believers not to give holy things to dogs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.7-10": {
+      "text": "Jesus says God answers believers who ask, seek and knock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.11-12": {
+      "text": "Jesus says God gives good things to those who ask",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verse 11 and misses the command in verse 12 to treat others as you want to be treated.",
+        "suggestion": "Jesus speaks on God’s gifts and treating others well"
+      }
+    },
+    "MAT.7.15-17": {
+      "text": "Jesus warns believers about false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.18-20": {
+      "text": "Jesus says bad trees are cut down and burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.21-23": {
+      "text": "Jesus says only those who obey God will enter the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.24-25": {
+      "text": "Jesus tells of a wise man whose house stood on rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.7.26-27": {
+      "text": "Jesus tells of a foolish man whose house fell",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.1-3": {
+      "text": "Jesus touches a man with leprosy and heals him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.4-4": {
+      "text": "Jesus tells the healed man to show himself to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.5-7": {
+      "text": "A centurion asks Jesus to heal his paralyzed servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.8-10": {
+      "text": "The centurion shows great faith in Jesus’ word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.11-13": {
+      "text": "Jesus speaks of the kingdom and heals the servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.14-15": {
+      "text": "Jesus heals Peter’s mother-in-law of a fever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.16-17": {
+      "text": "Jesus drives out spirits and heals all the sick",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.18-20": {
+      "text": "Jesus tells a scribe the Son of Man has no home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.21-22": {
+      "text": "Jesus tells a disciple to follow him now",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.23-25": {
+      "text": "A storm hits the boat and the disciples wake Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.26-27": {
+      "text": "Jesus calms the wind and sea and the men are amazed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.28-29": {
+      "text": "Two men with demons meet Jesus and shout at him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.30-32": {
+      "text": "Jesus sends the demons into pigs, and the pigs die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.8.33-34": {
+      "text": "The people of the town ask Jesus to leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.1-2": {
+      "text": "Jesus forgives the sins of a paralyzed man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.3-6": {
+      "text": "Jesus shows he can forgive sins and heals the man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.7-8": {
+      "text": "The man goes home and the crowds praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "It does not make sense alone in a list because the man who goes home is not identified.",
+        "suggestion": "The healed man goes home and the crowds praise God"
+      }
+    },
+    "MAT.9.9-9": {
+      "text": "Jesus calls Matthew at his tax booth to follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.10-11": {
+      "text": "The Pharisees ask why Jesus eats with sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.12-13": {
+      "text": "Jesus says he came to call sinners, not the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.16-16": {
+      "text": "Jesus says no one sews new cloth on an old garment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.17-17": {
+      "text": "Jesus says new wine needs new wineskins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.18-19": {
+      "text": "A synagogue leader asks Jesus to help his dead daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.20-22": {
+      "text": "Jesus heals a woman who touches his cloak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.23-24": {
+      "text": "Jesus tells the crowd the girl is only asleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.25-26": {
+      "text": "Jesus takes the girl by the hand and she gets up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.27-28": {
+      "text": "Two blind men ask Jesus for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.29-31": {
+      "text": "Jesus heals two blind men, who tell everyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.32-34": {
+      "text": "Jesus heals a mute man, and the Pharisees accuse him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.35-36": {
+      "text": "Jesus teaches, heals, and has compassion for the crowds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.9.37-38": {
+      "text": "Jesus asks the disciples to pray for more workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.1-1": {
+      "text": "Jesus gives his twelve disciples authority to heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.2-4": {
+      "text": "The names of the twelve apostles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "These are the names of the twelve apostles"
+      }
+    },
+    "MAT.10.5-7": {
+      "text": "Jesus sends the twelve to the lost sheep of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.8-10": {
+      "text": "Jesus tells the twelve to heal and to travel simply",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.11-13": {
+      "text": "Jesus tells the twelve how to stay in homes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.14-15": {
+      "text": "Jesus says towns that refuse the twelve will be judged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.16-18": {
+      "text": "Jesus warns the twelve of trials and flogging",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.19-20": {
+      "text": "The Spirit will speak for the twelve when arrested",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.21-23": {
+      "text": "Jesus says the twelve will be hated but must endure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.24-25": {
+      "text": "Jesus says a disciple is not above his teacher",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.26-27": {
+      "text": "Jesus tells the twelve not to fear and to speak openly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.28-31": {
+      "text": "Jesus tells the twelve to fear God, who cares for all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.34-36": {
+      "text": "Jesus says he came to bring division in families",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.37-39": {
+      "text": "Jesus says followers must love him more than family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.40-41": {
+      "text": "Those who welcome the twelve welcome Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.10.42-42": {
+      "text": "Jesus promises a reward for giving a cup of water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.1-3": {
+      "text": "John asks from prison if Jesus is the one to come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.4-6": {
+      "text": "Jesus tells John’s disciples to report what he does",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.7-8": {
+      "text": "Jesus asks the crowds about John in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.9-10": {
+      "text": "Jesus says John is a prophet and more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.11-12": {
+      "text": "Jesus says no one born of women is greater than John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.13-15": {
+      "text": "Jesus says John is the Elijah who was to come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.16-17": {
+      "text": "Jesus compares this generation to playing children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.18-19": {
+      "text": "Jesus says people rejected both John and himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.20-22": {
+      "text": "Jesus warns Chorazin and Bethsaida for not repenting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.23-24": {
+      "text": "Jesus warns Capernaum of judgment worse than Sodom’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.25-27": {
+      "text": "Jesus praises the Father who reveals to little children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.11.28-30": {
+      "text": "Jesus invites weary people to come to him for rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.1-2": {
+      "text": "Pharisees say Jesus’ disciples break the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.3-4": {
+      "text": "Jesus reminds the Pharisees what David did when hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.5-6": {
+      "text": "Jesus says priests work on the Sabbath and are innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.7-8": {
+      "text": "Jesus says the Son of Man is Lord of the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.9-10": {
+      "text": "Jesus is asked if it is lawful to heal on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.11-12": {
+      "text": "Jesus says it is lawful to do good on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.13-14": {
+      "text": "Jesus heals a hand; the Pharisees plot to kill Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.15-17": {
+      "text": "Jesus withdraws and heals the crowds that follow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.18-18": {
+      "text": "Isaiah says the Servant will bring justice to the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.19-21": {
+      "text": "Isaiah says the Servant will be gentle and give hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.22-23": {
+      "text": "Jesus heals a blind, mute man and the crowds are amazed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.24-25": {
+      "text": "The Pharisees say Jesus drives out demons by Beelzebul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.26-27": {
+      "text": "Jesus asks how Satan can drive out Satan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.28-30": {
+      "text": "Jesus says God’s kingdom has come; no one can stay neutral",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “stay neutral” is not the text’s own words and is not plain English.",
+        "suggestion": "Jesus says whoever is not with him is against him"
+      }
+    },
+    "MAT.12.33-35": {
+      "text": "Jesus tells the Pharisees that words show the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.36-37": {
+      "text": "Jesus says people will answer for every careless word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.38-40": {
+      "text": "Scribes and Pharisees ask Jesus for a sign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title only covers verse 38 and leaves out Jesus’ reply about the sign of Jonah in verses 39–40.",
+        "suggestion": "Jesus promises only the sign of the prophet Jonah"
+      }
+    },
+    "MAT.12.41-41": {
+      "text": "Jesus says Nineveh’s men will condemn this generation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.42-42": {
+      "text": "The Queen of the South will condemn this generation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.46-47": {
+      "text": "Jesus’ mother and brothers wait outside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.12.48-50": {
+      "text": "Jesus says those who do God’s will are his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.1-2": {
+      "text": "Jesus sits in a boat while crowds stand on the shore",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.3-6": {
+      "text": "Jesus tells of seed on the path and on rocky ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.7-9": {
+      "text": "Jesus tells of seed among thorns and on good soil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.10-12": {
+      "text": "The disciples ask Jesus why he speaks in parables",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.13-14": {
+      "text": "Jesus says the people see and hear but do not understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.15-15": {
+      "text": "Jesus quotes Isaiah about hearts that have become hard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.16-17": {
+      "text": "Jesus says the disciples are blessed to see and hear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.18-19": {
+      "text": "Jesus explains the seed that fell along the path",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.20-21": {
+      "text": "Jesus explains the seed on rocky ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.22-23": {
+      "text": "Jesus explains the seed among thorns and on good soil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.24-26": {
+      "text": "Jesus tells of an enemy who sowed weeds in the wheat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.27-28": {
+      "text": "The servants ask the owner about the weeds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.29-30": {
+      "text": "The owner says to let wheat and weeds grow together",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.36-39": {
+      "text": "Jesus explains what the seed, field and weeds mean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.40-43": {
+      "text": "Jesus says angels will remove the wicked at the end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.47-48": {
+      "text": "Jesus compares the kingdom to a net with fish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.49-50": {
+      "text": "Angels will separate the wicked from the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.51-52": {
+      "text": "Jesus says a trained scribe is like a homeowner",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.53-53": {
+      "text": "Jesus finishes the parables and leaves that place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.54-56": {
+      "text": "People in Nazareth are amazed at Jesus’ teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.13.57-58": {
+      "text": "Jesus says a prophet has no honor at home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.1-2": {
+      "text": "Herod thinks Jesus is John risen from the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.3-5": {
+      "text": "Herod had put John in prison but feared the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.6-7": {
+      "text": "Herodias’s daughter dances and Herod makes a promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.8-9": {
+      "text": "The girl asks for John’s head and Herod agrees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.10-12": {
+      "text": "John is beheaded, and his disciples tell Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.13-14": {
+      "text": "Large crowds follow Jesus, and he heals the sick",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.15-15": {
+      "text": "The disciples ask Jesus to send the crowds away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.16-18": {
+      "text": "Jesus tells the disciples to feed the crowd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.19-21": {
+      "text": "Jesus feeds more than five thousand people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.22-24": {
+      "text": "Jesus sends the disciples ahead and prays alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.25-27": {
+      "text": "Jesus walks on the sea to the frightened disciples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.28-30": {
+      "text": "Peter walks on the water but begins to sink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.14.31-33": {
+      "text": "Jesus saves Peter, and the disciples worship him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.1-3": {
+      "text": "Pharisees ask Jesus why his disciples break tradition",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.4-6": {
+      "text": "Jesus says the Pharisees’ tradition cancels God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.7-9": {
+      "text": "Jesus calls the Pharisees hypocrites, quoting Isaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.10-11": {
+      "text": "Jesus teaches the crowd what makes a person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.12-14": {
+      "text": "Jesus calls the offended Pharisees blind guides",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.15-17": {
+      "text": "Jesus explains that food goes into the stomach",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.18-20": {
+      "text": "Jesus says evil comes out of the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.21-23": {
+      "text": "A Canaanite woman asks Jesus to help her daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.24-26": {
+      "text": "Jesus tells the woman he was sent to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "Jesus answers the disciples in verse 24, and the title omits the woman kneeling to ask for help and his reply to her.",
+        "suggestion": "A woman begs Jesus, but he says he was sent to Israel"
+      }
+    },
+    "MAT.15.27-28": {
+      "text": "Jesus praises the woman’s faith and heals her daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.29-31": {
+      "text": "Jesus heals many people by the Sea of Galilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.32-35": {
+      "text": "Jesus feels sorry for the hungry crowd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.15.36-39": {
+      "text": "Jesus feeds more than four thousand people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.1-2": {
+      "text": "Pharisees and Sadducees ask Jesus for a sign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.3-4": {
+      "text": "Jesus says only the sign of Jonah will be given",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.5-8": {
+      "text": "Disciples think Jesus’ warning is about bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.9-10": {
+      "text": "Jesus reminds the disciples of the two feedings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.11-12": {
+      "text": "The disciples understand Jesus means false teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The text speaks of the teaching of the Pharisees and Sadducees rather than using the theological term 'false teaching'.",
+        "suggestion": "The disciples understand Jesus means the Pharisees’ teaching"
+      }
+    },
+    "MAT.16.13-16": {
+      "text": "Peter says Jesus is the Christ, the Son of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.17-18": {
+      "text": "Jesus names Peter the rock and promises to build the church",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.19-20": {
+      "text": "Jesus gives Peter the keys of the kingdom of heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.24-26": {
+      "text": "Jesus tells disciples to deny self and take up the cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.16.27-28": {
+      "text": "Jesus says the Son of Man will come and repay each person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.1-2": {
+      "text": "Jesus changes in appearance before Peter, James, and John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.3-4": {
+      "text": "Moses and Elijah appear, and Peter offers to build shelters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.5-8": {
+      "text": "A voice from the cloud says to listen to Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.9-10": {
+      "text": "Jesus tells three disciples to keep the vision secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.11-13": {
+      "text": "Jesus explains that Elijah has come as John the Baptist",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.14-16": {
+      "text": "A father asks Jesus to heal his son with seizures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.17-18": {
+      "text": "Jesus drives the demon out of the boy and heals him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.22-23": {
+      "text": "Jesus tells the disciples he will be killed and raised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.24-25": {
+      "text": "Tax collectors ask Peter if Jesus pays the tax",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.17.26-27": {
+      "text": "Jesus tells Peter to find a coin in a fish’s mouth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.1-3": {
+      "text": "The disciples ask Jesus who is the greatest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers the question in verse 1 and misses Jesus telling the disciples to become like children in verses 2–3.",
+        "suggestion": "Jesus tells the disciples to become like little children"
+      }
+    },
+    "MAT.18.4-5": {
+      "text": "Jesus says the humble person is greatest in the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.6-6": {
+      "text": "Jesus warns against causing little ones to stumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.7-8": {
+      "text": "Jesus tells the disciples to cut off what causes sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.9-9": {
+      "text": "Jesus says an eye that causes sin must be removed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.10-11": {
+      "text": "Jesus warns the disciples not to look down on little ones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.12-14": {
+      "text": "Jesus tells of a shepherd who searches for one lost sheep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.15-16": {
+      "text": "Believers should speak privately to a brother who sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "plain"],
+        "why": "It fits only the private talk in verse 15, misses taking witnesses in verse 16, and does not name Jesus as the speaker.",
+        "suggestion": "Jesus tells how to correct a brother who sins"
+      }
+    },
+    "MAT.18.17-17": {
+      "text": "Believers should tell the church if a brother will not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 61 characters, it exceeds the 60-character limit.",
+        "suggestion": "Jesus tells what to do if a brother will not listen"
+      }
+    },
+    "MAT.18.18-18": {
+      "text": "Jesus says what believers bind on earth is bound in heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.21-22": {
+      "text": "Jesus tells Peter to forgive seventy-seven times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.23-25": {
+      "text": "A servant cannot pay the huge debt he owes the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.26-27": {
+      "text": "The king has mercy and forgives the servant’s debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.28-29": {
+      "text": "The servant demands payment from a fellow servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.30-31": {
+      "text": "The servant has his fellow servant put in prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.32-33": {
+      "text": "The king calls the servant wicked for showing no mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.18.34-35": {
+      "text": "Jesus says God will punish believers who do not forgive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.1-2": {
+      "text": "Jesus goes to Judea and heals the crowds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.3-4": {
+      "text": "Pharisees ask Jesus if a man may divorce his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.5-6": {
+      "text": "Jesus says God joins husband and wife as one",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.7-9": {
+      "text": "Jesus explains why Moses allowed divorce",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.10-12": {
+      "text": "Jesus teaches that only some can accept not marrying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.16-17": {
+      "text": "A man asks Jesus how to get eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.18-19": {
+      "text": "Jesus lists the commandments to the man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.20-22": {
+      "text": "The young man leaves sadly when Jesus says to sell all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.23-24": {
+      "text": "Jesus says it is hard for a rich man to enter the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.25-27": {
+      "text": "Jesus says God can do all things; Peter asks about reward",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.28-28": {
+      "text": "Jesus promises the twelve disciples will sit on thrones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.19.29-30": {
+      "text": "Jesus promises rewards to those who leave all for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.1-2": {
+      "text": "A landowner hires workers early for his vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.3-4": {
+      "text": "The landowner hires more workers at the third hour",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.5-7": {
+      "text": "The landowner hires more workers later in the day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.8-10": {
+      "text": "The landowner pays all the workers one denarius each",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.11-12": {
+      "text": "The first workers complain to the landowner about pay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.13-14": {
+      "text": "The landowner tells one worker he is not being unfair",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.15-16": {
+      "text": "The landowner defends his generosity; last will be first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.20-21": {
+      "text": "A mother asks Jesus for high places for her two sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.22-24": {
+      "text": "Jesus answers the two brothers; the ten are angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.25-28": {
+      "text": "Jesus teaches that the greatest must serve others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.29-31": {
+      "text": "Two blind men call out to Jesus for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.20.32-34": {
+      "text": "Jesus heals the two blind men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.1-3": {
+      "text": "Jesus sends two disciples to bring a donkey and colt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.4-5": {
+      "text": "This fulfills the prophet’s words about the coming King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “This” does not make clear on its own in a list what fulfills the prophecy.",
+        "suggestion": "Jesus fulfills a prophecy about a king on a donkey"
+      }
+    },
+    "MAT.21.6-8": {
+      "text": "The disciples bring the donkey; the crowd spreads cloaks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.9-11": {
+      "text": "The crowds praise Jesus as he enters Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.12-14": {
+      "text": "Jesus drives out the sellers from the temple and heals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.15-17": {
+      "text": "Chief priests are angry when children praise Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.18-19": {
+      "text": "Jesus makes a fig tree with no fruit wither",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.20-22": {
+      "text": "Jesus teaches the disciples about faith and prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.23-24": {
+      "text": "Priests and elders ask Jesus by what authority he acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.25-27": {
+      "text": "The leaders cannot answer Jesus about John’s baptism",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.28-30": {
+      "text": "A man’s two sons are told to work in the vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.31-32": {
+      "text": "Jesus says tax collectors enter God’s kingdom first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.33-34": {
+      "text": "A landowner rents his vineyard to tenants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.35-37": {
+      "text": "The tenants beat and kill the owner’s servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.38-39": {
+      "text": "The tenants kill the owner’s son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.40-41": {
+      "text": "The leaders say what the owner will do to the tenants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.42-42": {
+      "text": "Jesus asks the leaders about the rejected stone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.43-44": {
+      "text": "Jesus says God’s kingdom will be given to others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.21.45-46": {
+      "text": "The leaders know the parables are about them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.1-3": {
+      "text": "A king invites guests to his son’s wedding banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.4-4": {
+      "text": "The king sends more servants to call the guests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.5-7": {
+      "text": "The guests refuse and kill servants; the king is angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.8-10": {
+      "text": "The king’s servants invite everyone they find",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.11-12": {
+      "text": "The king finds a man without wedding clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.13-14": {
+      "text": "The king throws out the man without wedding clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.15-17": {
+      "text": "The Pharisees try to trap Jesus about paying taxes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.18-19": {
+      "text": "Jesus knows their evil plan and asks for a coin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.20-22": {
+      "text": "Jesus says to give Caesar’s things to Caesar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.23-24": {
+      "text": "The Sadducees ask Jesus about a widow and brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.25-28": {
+      "text": "The Sadducees ask whose wife the woman will be",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.29-30": {
+      "text": "Jesus says people in the resurrection are like angels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.31-33": {
+      "text": "Jesus says God is the God of the living",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.34-36": {
+      "text": "An expert in the law asks Jesus about the greatest commandment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, exceeding the limit of 60.",
+        "suggestion": "An expert in the law asks Jesus which command is greatest"
+      }
+    },
+    "MAT.22.37-38": {
+      "text": "Jesus says to love God is the greatest commandment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.39-40": {
+      "text": "Jesus says the second commandment is to love your neighbor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.41-42": {
+      "text": "Jesus asks the Pharisees whose son the Christ is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.43-44": {
+      "text": "Jesus asks why David calls the Christ Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.22.45-46": {
+      "text": "No one can answer Jesus, and they stop asking him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.1-3": {
+      "text": "Jesus tells the crowds not to copy the Pharisees’ actions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.4-5": {
+      "text": "The scribes and Pharisees act only to be seen by people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.6-7": {
+      "text": "The scribes and Pharisees love honor and titles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.8-10": {
+      "text": "Jesus tells his followers not to seek titles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.11-12": {
+      "text": "Jesus says the greatest must be a servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.13-15": {
+      "text": "Jesus warns the scribes and Pharisees: they shut the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.16-17": {
+      "text": "Jesus calls the leaders blind about swearing by the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.18-19": {
+      "text": "Jesus calls the leaders blind about swearing by the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.20-22": {
+      "text": "Jesus explains what an oath by the altar or temple means",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.23-24": {
+      "text": "Jesus says the Pharisees ignore justice, mercy and faithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 63 characters, exceeding the limit of 60 characters.",
+        "suggestion": "Jesus says the Pharisees ignore justice and mercy"
+      }
+    },
+    "MAT.23.25-26": {
+      "text": "Jesus says the Pharisees are clean outside but greedy inside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.27-28": {
+      "text": "Jesus says the Pharisees are like whitewashed tombs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.29-31": {
+      "text": "Jesus says the Pharisees are like those who killed prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.32-33": {
+      "text": "Jesus calls the Pharisees snakes and warns of hell",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.23.34-36": {
+      "text": "Jesus says judgment for killing the righteous will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.1-2": {
+      "text": "Jesus says the temple stones will be thrown down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.3-5": {
+      "text": "The disciples ask about the end, and Jesus warns of deceivers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, exceeding the limit of 60 characters.",
+        "suggestion": "The disciples ask about the end, and Jesus warns them"
+      }
+    },
+    "MAT.24.6-8": {
+      "text": "Jesus tells the disciples about wars, famines and earthquakes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, exceeding the limit of 60 characters.",
+        "suggestion": "Jesus warns of wars, famines, and earthquakes"
+      }
+    },
+    "MAT.24.9-11": {
+      "text": "Jesus says believers will be hated and false prophets will rise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 63 characters, exceeding the limit of 60 characters.",
+        "suggestion": "Jesus says his followers will be hated and misled"
+      }
+    },
+    "MAT.24.12-14": {
+      "text": "Jesus says whoever endures will be saved; the gospel will spread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 64 characters, exceeding the limit of 60 characters.",
+        "suggestion": "Jesus says whoever endures is saved and the gospel spreads"
+      }
+    },
+    "MAT.24.15-18": {
+      "text": "Jesus tells people in Judea to flee to the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.19-22": {
+      "text": "Jesus warns of great suffering in those days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.23-25": {
+      "text": "Jesus warns the disciples about false Christs and prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.26-28": {
+      "text": "Jesus says the Son of Man will come like lightning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.29-29": {
+      "text": "Jesus says the sun, moon and stars will be shaken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.30-31": {
+      "text": "The Son of Man will come and gather his chosen people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.32-33": {
+      "text": "Jesus uses the fig tree to teach the disciples about signs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.34-35": {
+      "text": "Jesus says these things will happen but his words last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.36-36": {
+      "text": "Only the Father knows the day and hour",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.37-39": {
+      "text": "Jesus compares his coming to the days of Noah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.40-42": {
+      "text": "Jesus tells the disciples to keep watch for the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.43-44": {
+      "text": "Jesus tells the disciples to be ready like a homeowner",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.45-47": {
+      "text": "Jesus praises the faithful servant who does his work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.24.48-51": {
+      "text": "Jesus warns about the wicked servant who is punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.1-4": {
+      "text": "Jesus tells of ten virgins, five wise and five foolish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.5-6": {
+      "text": "The bridegroom is late and arrives at midnight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.7-9": {
+      "text": "The foolish virgins ask for oil, but the wise refuse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.10-13": {
+      "text": "The bridegroom comes and the door is shut on five virgins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.14-16": {
+      "text": "A man gives talents to his servants before a journey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.17-18": {
+      "text": "One servant gains more talents; another hides his talent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.19-21": {
+      "text": "The master praises the servant who gained five talents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.22-23": {
+      "text": "The master praises the servant who gained two talents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.24-25": {
+      "text": "The servant with one talent says he was afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.26-27": {
+      "text": "The master calls the servant wicked and lazy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.28-30": {
+      "text": "The master takes the talent and punishes the servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.31-33": {
+      "text": "The Son of Man will separate the sheep from the goats",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.34-36": {
+      "text": "The King welcomes those who helped him in need",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.37-40": {
+      "text": "The King says that helping his brothers is helping him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.41-43": {
+      "text": "The King rejects those on his left who did not help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.25.44-46": {
+      "text": "The King sends the two groups to punishment or life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.1-2": {
+      "text": "Jesus tells the disciples he will be crucified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.3-5": {
+      "text": "The leaders plan to arrest and kill Jesus secretly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.6-9": {
+      "text": "A woman pours perfume on Jesus and the disciples object",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.10-11": {
+      "text": "Jesus says the woman did a beautiful deed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.12-13": {
+      "text": "Jesus says the woman prepared his body for burial",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.20-22": {
+      "text": "Jesus says one of the twelve disciples will betray him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.23-25": {
+      "text": "Jesus warns about the betrayer and answers Judas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.26-26": {
+      "text": "Jesus gives the disciples bread as his body",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.27-29": {
+      "text": "Jesus gives the cup as his blood of the covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.30-30": {
+      "text": "Jesus and the disciples go to the Mount of Olives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.31-32": {
+      "text": "Jesus says all the disciples will fall away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.33-35": {
+      "text": "Peter promises loyalty; Jesus says Peter will deny him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.36-38": {
+      "text": "Jesus is sorrowful and asks Peter and two others to watch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.39-41": {
+      "text": "Jesus prays, then finds the disciples asleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.42-44": {
+      "text": "Jesus prays again that God’s will be done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.45-46": {
+      "text": "Jesus wakes the disciples because the betrayer is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.47-48": {
+      "text": "Judas comes with a crowd to arrest Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.49-50": {
+      "text": "Judas kisses Jesus and the men arrest him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.51-54": {
+      "text": "Jesus tells a disciple to put away his sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.55-56": {
+      "text": "Jesus speaks to the crowd and the disciples run away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.57-58": {
+      "text": "Jesus is taken to Caiaphas and Peter follows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.59-61": {
+      "text": "Leaders look for false witnesses against Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.62-64": {
+      "text": "Jesus answers the high priest about being the Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.65-66": {
+      "text": "The high priest says Jesus blasphemed and deserves death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The other leaders, not the high priest, declare that Jesus deserves to die.",
+        "suggestion": "The leaders say Jesus blasphemed and deserves to die"
+      }
+    },
+    "MAT.26.67-68": {
+      "text": "The men spit on Jesus, hit him and mock him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.69-70": {
+      "text": "A servant girl says Peter was with Jesus; Peter denies it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.71-72": {
+      "text": "Peter denies Jesus again with an oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.26.73-75": {
+      "text": "Peter says he does not know Jesus and weeps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.3-5": {
+      "text": "Judas returns the silver and hangs himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.6-8": {
+      "text": "The chief priests buy the potter’s field with the silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.9-10": {
+      "text": "Jeremiah’s words about the thirty silver pieces come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.15-16": {
+      "text": "Pilate had a custom to free one prisoner at the feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.17-19": {
+      "text": "Pilate asks the crowd to choose Barabbas or Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.20-22": {
+      "text": "The crowd asks for Barabbas and for Jesus to be crucified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.23-23": {
+      "text": "The crowd shouts louder for Jesus to be crucified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.24-24": {
+      "text": "Pilate washes his hands and says he is innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.25-26": {
+      "text": "Pilate frees Barabbas and hands Jesus over to be crucified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.27-29": {
+      "text": "The soldiers dress Jesus as a king and mock him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.30-31": {
+      "text": "The soldiers spit on Jesus, strike him, and lead him away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.32-34": {
+      "text": "Simon carries Jesus’ cross at Golgotha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Simon carried the cross on the way to Golgotha, not at Golgotha.",
+        "suggestion": "Simon carries Jesus’ cross to Golgotha"
+      }
+    },
+    "MAT.27.35-37": {
+      "text": "Soldiers divide Jesus’ clothes and put up the charge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.38-40": {
+      "text": "Two robbers are crucified, and people mock Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.41-42": {
+      "text": "The religious leaders mock Jesus on the cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.43-44": {
+      "text": "Leaders and robbers insult Jesus on the cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.45-47": {
+      "text": "Darkness comes, and Jesus cries out to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.48-50": {
+      "text": "Someone gives Jesus sour wine, and Jesus dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.51-53": {
+      "text": "The temple veil tears and the earth shakes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes verse 51 and omits the tombs opening and the saints being raised in verses 52–53.",
+        "suggestion": "The temple veil tears, and many saints are raised"
+      }
+    },
+    "MAT.27.54-56": {
+      "text": "The centurion says Jesus is the Son of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.57-58": {
+      "text": "Joseph of Arimathea asks Pilate for Jesus’ body",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.59-61": {
+      "text": "Joseph puts Jesus in his own new tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.62-64": {
+      "text": "The chief priests ask Pilate to secure the tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.27.65-66": {
+      "text": "Pilate allows a guard, and the tomb is sealed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.1-2": {
+      "text": "Two women come to the tomb, and an angel opens it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.3-4": {
+      "text": "The guards shake with fear of the angel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.5-7": {
+      "text": "The angel tells the women that Jesus has risen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.8-10": {
+      "text": "Jesus meets the women, who worship him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.11-13": {
+      "text": "The chief priests pay the guards to tell a lie",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.14-15": {
+      "text": "The guards take the money and spread the false story",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.16-17": {
+      "text": "The eleven disciples see Jesus in Galilee and worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.18-19": {
+      "text": "Jesus tells the disciples to make disciples of all nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAT.28.20-20": {
+      "text": "Jesus promises to be with the disciples always",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

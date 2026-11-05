@@ -1,0 +1,1363 @@
+{
+  "language": "en",
+  "book": "ROM",
+  "bible": "bsb-rom",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904133-FSXL4aXdm7PWuvZ5Od9g",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5708,
+      "completionTokens": 6089,
+      "reasoningTokens": 5121,
+      "cost": 0.072306,
+      "ms": 41500
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904175-dpsqHpMtYTwPfZXM5j4E",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5639,
+      "completionTokens": 5483,
+      "reasoningTokens": 4578,
+      "cost": 0.066108,
+      "ms": 35788
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904211-KIg9ToSDVFuMQtxmnc02",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5593,
+      "completionTokens": 5067,
+      "reasoningTokens": 4138,
+      "cost": 0.061856,
+      "ms": 33892
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904245-AcveFoxqWT6DsxfXo8Xh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5886,
+      "completionTokens": 6119,
+      "reasoningTokens": 5180,
+      "cost": 0.072962,
+      "ms": 38264
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904283-DAoaz8O11K1Z5cwgfrkI",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5466,
+      "completionTokens": 5459,
+      "reasoningTokens": 4443,
+      "cost": 0.065522,
+      "ms": 36986
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904320-NxHMXfilwqaTEOZW0OFk",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5362,
+      "completionTokens": 4574,
+      "reasoningTokens": 3584,
+      "cost": 0.056464,
+      "ms": 30519
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904351-HCGNsBPVsrgLzxcREIvt",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4828,
+      "completionTokens": 11806,
+      "reasoningTokens": 10943,
+      "cost": 0.0478935,
+      "ms": 76385
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904427-2QFJx9Qn5A3hdKle97ay",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4747,
+      "completionTokens": 9065,
+      "reasoningTokens": 8163,
+      "cost": 0.037554,
+      "ms": 41876
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904469-VV6uJoKUWA5MK6jLaHC9",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4843,
+      "completionTokens": 6726,
+      "reasoningTokens": 5878,
+      "cost": 0.02885475,
+      "ms": 43085
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904512-ccIWlLaUjKkd3VpMLMdG",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4904,
+      "completionTokens": 8140,
+      "reasoningTokens": 7213,
+      "cost": 0.034203,
+      "ms": 50141
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904562-bVpHxU6dKzEL6eIjDK5y",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4657,
+      "completionTokens": 4429,
+      "reasoningTokens": 3558,
+      "cost": 0.0201015,
+      "ms": 24986
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904587-OFVCIo8RORiNDHyIa37a",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4510,
+      "completionTokens": 11585,
+      "reasoningTokens": 10478,
+      "cost": 0.04682625,
+      "ms": 90864
+    }
+  ],
+  "titles": {
+    "ROM.1.1-3": {
+      "text": "Paul says he is set apart to preach God’s gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.4-6": {
+      "text": "Paul was sent to call the Gentiles to obey by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.7-7": {
+      "text": "Paul greets the believers in Rome with grace and peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.8-10": {
+      "text": "Paul thanks God for the Romans and prays to visit Rome",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.11-12": {
+      "text": "Paul wants to visit Rome to strengthen the believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.13-15": {
+      "text": "Paul often planned to visit Rome and preach the gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.16-17": {
+      "text": "Paul is not ashamed of the gospel, God’s power to save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.18-19": {
+      "text": "God’s anger is against people who hide the truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.20-21": {
+      "text": "People can see God in creation, yet do not thank him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.22-23": {
+      "text": "People exchanged God’s glory for images",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.24-25": {
+      "text": "God gave people up to impurity because they chose lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.26-27": {
+      "text": "God gave people over to dishonorable passions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.28-28": {
+      "text": "God gave people up to wrong thinking for rejecting him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.29-31": {
+      "text": "People are filled with every kind of evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.1.32-32": {
+      "text": "People know sin deserves death yet approve it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.1-2": {
+      "text": "Paul says those who judge others condemn themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.3-4": {
+      "text": "God’s kindness leads people to turn from sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.5-7": {
+      "text": "God will repay each person for what he has done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.8-9": {
+      "text": "God’s anger will come on all who do evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.10-12": {
+      "text": "God rewards all who do good and shows no favoritism",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.13-14": {
+      "text": "God accepts those who do the law, not only hear it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.15-16": {
+      "text": "God will judge secret thoughts through Christ Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.17-20": {
+      "text": "Paul speaks to Jews who rely on the law and boast in God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.21-22": {
+      "text": "Paul challenges Jews who teach others but break the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.23-24": {
+      "text": "Jews who break the law dishonor God among the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.25-27": {
+      "text": "Circumcision has value only if a person obeys the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.2.28-29": {
+      "text": "True Jews are Jews in heart, praised by God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.1-2": {
+      "text": "Paul says Jews were trusted with God’s words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.3-4": {
+      "text": "Human unfaithfulness does not cancel God’s faithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.5-6": {
+      "text": "Paul says God is not unjust to judge the world",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.7-8": {
+      "text": "Paul denies that people should do evil for good results",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.9-10": {
+      "text": "Paul says Jews and Greeks are all under sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.11-12": {
+      "text": "Scripture says no one seeks God or does good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.13-14": {
+      "text": "Scripture says people’s words are deceitful and bitter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.15-18": {
+      "text": "Paul says people are violent and do not fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.19-20": {
+      "text": "The law shows that all people are guilty before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.21-22": {
+      "text": "God’s righteousness comes through faith to all who believe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.23-24": {
+      "text": "All people have sinned, but God gives grace freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.25-26": {
+      "text": "God offered Jesus as a sacrifice to show he is just",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.27-28": {
+      "text": "Paul says faith, not works, leaves no room for boasting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.29-30": {
+      "text": "God makes both Jews and Gentiles right by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.3.31-31": {
+      "text": "Paul says faith does not cancel the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.1-3": {
+      "text": "Paul asks if Abraham was made right by works",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "Paul does not ask this question, and the draft ignores verse 3 where Abraham is made right by believing God.",
+        "suggestion": "Abraham was made right because he believed God"
+      }
+    },
+    "ROM.4.4-5": {
+      "text": "God accepts the faith of those who do not work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.6-8": {
+      "text": "David says people whose sins are forgiven are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.9-10": {
+      "text": "Abraham was made right before he was circumcised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.11-12": {
+      "text": "Abraham is the father of all who believe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.13-15": {
+      "text": "The promise to Abraham came by faith, not by law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.16-17": {
+      "text": "The promise is for all who have Abraham’s faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.18-19": {
+      "text": "Abraham believed God’s promise although he was very old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.20-22": {
+      "text": "Abraham trusted that God would do what he promised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.4.23-25": {
+      "text": "Paul says the words about Abraham are also for believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.1-2": {
+      "text": "Believers have peace with God through Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.3-5": {
+      "text": "Believers rejoice in suffering and have hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.6-7": {
+      "text": "Christ died for the ungodly at the right time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.8-9": {
+      "text": "God shows his love because Christ died for sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.10-11": {
+      "text": "Believers are reconciled to God by the death of his Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.12-13": {
+      "text": "Sin and death came into the world through one man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.14-15": {
+      "text": "Grace through Jesus Christ is greater than Adam’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.16-17": {
+      "text": "Believers will reign in life through Jesus Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.18-19": {
+      "text": "One man’s sin brought condemnation; Christ brings life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.5.20-21": {
+      "text": "Grace increases where sin increased and brings life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.1-3": {
+      "text": "Paul says believers must not continue in sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.4-5": {
+      "text": "Believers walk in new life, united with Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.6-7": {
+      "text": "Believers died with Christ and are free from sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.8-9": {
+      "text": "Believers who died with Christ will also live with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.10-11": {
+      "text": "Paul tells believers to count themselves dead to sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.12-14": {
+      "text": "Paul urges believers to offer themselves to God, not sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.15-16": {
+      "text": "Paul says believers must not sin because of grace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.17-18": {
+      "text": "Paul thanks God that believers are free from sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.19-21": {
+      "text": "Paul urges believers to serve righteousness, not impurity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.6.22-23": {
+      "text": "Sin pays with death, but God gives eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.1-1": {
+      "text": "Paul says the law rules a person only until death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.2-3": {
+      "text": "A wife is free to marry again after her husband dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.4-5": {
+      "text": "Believers died to the law to belong to Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.6-6": {
+      "text": "Believers are released from the law to serve in the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.7-8": {
+      "text": "Paul says the law is not sin but shows what sin is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.9-10": {
+      "text": "Paul says the commandment brought him death, not life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.11-12": {
+      "text": "Sin deceived Paul, but the law is holy and good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.13-14": {
+      "text": "Paul says sin used the good law to cause death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.15-16": {
+      "text": "Paul does what he hates and not what he wants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.17-18": {
+      "text": "Paul says sin that lives in him does the evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.19-21": {
+      "text": "Paul keeps doing the evil he does not want to do",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.22-23": {
+      "text": "Paul delights in God’s law, but sin holds him captive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.7.24-25": {
+      "text": "Paul cries out for rescue and thanks God through Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.1-2": {
+      "text": "Believers in Christ Jesus are no longer condemned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.3-5": {
+      "text": "God sent his Son so believers can live by the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.6-8": {
+      "text": "The mind of the flesh brings death; the Spirit brings life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.9-10": {
+      "text": "The Spirit of Christ lives in believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.11-11": {
+      "text": "God will give life to believers’ bodies by his Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.12-13": {
+      "text": "Believers must not live by the flesh, but by the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.14-15": {
+      "text": "Believers led by the Spirit are children of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.16-17": {
+      "text": "Believers are God’s children and heirs with Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.18-19": {
+      "text": "Paul says present suffering is small beside future glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.20-22": {
+      "text": "Creation groans and waits to be set free",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.23-25": {
+      "text": "Believers wait patiently in hope for what is not yet seen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.26-27": {
+      "text": "The Spirit helps believers who do not know how to pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.28-30": {
+      "text": "God works all things for the good of believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.31-32": {
+      "text": "God is for believers and gave his own Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.33-34": {
+      "text": "No one can condemn believers, because Christ intercedes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.35-36": {
+      "text": "Paul asks what can separate believers from Christ’s love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.8.37-39": {
+      "text": "Believers are more than conquerors through Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.1-2": {
+      "text": "Paul tells the truth about his deep sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.3-5": {
+      "text": "Paul would accept a curse for his own people Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.6-7": {
+      "text": "God’s word has not failed; only some are true Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.8-9": {
+      "text": "God’s children are the children of the promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.10-13": {
+      "text": "God chose Jacob, not Esau, before the twins were born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.14-16": {
+      "text": "God is not unjust; he gives mercy as he chooses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.17-18": {
+      "text": "God shows mercy to whom he wants and hardens others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.19-21": {
+      "text": "Paul answers: no one can talk back to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.22-24": {
+      "text": "God calls believers from both Jews and Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.25-26": {
+      "text": "God will call those who are not his people his children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.27-29": {
+      "text": "Isaiah says only a remnant of Israel will be saved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.30-31": {
+      "text": "Gentiles received righteousness by faith, but Israel did not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.9.32-33": {
+      "text": "Israel stumbled because it sought righteousness by works",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.1-3": {
+      "text": "Paul prays for the salvation of the Israelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.4-5": {
+      "text": "Christ brings righteousness to everyone who believes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.6-7": {
+      "text": "Paul says no one must bring Christ down or up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text does not forbid people from bringing Christ down or up, but says righteousness by faith does not ask who will do so.",
+        "suggestion": "Faith does not ask who will bring Christ down or up"
+      }
+    },
+    "ROM.10.8-10": {
+      "text": "Whoever confesses Jesus as Lord and believes will be saved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.11-13": {
+      "text": "The same Lord saves everyone who calls on him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.14-15": {
+      "text": "People need preachers to hear and believe the good news",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.16-17": {
+      "text": "Not all welcomed the good news; faith comes by hearing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.18-18": {
+      "text": "Paul says all people have heard the message",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.19-19": {
+      "text": "Moses said God will make Israel jealous of other nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.10.20-21": {
+      "text": "Isaiah says Israel is disobedient, but others found God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.1-3": {
+      "text": "Paul says God has not rejected his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.4-5": {
+      "text": "God keeps a remnant chosen by grace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.6-8": {
+      "text": "What Israel sought, only the chosen obtained",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.9-10": {
+      "text": "David says a trap and blindness will come on the hardened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.11-12": {
+      "text": "Israel’s failure brings salvation to the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.13-14": {
+      "text": "Paul speaks to Gentiles about his hope to save some Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.15-16": {
+      "text": "Israel’s acceptance will be life from the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.17-18": {
+      "text": "Paul warns Gentile believers not to boast over branches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.19-21": {
+      "text": "Paul warns Gentile believers not to be proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.22-22": {
+      "text": "Paul tells Gentile believers to continue in God’s kindness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.23-24": {
+      "text": "God can graft Israel back in if Israel believes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.25-25": {
+      "text": "Israel is hardened in part until all the Gentiles come in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.26-27": {
+      "text": "All Israel will be saved when the Deliverer comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.28-29": {
+      "text": "God still loves Israel and his call does not change",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.30-32": {
+      "text": "God shows mercy to both Gentiles and Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.33-34": {
+      "text": "Paul praises God’s deep wisdom and knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.11.35-36": {
+      "text": "Paul says all things come from God and are for his glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.1-2": {
+      "text": "Paul urges believers to be living sacrifices to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.3-3": {
+      "text": "Paul tells believers to think humbly and wisely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.4-5": {
+      "text": "Believers are many members of one body in Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.6-8": {
+      "text": "Paul tells believers to use the different gifts God gave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.9-10": {
+      "text": "Paul urges believers to love sincerely and honor others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.11-13": {
+      "text": "Believers should serve the Lord and help the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.14-16": {
+      "text": "Believers should bless persecutors and live in harmony",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.17-18": {
+      "text": "Believers should not repay evil but live at peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.12.19-21": {
+      "text": "Believers must leave revenge to God and do good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.13.1-2": {
+      "text": "Paul tells believers to submit to the authorities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.13.3-5": {
+      "text": "Rulers are God’s servants, so believers should obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.13.6-7": {
+      "text": "Paul tells believers to pay taxes and give respect",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.13.11-12": {
+      "text": "Paul urges believers to wake up because salvation is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.13.13-14": {
+      "text": "Paul urges believers to live decently and follow Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.1-2": {
+      "text": "Believers must accept those who are weak in faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.3-4": {
+      "text": "Believers must not judge each other about food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.5-6": {
+      "text": "Believers may honor the Lord in different ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.7-9": {
+      "text": "Believers belong to the Lord in life and in death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.10-11": {
+      "text": "All believers will stand before God’s judgment seat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.12-12": {
+      "text": "Each believer will give an account to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.13-13": {
+      "text": "Paul tells believers not to cause others to stumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.14-15": {
+      "text": "Believers must not harm a brother by eating",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.16-17": {
+      "text": "God’s kingdom is peace and joy, not food and drink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.18-19": {
+      "text": "Believers should serve Christ and pursue peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.20-21": {
+      "text": "Paul urges believers not to cause others to stumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.14.22-23": {
+      "text": "Paul says eating with doubt is sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only summarizes verse 23 and ignores the instruction about personal belief in verse 22.",
+        "suggestion": "Paul says that whatever is not done from faith is sin"
+      }
+    },
+    "ROM.15.1-2": {
+      "text": "The strong should help the weak and please others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.3-4": {
+      "text": "Christ did not please himself, and Scripture gives hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.5-6": {
+      "text": "Paul prays that believers will live in harmony",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.7-7": {
+      "text": "Believers should accept one another as Christ did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.8-9": {
+      "text": "Christ served the Jews so that Gentiles would praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.10-11": {
+      "text": "Scripture says the Gentiles will praise the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.12-12": {
+      "text": "Isaiah says the Gentiles will hope in the coming king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The text speaks of one who rules rather than a king.",
+        "suggestion": "Isaiah says the Gentiles will hope in their ruler"
+      }
+    },
+    "ROM.15.13-13": {
+      "text": "Paul prays that God will fill believers with joy and peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.14-14": {
+      "text": "Paul is sure the believers are good and able to teach",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.15-16": {
+      "text": "Paul writes boldly as God’s minister to the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.17-19": {
+      "text": "Paul tells what Christ did through him among the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.20-21": {
+      "text": "Paul wants to preach where Christ is not known",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.22-22": {
+      "text": "Paul was often hindered from coming to the Romans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.23-23": {
+      "text": "Paul has long wanted to visit the Romans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.24-25": {
+      "text": "Paul plans to visit Rome on his way to Spain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It fits verse 24 but leaves out Paul’s journey to Jerusalem in verse 25.",
+        "suggestion": "Paul plans to visit Rome after going to Jerusalem"
+      }
+    },
+    "ROM.15.26-27": {
+      "text": "Macedonia and Achaia gave money for the poor believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.28-29": {
+      "text": "Paul will go to Spain after he delivers the gift",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.30-32": {
+      "text": "Paul asks the believers to pray for his work in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.15.33-33": {
+      "text": "Paul asks God to give peace to all the believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Paul prays that the God of peace will be with them, not that God will give peace.",
+        "suggestion": "Paul prays that the God of peace will be with them all"
+      }
+    },
+    "ROM.16.1-2": {
+      "text": "Paul asks the church to welcome and help Phoebe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.3-5": {
+      "text": "Paul greets Prisca, Aquila, and Epenetus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.6-8": {
+      "text": "Paul greets Mary, Andronicus, Junia, and Ampliatus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.9-11": {
+      "text": "Paul greets Urbanus, Stachys, Apelles, and others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.12-14": {
+      "text": "Paul greets Tryphena, Tryphosa, Persis, and others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.15-16": {
+      "text": "Paul greets more believers and asks for a holy kiss",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.17-18": {
+      "text": "Paul warns believers to avoid people who cause divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.19-20": {
+      "text": "Paul wants believers to be wise; God will crush Satan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.21-22": {
+      "text": "Paul’s co-workers, including Tertius, send greetings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.23-23": {
+      "text": "Gaius, Erastus, and Quartus send greetings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.25-26": {
+      "text": "Paul praises God who strengthens believers by the gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ROM.16.27-27": {
+      "text": "Paul gives glory to the only wise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
