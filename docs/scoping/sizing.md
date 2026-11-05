@@ -896,6 +896,76 @@ suggestions were not read.
 OpenRouter spend of this work: $12.14331475 ($9.35223550 in the nine
 records and $2.79107925 in the two stopped runs).
 
+## Measured: English segment titles, Hebrews to Revelation (#244)
+
+ADR [0008](../decisions/0008-english-run-before-dispute-verdict.md): the
+remaining 60 books are drafted and checked before the #207 verdict, with
+disputed titles held as for Genesis. Hebrews, James, 1 and 2 Peter, 1, 2
+and 3 John, Jude and Revelation were drafted on 2026-11-05 the way Genesis
+was: one plain run of the CLI per book, one book after another, the same
+models, the runner and its library as at `3b4cc37` (unchanged at
+`c479756`, the base of this change), and the prompt on main,
+`prompts/segment-titles.md` SHA-256 `e3e08e032d32…` (unchanged by this
+work).
+
+```
+node scripts/translate/segment-titles.ts --book REV \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.77 \
+  --out .cache/segment-titles/len-REV
+```
+
+`--max-cost` was 1.5 times the book's estimate (drafted segments × $0.0027,
+Genesis's rate), at least $0.30: HEB 0.49, REV 0.77, the rest 0.30. Every
+run exited 0 with outcome `done`, first time. Each record was copied
+unchanged to `data/drafts/en/<BOOK>.json` (`cmp`: no difference). The
+counts below were made twice from the records, with `jq` and with Python,
+which gave the same values.
+
+| Book  | Drafted    | Agreed | Disagreed: criteria                               | Gate failures  | Over 60 (longest) | Calls   | Cost        | Model time  |
+| ----- | ---------- | ------ | ------------------------------------------------- | -------------- | ----------------- | ------- | ----------- | ----------- |
+| HEB   | 120 of 124 | 114    | 6: `covers` 2, `plain` 2, `style` 2, `accurate` 1 | 1 (`length`)   | 1 (61)            | 4 + 4   | $0.35171525 | 329.045 s   |
+| JAS   | 43 of 45   | 40     | 3: `accurate` 2, `covers` 1, `style` 1            | 1 (`length`)   | 1 (62)            | 2 + 2   | $0.10721825 | 86.560 s    |
+| 1PE   | 42 of 44   | 41     | 1: `covers` 1                                     | 0              | 0 (59)            | 2 + 2   | $0.14355650 | 142.949 s   |
+| 2PE   | 23 of 24   | 22     | 1: `plain` 1                                      | 0              | 0 (59)            | 1 + 1   | $0.07859475 | 72.218 s    |
+| 1JN   | 40 of 41   | 36     | 4: `covers` 2, `accurate` 1, `plain` 1            | 0              | 0 (59)            | 2 + 2   | $0.16523625 | 163.845 s   |
+| 2JN   | 2 of 5     | 2      | 0                                                 | 0              | 0 (57)            | 1 + 1   | $0.01141975 | 9.516 s     |
+| 3JN   | 2 of 5     | 2      | 0                                                 | 0              | 0 (58)            | 1 + 1   | $0.00736700 | 11.139 s    |
+| JUD   | 9 of 11    | 8      | 1: `covers` 1                                     | 0              | 0 (57)            | 1 + 1   | $0.06015625 | 77.927 s    |
+| REV   | 189 of 195 | 177    | 12: `accurate` 7, `style` 4, `covers` 2           | 5 (`length` 5) | 5 (62)            | 6 + 6   | $0.55920950 | 518.022 s   |
+| Total | 470        | 442    | 28                                                | 7              | 7                 | 20 + 20 | $1.48447350 | 1,411.221 s |
+
+Labels and sources: every row is measured 2026-11-05 from the committed
+record. Drafted: `titles`; the other segments are their pericope's only
+segment (HEB 4, JAS 2, 1PE 2, 2PE 1, 1JN 1, 2JN 3, 3JN 3, JUD 2, REV 6).
+Agreed: checker `agree`; 441 are `ai-checked`, and one, `REV.20.9-10` (61
+characters), is agreed but held by the `length` gate. Criteria: a title can
+name more than one. Cost: OpenRouter's billed `cost` per call, summed, exact
+(the cells add to the total).
+Model time: `ms` per call, summed, exact. Largest completion: draft 6,786 of 16,384
+(41%, REV); check 17,572 of 32,768 (54%, HEB). No reply was cut off and
+every reply was readable (the runs end `done`). Pronoun drafts (as in
+#209): HEB 2, JAS 2, REV 3, none disputed. `npm run build` puts 441
+`ai-checked` titles in the tC Mobile title tables (HEB 114 of 124, JAS 40 of
+45, 1PE 41 of 44, 2PE 22 of 24, 1JN 36 of 41, 2JN 2 of 5, 3JN 2 of 5, JUD 8
+of 11, REV 176 of 195).
+
+Five draft calls used 0 reasoning tokens (HEB batch 1, JAS 1, 3JN 1, REV 3
+and 4); 5 of the 7 titles over 60 are in them (JAS 1, REV 4), as in the
+earlier groups.
+
+The review bench found one `ai-checked` title that misreads its verses:
+`JUD.1.9-11`, "Michael did not slander the devil; ungodly men do" (Jude 1:10
+says the men slander what they do not understand, not the devil). The
+record is AI output, kept unchanged; the fix is a person's review (#254),
+and `known-issues.json` lists it.
+
+No third check was run and no dispute data is written (ADR 0008); the 28
+disagreements and the gated agreed title stay `unreviewed`. Counts only;
+the checker's reasons and suggestions were not read.
+
+OpenRouter spend of this work: $1.48447350, the nine records.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

@@ -1,0 +1,330 @@
+{
+  "language": "en",
+  "book": "JAS",
+  "bible": "bsb-jas",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905124-uAZzwDPXEJo2VAAFYLKY",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4190,
+      "completionTokens": 599,
+      "reasoningTokens": 0,
+      "cost": 0.01437,
+      "ms": 4587
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905129-Of0R58lASekvCJwHocmr",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4088,
+      "completionTokens": 3391,
+      "reasoningTokens": 2799,
+      "cost": 0.042086,
+      "ms": 20545
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905149-yrPm2jpG2v1u4s1aVUwe",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3377,
+      "completionTokens": 8818,
+      "reasoningTokens": 8057,
+      "cost": 0.03560025,
+      "ms": 42409
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905192-ToShlzI21rthVqVIYTMT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3266,
+      "completionTokens": 3390,
+      "reasoningTokens": 2836,
+      "cost": 0.015162,
+      "ms": 19019
+    }
+  ],
+  "titles": {
+    "JAS.1.2-3": {
+      "text": "James says trials test faith and bring perseverance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.4-5": {
+      "text": "James tells believers to ask God for wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 5 and leaves out the instruction in verse 4 about perseverance leading to maturity.",
+        "suggestion": "Perseverance brings maturity, and God gives wisdom"
+      }
+    },
+    "JAS.1.6-8": {
+      "text": "Believers must ask God in faith, without doubting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.9-11": {
+      "text": "Poor and rich believers should both take pride in God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The passage speaks of exulting in high or low positions, not taking pride in God.",
+        "suggestion": "Poor and rich believers should exult in their positions"
+      }
+    },
+    "JAS.1.12-12": {
+      "text": "A person who endures trials will receive the crown of life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.13-13": {
+      "text": "God does not tempt anyone to do evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.14-16": {
+      "text": "Evil desires lead to sin and then to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.17-18": {
+      "text": "God gives every good gift and gave us new birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.19-21": {
+      "text": "James tells believers to listen first and accept God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.22-25": {
+      "text": "James urges believers to do what the word says",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.1.26-27": {
+      "text": "True religion controls the tongue and cares for the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.1-4": {
+      "text": "James warns believers not to favor rich people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.5-7": {
+      "text": "God chose the poor, but the church dishonored them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.8-9": {
+      "text": "Favoritism is sin, but loving your neighbor is right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.10-11": {
+      "text": "Breaking one part of the law makes a person guilty of all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.12-13": {
+      "text": "James tells believers to speak and act with mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.14-17": {
+      "text": "Faith without deeds is dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.18-20": {
+      "text": "James says faith without deeds is worthless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.21-24": {
+      "text": "Abraham’s deeds showed that his faith was real",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.2.25-26": {
+      "text": "Rahab’s actions show that faith needs deeds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.1-2": {
+      "text": "James warns that teachers will be judged more strictly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.3-4": {
+      "text": "James compares the tongue to a horse’s bit and a ship’s rudder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "style"],
+        "why": "The draft exceeds 60 characters and mentions the tongue, which is not introduced until verse 5.",
+        "suggestion": "Small bits guide horses and small rudders steer ships"
+      }
+    },
+    "JAS.3.5-6": {
+      "text": "The tongue is a small fire that harms the whole person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.7-8": {
+      "text": "No one can tame the tongue, but people tame animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.9-10": {
+      "text": "Believers bless God and curse people with one mouth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.11-12": {
+      "text": "A spring cannot give both fresh water and salt water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.13-14": {
+      "text": "Wise people show good conduct, not bitter jealousy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.3.15-18": {
+      "text": "Earthly wisdom brings disorder; God’s wisdom brings peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.1-3": {
+      "text": "Wrong desires cause quarrels among believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.4-5": {
+      "text": "Friendship with the world makes believers enemies of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.6-6": {
+      "text": "God gives grace to the humble but opposes the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.7-7": {
+      "text": "Believers should submit to God and resist the devil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.8-10": {
+      "text": "James urges sinners to come near to God and be humble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.11-12": {
+      "text": "Believers must not speak against or judge each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.13-14": {
+      "text": "Life is like a mist, and no one knows tomorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.4.15-17": {
+      "text": "Believers should plan as the Lord wills and do right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.1-3": {
+      "text": "James warns rich people that misery is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.4-6": {
+      "text": "Rich people cheated workers and lived in luxury",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.7-8": {
+      "text": "Believers should be patient until the Lord comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.9-11": {
+      "text": "Believers should not complain but be patient like Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.12-12": {
+      "text": "Believers should not swear oaths but speak simply",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.13-15": {
+      "text": "Believers pray when in trouble; elders pray for the sick",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JAS.5.16-18": {
+      "text": "Believers should confess sins and pray like Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

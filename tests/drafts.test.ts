@@ -215,6 +215,15 @@ describe.each([
   "RUT",
   "1SA",
   "2SA",
+  "HEB",
+  "JAS",
+  "1PE",
+  "2PE",
+  "1JN",
+  "2JN",
+  "3JN",
+  "JUD",
+  "REV",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -759,6 +768,103 @@ describe.each([
     prompt: "prompts/segment-titles.md",
     drafts: 9,
     checks: 9,
+    batched: true,
+  },
+  {
+    book: "HEB",
+    reused: ["HEB.11.1-3", "HEB.11.20-22", "HEB.12.1-3", "HEB.12.14-17"],
+    drafted: 120,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 4,
+    checks: 4,
+    batched: true,
+  },
+  {
+    book: "JAS",
+    reused: ["JAS.1.1-1", "JAS.5.19-20"],
+    drafted: 43,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "1PE",
+    reused: ["1PE.1.1-2", "1PE.5.1-4"],
+    drafted: 42,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "2PE",
+    reused: ["2PE.1.1-2"],
+    drafted: 23,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "1JN",
+    reused: ["1JN.2.15-17"],
+    drafted: 40,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "2JN",
+    reused: ["2JN.1.1-3", "2JN.1.4-6", "2JN.1.12-13"],
+    drafted: 2,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "3JN",
+    reused: ["3JN.1.1-4", "3JN.1.5-8", "3JN.1.13-15"],
+    drafted: 2,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "JUD",
+    reused: ["JUD.1.1-2", "JUD.1.24-25"],
+    drafted: 9,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "REV",
+    reused: [
+      "REV.1.1-3",
+      "REV.6.1-2",
+      "REV.6.3-4",
+      "REV.6.5-6",
+      "REV.6.7-8",
+      "REV.6.9-11",
+    ],
+    drafted: 189,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 6,
+    checks: 6,
     batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
