@@ -1,0 +1,3266 @@
+{
+  "language": "en",
+  "book": "DEU",
+  "bible": "bsb-deu",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793911752-ZPxj653hgDpprRgOtzGy",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6183,
+      "completionTokens": 5470,
+      "reasoningTokens": 4491,
+      "cost": 0.067066,
+      "ms": 37788
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911790-U1PvS1dAA3W0QviFDX8I",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6161,
+      "completionTokens": 1088,
+      "reasoningTokens": 0,
+      "cost": 0.023202,
+      "ms": 7014
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911797-DIl5X0rNkGDvu5JJdOZD",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5781,
+      "completionTokens": 6433,
+      "reasoningTokens": 5403,
+      "cost": 0.075892,
+      "ms": 41163
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911838-v4IM4N0jhJHiirXTYDuy",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6198,
+      "completionTokens": 5989,
+      "reasoningTokens": 4974,
+      "cost": 0.072286,
+      "ms": 39307
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911877-mLyVVEuhneTNCsz50Q5O",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6008,
+      "completionTokens": 6553,
+      "reasoningTokens": 5521,
+      "cost": 0.077546,
+      "ms": 40176
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911918-mQ13pKbCWpNuU6VW0Yub",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5871,
+      "completionTokens": 6384,
+      "reasoningTokens": 5386,
+      "cost": 0.075582,
+      "ms": 43105
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911961-ajvLwI9gtwidoouB5oFi",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6402,
+      "completionTokens": 6306,
+      "reasoningTokens": 5311,
+      "cost": 0.075864,
+      "ms": 41847
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912003-piaYFhh0882fTzMXiQlY",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6088,
+      "completionTokens": 6307,
+      "reasoningTokens": 5363,
+      "cost": 0.075246,
+      "ms": 42273
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912045-a9VLsETC76USp75wj2gI",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5543,
+      "completionTokens": 5140,
+      "reasoningTokens": 4155,
+      "cost": 0.062486,
+      "ms": 32681
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912078-eI4xt2TXtgb6O2CuxKLA",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5903,
+      "completionTokens": 5630,
+      "reasoningTokens": 4629,
+      "cost": 0.068106,
+      "ms": 35355
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912113-6hr37witVyAxpNJv8IPe",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5856,
+      "completionTokens": 5074,
+      "reasoningTokens": 4112,
+      "cost": 0.062452,
+      "ms": 36017
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912149-Mv5UP1QxIlOyqAyZoe0v",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6409,
+      "completionTokens": 5926,
+      "reasoningTokens": 4987,
+      "cost": 0.072078,
+      "ms": 37853
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912187-9tWH1xcHuc3QTWtYEaxd",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5249,
+      "completionTokens": 4968,
+      "reasoningTokens": 3950,
+      "cost": 0.060178,
+      "ms": 36413
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912223-Z2iGhxRI8PQcjIzoiENG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5417,
+      "completionTokens": 1009,
+      "reasoningTokens": 0,
+      "cost": 0.020924,
+      "ms": 6364
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912230-XA33SU76mVxKnlWY6YQW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5211,
+      "completionTokens": 5337,
+      "reasoningTokens": 4430,
+      "cost": 0.023922,
+      "ms": 37324
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912267-BuAwY7FPKZS7ixXzIncu",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5280,
+      "completionTokens": 16991,
+      "reasoningTokens": 15641,
+      "cost": 0.06767625,
+      "ms": 86344
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912354-Iyq4sYP1u4ZXWQ1RVXHm",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4967,
+      "completionTokens": 9833,
+      "reasoningTokens": 8871,
+      "cost": 0.040599,
+      "ms": 70745
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912424-uZ43wC8r4bUG93XN2Njh",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5186,
+      "completionTokens": 7535,
+      "reasoningTokens": 6586,
+      "cost": 0.03214575,
+      "ms": 60502
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912486-MJUVqF7wr5aXZXNtTpqB",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5112,
+      "completionTokens": 5982,
+      "reasoningTokens": 4986,
+      "cost": 0.0262665,
+      "ms": 40383
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912525-ZKgVt4HvPG5fu72zop7N",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5099,
+      "completionTokens": 9178,
+      "reasoningTokens": 8052,
+      "cost": 0.03824175,
+      "ms": 58011
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912583-1GSpaneU75nsRHNNvnz3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5504,
+      "completionTokens": 8844,
+      "reasoningTokens": 7852,
+      "cost": 0.037293,
+      "ms": 44209
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912628-L8XfXMHYg5ZAeZgNVgm2",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5231,
+      "completionTokens": 5284,
+      "reasoningTokens": 4359,
+      "cost": 0.02373825,
+      "ms": 32473
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912660-F9WOtG5ruWdqhUm2yrXx",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4879,
+      "completionTokens": 5129,
+      "reasoningTokens": 4199,
+      "cost": 0.022893,
+      "ms": 35474
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912696-uY2x7U4q1va1gH7UIRzK",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5041,
+      "completionTokens": 5379,
+      "reasoningTokens": 4393,
+      "cost": 0.023952,
+      "ms": 33588
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912729-0wj3CI5KuQqXrP7NdZ21",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5088,
+      "completionTokens": 9854,
+      "reasoningTokens": 8843,
+      "cost": 0.0407685,
+      "ms": 73120
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912802-9BPqiNb4k92NO1TjgyKV",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5415,
+      "completionTokens": 5510,
+      "reasoningTokens": 4485,
+      "cost": 0.02472375,
+      "ms": 45042
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912847-Ea3gzoqDQFwvDsIQKImy",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4578,
+      "completionTokens": 8473,
+      "reasoningTokens": 7488,
+      "cost": 0.03520725,
+      "ms": 53668
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912901-sIdMHe8HqN8VtbsYOIKO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4542,
+      "completionTokens": 4957,
+      "reasoningTokens": 3990,
+      "cost": 0.02199525,
+      "ms": 26728
+    }
+  ],
+  "titles": {
+    "DEU.1.1-2": {
+      "text": "Moses speaks to Israel east of the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.3-4": {
+      "text": "Moses tells the Israelites what the LORD commanded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.5-6": {
+      "text": "Moses begins to explain the law in Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.7-8": {
+      "text": "The LORD tells Israel to enter and possess the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.9-11": {
+      "text": "Moses says he cannot carry the burden of Israel alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.12-14": {
+      "text": "Moses asks Israel to choose wise men as leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.15-16": {
+      "text": "Moses appoints leaders and charges the judges",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.17-18": {
+      "text": "Moses tells the judges to be fair and not afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.19-19": {
+      "text": "Israel travels from Horeb to Kadesh-barnea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.20-21": {
+      "text": "Moses tells Israel to take the land without fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.22-24": {
+      "text": "Moses sends twelve men to spy out the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.25-25": {
+      "text": "The spies bring back fruit and a good report",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.26-28": {
+      "text": "Israel rebels and is afraid to enter the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.29-31": {
+      "text": "Moses tells Israel not to fear because God fights",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.32-33": {
+      "text": "Israel does not trust the LORD who led the way",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.34-36": {
+      "text": "The LORD swears that only Caleb will see the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.37-38": {
+      "text": "Moses cannot enter the land; Joshua will enter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.39-40": {
+      "text": "The children will enter the land; adults must turn back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.41-42": {
+      "text": "Israel plans to fight, but the LORD says not to",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.43-44": {
+      "text": "Israel disobeys and the Amorites defeat Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.1.45-46": {
+      "text": "Israel weeps, but the LORD does not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.1-3": {
+      "text": "Israel wanders near Mount Seir, then turns north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.4-5": {
+      "text": "Israel must not fight the descendants of Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.6-7": {
+      "text": "Israel must pay for food and water; God has provided",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.8-8": {
+      "text": "Israel passes by the descendants of Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.9-9": {
+      "text": "The LORD tells Israel not to fight the Moabites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.10-11": {
+      "text": "The Emites, a tall people, once lived in Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.12-12": {
+      "text": "The descendants of Esau drove out the Horites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.13-15": {
+      "text": "Israel crosses the Zered as the old generation dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.16-19": {
+      "text": "The LORD tells Israel not to fight the Ammonites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.20-22": {
+      "text": "The Ammonites drove out the Zamzummites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.23-23": {
+      "text": "The Caphtorites destroyed the Avvim near Gaza",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.24-25": {
+      "text": "The LORD gives Sihon and his land to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.26-27": {
+      "text": "Moses offers peace to Sihon king of Heshbon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.28-29": {
+      "text": "Moses asks Sihon to let Israel pass and buy food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.30-31": {
+      "text": "Sihon refuses, and the LORD says to begin taking his land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.32-33": {
+      "text": "Israel defeats Sihon and his army at Jahaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.34-35": {
+      "text": "Israel captures Sihon’s cities and keeps the livestock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.2.36-37": {
+      "text": "The LORD gives Israel every city, but Israel avoids Ammon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.1-2": {
+      "text": "The LORD tells Moses not to fear Og king of Bashan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.3-4": {
+      "text": "Israel defeats Og and captures all sixty of his cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.5-7": {
+      "text": "Israel destroys the people of Og’s walled cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.8-10": {
+      "text": "Israel takes the land east of the Jordan from two kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.11-11": {
+      "text": "Og’s iron bed shows he was the last of the Rephaim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.12-13": {
+      "text": "Moses gives the conquered land to Reuben, Gad and Manasseh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.14-14": {
+      "text": "Jair takes the region of Argob and names it after himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.15-16": {
+      "text": "Moses gives Gilead to Machir and land to Reuben and Gad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.17-17": {
+      "text": "Moses describes the western border along the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.18-18": {
+      "text": "Moses tells the fighting men to cross ahead of their brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses tells armed men to cross ahead of their brothers"
+      }
+    },
+    "DEU.3.19-20": {
+      "text": "Wives and children may stay until all Israel has its land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.21-22": {
+      "text": "Moses tells Joshua not to fear, because the LORD will fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.23-25": {
+      "text": "Moses begs the LORD to let him cross the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.26-27": {
+      "text": "The LORD refuses Moses and tells him to view the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.3.28-29": {
+      "text": "The LORD tells Moses to encourage Joshua to lead the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.1-2": {
+      "text": "Moses tells Israel to obey the laws and not change them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.3-4": {
+      "text": "Moses reminds Israel what happened at Baal-peor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.5-6": {
+      "text": "Moses says obeying the laws will show Israel’s wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.7-8": {
+      "text": "Moses says no other nation has a god so near or laws so right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses says no nation has a god so near or laws so right"
+      }
+    },
+    "DEU.4.9-10": {
+      "text": "Moses tells Israel not to forget and to teach their children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.11-12": {
+      "text": "Moses recalls the LORD speaking from the fire at the mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses recalls the LORD speaking out of the fire"
+      }
+    },
+    "DEU.4.13-14": {
+      "text": "Moses recalls the Ten Commandments and the laws he must teach",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses recalls the Ten Commandments and the laws to teach"
+      }
+    },
+    "DEU.4.15-18": {
+      "text": "Moses warns Israel not to make any idol in any form",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.19-20": {
+      "text": "Moses warns Israel not to worship the sun, moon and stars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.21-22": {
+      "text": "Moses says he will die before crossing, but Israel will cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses will die here, but Israel will cross the Jordan"
+      }
+    },
+    "DEU.4.23-24": {
+      "text": "Moses warns Israel to keep the covenant and make no idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.25-26": {
+      "text": "Moses warns that idols will bring Israel’s destruction in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 66 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses warns that idols will destroy Israel in the land"
+      }
+    },
+    "DEU.4.27-28": {
+      "text": "Moses warns that the LORD will scatter Israel among the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 63 characters, exceeding the 60-character limit.",
+        "suggestion": "Moses warns the LORD will scatter Israel among the nations"
+      }
+    },
+    "DEU.4.29-29": {
+      "text": "Israel will find the LORD if they seek him with all their heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 63 characters, exceeding the 60-character limit.",
+        "suggestion": "Israel can find the LORD by seeking him with all their heart"
+      }
+    },
+    "DEU.4.30-31": {
+      "text": "Moses says Israel will return to the merciful LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.32-33": {
+      "text": "Moses reminds Israel that God spoke from the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.34-34": {
+      "text": "No other god ever rescued a nation as the LORD did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.35-36": {
+      "text": "The LORD showed Israel that he alone is God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.37-38": {
+      "text": "Because of love, the LORD brought Israel out of Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.39-40": {
+      "text": "Moses urges Israel to know the LORD is God and obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.44-46": {
+      "text": "Moses sets the law before Israel east of the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.4.47-49": {
+      "text": "Israel took the land of Sihon and Og east of the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.1-3": {
+      "text": "Moses calls Israel to learn and obey the LORD’s laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.4-4": {
+      "text": "The LORD spoke to Israel face to face from the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.5-6": {
+      "text": "Moses speaks the LORD’s word because Israel feared the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.7-8": {
+      "text": "The LORD tells Israel to have no other gods or idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.9-10": {
+      "text": "Israel must not worship idols, for the LORD is jealous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.11-11": {
+      "text": "Israel must not misuse the name of the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.12-14": {
+      "text": "Israel must keep the Sabbath as a day of rest for all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.15-15": {
+      "text": "Israel keeps the Sabbath to remember slavery in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.16-16": {
+      "text": "Children must honor father and mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The commandment is addressed to the whole assembly of Israel, not only to children.",
+        "suggestion": "Israel must honor father and mother"
+      }
+    },
+    "DEU.5.17-20": {
+      "text": "Israel must not murder, commit adultery, steal or lie",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.21-21": {
+      "text": "Israel must not covet a neighbor’s wife or property",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.22-22": {
+      "text": "The LORD gave the commandments on two stone tablets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.23-24": {
+      "text": "Israel’s leaders tell Moses God has shown his glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.25-27": {
+      "text": "The Israelites fear God’s voice and ask Moses to go near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.28-30": {
+      "text": "The LORD approves what Israel said and sends Israel home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.31-31": {
+      "text": "The LORD tells Moses to stay and receive all the laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.5.32-33": {
+      "text": "Moses urges Israel to obey the LORD and not turn aside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.1-2": {
+      "text": "Moses teaches Israel to fear the LORD and keep his laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.3-3": {
+      "text": "Moses tells Israel to obey and prosper in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.4-5": {
+      "text": "Israel must love the one LORD with everything",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.6-7": {
+      "text": "Moses tells parents to teach God’s words to children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.8-9": {
+      "text": "Israel must keep God’s words on hands, heads and doors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.10-12": {
+      "text": "In the good land, Israel must not forget the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.13-15": {
+      "text": "Israel must serve only the LORD and not follow other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.16-17": {
+      "text": "Israel must not test the LORD and must keep his commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.18-19": {
+      "text": "Israel must do what is right to enter the good land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.20-23": {
+      "text": "Parents tell children how the LORD freed Israel from Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.6.24-25": {
+      "text": "Israel will be righteous by obeying the LORD’s commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.1-1": {
+      "text": "The LORD will drive out seven nations for Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.2-3": {
+      "text": "Israel must not make treaties or intermarry with the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.4-5": {
+      "text": "Israel must tear down altars and burn idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.6-6": {
+      "text": "Israel is a holy people chosen by the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.7-8": {
+      "text": "The LORD chose Israel because of his love, not its size",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.9-11": {
+      "text": "The LORD is faithful; Israel must keep his commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.12-13": {
+      "text": "The LORD will bless Israel if Israel keeps his laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.14-15": {
+      "text": "The LORD will bless Israel and remove sickness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.16-16": {
+      "text": "Israel must show no pity and not worship the peoples’ gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.17-19": {
+      "text": "Israel should not fear the nations, but remember Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.20-22": {
+      "text": "The LORD will drive out the nations little by little",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.23-24": {
+      "text": "The LORD will give the nations’ kings to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.7.25-26": {
+      "text": "Israel must burn idols and bring none into the house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.1-2": {
+      "text": "Israel must obey and remember forty years in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.3-3": {
+      "text": "God gave Israel manna to teach that people live by his word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.4-6": {
+      "text": "The LORD disciplines Israel like a father; Israel must obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.7-8": {
+      "text": "The LORD is bringing Israel into a good land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.9-10": {
+      "text": "The good land will lack nothing; Israel must bless the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.11-12": {
+      "text": "Israel must not forget the LORD when life is good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "It uses the idiom 'when life is good' instead of plain words from the text.",
+        "suggestion": "Israel must not forget the LORD when eating and satisfied"
+      }
+    },
+    "DEU.8.13-14": {
+      "text": "Wealth may make Israel proud and forget the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.15-17": {
+      "text": "Israel must not say that its own power brought wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.8.18-20": {
+      "text": "Israel will perish if Israel forgets the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.1-2": {
+      "text": "Israel will cross the Jordan to face strong nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.3-3": {
+      "text": "The LORD will go ahead of Israel like a consuming fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.4-4": {
+      "text": "The LORD drives out the nations because of wickedness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.5-5": {
+      "text": "Israel is not righteous; the LORD keeps his promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.6-6": {
+      "text": "Israel is a stiff-necked people, not righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.7-8": {
+      "text": "Moses reminds Israel how Israel rebelled against the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.9-10": {
+      "text": "Moses stays forty days on the mountain and receives tablets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.11-12": {
+      "text": "The LORD tells Moses that Israel has made a molten image",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.13-14": {
+      "text": "The LORD says he will destroy Israel and make Moses great",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.15-16": {
+      "text": "Moses comes down and sees the molten calf Israel made",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.17-18": {
+      "text": "Moses breaks the tablets and prays forty days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.19-20": {
+      "text": "Moses prays for Aaron and the LORD listens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft only mentions Aaron, leaving out the LORD’s anger against Israel and listening to Moses in verse 19.",
+        "suggestion": "Moses prays for Israel and Aaron, and the LORD listens"
+      }
+    },
+    "DEU.9.21-21": {
+      "text": "Moses destroys the calf and throws the dust in a stream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.22-24": {
+      "text": "Moses reminds Israel of more rebellion against the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.25-26": {
+      "text": "Moses prays again that the LORD will not destroy Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.9.27-29": {
+      "text": "Moses asks the LORD to remember Abraham, Isaac and Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.1-2": {
+      "text": "The LORD tells Moses to make new tablets and an ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.3-4": {
+      "text": "Moses makes the ark and the LORD writes on new tablets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.5-5": {
+      "text": "Moses puts the tablets in the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.6-7": {
+      "text": "Israel travels; Aaron dies and Eleazar becomes priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.8-9": {
+      "text": "The LORD sets apart the Levites for service",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.10-11": {
+      "text": "The LORD spares Israel and tells Moses to lead on",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.12-13": {
+      "text": "Moses asks Israel to fear, love and serve the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.14-15": {
+      "text": "The LORD owns everything, yet chose and loved Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.16-17": {
+      "text": "Israel must stop being stubborn; the LORD is fair",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.18-19": {
+      "text": "God helps orphans and widows; Israel must love foreigners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.20-21": {
+      "text": "Moses tells Israel to fear and hold fast to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.10.22-22": {
+      "text": "The LORD has made Israel grow from seventy to many",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.1-1": {
+      "text": "Moses tells Israel to love and obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.2-3": {
+      "text": "Moses reminds Israel of what the LORD did in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.4-5": {
+      "text": "Moses reminds Israel of the Red Sea and the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.6-7": {
+      "text": "The earth swallowed Dathan and Abiram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.8-9": {
+      "text": "Israel must obey to enter and keep the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.10-12": {
+      "text": "The new land needs rain, and the LORD cares for it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.13-15": {
+      "text": "The LORD promises rain and food if Israel obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.16-17": {
+      "text": "Moses warns Israel not to worship other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.18-19": {
+      "text": "Israel must keep God’s words in mind and teach children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.20-21": {
+      "text": "Israel must write God’s words on doors and gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.22-23": {
+      "text": "The LORD will drive out nations if Israel obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.24-25": {
+      "text": "The LORD promises Israel all the land and victory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.26-28": {
+      "text": "Moses sets a blessing and a curse before Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.29-30": {
+      "text": "Israel will proclaim blessing on Gerizim and curse on Ebal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.11.31-32": {
+      "text": "Moses tells Israel to obey the laws in the new land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.1-2": {
+      "text": "Israel must destroy the places where nations worship gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.3-4": {
+      "text": "Israel must destroy the altars and idols of the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.5-6": {
+      "text": "Israel must bring offerings to the place God chooses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.7-7": {
+      "text": "Israelite families will eat and rejoice before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.8-9": {
+      "text": "Israel has not yet reached the resting place God gives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.10-11": {
+      "text": "In the land, Israel will bring offerings to one place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.12-12": {
+      "text": "Israel must rejoice before the LORD with the Levites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.13-14": {
+      "text": "Israel must offer burnt offerings only where God chooses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.15-16": {
+      "text": "Israelites may eat meat at home but must not eat blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.17-17": {
+      "text": "Israel must not eat the tithes and offerings at home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.18-19": {
+      "text": "Israel must eat the offerings at God’s chosen place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.20-20": {
+      "text": "When God enlarges the land, Israel may eat meat freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.21-22": {
+      "text": "If God’s place is far, Israel may eat meat at home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.23-25": {
+      "text": "Israel must not eat blood, because blood is life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.26-27": {
+      "text": "Israel must take holy gifts to the place God chooses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.28-28": {
+      "text": "Moses tells Israel to obey so that all goes well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.12.29-30": {
+      "text": "Israel must not copy the gods of the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The text warns against copying how the nations serve their gods, not copying the gods themselves.",
+        "suggestion": "Israel must not copy how other nations serve their gods"
+      }
+    },
+    "DEU.12.31-32": {
+      "text": "Israel must not worship God as nations worship idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.1-3": {
+      "text": "Israel must not follow a prophet who urges other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase \"urges other gods\" is confusing because the verb \"urge\" requires an action or person rather than a deity.",
+        "suggestion": "Israel must not follow a prophet of other gods"
+      }
+    },
+    "DEU.13.4-5": {
+      "text": "A prophet who leads Israel away from God must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.6-7": {
+      "text": "A family member or friend may urge worship of other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.8-9": {
+      "text": "Israel must put to death anyone who urges idol worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.10-11": {
+      "text": "All Israel will hear and fear when idolaters are stoned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.12-14": {
+      "text": "Israel must check reports of a city worshiping idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.15-16": {
+      "text": "Israel must burn the city and its plunder completely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.13.17-18": {
+      "text": "If Israel keeps nothing from the city, God will show mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.1-2": {
+      "text": "Israel is God’s holy people, so no cutting for the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The phrase \"so no cutting for the dead\" is an informal fragment rather than a plain, complete sentence.",
+        "suggestion": "Israel is holy to God and must not cut for the dead"
+      }
+    },
+    "DEU.14.3-5": {
+      "text": "Moses lists the animals that Israel may eat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.6-7": {
+      "text": "Israel may not eat the camel, rabbit or rock badger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.8-8": {
+      "text": "Israel must not eat pig meat or touch a dead pig",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.9-10": {
+      "text": "Israel may eat only water animals with fins and scales",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.11-13": {
+      "text": "Israel may eat clean birds but not eagles and vultures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.14-17": {
+      "text": "Israel must not eat ravens, owls, hawks and other birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.18-20": {
+      "text": "Israel must not eat storks, bats or flying insects",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.21-21": {
+      "text": "Israel is holy and must not eat an animal found dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.22-23": {
+      "text": "Israel must set aside a tenth and eat it before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.24-25": {
+      "text": "Israelites may sell the tithe for money if the way is far",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.26-27": {
+      "text": "Israelites may buy food for a feast and remember the Levite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.14.28-29": {
+      "text": "Every third year the tithe feeds Levites and the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.1-3": {
+      "text": "Every seventh year Israelites must cancel debts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.4-6": {
+      "text": "God promises to bless Israel if the people obey him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.7-8": {
+      "text": "Israelites must freely lend to a poor brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.9-10": {
+      "text": "Israelites must give to the poor without a grudge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.11-11": {
+      "text": "There will always be poor, so Israelites must give freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.12-14": {
+      "text": "Israelites must free servants after six years with gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.15-17": {
+      "text": "A servant who loves his master may stay for life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.18-18": {
+      "text": "Israelites should not see freeing a servant as a hardship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.19-21": {
+      "text": "Israelites must give firstborn male animals to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.15.22-23": {
+      "text": "Israelites may eat the animal at home but not the blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.1-2": {
+      "text": "Israelites must celebrate Passover in the month of Abib",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.3-4": {
+      "text": "Israelites must eat unleavened bread for seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.5-6": {
+      "text": "Israelites must offer the Passover only at the chosen place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.7-8": {
+      "text": "Israelites roast the Passover and hold a solemn assembly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.9-10": {
+      "text": "Israelites must keep the Feast of Weeks with a gift",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.11-12": {
+      "text": "Israelites must rejoice with servants, Levites and the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.13-14": {
+      "text": "Israelites celebrate the Feast of Tabernacles with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.15-15": {
+      "text": "Israelites feast for seven days with complete joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.16.16-17": {
+      "text": "All men must appear before the LORD three times a year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.2-4": {
+      "text": "Israelites must check reports of worship of other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.5-7": {
+      "text": "Two or three witnesses are needed to put a person to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the witness rule from verse 6, leaving out the command to stone the idolater to death.",
+        "suggestion": "Israelites must stone an idolater on the word of witnesses"
+      }
+    },
+    "DEU.17.8-9": {
+      "text": "Israelites take hard cases to the priests and the judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.10-11": {
+      "text": "Israelites must obey the verdict of the priests and judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.12-13": {
+      "text": "A man who refuses to obey the priest or judge must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.14-15": {
+      "text": "Israel may appoint a king chosen by God from Israelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.16-17": {
+      "text": "The king must not collect too many horses, wives or gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.18-19": {
+      "text": "The king must write and read God’s law all his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.17.20-20": {
+      "text": "Reading the law keeps the king humble and obedient",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.1-2": {
+      "text": "The Levites have no land and eat the offerings to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.3-5": {
+      "text": "Israelites must give the priests a share and firstfruits",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.6-8": {
+      "text": "A Levite from any town may serve at the chosen place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.9-11": {
+      "text": "Israelites must not practice sorcery like the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.12-14": {
+      "text": "God drives out the nations; Israel must be blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.15-16": {
+      "text": "God will raise up a prophet like Moses for Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.17-19": {
+      "text": "God will give his words to the prophet; Israel must listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.20-21": {
+      "text": "A prophet who speaks what God did not command must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.18.22-22": {
+      "text": "A message that does not come true is not from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.1-3": {
+      "text": "Israel must set apart three cities and build roads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.4-5": {
+      "text": "A man who kills by accident may flee to a city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.6-7": {
+      "text": "Cities protect a man who killed by accident from revenge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.8-10": {
+      "text": "Israel must add three more cities if God enlarges the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.11-13": {
+      "text": "Elders must hand a murderer over to the avenger of blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.14-14": {
+      "text": "Israelites must not move a neighbor’s boundary marker",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.15-16": {
+      "text": "A charge needs two or three witnesses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.17-19": {
+      "text": "Judges must punish a false witness as he planned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.19.20-21": {
+      "text": "Israel must show no pity to a false witness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.1-1": {
+      "text": "Israel must not fear a larger army; God is with Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.2-4": {
+      "text": "The priest tells the army that God will fight for Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.5-5": {
+      "text": "Officers send home a man with a new house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.6-7": {
+      "text": "Officers send home men with a new vineyard or a bride",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.8-9": {
+      "text": "Officers send home fearful men and appoint commanders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.10-11": {
+      "text": "Israel must offer peace to a city before attacking",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.12-13": {
+      "text": "Israel must besiege a city that refuses peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.14-15": {
+      "text": "Israel may take the women, children and goods of far cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.16-18": {
+      "text": "Israel must completely destroy the nations in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.20.19-20": {
+      "text": "Israel must not cut down fruit trees during a siege",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.1-2": {
+      "text": "Elders measure from a slain man to the nearby cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.3-4": {
+      "text": "The nearest city’s elders break a heifer’s neck in a valley",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.5-5": {
+      "text": "The priests come forward to settle disputes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.6-7": {
+      "text": "The elders wash hands and say the city is innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.8-9": {
+      "text": "The elders ask God to accept atonement for Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.10-12": {
+      "text": "A man may marry a beautiful captive woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.13-14": {
+      "text": "A captive wife mourns a month and must not be sold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.18-19": {
+      "text": "Parents bring a rebellious son to the city elders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.21.20-21": {
+      "text": "Parents accuse a rebellious son and the city stones him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.1-2": {
+      "text": "Israelites must return a brother’s lost animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.3-4": {
+      "text": "Israelites must return lost things and lift fallen animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.5-5": {
+      "text": "Men and women must not wear each other’s clothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.6-7": {
+      "text": "Israelites must let a mother bird go when taking her young",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.8-8": {
+      "text": "Israelites must build a railing around a new roof",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.9-11": {
+      "text": "Israelites must not mix different seeds, animals or cloth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.12-12": {
+      "text": "Israelites must put tassels on the corners of a cloak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.13-14": {
+      "text": "A husband accuses his new wife of shameful conduct",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.15-15": {
+      "text": "Parents bring proof of a daughter’s virginity to elders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.16-17": {
+      "text": "Parents defend a daughter before the city elders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.18-19": {
+      "text": "The elders punish and fine the man who accused his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.20-21": {
+      "text": "If the accusation is true, the bride is stoned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.22-22": {
+      "text": "A man and another man’s wife who lie together must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.23-24": {
+      "text": "Both die when a man sleeps with an engaged woman in a city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.25-27": {
+      "text": "Only the man dies for attacking an engaged woman in a field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.28-29": {
+      "text": "A man who seizes a virgin must pay her father and marry her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.22.30-30": {
+      "text": "A man must not marry his father’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.1-2": {
+      "text": "Some people may not enter the LORD’s assembly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.3-4": {
+      "text": "Ammonites and Moabites may not enter the LORD’s assembly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.5-6": {
+      "text": "God turned Balaam’s curse into a blessing for Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.7-8": {
+      "text": "Israelites must not despise Edomites or Egyptians",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.9-11": {
+      "text": "An unclean man must stay outside the camp until evening",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.12-14": {
+      "text": "Israelites must keep the camp clean because God is there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.15-16": {
+      "text": "Israelites must not return an escaped slave to his master",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.17-18": {
+      "text": "God rejects shrine prostitutes and prostitutes’ wages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.19-20": {
+      "text": "Israelites must not charge interest to a brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.21-23": {
+      "text": "Israelites must keep vows made to God without delay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.23.24-25": {
+      "text": "Israelites may eat grapes and grain in a neighbor’s field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.1-2": {
+      "text": "A man may divorce his wife with a written certificate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.3-4": {
+      "text": "A man may not remarry a wife who married another",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.5-5": {
+      "text": "A newly married man need not go to war for a year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.6-6": {
+      "text": "Israelites must not take millstones as security for a debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.7-7": {
+      "text": "A kidnapper of a fellow Israelite must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.8-9": {
+      "text": "Israel must follow the priests’ teaching on skin diseases",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.10-11": {
+      "text": "Lenders must wait outside for the security",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.12-13": {
+      "text": "Lenders must return a poor man’s cloak by sunset",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.14-15": {
+      "text": "Employers must pay poor workers each day before sunset",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.16-16": {
+      "text": "Each person dies only for his own sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.17-18": {
+      "text": "Israel must treat foreigners, orphans and widows fairly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.19-20": {
+      "text": "Israelites must leave grain and olives for the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.24.21-22": {
+      "text": "Israelites must leave some grapes for the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.1-2": {
+      "text": "Judges must decide disputes and punish the guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.3-3": {
+      "text": "A guilty man may receive no more than forty lashes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.4-4": {
+      "text": "Israelites must not muzzle an ox that treads grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.5-6": {
+      "text": "A brother must marry his dead brother’s childless widow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.7-8": {
+      "text": "A widow may go to the elders if her brother-in-law refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.9-10": {
+      "text": "The widow shames a brother-in-law who refuses to marry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.11-12": {
+      "text": "The punishment for a wife who grabs a man in a fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft is a noun phrase rather than a full statement.",
+        "suggestion": "A wife’s hand is cut off if she grabs a man in a fight"
+      }
+    },
+    "DEU.25.13-14": {
+      "text": "Israelites must not use two different weights or measures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.25.15-16": {
+      "text": "Israelites must use honest weights and measures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.1-2": {
+      "text": "Israelites must bring firstfruits to God’s chosen place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.3-4": {
+      "text": "An Israelite tells the priest he has entered the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.5-5": {
+      "text": "The Israelite recalls Israel’s ancestor in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.6-7": {
+      "text": "The Israelite says God heard Israel’s cry in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.8-9": {
+      "text": "The Israelite says God brought Israel out to this land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.10-11": {
+      "text": "The Israelite presents the firstfruits and rejoices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.12-13": {
+      "text": "In the third year Israelites give the tithe to the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.14-15": {
+      "text": "The Israelite says he obeyed and asks God’s blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.16-17": {
+      "text": "Israel promises to walk in God’s ways and obey him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.26.18-19": {
+      "text": "God declares that Israel is his treasured people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.1-3": {
+      "text": "Israel must write the law on plastered stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.4-5": {
+      "text": "Israel must build a stone altar on Mount Ebal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.6-8": {
+      "text": "Israel must offer sacrifices and rejoice at the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.9-10": {
+      "text": "Moses and the priests tell Israel to obey God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.11-12": {
+      "text": "Six tribes stand on Mount Gerizim to bless the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.13-14": {
+      "text": "Six tribes stand on Mount Ebal to speak the curse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.15-15": {
+      "text": "The Levites curse anyone who secretly makes an idol",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.16-17": {
+      "text": "Curses on dishonoring parents and moving boundary stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.18-19": {
+      "text": "Curses for misleading a blind man and denying justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.20-21": {
+      "text": "Curses on sex with a father’s wife or with an animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.22-23": {
+      "text": "Curses on sex with a sister or a mother-in-law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.24-25": {
+      "text": "Curses on killing a neighbor in secret or for a bribe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.27.26-26": {
+      "text": "Curse on anyone who does not obey the words of this law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The referent of “this” is not clear to someone reading the title alone in a list.",
+        "suggestion": "Curse on anyone who does not obey God’s law"
+      }
+    },
+    "DEU.28.1-2": {
+      "text": "God will bless Israel above all nations if the people obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.3-4": {
+      "text": "Blessings on the people, the fields and the animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.5-6": {
+      "text": "Blessings on the people’s food and on coming and going",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.7-8": {
+      "text": "God will defeat Israel’s enemies and bless the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.9-10": {
+      "text": "God will make obedient Israel his holy people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.11-12": {
+      "text": "God will make Israel prosper and send rain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.13-14": {
+      "text": "Israel will lead, not follow, if the people obey God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.15-15": {
+      "text": "Curses will come if Israel does not obey God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.16-17": {
+      "text": "Curses on the city, the country and the food supply",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.18-19": {
+      "text": "Curses on the people’s children, crops and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.20-21": {
+      "text": "God will send confusion and plague because Israel left him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.22-22": {
+      "text": "God will strike Israel with disease, drought and blight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.23-24": {
+      "text": "Drought will make the sky bronze and the earth iron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.25-26": {
+      "text": "Israel will be defeated and become a horror to nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.27-29": {
+      "text": "God will send boils, madness and blindness on Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.30-31": {
+      "text": "Enemies will take the people’s homes, fields and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.32-32": {
+      "text": "Israel’s children will be given to another nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.33-35": {
+      "text": "A foreign people will eat the crops and oppress Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.36-37": {
+      "text": "Israel and its king will be driven to a foreign land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.38-39": {
+      "text": "Locusts and worms will destroy the crops and vineyards",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.40-41": {
+      "text": "Olives will fall and children will go into captivity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.42-44": {
+      "text": "Foreigners will rise above Israel and become the head",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.45-46": {
+      "text": "The curses will last as a sign for Israel forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.47-48": {
+      "text": "Israel will serve enemies for not serving God with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.49-51": {
+      "text": "A fierce nation from far away will destroy Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.52-53": {
+      "text": "Siege will drive parents to eat children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.54-55": {
+      "text": "A gentle man will refuse to share his children’s flesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.56-57": {
+      "text": "A gentle woman will secretly eat her children in the siege",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.58-59": {
+      "text": "God will send terrible diseases if Israel disobeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.60-62": {
+      "text": "God will bring Egypt’s diseases on disobedient Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.63-64": {
+      "text": "God will scatter Israel from the land among the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.65-66": {
+      "text": "Scattered Israel will have no rest and always be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.28.67-68": {
+      "text": "Israel will dread each day and return to Egypt as slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Verse 68 says the people will offer themselves as slaves, but no one will buy them.",
+        "suggestion": "Israel will dread each day and be sent back to Egypt"
+      }
+    },
+    "DEU.29.1-1": {
+      "text": "God makes another covenant with Israel in Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.2-4": {
+      "text": "Moses reminds Israel of what God did in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.5-6": {
+      "text": "Israel’s clothes did not wear out in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft mentions only clothes from verse 5 and leaves out the rest of God’s care during forty years.",
+        "suggestion": "God cared for Israel for forty years in the wilderness"
+      }
+    },
+    "DEU.29.7-9": {
+      "text": "Israel defeated Sihon and Og; Moses urges obedience",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.10-11": {
+      "text": "All Israel stands before God, including foreigners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.12-13": {
+      "text": "God makes Israel his people by the covenant and oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.14-16": {
+      "text": "The covenant is for Israel and for later generations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.17-19": {
+      "text": "Moses warns Israel against turning to idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.20-21": {
+      "text": "God will punish anyone who turns to other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.22-24": {
+      "text": "Nations will see Israel’s land ruined like Sodom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.25-26": {
+      "text": "People will say Israel left God for other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.27-28": {
+      "text": "God uproots Israel from the land in great anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.29.29-29": {
+      "text": "God keeps secrets; Israel must follow what is revealed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.1-3": {
+      "text": "God will bring Israel back if the people return to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.4-5": {
+      "text": "God will gather Israel from far places to the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.6-8": {
+      "text": "God will change Israel’s hearts to love him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.9-10": {
+      "text": "God will bless Israel again if the people obey him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.11-12": {
+      "text": "God’s commandment is not too hard or far away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.13-14": {
+      "text": "God’s word is near Israel, in mouth and heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.15-16": {
+      "text": "Moses offers Israel life or death: love God and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.17-18": {
+      "text": "Israel will perish if the people worship other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.30.19-20": {
+      "text": "Moses calls Israel to choose life and love God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.1-3": {
+      "text": "Moses, age 120, says God will lead Israel across",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.4-6": {
+      "text": "Moses urges Israel to be strong; God will not leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.7-8": {
+      "text": "Moses tells Joshua to be strong and not afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.9-11": {
+      "text": "Moses orders the law read to Israel every seven years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.12-13": {
+      "text": "All the people must hear the law and learn to fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.14-15": {
+      "text": "God tells Moses to bring Joshua to the Tent of Meeting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.16-16": {
+      "text": "God tells Moses the Israelites will worship other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.17-18": {
+      "text": "God says he will abandon Israel because of idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.19-20": {
+      "text": "God tells Moses to teach Israel a song as a witness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.21-21": {
+      "text": "The song will speak against Israel when troubles come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.22-23": {
+      "text": "Moses writes the song, and God commissions Joshua",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.24-26": {
+      "text": "Moses tells the Levites to put the law beside the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.31.27-29": {
+      "text": "Moses says Israel will rebel after his death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.1-2": {
+      "text": "Moses calls heaven and earth to hear his song",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.3-4": {
+      "text": "Moses praises God as the faithful and just Rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.5-6": {
+      "text": "Moses says Israel has been unfaithful to God its Father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.7-8": {
+      "text": "Moses reminds Israel that God set the nations’ borders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.9-10": {
+      "text": "God chose Israel and cared for Israel in the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.11-12": {
+      "text": "God carried Israel like an eagle carries its young",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.13-13": {
+      "text": "God gave Israel good food from the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.14-14": {
+      "text": "God gave Israel rich food and fine wine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.15-16": {
+      "text": "Israel became fat, left God and served foreign gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.17-18": {
+      "text": "Israel offered sacrifices to demons and forgot God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.19-20": {
+      "text": "God rejects his sons and daughters for unfaithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.21-21": {
+      "text": "God will make Israel jealous through another nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.22-22": {
+      "text": "God’s anger burns like a fire over the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.23-24": {
+      "text": "God will send hunger, plague and wild animals on Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.25-26": {
+      "text": "War and fear will strike young and old in Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.27-27": {
+      "text": "God spares Israel so enemies will not boast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.28-29": {
+      "text": "Moses says Israel has no wisdom or understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.30-31": {
+      "text": "Israel’s defeat came because God gave Israel up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.32-32": {
+      "text": "Moses says the enemy’s vine is poisonous and bitter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.33-34": {
+      "text": "The enemy’s wine is like deadly snake poison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft describes verse 33 but leaves out verse 34, where God stores up these things.",
+        "suggestion": "God has stored up the enemy’s deadly deeds for judgment"
+      }
+    },
+    "DEU.32.35-35": {
+      "text": "God says he will repay, and disaster is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.36-36": {
+      "text": "God will have mercy on his people when strength is gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.37-38": {
+      "text": "God asks where the false gods are to help Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.39-40": {
+      "text": "God says he alone is God and controls life and death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.41-41": {
+      "text": "God will punish his enemies with his sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.42-42": {
+      "text": "God’s sword will destroy his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.43-43": {
+      "text": "The nations should rejoice because God will avenge his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "The nations must rejoice because God will avenge his people"
+      }
+    },
+    "DEU.32.44-45": {
+      "text": "Moses and Joshua recite the song to the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.46-47": {
+      "text": "Moses tells Israel to teach the law to their children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.48-49": {
+      "text": "God tells Moses to go up Mount Nebo and see Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.32.50-52": {
+      "text": "God says Moses will die and not enter the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.1-2": {
+      "text": "Moses begins to bless Israel and speaks of the LORD’s coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.3-4": {
+      "text": "Moses says the LORD loves his people and gave them the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.5-6": {
+      "text": "The LORD is King; Moses blesses Reuben",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.7-7": {
+      "text": "Moses asks the LORD to help the tribe of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.8-8": {
+      "text": "Moses blesses Levi, who was tested at Massah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.9-9": {
+      "text": "Levi was faithful to the LORD’s word above his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.10-10": {
+      "text": "Levi will teach God’s law and offer sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.11-11": {
+      "text": "Moses asks the LORD to bless Levi and defeat his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.12-12": {
+      "text": "Moses blesses Benjamin, who rests safe in God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.13-13": {
+      "text": "Moses asks the LORD to bless Joseph’s land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.14-15": {
+      "text": "Moses asks for good harvests and rich hills for Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.16-16": {
+      "text": "Moses asks God’s favor to rest on Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.17-17": {
+      "text": "Moses says Ephraim and Manasseh will be strong like a bull",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.18-19": {
+      "text": "Moses blesses Zebulun and Issachar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.20-20": {
+      "text": "Moses blesses Gad, who is strong like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.21-21": {
+      "text": "Gad chose the best land and did the LORD’s justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.22-22": {
+      "text": "Moses says the tribe of Dan is like a lion’s cub",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.23-23": {
+      "text": "Moses blesses Naphtali with the LORD’s favor and land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.24-25": {
+      "text": "Moses blesses Asher with favor, safety and strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.26-26": {
+      "text": "Moses says no god is like the God of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.27-27": {
+      "text": "God is Israel’s safe home and drives out the enemy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.28-28": {
+      "text": "Israel lives safely in a land of grain and wine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.33.29-29": {
+      "text": "Moses says Israel is blessed because the LORD saves it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.34.1-3": {
+      "text": "The LORD shows Moses the whole land from Mount Nebo",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.34.4-6": {
+      "text": "Moses dies in Moab and the LORD buries him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.34.7-8": {
+      "text": "Moses dies at 120 and Israel mourns thirty days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.34.9-9": {
+      "text": "Joshua is full of wisdom and Israel obeys him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DEU.34.10-12": {
+      "text": "No prophet in Israel was ever like Moses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
