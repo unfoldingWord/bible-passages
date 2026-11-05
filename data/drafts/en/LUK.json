@@ -1,0 +1,3222 @@
+{
+  "language": "en",
+  "book": "LUK",
+  "bible": "bsb-luk",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793902780-lfS3IPXijzInhf8zjQaJ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5738,
+      "completionTokens": 4525,
+      "reasoningTokens": 3514,
+      "cost": 0.056726,
+      "ms": 26915
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902807-ij8F7OSQu2v4GfaJBfTy",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5720,
+      "completionTokens": 3825,
+      "reasoningTokens": 2868,
+      "cost": 0.04969,
+      "ms": 24817
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902832-qBV963AqWxY0PmH5MigG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6036,
+      "completionTokens": 3974,
+      "reasoningTokens": 2967,
+      "cost": 0.051812,
+      "ms": 25066
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902857-RAlt19gXqs7YJiZEloLN",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5847,
+      "completionTokens": 6305,
+      "reasoningTokens": 5326,
+      "cost": 0.074744,
+      "ms": 41091
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902898-NKy0teS4OttBuacjMFVG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6105,
+      "completionTokens": 5792,
+      "reasoningTokens": 4788,
+      "cost": 0.07013,
+      "ms": 35786
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902934-uapZwk8bgwoqoEMybSlG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5986,
+      "completionTokens": 6361,
+      "reasoningTokens": 5361,
+      "cost": 0.075582,
+      "ms": 39037
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793902973-8kOiKkRtdEap7D8X8EJk",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5692,
+      "completionTokens": 6026,
+      "reasoningTokens": 5033,
+      "cost": 0.071644,
+      "ms": 37711
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903011-Y7uQn04BzgOnPyhC9rdO",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5899,
+      "completionTokens": 6646,
+      "reasoningTokens": 5655,
+      "cost": 0.078258,
+      "ms": 40483
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903051-Gs1GI9U0rC6zzy3HlzGo",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5924,
+      "completionTokens": 5889,
+      "reasoningTokens": 4967,
+      "cost": 0.070738,
+      "ms": 39295
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903090-cymvaTuHTgmdusUL7SOr",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5746,
+      "completionTokens": 6420,
+      "reasoningTokens": 5444,
+      "cost": 0.075692,
+      "ms": 42398
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903133-SvFAXBO54VCdoIM6hsaz",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5623,
+      "completionTokens": 4540,
+      "reasoningTokens": 3536,
+      "cost": 0.056646,
+      "ms": 29181
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903164-YvSnFOXOsvqMADE7rAMY",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5425,
+      "completionTokens": 962,
+      "reasoningTokens": 0,
+      "cost": 0.02047,
+      "ms": 8000
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903171-8my910oTUDtBlXy1LLs3",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5604,
+      "completionTokens": 3600,
+      "reasoningTokens": 2583,
+      "cost": 0.047208,
+      "ms": 22312
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793903195-765LiuAgmqhoT1102yzD",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5287,
+      "completionTokens": 5045,
+      "reasoningTokens": 4059,
+      "cost": 0.061024,
+      "ms": 36117
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903229-1wJQzFZo8xAjBdy9oi1K",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4848,
+      "completionTokens": 10074,
+      "reasoningTokens": 9095,
+      "cost": 0.0414135,
+      "ms": 70674
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903299-seQR3VrRHs9UAQy6Kofa",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4776,
+      "completionTokens": 9056,
+      "reasoningTokens": 7789,
+      "cost": 0.037542,
+      "ms": 58016
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903357-HW8f1DFCTP9auApU3Kaq",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4969,
+      "completionTokens": 11064,
+      "reasoningTokens": 10019,
+      "cost": 0.04521675,
+      "ms": 84529
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903442-kd0OjCXIu3rZd3q80QeC",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4954,
+      "completionTokens": 7307,
+      "reasoningTokens": 6373,
+      "cost": 0.03111675,
+      "ms": 51869
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903494-ZBL3pBkeMJOBaeQrRlCt",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5066,
+      "completionTokens": 8952,
+      "reasoningTokens": 8002,
+      "cost": 0.0373695,
+      "ms": 66037
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903560-90ULY19NWfzTepNQEBeo",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4974,
+      "completionTokens": 11774,
+      "reasoningTokens": 10698,
+      "cost": 0.047883,
+      "ms": 74198
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903634-BrjmC0ymrJRSgP2bSca3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4860,
+      "completionTokens": 11358,
+      "reasoningTokens": 10384,
+      "cost": 0.0462375,
+      "ms": 83993
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903718-xOaoitxQOgze2ZeBXtlh",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5016,
+      "completionTokens": 5728,
+      "reasoningTokens": 4815,
+      "cost": 0.025242,
+      "ms": 34581
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903753-sYz36cUSIT2TIDBz3C1o",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5060,
+      "completionTokens": 6112,
+      "reasoningTokens": 5194,
+      "cost": 0.026715,
+      "ms": 30255
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903783-aq4D9zIQXMM9t70U5anK",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4857,
+      "completionTokens": 9102,
+      "reasoningTokens": 8071,
+      "cost": 0.03777525,
+      "ms": 54019
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903837-74yeaG2dzX0B1no5BYul",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4790,
+      "completionTokens": 4135,
+      "reasoningTokens": 3224,
+      "cost": 0.01909875,
+      "ms": 28632
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903866-lv4ilNLsI4jUBPwl395g",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4696,
+      "completionTokens": 6724,
+      "reasoningTokens": 5699,
+      "cost": 0.028737,
+      "ms": 42759
+    },
+    {
+      "role": "check",
+      "id": "gen-1793903909-DsuGsxeuqi1sUBXZ7Vxz",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4742,
+      "completionTokens": 22270,
+      "reasoningTokens": 21118,
+      "cost": 0.087069,
+      "ms": 156163
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904065-zRG5VyJ9mSGHxIgZrqBP",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4571,
+      "completionTokens": 7027,
+      "reasoningTokens": 6102,
+      "cost": 0.0297795,
+      "ms": 50921
+    }
+  ],
+  "titles": {
+    "LUK.1.5-7": {
+      "text": "Zechariah and Elizabeth are righteous but have no children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.8-10": {
+      "text": "Zechariah is chosen to burn incense in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.11-13": {
+      "text": "An angel tells Zechariah that Elizabeth will have a son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.14-15": {
+      "text": "John will bring joy and be filled with the Holy Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.16-17": {
+      "text": "The angel says John will make people ready for the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.18-20": {
+      "text": "Zechariah doubts, so Gabriel says he cannot speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "In 'Gabriel says he cannot speak', the pronoun 'he' sounds as though Gabriel himself cannot speak.",
+        "suggestion": "Gabriel says Zechariah will be unable to speak"
+      }
+    },
+    "LUK.1.21-23": {
+      "text": "Zechariah comes out of the temple unable to speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.24-25": {
+      "text": "Elizabeth becomes pregnant and thanks the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.26-29": {
+      "text": "The angel Gabriel greets Mary in Nazareth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.30-33": {
+      "text": "Gabriel tells Mary she will bear Jesus, a king forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.34-35": {
+      "text": "Gabriel explains how Mary will have a son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.36-38": {
+      "text": "Mary agrees to be the Lord’s servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.39-41": {
+      "text": "Mary visits Elizabeth, and Elizabeth’s baby leaps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.42-45": {
+      "text": "Elizabeth blesses Mary for believing the Lord’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.46-47": {
+      "text": "Mary rejoices in God her Savior",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.48-49": {
+      "text": "Mary says God has done great things for her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.50-51": {
+      "text": "God shows mercy and scatters the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.52-53": {
+      "text": "God brings down rulers and fills the hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.54-55": {
+      "text": "God helps Israel as he promised Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.56-56": {
+      "text": "Mary stays three months with Elizabeth, then goes home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.57-58": {
+      "text": "Elizabeth gives birth to a son, and neighbors rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.59-61": {
+      "text": "Elizabeth says the baby must be named John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.62-63": {
+      "text": "Zechariah writes that the baby’s name is John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.64-66": {
+      "text": "Zechariah speaks again and praises God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.67-68": {
+      "text": "Zechariah, filled with the Holy Spirit, praises God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.69-71": {
+      "text": "Zechariah says God sent a savior from David’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.72-75": {
+      "text": "Zechariah says God keeps his promise to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.76-77": {
+      "text": "Zechariah says John will prepare the way for the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.78-79": {
+      "text": "Zechariah says God’s mercy brings light and peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.1.80-80": {
+      "text": "The child John grows up in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.1-3": {
+      "text": "Caesar Augustus orders a census, and all go to register",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.4-5": {
+      "text": "Joseph and Mary go to Bethlehem to register",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.6-7": {
+      "text": "Mary gives birth to Jesus and lays him in a manger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.8-9": {
+      "text": "An angel appears to shepherds in the fields",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.10-12": {
+      "text": "The angel tells the shepherds that a Savior is born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.13-14": {
+      "text": "Many angels appear and praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.15-16": {
+      "text": "The shepherds go to Bethlehem and find the baby",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.17-20": {
+      "text": "The shepherds tell others and praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.21-21": {
+      "text": "Jesus is named on the eighth day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.22-24": {
+      "text": "Mary and Joseph present Jesus to the Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.25-26": {
+      "text": "The Holy Spirit promises Simeon he will see Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.27-29": {
+      "text": "Simeon takes Jesus in his arms and blesses God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.30-32": {
+      "text": "Simeon says he has seen God’s salvation for all peoples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.33-35": {
+      "text": "Simeon speaks to Mary about what Jesus will do",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.41-44": {
+      "text": "Jesus stays behind in Jerusalem after the Passover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.45-47": {
+      "text": "Mary and Joseph find Jesus with the teachers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.48-50": {
+      "text": "Jesus tells his parents he must be in his Father’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.2.51-52": {
+      "text": "Jesus obeys his parents and grows in wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.1-2": {
+      "text": "God’s word comes to John in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.3-3": {
+      "text": "John preaches baptism for the forgiveness of sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.4-4": {
+      "text": "Isaiah wrote about a voice calling in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.5-6": {
+      "text": "Isaiah says all people will see God’s salvation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.7-7": {
+      "text": "John warns the crowds who come to be baptized",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.8-8": {
+      "text": "John tells the crowds to show true repentance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.9-9": {
+      "text": "John says trees without good fruit will be cut down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.10-11": {
+      "text": "John tells the crowds to share clothes and food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.12-13": {
+      "text": "John tells tax collectors to collect only what is allowed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.14-14": {
+      "text": "John tells soldiers not to take money by force",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.15-16": {
+      "text": "John says a more powerful One is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The word “one” should not be capitalized because it is not a proper name.",
+        "suggestion": "John says a more powerful one is coming"
+      }
+    },
+    "LUK.3.17-17": {
+      "text": "John says the coming One will judge like a farmer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain", "style"],
+        "why": "The text describes gathering wheat and burning chaff, not judging like a farmer, and “one” should not be capitalized.",
+        "suggestion": "The coming one will gather the wheat and burn the chaff"
+      }
+    },
+    "LUK.3.18-20": {
+      "text": "Herod puts John in prison after John rebukes him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.23-24": {
+      "text": "Jesus is about thirty, and his list of ancestors begins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.3.25-26": {
+      "text": "Ancestors of Jesus from Mattathias to Joda",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a phrase.",
+        "suggestion": "Jesus’ ancestors are listed from Mattathias to Joda"
+      }
+    },
+    "LUK.3.27-29": {
+      "text": "Ancestors of Jesus from Joanan to Levi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a phrase.",
+        "suggestion": "Jesus’ ancestors are listed from Joanan to Levi"
+      }
+    },
+    "LUK.3.30-32": {
+      "text": "Ancestors of Jesus from Simeon to Nahshon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a phrase.",
+        "suggestion": "Jesus’ ancestors are listed from Simeon to Nahshon"
+      }
+    },
+    "LUK.3.33-35": {
+      "text": "Ancestors of Jesus from Amminadab to Shelah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a phrase.",
+        "suggestion": "Jesus’ ancestors are listed from Amminadab to Shelah"
+      }
+    },
+    "LUK.3.36-38": {
+      "text": "Ancestors of Jesus from Cainan back to Adam and God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a phrase.",
+        "suggestion": "Jesus’ ancestors are traced back to Adam and God"
+      }
+    },
+    "LUK.4.1-2": {
+      "text": "The Spirit leads Jesus into the wilderness for forty days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.3-4": {
+      "text": "The devil tells Jesus to turn a stone into bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions the devil’s temptation in verse 3 but leaves out Jesus’ response in verse 4.",
+        "suggestion": "Jesus refuses to turn a stone into bread"
+      }
+    },
+    "LUK.4.5-7": {
+      "text": "The devil offers Jesus the world’s kingdoms for worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.8-8": {
+      "text": "Jesus answers that people must worship only God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.9-11": {
+      "text": "The devil tells Jesus to jump from the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.12-13": {
+      "text": "Jesus refuses to test God, and the devil leaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.16-17": {
+      "text": "Jesus goes to the synagogue in Nazareth and reads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Jesus unrolls the scroll to read, but he does not read until the next verse.",
+        "suggestion": "Jesus stands up to read in the synagogue in Nazareth"
+      }
+    },
+    "LUK.4.18-19": {
+      "text": "Jesus reads Isaiah’s words about good news for the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.20-22": {
+      "text": "Jesus says Isaiah’s words come true that day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.23-24": {
+      "text": "Jesus says no prophet is accepted in his hometown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.25-27": {
+      "text": "Jesus tells how Elijah and Elisha helped foreigners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.28-30": {
+      "text": "The angry crowd tries to throw Jesus off a cliff",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.31-32": {
+      "text": "Jesus teaches with authority in Capernaum",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.33-34": {
+      "text": "A man with an unclean spirit cries out to Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.35-37": {
+      "text": "Jesus commands the unclean spirit to leave the man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.38-39": {
+      "text": "Jesus heals Simon’s mother-in-law of a fever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.4.40-41": {
+      "text": "Jesus heals many sick people and rebukes demons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.1-3": {
+      "text": "Jesus teaches the crowd from Simon’s boat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.4-7": {
+      "text": "Simon obeys Jesus and catches a huge number of fish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.8-11": {
+      "text": "Simon, James and John leave everything to follow Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.12-13": {
+      "text": "Jesus heals a man with leprosy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.14-14": {
+      "text": "Jesus tells the healed man to show himself to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.15-16": {
+      "text": "Crowds come to Jesus, and he often prays alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.17-17": {
+      "text": "Pharisees and teachers of the law come to hear Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.18-19": {
+      "text": "Men lower a paralyzed man through the roof to Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.20-21": {
+      "text": "Jesus forgives the man’s sins, and the Pharisees object",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.22-24": {
+      "text": "Jesus proves his authority to forgive by healing the man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.25-26": {
+      "text": "The healed man goes home, and all praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.27-28": {
+      "text": "Jesus calls the tax collector Levi to follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.29-32": {
+      "text": "Jesus says he came to call sinners, not the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.36-36": {
+      "text": "Jesus tells a story about a new patch on old cloth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.5.37-39": {
+      "text": "Jesus tells about new wine in old wineskins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.1-2": {
+      "text": "Pharisees object to disciples picking grain on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "It is not clear whose disciples are being questioned.",
+        "suggestion": "Pharisees question Jesus’ disciples on the Sabbath"
+      }
+    },
+    "LUK.6.3-5": {
+      "text": "Jesus tells how David and his men ate the holy bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.6-8": {
+      "text": "Jesus calls a man with a withered hand to stand up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.9-11": {
+      "text": "Jesus heals the man’s hand and the Pharisees are angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.12-13": {
+      "text": "Jesus prays all night and chooses twelve apostles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.14-16": {
+      "text": "Names of the twelve men Jesus chose",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full statement.",
+        "suggestion": "These are the twelve apostles Jesus chose"
+      }
+    },
+    "LUK.6.20-21": {
+      "text": "Jesus says the poor, hungry and weeping are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.22-23": {
+      "text": "Jesus tells disciples to rejoice when hated for his sake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.24-25": {
+      "text": "Jesus warns the rich, the well fed and those who laugh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.26-26": {
+      "text": "Jesus warns against being praised by everyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.27-28": {
+      "text": "Jesus tells listeners to bless and pray for enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.29-30": {
+      "text": "Jesus tells listeners to give freely, even when wronged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.31-34": {
+      "text": "Jesus says loving only friends is not enough",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.35-36": {
+      "text": "Jesus tells listeners to love enemies and be merciful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.37-37": {
+      "text": "Jesus tells listeners not to judge but to forgive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.38-38": {
+      "text": "Jesus says those who give will receive more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.39-40": {
+      "text": "Jesus says a blind man cannot lead a blind man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.41-42": {
+      "text": "Jesus says to take the beam from one’s own eye first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.43-44": {
+      "text": "Jesus says each tree is known by its fruit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.45-45": {
+      "text": "Jesus says the mouth speaks what fills the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.46-48": {
+      "text": "Jesus says those who obey him are like a house on rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.6.49-49": {
+      "text": "Jesus says those who do not obey are like a ruined house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.1-1": {
+      "text": "Jesus finishes teaching and goes to Capernaum",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.2-5": {
+      "text": "Jewish elders ask Jesus to heal a centurion’s servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.6-8": {
+      "text": "The centurion says Jesus only needs to say the word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.9-10": {
+      "text": "Jesus praises great faith, and the servant is healed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.11-15": {
+      "text": "Jesus brings a widow’s dead son back to life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.16-17": {
+      "text": "The people praise God and news about Jesus spreads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.18-20": {
+      "text": "John sends two disciples to ask if Jesus is the One",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.21-23": {
+      "text": "Jesus heals many and sends word back to John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.24-26": {
+      "text": "Jesus tells the crowds that John is a prophet and more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.27-28": {
+      "text": "Jesus says John is the messenger who prepares the way",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.29-30": {
+      "text": "People accept God’s purpose, but the Pharisees reject it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.31-32": {
+      "text": "Jesus compares the people of that time to children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.33-35": {
+      "text": "Jesus says people reject both John and himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.36-38": {
+      "text": "A sinful woman anoints Jesus’ feet at a Pharisee’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.39-40": {
+      "text": "Simon the Pharisee doubts that Jesus is a prophet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.41-43": {
+      "text": "Jesus tells Simon a story about two men who owed money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.44-45": {
+      "text": "Jesus compares Simon’s welcome with the woman’s care",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.46-47": {
+      "text": "Jesus says the woman loves much because she is forgiven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.7.48-50": {
+      "text": "Jesus forgives the woman and tells her to go in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.4-6": {
+      "text": "A farmer sows seed on a path and on rocky ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.7-8": {
+      "text": "Other seed falls among thorns and on good soil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.9-10": {
+      "text": "Jesus explains to his disciples why he uses parables",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.11-13": {
+      "text": "Jesus explains the seed on the path and on rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.14-15": {
+      "text": "Jesus explains the seed among thorns and on good soil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.22-23": {
+      "text": "Jesus and the disciples cross the lake in a storm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.24-25": {
+      "text": "Jesus commands the wind and water, and they obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.26-27": {
+      "text": "Jesus meets a man with a demon near the tombs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.28-29": {
+      "text": "The man with a demon begs Jesus not to torture him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.30-31": {
+      "text": "Jesus asks the demon its name, and it says Legion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.32-33": {
+      "text": "Demons enter a herd of pigs, and the pigs drown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.34-35": {
+      "text": "The people find the man healed and are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.36-37": {
+      "text": "The people of the Gerasenes ask Jesus to leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.38-39": {
+      "text": "Jesus sends the healed man home to tell what God did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.40-42": {
+      "text": "Jairus begs Jesus to heal his dying daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.43-44": {
+      "text": "A woman with bleeding touches Jesus’ cloak and is healed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.45-46": {
+      "text": "Jesus asks who touched him and knows power left him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.47-48": {
+      "text": "Jesus tells the healed woman to go in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.49-50": {
+      "text": "Jesus tells Jairus not to be afraid but to believe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.51-53": {
+      "text": "Jesus says the girl is asleep, and the mourners laugh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.8.54-56": {
+      "text": "Jesus raises Jairus’ daughter from death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.1-2": {
+      "text": "Jesus sends the Twelve to preach and to heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.3-4": {
+      "text": "Jesus tells the Twelve to take nothing for the journey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.5-6": {
+      "text": "The Twelve go to the villages to preach and heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the Twelve setting out in verse 6 and misses Jesus’ instructions about rejection in verse 5.",
+        "suggestion": "Jesus warns of rejection, and the Twelve preach and heal"
+      }
+    },
+    "LUK.9.10-11": {
+      "text": "The apostles report to Jesus, and crowds follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.12-14": {
+      "text": "Jesus tells the Twelve to feed the crowd of five thousand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.15-17": {
+      "text": "Jesus feeds the people with five loaves and two fish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.18-19": {
+      "text": "Jesus asks the disciples who the crowds say he is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.20-20": {
+      "text": "Peter says Jesus is the Christ of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.23-25": {
+      "text": "Jesus says followers must take up the cross daily",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.26-27": {
+      "text": "Jesus warns people not to be ashamed of him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.28-29": {
+      "text": "Jesus’ face changes as he prays on a mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.30-31": {
+      "text": "Moses and Elijah talk with Jesus about his departure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.32-33": {
+      "text": "Peter offers to put up three shelters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.34-36": {
+      "text": "A voice from a cloud says to listen to Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.37-40": {
+      "text": "A man begs Jesus to help his son with an evil spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.41-42": {
+      "text": "Jesus drives out the evil spirit and heals the boy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.46-48": {
+      "text": "The disciples argue about who is the greatest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes the argument in verse 46 and leaves out Jesus’ teaching in verses 47–48.",
+        "suggestion": "Jesus teaches that the least is the greatest"
+      }
+    },
+    "LUK.9.49-50": {
+      "text": "Jesus tells John not to stop a man who drives out demons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.51-53": {
+      "text": "Jesus heads for Jerusalem, but Samaritans refuse him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.54-56": {
+      "text": "Jesus rebukes James and John for wanting fire from heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.57-58": {
+      "text": "A man wants to follow Jesus, who has no home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.59-60": {
+      "text": "Jesus calls a man who first wants to bury his father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.9.61-62": {
+      "text": "Jesus says no one who looks back is fit for the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.1-2": {
+      "text": "Jesus sends seventy-two followers ahead to the towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.3-4": {
+      "text": "Jesus sends the seventy-two like lambs among wolves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.5-7": {
+      "text": "The seventy-two bring peace to a house and stay there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses give Jesus’ instructions, not actions the seventy-two are already doing.",
+        "suggestion": "Jesus tells the seventy-two how to stay in a house"
+      }
+    },
+    "LUK.10.8-9": {
+      "text": "The seventy-two heal the sick and say the kingdom is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses give Jesus’ instructions, not actions the seventy-two are already doing.",
+        "suggestion": "Jesus tells the seventy-two what to do in a town"
+      }
+    },
+    "LUK.10.10-12": {
+      "text": "Jesus says a town that rejects the message will be judged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.13-15": {
+      "text": "Jesus warns Chorazin, Bethsaida and Capernaum",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.16-16": {
+      "text": "Whoever rejects Jesus’ messengers rejects Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.21-21": {
+      "text": "Jesus praises the Father who reveals things to children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.22-22": {
+      "text": "Jesus says only the Father and Son know each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.23-24": {
+      "text": "Jesus says the disciples are blessed to see and hear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.25-28": {
+      "text": "An expert in the law asks Jesus how to get eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.29-30": {
+      "text": "Jesus begins a story about a man attacked by robbers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.31-32": {
+      "text": "A priest and a Levite pass by the hurt man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.33-35": {
+      "text": "A Samaritan helps the hurt man and pays for his care",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.36-37": {
+      "text": "Jesus tells the expert to show mercy like the Samaritan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.38-39": {
+      "text": "Martha welcomes Jesus while Mary listens to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.10.40-42": {
+      "text": "Martha complains, and Jesus says Mary chose the good part",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.1-1": {
+      "text": "A disciple asks Jesus to teach the disciples to pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.2-2": {
+      "text": "Jesus tells the disciples to pray for God’s kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.3-4": {
+      "text": "Disciples are to pray for bread and forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.5-8": {
+      "text": "Jesus tells of a man who asks a friend for bread at night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.9-10": {
+      "text": "Jesus says that those who ask will receive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.11-13": {
+      "text": "God the Father gives the Holy Spirit to those who ask",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The text speaks of the Father in heaven rather than using the theological title 'God the Father'.",
+        "suggestion": "The Father in heaven gives the Holy Spirit to those who ask"
+      }
+    },
+    "LUK.11.14-15": {
+      "text": "Jesus drives out a demon, and some say it is by Beelzebul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.16-17": {
+      "text": "Some test Jesus; he says a divided kingdom will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.18-20": {
+      "text": "Jesus says he drives out demons by the finger of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.21-23": {
+      "text": "Jesus says a stronger man defeats a strong man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.29-30": {
+      "text": "Jesus says only the sign of Jonah will be given",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.31-31": {
+      "text": "The Queen of the South will condemn this generation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.32-32": {
+      "text": "The men of Nineveh will condemn this generation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.37-38": {
+      "text": "A Pharisee is surprised that Jesus did not wash first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.39-41": {
+      "text": "Jesus says Pharisees are clean outside but greedy inside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.42-42": {
+      "text": "Jesus warns Pharisees to practice justice and God’s love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.43-44": {
+      "text": "Jesus warns Pharisees who love honor and are like graves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.45-46": {
+      "text": "Jesus says experts in the law load people with burdens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.47-48": {
+      "text": "Experts in the law build tombs for the murdered prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.49-51": {
+      "text": "This generation will be charged for the prophets’ blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.52-52": {
+      "text": "Experts in the law took away the key to knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.11.53-54": {
+      "text": "Scribes and Pharisees try to catch Jesus in his words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.1-1": {
+      "text": "Jesus warns the disciples about the Pharisees’ hypocrisy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.2-3": {
+      "text": "Jesus says everything hidden will become known",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.4-5": {
+      "text": "Jesus tells friends to fear God, not those who kill",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.6-7": {
+      "text": "Jesus says God cares for people more than for sparrows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.8-10": {
+      "text": "Jesus teaches about confessing him and denying him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.11-12": {
+      "text": "The Holy Spirit will teach believers what to say",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.13-15": {
+      "text": "Jesus warns a man in the crowd against greed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.16-19": {
+      "text": "Jesus tells of a rich man who plans bigger barns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.20-21": {
+      "text": "God tells the rich man he will die that night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.22-23": {
+      "text": "Jesus tells disciples not to worry about food and clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.24-26": {
+      "text": "God feeds the ravens, and people are worth more than birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.27-28": {
+      "text": "God clothes the lilies and will clothe the disciples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.29-30": {
+      "text": "The Father knows the disciples need food and drink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.31-31": {
+      "text": "Jesus tells disciples to seek God’s kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.32-32": {
+      "text": "God is pleased to give the little flock the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.33-34": {
+      "text": "Disciples should sell possessions and give to the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.35-36": {
+      "text": "Jesus tells disciples to be ready like waiting servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.37-38": {
+      "text": "Blessed are servants the master finds watching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.39-40": {
+      "text": "Jesus says the Son of Man will come when no one expects",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.41-44": {
+      "text": "Jesus says a faithful manager will be put in charge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.45-46": {
+      "text": "An unfaithful servant is punished when the master comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.47-48": {
+      "text": "Much will be required from those who are given much",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.49-50": {
+      "text": "Jesus says he came to bring fire and must face a baptism",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.12.51-53": {
+      "text": "Jesus says he brings division, even within families",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.1-3": {
+      "text": "Jesus answers news of Galileans killed by Pilate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.4-5": {
+      "text": "Jesus says people killed by a tower were not worse sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.6-7": {
+      "text": "A man wants to cut down a fig tree with no fruit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.8-9": {
+      "text": "The vineyard keeper asks for one more year for the tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.10-11": {
+      "text": "Jesus teaches in a synagogue where a woman is bent over",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.12-14": {
+      "text": "Jesus heals the woman, and the synagogue leader is angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.15-16": {
+      "text": "Jesus says the woman should be freed on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.17-17": {
+      "text": "Jesus’ opponents are ashamed and the crowd rejoices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.22-24": {
+      "text": "Jesus tells people to try hard to enter the narrow door",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.25-27": {
+      "text": "The master of the house refuses to let evildoers in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.28-30": {
+      "text": "People from all directions will enter God’s kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.31-33": {
+      "text": "Pharisees warn Jesus about Herod, but Jesus keeps going",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.13.34-35": {
+      "text": "Jesus mourns for Jerusalem, which refused him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.1-3": {
+      "text": "Jesus asks if it is lawful to heal on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.4-6": {
+      "text": "Jesus heals the man, and the Pharisees cannot answer him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.7-9": {
+      "text": "Jesus tells guests not to take the place of honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.10-11": {
+      "text": "Jesus says those who humble themselves will be honored",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.12-12": {
+      "text": "Jesus tells his host not to invite friends and relatives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.13-14": {
+      "text": "Jesus tells hosts to invite the poor, lame and blind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.15-17": {
+      "text": "Jesus tells of a man who invited many to a banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.18-20": {
+      "text": "The invited guests all make excuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.21-22": {
+      "text": "The angry master sends his servant to bring in the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.23-24": {
+      "text": "The master sends the servant to fill his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.25-27": {
+      "text": "Jesus says disciples must put him first and carry a cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.28-30": {
+      "text": "Jesus says to count the cost before building a tower",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.14.31-33": {
+      "text": "A king plans before war; disciples must give up everything",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.1-2": {
+      "text": "The Pharisees complain that Jesus welcomes sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.3-5": {
+      "text": "Jesus tells of a man who goes to find a lost sheep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.6-7": {
+      "text": "Heaven has more joy over one sinner who repents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.11-12": {
+      "text": "A younger son asks his father for his share",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.13-14": {
+      "text": "The younger son wastes his money and a famine comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.15-16": {
+      "text": "The younger son feeds pigs and is very hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.17-19": {
+      "text": "The son decides to go back and ask his father for work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.20-21": {
+      "text": "The father runs to welcome his son home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.22-24": {
+      "text": "The father orders a feast because his son is alive again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.25-27": {
+      "text": "The older son hears the music and asks a servant why",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.28-30": {
+      "text": "The older son is angry and complains to his father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.15.31-32": {
+      "text": "The father tells the older son to be glad about his brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.1-2": {
+      "text": "A rich man tells his manager to give an account",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.3-4": {
+      "text": "The manager plans so people will welcome him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.5-7": {
+      "text": "The manager lowers what the master’s debtors owe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.8-9": {
+      "text": "Jesus tells disciples to use wealth to make friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.10-12": {
+      "text": "Jesus says a faithful person can be trusted with much",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.13-13": {
+      "text": "Jesus says no one can serve both God and money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.14-15": {
+      "text": "Jesus says God knows the hearts of the Pharisees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.16-17": {
+      "text": "Jesus says the gospel is preached and the Law remains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.18-18": {
+      "text": "Jesus teaches about divorce and adultery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.19-21": {
+      "text": "A rich man lives well while poor Lazarus lies at his gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.22-23": {
+      "text": "Lazarus and the rich man die; the rich man is in torment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.24-24": {
+      "text": "The rich man asks Abraham to send Lazarus with water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.25-26": {
+      "text": "Abraham tells the rich man about a great chasm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.16.27-28": {
+      "text": "The rich man asks Abraham to warn his five brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The rich man asks Abraham to send Lazarus to warn his brothers, not to warn them himself.",
+        "suggestion": "The rich man asks Abraham to send Lazarus to his brothers"
+      }
+    },
+    "LUK.16.29-31": {
+      "text": "Abraham says the brothers have Moses and the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.1-2": {
+      "text": "Jesus warns against causing little ones to stumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.3-4": {
+      "text": "Jesus tells disciples to rebuke and forgive a brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.5-6": {
+      "text": "The apostles ask the Lord for more faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only the apostles’ request in verse 5 and leaves out Jesus’s answer about faith in verse 6.",
+        "suggestion": "Jesus answers the apostles’ request for more faith"
+      }
+    },
+    "LUK.17.7-8": {
+      "text": "Jesus describes a servant who must serve his master first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.9-10": {
+      "text": "Jesus says servants only do what is commanded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.11-13": {
+      "text": "Ten men with leprosy call to Jesus for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.14-16": {
+      "text": "Ten men are cleansed, and a Samaritan thanks Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.17-19": {
+      "text": "Jesus asks about the other nine and praises the man’s faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.20-21": {
+      "text": "Jesus tells the Pharisees the kingdom is already here",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.22-24": {
+      "text": "Jesus says the Son of Man will come like lightning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.25-27": {
+      "text": "Jesus must suffer first, and the days will be like Noah’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.28-29": {
+      "text": "Jesus compares the coming day to the days of Lot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.30-31": {
+      "text": "Jesus says that on that day no one should go back for things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.32-33": {
+      "text": "Jesus tells disciples to remember Lot’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.17.34-37": {
+      "text": "Jesus says one person will be taken and another left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.1-2": {
+      "text": "Jesus tells a parable about a judge who did not fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.3-5": {
+      "text": "A widow keeps asking the judge for justice, and he agrees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.6-8": {
+      "text": "Jesus says God will quickly bring justice to his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.9-10": {
+      "text": "Two men go up to the temple to pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.11-12": {
+      "text": "The Pharisee thanks God that he is not like others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.13-14": {
+      "text": "The tax collector asks God for mercy and is accepted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.18-21": {
+      "text": "A ruler asks Jesus how to inherit eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.22-23": {
+      "text": "Jesus tells the ruler to sell everything and follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.24-25": {
+      "text": "Jesus says it is hard for the rich to enter the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.26-27": {
+      "text": "Jesus says God can do what people cannot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.28-30": {
+      "text": "Jesus promises Peter a reward for following him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.31-33": {
+      "text": "Jesus tells the Twelve he will be killed and rise again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.34-34": {
+      "text": "The disciples do not understand what Jesus said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.35-37": {
+      "text": "A blind beggar learns that Jesus is passing by",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.38-39": {
+      "text": "The blind man calls to Jesus and will not be silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.40-41": {
+      "text": "The blind man asks Jesus to let him see again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.18.42-43": {
+      "text": "Jesus heals the blind man and the people praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.1-2": {
+      "text": "Jesus enters Jericho; Zacchaeus is a rich tax collector",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.3-4": {
+      "text": "Zacchaeus climbs a tree to see Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.5-7": {
+      "text": "Jesus goes to Zacchaeus’s house and the people grumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.8-10": {
+      "text": "Zacchaeus gives to the poor; Jesus came to save the lost",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.11-12": {
+      "text": "Jesus tells a parable about a nobleman going far away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.13-15": {
+      "text": "The nobleman gives servants money, then returns as king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.16-17": {
+      "text": "The first servant earns ten minas and is rewarded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.18-19": {
+      "text": "The second servant earns five minas and is rewarded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.20-21": {
+      "text": "Another servant hid the mina because he feared the master",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.22-23": {
+      "text": "The master calls the servant wicked and judges him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.24-25": {
+      "text": "The master gives the servant’s mina to the one with ten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.26-27": {
+      "text": "The king gives more to those who have and punishes enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.28-28": {
+      "text": "Jesus goes on ahead up to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.29-31": {
+      "text": "Jesus sends two disciples to bring a colt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.32-36": {
+      "text": "The disciples bring the colt, and Jesus rides it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.37-38": {
+      "text": "The disciples joyfully praise God and call Jesus King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.39-40": {
+      "text": "Some Pharisees want Jesus to silence the disciples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.41-42": {
+      "text": "Jesus weeps because Jerusalem missed the way to peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.43-44": {
+      "text": "Jesus says enemies will destroy Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.45-46": {
+      "text": "Jesus drives the sellers out of the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.19.47-48": {
+      "text": "Jesus teaches daily, and leaders plan to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.1-2": {
+      "text": "Leaders ask Jesus by what authority he acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.3-4": {
+      "text": "Jesus asks the leaders where John’s baptism came from",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.5-6": {
+      "text": "The leaders discuss how to answer Jesus’ question",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.7-8": {
+      "text": "The leaders do not answer, so Jesus refuses to answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.9-10": {
+      "text": "Jesus tells of tenants who beat the owner’s servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.11-12": {
+      "text": "The tenants mistreat two more of the owner’s servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.13-14": {
+      "text": "The owner sends his son, but the tenants plan to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.15-16": {
+      "text": "The tenants kill the son and lose the vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.17-18": {
+      "text": "Jesus says the rejected stone has become the cornerstone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.19-20": {
+      "text": "Leaders want to arrest Jesus and send spies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.21-22": {
+      "text": "The spies ask Jesus if people should pay taxes to Caesar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.23-24": {
+      "text": "Jesus asks whose image is on a denarius",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.25-26": {
+      "text": "Jesus tells the people to give to Caesar and to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Jesus spoke to his questioners before the crowd, not to the people themselves.",
+        "suggestion": "Jesus says to give to Caesar and to God"
+      }
+    },
+    "LUK.20.27-28": {
+      "text": "The Sadducees ask Jesus about a brother’s widow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.29-33": {
+      "text": "The Sadducees ask whose wife the widow will be",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.34-36": {
+      "text": "Jesus says people in the resurrection do not marry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.37-38": {
+      "text": "Jesus says God is the God of the living",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.20.39-40": {
+      "text": "The scribes praise Jesus and stop asking questions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.5-6": {
+      "text": "Jesus says the temple stones will be thrown down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.7-9": {
+      "text": "Jesus warns the disciples not to be deceived",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.10-11": {
+      "text": "Jesus describes wars, earthquakes and signs from heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.12-13": {
+      "text": "Jesus says believers will be seized and become witnesses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.14-15": {
+      "text": "Jesus tells the disciples not to worry about defending themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 65 characters, exceeding the 60-character limit.",
+        "suggestion": "Jesus tells the disciples not to worry about their defense"
+      }
+    },
+    "LUK.21.16-19": {
+      "text": "Jesus says the disciples will be hated but must endure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.20-22": {
+      "text": "Jesus tells people in Judea to flee from Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.23-24": {
+      "text": "Jesus warns of great distress and captivity in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.25-26": {
+      "text": "Jesus describes signs in the sky and fear on earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.27-28": {
+      "text": "People will see the Son of Man coming in a cloud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.29-31": {
+      "text": "Jesus uses the fig tree to teach about the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.32-33": {
+      "text": "Jesus says his words will never pass away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.34-35": {
+      "text": "Jesus warns the disciples to be ready for that day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.36-36": {
+      "text": "Jesus urges the disciples to keep watch and pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.21.37-38": {
+      "text": "Jesus teaches at the temple every day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.3-4": {
+      "text": "Satan enters Judas, who talks with the chief priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.5-6": {
+      "text": "The chief priests agree to pay Judas to betray Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.7-9": {
+      "text": "Jesus sends Peter and John to prepare the Passover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.10-11": {
+      "text": "Jesus tells Peter and John how to find the house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.12-13": {
+      "text": "Peter and John find the upper room and prepare the Passover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.14-16": {
+      "text": "Jesus eats the Passover with the apostles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.17-18": {
+      "text": "Jesus shares the cup with the apostles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.19-20": {
+      "text": "Jesus gives the apostles the bread and the cup",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.21-23": {
+      "text": "Jesus says one of the apostles will betray him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.24-25": {
+      "text": "The disciples argue about who is the greatest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.26-27": {
+      "text": "Jesus tells the disciples that the greatest must serve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.28-30": {
+      "text": "Jesus promises his disciples a kingdom and thrones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.31-32": {
+      "text": "Jesus prays that Peter’s faith will not fail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.33-34": {
+      "text": "Jesus says Peter will deny him three times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.35-36": {
+      "text": "Jesus tells the disciples to get a purse, bag and sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.37-38": {
+      "text": "Jesus says Scripture about him must come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.39-40": {
+      "text": "Jesus tells the disciples to pray about temptation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Jesus tells the disciples to pray that they will not enter temptation, not to pray about temptation.",
+        "suggestion": "Jesus tells the disciples to pray not to enter temptation"
+      }
+    },
+    "LUK.22.41-42": {
+      "text": "Jesus prays that the Father’s will be done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.43-44": {
+      "text": "An angel strengthens Jesus as he prays in anguish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.45-46": {
+      "text": "Jesus finds the disciples asleep and urges prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase 'urges prayer' is headline phrasing rather than plain English; the text says Jesus tells them to pray.",
+        "suggestion": "Jesus finds the disciples asleep and tells them to pray"
+      }
+    },
+    "LUK.22.47-48": {
+      "text": "Judas comes with a crowd and betrays Jesus with a kiss",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.49-51": {
+      "text": "A disciple cuts off a servant’s ear and Jesus heals it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.52-53": {
+      "text": "Jesus speaks to the leaders who came to arrest him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.54-55": {
+      "text": "Jesus is taken to the high priest’s house; Peter follows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.56-58": {
+      "text": "Peter twice says he does not know Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Peter says he does not know Jesus once, and denies being one of his followers the second time.",
+        "suggestion": "Peter denies Jesus twice"
+      }
+    },
+    "LUK.22.59-60": {
+      "text": "Peter denies Jesus a third time and the rooster crows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.61-62": {
+      "text": "Jesus looks at Peter, and Peter weeps bitterly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.66-68": {
+      "text": "The leaders ask Jesus if he is the Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.22.69-71": {
+      "text": "The leaders ask if Jesus is the Son of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.1-2": {
+      "text": "The leaders take Jesus to Pilate and accuse him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.3-5": {
+      "text": "Pilate finds no basis for a charge against Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.6-7": {
+      "text": "Pilate sends Jesus to Herod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.8-10": {
+      "text": "Herod questions Jesus, but Jesus gives no answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.11-12": {
+      "text": "Herod mocks Jesus and sends him back to Pilate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.13-14": {
+      "text": "Pilate tells the leaders he finds Jesus not guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.15-17": {
+      "text": "Pilate says Jesus has done nothing deserving death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.18-19": {
+      "text": "The crowd shouts for Pilate to release Barabbas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.20-22": {
+      "text": "Pilate again tries to release Jesus, but the crowd refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.23-25": {
+      "text": "Pilate frees Barabbas and hands Jesus to the crowd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says Pilate handed Jesus over to the crowd’s will, not to the crowd itself.",
+        "suggestion": "Pilate frees Barabbas and hands Jesus over to their will"
+      }
+    },
+    "LUK.23.26-26": {
+      "text": "Soldiers make Simon of Cyrene carry Jesus’ cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.27-28": {
+      "text": "Jesus tells the women of Jerusalem to weep for themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.29-31": {
+      "text": "Jesus warns that hard days are coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.32-32": {
+      "text": "Two criminals are led away with Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.33-34": {
+      "text": "Jesus is crucified and asks the Father to forgive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.35-35": {
+      "text": "The rulers mock Jesus as people watch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.36-38": {
+      "text": "Soldiers mock Jesus, and a sign calls him King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.39-41": {
+      "text": "One criminal insults Jesus; the other defends him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.42-43": {
+      "text": "Jesus promises the criminal a place in Paradise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.44-45": {
+      "text": "Darkness covers the land and the temple veil tears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.46-47": {
+      "text": "Jesus dies and a Roman officer praises God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.48-49": {
+      "text": "People return home sad; Jesus’ friends watch from afar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.50-51": {
+      "text": "Joseph, a good Council member, waited for God’s kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.52-53": {
+      "text": "Joseph asks for Jesus’ body and buries it in a tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.23.54-56": {
+      "text": "Women from Galilee see the tomb and prepare spices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.1-3": {
+      "text": "The women find the stone moved and the tomb empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.4-5": {
+      "text": "Two men in shining clothes speak to the women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.6-7": {
+      "text": "The men tell the women Jesus has risen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.8-10": {
+      "text": "The women tell the Eleven about the empty tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.11-12": {
+      "text": "The apostles do not believe; Peter runs to the tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.13-14": {
+      "text": "Two followers of Jesus walk to Emmaus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.15-16": {
+      "text": "Jesus joins the two travelers, who do not know him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.17-18": {
+      "text": "Cleopas is surprised that Jesus does not know the news",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.19-20": {
+      "text": "The travelers tell about Jesus of Nazareth and his death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.21-21": {
+      "text": "The travelers had hoped Jesus would redeem Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.22-24": {
+      "text": "The travelers tell about the empty tomb and the angels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.25-27": {
+      "text": "Jesus explains from the Scriptures that Christ must suffer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.28-29": {
+      "text": "The travelers ask Jesus to stay for the evening",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.30-32": {
+      "text": "The travelers recognize Jesus as he breaks bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.33-35": {
+      "text": "The two travelers return to Jerusalem and tell the news",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.36-37": {
+      "text": "Jesus stands among the disciples, who are frightened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.38-40": {
+      "text": "Jesus shows the disciples his hands and feet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.41-43": {
+      "text": "Jesus eats a piece of fish in front of the disciples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.44-44": {
+      "text": "Jesus says the Scriptures about him must come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.45-47": {
+      "text": "Jesus opens the disciples’ minds to understand Scripture",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.48-49": {
+      "text": "Jesus calls the disciples witnesses and promises power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.50-51": {
+      "text": "Jesus blesses the disciples and is taken up to heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LUK.24.52-53": {
+      "text": "The disciples worship Jesus and praise God in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

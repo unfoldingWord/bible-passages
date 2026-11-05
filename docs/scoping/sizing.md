@@ -685,6 +685,82 @@ check, one book does not move that range.
 Total OpenRouter spend of this work: $1.725863 (the second run; the first
 made no call).
 
+## Measured: English segment titles, the Gospels and Acts (#244)
+
+ADR [0008](../decisions/0008-english-run-before-dispute-verdict.md): the
+remaining 60 books are drafted and checked before the #207 verdict, with
+disputed titles held as for Genesis. Matthew, Mark, Luke, John and Acts
+were drafted on 2026-11-05 the way Genesis was: one plain run of the CLI
+per book, the same models, code at `3b4cc37` (the runner and its library
+are unchanged at `c479756`, the base of this change), and the prompt on
+main, `prompts/segment-titles.md` SHA-256 `e3e08e032d32…` (unchanged by
+this work). Several books ran at the same time, each in its own
+`--out` directory.
+
+```
+node scripts/translate/segment-titles.ts --book MAT \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 1.66 \
+  --out .cache/segment-titles/len-MAT
+```
+
+`--max-cost` was 1.5 times the book's estimate (drafted segments × $0.0027,
+Genesis's rate): MAT 1.66, MRK 1.06, LUK 1.88, JHN 1.48, ACT 1.65.
+
+Every run exited 0 with outcome `done` except Mark's first, which stopped
+on its last check call (the 15th call) when OpenRouter answered with a body
+of whitespace only (`OpenRouter returned non-JSON`); its 15 recorded calls
+cost $0.691304 and wrote no record. Mark was run once more, plainly, and
+that run is the record. Each record was copied unchanged to
+`data/drafts/en/<BOOK>.json` (`cmp`: no difference). The counts below were
+made twice from the records, with `jq` and with Python, which gave the same
+results.
+
+| Book  | Drafted    | Agreed | Disagreed: criteria                                 | Gate failures          | Over 60 (longest) | Calls   | Cost      | Model time |
+| ----- | ---------- | ------ | --------------------------------------------------- | ---------------------- | ----------------- | ------- | --------- | ---------- |
+| MAT   | 410 of 439 | 382    | 28: `style` 14, `covers` 8, `plain` 6, `accurate` 5 | 7 (`length` 7)         | 7 (64)            | 12 + 12 | $1.278408 | 1,422.5 s  |
+| MRK   | 260 of 276 | 252    | 8: `covers` 5, `accurate` 3                         | 0                      | 0 (59)            | 8 + 8   | $0.789557 | 833.0 s    |
+| LUK   | 463 of 493 | 438    | 25: `accurate` 10, `style` 9, `plain` 5, `covers` 4 | 1 (`length` 1)         | 1 (65)            | 14 + 14 | $1.401559 | 1,334.9 s  |
+| JHN   | 365 of 371 | 349    | 16: `accurate` 7, `plain` 6, `style` 4, `covers` 3  | 2 (`length`, `quotes`) | 1 (61)            | 11 + 11 | $1.099597 | 1,118.0 s  |
+| ACT   | 406 of 410 | 396    | 10: `plain` 5, `accurate` 4, `style` 2, `covers` 1  | 2 (`length` 2)         | 2 (63)            | 12 + 12 | $1.115909 | 996.6 s    |
+| Total | 1,904      | 1,817  | 87                                                  | 12                     | 11                | 57 + 57 | $5.685032 | 5,705.0 s  |
+
+Labels and sources: every row is measured 2026-11-05 from the committed
+record. Drafted: `titles`; the other segments are their pericope's only
+segment (MAT 28, MRK 15, LUK 30, JHN 6, ACT 4) or blank in BSB
+(`MAT.17.21-21`, `MRK.11.26-26`), which take `BLANK_TITLE`. Agreed: checker
+`agree`, all `ai-checked`. Criteria: a title can name more than one. Cost:
+OpenRouter's billed `cost` per call, summed; per drafted title MAT $0.0031,
+MRK $0.0030, LUK $0.0030, JHN $0.0030, ACT $0.0027. Model time: `ms` per
+call, summed. Largest completion: draft 8,359 of 16,384 (51%, ACT); check
+25,808 of 32,768 (79%, MAT). No reply was cut off and every reply was
+readable (the runs end `done`). Pronoun drafts (as in #209): MAT 6, MRK 1,
+LUK 1, JHN 4, ACT 3; 2 of the 15 disputed. `npm run build` puts 1,817
+`ai-checked` titles and the 2 `BLANK_TITLE`s in the tC Mobile title tables
+(MAT 383 of 439, MRK 253 of 276, LUK 438 of 493, JHN 349 of 371, ACT 396 of
+410).
+
+No third check was run and no dispute data is written (ADR 0008); the 87
+disagreements stay `unreviewed`. Counts only; the checker's reasons and
+suggestions were not read.
+
+Observations from these runs (not trends):
+
+- **Draft calls that did not reason.** 7 of 57 draft calls used 0 reasoning
+  tokens (MAT batches 9 and 10, MRK 8, LUK 12, JHN 9, ACT 6 and 11), each
+  about 950 to 1,070 completion tokens in 6 to 8 s. 10 of the 11 titles over
+  60 are in those batches (Genesis: 3 of 3 in its one such batch). All 11
+  are also disputed and the gate holds them. Inference, not tested: as for
+  Genesis, the length count happens in the reasoning.
+- **The check came closer to its limit.** Matthew's largest check reply
+  used 79% of `CHECK_MAX_TOKENS` (Genesis's largest, 37%). None was cut
+  off; a longer book with denser batches could be.
+- **One empty reply.** Mark's first run (above). Whether running four books
+  at once made it likelier is not measured.
+
+OpenRouter spend of this work: $6.376336 (the five records, $5.685032, and
+Mark's first run, $0.691304, as its ledger records them).
+
 ## Measured: English segment titles, Romans to Philemon (#244)
 
 ADR [0008](../decisions/0008-english-run-before-dispute-verdict.md): the
