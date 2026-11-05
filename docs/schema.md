@@ -611,8 +611,26 @@ check the bump yet.
    problem is printed as one `::error::` line with `%`, CR and LF encoded
    as `%25`, `%0D` and `%0A`, the workflow-command encoding the Actions
    runner decodes.
-5. The packages and title tables are attached to a **draft** release,
-   published by hand. Release assets are flat and a table shares its
+5. The release notes are generated from the built `data/`
+   (`scripts/release/notes.ts`, `scripts/lib/release-notes.ts`), not
+   written by hand. Per language and in total they count segments, titled
+   segments and segment titles by status (every status above, at 0 too);
+   how many ship (`ai-checked` or above); why the rest do not (held back
+   because a third model's answer, the checker or a gate, or a person's
+   review left the title `unreviewed`, or because the segment reuses its
+   pericope's `unreviewed` heading; or no title was drafted); how many
+   `approved` titles are the fixed title of a segment BSB leaves blank;
+   and pericope titles by status the same way. The shipped count of each
+   book must equal the segments in its title table, or the release stops,
+   as it does on a title it cannot account for. A "Known issues" section
+   follows, read from the committed `known-issues.json` (not from open
+   GitHub issues, so the notes are reproducible at the tag): each entry
+   has `issue` (its number here) and `text` (one line), and, when it is
+   about a title, `key` and `language`, which must name a built title; the
+   notes then show that title and its status as built. A known error
+   ships only when it is listed there (AGENTS.md).
+6. The packages and title tables are attached to a **draft** release,
+   with those notes, published by hand. Release assets are flat and a table shares its
    package's file name, so each table is attached as
    `titles.<lang>.<BOOK>.json` (for example `titles.en.TIT.json`,
    `titles.es-419.TIT.json`); a package keeps its own name (`TIT.json`).
@@ -631,9 +649,10 @@ The recovery is to delete the tag, fix on `main`, and tag again. Deleting a
 `v*` tag is a maintainer action: a repository ruleset lets only maintainers
 and admins create, move or delete `v*` tags.
 
-**Dry run.** `scripts/release/run.sh --dry-run` runs steps 1 to 4 at `HEAD`
+**Dry run.** `scripts/release/run.sh --dry-run` runs steps 1 to 5 at `HEAD`
 for the tag `v` + `package.json`'s version (or a tag given after
-`--dry-run`), prints the `gh release create` it would run, and restores
+`--dry-run`), prints the release notes (step 5) and the `gh release
+create` it would run, and restores
 `data/` and `dist/`, passed or failed. It refuses to start while `data/` or
 `dist/` has uncommitted changes, since the build overwrites them. It creates
 no tag and no release and needs no token. Run by hand

@@ -119,11 +119,21 @@ done <<<"$assets"
 grep -H -E '"(revision|packageId)"' "${files[@]}" || true
 echo "::endgroup::"
 
-notes="tc-mobile template packages v0 and their title tables (titles.<lang>.<BOOK>.json) for $TAG, built from the pinned sources in sources.json at this tag. See docs/schema.md, \"Releases\"."
+# 5. The notes are generated from the built data, not fixed text: titles
+# counted by status per language and in total, checked against the title
+# tables just built, and the known issues in the committed
+# known-issues.json (scripts/release/notes.ts). Written outside the asset
+# stage, so the file is never attached.
+echo "::group::Release notes"
+notes_file=$(mktemp "${RUNNER_TEMP:-${TMPDIR:-/tmp}}/release-notes.XXXXXX")
+node scripts/release/notes.ts "$TAG" >"$notes_file"
+cat -- "$notes_file"
+echo "::endgroup::"
+
 # The release needs GITHUB_REPOSITORY (set -u); a local dry run may lack it.
 if $dry_run; then repo=${GITHUB_REPOSITORY:-unfoldingWord/bible-passages}; else repo=$GITHUB_REPOSITORY; fi
 create=(gh release create "$TAG" "${files[@]}" --repo "$repo"
-  --verify-tag --draft --title "$TAG" --notes "$notes")
+  --verify-tag --draft --title "$TAG" --notes-file "$notes_file")
 if $dry_run; then
   echo "Dry run passed. A release would run:"
   printf ' %q' "${create[@]}"
