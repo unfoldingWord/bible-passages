@@ -206,6 +206,11 @@ describe.each([
   "2TH",
   "1TI",
   "PHM",
+  "PSA",
+  "SNG",
+  "ISA",
+  "JER",
+  "LAM",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -624,6 +629,56 @@ describe.each([
     prompt: "prompts/segment-titles.md",
     drafts: 1,
     checks: 1,
+    batched: true,
+  },
+  {
+    book: "PSA",
+    reused: ["PSA.117.1-2"],
+    drafted: 1134,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 33,
+    checks: 33,
+    batched: true,
+  },
+  {
+    book: "SNG",
+    reused: [],
+    drafted: 78,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 3,
+    checks: 3,
+    batched: true,
+  },
+  {
+    book: "ISA",
+    reused: ["ISA.14.1-2", "ISA.21.11-12", "ISA.40.6-8", "ISA.57.1-2"],
+    drafted: 689,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 20,
+    checks: 20,
+    batched: true,
+  },
+  {
+    book: "JER",
+    reused: ["JER.13.12-14", "JER.15.19-21"],
+    drafted: 573,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 17,
+    checks: 17,
+    batched: true,
+  },
+  {
+    book: "LAM",
+    reused: [],
+    drafted: 67,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
     batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
