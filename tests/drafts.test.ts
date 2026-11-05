@@ -8,6 +8,8 @@ import {
 } from "../scripts/lib/dispute-titles.ts";
 import {
   batches,
+  BLANK_SEGMENTS,
+  BLANK_TITLE,
   CHECK_BATCH,
   CRITERIA,
   DRAFT_BATCH,
@@ -184,135 +186,154 @@ describe("the Titus examples in prompts/segment-titles.md", () => {
 // English segment drafts (data/drafts/en/): Titus, drafted by an agent before
 // the script (PR #16), and the books drafted by
 // scripts/translate/segment-titles.ts, whose records carry their calls.
-describe.each(["TIT", "PHP", "COL", "1TH", "2TI", "GEN"])(
-  "English %s segment drafts",
-  (book) => {
-    const structure = read(`data/structure/${book}.json`) as {
-      pericopes: { key: string }[];
-      segments: { key: string; pericope: string }[];
-    };
-    const record = read(`data/drafts/en/${book}.json`) as Record;
-    const drafts = record.titles;
-    const built = (
-      read(`data/titles/en/${book}.json`) as {
-        titles: { [key: string]: Title };
-      }
-    ).titles;
-    const perPericope = new Map<string, number>();
+describe.each([
+  "TIT",
+  "PHP",
+  "COL",
+  "1TH",
+  "2TI",
+  "GEN",
+  "MAT",
+  "MRK",
+  "LUK",
+  "JHN",
+  "ACT",
+])("English %s segment drafts", (book) => {
+  const structure = read(`data/structure/${book}.json`) as {
+    pericopes: { key: string }[];
+    segments: { key: string; pericope: string }[];
+  };
+  const record = read(`data/drafts/en/${book}.json`) as Record;
+  const drafts = record.titles;
+  const built = (
+    read(`data/titles/en/${book}.json`) as {
+      titles: { [key: string]: Title };
+    }
+  ).titles;
+  const perPericope = new Map<string, number>();
+  for (const s of structure.segments)
+    perPericope.set(s.pericope, (perPericope.get(s.pericope) ?? 0) + 1);
+  const only = (s: { pericope: string }) => perPericope.get(s.pericope) === 1;
+  // A segment BSB leaves blank is never drafted; it takes BLANK_TITLE (#226).
+  const blank = BLANK_SEGMENTS.filter((k) => k.startsWith(`${book}.`));
+
+  it("is a book whose titles are built", () => {
+    expect(BOOKS).toContain(book);
+    expect([record.language, record.book]).toEqual(["en", book]);
+  });
+
+  it("has a draft for every segment that shares its pericope, and none for an unknown key", () => {
+    const keys = new Set(structure.segments.map((s) => s.key));
+    for (const k of Object.keys(drafts)) expect(keys.has(k), k).toBe(true);
     for (const s of structure.segments)
-      perPericope.set(s.pericope, (perPericope.get(s.pericope) ?? 0) + 1);
-    const only = (s: { pericope: string }) => perPericope.get(s.pericope) === 1;
+      if (!only(s) && !blank.includes(s.key))
+        expect(drafts[s.key], s.key).toBeDefined();
+  });
 
-    it("is a book whose titles are built", () => {
-      expect(BOOKS).toContain(book);
-      expect([record.language, record.book]).toEqual(["en", book]);
-    });
+  it("drafts no title for a segment BSB leaves blank, which the build gives BLANK_TITLE (#226)", () => {
+    for (const k of blank) {
+      expect(drafts[k], k).toBeUndefined();
+      expect(built[k], k).toEqual(BLANK_TITLE);
+    }
+  });
 
-    it("has a draft for every segment that shares its pericope, and none for an unknown key", () => {
-      const keys = new Set(structure.segments.map((s) => s.key));
-      for (const k of Object.keys(drafts)) expect(keys.has(k), k).toBe(true);
-      for (const s of structure.segments)
-        if (!only(s)) expect(drafts[s.key], s.key).toBeDefined();
-    });
+  it("labels every draft as AI output, checked by a different model", () => {
+    for (const d of Object.values(drafts)) {
+      expect(d.source).toMatch(/^ai:/);
+      expect(d.check?.by).toMatch(/^ai:/);
+      expect(d.check?.by).not.toBe(d.source);
+    }
+  });
 
-    it("labels every draft as AI output, checked by a different model", () => {
-      for (const d of Object.values(drafts)) {
-        expect(d.source).toMatch(/^ai:/);
-        expect(d.check?.by).toMatch(/^ai:/);
-        expect(d.check?.by).not.toBe(d.source);
+  it("is ai-checked only where the checker agreed and every gate passed; the rest wait for a person", () => {
+    for (const d of Object.values(drafts)) {
+      // No AI title goes above ai-checked until a person reviews it (AGENTS.md).
+      expect(d.status).toBe(
+        d.check?.verdict === "agree" && d.gates === undefined
+          ? "ai-checked"
+          : "unreviewed"
+      );
+      if (d.check?.verdict === "disagree") {
+        expect(d.check.suggestion?.length).toBeGreaterThan(0);
+        expect((d.check.suggestion ?? "").length).toBeLessThanOrEqual(MAX);
       }
-    });
+    }
+  });
 
-    it("is ai-checked only where the checker agreed and every gate passed; the rest wait for a person", () => {
-      for (const d of Object.values(drafts)) {
-        // No AI title goes above ai-checked until a person reviews it (AGENTS.md).
-        expect(d.status).toBe(
-          d.check?.verdict === "agree" && d.gates === undefined
-            ? "ai-checked"
-            : "unreviewed"
-        );
-        if (d.check?.verdict === "disagree") {
-          expect(d.check.suggestion?.length).toBeGreaterThan(0);
-          expect((d.check.suggestion ?? "").length).toBeLessThanOrEqual(MAX);
-        }
+  it("records every title the gates fail, and keeps the rest plain and non-empty", () => {
+    for (const d of Object.values(drafts)) {
+      expect(d.text.length).toBeGreaterThan(0);
+      expect(d.text).toBe(d.text.trim());
+      const problems = gateProblems(d.text);
+      expect(d.gates ?? []).toEqual(problems);
+      if (problems.length === 0) {
+        expect(d.text.length).toBeLessThanOrEqual(MAX);
+        expect(d.text).not.toMatch(/[.“”"]$|^["“]/);
       }
-    });
+    }
+  });
 
-    it("records every title the gates fail, and keeps the rest plain and non-empty", () => {
-      for (const d of Object.values(drafts)) {
-        expect(d.text.length).toBeGreaterThan(0);
-        expect(d.text).toBe(d.text.trim());
-        const problems = gateProblems(d.text);
-        expect(d.gates ?? []).toEqual(problems);
-        if (problems.length === 0) {
-          expect(d.text.length).toBeLessThanOrEqual(MAX);
-          expect(d.text).not.toMatch(/[.“”"]$|^["“]/);
-        }
+  it("records a person's review with who, when and a reviewed status", () => {
+    for (const d of Object.values(drafts)) {
+      if (!d.review) continue;
+      expect(d.review.by).toMatch(/^reviewer:[A-Za-z0-9-]+$/);
+      expect(d.review.at).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(["human-reviewed", "approved"]).toContain(d.review.status);
+      if (d.review.text !== undefined) {
+        expect(d.review.text.length).toBeGreaterThan(0);
+        expect(d.review.text.length).toBeLessThanOrEqual(MAX);
+        expect(d.review.text).toBe(d.review.text.trim());
       }
-    });
-
-    it("records a person's review with who, when and a reviewed status", () => {
-      for (const d of Object.values(drafts)) {
-        if (!d.review) continue;
-        expect(d.review.by).toMatch(/^reviewer:[A-Za-z0-9-]+$/);
-        expect(d.review.at).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-        expect(["human-reviewed", "approved"]).toContain(d.review.status);
-        if (d.review.text !== undefined) {
-          expect(d.review.text.length).toBeGreaterThan(0);
-          expect(d.review.text.length).toBeLessThanOrEqual(MAX);
-          expect(d.review.text).toBe(d.review.text.trim());
-        }
-        // A reviewer's reason and save time (scripts/review/apply.ts).
-        if (d.review.saved !== undefined)
-          expect(d.review.saved).toMatch(/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/);
-        if (d.review.why !== undefined) {
-          expect(d.review.why.length).toBeGreaterThan(0);
-          expect(d.review.why).toBe(d.review.why.trim());
-        }
+      // A reviewer's reason and save time (scripts/review/apply.ts).
+      if (d.review.saved !== undefined)
+        expect(d.review.saved).toMatch(/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/);
+      if (d.review.why !== undefined) {
+        expect(d.review.why.length).toBeGreaterThan(0);
+        expect(d.review.why).toBe(d.review.why.trim());
       }
-    });
+    }
+  });
 
-    it("is merged into the built title table, a review deciding, else a third model's dispute", () => {
-      for (const [key, d] of Object.entries(drafts)) {
-        const r = d.review;
-        const ai = d.dispute
+  it("is merged into the built title table, a review deciding, else a third model's dispute", () => {
+    for (const [key, d] of Object.entries(drafts)) {
+      const r = d.review;
+      const ai = d.dispute
+        ? {
+            text: d.dispute.text,
+            status: d.dispute.status,
+            source: d.dispute.by,
+          }
+        : { text: d.text, status: d.status, source: d.source };
+      expect(built[key]).toEqual(
+        r
           ? {
-              text: d.dispute.text,
-              status: d.dispute.status,
-              source: d.dispute.by,
+              text: r.text ?? ai.text,
+              status: r.status,
+              source: r.text ? r.by : ai.source,
             }
-          : { text: d.text, status: d.status, source: d.source };
-        expect(built[key]).toEqual(
-          r
-            ? {
-                text: r.text ?? ai.text,
-                status: r.status,
-                source: r.text ? r.by : ai.source,
-              }
-            : ai
-        );
-        // Re-derived above by hand; the build's own function must agree.
-        expect(builtTitle(d as Settled)).toEqual(built[key]);
-      }
-    });
+          : ai
+      );
+      // Re-derived above by hand; the build's own function must agree.
+      expect(builtTitle(d as Settled)).toEqual(built[key]);
+    }
+  });
 
-    it("settles only disputed titles, by a third family, never above ai-checked (ADR 0005 item 6)", () => {
-      for (const [key, d] of Object.entries(drafts)) {
-        expect(disputeProblems(d as Settled), key).toEqual([]);
-        if (d.dispute) {
-          expect(record.disputeCheck, key).toBeDefined();
-          expect(["unreviewed", "ai-checked"]).toContain(d.dispute.status);
-        }
+  it("settles only disputed titles, by a third family, never above ai-checked (ADR 0005 item 6)", () => {
+    for (const [key, d] of Object.entries(drafts)) {
+      expect(disputeProblems(d as Settled), key).toEqual([]);
+      if (d.dispute) {
+        expect(record.disputeCheck, key).toBeDefined();
+        expect(["unreviewed", "ai-checked"]).toContain(d.dispute.status);
       }
-    });
+    }
+  });
 
-    it("gives a pericope's only segment the pericope title when it has no draft (decision 12)", () => {
-      for (const s of structure.segments)
-        if (only(s) && !drafts[s.key])
-          expect(built[s.key], s.key).toEqual(built[s.pericope]);
-    });
-  }
-);
+  it("gives a pericope's only segment the pericope title when it has no draft (decision 12)", () => {
+    for (const s of structure.segments)
+      if (only(s) && !drafts[s.key])
+        expect(built[s.key], s.key).toEqual(built[s.pericope]);
+  });
+});
 
 // The books drafted by scripts/translate/segment-titles.ts. A record has one
 // draft call per batch of at most DRAFT_BATCH segments (#208), then one check
@@ -377,6 +398,139 @@ describe.each([
     checks: 19,
     batched: true,
   },
+  {
+    book: "MAT",
+    reused: [
+      "MAT.2.13-15",
+      "MAT.4.23-25",
+      "MAT.5.1-2",
+      "MAT.5.31-32",
+      "MAT.6.16-18",
+      "MAT.6.19-21",
+      "MAT.6.22-24",
+      "MAT.7.13-14",
+      "MAT.7.28-29",
+      "MAT.9.14-15",
+      "MAT.10.32-33",
+      "MAT.12.31-32",
+      "MAT.12.43-45",
+      "MAT.13.31-32",
+      "MAT.13.33-33",
+      "MAT.13.34-35",
+      "MAT.13.44-46",
+      "MAT.14.34-36",
+      "MAT.16.21-23",
+      "MAT.17.19-20",
+      "MAT.18.19-20",
+      "MAT.19.13-15",
+      "MAT.20.17-19",
+      "MAT.23.37-39",
+      "MAT.26.14-16",
+      "MAT.26.17-19",
+      "MAT.27.1-2",
+      "MAT.27.11-14",
+    ],
+    drafted: 410,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 12,
+    checks: 12,
+    batched: true,
+  },
+  {
+    book: "MRK",
+    reused: [
+      "MRK.3.28-30",
+      "MRK.4.10-12",
+      "MRK.4.26-29",
+      "MRK.8.11-13",
+      "MRK.9.30-32",
+      "MRK.9.49-50",
+      "MRK.10.32-34",
+      "MRK.12.35-37",
+      "MRK.12.38-40",
+      "MRK.13.24-27",
+      "MRK.14.1-2",
+      "MRK.14.10-11",
+      "MRK.16.9-11",
+      "MRK.16.12-13",
+      "MRK.16.19-20",
+    ],
+    drafted: 260,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 8,
+    checks: 8,
+    batched: true,
+  },
+  {
+    book: "LUK",
+    reused: [
+      "LUK.1.1-4",
+      "LUK.2.36-38",
+      "LUK.2.39-40",
+      "LUK.3.21-22",
+      "LUK.4.14-15",
+      "LUK.4.42-44",
+      "LUK.5.33-35",
+      "LUK.6.17-19",
+      "LUK.8.1-3",
+      "LUK.8.16-18",
+      "LUK.8.19-21",
+      "LUK.9.7-9",
+      "LUK.9.21-22",
+      "LUK.9.43-45",
+      "LUK.10.17-20",
+      "LUK.11.24-26",
+      "LUK.11.27-28",
+      "LUK.11.33-36",
+      "LUK.12.54-56",
+      "LUK.12.57-59",
+      "LUK.13.18-19",
+      "LUK.13.20-21",
+      "LUK.14.34-35",
+      "LUK.15.8-10",
+      "LUK.18.15-17",
+      "LUK.20.41-44",
+      "LUK.20.45-47",
+      "LUK.21.1-4",
+      "LUK.22.1-2",
+      "LUK.22.63-65",
+    ],
+    drafted: 463,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 14,
+    checks: 14,
+    batched: true,
+  },
+  {
+    book: "JHN",
+    reused: [
+      "JHN.10.40-42",
+      "JHN.12.9-11",
+      "JHN.13.36-38",
+      "JHN.18.25-27",
+      "JHN.19.28-30",
+      "JHN.20.30-31",
+    ],
+    drafted: 365,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 11,
+    checks: 11,
+    batched: true,
+  },
+  {
+    book: "ACT",
+    reused: ["ACT.8.1-3", "ACT.9.20-22", "ACT.9.23-25", "ACT.13.1-3"],
+    drafted: 406,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 12,
+    checks: 12,
+    batched: true,
+  },
 ])("a scripted segment-title record ($book)", (t) => {
   const record = read(`data/drafts/en/${t.book}.json`) as Record;
   const structure = read(`data/structure/${t.book}.json`) as {
@@ -393,7 +547,12 @@ describe.each([
     expect(reused.map((s) => s.key)).toEqual(t.reused);
     for (const s of reused) expect(record.titles[s.key]).toBeUndefined();
     expect(Object.keys(record.titles)).toHaveLength(t.drafted);
-    expect(t.drafted + t.reused.length).toBe(structure.segments.length);
+    // A segment BSB leaves blank is neither drafted nor reused (#226).
+    const blank = BLANK_SEGMENTS.filter((k) => k.startsWith(`${t.book}.`));
+    for (const k of blank) expect(record.titles[k]).toBeUndefined();
+    expect(t.drafted + t.reused.length + blank.length).toBe(
+      structure.segments.length
+    );
   });
 
   it("was made with a committed prompt and the pinned BSB text", () => {
