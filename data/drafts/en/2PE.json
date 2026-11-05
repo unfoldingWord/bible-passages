@@ -1,0 +1,177 @@
+{
+  "language": "en",
+  "book": "2PE",
+  "bible": "bsb-2pe",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905357-GiNB27ZVnMxmHQAvys1H",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4948,
+      "completionTokens": 4573,
+      "reasoningTokens": 3915,
+      "cost": 0.055626,
+      "ms": 27475
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905384-Da9cr13ZAfMGZWpbjGI8",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3895,
+      "completionTokens": 5346,
+      "reasoningTokens": 4683,
+      "cost": 0.02296875,
+      "ms": 44743
+    }
+  ],
+  "titles": {
+    "2PE.1.3-4": {
+      "text": "God has given believers everything needed for godly life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.1.5-7": {
+      "text": "Peter urges believers to add good qualities to faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.1.8-9": {
+      "text": "Growing in these qualities keeps believers productive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase 'these qualities' is not clear to someone reading the title alone in a list.",
+        "suggestion": "Growing in good qualities keeps believers productive"
+      }
+    },
+    "2PE.1.10-11": {
+      "text": "Peter urges believers to be sure of God’s calling",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.1.12-15": {
+      "text": "Peter will keep reminding believers before he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.1.16-18": {
+      "text": "Peter and others saw Jesus’ majesty and heard God’s voice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.1.19-21": {
+      "text": "Prophecy in Scripture comes from God, not from men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.1-3": {
+      "text": "False teachers will secretly bring in destructive ideas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.4-6": {
+      "text": "God punished angels, the old world, and Sodom and Gomorrah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.7-9": {
+      "text": "God rescued Lot and knows how to rescue the godly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.10-11": {
+      "text": "False teachers who despise authority will be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.12-14": {
+      "text": "False teachers are like animals, full of greed and sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.15-16": {
+      "text": "False teachers follow the way of Balaam",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.17-19": {
+      "text": "False teachers promise freedom but are slaves to sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.2.20-22": {
+      "text": "People who turn back from the truth end up worse off",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.1-2": {
+      "text": "Peter writes a second letter to remind believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.3-4": {
+      "text": "Scoffers will mock the promise that Jesus will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.5-7": {
+      "text": "God’s word judged the world by flood and will judge by fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.8-9": {
+      "text": "The Lord is patient because he wants all to repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.10-10": {
+      "text": "The Day of the Lord will come like a thief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.11-13": {
+      "text": "Believers should live holy lives and wait for a new earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.14-16": {
+      "text": "Peter urges believers to be at peace and blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2PE.3.17-18": {
+      "text": "Peter warns believers to beware error and grow in grace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "language": "en",
+  "book": "3JN",
+  "bible": "bsb-3jn",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905606-EaN1DjEmaKQkAzGqo0HK",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 1294,
+      "completionTokens": 72,
+      "reasoningTokens": 0,
+      "cost": 0.003308,
+      "ms": 1294
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905608-z0MUDcm3KXbPmcQ0rLUA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 792,
+      "completionTokens": 924,
+      "reasoningTokens": 863,
+      "cost": 0.004059,
+      "ms": 9845
+    }
+  ],
+  "titles": {
+    "3JN.1.9-10": {
+      "text": "Diotrephes refuses to accept John and rejects the brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "3JN.1.11-12": {
+      "text": "John urges Gaius to do good; everyone praises Demetrius",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
