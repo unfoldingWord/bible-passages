@@ -1,0 +1,281 @@
+{
+  "language": "en",
+  "book": "RUT",
+  "bible": "bsb-rut",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905895-TfHyzS7Ad71OGp62BKSs",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4342,
+      "completionTokens": 1800,
+      "reasoningTokens": 1201,
+      "cost": 0.026684,
+      "ms": 11768
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905907-g1HyZ7La1Bmgdd1GdD8P",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4121,
+      "completionTokens": 3003,
+      "reasoningTokens": 2437,
+      "cost": 0.038272,
+      "ms": 19761
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905927-fsbeZnlTV96n8WrKbm29",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3399,
+      "completionTokens": 3421,
+      "reasoningTokens": 2857,
+      "cost": 0.015378,
+      "ms": 26160
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905953-wkrlprYaxSPfdqEipptT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3238,
+      "completionTokens": 4100,
+      "reasoningTokens": 3623,
+      "cost": 0.0178035,
+      "ms": 32882
+    }
+  ],
+  "titles": {
+    "RUT.1.1-2": {
+      "text": "Elimelech and his family move to Moab during a famine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.3-5": {
+      "text": "Naomi’s husband and two sons die in Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.6-7": {
+      "text": "Naomi hears of food in Judah and leaves Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.8-10": {
+      "text": "Naomi urges Orpah and Ruth to go back home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.11-13": {
+      "text": "Naomi says she has no sons for Orpah and Ruth to marry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.14-15": {
+      "text": "Orpah goes back, but Ruth stays with Naomi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.16-18": {
+      "text": "Ruth promises to stay with Naomi and follow her God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.19-21": {
+      "text": "Naomi arrives in Bethlehem and says she is bitter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.1.22-22": {
+      "text": "Naomi and Ruth arrive in Bethlehem at barley harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.1-2": {
+      "text": "Ruth asks Naomi to let her glean in the fields",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.3-4": {
+      "text": "Ruth gleans in Boaz’s field and Boaz greets the workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.5-7": {
+      "text": "Boaz asks the foreman who Ruth is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.8-9": {
+      "text": "Boaz tells Ruth to stay in his fields and be safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.10-12": {
+      "text": "Boaz praises Ruth for her care of Naomi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.13-13": {
+      "text": "Ruth thanks Boaz for his kind words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.14-14": {
+      "text": "Boaz invites Ruth to eat with the harvesters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.15-16": {
+      "text": "Boaz orders his men not to insult Ruth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.17-18": {
+      "text": "Ruth gleans until evening and brings grain to Naomi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.19-20": {
+      "text": "Naomi learns that Boaz is a close relative",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Naomi already knows Boaz is a relative and tells this to Ruth after hearing his name.",
+        "suggestion": "Naomi tells Ruth that Boaz is a close relative"
+      }
+    },
+    "RUT.2.21-22": {
+      "text": "Naomi tells Ruth to stay with the women of Boaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.2.23-23": {
+      "text": "Ruth gleans until the harvests end and lives with Naomi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.1-2": {
+      "text": "Naomi wants to find a resting place for Ruth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.3-5": {
+      "text": "Naomi tells Ruth to go to Boaz at the threshing floor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.6-7": {
+      "text": "Ruth does what Naomi said and lies at Boaz’s feet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.8-9": {
+      "text": "Ruth asks Boaz to spread his garment over her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.10-11": {
+      "text": "Boaz blesses Ruth and promises to help her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.12-13": {
+      "text": "Boaz says a nearer redeemer must be asked first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.14-15": {
+      "text": "Ruth leaves early with six measures of barley from Boaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.3.16-18": {
+      "text": "Ruth reports to Naomi, who tells her to wait",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.1-2": {
+      "text": "Boaz meets the other redeemer and ten elders at the gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.3-4": {
+      "text": "The other redeemer agrees to buy Naomi’s land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.5-6": {
+      "text": "The other redeemer refuses when Ruth is included",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.7-8": {
+      "text": "The other redeemer gives his sandal to Boaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.9-10": {
+      "text": "Boaz tells the elders he has bought the land and Ruth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.11-12": {
+      "text": "The elders and people bless Boaz and Ruth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.13-15": {
+      "text": "Ruth bears a son, and the women praise God for Naomi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "RUT.4.16-17": {
+      "text": "Naomi cares for Obed, the grandfather of David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

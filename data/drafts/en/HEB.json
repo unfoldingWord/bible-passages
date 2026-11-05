@@ -1,0 +1,850 @@
+{
+  "language": "en",
+  "book": "HEB",
+  "bible": "bsb-heb",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904794-VmE3ms6mlY3CjircQPiW",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5509,
+      "completionTokens": 814,
+      "reasoningTokens": 0,
+      "cost": 0.019158,
+      "ms": 5633
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904799-zZAqvagfSdveUS0aTHdL",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5301,
+      "completionTokens": 5287,
+      "reasoningTokens": 4433,
+      "cost": 0.063472,
+      "ms": 34514
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904834-HCUARADdzDJdsHdex46Z",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5668,
+      "completionTokens": 5767,
+      "reasoningTokens": 4897,
+      "cost": 0.069006,
+      "ms": 36256
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904870-MndfTpPOfsdmCpy7My0g",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5532,
+      "completionTokens": 5179,
+      "reasoningTokens": 4329,
+      "cost": 0.062854,
+      "ms": 33284
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904903-p7gCYynAC5ShWiAEVtdo",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4576,
+      "completionTokens": 6180,
+      "reasoningTokens": 5339,
+      "cost": 0.026607,
+      "ms": 36010
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904939-z9GdrU8qGyxt6KOgxwDO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4436,
+      "completionTokens": 3091,
+      "reasoningTokens": 2301,
+      "cost": 0.01491825,
+      "ms": 18948
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904958-V8Pnnn98s8mC1iXI7TiF",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4698,
+      "completionTokens": 17572,
+      "reasoningTokens": 16592,
+      "cost": 0.0694185,
+      "ms": 113557
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905072-2vx3u1SR6WEdxakXuoU5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4607,
+      "completionTokens": 6087,
+      "reasoningTokens": 5139,
+      "cost": 0.0262815,
+      "ms": 50843
+    }
+  ],
+  "titles": {
+    "HEB.1.1-3": {
+      "text": "God spoke through the prophets, and now through his Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.1.4-5": {
+      "text": "The Son is greater than the angels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.1.6-7": {
+      "text": "God tells the angels to worship the Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.1.8-9": {
+      "text": "God calls the Son God and king forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.1.10-12": {
+      "text": "The Son made the earth and will never change",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.1.13-14": {
+      "text": "God honors the Son; angels serve believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.1-1": {
+      "text": "The writer urges believers to pay close attention",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.2-4": {
+      "text": "Believers must not neglect so great a salvation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.5-6": {
+      "text": "The world to come is not given to angels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.7-8": {
+      "text": "God put everything under man, but not yet seen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The draft ends with an incomplete clause rather than a full sentence that makes sense on its own.",
+        "suggestion": "God put all under man, but we do not yet see it"
+      }
+    },
+    "HEB.2.9-10": {
+      "text": "Jesus suffered death for everyone and now has glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.11-12": {
+      "text": "Jesus is not ashamed to call believers his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.13-15": {
+      "text": "Jesus shared human life to free people from fear of death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.2.16-18": {
+      "text": "Jesus became like his brothers to help the tempted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.1-4": {
+      "text": "Jesus is greater than Moses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.5-6": {
+      "text": "Moses was a servant; Christ is the Son over God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.7-8": {
+      "text": "The Holy Spirit warns believers not to harden their hearts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.9-11": {
+      "text": "God was angry with Israel in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.12-13": {
+      "text": "Believers must encourage each other daily",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.14-15": {
+      "text": "Believers share in Christ if they hold firm to the end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.3.16-19": {
+      "text": "Israel could not enter God’s rest because of unbelief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.1-2": {
+      "text": "The promise of God’s rest still stands for believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.3-5": {
+      "text": "Believers enter God’s rest; God rested on the seventh day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.6-7": {
+      "text": "God speaks through David about entering his rest today",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.8-11": {
+      "text": "A Sabbath rest remains; believers must work to enter it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.12-13": {
+      "text": "God’s word is living and judges the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.4.14-16": {
+      "text": "Believers can come to Jesus the high priest with confidence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.1-3": {
+      "text": "A high priest offers sacrifices for sins of the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.4-5": {
+      "text": "God called Christ to be high priest, as he called Aaron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.6-6": {
+      "text": "God says Christ is a priest like Melchizedek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.7-8": {
+      "text": "Jesus prayed with tears and learned obedience by suffering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.9-10": {
+      "text": "Jesus became the source of salvation and a high priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.11-11": {
+      "text": "The writer says the believers are slow to understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.5.12-14": {
+      "text": "Believers should be teachers but still need milk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.1-3": {
+      "text": "Believers should leave basic teachings and grow mature",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.4-6": {
+      "text": "Those who fall away after knowing God cannot be restored",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.7-8": {
+      "text": "Useful land is blessed, but land with thorns is burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.9-10": {
+      "text": "God will not forget the believers’ work and love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.11-12": {
+      "text": "The writer urges believers to be diligent and patient",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.13-15": {
+      "text": "God promised Abraham with an oath, and Abraham waited",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.16-18": {
+      "text": "God made an oath to give believers strong hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.6.19-20": {
+      "text": "Hope is an anchor, and Jesus is high priest forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.1-3": {
+      "text": "Melchizedek was a king and priest who blessed Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.4-6": {
+      "text": "Abraham gave a tenth to the great Melchizedek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.7-10": {
+      "text": "Melchizedek is greater than Abraham and Levi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.11-12": {
+      "text": "Another priest was needed, so the law must change",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.13-14": {
+      "text": "Jesus came from the tribe of Judah, not from priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.15-17": {
+      "text": "Jesus is a priest forever by the power of an endless life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.18-19": {
+      "text": "The weak old law is replaced by a better hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.20-21": {
+      "text": "God made Jesus a priest with an oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.22-24": {
+      "text": "Jesus lives forever, so his priesthood has no end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.25-26": {
+      "text": "Jesus always lives to save and speak for believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.7.27-28": {
+      "text": "Jesus offered himself once, unlike the other high priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.1-2": {
+      "text": "Believers have a high priest who serves in heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.3-5": {
+      "text": "Jesus serves in heaven; earthly priests serve in a copy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.6-7": {
+      "text": "Jesus brings a better covenant with better promises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.8-9": {
+      "text": "God promises a new covenant to Israel and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.10-10": {
+      "text": "God will write his laws on the hearts of his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.11-12": {
+      "text": "Everyone will know God, and God will forgive sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.8.13-13": {
+      "text": "The new covenant makes the first covenant old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.1-2": {
+      "text": "The first covenant had rules for worship and a tabernacle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.3-5": {
+      "text": "The Most Holy Place held the ark and other sacred things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.6-7": {
+      "text": "Only the high priest entered the second room, once a year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.8-10": {
+      "text": "Old sacrifices could not cleanse the worshiper’s conscience",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.11-12": {
+      "text": "Christ entered the greater tabernacle by his own blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says Christ went through the tabernacle and entered the Most Holy Place by his own blood.",
+        "suggestion": "Christ entered the Most Holy Place by his own blood"
+      }
+    },
+    "HEB.9.13-15": {
+      "text": "Christ’s blood cleanses us and brings a new covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.16-17": {
+      "text": "A will takes effect only after the one who made it dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.18-20": {
+      "text": "Moses sprinkled blood on the scroll and the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.21-22": {
+      "text": "Without blood there is no forgiveness of sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.23-24": {
+      "text": "Christ entered heaven itself to appear before God for us",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.25-26": {
+      "text": "Christ offered himself once for all to remove sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.9.27-28": {
+      "text": "Christ will come again to save those who wait for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft only covers the end of verse 28 and leaves out that Christ died once for sins.",
+        "suggestion": "Christ died for sins and will return to bring salvation"
+      }
+    },
+    "HEB.10.1-4": {
+      "text": "The law’s sacrifices could not make worshipers perfect",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.5-7": {
+      "text": "Christ came into the world to do God’s will",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.8-10": {
+      "text": "Christ’s one sacrifice replaces the old sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.11-14": {
+      "text": "Christ offered one sacrifice and sat down at God’s right hand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft exceeds the 60-character limit.",
+        "suggestion": "Christ offered one sacrifice and sat at God’s right hand"
+      }
+    },
+    "HEB.10.15-16": {
+      "text": "God promises to put his laws in believers’ hearts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.17-18": {
+      "text": "God will not remember sins, so no offering is needed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.19-22": {
+      "text": "Believers can enter God’s presence through Jesus’ blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.23-25": {
+      "text": "Believers should hold on to hope and encourage each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.26-27": {
+      "text": "Believers who keep sinning on purpose face judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.28-29": {
+      "text": "Those who reject the Son of God deserve worse punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.30-31": {
+      "text": "God will judge his people, which is fearful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.32-34": {
+      "text": "Believers endured suffering and loss with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.35-37": {
+      "text": "Believers need to persevere to receive God’s promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.10.38-39": {
+      "text": "Believers live by faith and do not shrink back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.4-4": {
+      "text": "Abel offered God a better sacrifice by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.5-6": {
+      "text": "Enoch pleased God; without faith no one can please God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.7-7": {
+      "text": "Noah built an ark by faith to save his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.8-10": {
+      "text": "Abraham went by faith and lived in tents as a stranger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.11-12": {
+      "text": "Sarah trusts God’s promise and conceives a child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.13-14": {
+      "text": "Believers of old died in faith as strangers on earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.15-16": {
+      "text": "Believers of old wanted a better, heavenly country",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.17-19": {
+      "text": "Abraham is ready to offer Isaac because he trusts God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.23-26": {
+      "text": "Moses chose to suffer with God’s people, not enjoy sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only Moses’ choice and leaves out his parents hiding him in verse 23.",
+        "suggestion": "Moses’ parents hide him, and he suffers with God’s people"
+      }
+    },
+    "HEB.11.27-28": {
+      "text": "By faith Moses left Egypt and kept the Passover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.29-29": {
+      "text": "The people cross the Red Sea, but the Egyptians drown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.30-31": {
+      "text": "Jericho’s walls fall and Rahab is saved by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.32-34": {
+      "text": "Many people of faith won battles and shut lions’ mouths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.35-38": {
+      "text": "Believers suffered torture, prison and death for faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.11.39-40": {
+      "text": "Believers of old and us will be made perfect together",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Using “us” as the subject is ungrammatical and confusing for second-language readers.",
+        "suggestion": "Believers of old will be made perfect together with us"
+      }
+    },
+    "HEB.12.4-6": {
+      "text": "Believers should not lose heart when God disciplines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.7-8": {
+      "text": "Believers should endure suffering as God’s discipline",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.9-11": {
+      "text": "God’s discipline is painful but later brings peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.12-13": {
+      "text": "Believers must be strong and make straight paths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.18-21": {
+      "text": "Believers have not come to a terrifying mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.22-24": {
+      "text": "Believers have come to Mount Zion, the city of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.25-26": {
+      "text": "Believers must not refuse God, who speaks from heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.12.27-29": {
+      "text": "Believers should worship God with reverence and awe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.1-2": {
+      "text": "Believers should love each other and welcome strangers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.3-4": {
+      "text": "Believers should remember prisoners and honor marriage",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.5-6": {
+      "text": "Believers should not love money and should trust God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.7-8": {
+      "text": "Believers should remember leaders; Jesus never changes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.9-11": {
+      "text": "Believers should not follow strange teachings about foods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.12-14": {
+      "text": "Jesus suffered outside the city; believers follow him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.15-17": {
+      "text": "Believers should praise God, do good and obey leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.18-19": {
+      "text": "The writer asks the believers to pray for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.20-21": {
+      "text": "The writer prays that God will equip believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.22-23": {
+      "text": "The writer urges patience and tells about Timothy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HEB.13.24-25": {
+      "text": "The writer sends greetings and blessing to believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

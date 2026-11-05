@@ -1,0 +1,2744 @@
+{
+  "language": "en",
+  "book": "1SA",
+  "bible": "bsb-1sa",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905987-4sL3LIgQHK0TF8Ynn4bt",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6403,
+      "completionTokens": 5275,
+      "reasoningTokens": 4209,
+      "cost": 0.065556,
+      "ms": 33960
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906021-XhAC5rBkOV950XItSMPL",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6716,
+      "completionTokens": 1036,
+      "reasoningTokens": 0,
+      "cost": 0.023792,
+      "ms": 6684
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906028-NAjBuonVQdhNfnOqioZM",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6264,
+      "completionTokens": 5563,
+      "reasoningTokens": 4601,
+      "cost": 0.068158,
+      "ms": 35232
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906063-aJqbYK2u1IDcTwGlqcih",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6455,
+      "completionTokens": 4817,
+      "reasoningTokens": 3820,
+      "cost": 0.06108,
+      "ms": 30429
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906094-rcBwnLpnN1cb4gVbiq5M",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6289,
+      "completionTokens": 5397,
+      "reasoningTokens": 4387,
+      "cost": 0.066548,
+      "ms": 30478
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906124-EPrKOqqVP0Uo8Hi8FDIu",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6562,
+      "completionTokens": 5895,
+      "reasoningTokens": 4877,
+      "cost": 0.072074,
+      "ms": 37467
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906162-DB9MOR5m6N5rJDf67aF3",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5987,
+      "completionTokens": 5941,
+      "reasoningTokens": 4954,
+      "cost": 0.071384,
+      "ms": 38700
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906200-ePUWwayaLdkgIZ1aBXbF",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6138,
+      "completionTokens": 4588,
+      "reasoningTokens": 3626,
+      "cost": 0.058156,
+      "ms": 30981
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906231-ztTPhZZwMG5dUp6AdMTS",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6555,
+      "completionTokens": 3810,
+      "reasoningTokens": 2868,
+      "cost": 0.05121,
+      "ms": 23347
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906255-bv6k0qIl9diieQDos5Mu",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6085,
+      "completionTokens": 3737,
+      "reasoningTokens": 2787,
+      "cost": 0.04954,
+      "ms": 24148
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906280-rtVmikr3lNQUg7yv66nX",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6172,
+      "completionTokens": 4296,
+      "reasoningTokens": 3235,
+      "cost": 0.055304,
+      "ms": 28541
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906307-GEDfhSY9v331cEX3HXMV",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6164,
+      "completionTokens": 3246,
+      "reasoningTokens": 2316,
+      "cost": 0.044788,
+      "ms": 20563
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906328-fEZH4Gq4IQ5xrJAo3h0l",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5274,
+      "completionTokens": 6097,
+      "reasoningTokens": 5132,
+      "cost": 0.02681925,
+      "ms": 36065
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906364-rBXyiGAXxDUYQcwcHegN",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5541,
+      "completionTokens": 11130,
+      "reasoningTokens": 10005,
+      "cost": 0.04589325,
+      "ms": 86984
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906451-o5WU71hs9GyjontM3IBh",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5246,
+      "completionTokens": 7158,
+      "reasoningTokens": 6168,
+      "cost": 0.030777,
+      "ms": 46360
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906498-xAwMyxGhlqgPfBuUj1IH",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5318,
+      "completionTokens": 23291,
+      "reasoningTokens": 22259,
+      "cost": 0.09132975,
+      "ms": 136206
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906634-HmFvIoX8PB9K4i0q67Qt",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5158,
+      "completionTokens": 6951,
+      "reasoningTokens": 6042,
+      "cost": 0.02993475,
+      "ms": 41269
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906675-2uuFeQCMHCcS0xsNu2dL",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5342,
+      "completionTokens": 6348,
+      "reasoningTokens": 5383,
+      "cost": 0.0278115,
+      "ms": 53852
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906729-gD198IQPu7pfWNuwVCA6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5144,
+      "completionTokens": 7208,
+      "reasoningTokens": 6180,
+      "cost": 0.030888,
+      "ms": 47190
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906776-vEkORqQFJd1SN4vY3CAD",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5213,
+      "completionTokens": 12308,
+      "reasoningTokens": 11323,
+      "cost": 0.05006475,
+      "ms": 71769
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906848-aTIW97xI78kJLiac61aG",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5494,
+      "completionTokens": 6757,
+      "reasoningTokens": 5857,
+      "cost": 0.02945925,
+      "ms": 35104
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906883-ZJnRjLi5q6uqdl2pPRbC",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5244,
+      "completionTokens": 4357,
+      "reasoningTokens": 3440,
+      "cost": 0.02027175,
+      "ms": 32594
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906916-NegN3AnGa68EUYw086vt",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5272,
+      "completionTokens": 15769,
+      "reasoningTokens": 14727,
+      "cost": 0.06308775,
+      "ms": 86897
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907003-0UmRDckkVJlfD1sK9lpy",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5303,
+      "completionTokens": 19627,
+      "reasoningTokens": 18601,
+      "cost": 0.0775785,
+      "ms": 96647
+    }
+  ],
+  "titles": {
+    "1SA.1.1-2": {
+      "text": "Elkanah has two wives, and only Peninnah has children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.3-4": {
+      "text": "Elkanah goes to Shiloh each year to worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.5-6": {
+      "text": "Elkanah loves Hannah, but Peninnah taunts her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.7-8": {
+      "text": "Hannah weeps, and Elkanah asks why she is sad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.9-10": {
+      "text": "Hannah prays to the LORD with many tears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.11-11": {
+      "text": "Hannah vows to give her son to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.12-14": {
+      "text": "Eli sees Hannah praying and thinks she is drunk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.15-16": {
+      "text": "Hannah tells Eli she is praying in deep grief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.17-18": {
+      "text": "Eli blesses Hannah, and she leaves and eats again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.19-20": {
+      "text": "The LORD gives Hannah a son, and she names him Samuel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.21-23": {
+      "text": "Hannah stays home to nurse Samuel until he is weaned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.24-25": {
+      "text": "Hannah brings young Samuel to Eli at Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.1.26-28": {
+      "text": "Hannah gives Samuel to the LORD for his whole life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.1-1": {
+      "text": "Hannah rejoices in the LORD’s salvation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.2-2": {
+      "text": "Hannah says no one is holy like the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.3-4": {
+      "text": "Hannah says the LORD weighs actions and breaks the mighty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.5-5": {
+      "text": "Hannah says the hungry are fed and the full must work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.6-7": {
+      "text": "Hannah says the LORD controls life, death, and wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.8-8": {
+      "text": "Hannah says the LORD lifts up the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.9-9": {
+      "text": "Hannah says the LORD guards the faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.10-10": {
+      "text": "Hannah says the LORD will judge and strengthen his king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.11-11": {
+      "text": "Elkanah goes home, and Samuel serves the LORD under Eli",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.12-14": {
+      "text": "Eli’s sons are wicked and take meat from worshipers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.15-17": {
+      "text": "Eli’s sons demand raw meat by force and sin greatly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.18-19": {
+      "text": "Samuel serves the LORD, and Hannah brings him a robe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.20-21": {
+      "text": "Eli blesses Elkanah and Hannah, and she has more children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.22-24": {
+      "text": "Eli rebukes his sons for sinning at the Tent of Meeting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.25-26": {
+      "text": "Eli’s sons do not listen, and Samuel keeps growing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.27-28": {
+      "text": "A man of God tells Eli how the LORD chose Eli’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.29-30": {
+      "text": "God says Eli honored his sons more than the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.31-33": {
+      "text": "The LORD says Eli’s family will lose strength and die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.2.34-35": {
+      "text": "Hophni and Phinehas will die on the same day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions Eli’s sons dying in verse 34 but leaves out God raising up a faithful priest in verse 35.",
+        "suggestion": "Eli’s sons will die, and God will raise a faithful priest"
+      }
+    },
+    "1SA.2.36-36": {
+      "text": "Eli’s family will beg for food and priestly work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.1-4": {
+      "text": "The LORD calls Samuel while he lies in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.5-6": {
+      "text": "Samuel runs to Eli twice, but Eli did not call him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.7-8": {
+      "text": "The LORD calls a third time, and Eli understands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.9-9": {
+      "text": "Eli tells Samuel how to answer the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.10-11": {
+      "text": "The LORD calls Samuel and says he will act in Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.12-14": {
+      "text": "The LORD tells Samuel he will judge Eli’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.15-16": {
+      "text": "Samuel is afraid to tell Eli about the vision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.17-18": {
+      "text": "Samuel tells Eli everything the LORD said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.3.19-21": {
+      "text": "All Israel knows that Samuel is the LORD’s prophet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.1-2": {
+      "text": "The Philistines defeat Israel in battle at Aphek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.3-4": {
+      "text": "The elders of Israel bring the ark from Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.5-6": {
+      "text": "Israel shouts when the ark comes, and the Philistines hear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.7-9": {
+      "text": "The Philistines are afraid but urge each other to fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.10-11": {
+      "text": "Israel loses the battle, and the ark is captured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.12-13": {
+      "text": "A man from Benjamin brings bad news to Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.14-15": {
+      "text": "Eli hears the outcry and asks what has happened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.16-17": {
+      "text": "The messenger tells Eli that his sons are dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the death of Eli’s sons and leaves out the capture of the ark.",
+        "suggestion": "A messenger reports defeat and the ark’s capture to Eli"
+      }
+    },
+    "1SA.4.18-18": {
+      "text": "Eli falls from his chair and dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.19-20": {
+      "text": "Phinehas’s wife gives birth and dies after the bad news",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.4.21-22": {
+      "text": "The woman names her son Ichabod because glory has gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.5.1-3": {
+      "text": "The Philistines put the ark beside Dagon, and Dagon falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.5.4-5": {
+      "text": "Dagon falls again, and his head and hands break off",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.5.6-7": {
+      "text": "The LORD sends tumors on Ashdod, and the people want the ark gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 65 characters, the title exceeds the 60-character limit.",
+        "suggestion": "The LORD strikes Ashdod, and the people want the ark gone"
+      }
+    },
+    "1SA.5.8-9": {
+      "text": "The Philistines move the ark to Gath, and sickness follows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.5.10-10": {
+      "text": "The people of Ekron cry out when the ark arrives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.5.11-12": {
+      "text": "The Ekronites ask the rulers to send the ark away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.1-2": {
+      "text": "The Philistines ask their priests how to send the ark back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.3-4": {
+      "text": "The priests tell the Philistines to send gold offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.5-6": {
+      "text": "The priests urge the Philistines to honor Israel’s God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.7-9": {
+      "text": "The priests give a plan to send the ark on a cart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.10-12": {
+      "text": "The cows pull the ark straight toward Beth-shemesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.13-13": {
+      "text": "The people of Beth-shemesh are glad to see the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.14-15": {
+      "text": "Beth-shemesh offers the cows and sacrifices to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "Beth-shemesh is a town, not the people who offered the sacrifices.",
+        "suggestion": "The people of Beth-shemesh offer sacrifices to the LORD"
+      }
+    },
+    "1SA.6.16-16": {
+      "text": "The Philistine rulers see this and return to Ekron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “this” is not clear when the title is read alone in a list.",
+        "suggestion": "The five Philistine rulers return to Ekron"
+      }
+    },
+    "1SA.6.17-18": {
+      "text": "The gold offerings match the five Philistine cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.19-20": {
+      "text": "God strikes men of Beth-shemesh who looked in the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.6.21-21": {
+      "text": "The men of Beth-shemesh ask Kiriath-jearim to take the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.1-2": {
+      "text": "Men of Kiriath-jearim keep the ark for twenty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.3-4": {
+      "text": "Samuel tells Israel to put away foreign gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.5-6": {
+      "text": "Israel gathers at Mizpah and confesses sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.7-8": {
+      "text": "Israel fears the Philistines and asks Samuel to pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.9-9": {
+      "text": "Samuel offers a lamb and God answers his prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.10-11": {
+      "text": "God thunders and the Philistines flee from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.12-12": {
+      "text": "Samuel sets up a stone named Ebenezer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.13-14": {
+      "text": "The Philistines are subdued and Israel gets its cities back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.7.15-17": {
+      "text": "Samuel judges Israel all his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.1-3": {
+      "text": "Samuel’s sons are dishonest judges",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.4-5": {
+      "text": "Israel’s elders ask Samuel for a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.6-7": {
+      "text": "God tells Samuel Israel has rejected God as king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.8-9": {
+      "text": "God tells Samuel to warn the people about a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.10-12": {
+      "text": "Samuel warns that a king will take sons for war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.13-15": {
+      "text": "Samuel warns that the king will take daughters and fields",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.16-18": {
+      "text": "Samuel warns that the people will become the king’s slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.19-20": {
+      "text": "The people refuse to listen and demand a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.8.21-22": {
+      "text": "God tells Samuel to give the people a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.1-2": {
+      "text": "Kish has a son named Saul, tall and handsome",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.3-4": {
+      "text": "Saul and a servant look for Kish’s lost donkeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.5-6": {
+      "text": "Saul’s servant suggests asking the man of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.7-8": {
+      "text": "Saul and the servant plan a gift for the man of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.9-11": {
+      "text": "Saul and the servant ask young women about the seer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.12-13": {
+      "text": "Young women tell Saul to hurry to find the seer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.14-14": {
+      "text": "Saul meets Samuel at the city entrance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.15-16": {
+      "text": "God tells Samuel to anoint the man from Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.17-19": {
+      "text": "God shows Samuel the man who will rule Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 17 and ignores Samuel meeting Saul and inviting him to eat.",
+        "suggestion": "God points out Saul, and Samuel invites him to eat"
+      }
+    },
+    "1SA.9.20-21": {
+      "text": "Saul says his clan is too small for such honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.22-22": {
+      "text": "Samuel seats Saul in the place of honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.23-24": {
+      "text": "Samuel gives Saul the special portion of meat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.9.25-26": {
+      "text": "Samuel talks with Saul on the roof at dawn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Samuel spoke with Saul on the roof in the evening, and at dawn he called Saul to send him away.",
+        "suggestion": "Samuel speaks with Saul and sends him on his way"
+      }
+    },
+    "1SA.9.27-27": {
+      "text": "Samuel tells Saul to stay and hear God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.1-2": {
+      "text": "Samuel anoints Saul as ruler over Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 1 and leaves out Samuel telling Saul about the two men he will meet in verse 2.",
+        "suggestion": "Samuel anoints Saul and tells of two men he will meet"
+      }
+    },
+    "1SA.10.3-4": {
+      "text": "Samuel tells Saul about three men he will meet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.5-6": {
+      "text": "Samuel says the Spirit will change Saul among prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.7-8": {
+      "text": "Samuel tells Saul to wait seven days at Gilgal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.9-10": {
+      "text": "God changes Saul’s heart and the signs come true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.11-13": {
+      "text": "People are surprised to see Saul among the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.14-16": {
+      "text": "Saul does not tell his uncle about the kingship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.17-19": {
+      "text": "Samuel says Israel rejected God by wanting a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.20-21": {
+      "text": "Saul is selected but cannot be found",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.22-23": {
+      "text": "Saul is found hiding and stands taller than all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.24-24": {
+      "text": "The people shout for Saul as the king the LORD chose",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.25-25": {
+      "text": "Samuel explains the rights of kingship to the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.10.26-27": {
+      "text": "Saul goes home, but some men despise him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.1-2": {
+      "text": "Nahash threatens to put out everyone’s right eye",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.3-3": {
+      "text": "Jabesh’s elders ask for seven days to find help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.4-5": {
+      "text": "The people weep, and Saul asks what is wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.6-8": {
+      "text": "Saul calls Israel to war and many men come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.9-10": {
+      "text": "Saul promises the men of Jabesh help by tomorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.11-11": {
+      "text": "Saul’s three divisions attack and scatter the Ammonites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.12-13": {
+      "text": "Saul forbids killing anyone, for the LORD saved Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.11.14-15": {
+      "text": "Samuel and the people confirm Saul as king at Gilgal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.1-2": {
+      "text": "Samuel says he has led Israel since his youth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.3-3": {
+      "text": "Samuel asks Israel to say if he has wronged anyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.4-5": {
+      "text": "Israel agrees that Samuel has never wronged anyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.6-7": {
+      "text": "Samuel says the LORD brought Israel out of Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.8-9": {
+      "text": "Israel’s fathers forgot the LORD and faced enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.10-11": {
+      "text": "The LORD sends leaders to save Israel from enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.12-13": {
+      "text": "Samuel says Israel chose a king, though the LORD was king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.14-15": {
+      "text": "Samuel tells Israel to follow the LORD and not rebel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.16-18": {
+      "text": "The LORD sends thunder and rain at Samuel’s call",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.19-21": {
+      "text": "Samuel tells Israel to serve the LORD, not worthless things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.12.22-23": {
+      "text": "Samuel promises to keep praying for Israel and teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "plain"],
+        "why": "The title leaves out verse 22 about the LORD not abandoning his people, and ending with 'teaching' is incomplete.",
+        "suggestion": "The LORD will not abandon Israel, and Samuel will pray"
+      }
+    },
+    "1SA.12.24-25": {
+      "text": "Samuel urges Israel to fear the LORD and serve him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.1-2": {
+      "text": "Saul becomes king and chooses three thousand men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.3-4": {
+      "text": "Jonathan attacks the Philistines and Saul calls Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.5-5": {
+      "text": "The Philistines gather a huge army at Michmash",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.6-7": {
+      "text": "The men of Israel hide in fear while Saul stays at Gilgal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.8-10": {
+      "text": "Saul offers the sacrifice when Samuel does not come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.11-12": {
+      "text": "Saul tells Samuel why he offered the sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.13-14": {
+      "text": "Samuel tells Saul his kingdom will not last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.15-15": {
+      "text": "Samuel leaves Gilgal and Saul counts six hundred men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.16-16": {
+      "text": "Saul and Jonathan stay at Geba near the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.17-18": {
+      "text": "Philistine raiders go out in three groups",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.19-21": {
+      "text": "The Philistines let no blacksmith work in Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.13.22-23": {
+      "text": "Only Saul and Jonathan have weapons on the day of battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.1-1": {
+      "text": "Jonathan decides to attack the Philistine outpost",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.2-3": {
+      "text": "Saul waits at Migron with about six hundred men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.4-5": {
+      "text": "Two cliffs stand beside the pass Jonathan will cross",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.6-7": {
+      "text": "Jonathan trusts the LORD, and his armor-bearer agrees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.8-10": {
+      "text": "Jonathan sets a sign to know the LORD will help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.11-12": {
+      "text": "Philistine guards call Jonathan and his armor-bearer up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.13-14": {
+      "text": "Jonathan and his armor-bearer kill about twenty men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.15-15": {
+      "text": "God causes great fear among the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.16-17": {
+      "text": "Saul learns that Jonathan and his armor-bearer are gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.18-19": {
+      "text": "Saul asks Ahijah for the ark, then stops him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.20-21": {
+      "text": "Saul’s army finds the Philistines fighting each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.22-23": {
+      "text": "The LORD saves Israel as more men join the battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.24-26": {
+      "text": "Saul forbids the troops to eat before evening",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.27-28": {
+      "text": "Jonathan eats honey without knowing Saul’s oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.29-30": {
+      "text": "Jonathan says Saul’s oath harmed the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.31-32": {
+      "text": "Hungry troops eat meat with the blood still in it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.33-34": {
+      "text": "Saul has the troops slaughter animals at a large stone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.35-35": {
+      "text": "Saul builds his first altar to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.36-36": {
+      "text": "Saul plans a night attack, but the priest says ask God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.37-37": {
+      "text": "Saul asks God about attacking, but God does not answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.38-39": {
+      "text": "Saul swears to kill whoever sinned, even Jonathan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.40-42": {
+      "text": "Saul casts lots and Jonathan is chosen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.43-44": {
+      "text": "Jonathan admits eating honey; Saul says he must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.45-46": {
+      "text": "The people refuse to let Saul kill Jonathan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.47-48": {
+      "text": "Saul fights and defeats Israel’s enemies on every side",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.14.49-51": {
+      "text": "Saul’s family and the commander of his army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full statement.",
+        "suggestion": "Saul’s family and army commander are listed"
+      }
+    },
+    "1SA.14.52-52": {
+      "text": "Saul enlists strong and brave men for the war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.1-3": {
+      "text": "Samuel tells Saul to destroy the Amalekites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.4-5": {
+      "text": "Saul gathers an army and goes to Amalek’s city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.6-7": {
+      "text": "Saul warns the Kenites, then defeats the Amalekites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.8-9": {
+      "text": "Saul spares King Agag and the best animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.10-11": {
+      "text": "God regrets making Saul king, and Samuel is distressed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.12-13": {
+      "text": "Samuel finds Saul, who says he obeyed the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.14-16": {
+      "text": "Saul says the animals were kept for sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.17-19": {
+      "text": "Samuel asks Saul why he did not obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.20-21": {
+      "text": "Saul says he obeyed and blames the troops",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.22-23": {
+      "text": "Samuel says obeying God is better than sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.24-25": {
+      "text": "Saul admits his sin and asks Samuel to return with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.26-27": {
+      "text": "Samuel refuses to go back with Saul; the robe tears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.28-29": {
+      "text": "Samuel says God has torn the kingdom from Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.30-31": {
+      "text": "Saul asks for honor, and Samuel goes back with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.32-33": {
+      "text": "Samuel kills Agag king of the Amalekites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.15.34-35": {
+      "text": "Samuel and Saul part, and Samuel mourns for Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.1-1": {
+      "text": "The LORD sends Samuel to Bethlehem to find a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.2-3": {
+      "text": "Samuel fears Saul, but the LORD gives a plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.4-5": {
+      "text": "Samuel goes to Bethlehem and invites Jesse’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.6-7": {
+      "text": "The LORD looks at the heart, so Eliab is not chosen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.8-10": {
+      "text": "Jesse presents seven sons, but the LORD chooses none",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.11-12": {
+      "text": "Jesse sends for David, and the LORD chooses him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.13-13": {
+      "text": "Samuel anoints David, and the LORD’s Spirit comes on him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.14-16": {
+      "text": "Saul’s servants suggest a harp player to ease his distress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.17-19": {
+      "text": "Saul asks for a harp player and sends for David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.20-21": {
+      "text": "David comes to Saul and becomes his armor-bearer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.16.22-23": {
+      "text": "Saul keeps David, whose harp makes Saul well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.1-1": {
+      "text": "The Philistines gather for war at Socoh in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.2-3": {
+      "text": "Israel and the Philistines face each other in the valley",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The two armies stood on opposite hills with the valley between them, rather than in the valley.",
+        "suggestion": "Israel and the Philistines face each other across the valley"
+      }
+    },
+    "1SA.17.4-5": {
+      "text": "Goliath, the Philistine champion, wears heavy bronze armor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.6-7": {
+      "text": "Goliath carries a bronze javelin and a heavy spear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.8-9": {
+      "text": "Goliath tells Israel to send one man to fight him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.10-11": {
+      "text": "Goliath defies Israel, and Saul and Israel are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.12-13": {
+      "text": "David’s father Jesse has eight sons; three follow Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.14-16": {
+      "text": "David tends sheep while Goliath comes out for forty days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.17-18": {
+      "text": "Jesse sends David with food to his brothers at the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.19-21": {
+      "text": "David leaves the sheep and reaches the army camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.22-24": {
+      "text": "David greets his brothers, and Israel flees from Goliath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.25-25": {
+      "text": "Israel’s men tell of the king’s reward for killing Goliath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.26-27": {
+      "text": "David asks what the reward is for killing the Philistine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.28-30": {
+      "text": "Eliab angrily questions why David has come to the battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.31-33": {
+      "text": "David offers to fight Goliath, but Saul doubts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.34-35": {
+      "text": "David tells Saul how he saved sheep from lions and bears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.36-36": {
+      "text": "David says Goliath will be like the lions and bears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.37-37": {
+      "text": "David trusts the LORD, and Saul lets David go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.38-38": {
+      "text": "Saul dresses David in Saul’s own armor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.39-40": {
+      "text": "David removes the armor and goes out with sling and stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.41-43": {
+      "text": "Goliath despises David and curses David by his gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.44-45": {
+      "text": "Goliath threatens David; David comes in the LORD’s name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.46-47": {
+      "text": "David says the LORD will give victory over the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.48-49": {
+      "text": "David hits Goliath with a stone, and Goliath falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.50-51": {
+      "text": "David kills Goliath, and the Philistines run away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.52-54": {
+      "text": "Israel chases the Philistines and plunders the camps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.55-56": {
+      "text": "Saul asks Abner whose son David is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.17.57-58": {
+      "text": "Abner brings David to Saul, and David names Jesse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "“David names Jesse” is unclear and unnatural phrasing for a second-language reader.",
+        "suggestion": "Abner brings David to Saul; David says he is Jesse’s son"
+      }
+    },
+    "1SA.18.1-2": {
+      "text": "Jonathan loves David, and Saul keeps David close",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.3-4": {
+      "text": "Jonathan makes a covenant with David and gives gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.5-5": {
+      "text": "David succeeds and Saul puts David over the men of war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.6-7": {
+      "text": "Israel’s women sing that David killed more than Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.8-9": {
+      "text": "Saul is angry about the song and is jealous of David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.10-12": {
+      "text": "Saul throws a spear at David and fears him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.13-14": {
+      "text": "Saul gives David command of a thousand men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.15-16": {
+      "text": "Saul fears David, but Israel and Judah love him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.17-18": {
+      "text": "Saul offers Merab to David, hoping Philistines kill David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.19-19": {
+      "text": "Saul gives Merab to Adriel instead of David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.20-21": {
+      "text": "Michal loves David, and Saul plans to use her as a trap",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.22-22": {
+      "text": "Saul sends his servants to speak privately to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.23-24": {
+      "text": "David says he is too poor to be the king’s son-in-law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.25-26": {
+      "text": "Saul asks David for a hundred Philistine foreskins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.27-29": {
+      "text": "David kills two hundred Philistines and marries Michal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.18.30-30": {
+      "text": "David is more successful than all Saul’s officers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.1-3": {
+      "text": "Saul orders David killed, but Jonathan warns David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.4-5": {
+      "text": "Jonathan defends David to his father Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.6-7": {
+      "text": "Saul promises not to kill David, and David returns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.8-9": {
+      "text": "David defeats the Philistines, and Saul is troubled again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.10-11": {
+      "text": "Saul tries to spear David, and Michal warns David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.12-13": {
+      "text": "Michal helps David escape and puts an idol in his bed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.14-15": {
+      "text": "Michal tells Saul’s messengers that David is ill",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 14 and leaves out Saul’s order in verse 15 to bring David in his bed so Saul can kill him.",
+        "suggestion": "Michal says David is ill, but Saul orders him brought in bed"
+      }
+    },
+    "1SA.19.16-17": {
+      "text": "Saul finds the idol, and Michal says David threatened her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.18-20": {
+      "text": "David goes to Samuel, and Saul’s messengers prophesy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.21-22": {
+      "text": "More messengers prophesy, so Saul goes to Ramah himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.19.23-24": {
+      "text": "The Spirit of God comes on Saul, and he prophesies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.1-2": {
+      "text": "David asks Jonathan why Saul wants to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.3-3": {
+      "text": "David tells Jonathan he is close to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.4-5": {
+      "text": "Jonathan offers to help, and David plans to hide",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.6-7": {
+      "text": "David tells Jonathan what to say to Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.8-9": {
+      "text": "David asks Jonathan to be faithful, and Jonathan agrees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.10-11": {
+      "text": "David and Jonathan go out into the field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.12-13": {
+      "text": "Jonathan swears to send David away safely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.14-16": {
+      "text": "Jonathan asks David to be kind to his family always",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.17-19": {
+      "text": "Jonathan tells David where to hide for three days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.20-21": {
+      "text": "Jonathan plans to use arrows to signal David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.22-23": {
+      "text": "Jonathan tells David how he will signal danger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.24-25": {
+      "text": "Saul sits to eat and David’s place is empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.26-27": {
+      "text": "Saul asks why David has not come to the meal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.28-29": {
+      "text": "Jonathan tells Saul that David went to Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.30-31": {
+      "text": "Saul angrily tells Jonathan that David must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.32-34": {
+      "text": "Saul throws his spear at Jonathan, who leaves in anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.35-37": {
+      "text": "Jonathan shoots arrows beyond a boy as a signal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.38-40": {
+      "text": "Jonathan sends the boy back to the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.20.41-42": {
+      "text": "David and Jonathan weep and say goodbye",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.1-2": {
+      "text": "David tells Ahimelech he is on a secret mission",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.3-4": {
+      "text": "David asks for bread; Ahimelech has only holy bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.5-6": {
+      "text": "Ahimelech gives David the consecrated bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.7-7": {
+      "text": "Doeg the Edomite, Saul’s servant, is at Nob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.8-9": {
+      "text": "David asks for a sword and takes Goliath’s sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.10-11": {
+      "text": "David flees to Gath, where Achish’s servants know him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.12-13": {
+      "text": "David is afraid and acts like a madman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.21.14-15": {
+      "text": "Achish thinks David is insane",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.1-2": {
+      "text": "David hides in the cave and men gather around him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.3-5": {
+      "text": "David leaves his parents with Moab’s king and goes to Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.6-6": {
+      "text": "Saul learns that David has been found",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.7-8": {
+      "text": "Saul accuses his servants of conspiring with David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.9-10": {
+      "text": "Doeg tells Saul that Ahimelech helped David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.11-13": {
+      "text": "Saul calls the priests and accuses Ahimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.14-15": {
+      "text": "Ahimelech defends David and says he knew nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.16-17": {
+      "text": "Saul orders the priests killed, but his guards refuse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.18-19": {
+      "text": "Doeg kills the priests and the people of Nob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.20-21": {
+      "text": "Abiathar escapes and tells David about the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.22.22-23": {
+      "text": "David promises to keep Abiathar safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.1-2": {
+      "text": "God tells David to attack the Philistines at Keilah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.3-4": {
+      "text": "David’s men are afraid, but God promises victory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.5-6": {
+      "text": "David defeats the Philistines and saves Keilah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.7-9": {
+      "text": "Saul plans to trap David at Keilah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.10-11": {
+      "text": "David asks God if Saul will come to Keilah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.12-12": {
+      "text": "The LORD tells David that Keilah will surrender him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.13-14": {
+      "text": "David leaves Keilah and Saul cannot catch him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.15-16": {
+      "text": "Jonathan visits David and strengthens his trust in God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.17-18": {
+      "text": "Jonathan and David make a covenant before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.19-20": {
+      "text": "The Ziphites tell Saul where David is hiding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.21-23": {
+      "text": "Saul asks the Ziphites to find David’s hiding places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.24-25": {
+      "text": "David goes to the Wilderness of Maon, and Saul follows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.26-27": {
+      "text": "A messenger calls Saul away as he closes in on David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.23.28-29": {
+      "text": "Saul stops chasing David, and David goes to En-gedi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.1-2": {
+      "text": "Saul takes three thousand men to look for David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.3-4": {
+      "text": "David cuts off a corner of Saul’s robe in the cave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.5-7": {
+      "text": "David feels guilty and stops his men from killing Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.8-9": {
+      "text": "David calls to Saul and bows before him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.10-11": {
+      "text": "David says he spared Saul’s life in the cave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.12-13": {
+      "text": "David asks the LORD to judge between him and Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.14-15": {
+      "text": "David asks why Saul chases a dead dog or a flea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.16-16": {
+      "text": "Saul weeps when he hears David’s voice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.17-18": {
+      "text": "Saul admits David has been good to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.19-20": {
+      "text": "Saul says David will be king of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.24.21-22": {
+      "text": "David swears not to wipe out Saul’s descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.2-3": {
+      "text": "Nabal is rich and harsh, and his wife Abigail is wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.4-6": {
+      "text": "David sends ten young men to greet Nabal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.7-8": {
+      "text": "David asks Nabal for food, saying his men did no harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.9-11": {
+      "text": "Nabal refuses to give anything to David’s men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.12-13": {
+      "text": "David orders his men to put on swords",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.14-15": {
+      "text": "A servant tells Abigail that David’s men were kind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.16-17": {
+      "text": "The servant warns Abigail of disaster for Nabal’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.18-19": {
+      "text": "Abigail secretly takes food to meet David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.20-20": {
+      "text": "Abigail meets David and his men in a ravine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.21-22": {
+      "text": "David swears to kill all of Nabal’s men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.23-24": {
+      "text": "Abigail bows before David and asks to speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.25-26": {
+      "text": "Abigail asks David to ignore Nabal, who is a fool",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.27-28": {
+      "text": "Abigail gives David a gift and asks his forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.29-29": {
+      "text": "Abigail says the LORD will protect David’s life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.30-31": {
+      "text": "Abigail asks David to remember her when he is king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.32-33": {
+      "text": "David thanks God and Abigail for stopping his revenge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.34-35": {
+      "text": "David accepts Abigail’s gift and sends her home in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.36-36": {
+      "text": "Abigail finds Nabal drunk at his feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.37-38": {
+      "text": "Nabal becomes like a stone and the LORD strikes him dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.39-40": {
+      "text": "David praises the LORD and asks Abigail to marry him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.41-42": {
+      "text": "Abigail goes with David’s servants and becomes his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.25.43-44": {
+      "text": "David has two wives; Saul gives Michal to Palti",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.1-2": {
+      "text": "The Ziphites tell Saul where David is hiding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the Ziphites’ report in verse 1 and leaves out Saul going to search for David in verse 2.",
+        "suggestion": "Saul searches for David after the Ziphites report him"
+      }
+    },
+    "1SA.26.3-4": {
+      "text": "Saul camps near David, and David sends spies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.5-5": {
+      "text": "David sees where Saul and Abner are sleeping",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.6-8": {
+      "text": "Abishai wants to kill sleeping Saul with the spear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.9-10": {
+      "text": "David tells Abishai not to kill Saul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.11-12": {
+      "text": "David takes Saul’s spear and water jug and leaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.13-14": {
+      "text": "David calls out to Abner from the mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.15-16": {
+      "text": "David accuses Abner of not protecting the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.17-18": {
+      "text": "Saul knows David’s voice; David asks why Saul chases him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.19-20": {
+      "text": "David asks Saul to stop hunting him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.21-21": {
+      "text": "Saul admits his sin and asks David to come back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.22-23": {
+      "text": "David returns the spear and trusts the LORD to repay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.26.24-25": {
+      "text": "David asks the LORD to value his life; Saul blesses him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.1-1": {
+      "text": "David decides to escape to the land of the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.2-4": {
+      "text": "David and his men live in Gath, and Saul stops searching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.5-7": {
+      "text": "Achish gives David the town of Ziklag",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.8-9": {
+      "text": "David raids the Geshurites, Girzites and Amalekites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.10-10": {
+      "text": "David tells Achish he raided places in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.27.11-12": {
+      "text": "Achish trusts David, who leaves no one alive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.1-2": {
+      "text": "Achish says David and his men must fight Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.3-4": {
+      "text": "Philistines camp at Shunem and Saul at Gilboa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "plain"],
+        "why": "It leaves out the information about Samuel in verse 3 and omits the word “The” before Philistines.",
+        "suggestion": "The Philistines camp against Saul after Samuel’s death"
+      }
+    },
+    "1SA.28.5-6": {
+      "text": "Saul is afraid, and the LORD does not answer him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.7-7": {
+      "text": "Saul’s servants tell him of a medium at Endor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.8-10": {
+      "text": "Saul disguises himself and asks the medium for a spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.11-12": {
+      "text": "Saul asks the medium to bring up Samuel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes verse 11 and leaves out the woman seeing Samuel and recognizing Saul in verse 12.",
+        "suggestion": "Saul asks for Samuel, and the woman recognizes Saul"
+      }
+    },
+    "1SA.28.13-14": {
+      "text": "The woman sees Samuel, and Saul bows down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.15-15": {
+      "text": "Saul tells Samuel that God no longer answers him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.16-17": {
+      "text": "Samuel says the LORD has given the kingdom to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.18-19": {
+      "text": "Samuel says Saul and his sons will die tomorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.20-21": {
+      "text": "Saul falls down in fear, weak from not eating",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.22-23": {
+      "text": "The woman and servants urge Saul to eat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.28.24-25": {
+      "text": "The woman cooks a meal for Saul and his servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.1-2": {
+      "text": "The Philistines gather, and David marches with Achish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.3-3": {
+      "text": "Achish defends David to the Philistine commanders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.4-4": {
+      "text": "The commanders tell Achish to send David back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.5-5": {
+      "text": "The commanders remind Achish of the song about David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.6-7": {
+      "text": "Achish tells David to go home in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.8-9": {
+      "text": "David asks why he cannot go to battle with Achish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.29.10-11": {
+      "text": "David and his men go back early in the morning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.1-2": {
+      "text": "The Amalekites burn Ziklag and take the people captive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.3-4": {
+      "text": "David and his men find Ziklag burned and weep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.5-6": {
+      "text": "David is greatly distressed but finds strength in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.7-8": {
+      "text": "The LORD tells David to pursue the raiders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.9-10": {
+      "text": "David leaves two hundred tired men at Besor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.11-12": {
+      "text": "David’s men find and feed a starving Egyptian",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.13-14": {
+      "text": "The Egyptian says he was a slave of an Amalekite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.15-15": {
+      "text": "The Egyptian promises to lead David to the raiders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.16-17": {
+      "text": "David defeats the Amalekites; four hundred escape",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.18-20": {
+      "text": "David recovers everything the Amalekites had taken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.21-22": {
+      "text": "Wicked men refuse to share plunder with the tired men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.23-25": {
+      "text": "David says all the men will share the plunder alike",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.26-28": {
+      "text": "David sends plunder to the elders of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.30.29-31": {
+      "text": "David sends gifts to friends in more towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.31.1-3": {
+      "text": "The Philistines defeat Israel and kill Saul’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.31.4-6": {
+      "text": "Saul and his armor-bearer kill themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1SA.31.7-8": {
+      "text": "Israelites flee, and the Philistines take the towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes verse 7 and leaves out the Philistines finding Saul and his sons dead in verse 8.",
+        "suggestion": "The Philistines take the towns and find Saul’s body"
+      }
+    },
+    "1SA.31.9-10": {
+      "text": "The Philistines hang Saul’s body at Beth-shan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

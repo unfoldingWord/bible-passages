@@ -1,0 +1,2615 @@
+{
+  "language": "en",
+  "book": "LEV",
+  "bible": "bsb-lev",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793906601-8a2QTjJ0LvDzgjOG830w",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6729,
+      "completionTokens": 4040,
+      "reasoningTokens": 3054,
+      "cost": 0.053858,
+      "ms": 27227
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906627-wIOYmcQXVXfEInBtjUzN",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6614,
+      "completionTokens": 6091,
+      "reasoningTokens": 5104,
+      "cost": 0.074138,
+      "ms": 38522
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906665-FTvkrMHtO1Y8dLsYOvIL",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6521,
+      "completionTokens": 6160,
+      "reasoningTokens": 5134,
+      "cost": 0.074642,
+      "ms": 37536
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906703-MuHfmYWdduswfvSfF9UA",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6605,
+      "completionTokens": 4990,
+      "reasoningTokens": 3968,
+      "cost": 0.06311,
+      "ms": 30902
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906734-y5FsJLpC7CicVJgerMfG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6684,
+      "completionTokens": 5300,
+      "reasoningTokens": 4315,
+      "cost": 0.066368,
+      "ms": 35175
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906769-voO2Etk7nYddkbGfFJic",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6419,
+      "completionTokens": 5022,
+      "reasoningTokens": 4042,
+      "cost": 0.063058,
+      "ms": 34689
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906804-UkFivLv5R7FYtlsbbKn1",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6041,
+      "completionTokens": 7067,
+      "reasoningTokens": 6050,
+      "cost": 0.082752,
+      "ms": 47471
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906851-07bcsYZ2Lp9cwrvWf3St",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6185,
+      "completionTokens": 7334,
+      "reasoningTokens": 6367,
+      "cost": 0.08571,
+      "ms": 48476
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906900-EmEemXrNDn2BEC0gIS5b",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6166,
+      "completionTokens": 6755,
+      "reasoningTokens": 5695,
+      "cost": 0.079882,
+      "ms": 41911
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906942-4dShICwuZcHzAXKP3xLF",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5848,
+      "completionTokens": 5280,
+      "reasoningTokens": 4295,
+      "cost": 0.064496,
+      "ms": 33784
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793906975-S2OeXTsU4WDA3gpXKU7j",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5897,
+      "completionTokens": 4194,
+      "reasoningTokens": 3278,
+      "cost": 0.053734,
+      "ms": 27776
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907003-EC20BqKcjSX3z2xTcZF4",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5464,
+      "completionTokens": 7452,
+      "reasoningTokens": 6541,
+      "cost": 0.032043,
+      "ms": 35632
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907039-ydi7C5g5afU4y7Ph6r7p",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5371,
+      "completionTokens": 11130,
+      "reasoningTokens": 10086,
+      "cost": 0.04576575,
+      "ms": 49731
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907089-InG6nlhscX84lMyGUSSF",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5244,
+      "completionTokens": 8836,
+      "reasoningTokens": 7805,
+      "cost": 0.037068,
+      "ms": 40463
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907129-ZA3CvWk06ollchCVFyWw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5428,
+      "completionTokens": 5606,
+      "reasoningTokens": 4552,
+      "cost": 0.0250935,
+      "ms": 44754
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907174-CYpoFIAA11Ar8qdf47w6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5538,
+      "completionTokens": 4071,
+      "reasoningTokens": 3095,
+      "cost": 0.01941975,
+      "ms": 32214
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907206-RBktl5Bdo4nLttw0iyGY",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5345,
+      "completionTokens": 4773,
+      "reasoningTokens": 3671,
+      "cost": 0.0219075,
+      "ms": 22084
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907228-GcLxWN0xkTjs58uvq9Wh",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5100,
+      "completionTokens": 10032,
+      "reasoningTokens": 9060,
+      "cost": 0.041445,
+      "ms": 67722
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907296-vjDREyjlA4nI1LR2vj9P",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5249,
+      "completionTokens": 12554,
+      "reasoningTokens": 11614,
+      "cost": 0.05101425,
+      "ms": 78895
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907375-KJdGkmwnGdtvuEdMrcTU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5107,
+      "completionTokens": 19150,
+      "reasoningTokens": 18052,
+      "cost": 0.07564275,
+      "ms": 114009
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907489-GDitQJmXa0NY1bAQ6r3O",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4995,
+      "completionTokens": 6889,
+      "reasoningTokens": 5957,
+      "cost": 0.02958,
+      "ms": 35974
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907525-4LObthDZIHlGq7UbISqI",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5028,
+      "completionTokens": 11139,
+      "reasoningTokens": 9992,
+      "cost": 0.04554225,
+      "ms": 64150
+    }
+  ],
+  "titles": {
+    "LEV.1.1-2": {
+      "text": "The LORD speaks to Moses about animal offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.3-4": {
+      "text": "An Israelite brings a bull as a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.5-6": {
+      "text": "The bull is killed and the priests sprinkle its blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.7-9": {
+      "text": "Priests burn the pieces of the bull on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.10-11": {
+      "text": "A sheep or goat may be a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.12-13": {
+      "text": "The priest burns the pieces of the sheep or goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.14-15": {
+      "text": "A bird may be given as a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.1.16-17": {
+      "text": "The priest prepares the bird and burns it on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.2.1-3": {
+      "text": "A grain offering is fine flour with oil and frankincense",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.2.4-5": {
+      "text": "Grain offerings baked in an oven or cooked on a griddle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a phrase rather than a full sentence statement.",
+        "suggestion": "Grain offerings may be baked in an oven or on a griddle"
+      }
+    },
+    "LEV.2.6-7": {
+      "text": "Grain offerings may also be cooked in a pan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.2.8-10": {
+      "text": "The priest burns a part; the rest is for Aaron’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.2.11-13": {
+      "text": "Grain offerings must have no leaven or honey, but salt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.2.14-16": {
+      "text": "Israelites offer roasted new grain as firstfruits",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.1-2": {
+      "text": "An Israelite brings a bull or cow as a peace offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.3-5": {
+      "text": "The priests burn the fat of the peace offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.6-8": {
+      "text": "A peace offering may come from the flock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.9-11": {
+      "text": "The priest burns the fat of the lamb on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.12-14": {
+      "text": "A goat may also be given as a peace offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.3.15-17": {
+      "text": "The LORD forbids Israelites to eat fat or blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.1-3": {
+      "text": "A priest who sins must bring a young bull",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.4-5": {
+      "text": "The priest kills the bull and takes blood into the Tent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.6-7": {
+      "text": "The priest sprinkles blood and puts it on the altar horns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.8-10": {
+      "text": "The priest burns the fat of the sin offering bull",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.11-12": {
+      "text": "The rest of the bull is burned outside the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.13-15": {
+      "text": "If all Israel sins by mistake, the elders offer a bull",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.16-17": {
+      "text": "The priest sprinkles the bull’s blood before the veil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.18-19": {
+      "text": "The priest puts blood on the altar and burns the fat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.20-21": {
+      "text": "The priest burns the bull and the people are forgiven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.22-23": {
+      "text": "A leader who sins must bring a male goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.24-25": {
+      "text": "The leader’s goat is killed and its blood put on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.26-26": {
+      "text": "The priest burns the goat’s fat and the leader is forgiven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.27-28": {
+      "text": "A common person who sins must bring a female goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.29-30": {
+      "text": "The female goat is killed and its blood put on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.31-31": {
+      "text": "The priest burns the fat and the sinner is forgiven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.32-33": {
+      "text": "A sinner may bring a female lamb without fault",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.4.34-35": {
+      "text": "The priest offers the lamb’s blood and fat for forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.1-2": {
+      "text": "A person sins by not testifying or touching unclean things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.3-4": {
+      "text": "A person is guilty for human uncleanness or a rash oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.5-6": {
+      "text": "A guilty person must confess and bring a lamb or goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.7-9": {
+      "text": "A person who cannot afford a lamb may bring two birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.10-10": {
+      "text": "The priest offers the second bird as a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.11-11": {
+      "text": "A very poor person may bring fine flour as a sin offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.12-13": {
+      "text": "The priest burns a handful of flour for forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.14-16": {
+      "text": "Someone who sins against holy things must bring a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.5.17-19": {
+      "text": "A person who sins without knowing it still brings a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.1-4": {
+      "text": "A person who cheats a neighbor must give back what he took",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.5-7": {
+      "text": "The cheater repays in full, adds a fifth, and brings a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.8-9": {
+      "text": "The priests keep the burnt offering on the altar all night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.10-11": {
+      "text": "A priest carries the altar ashes outside the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.12-13": {
+      "text": "The priests must never let the altar fire go out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.14-15": {
+      "text": "Priests burn a handful of the grain offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.16-18": {
+      "text": "Aaron’s sons eat the rest of the grain offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.19-20": {
+      "text": "Aaron and his sons bring flour as a regular offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.21-23": {
+      "text": "A priest’s grain offering must be burned completely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.24-26": {
+      "text": "The priest eats the sin offering in a holy place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.27-28": {
+      "text": "Priests must wash stained clothes and clean the pots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.6.29-30": {
+      "text": "Male priests eat most sin offerings; some are burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.1-4": {
+      "text": "Priests offer the fat of the guilt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.5-6": {
+      "text": "Male priests eat the guilt offering in a holy place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.7-8": {
+      "text": "The guilt offering and sin offering have the same law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 7 and leaves out the priest receiving the burnt offering hide in verse 8.",
+        "suggestion": "The priest receives the guilt offering and the hide"
+      }
+    },
+    "LEV.7.9-10": {
+      "text": "Cooked grain offerings belong to the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers the cooked offerings in verse 9 and leaves out the uncooked grain offerings in verse 10.",
+        "suggestion": "Grain offerings belong to the priests"
+      }
+    },
+    "LEV.7.11-12": {
+      "text": "A thanksgiving peace offering needs cakes without yeast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.13-14": {
+      "text": "A person giving thanks also brings leavened bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.15-16": {
+      "text": "A thanksgiving offering must be eaten the same day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers thanksgiving offerings in verse 15 and leaves out vow and freewill offerings in verse 16.",
+        "suggestion": "Peace offerings must be eaten within one or two days"
+      }
+    },
+    "LEV.7.17-18": {
+      "text": "Peace offering meat left until the third day must be burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.19-20": {
+      "text": "Unclean people must not eat the peace offering meat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.21-21": {
+      "text": "Anyone unclean who eats the peace offering is cut off",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.22-24": {
+      "text": "The Israelites must not eat the fat of ox, sheep or goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.25-27": {
+      "text": "Israelites must not eat fat from offerings or any blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.28-30": {
+      "text": "Israelites bring peace offerings and wave the breast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.31-32": {
+      "text": "The priests receive the breast and the right thigh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.33-34": {
+      "text": "The breast and thigh are a permanent portion for priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.7.35-36": {
+      "text": "Aaron’s sons receive this portion for all generations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase 'this portion' is unclear to a reader seeing the title alone in a list.",
+        "suggestion": "Aaron’s sons receive their portion for all generations"
+      }
+    },
+    "LEV.7.37-38": {
+      "text": "Summary of the laws for the offerings given at Sinai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence rather than a noun phrase.",
+        "suggestion": "The LORD gives the laws for offerings at Mount Sinai"
+      }
+    },
+    "LEV.8.1-3": {
+      "text": "The LORD tells Moses to bring Aaron and gather the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.4-5": {
+      "text": "Moses gathers the people at the Tent of Meeting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.6-7": {
+      "text": "Moses washes Aaron and his sons and dresses Aaron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.8-9": {
+      "text": "Moses puts the breastpiece and turban on Aaron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.10-11": {
+      "text": "Moses anoints the tabernacle and the altar with oil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.12-13": {
+      "text": "Moses anoints Aaron and dresses Aaron’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.14-15": {
+      "text": "Moses offers the bull as a sin offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.16-17": {
+      "text": "Moses burns the bull’s fat and the rest outside the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Moses burned the fat on the altar, not outside the camp.",
+        "suggestion": "Moses burns fat on the altar and the rest outside the camp"
+      }
+    },
+    "LEV.8.18-19": {
+      "text": "Moses offers a ram as a burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.20-21": {
+      "text": "Moses burns the whole ram on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.22-24": {
+      "text": "Moses puts blood from the ordination ram on the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.25-27": {
+      "text": "Moses waves the fat, thigh and bread before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.28-29": {
+      "text": "Moses burns the offerings and waves the breast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.30-30": {
+      "text": "Moses sprinkles oil and blood on Aaron and his sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.31-33": {
+      "text": "Moses tells the priests to boil and eat the meat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.8.34-36": {
+      "text": "Aaron and his sons must stay at the Tent seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.1-2": {
+      "text": "Moses tells Aaron to bring a bull and a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.3-5": {
+      "text": "Moses tells the Israelites to bring offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.6-7": {
+      "text": "Aaron must offer sacrifices for himself and the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.8-9": {
+      "text": "Aaron offers a sin offering for himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.10-11": {
+      "text": "Aaron burns the sin offering fat and the flesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.12-14": {
+      "text": "Aaron offers the burnt offering on the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.15-17": {
+      "text": "Aaron offers the people’s sin, burnt and grain offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.18-19": {
+      "text": "Aaron offers the people’s peace offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.20-21": {
+      "text": "Aaron burns the fat and waves the breasts and thigh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.9.22-24": {
+      "text": "The glory of the LORD appears and fire burns the offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.1-2": {
+      "text": "Nadab and Abihu offer unauthorized fire and die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.3-4": {
+      "text": "Aaron is silent; Moses has the bodies carried out of camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.5-7": {
+      "text": "Moses forbids Aaron and his sons to mourn openly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.8-11": {
+      "text": "Priests must not drink wine in the Tent of Meeting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.12-13": {
+      "text": "Moses tells Aaron’s sons to eat the grain offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Moses instructs Aaron as well as his sons to eat the offering.",
+        "suggestion": "Moses tells Aaron and his sons to eat the grain offering"
+      }
+    },
+    "LEV.10.14-15": {
+      "text": "Aaron’s family may eat the wave offering breast and thigh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.16-18": {
+      "text": "Moses is angry that the sin offering was not eaten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.10.19-20": {
+      "text": "Aaron explains and Moses is satisfied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.1-2": {
+      "text": "The LORD tells Moses and Aaron about animals to eat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.3-4": {
+      "text": "Animals with split hooves that chew the cud may be eaten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.5-8": {
+      "text": "The rock badger, rabbit and pig are unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.9-10": {
+      "text": "Only water creatures with fins and scales may be eaten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.11-12": {
+      "text": "Water creatures without fins and scales are detestable",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.13-16": {
+      "text": "Eagles, vultures, ravens and other birds must not be eaten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.17-19": {
+      "text": "Owls, herons, bats and other birds must not be eaten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.20-23": {
+      "text": "Locusts and crickets may be eaten; other insects may not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.24-25": {
+      "text": "Touching a dead unclean animal makes a person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.26-28": {
+      "text": "Touching more dead unclean animals makes a person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “more” does not make sense when the title is read alone in a list.",
+        "suggestion": "Animals with paws or undivided hooves are unclean"
+      }
+    },
+    "LEV.11.29-30": {
+      "text": "Moles, mice and lizards are unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.31-33": {
+      "text": "Dead crawling creatures make objects and clay pots unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.34-35": {
+      "text": "Food, drink and ovens touched by a carcass become unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.36-38": {
+      "text": "Water in springs stays clean; wet seed can become unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.39-40": {
+      "text": "Touching or eating an animal that died makes one unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.41-42": {
+      "text": "Israelites must not eat creatures that crawl on the ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.43-45": {
+      "text": "The LORD tells Israelites to be holy because he is holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.11.46-47": {
+      "text": "Summary of the law about clean and unclean animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "These laws distinguish between clean and unclean animals"
+      }
+    },
+    "LEV.12.1-3": {
+      "text": "A woman who bears a son is unclean seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.12.4-5": {
+      "text": "A mother’s purification lasts longer after a daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.12.6-6": {
+      "text": "A mother brings a lamb and a bird to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.12.7-8": {
+      "text": "The priest makes the mother clean; poor women bring birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.1-2": {
+      "text": "A person with a swelling or rash must go to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.3-4": {
+      "text": "The priest examines a sore and may isolate the person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.5-6": {
+      "text": "If the sore fades, the priest declares the person clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.7-8": {
+      "text": "If the rash spreads, the priest declares the person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.9-11": {
+      "text": "A chronic skin disease makes the person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.12-14": {
+      "text": "A person is clean if the disease turns all skin white",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.15-17": {
+      "text": "Raw flesh is unclean, but flesh that turns white is clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.18-20": {
+      "text": "The priest examines a healed boil that has a white spot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.21-23": {
+      "text": "The priest waits seven days to see if a boil spot spreads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.24-25": {
+      "text": "A burn with white hair and deep skin is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The sore is deeper than the skin, not that the skin itself is deep.",
+        "suggestion": "A burn sore deeper than the skin is unclean"
+      }
+    },
+    "LEV.13.26-28": {
+      "text": "The priest checks a burn spot again after seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.29-30": {
+      "text": "A scaly infection on the head or chin is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.31-31": {
+      "text": "The priest isolates a person with a shallow scaly sore",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.32-33": {
+      "text": "A person shaves around the scaly area and waits seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.34-34": {
+      "text": "The priest declares the person clean after seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.35-37": {
+      "text": "A spreading scaly sore is unclean; a healed one is clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.38-39": {
+      "text": "Dull white spots on the skin are harmless and clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.40-41": {
+      "text": "A man who is bald is still clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.42-44": {
+      "text": "A reddish-white sore on a bald head is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.45-46": {
+      "text": "A person with a skin disease must live outside the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.47-49": {
+      "text": "Mildew in cloth or leather must be shown to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.50-52": {
+      "text": "Cloth with spreading mildew must be burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.53-55": {
+      "text": "Washed cloth that has not changed must be burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.56-58": {
+      "text": "Faded mildew is cut out; returning mildew is burned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.13.59-59": {
+      "text": "This is the law about mildew in cloth and leather",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.1-2": {
+      "text": "The LORD tells Moses how to cleanse a healed person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.3-5": {
+      "text": "The priest checks the healed person and gets two birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.6-7": {
+      "text": "The priest sprinkles the person and frees the live bird",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.8-9": {
+      "text": "The healed person washes, shaves, and waits seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.10-11": {
+      "text": "On day eight the person brings lambs, flour, and oil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.12-13": {
+      "text": "The priest offers one lamb as a guilt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.14-16": {
+      "text": "The priest puts blood on the person’s ear, thumb, and toe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.17-18": {
+      "text": "The priest puts oil on the ear, thumb, toe, and head",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.19-20": {
+      "text": "The priest offers the sin offering and the burnt offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.21-23": {
+      "text": "A poor person may bring one lamb and two birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.24-25": {
+      "text": "The priest offers the lamb and puts blood on the person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.26-27": {
+      "text": "The priest sprinkles oil seven times before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.28-29": {
+      "text": "The priest puts oil on the person and makes atonement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.30-32": {
+      "text": "This is the law for a poor person with skin disease",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.33-35": {
+      "text": "A house owner must tell the priest about mildew",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.36-38": {
+      "text": "The priest inspects the house and closes it seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.39-40": {
+      "text": "If the mildew spreads, the priest removes the stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.41-42": {
+      "text": "The house is scraped and new stones and plaster are used",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.43-44": {
+      "text": "If mildew returns, the priest declares the house unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.45-47": {
+      "text": "A house with bad mildew must be torn down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.48-48": {
+      "text": "The priest declares the house clean if mildew is gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.49-51": {
+      "text": "The priest uses two birds to purify the house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.52-53": {
+      "text": "The priest releases the live bird and the house is clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.14.54-57": {
+      "text": "Summary of the laws about skin diseases and mildew",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase instead of a full sentence.",
+        "suggestion": "These are the laws about skin diseases and mildew"
+      }
+    },
+    "LEV.15.1-3": {
+      "text": "A man with a bodily discharge is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.4-5": {
+      "text": "Beds and seats of a man with a discharge are unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.6-7": {
+      "text": "Touching the man or his seat makes a person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.8-9": {
+      "text": "The man’s spit and saddle cause uncleanness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.10-12": {
+      "text": "More rules about touching the man and what he touched",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase instead of a full sentence.",
+        "suggestion": "Touching the man or his things makes a person unclean"
+      }
+    },
+    "LEV.15.13-15": {
+      "text": "A man healed of a discharge washes and brings offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.16-18": {
+      "text": "A man with an emission of semen must bathe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.19-20": {
+      "text": "A woman’s monthly period makes her unclean seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.21-23": {
+      "text": "Touching a woman’s bed or seat makes a person unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.24-24": {
+      "text": "A man who lies with a woman in her period is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.25-27": {
+      "text": "A woman with a long bleeding is unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.28-30": {
+      "text": "A woman healed of her discharge brings offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.31-31": {
+      "text": "The Israelites must be kept from uncleanness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.15.32-33": {
+      "text": "Summary of the laws about discharges",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase instead of a full sentence.",
+        "suggestion": "These are the laws about bodily discharges"
+      }
+    },
+    "LEV.16.1-2": {
+      "text": "The LORD tells Aaron not to enter freely behind the veil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The LORD speaks to Moses, telling him to warn Aaron.",
+        "suggestion": "The LORD tells Moses that Aaron must not enter freely"
+      }
+    },
+    "LEV.16.3-5": {
+      "text": "Aaron must bring offerings and wear holy clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.6-7": {
+      "text": "Aaron offers a bull for himself and presents two goats",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.8-10": {
+      "text": "Aaron chooses one goat for the LORD and one to send away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.11-11": {
+      "text": "Aaron slaughters the bull as his own sin offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.12-13": {
+      "text": "Aaron brings burning coals and incense behind the veil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.14-14": {
+      "text": "Aaron sprinkles the bull’s blood at the mercy seat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.15-16": {
+      "text": "Aaron uses the goat’s blood to cleanse the Most Holy Place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.17-19": {
+      "text": "Aaron cleanses the altar with blood from both animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.20-22": {
+      "text": "Aaron puts the people’s sins on the live goat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.23-24": {
+      "text": "Aaron changes his clothes and offers burnt offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.25-26": {
+      "text": "Aaron burns the fat; the man with the goat must wash",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.27-28": {
+      "text": "The sin offering animals are burned outside the camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.29-31": {
+      "text": "The Israelites must rest and humble themselves each year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.32-33": {
+      "text": "Future high priests make atonement for the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.16.34-34": {
+      "text": "Atonement for Israel is to be made once a year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.1-4": {
+      "text": "Israelites must bring animals to the Tent of Meeting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.5-6": {
+      "text": "Israelites must bring field sacrifices to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.7-7": {
+      "text": "Israelites must stop offering sacrifices to goat demons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.8-9": {
+      "text": "Israelites and foreigners must bring offerings to the Tent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.10-11": {
+      "text": "Eating blood is forbidden because blood makes atonement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.12-13": {
+      "text": "No one may eat blood; hunters must cover it with dirt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.14-14": {
+      "text": "Israelites must not eat the blood of any creature",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.17.15-16": {
+      "text": "Anyone who eats a dead animal must wash and bathe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.1-3": {
+      "text": "Israelites must not copy the customs of Egypt or Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.4-5": {
+      "text": "Israelites must obey the LORD’s laws and so live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.6-8": {
+      "text": "Israelites must not have sex with mother or stepmother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.9-11": {
+      "text": "Israelites must not have sex with sisters or granddaughters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.12-14": {
+      "text": "Men must not have sex with an aunt or uncle’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.15-16": {
+      "text": "Israelites must not have sex with a son’s or brother’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.17-18": {
+      "text": "Men must not have sex with a wife’s daughter or sister",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.19-20": {
+      "text": "Men must avoid sex in a period or with a neighbor’s wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “in a period” is unnatural and confusing; the text specifies having sexual relations “during her menstrual period”.",
+        "suggestion": "Men must avoid sex during a period or with a neighbor’s wife"
+      }
+    },
+    "LEV.18.21-21": {
+      "text": "Israelites must not give children as sacrifices to Molech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.22-23": {
+      "text": "Sex between men and sex with animals are forbidden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.24-25": {
+      "text": "Israelites must not defile themselves as the nations did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.26-28": {
+      "text": "Israelites and foreigners must not do these evil acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.18.29-30": {
+      "text": "Those who do these acts must be cut off from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.1-4": {
+      "text": "Israelites must be holy, honor parents and avoid idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.5-8": {
+      "text": "Israelites must eat peace offerings within two days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.9-10": {
+      "text": "Israelites must leave extra harvest for the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.11-12": {
+      "text": "Israelites must not steal, lie or swear falsely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.13-14": {
+      "text": "Israelites must be fair to workers, the deaf and the blind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.15-16": {
+      "text": "Israelites must judge fairly and not spread slander",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.17-18": {
+      "text": "Israelites must not hate or take revenge but love neighbors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.19-19": {
+      "text": "God tells Israel not to mix animals, seeds, or cloth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.20-22": {
+      "text": "A man who lies with a promised slave girl brings a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.23-25": {
+      "text": "Israel must not eat fruit from new trees for three years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.26-28": {
+      "text": "God forbids eating blood, sorcery, and cutting hair or skin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.29-30": {
+      "text": "Israel must not prostitute daughters and must keep Sabbaths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.31-31": {
+      "text": "Israel must not turn to mediums or spiritists",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.32-32": {
+      "text": "Israel must honor the elderly and fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.33-34": {
+      "text": "Israel must love foreigners as native-born citizens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.19.35-37": {
+      "text": "Israel must use honest scales and keep all God’s laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.1-2": {
+      "text": "Anyone who gives a child to Molech must be put to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.3-5": {
+      "text": "God will cut off those who give children to Molech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.6-7": {
+      "text": "God will cut off anyone who turns to mediums",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.8-9": {
+      "text": "Israel must keep God’s laws; cursing parents brings death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.10-12": {
+      "text": "Death is the punishment for adultery and sex with relatives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.13-14": {
+      "text": "Punishment for a man who lies with a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 13 and leaves out the command in verse 14.",
+        "suggestion": "Men who lie with men or marry a wife’s mother must die"
+      }
+    },
+    "LEV.20.15-16": {
+      "text": "People who lie with animals must die, and the animals too",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.17-18": {
+      "text": "Punishment for sex with a sister or a menstruating woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.19-21": {
+      "text": "Sex with an aunt or a relative’s wife brings punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.22-23": {
+      "text": "Israel must keep God’s laws, not follow other nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.24-25": {
+      "text": "God sets Israel apart; Israel must avoid unclean animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.26-26": {
+      "text": "Israel must be holy because God is holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.20.27-27": {
+      "text": "Mediums and spiritists must be put to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.1-3": {
+      "text": "A priest may touch the dead only for close family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.4-6": {
+      "text": "Priests must be holy and not shave or cut themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.7-9": {
+      "text": "A priest must not marry a prostitute or divorced woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.10-12": {
+      "text": "The high priest must not touch any dead body",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.13-15": {
+      "text": "The high priest must marry a virgin from his own people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.16-17": {
+      "text": "No descendant of Aaron with a defect may offer God’s food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.18-21": {
+      "text": "Aaron’s descendants with defects must not present offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.21.22-24": {
+      "text": "Priests with defects eat holy food but stay away from altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.1-3": {
+      "text": "Aaron and his sons must respect the sacred offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.4-6": {
+      "text": "Unclean priests may not eat the sacred offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.7-9": {
+      "text": "Priests become clean at sunset and then may eat offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.10-11": {
+      "text": "Who in a priest’s household may eat the sacred offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence statement.",
+        "suggestion": "Only a priest’s family and slaves may eat sacred food"
+      }
+    },
+    "LEV.22.12-13": {
+      "text": "When a priest’s daughter may eat the sacred food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence statement.",
+        "suggestion": "A priest’s daughter who returns home may eat sacred food"
+      }
+    },
+    "LEV.22.14-16": {
+      "text": "A person who eats a sacred offering by mistake must repay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.17-19": {
+      "text": "Burnt offerings must be unblemished male animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.20-21": {
+      "text": "Peace offerings must also have no defect",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.22-23": {
+      "text": "Israelites must not offer blind, injured or sick animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.24-25": {
+      "text": "Israelites must not offer animals with damaged testicles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.26-27": {
+      "text": "A young animal must stay with its mother seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.22.28-30": {
+      "text": "Israelites must eat a thank offering on the same day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title does not cover the command in verse 28.",
+        "suggestion": "Israelites must obey laws on slaughter and thank offerings"
+      }
+    },
+    "LEV.22.31-33": {
+      "text": "Israelites must obey the LORD and keep his name holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.1-2": {
+      "text": "The LORD tells Moses about his appointed feasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.3-3": {
+      "text": "Israelites must rest on the Sabbath day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.4-6": {
+      "text": "Israelites keep Passover and eat unleavened bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.7-8": {
+      "text": "Israelites must not work on the first and seventh days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.9-11": {
+      "text": "Israelites bring the first grain sheaf to the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.12-14": {
+      "text": "Israelites give offerings before eating the new grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.15-16": {
+      "text": "Israelites count seven weeks, then offer new grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.17-18": {
+      "text": "Israelites bring two loaves and animals as offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.19-21": {
+      "text": "Israelites offer a goat and lambs and hold an assembly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.22-22": {
+      "text": "Israelites must leave some harvest for the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.26-27": {
+      "text": "Israelites hold a sacred assembly and bring an offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.28-29": {
+      "text": "Israelites must not work on the Day of Atonement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.30-32": {
+      "text": "Israelites keep a full rest from evening to evening",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.33-34": {
+      "text": "The feast begins on the fifteenth day of the seventh month",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The title does not name the feast.",
+        "suggestion": "The Feast of Tabernacles begins on the fifteenth day"
+      }
+    },
+    "LEV.23.35-36": {
+      "text": "Israelites hold assemblies on the first and eighth days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.37-38": {
+      "text": "Israelites bring set offerings on each feast day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.39-39": {
+      "text": "Israelites celebrate a feast after gathering the harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.40-41": {
+      "text": "Israelites gather branches and rejoice before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.23.42-44": {
+      "text": "Israelites live in booths to remember leaving Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.1-2": {
+      "text": "Israelites bring pure olive oil for the lamps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.3-4": {
+      "text": "Aaron must tend the lamps every night before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.5-6": {
+      "text": "Israelites bake twelve loaves for the gold table",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Moses, not the Israelites, is commanded to bake the loaves.",
+        "suggestion": "Moses must bake twelve loaves for the gold table"
+      }
+    },
+    "LEV.24.7-9": {
+      "text": "Aaron and his sons eat the bread each Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.10-12": {
+      "text": "A man curses the LORD’s name and is put in custody",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.13-14": {
+      "text": "The LORD orders that the blasphemer be stoned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.15-16": {
+      "text": "Anyone who curses God’s name must die, foreigner or native",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.17-18": {
+      "text": "Killing a man means death; killing an animal means repaying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.19-21": {
+      "text": "Injuries are repaid in the same way: eye for eye",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.24.22-23": {
+      "text": "One law for all; the Israelites stone the blasphemer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a complete sentence because the first clause lacks a verb.",
+        "suggestion": "One law applies to all, and the blasphemer is stoned"
+      }
+    },
+    "LEV.25.1-2": {
+      "text": "The LORD tells Moses the land must keep a Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.3-4": {
+      "text": "The land rests from farming in the seventh year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.5-7": {
+      "text": "In the seventh year all may eat what the land grows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.8-9": {
+      "text": "The Israelites count forty-nine years and sound the horn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.10-10": {
+      "text": "The fiftieth year brings liberty and return to property",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.11-12": {
+      "text": "In the Jubilee year the Israelites must not sow or reap",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.13-14": {
+      "text": "Israelites must not cheat each other in buying and selling",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.15-17": {
+      "text": "Land prices depend on the years left until the Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.18-19": {
+      "text": "Obeying God’s laws brings safety and plenty in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.20-22": {
+      "text": "God promises a sixth-year crop big enough for three years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.23-25": {
+      "text": "The land belongs to God; a relative may redeem sold land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.26-28": {
+      "text": "A man may redeem his sold land or get it back at Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.29-30": {
+      "text": "A house in a walled city can be redeemed for one year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.31-32": {
+      "text": "Village houses can be redeemed; Levites may always redeem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.33-34": {
+      "text": "Levite houses return at Jubilee; pastureland is never sold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.39-41": {
+      "text": "A poor Israelite who sells himself is not made a slave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.42-44": {
+      "text": "Israelites are God’s servants and must not be slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.45-46": {
+      "text": "Israelites may own foreign slaves, not rule brothers harshly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.47-48": {
+      "text": "An Israelite sold to a foreigner may be redeemed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.49-50": {
+      "text": "A relative or the man himself may pay for his redemption",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.51-52": {
+      "text": "The price of redemption depends on the years until Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.25.53-55": {
+      "text": "An Israelite servant goes free in the Year of Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.1-2": {
+      "text": "The Israelites must not make idols and must keep Sabbaths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.3-4": {
+      "text": "God promises rain and good crops if Israelites obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.5-6": {
+      "text": "God promises plenty of food, peace and safety in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.7-8": {
+      "text": "God promises the Israelites victory over enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.9-10": {
+      "text": "God promises many children and his covenant with Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.11-13": {
+      "text": "God promises to live among the Israelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.14-15": {
+      "text": "God warns Israel about refusing to obey his commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.16-17": {
+      "text": "God warns of terror, disease and defeat by enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.18-20": {
+      "text": "God warns of seven times more punishment and no harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.21-22": {
+      "text": "God warns of plagues and wild animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.23-24": {
+      "text": "God will strike Israel seven times for continued hostility",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.25-26": {
+      "text": "God warns of war, plague and hunger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.27-28": {
+      "text": "God will punish Israel in fury, seven times for sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.29-30": {
+      "text": "God will destroy the high places and despise Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.31-33": {
+      "text": "God will ruin the cities and scatter Israel among nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.34-36": {
+      "text": "The land will rest while Israel lives among enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.37-39": {
+      "text": "Israel will flee in fear and perish among enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.40-42": {
+      "text": "God will remember his covenant if Israel confesses sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.43-43": {
+      "text": "Israel will pay for rejecting God’s laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.44-45": {
+      "text": "God will not destroy Israel and will keep his covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.26.46-46": {
+      "text": "These are the laws God gave through Moses at Sinai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.1-2": {
+      "text": "The LORD tells Moses about vows involving people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.3-4": {
+      "text": "Values for vows of men and women aged 20 to 60",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The title is a noun phrase rather than a full sentence statement and does not name who acts.",
+        "suggestion": "The LORD sets values for vows of people aged 20 to 60"
+      }
+    },
+    "LEV.27.5-6": {
+      "text": "Values for vows of people under 20 years old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The title is a noun phrase rather than a full sentence statement and does not name who acts.",
+        "suggestion": "The LORD sets values for vows of people under 20"
+      }
+    },
+    "LEV.27.7-8": {
+      "text": "Values for people over 60 and for the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The title is a noun phrase rather than a full sentence statement and does not name who acts.",
+        "suggestion": "The LORD sets values for older people and the poor"
+      }
+    },
+    "LEV.27.9-10": {
+      "text": "An animal vowed to the LORD is holy and cannot be changed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.11-13": {
+      "text": "The priest values a vowed unclean animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.14-15": {
+      "text": "A man may give his house to the LORD and redeem it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.16-16": {
+      "text": "The value of a field is set by the seed it needs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.17-18": {
+      "text": "The field’s value depends on the Year of Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.19-21": {
+      "text": "A man may redeem his field; if not, priests get it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.22-23": {
+      "text": "A man may give a field he bought to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.24-25": {
+      "text": "The field returns to its original owner in Jubilee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.26-27": {
+      "text": "The firstborn animals belong to the LORD already",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.28-29": {
+      "text": "Things set apart for destruction belong to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "Things devoted to the LORD are not set apart for destruction, and persons set apart for destruction must be put to death.",
+        "suggestion": "Devoted things belong to the LORD and cannot be redeemed"
+      }
+    },
+    "LEV.27.30-31": {
+      "text": "A tenth of the land’s produce belongs to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.32-33": {
+      "text": "Every tenth animal is holy to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LEV.27.34-34": {
+      "text": "These are the commands the LORD gave Moses at Sinai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
