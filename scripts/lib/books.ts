@@ -84,15 +84,23 @@ export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
  * pericope titles (BSB `\s1`); only these have drafts and segment titles.
  */
 export const BOOKS = [
+  "1CO",
   "1TH",
+  "1TI",
+  "2CO",
+  "2TH",
   "2TI",
   "ACT",
   "COL",
+  "EPH",
+  "GAL",
   "GEN",
   "JHN",
   "LUK",
   "MAT",
   "MRK",
+  "PHM",
   "PHP",
+  "ROM",
   "TIT",
 ];

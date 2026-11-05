@@ -1,0 +1,299 @@
+{
+  "language": "en",
+  "book": "1TI",
+  "bible": "bsb-1ti",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904736-O8rRqFVecTlZ0nXnbdLH",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3988,
+      "completionTokens": 3458,
+      "reasoningTokens": 2873,
+      "cost": 0.042556,
+      "ms": 24926
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904761-9K6Vr7Fg4MX5J2VEnWdT",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3847,
+      "completionTokens": 3420,
+      "reasoningTokens": 2879,
+      "cost": 0.041894,
+      "ms": 23139
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904784-o9S4mv1fLSeewjTGB9zw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3155,
+      "completionTokens": 2920,
+      "reasoningTokens": 2393,
+      "cost": 0.01331625,
+      "ms": 23438
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904808-2HbjVZYaSYDhwtR4toqC",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3061,
+      "completionTokens": 7048,
+      "reasoningTokens": 6452,
+      "cost": 0.02872575,
+      "ms": 47958
+    }
+  ],
+  "titles": {
+    "1TI.1.3-4": {
+      "text": "Paul tells Timothy to stop false teaching in Ephesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.1.5-8": {
+      "text": "Paul says the goal is love, but some turn to empty talk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.1.9-11": {
+      "text": "Paul says the law is for the lawless and sinful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.1.12-14": {
+      "text": "Paul thanks Christ Jesus for showing him mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.1.15-17": {
+      "text": "Christ Jesus came to save sinners, even Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.1.18-20": {
+      "text": "Paul charges Timothy to fight well and keep faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.1-4": {
+      "text": "Paul urges believers to pray for everyone, even kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.5-7": {
+      "text": "There is one God and one mediator, Christ Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.8-8": {
+      "text": "Paul wants men everywhere to pray without anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.9-10": {
+      "text": "Paul wants women to dress modestly and do good deeds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.11-12": {
+      "text": "Paul says women must learn quietly, not teach or rule men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.2.13-15": {
+      "text": "Paul points to Adam and Eve and to women’s faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.1-3": {
+      "text": "An overseer must be above reproach and of good character",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.4-5": {
+      "text": "An overseer must manage his own household well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.6-7": {
+      "text": "Overseers must not be new believers and must be respected",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.8-10": {
+      "text": "Deacons must be dignified, honest, and tested first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.11-13": {
+      "text": "The women and deacons must be dignified and faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.14-15": {
+      "text": "Paul writes how believers should act in the church",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.3.16-16": {
+      "text": "Christ appeared in the flesh and was taken up in glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.1-2": {
+      "text": "The Spirit says some will leave the faith in later times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.3-5": {
+      "text": "False teachers forbid marriage and some foods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.6-8": {
+      "text": "Timothy should reject myths and train for godliness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.9-10": {
+      "text": "Paul works hard because he hopes in the living God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.11-13": {
+      "text": "Timothy must be an example for the believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.4.14-16": {
+      "text": "Timothy must use his gift and watch his teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.3-4": {
+      "text": "Children and grandchildren must care for widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.5-6": {
+      "text": "A widow in need hopes in God and prays day and night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.7-8": {
+      "text": "Anyone who does not provide for family denies the faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.9-10": {
+      "text": "Widows over sixty with good deeds may be enrolled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.11-13": {
+      "text": "Timothy should not enroll younger widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.14-16": {
+      "text": "Younger widows should marry and manage a home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.17-18": {
+      "text": "Elders who lead well deserve double honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.19-20": {
+      "text": "Timothy must be careful with accusations against elders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.21-22": {
+      "text": "Paul charges Timothy to be fair and stay pure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.5.23-25": {
+      "text": "Paul tells Timothy to use a little wine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft mentions only the wine in verse 23 and leaves out the teaching on sins and good deeds in verses 24–25.",
+        "suggestion": "Paul advises Timothy on health, sins, and good deeds"
+      }
+    },
+    "1TI.6.6-8": {
+      "text": "Believers should be content with food and clothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.6.9-10": {
+      "text": "Loving money leads people into ruin and sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.6.11-12": {
+      "text": "Timothy must run from evil and pursue godliness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.6.13-14": {
+      "text": "Paul charges Timothy to keep the commandment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1TI.6.15-16": {
+      "text": "Paul praises God, the only King and Lord",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -198,6 +198,14 @@ describe.each([
   "LUK",
   "JHN",
   "ACT",
+  "ROM",
+  "1CO",
+  "2CO",
+  "GAL",
+  "EPH",
+  "2TH",
+  "1TI",
+  "PHM",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -529,6 +537,93 @@ describe.each([
     prompt: "prompts/segment-titles.md",
     drafts: 12,
     checks: 12,
+    batched: true,
+  },
+  {
+    book: "ROM",
+    reused: ["ROM.13.8-10"],
+    drafted: 199,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 6,
+    checks: 6,
+    batched: true,
+  },
+  {
+    book: "1CO",
+    reused: ["1CO.1.1-3", "1CO.9.24-27", "1CO.16.10-12"],
+    drafted: 176,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 6,
+    checks: 6,
+    batched: true,
+  },
+  {
+    book: "2CO",
+    reused: ["2CO.1.1-2"],
+    drafted: 110,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 4,
+    checks: 4,
+    batched: true,
+  },
+  {
+    book: "GAL",
+    reused: [],
+    drafted: 62,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "EPH",
+    reused: ["EPH.1.1-2", "EPH.2.19-22"],
+    drafted: 60,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "2TH",
+    reused: ["2TH.3.16-18"],
+    drafted: 18,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
+    batched: true,
+  },
+  {
+    book: "1TI",
+    reused: [
+      "1TI.1.1-2",
+      "1TI.5.1-2",
+      "1TI.6.1-2",
+      "1TI.6.3-5",
+      "1TI.6.17-19",
+      "1TI.6.20-21",
+    ],
+    drafted: 40,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 2,
+    checks: 2,
+    batched: true,
+  },
+  {
+    book: "PHM",
+    reused: ["PHM.1.1-3", "PHM.1.4-7", "PHM.1.23-25"],
+    drafted: 5,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 1,
+    checks: 1,
     batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
