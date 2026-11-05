@@ -11,7 +11,12 @@ export const SHIPPED_STATUSES: readonly string[] = [
   "human-reviewed",
   "approved",
 ];
-const STATUSES = new Set(["unreviewed", ...SHIPPED_STATUSES]);
+/** Every status a title may have, lowest first (docs/schema.md). */
+export const TITLE_STATUSES: readonly string[] = [
+  "unreviewed",
+  ...SHIPPED_STATUSES,
+];
+const STATUSES = new Set(TITLE_STATUSES);
 
 export type TitleEntries = Record<string, { text: string; status: string }>;
 
