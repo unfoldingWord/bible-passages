@@ -40,8 +40,9 @@ drops. Nothing else in ADR 0005 changes.
   has 1TH, 2TI, COL, GEN, PHP and TIT. In each, every title the checker
   disagreed with has draft status `unreviewed` and none has a `dispute`
   (counted with a Node script on 5 Nov): GEN 40 of 642, PHP 14 of 37,
-  COL 4 of 33, 2TI 4 of 30, 1TH 1 of 31, and TIT 6 of 25, each of which
-  has a person's `review` (`human-reviewed`). 66 − 6 = 60 books remain.
+  COL 4 of 33, 2TI 4 of 30, 1TH 1 of 31, and TIT 6 of 25. The first five
+  books have no person's review. TIT's 6 are the exception: each has a
+  person's `review` (`human-reviewed`). 66 − 6 = 60 books remain.
 - **Unreviewed titles do not reach tC Mobile.** `../schema.md`,
   "`dist/tc-mobile/`": the status floor is `ai-checked`; `unreviewed` titles
   are left out. Observed: `PHP.1.7-8` (disputed, `unreviewed`) is in
