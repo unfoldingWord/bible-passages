@@ -691,7 +691,7 @@ every test run until they exist.
    open: the content team's ruling on the 1,184 places where they and ULT's
    `\ts\*` markers disagree ([scoping/ts-vs-ufw.tsv](scoping/ts-vs-ufw.tsv),
    #4). A ruling for ULT at a place gives it new keys and retires the old
-   ones (decisions/0001).
+   ones ([decisions/0001](decisions/0001-span-keys.md)).
 9. **Consensus check in v0.1**: decided: out
    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 10. **Segment title style**: decided: explanatory comment
