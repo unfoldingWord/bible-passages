@@ -44,17 +44,21 @@ const SPANS: readonly (readonly [string, RegExp])[] = [
 const VERSE_OR_CHAPTER = /\\(c|v)\s+\d/;
 
 /**
- * Drops the `SPANS`, failing on any span that holds a verse or chapter
- * marker: a closer that is missing or out of place would otherwise let the
- * span run on and delete later verses' words without an error (#235).
+ * Drops the `SPANS`. A matched span (opener and a closer after it) that
+ * holds a verse or chapter marker throws: its own closer is missing or out
+ * of place, and the span would otherwise run on to a later closer and
+ * delete the words between without an error (#235). An opener with no
+ * closer after it at all is not matched and stays in the text, where
+ * `verseTexts` fails on it as markup it cannot read.
  */
 function dropSpans(text: string): string {
   let out = text;
   for (const [opener, span] of SPANS) {
     out = out.replace(span, (m) => {
-      if (VERSE_OR_CHAPTER.test(m))
+      const marker = VERSE_OR_CHAPTER.exec(m);
+      if (marker)
         throw new Error(
-          `cannot read a ${opener} span that runs past a verse or chapter marker: "${m.slice(0, 80)}"`
+          `cannot read a ${opener} span that runs past ${marker[0]}: "${m.slice(0, 80)}"`
         );
       return "";
     });

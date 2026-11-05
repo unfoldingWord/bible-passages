@@ -108,19 +108,17 @@ describe("verseTexts", () => {
   it("fails on a footnote, reference or cross-reference that runs past a verse or chapter", () => {
     expect(() =>
       verseTexts("\\c 1\n\\v 1 One,\\fr 1:1 \\ft note\n\\v 2 Two.\\f*")
-    ).toThrow(
-      "cannot read a \\fr span that runs past a verse or chapter marker"
-    );
+    ).toThrow("cannot read a \\fr span that runs past \\v 2");
     expect(() =>
       verseTexts("\\c 1\n\\v 1 One.\\f + \\ft note\n\\c 2\n\\v 1 Two.\\f*")
-    ).toThrow(
-      "cannot read a \\f span that runs past a verse or chapter marker"
-    );
+    ).toThrow("cannot read a \\f span that runs past \\c 2");
     expect(() =>
       verseTexts("\\c 1\n\\v 1 One.\\x - \\xo 1:1 \\xt Gen 1:1\n\\v 2 Two.\\x*")
-    ).toThrow(
-      "cannot read a \\x span that runs past a verse or chapter marker"
-    );
+    ).toThrow("cannot read a \\x span that runs past \\v 2");
+    // An opener with no closer after it is left for the markup check.
+    expect(() =>
+      verseTexts("\\c 1\n\\v 1 One.\\f + \\ft note\n\\v 2 Two.")
+    ).toThrow("cannot read verse 1:1");
   });
 
   it("keeps a verse the text numbers but leaves blank as an empty string", () => {
