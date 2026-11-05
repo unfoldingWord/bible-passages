@@ -12,8 +12,9 @@ the transport for one role. The English run for v0.1.0 stays on OpenRouter
 decision; implementation, if chosen, is a separate PR.
 
 In one line: the `claude` CLI sends our prompt and input unchanged, adds a
-fixed 1,314 tokens of its own, and gave drafts whose numbers fall inside
-OpenRouter's own run-to-run spread. The `codex` CLI cannot reach the third
+fixed 1,314 tokens of its own, and gave drafts whose disagreement counts
+fall inside the range the checker alone produces, but whose lengths and
+pronoun counts reach past the two OpenRouter drafts. The `codex` CLI cannot reach the third
 model we use (`gpt-6.1-sol`), and adds 8,478 tokens of its own that cannot
 be removed.
 
@@ -114,10 +115,13 @@ What this shows, and what it does not:
   instead of 1. Ten were `plain`, a pronoun with no antecedent; the committed
   check flagged none of the 12 pronoun titles. So the committed record's
   "1 disagreement" is one draw, not a baseline.
-- **Every CLI number falls inside the OpenRouter spread.** Disagreements: CLI
-  3 to 9, OpenRouter 1 to 11 (counting c1). Mean length: CLI 48.5 to 51.6,
-  OpenRouter 48.9 to 50.0. Max length 56 to 58, all under the 60 limit; no
-  gate failure in any run. Pronoun titles: CLI 7 to 12, OpenRouter 11 to 12.
+- **Disagreements overlap; the other numbers do not all fit.** Disagreements:
+  CLI 3 to 9, inside OpenRouter's 1 to 11 only when c1 (a recheck, not a
+  fresh draft) counts; a1's 9 is above both fresh OpenRouter drafts (1 and
+  6). Mean length: CLI 48.5 to 51.6, past OpenRouter's 48.9 to 50.0 at both
+  ends. Max length: CLI 56 to 58, OpenRouter 57; all under the 60 limit, and
+  no gate failure in any run. Pronoun titles: CLI 7 to 12, OpenRouter 11 to
+  12, so two CLI runs fall below it.
 - **Not shown:** that the CLI changes nothing. Three CLI runs and two
   OpenRouter drafts are too few to see a small shift: the one
   OpenRouter-to-OpenRouter pair shares 9 titles, above every pair that
@@ -174,6 +178,10 @@ for a1; a2 and a3 read 6,827 from the CLI's own one-hour prompt cache).
     -c 'web_search="disabled"' -c project_doc_max_bytes=0 \
     -c 'developer_instructions="<dispute prompt>"' -
   ```
+
+  These flags (`--ignore-rules`, `--skip-git-repo-check` among them) were
+  for a throwaway measurement from an empty directory; they are not a
+  production recipe.
 
 - What reached the model, read from Codex's session file: our prompt is the
   first developer block byte for byte (SHA-256 equals `disputePrompt(…)`),
@@ -261,8 +269,11 @@ A sketch for the separate PR, if one is chosen; not built here.
   includes the 1,314 added tokens; a `harnessTokens` field, or a note in the
   schema, keeps it comparable with OpenRouter calls.
 - `cost`: `null` is "unknown" today and stops the fuse. A subscription call
-  needs its own value (for example `cost: 0` with `billing: "subscription"`
-  and the CLI's `listCost` kept beside it), and the fuse a rule for it.
+  keeps `cost` as `null` or the list price, never `0` (a `0` is a known cost
+  the fuse would let through without limit), marks `billing: "subscription"`
+  and keeps the CLI's `listCost` beside it. The fuse then needs its own
+  subscription budget (a call count or a list-price ceiling) before a
+  `via: claude-cli` call may run.
 - `ms`: wall time of the CLI process, as measured here.
 
 ## Spend
@@ -272,12 +283,17 @@ Python script and again by `jq` over the run records): **$0.315362** in 12
 calls, under the lane's $0.50 cap. o1's draft $0.051020; checks a1
 $0.038093, a2 $0.019523, a3 $0.022478, o1 $0.067457, c1 $0.034743; rechecks
 (1 Thessalonians, Colossians, 2 Timothy) run 1 $0.002367, $0.033392,
-$0.018464 and run 2 $0.005085, $0.009577, $0.013166. The key's total usage
+$0.018464 and run 2 $0.005085, $0.009577, $0.013166. These twelve figures
+as printed sum to $0.315365, $0.000003 above the total; the printed figures
+are rounded to six places (inference: the residual is within that rounding;
+the ledgers are not in the repo to confirm). The key's total usage
 is shared with the English run going on at the same time, so it was not used
 to measure this lane.
 
 Claude subscription: 3 draft calls, about 10 short test calls; the CLI's
-list-price figure for the three drafts is $0.180291 (not billed). Codex
+list-price figure for the three drafts is $0.180291 (not billed); the three
+per-call figures in the Calls table sum to $0.180292 as printed (the same
+rounding inference). Codex
 subscription: 6 third-check calls and 5 short test calls; no cost
 reported.
 
@@ -285,8 +301,9 @@ reported.
 
 1. **Claude CLI for translation: possible, after a person settles the terms
    (question 1) and with one more measured book.** The prompt and input
-   arrive unchanged, and the drafts' numbers sit inside OpenRouter's own
-   spread. But the CLI adds 1,314 tokens of its own that include the
+   arrive unchanged, and the drafts' disagreement counts sit inside the
+   range the checker alone produces, though their lengths and pronoun counts
+   reach past the two OpenRouter drafts. And the CLI adds 1,314 tokens of its own that include the
    account's email address and the date, runs at a different effort and
    temperature, and reports no billed cost. Before a whole translation run,
    translate one book both ways (OpenRouter and the CLI, same prompt) and
