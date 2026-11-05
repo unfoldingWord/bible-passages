@@ -1,0 +1,443 @@
+{
+  "language": "en",
+  "book": "GAL",
+  "bible": "bsb-gal",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904422-FV3VQVhgWHrh7gTlCDHi",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5606,
+      "completionTokens": 3935,
+      "reasoningTokens": 3057,
+      "cost": 0.050562,
+      "ms": 24946
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793904447-6GI1vHghJI3mvU40bSS1",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5296,
+      "completionTokens": 5102,
+      "reasoningTokens": 4198,
+      "cost": 0.061612,
+      "ms": 32467
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904480-WrCd8GZVeXSYfShrJW0x",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4601,
+      "completionTokens": 6217,
+      "reasoningTokens": 5363,
+      "cost": 0.0267645,
+      "ms": 47009
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904527-CDuTQWFj5jpAUHMC9ny5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4479,
+      "completionTokens": 20544,
+      "reasoningTokens": 19647,
+      "cost": 0.08039925,
+      "ms": 130694
+    }
+  ],
+  "titles": {
+    "GAL.1.1-2": {
+      "text": "Paul writes to the churches of Galatia",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.3-5": {
+      "text": "Christ gave himself for our sins to rescue us",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.6-7": {
+      "text": "Paul is amazed that the Galatians turn to another gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.8-9": {
+      "text": "Anyone who preaches a different gospel is under a curse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.10-10": {
+      "text": "Paul wants to please God, not people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.11-12": {
+      "text": "Paul received the gospel from Jesus Christ, not from men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.13-14": {
+      "text": "Paul once persecuted the church of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.15-17": {
+      "text": "God called Paul to preach to the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.18-20": {
+      "text": "Paul visits Cephas in Jerusalem for fifteen days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.1.21-24": {
+      "text": "The churches of Judea praise God because of Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.1-2": {
+      "text": "Paul goes to Jerusalem and tells the leaders the gospel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.3-5": {
+      "text": "Titus is not forced to be circumcised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.6-8": {
+      "text": "The leaders accept Paul’s work among the Gentiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.9-10": {
+      "text": "James, Cephas and John welcome Paul and Barnabas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.11-12": {
+      "text": "Paul opposes Cephas for avoiding Gentile believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.13-14": {
+      "text": "Paul corrects Cephas in front of everyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.15-16": {
+      "text": "People are made right by faith in Christ, not by the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.17-19": {
+      "text": "Paul says Christ does not make believers sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.2.20-21": {
+      "text": "Paul lives by faith in the Son of God who loved him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.1-3": {
+      "text": "Paul asks the Galatians if the law brought the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.4-5": {
+      "text": "Paul asks if God works miracles by law or by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.6-9": {
+      "text": "Those who have faith are sons of Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.10-12": {
+      "text": "The law brings a curse; the righteous live by faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.13-14": {
+      "text": "Christ freed us from the curse of the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.15-16": {
+      "text": "God’s promise to Abraham cannot be canceled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It misses verse 16, which explains that God’s promises were spoken to Abraham and to Christ.",
+        "suggestion": "God’s promises were made to Abraham and to Christ"
+      }
+    },
+    "GAL.3.17-18": {
+      "text": "The law does not cancel God’s promise to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.19-20": {
+      "text": "Paul explains why God gave the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.21-22": {
+      "text": "The law does not oppose God’s promises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.23-25": {
+      "text": "The law was a guardian until faith came",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.26-26": {
+      "text": "All believers are sons of God through faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.3.27-29": {
+      "text": "All believers are one in Christ and heirs of Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.1-2": {
+      "text": "An heir who is a child is like a slave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.3-5": {
+      "text": "God sent his Son to redeem people under the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.6-7": {
+      "text": "God’s Spirit makes believers sons and heirs, not slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "God sent the Spirit because believers are already sons, not to make them sons.",
+        "suggestion": "Believers are sons and heirs of God, no longer slaves"
+      }
+    },
+    "GAL.4.8-9": {
+      "text": "Paul asks why the Galatians want to be slaves again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.10-11": {
+      "text": "Paul fears for the Galatians who keep special days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.12-14": {
+      "text": "The Galatians welcomed Paul like an angel of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.15-16": {
+      "text": "Paul asks if the truth made him the Galatians’ enemy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.17-18": {
+      "text": "False teachers want to separate the Galatians from Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.19-20": {
+      "text": "Paul longs to be with the Galatians, his children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.21-23": {
+      "text": "Abraham had two sons, by a slave woman and a free woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.24-25": {
+      "text": "Hagar stands for the covenant of Mount Sinai and slavery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.26-27": {
+      "text": "The Jerusalem above is free and is our mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.28-29": {
+      "text": "Believers are children of promise, like Isaac",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.4.30-31": {
+      "text": "Believers are children of the free woman, not the slave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.1-2": {
+      "text": "Paul urges believers to stand firm in freedom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.3-4": {
+      "text": "Men who are circumcised must obey the whole law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.5-8": {
+      "text": "Faith working through love matters, not circumcision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.9-10": {
+      "text": "Whoever troubles the Galatians will bear judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.11-12": {
+      "text": "Paul is persecuted because he does not preach circumcision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.13-15": {
+      "text": "Believers should use freedom to serve one another in love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.16-18": {
+      "text": "Believers should walk by the Spirit, not the flesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.19-21": {
+      "text": "Paul lists the acts of the flesh and warns believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.5.22-24": {
+      "text": "The fruit of the Spirit is love, joy, peace, and more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “and more” is an informal idiom not found in the text.",
+        "suggestion": "The Spirit produces fruit in those who belong to Christ"
+      }
+    },
+    "GAL.5.25-26": {
+      "text": "Believers should walk with the Spirit and not be proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.1-2": {
+      "text": "Believers should gently restore someone caught in sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.3-5": {
+      "text": "Each believer should test his own work and carry his load",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.6-8": {
+      "text": "A person reaps what he sows, from flesh or Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.9-10": {
+      "text": "Believers should not grow tired of doing good to all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.11-13": {
+      "text": "Some people force circumcision to avoid persecution",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.14-16": {
+      "text": "Paul boasts only in the cross; a new creation counts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "GAL.6.17-18": {
+      "text": "Paul bears Jesus’ marks and blesses the believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

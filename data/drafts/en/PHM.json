@@ -1,0 +1,63 @@
+{
+  "language": "en",
+  "book": "PHM",
+  "bible": "bsb-phm",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904857-Lju7xgX9TQWHMHhHQg5i",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 1773,
+      "completionTokens": 959,
+      "reasoningTokens": 786,
+      "cost": 0.013136,
+      "ms": 7089
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904864-IOeZfjSShpUkAPIhxl2s",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 1235,
+      "completionTokens": 1132,
+      "reasoningTokens": 996,
+      "cost": 0.00517125,
+      "ms": 7086
+    }
+  ],
+  "titles": {
+    "PHM.1.8-9": {
+      "text": "Paul appeals to Philemon in love instead of giving orders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PHM.1.10-13": {
+      "text": "Paul sends Onesimus, now useful, back to Philemon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PHM.1.14-16": {
+      "text": "Paul wants Philemon to receive Onesimus as a brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PHM.1.17-20": {
+      "text": "Paul asks Philemon to welcome Onesimus and promises to pay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PHM.1.21-22": {
+      "text": "Paul trusts Philemon and asks him to prepare a guest room",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -83,4 +83,19 @@ export const STRUCTURE_BOOKS: readonly string[] = ALL_BOOKS.map(([b]) => b);
  * the next (AGENTS.md). Every book has its structure, its book name and its
  * pericope titles (BSB `\s1`); only these have drafts and segment titles.
  */
-export const BOOKS = ["1TH", "2TI", "COL", "GEN", "PHP", "TIT"];
+export const BOOKS = [
+  "1CO",
+  "1TH",
+  "1TI",
+  "2CO",
+  "2TH",
+  "2TI",
+  "COL",
+  "EPH",
+  "GAL",
+  "GEN",
+  "PHM",
+  "PHP",
+  "ROM",
+  "TIT",
+];

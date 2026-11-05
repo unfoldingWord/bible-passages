@@ -1,0 +1,141 @@
+{
+  "language": "en",
+  "book": "2TH",
+  "bible": "bsb-2th",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793904665-PMtZf6QuXD7tkr3jUb1B",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3694,
+      "completionTokens": 2588,
+      "reasoningTokens": 2079,
+      "cost": 0.033268,
+      "ms": 17845
+    },
+    {
+      "role": "check",
+      "id": "gen-1793904683-3aUmcsJctRxD8gou2oO8",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 2888,
+      "completionTokens": 10904,
+      "reasoningTokens": 10437,
+      "cost": 0.043056,
+      "ms": 52205
+    }
+  ],
+  "titles": {
+    "2TH.1.1-2": {
+      "text": "Paul greets the church in Thessalonica",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.1.3-4": {
+      "text": "Paul thanks God for the Thessalonians’ faith and love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.1.5-5": {
+      "text": "Believers’ suffering shows God’s judgment is right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.1.6-8": {
+      "text": "Jesus will punish those who hurt believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.1.9-10": {
+      "text": "Those who reject God will be destroyed when Jesus comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.1.11-12": {
+      "text": "Paul prays that God will count believers worthy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.1-2": {
+      "text": "Believers should not think the Lord’s Day has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.3-4": {
+      "text": "The man of lawlessness will come before the Lord’s Day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.5-7": {
+      "text": "Paul reminds believers what holds back lawlessness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.8-10": {
+      "text": "Jesus will destroy the lawless one when he comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.11-12": {
+      "text": "God sends a delusion on those who reject the truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.13-15": {
+      "text": "Believers are chosen by God and must stand firm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.2.16-17": {
+      "text": "Paul prays that God will encourage the believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.3.1-3": {
+      "text": "Paul asks believers to pray for his work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.3.4-5": {
+      "text": "Paul is confident that believers will obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.3.6-9": {
+      "text": "Believers must avoid idle brothers and imitate Paul",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.3.10-12": {
+      "text": "Paul tells idle believers to work quietly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2TH.3.13-15": {
+      "text": "Believers should keep doing good and warn the disobedient",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
