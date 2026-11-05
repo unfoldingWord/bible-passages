@@ -29,6 +29,39 @@ export type Criterion = (typeof CRITERIA)[number];
 // (`\qa BETH`, which BSB puts inside the previous verse's run; #226).
 const SKIP = /^\\(id|usfm|ide|h|toc\d|mt\d?|ms\d?|mr|s\d?|r|d|sp|cl|qa)(\s|$)/;
 
+// Spans dropped whole, each from its opener to the first closer after it, in
+// this order: footnotes, then a stray footnote reference, then
+// cross-references. Joshua 12:23 closes a footnote before its text
+// (`\f + \f*\fr 12:23 \ft …\f*`): the footnote span drops the empty
+// `\f + \f*`, the `\fr` span the stray reference and text after it (#226).
+const SPANS: readonly (readonly [string, RegExp])[] = [
+  ["\\f", /\\f\s.*?\\f\*/gs],
+  ["\\fr", /\\fr\s.*?\\f\*/gs],
+  ["\\x", /\\x\s.*?\\x\*/gs],
+];
+
+// A verse or chapter marker, as `verseTexts` reads them.
+const VERSE_OR_CHAPTER = /\\(c|v)\s+\d/;
+
+/**
+ * Drops the `SPANS`, failing on any span that holds a verse or chapter
+ * marker: a closer that is missing or out of place would otherwise let the
+ * span run on and delete later verses' words without an error (#235).
+ */
+function dropSpans(text: string): string {
+  let out = text;
+  for (const [opener, span] of SPANS) {
+    out = out.replace(span, (m) => {
+      if (VERSE_OR_CHAPTER.test(m))
+        throw new Error(
+          `cannot read a ${opener} span that runs past a verse or chapter marker: "${m.slice(0, 80)}"`
+        );
+      return "";
+    });
+  }
+  return out;
+}
+
 /**
  * Each verse's text, keyed `<chapter>:<verse>`, from a BSB USFM file:
  * alignment, word and paragraph markers removed, footnotes and headings
@@ -42,16 +75,12 @@ const SKIP = /^\\(id|usfm|ide|h|toc\d|mt\d?|ms\d?|mr|s\d?|r|d|sp|cl|qa)(\s|$)/;
  * verse the file does not have (#226).
  */
 export function verseTexts(usfm: string): Map<string, string> {
-  const body = usfm
-    .split(/\r?\n/)
-    .filter((line) => !SKIP.test(line))
-    .join("\n")
-    .replace(/\\f\s.*?\\f\*/gs, "")
-    // Joshua 12:23 closes a footnote before its text: `\f + \f*\fr 12:23
-    // \ft …\f*`. The line above drops the empty `\f + \f*`; this drops
-    // the stray reference and text after it (#226).
-    .replace(/\\fr\s.*?\\f\*/gs, "")
-    .replace(/\\x\s.*?\\x\*/gs, "")
+  const body = dropSpans(
+    usfm
+      .split(/\r?\n/)
+      .filter((line) => !SKIP.test(line))
+      .join("\n")
+  )
     .replace(/\\zaln-s\s[^\\]*\\\*/g, "")
     .replace(/\\zaln-e\\\*/g, "")
     .replace(/\\w\s+([^|\\]*)(\|[^\\]*)?\\w\*/g, "$1")

@@ -103,6 +103,26 @@ describe("verseTexts", () => {
     expect([...verseTexts(usfm)]).toEqual([["12:23", "Gilgal, one;"]]);
   });
 
+  // #235: a span whose closer is missing or misplaced must not run on and
+  // delete the next verse's words without an error.
+  it("fails on a footnote, reference or cross-reference that runs past a verse or chapter", () => {
+    expect(() =>
+      verseTexts("\\c 1\n\\v 1 One,\\fr 1:1 \\ft note\n\\v 2 Two.\\f*")
+    ).toThrow(
+      "cannot read a \\fr span that runs past a verse or chapter marker"
+    );
+    expect(() =>
+      verseTexts("\\c 1\n\\v 1 One.\\f + \\ft note\n\\c 2\n\\v 1 Two.\\f*")
+    ).toThrow(
+      "cannot read a \\f span that runs past a verse or chapter marker"
+    );
+    expect(() =>
+      verseTexts("\\c 1\n\\v 1 One.\\x - \\xo 1:1 \\xt Gen 1:1\n\\v 2 Two.\\x*")
+    ).toThrow(
+      "cannot read a \\x span that runs past a verse or chapter marker"
+    );
+  });
+
   it("keeps a verse the text numbers but leaves blank as an empty string", () => {
     const usfm =
       "\\c 17\n\\v 20 \\w Faith|x=1\\w*.\\f + \\fr 17:20 \\ft BYZ and TR include 21\\f*\n\\s1 Heading\n\\m\n\\v 21 \n\\v 22 \\w Next|x=1\\w*.";
@@ -150,6 +170,11 @@ describe("verseTexts", () => {
     const missing: string[] = [];
     const extra: string[] = [];
     const blank: string[] = [];
+    const texts: Record<string, string | undefined> = {
+      "PSA 3:2": undefined,
+      "JOS 12:23": undefined,
+      "PSA 1:1": undefined,
+    };
     let total = 0;
     for (const book of books) {
       const v = verseTexts(await readSource(`bsb-${book.toLowerCase()}`));
@@ -159,6 +184,10 @@ describe("verseTexts", () => {
         )
       );
       total += v.size;
+      for (const k of Object.keys(texts)) {
+        const [b, ref] = k.split(" ");
+        if (b === book) texts[k] = v.get(ref!);
+      }
       for (const k of want) if (!v.has(k)) missing.push(`${book} ${k}`);
       for (const [k, t] of v) {
         if (!want.has(k)) extra.push(`${book} ${k}`);
@@ -167,6 +196,16 @@ describe("verseTexts", () => {
     }
     expect({ missing, extra }).toEqual({ missing: [], extra: [] });
     expect(total).toBe(31104);
+    // Exact text for each repair #226 made (#235), transcribed from the
+    // pinned files' raw USFM, not from verseTexts: a `\qr` line, the
+    // footnote closed before its text, and a psalm with no `\v 1`.
+    expect(texts).toEqual({
+      "PSA 3:2": "Many say of me, “God will not deliver him.” Selah",
+      "JOS 12:23":
+        "the king of Dor in Naphath-dor, one; the king of Goiim in Gilgal, one;",
+      "PSA 1:1":
+        "Blessed is the man who does not walk in the counsel of the wicked, or set foot on the path of sinners, or sit in the seat of mockers.",
+    });
     expect(blank).toEqual([
       "MAT 17:21",
       "MAT 18:11",
