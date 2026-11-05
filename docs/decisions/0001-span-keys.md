@@ -77,7 +77,8 @@ successor. Merge and move-back write no copy.
 So no reviewed title is silently dropped or silently chosen over another.
 
 The chunk source (open decision 8) must be settled before the first release, because changing it
-later retires thousands of keys.
+later retires thousands of keys. Settled for v0.1.0 on 2026-11-05: the UFW
+chunk files ([ADR 0007](0007-v0.1.0-keys-on-ufw-chunks.md)).
 
 ## Rejected
 

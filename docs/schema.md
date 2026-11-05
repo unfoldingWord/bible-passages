@@ -687,7 +687,9 @@ every test run until they exist.
 ## Open decisions
 
 1. **v0.1 scope**: decided: a gated subset
-   ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+   ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)). v0.1.0 is
+   English only; the other languages follow in v0.1.x
+   ([decisions/0006](decisions/0006-v0.1.0-english-only.md)).
 2. **Pericope source**: decided: BSB `\s1` headings
    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 3. **Keys**: decided: span keys. See
@@ -703,9 +705,12 @@ every test run until they exist.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
    writes back (a PR per change, never a push to `main`) are open.
-8. **Authoritative chunk source**: the UFW chunk files or ULT's `\ts\*`
-   markers. They disagree at 1,184 places
-   ([scoping/ts-vs-ufw.tsv](scoping/ts-vs-ufw.tsv)). The content team's call.
+8. **Authoritative chunk source**: decided for v0.1.0: the UFW chunk files
+   ([decisions/0007](decisions/0007-v0.1.0-keys-on-ufw-chunks.md)). Still
+   open: the content team's ruling on the 1,184 places where they and ULT's
+   `\ts\*` markers disagree ([scoping/ts-vs-ufw.tsv](scoping/ts-vs-ufw.tsv),
+   #4). A ruling for ULT at a place gives it new keys and retires the old
+   ones ([decisions/0001](decisions/0001-span-keys.md)).
 9. **Consensus check in v0.1**: decided: out
    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 10. **Segment title style**: decided: explanatory comment
