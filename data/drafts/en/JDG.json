@@ -1,0 +1,2089 @@
+{
+  "language": "en",
+  "book": "JDG",
+  "bible": "bsb-jdg",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905088-12NqdvAGjoDovW4Aet1x",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6633,
+      "completionTokens": 6198,
+      "reasoningTokens": 5118,
+      "cost": 0.075246,
+      "ms": 36726
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905125-qY1gYB5AONz0vBJVHgn3",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6003,
+      "completionTokens": 3365,
+      "reasoningTokens": 2317,
+      "cost": 0.045656,
+      "ms": 21246
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905146-HPlYTmBcLb8ANq1HN8pk",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6250,
+      "completionTokens": 7181,
+      "reasoningTokens": 6141,
+      "cost": 0.08431,
+      "ms": 46090
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905192-g96rHj3UcSyKBj7oh2Aa",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6547,
+      "completionTokens": 5401,
+      "reasoningTokens": 4352,
+      "cost": 0.067104,
+      "ms": 33026
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905225-UpzQYkditkX52nGxS3Um",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6802,
+      "completionTokens": 6636,
+      "reasoningTokens": 5535,
+      "cost": 0.079964,
+      "ms": 39824
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905265-MXzeOYmCGxXgNF5YH2Mq",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6420,
+      "completionTokens": 1025,
+      "reasoningTokens": 0,
+      "cost": 0.02309,
+      "ms": 6523
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905271-zkha99HbigRn2Y89fdUc",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6555,
+      "completionTokens": 5960,
+      "reasoningTokens": 4838,
+      "cost": 0.07271,
+      "ms": 34019
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905305-5VodKtVxTApKLI2FEwsC",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6313,
+      "completionTokens": 5909,
+      "reasoningTokens": 4938,
+      "cost": 0.071716,
+      "ms": 36709
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905342-dSYrfVWuZ2jmhGRtANio",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5882,
+      "completionTokens": 6305,
+      "reasoningTokens": 5311,
+      "cost": 0.074814,
+      "ms": 40055
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905382-yOELjJY6SwvtdzvVfkV6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5422,
+      "completionTokens": 6450,
+      "reasoningTokens": 5495,
+      "cost": 0.028254,
+      "ms": 46116
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905428-OAFo0xhALyiplb6xXTxL",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4989,
+      "completionTokens": 12122,
+      "reasoningTokens": 11047,
+      "cost": 0.04919925,
+      "ms": 65870
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905494-M0FaHEb40hnNJSjroZsk",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5226,
+      "completionTokens": 5635,
+      "reasoningTokens": 4729,
+      "cost": 0.02505075,
+      "ms": 40021
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905534-wRIFoK6VNC3pQhn68UgX",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5432,
+      "completionTokens": 9387,
+      "reasoningTokens": 8345,
+      "cost": 0.03927525,
+      "ms": 66857
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905601-LW1iWqJAW9tIcArnqDA8",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5763,
+      "completionTokens": 21704,
+      "reasoningTokens": 20572,
+      "cost": 0.08571225,
+      "ms": 128718
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905730-APZd6KJLyo0Dl07S8WNA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5522,
+      "completionTokens": 7743,
+      "reasoningTokens": 6749,
+      "cost": 0.03317775,
+      "ms": 39622
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905770-TqjxvzxIakR9Qu65vJaZ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5660,
+      "completionTokens": 10435,
+      "reasoningTokens": 9445,
+      "cost": 0.04337625,
+      "ms": 49149
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905819-nDFzIoMKCjRNnJK4fazT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5530,
+      "completionTokens": 6833,
+      "reasoningTokens": 5870,
+      "cost": 0.02977125,
+      "ms": 39337
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905858-OdURm7Nsfq34JEMO7Uwu",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5012,
+      "completionTokens": 6053,
+      "reasoningTokens": 5128,
+      "cost": 0.02645775,
+      "ms": 35083
+    }
+  ],
+  "titles": {
+    "JDG.1.1-3": {
+      "text": "Judah and Simeon agree to fight the Canaanites together",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.4-5": {
+      "text": "The LORD helps Judah defeat the Canaanites at Bezek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.6-7": {
+      "text": "Judah captures Adoni-bezek, who dies in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.8-10": {
+      "text": "Judah captures Jerusalem and fights at Hebron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.11-13": {
+      "text": "Othniel captures Debir and marries Caleb’s daughter Acsah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.14-15": {
+      "text": "Acsah asks her father Caleb for springs of water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.16-17": {
+      "text": "Kenites join Judah; Judah and Simeon destroy Zephath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.18-19": {
+      "text": "Judah takes the hill country but not the plains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.20-21": {
+      "text": "Caleb gets Hebron; Benjamites cannot drive out Jebusites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.22-24": {
+      "text": "The house of Joseph attacks Bethel and sends spies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.25-26": {
+      "text": "Joseph’s men destroy Bethel but free the helpful man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.27-28": {
+      "text": "Manasseh fails to drive out the Canaanites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.29-29": {
+      "text": "Ephraim fails to drive out the Canaanites in Gezer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.30-30": {
+      "text": "Zebulun fails to drive out the people of Kitron and Nahalol",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.31-32": {
+      "text": "Asher fails to drive out the people of seven towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.33-33": {
+      "text": "Naphtali lives among the Canaanites of Beth-shemesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.1.34-36": {
+      "text": "The Amorites push the Danites into the hill country",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.1-2": {
+      "text": "The angel of the LORD says Israel has not obeyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.3-5": {
+      "text": "The LORD will not drive out the nations; Israel weeps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.6-8": {
+      "text": "Israel serves the LORD during Joshua’s life; Joshua dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.9-9": {
+      "text": "Israel buries Joshua at Timnath-heres",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.10-10": {
+      "text": "A new generation rises that does not know the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.11-13": {
+      "text": "Israel leaves the LORD and serves Baal and Ashtoreths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.14-15": {
+      "text": "The LORD is angry and lets enemies overpower Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.16-17": {
+      "text": "The LORD raises up judges, but Israel does not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.18-19": {
+      "text": "Israel turns back to evil when each judge dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.2.20-23": {
+      "text": "The LORD will leave the nations to test Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.1-3": {
+      "text": "The nations left in Canaan to teach Israel war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "The LORD leaves nations in Canaan to teach Israel war"
+      }
+    },
+    "JDG.3.4-6": {
+      "text": "Israel marries people of the land and serves other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.7-8": {
+      "text": "Israel forgets the LORD and serves King Cushan-rishathaim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.9-11": {
+      "text": "The LORD raises up Othniel to save Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.12-14": {
+      "text": "Eglon king of Moab rules Israel for eighteen years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.15-15": {
+      "text": "The LORD raises up Ehud, who brings tribute to Eglon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.16-18": {
+      "text": "Ehud makes a sword and brings tribute to Eglon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.19-20": {
+      "text": "Ehud tells King Eglon he has a secret message",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.21-23": {
+      "text": "Ehud kills King Eglon and locks the doors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.24-25": {
+      "text": "Eglon’s servants find the king dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.26-27": {
+      "text": "Ehud escapes and blows the ram’s horn in Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.3.28-30": {
+      "text": "Israel defeats Moab and has rest for eighty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.1-3": {
+      "text": "Jabin of Canaan oppresses the Israelites for twenty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.4-5": {
+      "text": "Deborah the prophetess judges Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.6-7": {
+      "text": "Deborah tells Barak to lead ten thousand men to Tabor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.8-9": {
+      "text": "Barak will go only if Deborah goes with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.10-10": {
+      "text": "Barak calls men from Zebulun and Naphtali",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.11-11": {
+      "text": "Heber the Kenite pitches his tent near Kedesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.12-13": {
+      "text": "Sisera hears about Barak and gathers his chariots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.14-14": {
+      "text": "Barak goes down from Mount Tabor to fight Sisera",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.15-16": {
+      "text": "The LORD defeats Sisera’s army before Barak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.17-18": {
+      "text": "Sisera flees to Jael’s tent and Jael welcomes him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.19-20": {
+      "text": "Sisera asks Jael for water and to watch the entrance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.4.21-22": {
+      "text": "Jael kills Sisera with a tent peg",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft only describes verse 21 and leaves out Barak finding Sisera dead in verse 22.",
+        "suggestion": "Jael kills Sisera and shows him dead to Barak"
+      }
+    },
+    "JDG.4.23-24": {
+      "text": "God subdues Jabin before the Israelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.1-2": {
+      "text": "Deborah and Barak begin to sing to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.3-4": {
+      "text": "Deborah sings praise to the LORD, God of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.5-6": {
+      "text": "The mountains shake before the LORD; roads are empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.7-8": {
+      "text": "Deborah arises when Israel chooses new gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says war came when Israel chose new gods, not that Deborah arose then.",
+        "suggestion": "Deborah arises after war comes to Israel"
+      }
+    },
+    "JDG.5.9-10": {
+      "text": "Deborah praises the volunteers and blesses the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.11-11": {
+      "text": "The singers tell of the LORD’s righteous acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.12-13": {
+      "text": "Deborah and Barak are called to arise and sing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.14-14": {
+      "text": "Tribes of Ephraim, Benjamin, Machir and Zebulun join",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.15-15": {
+      "text": "Issachar joins Barak, but Reuben cannot decide",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.16-16": {
+      "text": "Reuben stays with the sheep and does not help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.17-18": {
+      "text": "Some tribes stay away, but Zebulun and Naphtali fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.19-20": {
+      "text": "The kings of Canaan fight, and the stars fight Sisera",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.21-22": {
+      "text": "The River Kishon sweeps away Sisera’s army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.23-23": {
+      "text": "The angel of the LORD curses Meroz for not helping",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.24-25": {
+      "text": "Deborah blesses Jael for giving Sisera milk and curds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text does not say Jael is blessed for giving Sisera milk and curds.",
+        "suggestion": "Jael is blessed and gives Sisera milk and curds"
+      }
+    },
+    "JDG.5.26-27": {
+      "text": "Jael strikes Sisera and he falls dead at her feet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.28-28": {
+      "text": "Sisera’s mother wonders why his chariot is late",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.29-30": {
+      "text": "Sisera’s mother tells herself the army is taking spoil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.5.31-31": {
+      "text": "The song ends and the land rests for forty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.1-2": {
+      "text": "Israel does evil and hides from Midian in the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.3-4": {
+      "text": "Midian and others destroy Israel’s crops and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.5-6": {
+      "text": "Midian comes like locusts and Israel cries to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.7-8": {
+      "text": "God sends a prophet who reminds Israel of Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.9-10": {
+      "text": "The prophet says Israel did not obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.11-12": {
+      "text": "The LORD’s angel greets Gideon as a mighty man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.13-13": {
+      "text": "Gideon asks why the LORD has forsaken Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.14-15": {
+      "text": "The LORD tells Gideon to save Israel from Midian",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.16-18": {
+      "text": "The LORD promises to be with Gideon who asks for a sign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.19-20": {
+      "text": "Gideon prepares a meal and puts it on the rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.21-21": {
+      "text": "Fire burns Gideon’s offering and the angel vanishes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.22-24": {
+      "text": "Gideon fears he will die, but the LORD gives him peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.25-26": {
+      "text": "The LORD tells Gideon to destroy Baal’s altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.27-27": {
+      "text": "Gideon destroys the altar at night because he is afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.28-29": {
+      "text": "The city men learn that Gideon tore down the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.30-30": {
+      "text": "The city men tell Joash to bring out Gideon to die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.31-32": {
+      "text": "Joash defends Gideon and Gideon gets the name Jerubbaal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.33-33": {
+      "text": "Midian and other armies camp in the Valley of Jezreel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.34-35": {
+      "text": "The Spirit of the LORD comes on Gideon, who gathers men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.36-37": {
+      "text": "Gideon asks God for a sign with a wool fleece",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.38-38": {
+      "text": "God makes dew fall only on the fleece",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.6.39-40": {
+      "text": "Gideon asks for a second sign, and the fleece stays dry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.1-1": {
+      "text": "Gideon’s army camps at the spring of Harod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.2-3": {
+      "text": "The LORD says the army is too big, and many go home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.4-4": {
+      "text": "The LORD tells Gideon to bring the men to the water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.5-6": {
+      "text": "The LORD chooses three hundred men who lap water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.7-8": {
+      "text": "Gideon keeps three hundred men and sends the rest home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.9-11": {
+      "text": "The LORD sends Gideon to listen at Midian’s camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.12-12": {
+      "text": "Midian’s army is as many as locusts and sand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.13-14": {
+      "text": "A Midianite’s dream shows that Gideon will win",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.15-16": {
+      "text": "Gideon worships and divides the men into three companies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.17-18": {
+      "text": "Gideon tells his men to blow horns and shout",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.19-19": {
+      "text": "Gideon and his 100 men blow horns and break jars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.20-21": {
+      "text": "The Midianite army runs away as Gideon’s men shout",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.22-23": {
+      "text": "The LORD turns the Midianites against each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.7.24-25": {
+      "text": "Ephraim captures Oreb and Zeeb, princes of Midian",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.1-1": {
+      "text": "The men of Ephraim angrily accuse Gideon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.2-3": {
+      "text": "Gideon calms Ephraim with a kind answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.4-5": {
+      "text": "Gideon asks the men of Succoth for bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.6-7": {
+      "text": "Succoth refuses bread and Gideon threatens punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.8-9": {
+      "text": "Penuel refuses Gideon, who threatens its tower",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.10-10": {
+      "text": "Zebah and Zalmunna wait in Karkor with 15,000 men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text states that Zebah and Zalmunna were in Karkor, not that they were waiting.",
+        "suggestion": "Zebah and Zalmunna are in Karkor with 15,000 men"
+      }
+    },
+    "JDG.8.11-12": {
+      "text": "Gideon defeats the army and captures Midian’s kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.13-14": {
+      "text": "A young man writes the names of Succoth’s leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.15-17": {
+      "text": "Gideon punishes the men of Succoth and Penuel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.18-19": {
+      "text": "Gideon learns the men killed at Tabor were his brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.20-21": {
+      "text": "Gideon kills Zebah and Zalmunna himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.22-23": {
+      "text": "Gideon refuses to rule Israel; the LORD will rule",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.24-25": {
+      "text": "Gideon asks the Israelites for gold earrings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.26-26": {
+      "text": "The gold Gideon gathered weighs 1,700 shekels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.27-27": {
+      "text": "Gideon makes an ephod, and Israel worships it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.28-28": {
+      "text": "Midian is subdued and does not rise again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.29-31": {
+      "text": "Gideon has seventy sons and a son named Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.32-33": {
+      "text": "Gideon dies, and Israel turns to worship Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.8.34-35": {
+      "text": "Israel forgets the LORD and is unkind to Gideon’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.1-2": {
+      "text": "Abimelech asks the Shechem leaders to make him ruler",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Abimelech asks his mother’s clan to speak to the leaders, rather than asking the leaders directly.",
+        "suggestion": "Abimelech asks his relatives to speak to Shechem’s leaders"
+      }
+    },
+    "JDG.9.3-4": {
+      "text": "Shechem’s leaders give Abimelech silver to hire men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.5-6": {
+      "text": "Abimelech kills his brothers and Shechem makes him king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.7-8": {
+      "text": "Jotham tells how the trees wanted a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.9-11": {
+      "text": "The olive tree and the fig tree refuse to be king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.12-14": {
+      "text": "The grapevine refuses, and the thornbush is asked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.15-16": {
+      "text": "The thornbush warns of fire; Jotham questions Shechem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.17-18": {
+      "text": "Jotham says Shechem wronged his father’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.19-21": {
+      "text": "Jotham warns of fire and runs away to Beer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.22-24": {
+      "text": "God turns Shechem’s leaders against Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.25-25": {
+      "text": "Shechem’s leaders set an ambush against Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.26-27": {
+      "text": "Gaal comes to Shechem and its leaders curse Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.28-29": {
+      "text": "Gaal says the Shechemites should not serve Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.30-31": {
+      "text": "Zebul angrily sends a secret message to Abimelech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.32-33": {
+      "text": "Zebul tells Abimelech to hide and attack at sunrise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.34-35": {
+      "text": "Abimelech’s troops hide near Shechem in four companies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.36-37": {
+      "text": "Gaal sees people coming; Zebul says it is only shadows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.38-40": {
+      "text": "Zebul mocks Gaal, and Gaal fights Abimelech and flees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.41-43": {
+      "text": "Zebul drives Gaal out, and Abimelech attacks the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.44-45": {
+      "text": "Abimelech captures Shechem, destroys it and sows salt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.46-47": {
+      "text": "Shechem’s leaders gather in the temple of El-berith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.48-49": {
+      "text": "Abimelech burns the tower and kills about a thousand people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.50-51": {
+      "text": "Abimelech captures Thebez, but the people flee to a tower",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.52-54": {
+      "text": "A woman drops a millstone on Abimelech, and he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.9.55-57": {
+      "text": "God repays the wickedness of Abimelech and Shechem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.10.6-7": {
+      "text": "The Israelites serve other gods and the LORD is angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.10.8-9": {
+      "text": "Ammonites and Philistines oppress Israel for 18 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.10.10-12": {
+      "text": "The Israelites cry out to the LORD and confess sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 10 and leaves out the LORD’s reply in verses 11–12.",
+        "suggestion": "The Israelites confess sin, and the LORD replies"
+      }
+    },
+    "JDG.10.13-14": {
+      "text": "The LORD says he will no longer save Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.10.15-16": {
+      "text": "Israel puts away foreign gods and serves the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.10.17-18": {
+      "text": "Gilead’s rulers look for a leader against the Ammonites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.1-3": {
+      "text": "Jephthah’s brothers send him away, and he lives in Tob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.4-6": {
+      "text": "The elders of Gilead ask Jephthah to command the army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.7-8": {
+      "text": "Jephthah questions the elders, who ask him to lead Gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.9-11": {
+      "text": "Jephthah becomes Gilead’s leader and states his terms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.12-13": {
+      "text": "Jephthah asks the Ammonite king why he attacks Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only Jephthah’s question in verse 12 and omits the Ammonite king’s response in verse 13.",
+        "suggestion": "Jephthah questions the Ammonite king, who demands his land"
+      }
+    },
+    "JDG.11.14-16": {
+      "text": "Jephthah tells the Ammonite king about Israel’s journey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.17-18": {
+      "text": "Edom and Moab refuse Israel passage, so Israel goes around",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.19-20": {
+      "text": "Sihon refuses Israel passage and fights Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.21-22": {
+      "text": "The LORD helps Israel defeat Sihon and take the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.23-25": {
+      "text": "Jephthah says the LORD gave Israel the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.26-28": {
+      "text": "Jephthah says Israel has held the land for 300 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 26 and misses the Ammonite king’s refusal to listen in verse 28.",
+        "suggestion": "Jephthah defends Israel, but the Ammonite king ignores him"
+      }
+    },
+    "JDG.11.29-31": {
+      "text": "Jephthah vows to give the LORD whatever greets him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.32-33": {
+      "text": "The LORD helps Jephthah defeat the Ammonites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.34-35": {
+      "text": "Jephthah sees his daughter and is filled with grief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.36-37": {
+      "text": "Jephthah’s daughter asks for two months to mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.11.38-40": {
+      "text": "Jephthah’s daughter returns, and Israel remembers her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.1-2": {
+      "text": "The men of Ephraim threaten Jephthah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.3-4": {
+      "text": "Jephthah answers Ephraim and fights against them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.5-6": {
+      "text": "The Gileadites kill Ephraimites at the Jordan fords",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.7-7": {
+      "text": "Jephthah dies after judging Israel six years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.8-9": {
+      "text": "Ibzan judges Israel seven years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.10-12": {
+      "text": "Ibzan dies, and Elon judges Israel ten years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.12.13-15": {
+      "text": "Abdon judges Israel eight years and then dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.1-2": {
+      "text": "Israel is under the Philistines, and Manoah has no child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.3-5": {
+      "text": "The angel tells Manoah’s wife she will have a son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.6-7": {
+      "text": "Manoah’s wife tells her husband what the man said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.8-9": {
+      "text": "Manoah prays, and the angel comes to his wife again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.10-11": {
+      "text": "Manoah’s wife brings her husband to the man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.12-14": {
+      "text": "The angel tells Manoah that his wife must obey the rules",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.15-16": {
+      "text": "Manoah offers food, but the angel asks for an offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The angel does not ask for an offering, but says that any burnt offering should be made to the LORD.",
+        "suggestion": "Manoah offers food, but the angel refuses to eat"
+      }
+    },
+    "JDG.13.17-18": {
+      "text": "Manoah asks the angel’s name, but he will not tell it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.19-20": {
+      "text": "Manoah makes an offering, and the angel rises in the flame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.21-22": {
+      "text": "Manoah knows it was the angel and fears he will die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.23-23": {
+      "text": "Manoah’s wife explains why God will not kill them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.13.24-25": {
+      "text": "Samson is born and grows, and the Spirit stirs him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.1-2": {
+      "text": "Samson asks his parents to get a Philistine wife for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.3-4": {
+      "text": "Samson’s parents object, but he insists on the woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.5-6": {
+      "text": "Samson kills a young lion with his bare hands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.7-7": {
+      "text": "Samson goes down and speaks to the Philistine woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.8-9": {
+      "text": "Samson finds honey in the dead lion and eats it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.10-11": {
+      "text": "Samson holds a feast, and thirty Philistine men join him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.12-13": {
+      "text": "Samson offers the thirty men a riddle and a bet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.14-14": {
+      "text": "Samson tells the riddle, and the men cannot solve it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.15-15": {
+      "text": "The Philistines threaten Samson’s wife to learn the answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.16-17": {
+      "text": "Samson’s wife weeps until he tells her the answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.18-18": {
+      "text": "The men solve the riddle, and Samson answers angrily",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.14.19-20": {
+      "text": "Samson kills thirty men, and his wife is given away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.1-2": {
+      "text": "Samson’s father-in-law will not let him see his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.3-4": {
+      "text": "Samson ties torches to the tails of three hundred foxes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.5-6": {
+      "text": "Samson burns Philistine fields; Philistines burn his wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.7-8": {
+      "text": "Samson takes revenge and kills many Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.9-10": {
+      "text": "The Philistines camp in Judah to arrest Samson",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.11-11": {
+      "text": "Men of Judah question Samson about his actions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.12-13": {
+      "text": "Men of Judah tie up Samson to give him to the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.14-14": {
+      "text": "God’s Spirit gives Samson power to break the ropes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.15-16": {
+      "text": "Samson kills a thousand men with a donkey’s jawbone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.17-18": {
+      "text": "Samson names the place and asks God for water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.15.19-20": {
+      "text": "God gives Samson water, and Samson judges Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.1-2": {
+      "text": "Samson goes to Gaza, and the Gazites wait to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.3-3": {
+      "text": "Samson carries the city gate to a mountain near Hebron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.4-5": {
+      "text": "Philistine lords ask Delilah to find Samson’s secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.6-7": {
+      "text": "Samson lies to Delilah about seven fresh bowstrings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.8-9": {
+      "text": "Samson breaks the bowstrings that Delilah tied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.10-12": {
+      "text": "Samson breaks new ropes after lying to Delilah again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.13-14": {
+      "text": "Samson lies about his hair, and pulls out the loom pin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.15-16": {
+      "text": "Delilah presses Samson every day to tell his secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.17-17": {
+      "text": "Samson tells Delilah the secret of his strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.18-19": {
+      "text": "Delilah has Samson’s hair cut and his strength leaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.20-22": {
+      "text": "The Philistines capture Samson and blind him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.23-24": {
+      "text": "The Philistines praise Dagon for Samson’s capture",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.25-26": {
+      "text": "Samson is brought out to entertain the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.27-27": {
+      "text": "The temple is full of Philistines watching Samson",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.28-29": {
+      "text": "Samson prays to God for strength and grips the pillars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.16.30-31": {
+      "text": "Samson pulls down the temple and dies with the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.17.1-2": {
+      "text": "Micah returns the stolen silver to his mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Micah confesses that he took the silver, but he does not return it until verse 3.",
+        "suggestion": "Micah admits to his mother that he took her silver"
+      }
+    },
+    "JDG.17.3-4": {
+      "text": "Micah’s mother has silver idols made for his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.17.5-6": {
+      "text": "Micah sets up a shrine and makes his son a priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.17.7-9": {
+      "text": "A young Levite from Bethlehem comes to Micah’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.17.10-11": {
+      "text": "Micah asks the Levite to be his priest and father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.17.12-13": {
+      "text": "Micah ordains the Levite and expects God’s favor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.1-2": {
+      "text": "The Danites send five men to look for land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.3-4": {
+      "text": "The Danite spies question the young Levite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.5-6": {
+      "text": "The priest tells the Danite men to go in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.7-8": {
+      "text": "The spies see that the people of Laish feel safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.9-10": {
+      "text": "The spies urge the Danites to take the good land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.11-12": {
+      "text": "Six hundred armed Danites camp near Kiriath-jearim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.13-13": {
+      "text": "The Danites come to Micah’s house in Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.14-14": {
+      "text": "The spies tell the Danites about Micah’s idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.15-16": {
+      "text": "The Danites greet the young Levite at Micah’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.17-18": {
+      "text": "The spies take the idols, and the priest asks why",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.19-20": {
+      "text": "The Danites ask the Levite to be priest for a tribe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.21-23": {
+      "text": "Micah and his neighbors chase the Danites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.24-26": {
+      "text": "Micah complains, but the Danites threaten him and leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.27-29": {
+      "text": "The Danites burn Laish and build the city of Dan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.18.30-31": {
+      "text": "The Danites set up idols with Jonathan as priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.1-2": {
+      "text": "A Levite’s concubine leaves him and goes to Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.3-4": {
+      "text": "The Levite stays three days with his father-in-law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.5-6": {
+      "text": "The father-in-law urges the Levite to stay longer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.7-8": {
+      "text": "The father-in-law again persuades the Levite to wait",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.9-9": {
+      "text": "The father-in-law asks the Levite to stay one more night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.10-11": {
+      "text": "The Levite refuses to stay and travels toward Jebus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.12-13": {
+      "text": "The Levite passes a foreign city and goes on to Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The Levite only says that they will go on to Gibeah, rather than actually traveling there in these verses.",
+        "suggestion": "The Levite refuses to stay in a foreign city"
+      }
+    },
+    "JDG.19.14-15": {
+      "text": "No one in Gibeah takes the Levite in for the night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.16-17": {
+      "text": "An old man in Gibeah asks the Levite where he is going",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.18-19": {
+      "text": "The Levite tells the old man that no one took him in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.20-21": {
+      "text": "The old man takes the Levite into his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.22-23": {
+      "text": "Wicked men of Gibeah demand to abuse the Levite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.24-26": {
+      "text": "The Levite sends his concubine out, and the men abuse her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.27-28": {
+      "text": "The Levite finds his concubine collapsed at the door",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.19.29-30": {
+      "text": "The Levite sends pieces of his concubine through Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.1-2": {
+      "text": "The Israelites gather at Mizpah before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.3-4": {
+      "text": "The Israelites ask the Levite what happened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.5-7": {
+      "text": "The Levite accuses the men of Gibeah and asks for advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.8-9": {
+      "text": "The Israelites all agree to go against Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.10-11": {
+      "text": "Israel plans to supply the army and attack Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.12-14": {
+      "text": "The Benjamites refuse to hand over the wicked men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.15-16": {
+      "text": "Benjamin gathers 26,000 swordsmen and 700 skilled men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.17-17": {
+      "text": "Israel gathers 400,000 soldiers without Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.18-18": {
+      "text": "God tells the Israelites that Judah must go first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.19-21": {
+      "text": "Benjamin defeats Israel and kills 22,000 men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.22-23": {
+      "text": "God tells Israel to fight Benjamin again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.24-25": {
+      "text": "Benjamin kills 18,000 more Israelites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.26-26": {
+      "text": "The Israelites weep, fast, and offer offerings at Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.27-28": {
+      "text": "God says Israel will defeat Benjamin tomorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.29-30": {
+      "text": "Israel sets an ambush around Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.31-31": {
+      "text": "Benjamin chases Israel and kills about thirty men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.32-33": {
+      "text": "Israel retreats to draw Benjamin away from the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.34-35": {
+      "text": "The LORD defeats Benjamin and Israel kills 25,100 men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.36-38": {
+      "text": "The men in ambush attack the city of Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.39-39": {
+      "text": "Benjamin thinks Israel is defeated again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.40-41": {
+      "text": "Benjamin sees the city burning and is terrified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.42-42": {
+      "text": "The Benjamites flee to the wilderness and are killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.43-44": {
+      "text": "Israel surrounds Benjamin and 18,000 Benjamites fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.45-46": {
+      "text": "Israel kills Benjamites as they flee toward Rimmon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.20.47-48": {
+      "text": "Six hundred Benjamites escape and Israel burns the cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.1-3": {
+      "text": "Israel weeps because one tribe is missing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.4-5": {
+      "text": "The Israelites build an altar and ask who stayed away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.6-7": {
+      "text": "The Israelites grieve for Benjamin and ask about wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.8-10": {
+      "text": "Israel sends men to attack Jabesh-gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.11-12": {
+      "text": "The men find 400 young women at Jabesh-gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.13-15": {
+      "text": "The Benjamites receive the women but still need more",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.16-17": {
+      "text": "The elders ask how to get wives for the Benjamites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.18-19": {
+      "text": "The elders remember the yearly feast at Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.20-21": {
+      "text": "The Benjamites are told to catch wives at Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.22-22": {
+      "text": "The elders will answer the men who complain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.23-24": {
+      "text": "The Benjamites take wives and return home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JDG.21.25-25": {
+      "text": "Israel had no king, so everyone did what seemed right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
