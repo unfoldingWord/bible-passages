@@ -131,7 +131,7 @@ try {
     console.log(
       `en ${book}: ${titles.length} of ${inputs.length} segments drafted ` +
         `(${reused.length} reuse their pericope title, ` +
-        `${blank.length} blank in BSB take the fixed title), ` +
+        `${blank.length} blank in BSB skipped; the build writes their title), ` +
         `${titles.filter((t) => t.status === "ai-checked").length} ai-checked, ` +
         `${titles.filter((t) => t.check?.verdict === "disagree").length} disagreements, ` +
         `${titles.filter((t) => t.gates).length} gate failures`
