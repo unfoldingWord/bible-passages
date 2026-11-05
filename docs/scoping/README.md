@@ -20,6 +20,7 @@ pieces around it.
 | 7a  | Glossaries         | key-term headwords per language from Translation Words       | [glossaries.md](glossaries.md)                                                            |
 | 7b  | Translation runner | translates one book's titles with one model, gated, costed   | [translation-runner.md](translation-runner.md)                                            |
 | 7c  | Translation check  | the other model's verdict on each translation                | [translation-check.md](translation-check.md)                                              |
+| 7d  | CLI transport      | model calls through the local claude and codex CLIs          | [local-cli-runners.md](local-cli-runners.md)                                              |
 | 8   | Review             | people approve, flag or suggest each title                   | [review.md](review.md)                                                                    |
 | 8a  | Review apply       | the review artifact's answers to one PR per batch            | [review-apply.md](review-apply.md)                                                        |
 | 8b  | Review navigator   | the whole Bible by book and chapter, for the read-through    | [review-navigator.md](review-navigator.md)                                                |
