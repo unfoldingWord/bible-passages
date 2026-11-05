@@ -880,6 +880,12 @@ Five draft calls used 0 reasoning tokens (HEB batch 1, JAS 1, 3JN 1, REV 3
 and 4); 5 of the 7 titles over 60 are in them (JAS 1, REV 4), as in the
 earlier groups.
 
+The review bench found one `ai-checked` title that misreads its verses:
+`JUD.1.9-11`, "Michael did not slander the devil; ungodly men do" (Jude 1:10
+says the men slander what they do not understand, not the devil). The
+record is AI output, kept unchanged; the fix is a person's review (#254),
+and `known-issues.json` lists it.
+
 No third check was run and no dispute data is written (ADR 0008); the 28
 disagreements and the gated agreed title stay `unreviewed`. Counts only;
 the checker's reasons and suggestions were not read.
