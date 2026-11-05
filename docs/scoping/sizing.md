@@ -822,6 +822,72 @@ suggestions were not read.
 
 OpenRouter spend of this work: $2.0732638, the eight records.
 
+## Measured: English segment titles, Daniel to Malachi (#244)
+
+ADR [0008](../decisions/0008-english-run-before-dispute-verdict.md): the
+remaining books are drafted and checked before the #207 verdict, with
+disputed titles held as for Genesis. Daniel and the twelve Minor Prophets
+(Hosea to Malachi) were drafted on 2026-11-05 the way Genesis was: one
+plain run of the CLI per book, one book after another, the same models, the
+runner and its library as at `3b4cc37` (the runs started from `f27c015`,
+which does not touch them; unchanged at `3e30817`, the base of this
+change), and the prompt on main, `prompts/segment-titles.md` SHA-256
+`e3e08e032d32…` (unchanged by this work).
+
+```
+node scripts/translate/segment-titles.ts --book DAN \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 0.71 \
+  --out .cache/segment-titles/len-DAN
+```
+
+`--max-cost` was 1.5 times the book's estimate (drafted segments × $0.0027,
+Genesis's rate), at least $0.30: DAN 0.71, HOS 0.41, AMO 0.32, ZEC 0.39,
+the rest 0.30.
+
+Obadiah's first run ended `incomplete` (exit 2): the draft reply left out
+the single-verse segment `OBA.1.19-19` (#252), so no record was written; it
+cost $0.03649900 over 2 calls. It was run once more, plainly, and that run
+is the record. Every other run exited 0 with outcome `done`, first time.
+Each record was copied unchanged to `data/drafts/en/<BOOK>.json` (`cmp`: no
+difference). The counts below were made twice from the records, with `jq`
+and with Python, which gave the same values.
+
+| Book  | Drafted    | Agreed | Disagreed: criteria                               | Gate failures  | Over 60 (longest) | Calls   | Cost        | Model time  |
+| ----- | ---------- | ------ | ------------------------------------------------- | -------------- | ----------------- | ------- | ----------- | ----------- |
+| DAN   | 174 of 176 | 170    | 4: `accurate` 3, `plain` 1, `style` 1             | 0              | 0 (58)            | 5 + 5   | $0.52021975 | 491.911 s   |
+| HOS   | 101 of 101 | 96     | 5: `covers` 2, `plain` 2, `style` 2, `accurate` 1 | 0              | 0 (60)            | 3 + 3   | $0.36070900 | 307.640 s   |
+| JOL   | 37 of 37   | 34     | 3: `accurate` 1, `covers` 1, `style` 1            | 0              | 0 (59)            | 2 + 2   | $0.12568075 | 135.978 s   |
+| AMO   | 78 of 78   | 74     | 4: `style` 2, `covers` 1, `plain` 1               | 2 (`length` 2) | 2 (63)            | 3 + 3   | $0.19817825 | 174.256 s   |
+| OBA   | 10 of 10   | 10     | 0                                                 | 0              | 0 (58)            | 1 + 1   | $0.03535975 | 31.734 s    |
+| JON   | 21 of 22   | 21     | 0                                                 | 0              | 0 (57)            | 1 + 1   | $0.05694675 | 62.410 s    |
+| MIC   | 51 of 52   | 50     | 1: `style` 1                                      | 0              | 0 (60)            | 2 + 2   | $0.12910850 | 122.605 s   |
+| NAM   | 25 of 25   | 22     | 3: `style` 2, `accurate` 1                        | 0              | 0 (55)            | 1 + 1   | $0.08014375 | 91.382 s    |
+| HAB   | 29 of 29   | 29     | 0                                                 | 0              | 0 (58)            | 1 + 1   | $0.07336150 | 44.302 s    |
+| ZEP   | 23 of 24   | 21     | 2: `covers` 1, `plain` 1, `style` 1               | 0              | 0 (58)            | 1 + 1   | $0.08964125 | 76.066 s    |
+| HAG   | 16 of 16   | 14     | 2: `accurate` 1, `style` 1                        | 1 (`length` 1) | 1 (61)            | 1 + 1   | $0.07941050 | 102.750 s   |
+| ZEC   | 94 of 94   | 89     | 5: `covers` 3, `plain` 2, `style` 2               | 0              | 0 (58)            | 3 + 3   | $0.33765400 | 343.345 s   |
+| MAL   | 24 of 24   | 22     | 2: `covers` 1, `plain` 1                          | 0              | 0 (56)            | 1 + 1   | $0.06729800 | 53.708 s    |
+| Total | 683        | 652    | 31                                                | 3              | 3                 | 25 + 25 | $2.15371175 | 2,038.087 s |
+
+Labels and sources: every row is measured 2026-11-05 from the committed
+record. Drafted: `titles`; the other segments are their pericope's only
+segment (DAN 2, JON 1, MIC 1, ZEP 1). Agreed: checker `agree`, all
+`ai-checked`. Criteria: a title can name more than one. Cost and model
+time: OpenRouter's billed `cost` and `ms` per call, summed, exact. Largest
+completion: draft 6,827 of 16,384 (42%, DAN); check 22,319 of 32,768 (68%,
+ZEC). No reply was cut off and every reply in these records was readable
+(the runs end `done`). One draft call used 0 reasoning tokens (AMO batch
+3); one of the 3 titles over 60 is in it. `npm run build` puts the 652
+`ai-checked` titles in the tC Mobile title tables.
+
+No third check was run and no dispute data is written (ADR 0008); the 31
+disagreements stay `unreviewed`. Counts only; the checker's reasons and
+suggestions were not read.
+
+OpenRouter spend of this work: $2.19021075 ($2.15371175 in the thirteen
+records and $0.03649900 in Obadiah's stopped run).
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

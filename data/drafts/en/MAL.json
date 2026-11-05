@@ -1,0 +1,189 @@
+{
+  "language": "en",
+  "book": "MAL",
+  "bible": "bsb-mal",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793916880-y1sPqE3XOsiojWAnkiNw",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5428,
+      "completionTokens": 3495,
+      "reasoningTokens": 2824,
+      "cost": 0.045806,
+      "ms": 23410
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916903-LHAPVy1MQGFo0bhWdsct",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4256,
+      "completionTokens": 4880,
+      "reasoningTokens": 4160,
+      "cost": 0.021492,
+      "ms": 30298
+    }
+  ],
+  "titles": {
+    "MAL.1.1-3": {
+      "text": "The LORD says he loved Jacob but hated Esau",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.1.4-5": {
+      "text": "The LORD will destroy what Edom rebuilds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.1.6-7": {
+      "text": "The LORD says the priests despise his name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.1.8-9": {
+      "text": "The LORD rejects the priests’ blind and sick animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.1.10-12": {
+      "text": "The LORD will accept no offering from the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.1.13-14": {
+      "text": "The LORD condemns the priests for offering bad animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.1-2": {
+      "text": "The LORD warns the priests of a curse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.3-4": {
+      "text": "The LORD will punish the priests’ descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The passage primarily threatens the humiliation of the priests themselves, not only their descendants.",
+        "suggestion": "The LORD will rebuke and humiliate the priests"
+      }
+    },
+    "MAL.2.5-7": {
+      "text": "Levi honored God and taught the truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.8-9": {
+      "text": "The priests turned from God’s way and taught wrongly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.10-12": {
+      "text": "Judah’s men marry women who serve foreign gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.13-13": {
+      "text": "The LORD no longer accepts the people’s offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.14-16": {
+      "text": "The LORD hates divorce and wants husbands to be faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.2.17-17": {
+      "text": "The people tire the LORD by saying evil is good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.1-3": {
+      "text": "The LORD will send a messenger and come to his temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.4-5": {
+      "text": "The LORD will judge sorcerers, adulterers and oppressors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.6-7": {
+      "text": "The LORD does not change and calls Israel to return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.8-9": {
+      "text": "The people rob God by not giving tithes and offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.10-12": {
+      "text": "The LORD promises blessing for the full tithe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.13-15": {
+      "text": "The people say that serving God is useless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.16-16": {
+      "text": "A scroll is written for those who fear the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.3.17-18": {
+      "text": "The LORD will spare those who serve him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MAL.4.1-3": {
+      "text": "The LORD’s day will burn evildoers but heal believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “believers” is a theological term not used in the passage, which refers to those who fear God’s name.",
+        "suggestion": "The LORD will burn evildoers and heal those who fear him"
+      }
+    },
+    "MAL.4.4-6": {
+      "text": "Israel must remember the law and Elijah will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
