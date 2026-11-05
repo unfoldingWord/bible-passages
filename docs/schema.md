@@ -197,8 +197,9 @@ never calls a model. Such a record also has:
   (Philippians was made with `f132f2195f80`; the prompt changed after it,
   #197. Colossians was made with `cc76a816652a`; the prompt changed after
   it, #209. 2 Timothy and Genesis were made with `838516080c8f`; the prompt changed after
-  it, #220. Romans to Philemon, except the books above, were made with the
-  current prompt, `e3e08e032d32`, #244).
+  it, #220. Romans, 1 and 2 Corinthians, Galatians, Ephesians,
+  2 Thessalonians, 1 Timothy and Philemon were made with the current
+  prompt, `e3e08e032d32`, #244).
 - `calls`: the draft calls (one before #208; one per batch of at most 35
   segments since), then the check calls (one before #201; one per batch of
   at most 35 titles since), each with its OpenRouter generation id, model,
