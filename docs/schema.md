@@ -214,6 +214,11 @@ never calls a model. Such a record also has:
   even when the checker agreed.
 
 An English check's `criteria` are `accurate`, `covers`, `plain` and `style`.
+The 60-character limit is on the titles that ship: every title in a tC
+Mobile title table is at most 60 characters (a test checks it). A checker's
+`suggestion` is not held to it. The check prompt asks for at most 60, but a
+suggestion is never shipped or shown to the third model, and a record is
+kept as the model wrote it (#258).
 A person's review is `review`: `by` (`reviewer:<handle>`), `at` (a date),
 `status`, and `text` only when their wording differs from the draft's, with
 `why` when they gave a reason and `saved`, the time the applied record was

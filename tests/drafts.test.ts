@@ -279,11 +279,25 @@ describe.each([
           ? "ai-checked"
           : "unreviewed"
       );
+      // A disagreement carries a suggestion. Its length is not held to MAX:
+      // the 60-character limit is on shipped titles (the tC Mobile test
+      // below), and a suggestion is never shipped (#258).
       if (d.check?.verdict === "disagree") {
         expect(d.check.suggestion?.length).toBeGreaterThan(0);
-        expect((d.check.suggestion ?? "").length).toBeLessThanOrEqual(MAX);
+        expect(d.check.suggestion).toBe(d.check.suggestion?.trim());
       }
     }
+  });
+
+  it("ships no title over 60 characters in the tC Mobile title table (#258)", () => {
+    const shipped = (
+      read(`dist/tc-mobile/titles/en/${book}.json`) as {
+        segments: { [key: string]: string };
+      }
+    ).segments;
+    expect(Object.keys(shipped).length).toBeGreaterThan(0);
+    for (const [key, text] of Object.entries(shipped))
+      expect([...text].length, key).toBeLessThanOrEqual(MAX);
   });
 
   it("records every title the gates fail, and keeps the rest plain and non-empty", () => {
