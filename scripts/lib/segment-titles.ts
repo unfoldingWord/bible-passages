@@ -41,7 +41,7 @@ const SPANS: readonly (readonly [string, RegExp])[] = [
 ];
 
 // A verse or chapter marker, as `verseTexts` reads them.
-const VERSE_OR_CHAPTER = /\\(c|v)\s+\d/;
+const VERSE_OR_CHAPTER = /\\(c|v)\s+\d+/;
 
 /**
  * Drops the `SPANS`. A matched span (opener and a closer after it) that
