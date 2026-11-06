@@ -1,0 +1,709 @@
+{
+  "language": "en",
+  "book": "HOS",
+  "bible": "bsb-hos",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793915333-fXZaOZHBUAEDDiKc3vVh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6179,
+      "completionTokens": 5562,
+      "reasoningTokens": 4597,
+      "cost": 0.067978,
+      "ms": 34879
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793915368-HVj6jmtoZ7TZOB1hnGKX",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5934,
+      "completionTokens": 6188,
+      "reasoningTokens": 5161,
+      "cost": 0.073748,
+      "ms": 40680
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793915408-EshcLKfezSg7SxutjgDj",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5776,
+      "completionTokens": 5708,
+      "reasoningTokens": 4715,
+      "cost": 0.068632,
+      "ms": 37737
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915446-1uBRKavrxZpLXkgm5quL",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5133,
+      "completionTokens": 7260,
+      "reasoningTokens": 6260,
+      "cost": 0.03107475,
+      "ms": 57112
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915503-ggC2Ggvatslh4BFuCTnP",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4974,
+      "completionTokens": 8941,
+      "reasoningTokens": 7938,
+      "cost": 0.03725925,
+      "ms": 51923
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915555-JBqdq6b2XY1KsFGZjHuA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4846,
+      "completionTokens": 20902,
+      "reasoningTokens": 19948,
+      "cost": 0.082017,
+      "ms": 85309
+    }
+  ],
+  "titles": {
+    "HOS.1.1-2": {
+      "text": "The LORD tells Hosea to marry a prostitute",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.1.3-5": {
+      "text": "Hosea and Gomer have a son named Jezreel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.1.6-7": {
+      "text": "Gomer’s daughter Lo-ruhamah: God will save only Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft is not a full sentence and uses a colon.",
+        "suggestion": "Gomer has a daughter, and God promises to save Judah"
+      }
+    },
+    "HOS.1.8-9": {
+      "text": "Gomer has a son named Lo-ammi, not my people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The phrase 'not my people' at the end makes the sentence confusing and ungrammatical.",
+        "suggestion": "Gomer has a son named Lo-ammi"
+      }
+    },
+    "HOS.1.10-11": {
+      "text": "God promises that Israel will become many and united",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.1-1": {
+      "text": "Israel’s brothers and sisters are called God’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.2-3": {
+      "text": "God warns unfaithful Israel, like a wife, of punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.4-5": {
+      "text": "God will not pity the children of the unfaithful mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.6-7": {
+      "text": "God will block Israel from chasing false gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.8-9": {
+      "text": "God will take back the gifts Israel used for Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.10-11": {
+      "text": "God will end Israel’s feasts and expose her sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.12-13": {
+      "text": "God will punish Israel for worshiping Baals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.14-15": {
+      "text": "God will win Israel back in the wilderness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.16-17": {
+      "text": "Israel will call God her Husband, not Master",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.18-18": {
+      "text": "God will make a covenant and bring peace and safety",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.19-20": {
+      "text": "God promises to marry Israel forever in faithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.21-22": {
+      "text": "God will bless the land with grain, wine and oil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.2.23-23": {
+      "text": "God will show mercy and call Israel his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.3.1-3": {
+      "text": "Hosea loves his wife again and buys her back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.3.4-5": {
+      "text": "Israel will be without a king, then return to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.1-2": {
+      "text": "The LORD accuses Israel of lying, murder and stealing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.3-3": {
+      "text": "The land mourns and living things waste away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.4-5": {
+      "text": "God warns that priest and prophet will stumble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.6-7": {
+      "text": "God’s people are destroyed for lack of knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.8-9": {
+      "text": "God will punish both priests and people for sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.10-10": {
+      "text": "Israel will eat but not be satisfied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.11-12": {
+      "text": "Wine and idols take away Israel’s understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.13-14": {
+      "text": "Israel’s idol worship and prostitution bring ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.15-16": {
+      "text": "God warns Judah not to follow Israel’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.4.17-19": {
+      "text": "Ephraim is joined to idols and will be ashamed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.1-2": {
+      "text": "God judges the priests and royal house of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.3-4": {
+      "text": "God knows Ephraim has turned to prostitution",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.5-7": {
+      "text": "Israel and Judah stumble and cannot find the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.8-9": {
+      "text": "A trumpet warns that Ephraim will be laid waste",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.10-11": {
+      "text": "God’s anger falls on Judah’s princes and on Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.5.12-13": {
+      "text": "Ephraim and Judah turn to Assyria, which cannot heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says only Ephraim turned to Assyria, not Judah.",
+        "suggestion": "Ephraim turns to Assyria, but Assyria cannot heal him"
+      }
+    },
+    "HOS.5.14-15": {
+      "text": "God will punish Ephraim and Judah like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.6.1-3": {
+      "text": "The people urge each other to return to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.6.4-5": {
+      "text": "Loyalty of Ephraim and Judah is like morning mist",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "plain"],
+        "why": "It leaves out God’s judgment in verse 5 and lacks a natural opening article.",
+        "suggestion": "God judges Ephraim and Judah for their fleeting loyalty"
+      }
+    },
+    "HOS.6.6-7": {
+      "text": "God wants mercy, not sacrifice, from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.6.8-9": {
+      "text": "Gilead’s evildoers and priests commit murder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.6.10-11": {
+      "text": "God sees Israel’s sin and promises a harvest for Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.1-2": {
+      "text": "God will expose the evil of Ephraim and Samaria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.3-5": {
+      "text": "Israel’s leaders please the king with evil and lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.6-7": {
+      "text": "Israel’s kings fall and no one calls on God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.8-9": {
+      "text": "Ephraim mixes with the nations and loses strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.10-11": {
+      "text": "Ephraim seeks help from Egypt and Assyria, not God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.12-13": {
+      "text": "God will punish Israel for straying and lying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.14-15": {
+      "text": "Israel does not cry to God from the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.7.16-16": {
+      "text": "Israel is like a faulty bow and leaders will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.1-3": {
+      "text": "An enemy will attack because Israel broke God’s covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.4-5": {
+      "text": "Israel chose its own kings and made idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.6-7": {
+      "text": "Samaria’s calf idol will break; Israel reaps a whirlwind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.8-10": {
+      "text": "Israel pays Assyria for help and will be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.11-12": {
+      "text": "Ephraim builds altars for sin and ignores God’s law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.8.13-14": {
+      "text": "God rejects Israel’s sacrifices and will send fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.1-2": {
+      "text": "God warns Israel not to rejoice after being unfaithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.3-4": {
+      "text": "Israel will leave the land for Egypt and Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.5-6": {
+      "text": "Israel’s people will die in Egypt and thorns will grow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.7-7": {
+      "text": "The days of punishment come because of Israel’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.8-9": {
+      "text": "Israel is as corrupt as in the days of Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.10-10": {
+      "text": "God found Israel like grapes, but Israel worshiped Baal-peor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.11-12": {
+      "text": "God will take away Ephraim’s children and glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.13-14": {
+      "text": "Ephraim’s children will be killed and wombs will fail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.15-15": {
+      "text": "God will drive Israel out because of evil at Gilgal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.9.16-17": {
+      "text": "God rejects Ephraim, who will wander among the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.1-2": {
+      "text": "God will destroy the altars Israel built in good times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.3-4": {
+      "text": "Israel says it has no king and makes false oaths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.5-6": {
+      "text": "Samaria’s people will mourn when the calf idol is taken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.7-8": {
+      "text": "Samaria and her king will be swept away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.9-9": {
+      "text": "Israel has sinned since the days of Gibeah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.10-11": {
+      "text": "God will bring nations to punish Israel’s double sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.12-13": {
+      "text": "Israel is told to sow righteousness and seek the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.10.14-15": {
+      "text": "War will destroy Israel’s fortresses and end its king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.1-2": {
+      "text": "God loved Israel as a child, but Israel turned to Baals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.3-4": {
+      "text": "God taught Ephraim to walk and led Ephraim with love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.5-7": {
+      "text": "Israel refused to repent, so Assyria will rule Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.8-9": {
+      "text": "God’s compassion keeps him from destroying Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.10-11": {
+      "text": "God will bring his children home from Egypt and Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.11.12-12": {
+      "text": "Ephraim is full of lies, but Judah stays faithful to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.1-2": {
+      "text": "Ephraim makes treaties, and God accuses Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.3-4": {
+      "text": "Jacob struggled with God and found him at Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.5-6": {
+      "text": "Israel must return to God and keep love and justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.7-8": {
+      "text": "Ephraim boasts of wealth and cheats with false scales",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.9-10": {
+      "text": "God spoke to Israel through the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.12.11-12": {
+      "text": "God will turn the altars of Gilgal into heaps of stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 11 and leaves out Jacob working for a wife in verse 12.",
+        "suggestion": "Israel’s altars will fall, and Jacob worked for a wife"
+      }
+    },
+    "HOS.12.13-14": {
+      "text": "God brought Israel out by a prophet; Ephraim angered God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.1-2": {
+      "text": "Ephraim sinned with Baal and made idols of silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.3-3": {
+      "text": "Israel will vanish like mist, dew, chaff and smoke",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.4-6": {
+      "text": "God is the only Savior, but Israel forgot God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.7-8": {
+      "text": "God will attack Israel like a lion, leopard and bear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.9-11": {
+      "text": "Israel is destroyed because Israel turned against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.12-13": {
+      "text": "Ephraim’s sin is stored up, and Ephraim is unwise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.14-14": {
+      "text": "God speaks of redeeming Israel from death and Sheol",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.15-15": {
+      "text": "A wind from the LORD will dry up Israel’s springs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.13.16-16": {
+      "text": "Samaria will fall by the sword for rebelling against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.14.1-2": {
+      "text": "Israel is called to return to the LORD and pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.14.3-3": {
+      "text": "Israel promises to trust God, not Assyria or idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.14.4-6": {
+      "text": "God promises to heal and love Israel freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.14.7-8": {
+      "text": "Israel will grow again, and God will care for Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "HOS.14.9-9": {
+      "text": "The wise understand that the LORD’s ways are right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

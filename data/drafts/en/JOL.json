@@ -1,0 +1,293 @@
+{
+  "language": "en",
+  "book": "JOL",
+  "bible": "bsb-jol",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793915642-tGPCKCblnZgrw6h6aDhg",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3854,
+      "completionTokens": 2663,
+      "reasoningTokens": 2112,
+      "cost": 0.034338,
+      "ms": 17285
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793915659-mz6d7DqSd9gVr7k9ZAvn",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3614,
+      "completionTokens": 3108,
+      "reasoningTokens": 2599,
+      "cost": 0.038308,
+      "ms": 21652
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915681-xMC7TOPp9tlXmIR1W8vQ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3083,
+      "completionTokens": 4745,
+      "reasoningTokens": 4131,
+      "cost": 0.020106,
+      "ms": 34640
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915716-OwWXvXpzvRYGpHUVBDkD",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 2855,
+      "completionTokens": 8210,
+      "reasoningTokens": 7657,
+      "cost": 0.03292875,
+      "ms": 62401
+    }
+  ],
+  "titles": {
+    "JOL.1.1-3": {
+      "text": "Joel calls the elders to tell children about this event",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.4-4": {
+      "text": "Four kinds of locusts eat all the crops",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.5-7": {
+      "text": "Drunkards must weep because locusts ruined the vines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.8-10": {
+      "text": "The land and the priests mourn for the lost harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.11-12": {
+      "text": "Farmers must wail because the harvest and trees have died",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.13-14": {
+      "text": "Joel tells the priests to mourn and call a fast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.15-17": {
+      "text": "Joel warns that the Day of the LORD is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.1.18-20": {
+      "text": "Joel cries to the LORD because animals suffer from drought",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.1-2": {
+      "text": "The alarm sounds because the Day of the LORD is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.3-3": {
+      "text": "A fire follows the army and the land becomes a desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verse says fire devours both before and behind the army, not that fire only follows it.",
+        "suggestion": "Fire burns before and behind the army"
+      }
+    },
+    "JOL.2.4-5": {
+      "text": "The locusts look like horses and sound like chariots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.6-7": {
+      "text": "Nations fear the army, which marches like soldiers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.8-9": {
+      "text": "The locusts enter the city and the houses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.10-11": {
+      "text": "The earth shakes before the LORD’s army on a dreadful day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.12-13": {
+      "text": "The LORD tells the people to return to him sincerely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.14-14": {
+      "text": "Joel hopes God may relent and leave a blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.15-16": {
+      "text": "Joel tells all the people to gather for a holy fast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.17-17": {
+      "text": "Priests must weep and ask the LORD to spare the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.18-19": {
+      "text": "The LORD pities His people and promises grain, wine and oil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "Pronouns referring to God must not be capitalised in sentence case.",
+        "suggestion": "The LORD pities his people and promises grain, wine and oil"
+      }
+    },
+    "JOL.2.20-20": {
+      "text": "God will drive the northern army out of the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.21-23": {
+      "text": "God tells the land and the people of Zion to be glad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.24-25": {
+      "text": "God promises full harvests and repays the locust years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.26-27": {
+      "text": "God’s people will be satisfied and never put to shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.28-29": {
+      "text": "God will pour out his Spirit on all people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.30-31": {
+      "text": "God will show wonders before the Day of the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.2.32-32": {
+      "text": "God will save everyone who calls on his name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.1-3": {
+      "text": "God will judge the nations for harming Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.4-6": {
+      "text": "God accuses Tyre, Sidon and Philistia of robbing Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions the theft in verse 5 and leaves out selling the people of Judah into slavery in verse 6.",
+        "suggestion": "God accuses Tyre, Sidon, and Philistia of harming Judah"
+      }
+    },
+    "JOL.3.7-8": {
+      "text": "God will sell the enemies’ children to Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.9-10": {
+      "text": "God tells the nations to prepare for war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.11-11": {
+      "text": "Nations must gather as the LORD brings his mighty ones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.12-13": {
+      "text": "The LORD will judge the wicked nations like a harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.14-15": {
+      "text": "The Day of the LORD is near for the many nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.16-16": {
+      "text": "The LORD will protect Israel and shake heaven and earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.17-17": {
+      "text": "God will live in Zion and Jerusalem will be holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.18-19": {
+      "text": "God will bless Judah and make Egypt and Edom desolate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOL.3.20-21": {
+      "text": "Judah will last forever and God will avenge its blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "language": "en",
+  "book": "ZEP",
+  "bible": "bsb-zep",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793916353-o0LPXHHpTwLrfP25M7Av",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4959,
+      "completionTokens": 4358,
+      "reasoningTokens": 3644,
+      "cost": 0.053498,
+      "ms": 28969
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916382-rYXcFGAoGzrK85T2uHN1",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3876,
+      "completionTokens": 8863,
+      "reasoningTokens": 8133,
+      "cost": 0.03614325,
+      "ms": 47097
+    }
+  ],
+  "titles": {
+    "ZEP.1.1-3": {
+      "text": "The LORD says he will sweep away everything on earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.4-6": {
+      "text": "The LORD will punish Judah for worshiping idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.7-9": {
+      "text": "The Day of the LORD is near, and he will punish leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.10-11": {
+      "text": "Jerusalem will wail and its merchants will be silenced",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.12-13": {
+      "text": "The LORD will punish people who think he does nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.14-16": {
+      "text": "The great Day of the LORD will be a day of wrath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.1.17-18": {
+      "text": "Silver and gold cannot save sinners on the LORD’s Day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.2.4-5": {
+      "text": "The LORD will destroy the Philistine cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.2.6-7": {
+      "text": "The coast will belong to the remnant of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.2.8-9": {
+      "text": "The LORD will punish Moab and Ammon for insulting Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.2.10-11": {
+      "text": "Moab and Ammon will be punished for pride",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 10 and misses the nations worshiping the LORD in verse 11.",
+        "suggestion": "Moab and Ammon will fall and nations will worship the LORD"
+      }
+    },
+    "ZEP.2.12-14": {
+      "text": "The LORD will strike Cush and destroy Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.2.15-15": {
+      "text": "Nineveh thought it was safe but became a ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.1-2": {
+      "text": "Woe to Jerusalem, which does not trust the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The title is an exclamation rather than a statement, and 'woe to' is an idiom.",
+        "suggestion": "Jerusalem rebels and does not trust the LORD"
+      }
+    },
+    "ZEP.3.3-4": {
+      "text": "Jerusalem’s leaders, prophets and priests are corrupt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.5-5": {
+      "text": "The LORD is righteous, but the unjust have no shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.6-7": {
+      "text": "The LORD punished the nations, but Jerusalem did not learn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.8-8": {
+      "text": "The LORD will gather nations and pour out his anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.9-11": {
+      "text": "The LORD will purify the peoples and remove the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.12-13": {
+      "text": "The LORD will leave a humble people who trust him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.14-16": {
+      "text": "Zion should sing because the LORD removed punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.17-18": {
+      "text": "The LORD is mighty to save and rejoices over Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEP.3.19-20": {
+      "text": "The LORD will gather the scattered and give Israel fame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
