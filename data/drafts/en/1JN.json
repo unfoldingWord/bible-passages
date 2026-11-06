@@ -1,0 +1,317 @@
+{
+  "language": "en",
+  "book": "1JN",
+  "bible": "bsb-1jn",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905430-KTy3qMIAknTsAT1Eybnp",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4078,
+      "completionTokens": 4120,
+      "reasoningTokens": 3579,
+      "cost": 0.049356,
+      "ms": 28107
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905458-hHzpRDIWaPIpdkMINC8x",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 3888,
+      "completionTokens": 3393,
+      "reasoningTokens": 2840,
+      "cost": 0.041706,
+      "ms": 23151
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905481-wZLTsOP4YsdTxmZ2eUQe",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3381,
+      "completionTokens": 15191,
+      "reasoningTokens": 14491,
+      "cost": 0.059502,
+      "ms": 92759
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905574-YiJtRts72sCy4FA1Jt2c",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3263,
+      "completionTokens": 3260,
+      "reasoningTokens": 2663,
+      "cost": 0.01467225,
+      "ms": 19828
+    }
+  ],
+  "titles": {
+    "1JN.1.1-2": {
+      "text": "John says he saw, heard and touched the eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says 'we' touched the Word of life, not that John touched eternal life.",
+        "suggestion": "John says they saw, heard, and touched the Word of life"
+      }
+    },
+    "1JN.1.3-4": {
+      "text": "John writes so believers will join in fellowship with God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.1.5-7": {
+      "text": "God is light, so believers must walk in the light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.1.8-10": {
+      "text": "Believers who confess sins are forgiven by God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.1-3": {
+      "text": "Jesus is the sacrifice for the sins of the whole world",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 2, leaving out that Jesus is our advocate and that we must keep his commands.",
+        "suggestion": "Jesus is our advocate and we must keep his commands"
+      }
+    },
+    "1JN.2.4-6": {
+      "text": "Believers must obey Jesus and live as he lived",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.7-8": {
+      "text": "John writes about an old commandment that is also new",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.9-11": {
+      "text": "Anyone who hates a fellow believer is in the darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.12-14": {
+      "text": "John writes to children, fathers and young men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.18-19": {
+      "text": "John says the last hour has come and antichrists left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "'Antichrists left' is unclear to an English learner and does not explain who or what they left.",
+        "suggestion": "Many antichrists have appeared and left the believers"
+      }
+    },
+    "1JN.2.20-21": {
+      "text": "Believers have an anointing from God and know the truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.22-23": {
+      "text": "Whoever denies the Son also denies the Father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.24-26": {
+      "text": "John urges believers to keep the first teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.2.27-29": {
+      "text": "Believers can be confident when Christ appears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.1-3": {
+      "text": "Believers will be like Christ when he appears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.4-6": {
+      "text": "Christ takes away sin; believers should not keep sinning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.7-8": {
+      "text": "The Son of God came to destroy the devil’s works",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.9-10": {
+      "text": "Those born of God do what is right and love believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.11-12": {
+      "text": "John tells believers to love, not to be like Cain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.13-15": {
+      "text": "Believers who love have passed from death to life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.16-18": {
+      "text": "Believers should love with actions, not only words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.19-22": {
+      "text": "Believers who obey God can ask him with confidence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.3.23-24": {
+      "text": "God commands believers to trust Jesus and love each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.1-3": {
+      "text": "John tells believers to test every spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.4-6": {
+      "text": "Believers are from God and have overcome false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.7-8": {
+      "text": "Believers should love one another because God is love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.9-10": {
+      "text": "God showed his love by sending his Son for our sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.11-14": {
+      "text": "God remains in believers who love one another",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.15-16": {
+      "text": "Whoever confesses Jesus as God’s Son remains in God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.17-18": {
+      "text": "Perfect love drives out fear of punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.4.19-21": {
+      "text": "Whoever loves God must also love other believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.1-3": {
+      "text": "Loving God means keeping his commands, which are not hard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.4-5": {
+      "text": "Faith in Jesus as God’s Son overcomes the world",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.6-8": {
+      "text": "The Spirit, the water and the blood testify about Jesus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.9-10": {
+      "text": "Whoever does not believe God’s testimony calls God a liar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.11-12": {
+      "text": "God gave eternal life, and this life is in his Son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.13-15": {
+      "text": "John writes so believers can be sure of eternal life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 13 and leaves out the teaching on confidence in prayer in verses 14–15.",
+        "suggestion": "Believers have eternal life and confidence in prayer"
+      }
+    },
+    "1JN.5.16-17": {
+      "text": "Believers should pray for a believer who sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.18-19": {
+      "text": "God protects believers, but the world is under the evil one",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1JN.5.20-21": {
+      "text": "Jesus is the true God; John tells believers to avoid idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

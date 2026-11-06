@@ -1,0 +1,45 @@
+{
+  "language": "en",
+  "book": "2JN",
+  "bible": "bsb-2jn",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905596-JtWGV4noMzuKE7fsZbD7",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 1297,
+      "completionTokens": 608,
+      "reasoningTokens": 547,
+      "cost": 0.008674,
+      "ms": 5088
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905601-SsC1ZYaP3T8KpFcGIsbD",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 761,
+      "completionTokens": 580,
+      "reasoningTokens": 526,
+      "cost": 0.00274575,
+      "ms": 4428
+    }
+  ],
+  "titles": {
+    "2JN.1.7-8": {
+      "text": "John warns believers about deceivers who deny Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2JN.1.9-11": {
+      "text": "Believers must not welcome those who bring false teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

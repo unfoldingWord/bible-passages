@@ -1,0 +1,1344 @@
+{
+  "language": "en",
+  "book": "REV",
+  "bible": "bsb-rev",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793905698-rJbyNb2U1AHCzPTkJPNH",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6093,
+      "completionTokens": 6657,
+      "reasoningTokens": 5690,
+      "cost": 0.078756,
+      "ms": 42766
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905741-HUzpAGlkEY27h0pbVN7l",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6010,
+      "completionTokens": 5167,
+      "reasoningTokens": 4261,
+      "cost": 0.06369,
+      "ms": 32799
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905774-Hbo45LJSO4A61hJulgpr",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5934,
+      "completionTokens": 871,
+      "reasoningTokens": 0,
+      "cost": 0.020578,
+      "ms": 5591
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905779-n79TsvRVkT7XUS8dYTV4",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5605,
+      "completionTokens": 865,
+      "reasoningTokens": 0,
+      "cost": 0.01986,
+      "ms": 5652
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905785-xKz2FK6voTbJBN3oLC2M",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5918,
+      "completionTokens": 4437,
+      "reasoningTokens": 3573,
+      "cost": 0.056206,
+      "ms": 29816
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793905815-JXQieuXWGcFmZKGEVQig",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5625,
+      "completionTokens": 6786,
+      "reasoningTokens": 5915,
+      "cost": 0.07911,
+      "ms": 43020
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905858-ZANhZoh1HhwgprkWA9SI",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5150,
+      "completionTokens": 14345,
+      "reasoningTokens": 13475,
+      "cost": 0.05765625,
+      "ms": 89172
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905947-g9d7bIkARzyP9K8WfUJS",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5037,
+      "completionTokens": 2776,
+      "reasoningTokens": 1924,
+      "cost": 0.01418775,
+      "ms": 19253
+    },
+    {
+      "role": "check",
+      "id": "gen-1793905966-hnrXbVybMLOrlXwqJcRr",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4946,
+      "completionTokens": 12034,
+      "reasoningTokens": 11087,
+      "cost": 0.048837,
+      "ms": 70106
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906037-vDCtryCT4qVTuGyb9jUA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4738,
+      "completionTokens": 8036,
+      "reasoningTokens": 7009,
+      "cost": 0.0336885,
+      "ms": 46528
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906083-UhyL4R1DO30GC2gV7Ig3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4886,
+      "completionTokens": 10316,
+      "reasoningTokens": 9391,
+      "cost": 0.0423495,
+      "ms": 81239
+    },
+    {
+      "role": "check",
+      "id": "gen-1793906164-WxtvFMivu1Xo6ghVSaGo",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4814,
+      "completionTokens": 10848,
+      "reasoningTokens": 9902,
+      "cost": 0.0442905,
+      "ms": 52080
+    }
+  ],
+  "titles": {
+    "REV.1.4-6": {
+      "text": "John wishes the churches grace and praises Jesus Christ",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.7-8": {
+      "text": "Jesus will come and God says he is the Almighty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.9-11": {
+      "text": "On Patmos, John is told to write to seven churches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.12-13": {
+      "text": "John sees One like the Son of Man among lampstands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.14-16": {
+      "text": "John describes the glorious appearance of the Son of Man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.17-18": {
+      "text": "Jesus tells John not to fear because he lives forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.1.19-20": {
+      "text": "Jesus explains the seven stars and seven lampstands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.1-2": {
+      "text": "Jesus praises the Ephesians for testing false apostles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.3-5": {
+      "text": "Jesus warns the Ephesians to repent and love as at first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.6-7": {
+      "text": "Jesus promises the tree of life to believers who overcome",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.8-9": {
+      "text": "Jesus knows the suffering of the church in Smyrna",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.10-11": {
+      "text": "Jesus tells the Smyrnans to be faithful until death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.12-13": {
+      "text": "Jesus praises believers in Pergamum for staying faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.14-15": {
+      "text": "Jesus warns Pergamum believers about false teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.16-17": {
+      "text": "Jesus tells Pergamum to repent and promises hidden manna",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.18-19": {
+      "text": "Jesus praises the love, faith and service of Thyatira",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.20-21": {
+      "text": "Jesus rebukes Thyatira for tolerating Jezebel’s teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.22-23": {
+      "text": "Jesus says he will punish Jezebel and those who follow her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.24-25": {
+      "text": "Jesus tells faithful believers in Thyatira to hold on",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.2.26-29": {
+      "text": "Jesus promises authority to believers who overcome",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.1-2": {
+      "text": "Jesus tells the church in Sardis to wake up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.3-4": {
+      "text": "Jesus warns Sardis to repent but praises a faithful few",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.5-6": {
+      "text": "Jesus promises believers who overcome will wear white",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.7-8": {
+      "text": "Jesus gives Philadelphia believers an open door",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.9-11": {
+      "text": "Jesus promises to keep believers from the hour of testing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.12-13": {
+      "text": "Jesus makes the one who overcomes a pillar in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Jesus promises to make the overcomer a pillar in the future rather than doing so now.",
+        "suggestion": "Jesus promises to make the one who overcomes a pillar"
+      }
+    },
+    "REV.3.14-16": {
+      "text": "Jesus rebukes the Laodiceans for being lukewarm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.17-18": {
+      "text": "Jesus says the Laodiceans are poor and blind, not rich",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.19-20": {
+      "text": "Jesus knocks at the door and calls the Laodiceans to repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.3.21-22": {
+      "text": "Jesus promises believers who overcome a seat on his throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.4.1-3": {
+      "text": "John is called up to heaven and sees God on a throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.4.4-4": {
+      "text": "John sees twenty-four elders with gold crowns on thrones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.4.5-5": {
+      "text": "Lightning, thunder and seven torches come from the throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The seven torches burn before the throne rather than coming from it.",
+        "suggestion": "Lightning comes from the throne, and seven torches burn"
+      }
+    },
+    "REV.4.6-6": {
+      "text": "John sees a sea of glass and four living creatures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.4.7-8": {
+      "text": "The four living creatures never stop praising God as holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.4.9-11": {
+      "text": "The elders worship God and praise him as Creator",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.1-2": {
+      "text": "John sees a sealed scroll; an angel asks who is worthy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.3-5": {
+      "text": "No one can open the scroll, but the Lion of Judah can",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.6-7": {
+      "text": "The Lamb takes the scroll from the One on the throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.8-8": {
+      "text": "The creatures and elders fall down before the Lamb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.9-10": {
+      "text": "A new song praises the Lamb for buying people for God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.11-12": {
+      "text": "Many angels say the Lamb is worthy to receive honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.5.13-14": {
+      "text": "All creatures praise God and the Lamb; the elders worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.6.12-14": {
+      "text": "The sixth seal brings an earthquake and signs in the sky",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.6.15-17": {
+      "text": "People of every rank hide from the wrath of the Lamb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.1-3": {
+      "text": "Angels hold back the winds until God’s servants are sealed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.4-6": {
+      "text": "12,000 are sealed from each of six tribes of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.7-8": {
+      "text": "12,000 are sealed from each of six more tribes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.9-10": {
+      "text": "A great multitude in white robes praises God and the Lamb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.11-12": {
+      "text": "The angels fall facedown and worship God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.13-14": {
+      "text": "An elder explains who the people in white robes are",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.7.15-17": {
+      "text": "God will protect and comfort the people in white robes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.1-2": {
+      "text": "The seventh seal brings silence; seven angels get trumpets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.3-5": {
+      "text": "An angel offers prayers with incense and throws fire down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.6-7": {
+      "text": "The first trumpet brings hail and fire on the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.8-9": {
+      "text": "The second trumpet turns a third of the sea to blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.10-11": {
+      "text": "The third trumpet makes a third of the waters bitter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.12-12": {
+      "text": "The fourth trumpet darkens a third of sun, moon and stars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.8.13-13": {
+      "text": "An eagle cries woe to those who live on the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.1-2": {
+      "text": "The fifth trumpet: a star opens the pit and smoke rises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.3-4": {
+      "text": "Locusts with scorpion power may harm only unsealed people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.5-6": {
+      "text": "The locusts torment people for five months",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.7-9": {
+      "text": "The locusts look like horses ready for battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.10-12": {
+      "text": "The locusts have scorpion tails and a king, Abaddon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.13-15": {
+      "text": "The sixth angel blows his trumpet and four angels are freed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.16-17": {
+      "text": "John sees a huge army of horses and riders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.18-19": {
+      "text": "Plagues from the horses kill a third of people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.9.20-21": {
+      "text": "The people left alive still do not turn from their sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.10.1-2": {
+      "text": "John sees a mighty angel with a small open scroll",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.10.3-4": {
+      "text": "Seven thunders speak, but John must not write it down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.10.5-7": {
+      "text": "The angel swears that God’s mystery will soon be fulfilled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.10.8-9": {
+      "text": "John is told to take the scroll and eat it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.10.10-11": {
+      "text": "John eats the scroll and must prophesy again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.1-2": {
+      "text": "John must measure the temple, but not the courtyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.3-5": {
+      "text": "God sends two witnesses to prophesy for 1,260 days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.6-6": {
+      "text": "The two witnesses have power to stop rain and send plagues",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.7-7": {
+      "text": "The beast fights the two witnesses and kills them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.8-9": {
+      "text": "The bodies of the two witnesses lie in the street",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.10-12": {
+      "text": "The two witnesses live again and go up to heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.13-14": {
+      "text": "An earthquake strikes the city and the survivors praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.15-15": {
+      "text": "The seventh angel blows his trumpet and voices praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.16-17": {
+      "text": "The twenty-four elders worship God and thank him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.18-18": {
+      "text": "The elders say the time has come for God to judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.11.19-19": {
+      "text": "God’s temple in heaven opens and the ark appears",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.1-2": {
+      "text": "John sees a woman in heaven about to give birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.3-4": {
+      "text": "A huge red dragon waits to devour the woman’s child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.5-6": {
+      "text": "The woman’s son is taken to God and she flees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.7-9": {
+      "text": "Michael fights the dragon and throws him down to earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text does not say Michael threw the dragon down, only that the dragon was hurled down after they fought.",
+        "suggestion": "Michael fights the dragon, who is thrown down to earth"
+      }
+    },
+    "REV.12.10-10": {
+      "text": "A voice in heaven says God’s kingdom has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.11-12": {
+      "text": "Believers conquer the devil, who is angry and has little time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 61 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Believers conquer the devil, who has only a short time"
+      }
+    },
+    "REV.12.13-14": {
+      "text": "The dragon chases the woman, but she flies away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.12.15-18": {
+      "text": "The dragon attacks the woman and makes war on her children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.1-2": {
+      "text": "A beast with ten horns and seven heads rises from the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.3-4": {
+      "text": "The whole world follows and worships the beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.5-6": {
+      "text": "The beast speaks evil against God for 42 months",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.7-8": {
+      "text": "The beast fights the saints and many people worship it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.9-10": {
+      "text": "John calls believers to stay faithful and patient",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.11-12": {
+      "text": "A second beast makes people worship the first beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.13-14": {
+      "text": "The second beast does signs and deceives people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.15-15": {
+      "text": "The second beast’s image speaks and people are killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The image is of the first beast, not the second beast.",
+        "suggestion": "The first beast’s image speaks and people are killed"
+      }
+    },
+    "REV.13.16-17": {
+      "text": "The second beast forces all people to take a mark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.13.18-18": {
+      "text": "John asks wise people to work out the number 666",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.1-2": {
+      "text": "John sees the Lamb and 144,000 on Mount Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.3-5": {
+      "text": "The 144,000 sing a new song before God’s throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.6-7": {
+      "text": "An angel tells all people to fear and worship God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.8-8": {
+      "text": "A second angel says Babylon has fallen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.9-10": {
+      "text": "A third angel warns those who worship the beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.11-12": {
+      "text": "Beast worshipers have no rest; believers must endure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.13-13": {
+      "text": "A voice says those who die in the Lord are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.14-16": {
+      "text": "One like the Son of Man harvests the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.17-18": {
+      "text": "An angel tells another angel to gather the grapes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.14.19-20": {
+      "text": "The angel throws the earth’s grapes into God’s winepress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.15.1-1": {
+      "text": "John sees seven angels with the seven last plagues",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.15.2-2": {
+      "text": "Those who beat the beast stand by a sea of glass",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.15.3-4": {
+      "text": "The victors sing the song of Moses and the Lamb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.15.5-6": {
+      "text": "The seven angels come out of the temple in heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.15.7-8": {
+      "text": "The seven angels receive bowls full of God’s wrath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.1-1": {
+      "text": "A voice tells the seven angels to pour out the bowls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.2-2": {
+      "text": "The first bowl brings sores on the beast’s followers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.3-3": {
+      "text": "The second bowl turns the sea to blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.4-7": {
+      "text": "The third bowl turns rivers to blood; God’s judgments are just",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, but the limit is 60.",
+        "suggestion": "The third bowl turns rivers to blood; God is just"
+      }
+    },
+    "REV.16.8-9": {
+      "text": "The fourth bowl burns people, but they do not repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.10-11": {
+      "text": "The fifth bowl brings darkness, and people still curse God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.12-14": {
+      "text": "The sixth bowl dries the Euphrates; evil spirits gather kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, but the limit is 60.",
+        "suggestion": "The sixth bowl dries the Euphrates; spirits gather kings"
+      }
+    },
+    "REV.16.15-16": {
+      "text": "Jesus says he comes like a thief; kings gather at Armageddon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.16.17-19": {
+      "text": "The seventh bowl brings a great earthquake and Babylon’s fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, but the limit is 60.",
+        "suggestion": "The seventh bowl brings an earthquake and Babylon’s fall"
+      }
+    },
+    "REV.16.20-21": {
+      "text": "Islands and mountains vanish; people curse God for the hail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.1-2": {
+      "text": "An angel shows John the punishment of the great prostitute",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The angel invites John to see the prostitute’s punishment, but does not show it in these verses.",
+        "suggestion": "An angel invites John to see the prostitute’s punishment"
+      }
+    },
+    "REV.17.3-5": {
+      "text": "John sees a woman sitting on a scarlet beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.6-7": {
+      "text": "The angel will explain the woman and the beast to John",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.8-8": {
+      "text": "The beast will rise from the Abyss and then be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.9-10": {
+      "text": "The seven heads are seven mountains and seven kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.11-11": {
+      "text": "The beast is an eighth king who goes to destruction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.12-13": {
+      "text": "The ten horns are ten kings who give power to the beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.14-14": {
+      "text": "The Lamb will defeat those who make war against him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.15-15": {
+      "text": "The angel says the waters are peoples and nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.16-17": {
+      "text": "The beast and the ten kings will destroy the prostitute",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.17.18-18": {
+      "text": "The woman is the great city that rules the kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.1-3": {
+      "text": "An angel announces that Babylon the great has fallen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.4-6": {
+      "text": "A voice from heaven tells God’s people to leave Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.7-8": {
+      "text": "Babylon will suffer grief and fire in one day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.9-10": {
+      "text": "The kings of the earth weep over Babylon’s fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.11-13": {
+      "text": "The merchants weep because no one is left to buy cargo",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.14-14": {
+      "text": "The merchants say Babylon’s luxury is gone forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.15-17": {
+      "text": "The merchants mourn that the city’s wealth is destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.18-20": {
+      "text": "Sailors mourn the city and heaven is told to rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.21-22": {
+      "text": "An angel throws a stone to show Babylon will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.18.23-24": {
+      "text": "Babylon loses light and joy because it killed God’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.1-2": {
+      "text": "A great crowd in heaven praises God for his judgments",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.3-4": {
+      "text": "The elders and living creatures worship God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.5-5": {
+      "text": "A voice from the throne tells God’s servants to praise him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.6-6": {
+      "text": "A great crowd praises God because the Lord reigns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.7-8": {
+      "text": "The crowd says the Lamb’s marriage has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.9-10": {
+      "text": "Those invited to the Lamb’s supper are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It fits only verse 9 and leaves out the angel telling John to worship God instead of him.",
+        "suggestion": "An angel tells John about the supper and to worship God"
+      }
+    },
+    "REV.19.11-13": {
+      "text": "John sees Faithful and True riding a white horse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.14-16": {
+      "text": "The armies of heaven follow the King of kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.17-18": {
+      "text": "An angel calls the birds to eat at God’s great supper",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.19-20": {
+      "text": "The beast and the false prophet are thrown into fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.19.21-21": {
+      "text": "The rider’s sword kills the rest, and birds eat the flesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.1-3": {
+      "text": "An angel binds Satan in the Abyss for a thousand years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.4-4": {
+      "text": "Believers who were killed reign with Christ for 1,000 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.5-6": {
+      "text": "Those in the first resurrection are blessed and holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.7-8": {
+      "text": "Satan is released and gathers the nations for battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.9-10": {
+      "text": "Fire destroys the armies, and the devil is thrown in the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.11-12": {
+      "text": "The dead stand before the great white throne to be judged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.20.13-15": {
+      "text": "People not in the Book of Life are thrown into the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.1-2": {
+      "text": "John sees a new heaven, a new earth and the new Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.3-4": {
+      "text": "God will live with his people and wipe away every tear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.5-6": {
+      "text": "God makes all things new and offers the water of life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.7-8": {
+      "text": "Those who overcome inherit all; the wicked are punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.9-10": {
+      "text": "An angel shows John the holy city, the bride of the Lamb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.11-13": {
+      "text": "The city shines with God’s glory and has twelve gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.14-15": {
+      "text": "The angel measures the city with a golden rod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "The angel does not measure the city until verse 16, and the title omits the wall’s twelve foundations in verse 14.",
+        "suggestion": "The wall has twelve foundations; an angel will measure it"
+      }
+    },
+    "REV.21.16-17": {
+      "text": "The city’s length, width and height are all equal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.18-20": {
+      "text": "The city is pure gold, and its foundations are jewels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.21-22": {
+      "text": "The gates are pearls, and God and the Lamb are the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.23-25": {
+      "text": "God’s glory lights the city, and the gates never close",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.21.26-27": {
+      "text": "Only people written in the Book of Life enter the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.1-2": {
+      "text": "The river of life and the tree of life heal the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says the leaves of the tree heal the nations, not the river of life.",
+        "suggestion": "The tree of life by the river of life heals the nations"
+      }
+    },
+    "REV.22.3-5": {
+      "text": "God’s servants will see his face and reign forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.6-7": {
+      "text": "The angel says these words are true; Jesus is coming soon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.8-9": {
+      "text": "The angel tells John to worship God, not the angel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.10-11": {
+      "text": "The angel tells John not to seal the words of prophecy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.12-13": {
+      "text": "Jesus says he is coming soon to reward each person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.14-15": {
+      "text": "Those with washed robes enter; the wicked stay outside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.16-16": {
+      "text": "Jesus says he sent his angel to the churches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.17-17": {
+      "text": "The Spirit and the bride invite the thirsty to come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.18-19": {
+      "text": "God will punish anyone who changes the words of this book",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "REV.22.20-21": {
+      "text": "Jesus says he is coming soon; grace be with all believers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

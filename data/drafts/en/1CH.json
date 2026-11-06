@@ -1,0 +1,2582 @@
+{
+  "language": "en",
+  "book": "1CH",
+  "bible": "bsb-1ch",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793909514-lgCnFfe0XdKgtFeXmZPo",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6114,
+      "completionTokens": 3461,
+      "reasoningTokens": 2492,
+      "cost": 0.046838,
+      "ms": 21317
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909535-o6WV5oyk7IWkMkp7kBoX",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6491,
+      "completionTokens": 5536,
+      "reasoningTokens": 4448,
+      "cost": 0.068342,
+      "ms": 35459
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909570-QT5jDo8nIstjbahPKCS0",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6078,
+      "completionTokens": 1015,
+      "reasoningTokens": 0,
+      "cost": 0.022306,
+      "ms": 6109
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909576-vE6i2IwH4uhsNMKSdfTn",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6157,
+      "completionTokens": 1059,
+      "reasoningTokens": 0,
+      "cost": 0.022904,
+      "ms": 6077
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909583-zqSbFdfqipW1keNqd5c5",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6405,
+      "completionTokens": 3611,
+      "reasoningTokens": 2694,
+      "cost": 0.04892,
+      "ms": 23293
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909606-fJHbXBkymA3lNwlsRySn",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6195,
+      "completionTokens": 949,
+      "reasoningTokens": 0,
+      "cost": 0.02188,
+      "ms": 6049
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909612-NZMV3H7TJ4V8R6muLJMs",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6290,
+      "completionTokens": 964,
+      "reasoningTokens": 0,
+      "cost": 0.02222,
+      "ms": 6087
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909618-1KIgjMpq9cxUVIdf8WCG",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6367,
+      "completionTokens": 898,
+      "reasoningTokens": 0,
+      "cost": 0.021714,
+      "ms": 5840
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909624-NckoRLqOWEys0x6vREW8",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6526,
+      "completionTokens": 915,
+      "reasoningTokens": 0,
+      "cost": 0.022202,
+      "ms": 5628
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909629-jAHKNsylBcHzmxbD2JTQ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6967,
+      "completionTokens": 4017,
+      "reasoningTokens": 3073,
+      "cost": 0.054104,
+      "ms": 26083
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793909656-H6PXIOCvDBjXZG27qKDb",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6459,
+      "completionTokens": 4777,
+      "reasoningTokens": 3880,
+      "cost": 0.060688,
+      "ms": 31585
+    },
+    {
+      "role": "check",
+      "id": "gen-1793909687-tMk0Mq7FpiaGJ6SRSEs8",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5031,
+      "completionTokens": 5211,
+      "reasoningTokens": 4261,
+      "cost": 0.0233145,
+      "ms": 35512
+    },
+    {
+      "role": "check",
+      "id": "gen-1793909723-yU2bAxLU1i3pUZRaudWV",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5294,
+      "completionTokens": 13183,
+      "reasoningTokens": 12246,
+      "cost": 0.05340675,
+      "ms": 77406
+    },
+    {
+      "role": "check",
+      "id": "gen-1793909800-lQSHReVUf2FQQzli6fT7",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5167,
+      "completionTokens": 10845,
+      "reasoningTokens": 9554,
+      "cost": 0.044544,
+      "ms": 59599
+    },
+    {
+      "role": "check",
+      "id": "gen-1793909860-83oEpQCRVZ3hhr86mZvm",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5065,
+      "completionTokens": 8659,
+      "reasoningTokens": 7686,
+      "cost": 0.03627,
+      "ms": 64297
+    },
+    {
+      "role": "check",
+      "id": "gen-1793909924-cviIgLrXCH0WSwfjo5se",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5297,
+      "completionTokens": 21021,
+      "reasoningTokens": 19727,
+      "cost": 0.0828015,
+      "ms": 147404
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910072-JF4b4rrcEMDYCpJg3gYd",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5262,
+      "completionTokens": 7724,
+      "reasoningTokens": 6591,
+      "cost": 0.0329115,
+      "ms": 52820
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910124-mtak5TPvIKdYCDyCroSR",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5152,
+      "completionTokens": 4799,
+      "reasoningTokens": 3861,
+      "cost": 0.02186025,
+      "ms": 24008
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910148-Y16WKTvueCUVljQN3KTv",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5341,
+      "completionTokens": 13571,
+      "reasoningTokens": 12528,
+      "cost": 0.054897,
+      "ms": 81847
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910230-TfHdIOUsl9jlM4HOVr2j",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5391,
+      "completionTokens": 13757,
+      "reasoningTokens": 12678,
+      "cost": 0.055632,
+      "ms": 78605
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910309-40ZiPQkgo7ePhuLMF2sm",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5751,
+      "completionTokens": 5412,
+      "reasoningTokens": 4479,
+      "cost": 0.02460825,
+      "ms": 40645
+    },
+    {
+      "role": "check",
+      "id": "gen-1793910350-ItUNFPrBGGkgdmnXoE3J",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5340,
+      "completionTokens": 6265,
+      "reasoningTokens": 5331,
+      "cost": 0.02749875,
+      "ms": 42173
+    }
+  ],
+  "titles": {
+    "1CH.1.1-4": {
+      "text": "Names from Adam to the sons of Noah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.5-7": {
+      "text": "The sons and grandsons of Japheth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.8-10": {
+      "text": "The descendants of Ham, including Nimrod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.11-12": {
+      "text": "The descendants of Mizraim, including the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.13-16": {
+      "text": "The sons and peoples that came from Canaan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.17-19": {
+      "text": "The sons of Shem, and Eber’s son Peleg",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.20-23": {
+      "text": "The thirteen sons of Joktan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.24-27": {
+      "text": "The line from Shem to Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.28-31": {
+      "text": "Abraham’s sons, and the sons of Ishmael",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.32-33": {
+      "text": "The sons of Keturah, Abraham’s concubine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.34-34": {
+      "text": "Isaac’s sons are Esau and Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.38-40": {
+      "text": "The sons and grandsons of Seir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.41-42": {
+      "text": "More descendants of Anah, Dishon, Ezer, and Dishan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.43-45": {
+      "text": "Bela, Jobab, and Husham rule as kings of Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.46-48": {
+      "text": "Hadad, Samlah, and Shaul rule as kings of Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.49-50": {
+      "text": "Baal-hanan and Hadad rule as kings of Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.1.51-54": {
+      "text": "Hadad dies, and the chiefs of Edom are named",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.1-2": {
+      "text": "The twelve sons of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.3-4": {
+      "text": "The sons of Judah, including Perez and Zerah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.5-8": {
+      "text": "The descendants of Perez and Zerah, and Achar’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.9-12": {
+      "text": "The sons of Hezron and the line to Jesse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.13-15": {
+      "text": "Jesse’s seven sons, with David the seventh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.16-17": {
+      "text": "David’s sisters Zeruiah and Abigail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.18-20": {
+      "text": "Caleb’s children, and the line to Bezalel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.21-22": {
+      "text": "Hezron’s son Segub and Segub’s son Jair",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.23-24": {
+      "text": "Geshur and Aram capture towns of Gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title leaves out verse 24, which records Hezron’s death and the birth of Ashhur.",
+        "suggestion": "Towns in Gilead are captured, and Ashhur is born"
+      }
+    },
+    "1CH.2.25-28": {
+      "text": "The sons of Jerahmeel, Hezron’s firstborn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.29-33": {
+      "text": "More descendants of Jerahmeel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.34-35": {
+      "text": "Sheshan gives his daughter to his servant Jarha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.36-38": {
+      "text": "Attai’s descendants down to Azariah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.39-41": {
+      "text": "Azariah’s descendants down to Elishama",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.42-44": {
+      "text": "The sons of Caleb, Jerahmeel’s brother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.45-47": {
+      "text": "Descendants of Shammai and Caleb’s concubine Ephah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.48-50": {
+      "text": "Caleb’s children and the sons of Hur",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.51-51": {
+      "text": "The descendants of Salma and Hareph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Verse 51 lists Salma and Hareph as sons of Hur, not their descendants.",
+        "suggestion": "Salma and Hareph, sons of Hur"
+      }
+    },
+    "1CH.2.52-53": {
+      "text": "The descendants of Shobal in Kiriath-jearim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.2.54-55": {
+      "text": "The descendants of Salma and the Kenite clans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.1-3": {
+      "text": "David’s six sons born in Hebron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.4-5": {
+      "text": "David’s sons born in Jerusalem, four by Bathsheba",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.6-9": {
+      "text": "David’s nine other sons and Tamar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.10-12": {
+      "text": "Rehoboam and his descendants down to Jotham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.13-14": {
+      "text": "Descendants from Ahaz to Josiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.15-16": {
+      "text": "The sons of Josiah and the descendants of Jehoiakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.17-18": {
+      "text": "The sons of Jeconiah the captive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.19-21": {
+      "text": "The descendants of Pedaiah and Zerubbabel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.3.22-24": {
+      "text": "The descendants of Shecaniah, Neariah and Elioenai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.1-2": {
+      "text": "The descendants of Judah and the Zorathite clans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.3-4": {
+      "text": "The sons of Etam and the descendants of Hur",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.5-8": {
+      "text": "The sons of Ashhur’s wives Helah and Naarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.11-12": {
+      "text": "The descendants of Chelub and the men of Recah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.13-16": {
+      "text": "The sons of Kenaz, Caleb and Jehallelel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.17-18": {
+      "text": "The sons of Ezrah and Mered’s two wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.19-20": {
+      "text": "Descendants of Hodiah’s wife, Shimon and Ishi",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.21-23": {
+      "text": "The sons of Shelah, including linen workers and potters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.24-26": {
+      "text": "The sons of Simeon, Shaul and Mishma",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.27-28": {
+      "text": "Shimei had many children, the Simeonites lived in towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.29-31": {
+      "text": "More towns of the Simeonites until David’s time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.32-33": {
+      "text": "Simeonite villages and the record of the families",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.34-38": {
+      "text": "Simeonite clan leaders whose families grew large",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.39-41": {
+      "text": "Simeonites find good pasture and attack the Hamites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.4.42-43": {
+      "text": "Five hundred Simeonites defeat Amalekites on Mount Seir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.1-3": {
+      "text": "Reuben lost his birthright to Joseph’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.4-6": {
+      "text": "Joel’s descendants, including Beerah taken into exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.7-9": {
+      "text": "Reubenites settle in Aroer and east toward the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.10-10": {
+      "text": "The Reubenites defeat the Hagrites in Saul’s time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.11-13": {
+      "text": "The Gadites lived in Bashan next to Reuben",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.14-15": {
+      "text": "The family line of Abihail, with Ahi as head of the family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.16-17": {
+      "text": "The Gadites lived in Gilead and Bashan and were counted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.18-19": {
+      "text": "Three tribes had 44,760 warriors who fought the Hagrites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.5.20-22": {
+      "text": "God helped the tribes defeat the Hagrites because they trusted him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 66 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "God helped the tribes defeat the Hagrites"
+      }
+    },
+    "1CH.5.23-24": {
+      "text": "The half-tribe of Manasseh settled in Bashan; family heads named",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 64 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "The half-tribe of Manasseh and their family heads"
+      }
+    },
+    "1CH.5.25-26": {
+      "text": "The tribes were unfaithful, so Assyria took them into exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.1-3": {
+      "text": "The sons of Levi, Kohath, Amram and Aaron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.4-6": {
+      "text": "The family line from Eleazar to Meraioth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.7-9": {
+      "text": "The family line from Meraioth to Johanan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.10-12": {
+      "text": "The family line from Johanan to Shallum, including Azariah the priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 69 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "The family line from Johanan to Shallum"
+      }
+    },
+    "1CH.6.13-15": {
+      "text": "The family line to Jehozadak, who went into exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.16-18": {
+      "text": "The sons of Levi: Gershom, Kohath and Merari",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft only mentions verse 16 and omits the sons of Gershom and Kohath in verses 17–18.",
+        "suggestion": "The sons of Levi, Gershom, and Kohath"
+      }
+    },
+    "1CH.6.19-21": {
+      "text": "The sons of Merari and the descendants of Gershom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.22-24": {
+      "text": "The descendants of Kohath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.25-27": {
+      "text": "The descendants of Elkanah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.28-30": {
+      "text": "The sons of Samuel and the descendants of Merari",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.31-32": {
+      "text": "David put men in charge of music in the house of the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.33-35": {
+      "text": "The family line of Heman the singer, from the Kohathites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.36-38": {
+      "text": "The family line of Heman back to Levi and Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.39-43": {
+      "text": "The family line of Asaph, who served at Heman’s right hand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.44-47": {
+      "text": "The family line of Ethan, who served on the left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.48-48": {
+      "text": "The other Levites served in the tabernacle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.49-49": {
+      "text": "Aaron and his sons made offerings and did the holy work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.50-53": {
+      "text": "The descendants of Aaron from Eleazar to Ahimaaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.54-56": {
+      "text": "The descendants of Aaron received Hebron and its pasturelands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 61 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "Aaron’s descendants received Hebron and its pasturelands"
+      }
+    },
+    "1CH.6.57-58": {
+      "text": "The descendants of Aaron were given cities in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.59-60": {
+      "text": "Aaron’s descendants received thirteen cities in Judah and Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 66 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "Aaron’s descendants received thirteen cities in all"
+      }
+    },
+    "1CH.6.61-62": {
+      "text": "Cities were given to other Kohathites and to the Gershomites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.63-65": {
+      "text": "The Merarites received twelve cities, and the Levites’ cities were listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 73 characters, which exceeds the limit of 60 characters.",
+        "suggestion": "The Merarites and all the Levites received cities"
+      }
+    },
+    "1CH.6.66-69": {
+      "text": "Some Kohathite clans received cities in Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.70-70": {
+      "text": "The other Kohathite clans received two cities in Manasseh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.71-73": {
+      "text": "The Gershomites received cities in Manasseh and Issachar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.74-76": {
+      "text": "The Gershomites received cities in Asher and Naphtali",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.77-79": {
+      "text": "The Merarites receive towns from Zebulun and Reuben",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.6.80-81": {
+      "text": "The Merarites receive towns from the tribe of Gad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.1-3": {
+      "text": "The sons of Issachar and Tola, and their fighting men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.4-5": {
+      "text": "Issachar had 87,000 mighty men of valor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.6-7": {
+      "text": "The sons of Benjamin and Bela, and their fighting men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.8-10": {
+      "text": "The sons of Becher and Jediael in Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.11-12": {
+      "text": "The sons of Jediael were heads of families fit for battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 11 and omits the descendants of Ir and Aher in verse 12.",
+        "suggestion": "Descendants of Jediael, Ir, and Aher"
+      }
+    },
+    "1CH.7.14-16": {
+      "text": "The family of Manasseh, Machir and Maacah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.17-19": {
+      "text": "The sons of Ulam, Gilead and Shemida",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.20-22": {
+      "text": "Ephraim’s descendants, and Ephraim mourns his sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.23-24": {
+      "text": "Ephraim has a son, Beriah, and his daughter Sheerah builds towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is 64 characters long, exceeding the 60-character limit.",
+        "suggestion": "Ephraim fathers Beriah, and Sheerah builds towns"
+      }
+    },
+    "1CH.7.25-27": {
+      "text": "The line from Rephah to Joshua, son of Nun",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.28-29": {
+      "text": "The towns where the descendants of Joseph lived",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.30-32": {
+      "text": "The children of Asher, Beriah and Heber",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.33-35": {
+      "text": "The sons of Japhlet, Shemer and Helem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.36-38": {
+      "text": "The sons of Zophah and Jether",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.7.39-40": {
+      "text": "The sons of Ulla, and Asher’s 26,000 fighting men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.1-5": {
+      "text": "Benjamin’s five sons and the sons of Bela",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.6-7": {
+      "text": "The heads of families from Ehud who were exiled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.8-11": {
+      "text": "Shaharaim’s sons in Moab by his wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.12-13": {
+      "text": "The sons of Elpaal who built towns and drove out Gath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.14-18": {
+      "text": "The sons of Beriah and the sons of Elpaal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.19-21": {
+      "text": "The sons of Shimei",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.22-25": {
+      "text": "The sons of Shashak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.26-28": {
+      "text": "The sons of Jeroham, who lived in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.29-31": {
+      "text": "Jeiel of Gibeon, his wife Maacah and their sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.32-32": {
+      "text": "Mikloth’s family lived near their relatives in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.33-34": {
+      "text": "The family line from Ner to Saul and Merib-baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.35-37": {
+      "text": "The descendants of Micah to Azel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.8.38-40": {
+      "text": "Azel’s six sons and the sons of his brother Eshek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.1-3": {
+      "text": "Israel is recorded, and people resettle in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.4-6": {
+      "text": "Families of Judah who lived in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.7-9": {
+      "text": "Benjamite family heads who lived in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Benjamite family heads lived in Jerusalem"
+      }
+    },
+    "1CH.9.10-11": {
+      "text": "Priests who lived in Jerusalem, including Azariah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Priests lived in Jerusalem, including Azariah"
+      }
+    },
+    "1CH.9.12-13": {
+      "text": "Priests who were able men for the work in God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Able priests served in the house of God"
+      }
+    },
+    "1CH.9.14-16": {
+      "text": "Levites who lived in Jerusalem and nearby villages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Levites lived in Jerusalem and nearby villages"
+      }
+    },
+    "1CH.9.17-19": {
+      "text": "Shallum and the gatekeepers guarded the Tent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.20-21": {
+      "text": "Phinehas led the gatekeepers in earlier times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only Phinehas in verse 20 and leaves out Zechariah in verse 21.",
+        "suggestion": "Phinehas and Zechariah serve as gatekeepers"
+      }
+    },
+    "1CH.9.22-24": {
+      "text": "David and Samuel chose 212 gatekeepers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.25-27": {
+      "text": "Gatekeepers guarded and opened God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.28-29": {
+      "text": "Some Levites cared for the temple articles and supplies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.30-32": {
+      "text": "Priests mixed spices; Levites baked bread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.33-34": {
+      "text": "Levite musicians served day and night in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.35-37": {
+      "text": "Jeiel’s family lived in Gibeon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.9.38-40": {
+      "text": "Saul’s family line from Ner to Merib-baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Saul’s family line runs from Ner to Merib-baal"
+      }
+    },
+    "1CH.9.41-44": {
+      "text": "The descendants of Micah, including Azel’s six sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Micah’s descendants include Azel’s six sons"
+      }
+    },
+    "1CH.10.1-3": {
+      "text": "The Philistines defeat Israel and kill Saul’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.4-4": {
+      "text": "Saul asks his armor-bearer to kill him, then kills himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.5-6": {
+      "text": "Saul, his three sons and his armor-bearer die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.7-8": {
+      "text": "Philistines take the cities after Saul dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.9-10": {
+      "text": "The Philistines display Saul’s head and armor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.11-12": {
+      "text": "Men of Jabesh-gilead bury Saul and his sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.10.13-14": {
+      "text": "Saul died because he was unfaithful to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.4-6": {
+      "text": "David captures Jerusalem and Joab becomes chief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.7-9": {
+      "text": "David lives in Jerusalem and builds the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.10-11": {
+      "text": "Jashobeam is chief of David’s mighty men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.12-14": {
+      "text": "Eleazar and David defend a barley field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.15-17": {
+      "text": "David longs for water from the well at Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.18-19": {
+      "text": "Three men bring David water, but he pours it out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.20-21": {
+      "text": "Abishai is chief of the Three",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.22-23": {
+      "text": "Benaiah kills a lion and an Egyptian",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.24-25": {
+      "text": "David appoints Benaiah over his guard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.26-29": {
+      "text": "Names of more mighty men, beginning with Asahel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "More mighty men serve David, beginning with Asahel"
+      }
+    },
+    "1CH.11.30-33": {
+      "text": "More names of David’s mighty men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence statement rather than a noun phrase.",
+        "suggestion": "More of David’s mighty men are listed"
+      }
+    },
+    "1CH.11.34-37": {
+      "text": "The names of more of David’s mighty men are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.38-41": {
+      "text": "More names of David’s mighty men, including Uriah the Hittite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is longer than 60 characters and is not a complete sentence.",
+        "suggestion": "David’s mighty men include Uriah the Hittite"
+      }
+    },
+    "1CH.11.42-44": {
+      "text": "More mighty men are named, with Adina the Reubenite",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.11.45-47": {
+      "text": "The last names in the list of David’s mighty men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a complete sentence rather than a phrase.",
+        "suggestion": "The list of David’s mighty men ends with these names"
+      }
+    },
+    "1CH.12.1-2": {
+      "text": "Skilled Benjamite archers come to David at Ziklag",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.3-4": {
+      "text": "The names of Benjamite men who joined David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a complete sentence rather than a phrase.",
+        "suggestion": "Men from Benjamin who joined David are named"
+      }
+    },
+    "1CH.12.5-7": {
+      "text": "More men who joined David, including Korahites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a complete sentence rather than a phrase.",
+        "suggestion": "More men join David, including Korahites"
+      }
+    },
+    "1CH.12.8-8": {
+      "text": "Brave Gadite fighters join David in the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.9-13": {
+      "text": "The eleven Gadite leaders are named in order",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.14-15": {
+      "text": "The Gadite commanders cross the Jordan and chase enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.16-17": {
+      "text": "David meets men from Benjamin and Judah and warns them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.18-18": {
+      "text": "Amasai promises loyalty to David, and David accepts the men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.19-20": {
+      "text": "Men from Manasseh leave Saul and join David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.21-22": {
+      "text": "The Manasseh men help David, and his army grows large",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.23-25": {
+      "text": "Armed men from Judah and Simeon come to David at Hebron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.26-28": {
+      "text": "Men from Levi, with Jehoiada and Zadok, join David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.29-31": {
+      "text": "Men from Benjamin, Ephraim and half of Manasseh join David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.32-33": {
+      "text": "Men from Issachar and Zebulun come to support David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.34-35": {
+      "text": "Soldiers from Naphtali and Dan join David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.36-37": {
+      "text": "Soldiers from Asher and east of the Jordan join David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.12.38-40": {
+      "text": "All Israel makes David king and celebrates at Hebron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.1-4": {
+      "text": "David asks Israel’s leaders to help bring back the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.5-6": {
+      "text": "David and Israel go to Kiriath-jearim for the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.7-7": {
+      "text": "The Israelites carry the ark on a new cart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.8-8": {
+      "text": "David and the Israelites celebrate with music before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.9-11": {
+      "text": "Uzzah touches the ark and God strikes him dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.13.12-14": {
+      "text": "David fears God and leaves the ark with Obed-edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.14.1-2": {
+      "text": "King Hiram helps David, who knows God made him king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.14.3-7": {
+      "text": "David has more wives and children in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.14.8-9": {
+      "text": "The Philistines go out to find David and raid a valley",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.14.10-12": {
+      "text": "God tells David to attack, and he defeats the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.14.13-14": {
+      "text": "The Philistines raid again, and God tells David how to attack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is longer than 60 characters.",
+        "suggestion": "God tells David how to attack the Philistines again"
+      }
+    },
+    "1CH.14.15-17": {
+      "text": "God helps David defeat the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.1-3": {
+      "text": "David prepares a place for the ark and gathers Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.4-6": {
+      "text": "David gathers the Kohathites and Merarites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.7-10": {
+      "text": "David gathers four more Levite families",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.11-12": {
+      "text": "David tells the Levite leaders to make themselves holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.13-13": {
+      "text": "David says God was angry because they did not ask him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.14-15": {
+      "text": "The Levites carry the ark on their shoulders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.16-18": {
+      "text": "David has the Levites appoint singers and gatekeepers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.19-21": {
+      "text": "The Levite musicians are given their instruments",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.22-24": {
+      "text": "David names a music director, guards and trumpeters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text does not mention David naming or appointing these people.",
+        "suggestion": "A music director, ark guards and trumpeters are listed"
+      }
+    },
+    "1CH.15.25-26": {
+      "text": "Israel joyfully brings the ark from Obed-edom’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.15.27-28": {
+      "text": "All Israel brings up the ark with shouting and music",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.1-3": {
+      "text": "David puts the ark in the tent and gives out food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.4-6": {
+      "text": "David appoints Levites to serve before the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.7-9": {
+      "text": "David gives Asaph a song of thanks to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.10-11": {
+      "text": "David urges Israel to praise the LORD and seek him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.12-14": {
+      "text": "David tells Israel to remember God’s wonders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.15-18": {
+      "text": "David tells Israel to remember God’s covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.19-22": {
+      "text": "God protected Israel when they were few",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.23-24": {
+      "text": "David calls all the earth to sing to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.25-27": {
+      "text": "The LORD is great and made the heavens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.28-29": {
+      "text": "David tells all nations to give the LORD glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.30-31": {
+      "text": "David says all the earth should tremble and rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.32-33": {
+      "text": "The sea, fields and trees praise the LORD who will judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.34-35": {
+      "text": "David tells Israel to thank God and ask him to save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.36-36": {
+      "text": "David blesses God and the people say Amen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.37-39": {
+      "text": "David appoints Levites and priests to serve daily",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.40-41": {
+      "text": "Priests give daily offerings and thank the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.16.42-43": {
+      "text": "Musicians and gatekeepers stay, and the people go home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.1-2": {
+      "text": "David wants to build a house for the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.3-6": {
+      "text": "God tells Nathan that David must not build a house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.7-8": {
+      "text": "God reminds David how he raised him up and was with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.9-10": {
+      "text": "God promises Israel a safe place and a house for David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.11-12": {
+      "text": "God promises David a son who will build God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.13-15": {
+      "text": "God promises to be a father to David’s son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.16-18": {
+      "text": "David asks why God has honored him so much",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.19-21": {
+      "text": "David praises God as unlike any other god",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.22-24": {
+      "text": "David asks God to keep his promise forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.17.25-27": {
+      "text": "David thanks God and asks him to bless his house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.18.1-2": {
+      "text": "David defeats the Philistines and the Moabites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.18.3-4": {
+      "text": "David defeats King Hadadezer and takes his chariots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.18.5-6": {
+      "text": "David defeats the Arameans of Damascus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.18.7-8": {
+      "text": "David takes gold and bronze from Hadadezer’s cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.18.9-11": {
+      "text": "King Tou sends gifts and David dedicates them to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "In sentence case, only the first letter of a proper name should be capitalised, not all-caps LORD.",
+        "suggestion": "King Tou sends gifts and David dedicates them to the Lord"
+      }
+    },
+    "1CH.18.12-13": {
+      "text": "Abishai defeats the Edomites for David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.1-3": {
+      "text": "Ammonite princes tell Hanun that David’s men are spies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.4-5": {
+      "text": "Hanun shames David’s men and David tells them to wait",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.6-7": {
+      "text": "The Ammonites hire chariots and soldiers to fight David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.8-9": {
+      "text": "Joab and the army face the Ammonites and their allies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.10-11": {
+      "text": "Joab divides his army to fight Arameans and Ammonites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.12-13": {
+      "text": "Joab and Abishai promise to help each other fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Only Joab speaks in these verses; Abishai does not make a promise.",
+        "suggestion": "Joab tells Abishai that they will help each other"
+      }
+    },
+    "1CH.19.14-15": {
+      "text": "The Arameans and the Ammonites flee from Joab and Abishai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.16-17": {
+      "text": "The Arameans gather again and David fights them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.19.18-19": {
+      "text": "David defeats the Arameans and they make peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.20.1-1": {
+      "text": "Joab attacks and destroys Rabbah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.20.2-3": {
+      "text": "David takes the crown of Rabbah and its plunder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 2 and misses David putting the people to work in verse 3.",
+        "suggestion": "David plunders Rabbah and puts its people to work"
+      }
+    },
+    "1CH.20.4-5": {
+      "text": "Israel’s warriors kill two Philistine fighters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.20.6-8": {
+      "text": "Jonathan kills a tall Philistine man in Gath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.1-3": {
+      "text": "David orders a census and Joab objects",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.4-5": {
+      "text": "Joab counts the fighting men and reports to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.6-6": {
+      "text": "Joab does not count Levi and Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.7-8": {
+      "text": "God strikes Israel and David confesses his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.9-10": {
+      "text": "God sends Gad to offer David three choices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.11-12": {
+      "text": "Gad tells David to choose famine, enemies, or plague",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.13-13": {
+      "text": "David chooses to fall into the LORD’s hands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.14-15": {
+      "text": "The LORD sends a plague, then stops the angel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.16-17": {
+      "text": "David sees the angel and prays for the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.18-20": {
+      "text": "Gad tells David to build an altar at Ornan’s floor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.21-22": {
+      "text": "David asks Ornan to sell him the threshing floor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.23-24": {
+      "text": "David insists on paying Ornan the full price",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.25-27": {
+      "text": "David buys the site and offers sacrifices; the plague ends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.21.28-30": {
+      "text": "David sacrifices at Ornan’s floor, afraid of the angel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.1-2": {
+      "text": "David chooses the temple site and gathers stonecutters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.3-5": {
+      "text": "David gathers iron, bronze and cedar for the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.6-8": {
+      "text": "David tells Solomon he must build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.9-10": {
+      "text": "God promises that Solomon will build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.11-13": {
+      "text": "David urges Solomon to obey God and be strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.14-14": {
+      "text": "David tells Solomon about the gold, silver and bronze",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.15-16": {
+      "text": "David tells Solomon to begin work with skilled workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.22.17-19": {
+      "text": "David orders Israel’s leaders to help Solomon build",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.1-3": {
+      "text": "David makes Solomon king and counts the Levites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.4-6": {
+      "text": "David assigns the Levites their work and divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.7-9": {
+      "text": "The Gershonite families of Ladan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a phrase rather than a full sentence statement.",
+        "suggestion": "The Gershonite families of Ladan are listed"
+      }
+    },
+    "1CH.23.10-11": {
+      "text": "The sons of Shimei in the Gershonite family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a phrase rather than a full sentence statement.",
+        "suggestion": "The sons of Shimei are listed by family"
+      }
+    },
+    "1CH.23.12-14": {
+      "text": "The Kohathites: Aaron’s family is set apart for service",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.15-18": {
+      "text": "The descendants of Moses and Izhar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a phrase rather than a full sentence statement.",
+        "suggestion": "The descendants of Moses and Izhar are listed"
+      }
+    },
+    "1CH.23.19-20": {
+      "text": "The sons of Hebron and Uzziel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a phrase rather than a full sentence statement.",
+        "suggestion": "The sons of Hebron and Uzziel are listed"
+      }
+    },
+    "1CH.23.24-26": {
+      "text": "The Levites no longer need to carry the tabernacle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.27-29": {
+      "text": "The Levites help Aaron’s descendants in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.30-31": {
+      "text": "The Levites give thanks to the LORD each day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.23.32-32": {
+      "text": "The Levites care for the Tent and serve Aaron’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.1-3": {
+      "text": "David divides Aaron’s descendants for their service",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.4-5": {
+      "text": "Leaders of Eleazar and Ithamar are chosen by lot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.6-6": {
+      "text": "Shemaiah the scribe writes down the priests’ names",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.7-10": {
+      "text": "The lots fall to the first eight priest divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.11-14": {
+      "text": "The lots fall to the next eight priest divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.15-18": {
+      "text": "Lots are cast for priest divisions 17 to 24",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.19-19": {
+      "text": "The priests serve in this order, as the LORD commanded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.20-22": {
+      "text": "Descendants of Amram and Izhar are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.23-25": {
+      "text": "Descendants of Hebron and Uzziel are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.26-28": {
+      "text": "Descendants of Merari are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.24.29-31": {
+      "text": "The Levites also cast lots before King David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.1-3": {
+      "text": "David sets apart men to prophesy with music",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.4-5": {
+      "text": "Heman had fourteen sons and three daughters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.6-8": {
+      "text": "The 288 trained musicians cast lots for duties",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.9-12": {
+      "text": "Lots choose the first five music divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.13-16": {
+      "text": "Lots choose music divisions 6 to 9",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.17-20": {
+      "text": "Lots choose music divisions 10 to 13",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.21-24": {
+      "text": "Lots choose music divisions 14 to 17",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.25-28": {
+      "text": "Lots choose music divisions 18 to 21",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.25.29-31": {
+      "text": "Lots choose music divisions 22 to 24",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.1-3": {
+      "text": "Meshelemiah and his sons are gatekeepers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.4-6": {
+      "text": "Obed-edom’s sons are gatekeepers, blessed by God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.7-9": {
+      "text": "62 men of Obed-edom and 18 of Meshelemiah serve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.10-11": {
+      "text": "Hosah the Merarite and his 13 sons and brothers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence or statement because it has no verb.",
+        "suggestion": "Hosah and his sons and brothers are gatekeepers"
+      }
+    },
+    "1CH.26.12-14": {
+      "text": "Gatekeepers cast lots for the East and North Gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.15-16": {
+      "text": "Lots assign the South and West gates and storehouses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.17-19": {
+      "text": "Levites guard the gates and storehouse each day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.20-22": {
+      "text": "Descendants of Ladan guard the temple treasuries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.23-25": {
+      "text": "Shebuel is the officer over the treasuries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.26-28": {
+      "text": "Shelomith cares for the things dedicated to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.29-30": {
+      "text": "Chenaniah and Hashabiah serve as officers over Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.26.31-32": {
+      "text": "David appoints Jerijah’s men over the eastern tribes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.1-3": {
+      "text": "Jashobeam leads the first month’s army division",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.4-6": {
+      "text": "Dodai and Benaiah lead the second and third divisions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.7-9": {
+      "text": "Asahel, Shamhuth, and Ira lead months four to six",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.10-12": {
+      "text": "Helez, Sibbecai, and Abiezer lead months seven to nine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.13-15": {
+      "text": "Maharai, Benaiah, and Heldai lead months ten to twelve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.16-18": {
+      "text": "Officers are named over six of the tribes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.19-22": {
+      "text": "Officers are named over the other tribes of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.23-24": {
+      "text": "Joab begins to count the men but does not finish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.25-27": {
+      "text": "Men are put over David’s storehouses and vineyards",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.28-29": {
+      "text": "Men are put over David’s olive trees, oil and herds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.27.30-31": {
+      "text": "Men are put over David’s camels, donkeys and flocks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.1-1": {
+      "text": "David calls all the leaders of Israel to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.2-3": {
+      "text": "David says God did not allow him to build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.4-5": {
+      "text": "David says God chose Solomon to sit on the throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.6-7": {
+      "text": "God promises Solomon’s kingdom will last if he obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.8-8": {
+      "text": "David tells Israel to keep all God’s commands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.9-10": {
+      "text": "David urges Solomon to serve God and build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.11-12": {
+      "text": "David gives Solomon the plans for the temple buildings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.13-15": {
+      "text": "Plans for the priests’ service and the temple articles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase instead of a complete sentence.",
+        "suggestion": "David gives plans for the priests and temple articles"
+      }
+    },
+    "1CH.28.16-17": {
+      "text": "The plans give the weight of tables, forks and bowls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.18-19": {
+      "text": "David says God gave him the plans in writing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.28.20-21": {
+      "text": "David tells Solomon to be strong and do the work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.1-2": {
+      "text": "David says he has gathered materials for the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.3-5": {
+      "text": "David gives his own gold and silver and asks for gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.6-7": {
+      "text": "The leaders give gold, silver, bronze and iron willingly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.8-9": {
+      "text": "The people and David rejoice at the leaders’ gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.10-11": {
+      "text": "David praises the LORD for his greatness and power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.12-13": {
+      "text": "David thanks God, who gives riches, honor and strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.14-15": {
+      "text": "David says everything the people gave came from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.16-17": {
+      "text": "David says he gave willingly and the people did too",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.18-19": {
+      "text": "David prays that the people and Solomon will be faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.20-20": {
+      "text": "The assembly blesses the LORD and bows down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.21-21": {
+      "text": "The people offer a thousand bulls, rams and lambs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.22-23": {
+      "text": "The people make Solomon king a second time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.24-25": {
+      "text": "All Israel’s leaders promise loyalty to King Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.26-28": {
+      "text": "David reigns forty years and dies; Solomon rules next",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1CH.29.29-30": {
+      "text": "David’s acts are written in the records of three prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
