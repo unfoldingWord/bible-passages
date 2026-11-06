@@ -1,0 +1,3669 @@
+{
+  "language": "en",
+  "book": "PRO",
+  "bible": "bsb-pro",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793910988-IGGWpaMGCMObZdoNrgdL",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5028,
+      "completionTokens": 4356,
+      "reasoningTokens": 3392,
+      "cost": 0.053616,
+      "ms": 28915
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911017-52GPeyH1l9TtkLQ0gpAS",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4836,
+      "completionTokens": 5161,
+      "reasoningTokens": 4217,
+      "cost": 0.061282,
+      "ms": 36537
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911053-7QURgiTUKZRZsUyCjUWV",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4889,
+      "completionTokens": 1007,
+      "reasoningTokens": 0,
+      "cost": 0.019848,
+      "ms": 6626
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911060-fuXkzBAF7a4Kz8hDgNqE",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5235,
+      "completionTokens": 4074,
+      "reasoningTokens": 3082,
+      "cost": 0.05121,
+      "ms": 27295
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911087-qBxaUThZLbB7qsngjlwj",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4928,
+      "completionTokens": 5818,
+      "reasoningTokens": 4837,
+      "cost": 0.068036,
+      "ms": 37005
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911125-hpAgxskVC4dUHHDf1YUR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4873,
+      "completionTokens": 4893,
+      "reasoningTokens": 3872,
+      "cost": 0.058676,
+      "ms": 31490
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911156-Rjg3CKU1WH0DdcIOfOAg",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5029,
+      "completionTokens": 7291,
+      "reasoningTokens": 6280,
+      "cost": 0.082968,
+      "ms": 46499
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911203-iC6zKto2T4gku4dKLSlf",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4881,
+      "completionTokens": 6130,
+      "reasoningTokens": 5108,
+      "cost": 0.071062,
+      "ms": 38135
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911241-4KO5d74LzPoxFIdKfIia",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4801,
+      "completionTokens": 7020,
+      "reasoningTokens": 6008,
+      "cost": 0.079802,
+      "ms": 43313
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911284-O1JmvavDuJorEtfobWk5",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4764,
+      "completionTokens": 979,
+      "reasoningTokens": 0,
+      "cost": 0.019318,
+      "ms": 6745
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911291-m7wr2ywu1gd2orZRgwNw",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4942,
+      "completionTokens": 994,
+      "reasoningTokens": 0,
+      "cost": 0.019824,
+      "ms": 7093
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911298-1TXbPXzhH3ZaPnECHhK5",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5069,
+      "completionTokens": 6295,
+      "reasoningTokens": 5276,
+      "cost": 0.073088,
+      "ms": 44106
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911342-AWhaE8gu3d25MvkoTIqE",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5079,
+      "completionTokens": 3127,
+      "reasoningTokens": 2179,
+      "cost": 0.041428,
+      "ms": 20686
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911363-gUM76qXeZYh1MnE1xvRw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4266,
+      "completionTokens": 6162,
+      "reasoningTokens": 5294,
+      "cost": 0.026307,
+      "ms": 32264
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911395-QGSA6AN60tKc0XNkTklz",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4189,
+      "completionTokens": 4689,
+      "reasoningTokens": 3823,
+      "cost": 0.0207255,
+      "ms": 31691
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911427-LqKiKpKZRw0RxYLoNeJE",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4254,
+      "completionTokens": 14516,
+      "reasoningTokens": 13476,
+      "cost": 0.0576255,
+      "ms": 60057
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911487-UOCX8L1C7VAhooY2AzEW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4393,
+      "completionTokens": 22432,
+      "reasoningTokens": 21309,
+      "cost": 0.08741475,
+      "ms": 166076
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911653-6JinpoKsaaNtQZ6uDEAO",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4192,
+      "completionTokens": 18689,
+      "reasoningTokens": 16859,
+      "cost": 0.07322775,
+      "ms": 103188
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911756-Jh6ClvoFRFq9Md8TvXpH",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4202,
+      "completionTokens": 13533,
+      "reasoningTokens": 11973,
+      "cost": 0.05390025,
+      "ms": 55540
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911812-mDWdBMagvRJAhx5WH0Lm",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4318,
+      "completionTokens": 9291,
+      "reasoningTokens": 7849,
+      "cost": 0.03807975,
+      "ms": 66602
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911878-m281kYBzxuEOarzZmjMw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4290,
+      "completionTokens": 5558,
+      "reasoningTokens": 4034,
+      "cost": 0.02406,
+      "ms": 39955
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911918-kn2H0u2FlbiDN9eoX8uW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4241,
+      "completionTokens": 10809,
+      "reasoningTokens": 8822,
+      "cost": 0.0437145,
+      "ms": 71797
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911990-MiSaALK0fWbntCgEZ1GJ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4262,
+      "completionTokens": 2759,
+      "reasoningTokens": 1156,
+      "cost": 0.01354275,
+      "ms": 18047
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912008-XlgC0YmXHlKVqiqlJy6Q",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4309,
+      "completionTokens": 10315,
+      "reasoningTokens": 8803,
+      "cost": 0.041913,
+      "ms": 59898
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912068-m8E9WsrodI3aJvUYwRtS",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4430,
+      "completionTokens": 12283,
+      "reasoningTokens": 10856,
+      "cost": 0.04938375,
+      "ms": 67375
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912136-mVITkINgKgvvt8lbH3TH",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4483,
+      "completionTokens": 12877,
+      "reasoningTokens": 11789,
+      "cost": 0.051651,
+      "ms": 60302
+    }
+  ],
+  "titles": {
+    "PRO.1.1-3": {
+      "text": "Solomon’s proverbs give wisdom and teach right living",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.4-6": {
+      "text": "Proverbs teach the simple and the young; the wise listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.7-7": {
+      "text": "Fearing the LORD begins knowledge, but fools refuse wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.8-9": {
+      "text": "A son must listen to his father and mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.10-11": {
+      "text": "A son must not follow sinners who entice him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.12-14": {
+      "text": "Sinners invite the son to share stolen goods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.15-17": {
+      "text": "A son must stay away from the road of sinners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.18-19": {
+      "text": "Greedy sinners bring death on themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.20-22": {
+      "text": "Wisdom calls in public to the simple, scoffers and fools",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.23-25": {
+      "text": "Wisdom says people refused her call and correction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.26-27": {
+      "text": "Wisdom will mock the fools when disaster comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.28-30": {
+      "text": "Wisdom will not answer those who hated knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.1.31-33": {
+      "text": "Fools face ruin, but those who listen live safely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.1-2": {
+      "text": "A father urges his son to accept wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.3-5": {
+      "text": "Seeking wisdom like treasure leads to knowing God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.6-8": {
+      "text": "The LORD gives wisdom and protects the upright",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.9-10": {
+      "text": "Wisdom lets the son know every good path",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.11-13": {
+      "text": "Wisdom will guard the son from evil men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.14-15": {
+      "text": "Wisdom saves the son from people who love evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.16-17": {
+      "text": "Wisdom saves the son from the forbidden woman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.18-19": {
+      "text": "The forbidden woman’s house leads to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.2.20-22": {
+      "text": "The upright will keep the land, but the wicked lose it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.1-2": {
+      "text": "Keeping the father’s teaching brings long life and peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.3-4": {
+      "text": "A son must keep loving devotion and faithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.5-6": {
+      "text": "The son should trust the LORD, not his own understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.7-8": {
+      "text": "A son should fear the LORD and turn from evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.9-10": {
+      "text": "A son should honor the LORD with his wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.11-12": {
+      "text": "A son must accept the LORD’s discipline",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.13-14": {
+      "text": "Whoever finds wisdom is blessed; it is better than silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.15-16": {
+      "text": "Wisdom is worth more than rubies and brings long life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.17-18": {
+      "text": "Wisdom’s ways are pleasant and give life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.19-20": {
+      "text": "The LORD made the earth and heavens by wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.21-22": {
+      "text": "A son must keep sound judgment and discernment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.23-24": {
+      "text": "Wisdom gives the son safety and sweet sleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.25-26": {
+      "text": "The LORD keeps a wise person safe from danger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.27-28": {
+      "text": "People should help a neighbor right away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.29-30": {
+      "text": "People should not harm or falsely accuse a neighbor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.31-32": {
+      "text": "The LORD detests the perverse but befriends the upright",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.33-34": {
+      "text": "The LORD curses the wicked and blesses the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.3.35-35": {
+      "text": "The wise gain honor but fools receive shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.1-2": {
+      "text": "A father urges his sons to listen to his teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.3-4": {
+      "text": "A father tells what his father taught him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.5-6": {
+      "text": "The father tells his sons to value wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.7-9": {
+      "text": "Wisdom is supreme and brings honor and beauty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.10-12": {
+      "text": "The father promises a long life on wisdom’s straight path",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.13-15": {
+      "text": "Sons must keep instruction and avoid the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.16-17": {
+      "text": "Wicked people live by doing evil and violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.18-19": {
+      "text": "The righteous walk in light, the wicked in darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.20-21": {
+      "text": "A father tells his son to keep his words in his heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.22-23": {
+      "text": "A son must guard his heart, the source of life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.24-25": {
+      "text": "A son must speak honestly and look straight ahead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.4.26-27": {
+      "text": "A son must walk a straight path and turn from evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.1-2": {
+      "text": "A father urges his son to listen to his wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.3-4": {
+      "text": "The forbidden woman’s sweet words end in bitterness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.5-6": {
+      "text": "The forbidden woman’s path leads to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.7-8": {
+      "text": "Sons must stay far from the forbidden woman’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.9-10": {
+      "text": "A man could lose his strength and wealth to strangers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.11-12": {
+      "text": "A man will groan at the end for hating discipline",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.13-14": {
+      "text": "A man regrets that he did not listen to his teachers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.15-17": {
+      "text": "A husband should stay faithful to his own wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.18-19": {
+      "text": "A husband should rejoice in the wife of his youth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.20-21": {
+      "text": "The LORD sees all, so a son should avoid an adulteress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.5.22-23": {
+      "text": "The wicked man is trapped by his own sin and folly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.1-2": {
+      "text": "A son is trapped by a pledge for a neighbor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.3-3": {
+      "text": "A son should humbly ask the neighbor to free him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.4-5": {
+      "text": "A son must hurry to free himself like a gazelle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.6-8": {
+      "text": "A lazy person should learn wisdom from the ant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.9-11": {
+      "text": "A lazy person who sleeps too long will become poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.12-13": {
+      "text": "A wicked man shows his evil by his mouth and gestures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.14-15": {
+      "text": "A man who plans evil and causes quarrels will suddenly fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.16-16": {
+      "text": "The writer says there are seven things the LORD hates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.17-19": {
+      "text": "The writer lists seven things the LORD hates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.20-21": {
+      "text": "A father urges his son to keep his parents’ teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.22-23": {
+      "text": "Parents’ teaching guides a son and leads him to life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.24-25": {
+      "text": "Teaching keeps a son from the adulteress and her beauty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.26-27": {
+      "text": "Adultery costs a man his life, like playing with fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.28-29": {
+      "text": "A man who sleeps with another man’s wife will be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.30-31": {
+      "text": "A thief must pay back much, even if he stole from hunger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.32-33": {
+      "text": "A man who commits adultery destroys himself and is shamed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.6.34-35": {
+      "text": "A jealous husband will show no mercy and accept no payment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.1-3": {
+      "text": "A father urges his son to treasure his teaching",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.4-5": {
+      "text": "A son should love wisdom to be kept from the adulteress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.6-7": {
+      "text": "The writer sees a young man without judgment from his window",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.8-9": {
+      "text": "The young man walks toward the adulteress’s house at dusk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.10-12": {
+      "text": "A woman dressed like a prostitute comes out to meet the young man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 65 characters, exceeding the 60-character limit.",
+        "suggestion": "A woman dressed like a prostitute meets the young man"
+      }
+    },
+    "PRO.7.13-15": {
+      "text": "The woman kisses the young man and says she has been seeking him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 64 characters, exceeding the 60-character limit.",
+        "suggestion": "The woman kisses the young man and says she sought him"
+      }
+    },
+    "PRO.7.16-18": {
+      "text": "The woman invites the young man to her perfumed bed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.19-21": {
+      "text": "The woman says her husband is away and lures the young man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.22-23": {
+      "text": "The young man follows her like an animal going to a trap",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.24-25": {
+      "text": "The father urges his sons not to turn to her ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.7.26-27": {
+      "text": "The adulteress has brought many to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.1-3": {
+      "text": "Wisdom calls out loudly in public places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.4-5": {
+      "text": "Wisdom calls all people to learn and gain understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.6-7": {
+      "text": "Wisdom says her words are noble, true and right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.8-9": {
+      "text": "Wisdom says all her words are righteous and plain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.10-11": {
+      "text": "Wisdom is worth more than silver, gold and rubies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.12-13": {
+      "text": "Wisdom lives with good sense and hates evil and pride",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.14-16": {
+      "text": "Wisdom gives kings and rulers strength to rule justly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.17-18": {
+      "text": "Wisdom loves those who seek her and gives riches and honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.19-21": {
+      "text": "Wisdom’s gifts are better than gold and fill her lovers’ treasuries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 67 characters, exceeding the 60-character limit.",
+        "suggestion": "Wisdom’s fruit is better than gold and fills treasuries"
+      }
+    },
+    "PRO.8.22-23": {
+      "text": "Wisdom says the LORD made her first, before the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.24-25": {
+      "text": "Wisdom says she was born before the seas and mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.26-27": {
+      "text": "Wisdom was there before God made the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.28-29": {
+      "text": "Wisdom was there when God set the sea’s limits",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.30-31": {
+      "text": "Wisdom rejoices beside God and delights in people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.32-34": {
+      "text": "Wisdom tells her sons to listen and be wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.8.35-36": {
+      "text": "Finding Wisdom brings life; hating Wisdom brings death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.1-2": {
+      "text": "Wisdom builds her house and prepares a feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.3-4": {
+      "text": "Wisdom invites people who lack judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.5-6": {
+      "text": "Wisdom invites the simple to eat, leave folly and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.7-9": {
+      "text": "Wisdom says to correct wise people, not mockers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.10-12": {
+      "text": "Fear of the LORD begins wisdom and brings long life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.13-15": {
+      "text": "Folly is loud and calls to people passing by",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.9.16-18": {
+      "text": "Folly invites the simple, but her guests are dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.1-3": {
+      "text": "Wise sons bring joy; the LORD feeds the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.4-5": {
+      "text": "Hard work brings wealth; lazy sons bring shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.6-7": {
+      "text": "People remember the righteous, but not the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "It leaves out verse 6 and says the wicked are not remembered, which the text does not say.",
+        "suggestion": "The righteous are blessed, but the name of the wicked rots"
+      }
+    },
+    "PRO.10.8-9": {
+      "text": "Wise people accept commands and live with integrity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.10-11": {
+      "text": "Foolish lips bring ruin; the righteous speak life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.12-13": {
+      "text": "Hatred stirs up conflict, but love forgives wrongs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes verse 12 and leaves out verse 13.",
+        "suggestion": "Love covers wrongs, and the discerning speak wisdom"
+      }
+    },
+    "PRO.10.14-15": {
+      "text": "Wise people store knowledge; fools invite ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only describes verse 14 and leaves out verse 15 on wealth and poverty.",
+        "suggestion": "Wise people store knowledge; wealth protects the rich"
+      }
+    },
+    "PRO.10.16-17": {
+      "text": "The righteous find life by accepting correction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.18-19": {
+      "text": "Slander is foolish, and holding back words is wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.20-21": {
+      "text": "The righteous speak words that help many people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.22-23": {
+      "text": "The LORD’s blessing enriches; fools enjoy shameful acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.24-25": {
+      "text": "The righteous are secure, but the wicked are not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.26-27": {
+      "text": "A lazy worker annoys; fearing the LORD gives long life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.28-30": {
+      "text": "The righteous have hope and safety; the wicked do not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.10.31-32": {
+      "text": "The righteous speak wisely; the wicked speak wrongly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.1-2": {
+      "text": "The LORD likes honest scales; pride brings disgrace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.3-4": {
+      "text": "Integrity guides the upright; riches cannot save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.5-6": {
+      "text": "Righteousness saves the upright; the wicked fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.7-8": {
+      "text": "The hope of the wicked dies; the righteous are rescued",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.9-11": {
+      "text": "A city rejoices when the righteous thrive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 10, leaving out how words rescue or destroy in verses 9 and 11.",
+        "suggestion": "The righteous build up a city, but the wicked destroy it"
+      }
+    },
+    "PRO.11.12-13": {
+      "text": "Wise people stay silent; gossips reveal secrets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.14-14": {
+      "text": "A nation needs guidance from many counselors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.15-16": {
+      "text": "Guaranteeing a stranger’s debt brings harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 15 and leaves out verse 16.",
+        "suggestion": "Surety brings harm; a gracious woman gains honor"
+      }
+    },
+    "PRO.11.17-18": {
+      "text": "Kindness helps a person, but cruelty brings trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 17 and leaves out verse 18.",
+        "suggestion": "Kindness brings good; righteousness reaps a reward"
+      }
+    },
+    "PRO.11.19-20": {
+      "text": "God delights in the blameless, not the perverse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 20 and leaves out verse 19.",
+        "suggestion": "Righteousness brings life; the LORD loves the blameless"
+      }
+    },
+    "PRO.11.21-22": {
+      "text": "The wicked will be punished; the righteous will escape",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 21 and leaves out verse 22.",
+        "suggestion": "The wicked are punished; beauty needs discretion"
+      }
+    },
+    "PRO.11.23-24": {
+      "text": "Giving freely leads to gain; holding back leads to poverty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 24 and leaves out verse 23.",
+        "suggestion": "The righteous desire good; giving freely brings gain"
+      }
+    },
+    "PRO.11.25-26": {
+      "text": "The generous prosper, but people curse a grain hoarder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.27-28": {
+      "text": "Seeking good brings favor; trusting riches brings a fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.29-29": {
+      "text": "Whoever troubles his family gains nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.11.30-31": {
+      "text": "The righteous bear good fruit; sinners are repaid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.1-2": {
+      "text": "Loving correction is wise; the LORD condemns evil plans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.3-4": {
+      "text": "The righteous stand; a good wife is a crown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.5-6": {
+      "text": "The righteous plan justly; wicked words lie in wait",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.7-8": {
+      "text": "The wicked fall, but the righteous house stands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 7 and leaves out verse 8.",
+        "suggestion": "The righteous house stands, and wisdom brings praise"
+      }
+    },
+    "PRO.12.9-10": {
+      "text": "A humble life with food is better than empty pride",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 9 and leaves out verse 10.",
+        "suggestion": "Humility with food is good; the righteous care for animals"
+      }
+    },
+    "PRO.12.11-12": {
+      "text": "Hard work brings food; chasing fantasies lacks judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 11 and leaves out verse 12.",
+        "suggestion": "Hard work brings food; the righteous flourish"
+      }
+    },
+    "PRO.12.13-14": {
+      "text": "Evil speech traps people; good speech brings good things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.15-16": {
+      "text": "A wise man listens to advice; a fool shows anger at once",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.12.17-18": {
+      "text": "Careless words wound, but wise words heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 18 and leaves out verse 17.",
+        "suggestion": "Truth declares what is right; wise words bring healing"
+      }
+    },
+    "PRO.12.19-20": {
+      "text": "True words last; lies last only a moment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 19 and leaves out verse 20.",
+        "suggestion": "Truthful words endure; peacemakers find joy"
+      }
+    },
+    "PRO.12.21-22": {
+      "text": "The LORD hates lying lips and delights in faithful people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 22 and leaves out verse 21.",
+        "suggestion": "The righteous avoid harm; the LORD hates lying lips"
+      }
+    },
+    "PRO.12.23-24": {
+      "text": "Hard workers will rule, but lazy people do forced labor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 24 and leaves out verse 23.",
+        "suggestion": "The shrewd hide knowledge; the diligent will rule"
+      }
+    },
+    "PRO.12.25-26": {
+      "text": "A good word cheers a heart that worries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 25 and leaves out verse 26.",
+        "suggestion": "A good word cheers the heart; choose friends carefully"
+      }
+    },
+    "PRO.12.27-28": {
+      "text": "Lazy people lose out; righteousness leads to life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.13.1-2": {
+      "text": "A wise son accepts his father’s discipline",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 1 and leaves out verse 2.",
+        "suggestion": "A wise son heeds discipline; good words bring good things"
+      }
+    },
+    "PRO.13.3-4": {
+      "text": "Careful speech protects life; the lazy get nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.13.5-6": {
+      "text": "The righteous hate lies; the wicked bring shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 5 and leaves out verse 6.",
+        "suggestion": "Righteousness guards integrity; wickedness brings shame"
+      }
+    },
+    "PRO.13.7-8": {
+      "text": "Some pretend to be rich, and others pretend to be poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 7 and leaves out verse 8.",
+        "suggestion": "Some pretend to be rich; riches can ransom a life"
+      }
+    },
+    "PRO.13.9-10": {
+      "text": "Pride causes strife, but wise people take advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 10 and leaves out verse 9.",
+        "suggestion": "The righteous shine, and wise people take advice"
+      }
+    },
+    "PRO.13.11-12": {
+      "text": "Honest work builds wealth; delayed hope hurts the heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.13.13-14": {
+      "text": "Those who respect instruction are rewarded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 13 and leaves out verse 14.",
+        "suggestion": "Instruction brings reward; wise teaching brings life"
+      }
+    },
+    "PRO.13.15-16": {
+      "text": "Wise people act with knowledge; fools show folly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 16 and leaves out verse 15.",
+        "suggestion": "Understanding wins favor; the prudent act with knowledge"
+      }
+    },
+    "PRO.13.17-18": {
+      "text": "A faithful envoy heals; ignoring correction brings shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.13.19-20": {
+      "text": "Walking with the wise makes a person wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 20 and leaves out verse 19.",
+        "suggestion": "Fools love evil, but walking with the wise brings wisdom"
+      }
+    },
+    "PRO.13.21-22": {
+      "text": "Good people leave an inheritance; sinners face disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.13.23-24": {
+      "text": "A loving father disciplines his son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 24 and leaves out verse 23 about food swept away without justice.",
+        "suggestion": "Without justice food is lost; a loving father disciplines"
+      }
+    },
+    "PRO.13.25-25": {
+      "text": "The righteous have enough to eat; the wicked go hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.1-2": {
+      "text": "A wise woman builds her house; the upright fear the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.3-4": {
+      "text": "Fools’ proud words bring punishment; oxen bring harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.5-6": {
+      "text": "An honest witness tells truth; a mocker finds no wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.7-8": {
+      "text": "Avoid fools; the prudent understand the right way",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It begins with a command that names no one.",
+        "suggestion": "The wise avoid fools; the prudent understand their way"
+      }
+    },
+    "PRO.14.9-10": {
+      "text": "Fools mock making amends; the heart knows its own pain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.11-12": {
+      "text": "A way that seems right to a man ends in death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 12 and leaves out verse 11 about the wicked and upright.",
+        "suggestion": "The upright flourish; a way that seems right ends in death"
+      }
+    },
+    "PRO.14.13-14": {
+      "text": "Laughter may hide sorrow; each one is repaid for his ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.15-16": {
+      "text": "The simple believe every word; the wise avoid evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.17-18": {
+      "text": "A quick temper leads to folly; the prudent gain knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.19-20": {
+      "text": "The poor are hated, but many love the rich",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 20 and leaves out verse 19.",
+        "suggestion": "The evil bow to the good; many people love the rich"
+      }
+    },
+    "PRO.14.21-22": {
+      "text": "Those kind to the poor are blessed; evil planners go astray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.23-24": {
+      "text": "Work brings profit, but mere talk brings poverty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 23 and leaves out verse 24.",
+        "suggestion": "Work brings profit; the crown of the wise is wealth"
+      }
+    },
+    "PRO.14.25-25": {
+      "text": "A truthful witness saves lives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.26-27": {
+      "text": "Those who fear the LORD find safety and life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.28-29": {
+      "text": "A king’s glory is many subjects; the patient understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.30-31": {
+      "text": "A calm heart gives life; oppressing the poor insults God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.14.32-33": {
+      "text": "The wicked fall by sin; the righteous have refuge in death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 32 and leaves out verse 33 about wisdom.",
+        "suggestion": "The righteous have refuge; wisdom rests with the discerning"
+      }
+    },
+    "PRO.14.34-35": {
+      "text": "Righteousness lifts a nation; a king favors a wise servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.1-2": {
+      "text": "Harsh words stir anger; the wise speak with knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.3-4": {
+      "text": "The LORD sees everywhere; a soothing tongue gives life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.5-6": {
+      "text": "A fool rejects discipline; the righteous have treasure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.7-8": {
+      "text": "The LORD hates wicked sacrifice but loves upright prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 8 and leaves out verse 7.",
+        "suggestion": "The wise speak knowledge; the LORD delights in prayer"
+      }
+    },
+    "PRO.15.9-10": {
+      "text": "The LORD loves those who pursue righteousness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 9 and leaves out verse 10.",
+        "suggestion": "The LORD loves righteousness; those who hate correction die"
+      }
+    },
+    "PRO.15.11-12": {
+      "text": "The LORD sees all hearts; a mocker hates correction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.13-14": {
+      "text": "A joyful heart brings cheer; the discerning seek knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.15-16": {
+      "text": "A cheerful heart is better than wealth with trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "It attributes the comparison in verse 16 to a cheerful heart instead of the fear of the LORD.",
+        "suggestion": "A cheerful heart feasts; fear of the LORD is better"
+      }
+    },
+    "PRO.15.17-18": {
+      "text": "Better a simple meal with love than a feast with hatred",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 17 and leaves out verse 18.",
+        "suggestion": "Love is better than hatred; patience calms a dispute"
+      }
+    },
+    "PRO.15.19-20": {
+      "text": "The upright path is a highway; a wise son brings joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.21-22": {
+      "text": "Plans fail without counsel, but succeed with many advisers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 22 and leaves out verse 21.",
+        "suggestion": "The wise walk straight; many advisers bring success"
+      }
+    },
+    "PRO.15.23-24": {
+      "text": "A fitting reply brings joy; the wise walk the path upward",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.25-26": {
+      "text": "The LORD tears down the proud and protects the widow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions verse 25 and leaves out verse 26.",
+        "suggestion": "The LORD protects the widow and loves pure words"
+      }
+    },
+    "PRO.15.27-28": {
+      "text": "Greed harms a family; the righteous think before speaking",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.29-30": {
+      "text": "The LORD hears the righteous but is far from the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions the righteous and wicked in verse 29, leaving out verse 30 about good news.",
+        "suggestion": "The LORD hears the righteous; good news cheers the heart"
+      }
+    },
+    "PRO.15.31-32": {
+      "text": "People who accept correction become wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.15.33-33": {
+      "text": "Fearing the LORD teaches wisdom, and humility brings honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.1-2": {
+      "text": "People make plans, but the LORD gives the right words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only summarizes verse 1 and does not cover verse 2 about the LORD weighing motives.",
+        "suggestion": "The LORD gives the right words and weighs human motives"
+      }
+    },
+    "PRO.16.3-4": {
+      "text": "People who commit work to the LORD will see plans succeed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It describes verse 3 but leaves out verse 4 about the LORD making everything for his purpose.",
+        "suggestion": "Commit work to the LORD; he made everything for his purpose"
+      }
+    },
+    "PRO.16.5-6": {
+      "text": "The LORD hates pride and punishes the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only pride from verse 5, omitting verse 6 on faithfulness and fearing the LORD.",
+        "suggestion": "The LORD punishes the proud; devotion atones for sin"
+      }
+    },
+    "PRO.16.7-8": {
+      "text": "The LORD gives peace to those who please him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 7 and leaves out verse 8 about righteousness being better than unjust gain.",
+        "suggestion": "The LORD gives peace; righteousness is better than wealth"
+      }
+    },
+    "PRO.16.9-10": {
+      "text": "People plan, but the LORD guides; kings must judge fairly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.11-12": {
+      "text": "The LORD wants honest scales; kings hate wicked acts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.13-14": {
+      "text": "Kings value honest words; a wise man calms a king’s anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.15-16": {
+      "text": "A king’s favor gives life; wisdom is better than gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.17-18": {
+      "text": "The upright avoid evil; pride leads to destruction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.19-20": {
+      "text": "Humility is better than sharing wealth with the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only summarizes verse 19, leaving out verse 20 about heeding instruction and trusting the LORD.",
+        "suggestion": "It is better to be humble, and blessed to trust the LORD"
+      }
+    },
+    "PRO.16.21-22": {
+      "text": "Wise people have understanding and speak pleasantly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.23-24": {
+      "text": "A wise heart guides the mouth; pleasant words heal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.25-26": {
+      "text": "A way that seems right can end in death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verse 25, omitting verse 26 about hunger driving a worker onward.",
+        "suggestion": "A false way ends in death; hunger drives a worker onward"
+      }
+    },
+    "PRO.16.27-28": {
+      "text": "Worthless people spread evil and gossips divide friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.29-30": {
+      "text": "A violent man leads his neighbor to a bad path",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only summarizes verse 29 and does not cover verse 30 about those who plot evil.",
+        "suggestion": "Violent people lead neighbors astray and plot evil"
+      }
+    },
+    "PRO.16.31-32": {
+      "text": "Gray hair is honored; patience is better than strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.16.33-33": {
+      "text": "The LORD decides the result of casting lots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.1-2": {
+      "text": "Peace is better than a feast with strife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verse 1, leaving out verse 2 about a wise servant ruling over a disgraceful son.",
+        "suggestion": "Peace is better than strife; a wise servant will rule"
+      }
+    },
+    "PRO.17.3-4": {
+      "text": "The LORD tests hearts; evil people listen to evil words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.5-6": {
+      "text": "Mocking the poor insults God; grandchildren bring honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.7-8": {
+      "text": "Fine words do not suit a fool; a bribe seems like a charm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.9-10": {
+      "text": "Covering an offense builds love; a rebuke teaches the wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.11-12": {
+      "text": "Rebels will be punished; a fool is worse than a bear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.13-14": {
+      "text": "Returning evil for good brings evil; stop quarrels early",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.15-16": {
+      "text": "The LORD hates unfair judging; fools cannot buy wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.17-18": {
+      "text": "A friend loves always; a fool pledges for a neighbor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.19-20": {
+      "text": "Loving strife and a perverse heart lead to trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.21-22": {
+      "text": "A foolish son brings grief; a joyful heart heals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.23-24": {
+      "text": "A wicked man takes bribes; a fool’s eyes wander",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.17.25-26": {
+      "text": "Foolish sons grieve fathers; do not punish the innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The second clause is an imperative that names no one rather than a statement.",
+        "suggestion": "A foolish son brings grief; punishing the innocent is wrong"
+      }
+    },
+    "PRO.17.27-28": {
+      "text": "The wise speak few words; a silent fool seems wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.1-2": {
+      "text": "A person who isolates himself follows selfish desires",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 1 but ignores verse 2 about a fool airing his opinions.",
+        "suggestion": "Selfish people isolate themselves; fools just air opinions"
+      }
+    },
+    "PRO.18.3-4": {
+      "text": "Wicked people bring contempt; wise words are deep water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.5-6": {
+      "text": "Favoring the wicked is wrong; a fool’s words bring strife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.7-8": {
+      "text": "A fool’s words ruin him, and gossip is eagerly received",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.9-10": {
+      "text": "Laziness destroys, but the righteous are safe in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.11-12": {
+      "text": "Wealth seems safe, but pride comes before a fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.13-14": {
+      "text": "Answering before listening is foolish and shameful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 13 but ignores verse 14 about enduring a broken spirit.",
+        "suggestion": "Hasty answers bring shame; a broken spirit is hard to bear"
+      }
+    },
+    "PRO.18.15-16": {
+      "text": "The wise seek knowledge; a gift opens doors for a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.17-18": {
+      "text": "Hear both sides in a dispute; casting lots ends quarrels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title begins with a command that names no one.",
+        "suggestion": "The first speaker seems right; casting lots ends quarrels"
+      }
+    },
+    "PRO.18.19-20": {
+      "text": "An offended brother is hard to win; words bring a harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.18.21-22": {
+      "text": "The tongue has power over life and death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 21 but ignores verse 22 about finding a wife.",
+        "suggestion": "Words bring life or death; finding a wife brings favor"
+      }
+    },
+    "PRO.18.23-24": {
+      "text": "The rich answer the poor harshly; a true friend stays close",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.1-2": {
+      "text": "A poor man with integrity is better than a lying fool",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 1 but ignores verse 2 about acting in haste without knowledge.",
+        "suggestion": "Integrity is better than folly, and haste brings mistakes"
+      }
+    },
+    "PRO.19.3-4": {
+      "text": "Wealth brings many friends, but the poor are deserted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 4 but ignores verse 3 about folly ruining a person’s way.",
+        "suggestion": "A man’s folly ruins him; wealth attracts many friends"
+      }
+    },
+    "PRO.19.5-6": {
+      "text": "A false witness will not go unpunished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 5 but ignores verse 6 about seeking favor through gifts.",
+        "suggestion": "A liar will be punished; gifts attract many friends"
+      }
+    },
+    "PRO.19.7-8": {
+      "text": "The poor are avoided by all, but wisdom brings success",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.9-10": {
+      "text": "A false witness will perish; luxury does not suit a fool",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.11-12": {
+      "text": "Patience overlooks offense; a king’s rage is like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.13-14": {
+      "text": "A foolish son and a quarrelsome wife bring trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 13 but ignores verse 14 about a prudent wife given by the LORD.",
+        "suggestion": "Foolish children bring ruin; a prudent wife is from the LORD"
+      }
+    },
+    "PRO.19.15-16": {
+      "text": "Laziness brings hunger; keeping commands preserves life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.17-18": {
+      "text": "Kindness to the poor is a loan to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 17 but ignores verse 18 about disciplining one’s son.",
+        "suggestion": "Kindness to the poor pleases the LORD; discipline gives hope"
+      }
+    },
+    "PRO.19.19-20": {
+      "text": "An angry man pays a penalty; the wise accept advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.21-22": {
+      "text": "The LORD’s purpose prevails over many human plans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 21 but ignores verse 22 about devotion and truthfulness.",
+        "suggestion": "The LORD’s purpose stands; honesty is better than lies"
+      }
+    },
+    "PRO.19.23-24": {
+      "text": "The fear of the LORD leads to life; the lazy man is idle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.25-25": {
+      "text": "A mocker’s punishment warns the simple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.19.26-27": {
+      "text": "A son who mistreats his parents brings shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 26 but ignores verse 27 about straying when one ignores instruction.",
+        "suggestion": "Disrespecting parents brings shame; rejecting advice misleads"
+      }
+    },
+    "PRO.19.28-29": {
+      "text": "A corrupt witness mocks justice; judgment waits for fools",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.1-2": {
+      "text": "Wine and strong drink mislead; a king’s anger is dangerous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.3-4": {
+      "text": "A fool quarrels, and the lazy man has no harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.5-6": {
+      "text": "A wise man draws out thoughts; faithful men are rare",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.7-8": {
+      "text": "A righteous man’s children are blessed; a king judges evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.9-10": {
+      "text": "No one is pure from sin; false weights are detestable",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.11-12": {
+      "text": "A young man is known by his actions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 11 but ignores verse 12 about the LORD creating ears and eyes.",
+        "suggestion": "Actions show character; the LORD made both ears and eyes"
+      }
+    },
+    "PRO.20.13-14": {
+      "text": "Love of sleep brings poverty; a buyer gloats after buying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.15-16": {
+      "text": "Wise words are rare; be careful with a stranger’s debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft includes a command that names no one.",
+        "suggestion": "Wise words are rare, and a stranger’s debt needs collateral"
+      }
+    },
+    "PRO.20.17-18": {
+      "text": "Dishonest gain turns bitter; make plans with good advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft includes a command that names no one.",
+        "suggestion": "Dishonest food turns bitter, and plans need good advice"
+      }
+    },
+    "PRO.20.19-20": {
+      "text": "Avoid a gossip; one who curses parents loses his light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft begins with a command that names no one.",
+        "suggestion": "One should avoid gossips; cursing parents brings darkness"
+      }
+    },
+    "PRO.20.21-22": {
+      "text": "Wait for the LORD instead of taking revenge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers", "style"],
+        "why": "The draft omits verse 21 and is a command that names no one.",
+        "suggestion": "Hasty wealth is not blessed, and the LORD repays evil"
+      }
+    },
+    "PRO.20.23-24": {
+      "text": "The LORD hates dishonest scales and guides people’s steps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.25-26": {
+      "text": "Do not make rash vows; a wise king punishes the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft includes a command that names no one.",
+        "suggestion": "Rash vows are a trap, and a wise king punishes the wicked"
+      }
+    },
+    "PRO.20.27-28": {
+      "text": "The LORD searches people’s hearts; kings need faithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.20.29-30": {
+      "text": "Strength honors the young and gray hair honors the old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 29 and omits verse 30.",
+        "suggestion": "Strength and age have honor, and discipline cleanses evil"
+      }
+    },
+    "PRO.21.1-2": {
+      "text": "The LORD directs the king’s heart and weighs every heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.3-4": {
+      "text": "The LORD prefers justice to sacrifice; pride is sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.5-6": {
+      "text": "Careful plans bring plenty; wealth from lies is deadly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.7-8": {
+      "text": "Violence sweeps away the wicked; the innocent live right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.9-10": {
+      "text": "Better to live on a roof than with a quarrelsome wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 9 and omits verse 10.",
+        "suggestion": "A quarrelsome wife brings grief, and the wicked crave evil"
+      }
+    },
+    "PRO.21.11-12": {
+      "text": "Punishing a mocker teaches the simple to be wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 11 and omits verse 12.",
+        "suggestion": "Punishing mockers teaches wisdom, and God ruins the wicked"
+      }
+    },
+    "PRO.21.13-14": {
+      "text": "Those who ignore the poor will not be answered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 13 and omits verse 14.",
+        "suggestion": "Ignoring the poor brings no answer, and gifts soothe anger"
+      }
+    },
+    "PRO.21.15-16": {
+      "text": "Justice brings joy to the righteous, terror to evildoers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 15 and omits verse 16.",
+        "suggestion": "Justice brings joy, but straying from wisdom brings death"
+      }
+    },
+    "PRO.21.17-18": {
+      "text": "Loving pleasure leads to poverty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 17 and omits verse 18.",
+        "suggestion": "Pleasure brings poverty, and the wicked ransom the upright"
+      }
+    },
+    "PRO.21.19-20": {
+      "text": "Better to live in the desert than with an angry wife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 19 and omits verse 20.",
+        "suggestion": "An angry wife brings grief, and fools waste their wealth"
+      }
+    },
+    "PRO.21.21-22": {
+      "text": "Pursuing righteousness and love brings life and honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 21 and omits verse 22.",
+        "suggestion": "Righteousness brings life, and wisdom takes strong cities"
+      }
+    },
+    "PRO.21.23-24": {
+      "text": "Guarding the tongue keeps a person safe from distress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 23 and omits verse 24.",
+        "suggestion": "Guarding one’s speech brings safety, but mockers are proud"
+      }
+    },
+    "PRO.21.25-26": {
+      "text": "Laziness kills, but the righteous give freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.27-28": {
+      "text": "The LORD hates the sacrifice of the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 27 and omits verse 28.",
+        "suggestion": "God hates evil sacrifices, and lying witnesses will perish"
+      }
+    },
+    "PRO.21.29-29": {
+      "text": "A wicked man is stubborn; an upright man is sure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.21.30-31": {
+      "text": "No plan can stand against the LORD; victory is his",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.1-2": {
+      "text": "A good name is better than riches; the LORD made all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.3-4": {
+      "text": "The prudent avoid danger, but the simple suffer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 3 and omits verse 4.",
+        "suggestion": "The prudent avoid danger, and fearing the LORD brings honor"
+      }
+    },
+    "PRO.22.5-6": {
+      "text": "Train a child in the right way; the perverse find thorns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft begins with a command that names no one.",
+        "suggestion": "The perverse face traps, but wise training guides a child"
+      }
+    },
+    "PRO.22.7-8": {
+      "text": "The rich rule the poor; injustice brings disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.9-10": {
+      "text": "Generous people are blessed; drive out the mocker",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft includes a command that names no one.",
+        "suggestion": "Generous people are blessed, and mockers bring conflict"
+      }
+    },
+    "PRO.22.11-12": {
+      "text": "A pure heart and kind words win the king’s friendship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 11 and omits verse 12.",
+        "suggestion": "Purity wins a king’s favor, and the LORD guards knowledge"
+      }
+    },
+    "PRO.22.13-14": {
+      "text": "A lazy man makes excuses; an adulteress is a deep pit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.15-16": {
+      "text": "Discipline drives foolishness out of a child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 15 and omits verse 16.",
+        "suggestion": "Discipline trains a child; oppressing the poor brings ruin"
+      }
+    },
+    "PRO.22.17-19": {
+      "text": "The teacher urges the reader to hear wise words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.20-21": {
+      "text": "The teacher has written thirty sayings of true counsel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.22.22-23": {
+      "text": "Do not rob or crush the poor, because the LORD defends them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "A person must not rob the poor, for the LORD defends them"
+      }
+    },
+    "PRO.22.24-25": {
+      "text": "Do not make friends with an angry man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not befriend an angry man or you will learn his ways"
+      }
+    },
+    "PRO.22.26-27": {
+      "text": "Do not promise to pay another man’s debts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not guarantee another person’s debts"
+      }
+    },
+    "PRO.22.28-29": {
+      "text": "Do not move old boundary stones; skilled workers serve kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title begins with a command that names no one.",
+        "suggestion": "Do not move boundary stones; skilled men serve kings"
+      }
+    },
+    "PRO.23.1-3": {
+      "text": "Be careful and control your appetite when eating with a ruler",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "A guest should control his appetite when dining with a ruler"
+      }
+    },
+    "PRO.23.4-5": {
+      "text": "Do not wear yourself out to get rich, for wealth flies away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not wear yourself out for riches, which fly away"
+      }
+    },
+    "PRO.23.6-8": {
+      "text": "Do not eat with a stingy man or want his food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not eat the food of a stingy man"
+      }
+    },
+    "PRO.23.9-11": {
+      "text": "Do not speak to fools or take the fields of orphans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not speak to fools or steal the fields of orphans"
+      }
+    },
+    "PRO.23.12-12": {
+      "text": "Listen to instruction and words of knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Apply your heart to instruction and words of knowledge"
+      }
+    },
+    "PRO.23.13-14": {
+      "text": "Parents should discipline a child to save him from death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.15-16": {
+      "text": "A father rejoices when his son is wise and speaks rightly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.17-18": {
+      "text": "Do not envy sinners, but always fear the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not envy sinners, but always fear the LORD"
+      }
+    },
+    "PRO.23.19-21": {
+      "text": "A son should be wise and avoid drunkards and gluttons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.22-23": {
+      "text": "Children should obey their parents and hold on to truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.24-25": {
+      "text": "Parents are glad when their son is righteous and wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.26-28": {
+      "text": "A father warns his son against prostitutes and adulteresses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.29-30": {
+      "text": "Those who linger over wine suffer woe and sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.23.31-33": {
+      "text": "Do not look at wine, for it bites like a snake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not gaze at wine, for it bites like a snake"
+      }
+    },
+    "PRO.23.34-35": {
+      "text": "A drunkard feels no pain and wants another drink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.1-2": {
+      "text": "Do not envy wicked men or want to be with them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not envy wicked men or desire their company"
+      }
+    },
+    "PRO.24.3-4": {
+      "text": "Wisdom and knowledge build a house and fill it with treasure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.5-6": {
+      "text": "Wise guidance and many counselors bring victory in war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.7-7": {
+      "text": "A fool cannot understand wisdom and has nothing to say",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.8-9": {
+      "text": "Planning evil is sin, and people hate a mocker",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.10-10": {
+      "text": "If you lose courage in trouble, your strength is small",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.11-12": {
+      "text": "Rescue people being led to death; God knows our hearts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title begins with a command that names no one.",
+        "suggestion": "Rescue those led to death, for God knows your heart"
+      }
+    },
+    "PRO.24.13-14": {
+      "text": "A son should find wisdom, as sweet as honey, and have hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.15-16": {
+      "text": "The wicked must not attack the righteous, who rise again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.17-18": {
+      "text": "Do not rejoice when an enemy falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not gloat when your enemy falls or stumbles"
+      }
+    },
+    "PRO.24.19-20": {
+      "text": "Do not envy evildoers, for they have no future",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Do not fret over evildoers, for they have no future"
+      }
+    },
+    "PRO.24.21-22": {
+      "text": "A son should fear the LORD and the king, not rebels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.23-23": {
+      "text": "Judges must not show favoritism",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.24-25": {
+      "text": "Nations curse those who call the guilty innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.26-27": {
+      "text": "An honest answer is good; first prepare your field, then build",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is 61 characters long, exceeding the 60-character limit.",
+        "suggestion": "Give an honest answer, and prepare fields before building"
+      }
+    },
+    "PRO.24.28-29": {
+      "text": "Do not lie against a neighbor or take revenge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "A person must not lie about a neighbor or take revenge"
+      }
+    },
+    "PRO.24.30-31": {
+      "text": "The writer sees a lazy man’s field full of thorns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.24.32-34": {
+      "text": "The writer learns that laziness brings poverty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.1-3": {
+      "text": "Hezekiah’s men copy proverbs about God and kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.4-5": {
+      "text": "A king must remove wicked men from his presence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.6-6": {
+      "text": "Do not make yourself great before the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "A person should not exalt himself before the king"
+      }
+    },
+    "PRO.25.7-8": {
+      "text": "It is better to be invited up than to be put down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 7 and says nothing about not rushing to court in verse 8.",
+        "suggestion": "One should be humble before rulers and not rush to court"
+      }
+    },
+    "PRO.25.9-10": {
+      "text": "Argue with a neighbor without telling his secrets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "One should argue with a neighbor without telling secrets"
+      }
+    },
+    "PRO.25.11-12": {
+      "text": "A fitting word and a wise rebuke are valuable",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.13-14": {
+      "text": "A trusted messenger refreshes; a boaster disappoints",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.15-15": {
+      "text": "Patience and gentle words can persuade a ruler",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.16-17": {
+      "text": "Take only what you need and do not visit too often",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "One should limit honey and not visit a neighbor too often"
+      }
+    },
+    "PRO.25.18-19": {
+      "text": "False witnesses and unfaithful men hurt others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.20-20": {
+      "text": "Singing to a sad heart does harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.21-22": {
+      "text": "Give food and water to a hungry enemy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "Feeding a hungry enemy brings a reward from the LORD"
+      }
+    },
+    "PRO.25.23-24": {
+      "text": "Gossip causes anger, and a quarrelsome wife brings trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.25.25-26": {
+      "text": "Good news refreshes; a righteous man who yields harms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “a righteous man who yields harms” is unnatural and confusing to an ESL reader.",
+        "suggestion": "Good news refreshes, but yielding to the wicked does harm"
+      }
+    },
+    "PRO.25.27-28": {
+      "text": "Do not seek too much honey or glory; control anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "A person should not seek glory and must control his temper"
+      }
+    },
+    "PRO.26.1-2": {
+      "text": "Honor does not suit a fool, and a false curse fails",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.3-4": {
+      "text": "Fools need a rod, and answering them has a risk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.5-6": {
+      "text": "Answer a fool, and do not send him with a message",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "A fool should be answered, but never sent with a message"
+      }
+    },
+    "PRO.26.7-8": {
+      "text": "A fool’s proverb and honor for a fool are useless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.9-10": {
+      "text": "A fool’s proverb is harmful, and hiring a fool is risky",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.11-12": {
+      "text": "A fool repeats folly; a proud man has less hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.13-14": {
+      "text": "The lazy man makes excuses and stays in bed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.15-16": {
+      "text": "The lazy man is too tired to eat, yet thinks he is wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.17-17": {
+      "text": "Meddling in another’s quarrel is dangerous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.18-19": {
+      "text": "A man who deceives a neighbor and says it is a joke",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is an incomplete sentence rather than a statement.",
+        "suggestion": "Deceiving a neighbor and calling it a joke is dangerous"
+      }
+    },
+    "PRO.26.20-21": {
+      "text": "Without gossip a quarrel ends; a quarrelsome man starts strife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is 62 characters long, exceeding the 60-character limit.",
+        "suggestion": "Without gossip strife ends, but a quarrelsome man stirs it"
+      }
+    },
+    "PRO.26.22-23": {
+      "text": "Gossip is tempting, and smooth words can hide an evil heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.24-26": {
+      "text": "A hateful man hides his evil, but it will be exposed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.26.27-28": {
+      "text": "Harm to others comes back on the one who does it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers verse 27 but misses the warning against lying and flattery in verse 28.",
+        "suggestion": "Plotters harm themselves, and lying tongues cause ruin"
+      }
+    },
+    "PRO.27.1-2": {
+      "text": "Do not boast about tomorrow or praise yourself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It is a command that does not name who is commanded.",
+        "suggestion": "A person should not boast about tomorrow or praise himself"
+      }
+    },
+    "PRO.27.3-4": {
+      "text": "A fool’s provoking and jealousy are hard to bear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.5-6": {
+      "text": "An honest rebuke from a friend is better than hidden love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.7-8": {
+      "text": "Full people refuse honey; wanderers are like lost birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.9-10": {
+      "text": "Stay loyal to friends; a near neighbor is better",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft begins with an imperative command that names no subject.",
+        "suggestion": "Friends give sweet counsel; a near neighbor is better"
+      }
+    },
+    "PRO.27.11-12": {
+      "text": "A father asks his son to be wise and avoid danger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.13-14": {
+      "text": "Debts for strangers are risky; a loud greeting can annoy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.15-16": {
+      "text": "A quarreling wife is like endless dripping water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.17-18": {
+      "text": "Friends sharpen each other; faithful servants are honored",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.19-20": {
+      "text": "The heart shows the true person; people are never satisfied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.21-22": {
+      "text": "Praise tests a person; a fool does not change",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.23-25": {
+      "text": "A farmer must care for flocks, because wealth does not last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.27.26-27": {
+      "text": "Flocks give a farmer clothing, money, and food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.1-2": {
+      "text": "The righteous are bold; a wise ruler keeps order",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.3-4": {
+      "text": "Oppressive leaders harm the poor; law keepers resist evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.5-6": {
+      "text": "Those who seek the LORD understand; honesty beats wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word “beats” is an informal idiom rather than plain English.",
+        "suggestion": "Those who seek the LORD understand; integrity is better"
+      }
+    },
+    "PRO.28.7-8": {
+      "text": "A wise son keeps the law; wealth from interest is lost",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.9-10": {
+      "text": "God rejects the prayer of anyone who ignores the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 9 but says nothing about verse 10.",
+        "suggestion": "God rejects rebel prayers; the blameless inherit good"
+      }
+    },
+    "PRO.28.11-12": {
+      "text": "A poor wise man sees through a proud rich man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 11 but omits verse 12.",
+        "suggestion": "A poor man sees pride; wicked rulers make people hide"
+      }
+    },
+    "PRO.28.13-14": {
+      "text": "God shows mercy to people who confess sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 13 but omits verse 14.",
+        "suggestion": "Confessing sin brings mercy; hardened hearts face trouble"
+      }
+    },
+    "PRO.28.15-16": {
+      "text": "A wicked ruler is like a lion over helpless people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 15 but omits verse 16.",
+        "suggestion": "Wicked rulers oppress; honest leaders prolong their days"
+      }
+    },
+    "PRO.28.17-18": {
+      "text": "A murderer runs to ruin; honest people are kept safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.19-20": {
+      "text": "Hard work brings food; hurrying to be rich brings trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.21-22": {
+      "text": "Showing partiality is wrong; a stingy man will become poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.23-24": {
+      "text": "Honest rebuke is better than flattery; do not rob parents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft ends with an imperative command that names no subject.",
+        "suggestion": "Honest rebuke finds favor; robbing parents brings ruin"
+      }
+    },
+    "PRO.28.25-26": {
+      "text": "Those who trust the LORD prosper; self-trust is foolish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.28.27-28": {
+      "text": "Helping the poor is good; people hide when the wicked rule",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.1-2": {
+      "text": "Stubborn people are broken; wicked rulers make people groan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.3-4": {
+      "text": "A wise son brings joy; a just king makes the land stable",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.5-6": {
+      "text": "Flattery is a net; evil men are trapped by sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.7-8": {
+      "text": "The righteous care for the poor; mockers stir up a city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.9-10": {
+      "text": "Arguing with a fool fails; violent men hate the blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.11-12": {
+      "text": "A fool shows all his anger; a wise man holds it back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 11 but omits verse 12.",
+        "suggestion": "A wise man calms anger; lying rulers corrupt officials"
+      }
+    },
+    "PRO.29.13-14": {
+      "text": "A king who judges the poor fairly will last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 14 but omits verse 13.",
+        "suggestion": "The LORD made all people; a fair king will endure"
+      }
+    },
+    "PRO.29.15-16": {
+      "text": "Correction teaches a child; the wicked will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.17-18": {
+      "text": "Parents who discipline a son will have rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers verse 17 but omits verse 18.",
+        "suggestion": "Discipline a son; those who keep the law are blessed"
+      }
+    },
+    "PRO.29.19-20": {
+      "text": "A servant ignores words; a hasty speaker has little hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.21-22": {
+      "text": "A spoiled servant brings grief; anger causes fights",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.29.23-24": {
+      "text": "Pride brings a man low; humble people receive honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 23 and omits the warning in verse 24 about partnering with a thief.",
+        "suggestion": "Pride brings a man low; a thief’s partner harms himself"
+      }
+    },
+    "PRO.29.25-26": {
+      "text": "Trusting the LORD is safer than fearing people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 25 and omits verse 26 on seeking justice from the LORD rather than a ruler.",
+        "suggestion": "Safety and justice come from the LORD, not from people"
+      }
+    },
+    "PRO.29.27-27": {
+      "text": "The righteous and the wicked detest each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.1-3": {
+      "text": "Agur says he is weary and lacks wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.4-4": {
+      "text": "Agur asks who made the wind, waters and earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.5-6": {
+      "text": "God’s words are flawless, so people must not add to them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.7-9": {
+      "text": "Agur asks God for honesty, and neither poverty nor riches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.10-10": {
+      "text": "People must not slander a servant to his master",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.11-12": {
+      "text": "Agur warns of people who curse parents and feel pure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.13-14": {
+      "text": "Agur warns of proud people who harm the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.15-17": {
+      "text": "Agur names things never satisfied; do not mock parents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft contains a command that names no one.",
+        "suggestion": "Agur names things never satisfied and warns mocking children"
+      }
+    },
+    "PRO.30.18-19": {
+      "text": "Agur names four things too wonderful to understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.20-20": {
+      "text": "An adulterous woman says she has done nothing wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.21-23": {
+      "text": "Agur names four things that make the earth tremble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.24-26": {
+      "text": "Small creatures like ants and rock badgers are wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.27-28": {
+      "text": "Agur says locusts and lizards are wise too",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.29-31": {
+      "text": "Agur names four things that walk with dignity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.30.32-33": {
+      "text": "Agur warns that stirring anger brings strife",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.1-3": {
+      "text": "Lemuel’s mother warns him about women who ruin kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.4-5": {
+      "text": "Kings must not drink wine, or justice is forgotten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.6-7": {
+      "text": "Lemuel’s mother says give wine to those who suffer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.8-9": {
+      "text": "Kings must speak for the voiceless and defend the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.10-12": {
+      "text": "A noble wife is worth more than rubies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.13-15": {
+      "text": "The noble wife works hard to feed her household",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.16-17": {
+      "text": "The noble wife buys a field and works with strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.18-19": {
+      "text": "The noble wife works late spinning thread",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.20-21": {
+      "text": "The noble wife helps the poor and clothes her household",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.22-23": {
+      "text": "The noble wife dresses well; her husband is respected",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.24-25": {
+      "text": "The noble wife sells linen and has strength and honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.26-27": {
+      "text": "The noble wife speaks wisely and manages her home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.28-29": {
+      "text": "The noble wife’s children and husband praise her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "PRO.31.30-31": {
+      "text": "A woman who fears the LORD should be praised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

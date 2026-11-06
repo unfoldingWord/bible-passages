@@ -250,6 +250,8 @@ describe.each([
   "ISA",
   "JER",
   "LAM",
+  "PRO",
+  "ECC",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -305,11 +307,25 @@ describe.each([
           ? "ai-checked"
           : "unreviewed"
       );
+      // A disagreement carries a suggestion. Its length is not held to MAX:
+      // the 60-character limit is on shipped titles (the tC Mobile test
+      // below), and a suggestion is never shipped (#258).
       if (d.check?.verdict === "disagree") {
         expect(d.check.suggestion?.length).toBeGreaterThan(0);
-        expect((d.check.suggestion ?? "").length).toBeLessThanOrEqual(MAX);
+        expect(d.check.suggestion).toBe(d.check.suggestion?.trim());
       }
     }
+  });
+
+  it("ships no title over 60 characters in the tC Mobile title table (#258)", () => {
+    const shipped = (
+      read(`dist/tc-mobile/titles/en/${book}.json`) as {
+        segments: { [key: string]: string };
+      }
+    ).segments;
+    expect(Object.keys(shipped).length).toBeGreaterThan(0);
+    for (const [key, text] of Object.entries(shipped))
+      expect([...text].length, key).toBeLessThanOrEqual(MAX);
   });
 
   it("records every title the gates fail, and keeps the rest plain and non-empty", () => {
@@ -1208,6 +1224,26 @@ describe.each([
     prompt: "prompts/segment-titles.md",
     drafts: 2,
     checks: 2,
+    batched: true,
+  },
+  {
+    book: "PRO",
+    reused: [],
+    drafted: 442,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 13,
+    checks: 13,
+    batched: true,
+  },
+  {
+    book: "ECC",
+    reused: [],
+    drafted: 120,
+    // Drafted for #244 (ADR 0008) with the prompt on main.
+    prompt: "prompts/segment-titles.md",
+    drafts: 4,
+    checks: 4,
     batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
