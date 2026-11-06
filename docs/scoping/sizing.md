@@ -1137,8 +1137,10 @@ Three books of this stretch are not here. Proverbs and Ecclesiastes ran to
 `done` ($1.28170350 and $0.26111550), but three checker suggestions in them
 are over 60 characters and fail the drafts test; #258 asks which way to go.
 Ezekiel's run ended `incomplete` (the draft left out five single-verse
-segments, #252; $1.55843675 over 32 calls, no record), and the re-run it
-needs is more than the credit left under the run's spending rule.
+segments, #252; $1.55843675 over 32 calls, no record). Its one re-run,
+made once the key's limit was raised, ended `incomplete` too (six other
+single-verse segments; $1.55040300 over 32 calls, no record), so Ezekiel
+is not drafted; #252 has the details.
 
 | Book  | Drafted      | Agreed | Disagreed: criteria                                   | Gate failures              | Over 60 (longest) | Calls   | Cost        | Model time  |
 | ----- | ------------ | ------ | ----------------------------------------------------- | -------------------------- | ----------------- | ------- | ----------- | ----------- |
@@ -1173,9 +1175,9 @@ No third check was run and no dispute data is written (ADR 0008); the 91
 disagreements stay `unreviewed`. Counts only; the checker's reasons and
 suggestions were not read.
 
-OpenRouter spend of this work: $7.07442400, the five records. (Proverbs,
-Ecclesiastes and Ezekiel's stopped run, $3.10125575 together, are counted
-where those books land.)
+OpenRouter spend of this work: $7.07442400, the five records. (Proverbs
+and Ecclesiastes, $1.54281900, are counted where they land; Ezekiel's two
+stopped runs cost $3.10883975.)
 
 ## Not measured yet
 
