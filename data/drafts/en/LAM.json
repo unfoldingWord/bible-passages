@@ -1,0 +1,473 @@
+{
+  "language": "en",
+  "book": "LAM",
+  "bible": "bsb-lam",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793915726-mSfCWJsQgCESewr7AtIp",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6312,
+      "completionTokens": 3061,
+      "reasoningTokens": 2059,
+      "cost": 0.043234,
+      "ms": 19534
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793915745-apiCqftJFN5Y7iQmWQtR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5268,
+      "completionTokens": 5334,
+      "reasoningTokens": 4405,
+      "cost": 0.063876,
+      "ms": 33680
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915779-t5ghwjtKLXRSTFSfVxTa",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5065,
+      "completionTokens": 6994,
+      "reasoningTokens": 6066,
+      "cost": 0.03002625,
+      "ms": 40275
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915819-rJGvy1pV8AJ1N7aN86dn",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4449,
+      "completionTokens": 9145,
+      "reasoningTokens": 8179,
+      "cost": 0.0376305,
+      "ms": 46176
+    }
+  ],
+  "titles": {
+    "LAM.1.1-2": {
+      "text": "Jerusalem is lonely and has no comforter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.3-3": {
+      "text": "Judah is in exile and finds no rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.4-5": {
+      "text": "Zion mourns, and her children are taken captive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.6-6": {
+      "text": "The splendor of Zion is gone and her princes are weak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.7-7": {
+      "text": "Jerusalem remembers her treasures while enemies laugh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.8-9": {
+      "text": "Jerusalem sinned and is now despised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.10-10": {
+      "text": "Enemies take treasures and enter the sanctuary",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.11-12": {
+      "text": "Jerusalem asks the LORD to see her great sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.13-14": {
+      "text": "The LORD’s hand has broken Jerusalem’s strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.15-15": {
+      "text": "The Lord has crushed Judah’s warriors like grapes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.16-17": {
+      "text": "Jerusalem weeps because no one comforts her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.18-19": {
+      "text": "Jerusalem admits her rebellion and asks all to look",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.20-20": {
+      "text": "Jerusalem asks the LORD to see her distress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.1.21-22": {
+      "text": "Jerusalem asks the LORD to punish her enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.1-2": {
+      "text": "The Lord in anger destroys Jerusalem’s dwellings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.3-4": {
+      "text": "The Lord acts like an enemy against Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.5-6": {
+      "text": "The Lord destroys his meeting place and ends the feasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 6 and misses the destruction of Israel’s palaces and strongholds in verse 5.",
+        "suggestion": "The Lord destroys Israel’s palaces and place of worship"
+      }
+    },
+    "LAM.2.7-7": {
+      "text": "The Lord rejects his altar and sanctuary",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.8-9": {
+      "text": "The LORD destroys Zion’s walls and gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.10-10": {
+      "text": "Elders and young women of Jerusalem mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.11-12": {
+      "text": "The writer weeps for the children fainting from hunger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.13-14": {
+      "text": "Jerusalem’s wound is deep, and false prophets deceived her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.15-16": {
+      "text": "Passersby and enemies mock Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.17-17": {
+      "text": "The LORD did what he planned against Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.18-19": {
+      "text": "Jerusalem is told to cry to the Lord day and night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.20-20": {
+      "text": "Jerusalem asks the LORD to see her terrible suffering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.2.21-22": {
+      "text": "Young and old die on the day of the LORD’s anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.1-4": {
+      "text": "God’s anger has brought great suffering to the writer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.5-8": {
+      "text": "God has shut the writer in darkness and ignores his prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.9-11": {
+      "text": "God blocks the writer’s path like a bear or lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.12-15": {
+      "text": "God makes the writer a target and a laughingstock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.16-18": {
+      "text": "The writer feels his strength and hope have perished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.19-21": {
+      "text": "The writer remembers his suffering, yet has hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.22-24": {
+      "text": "The LORD’s mercies are new every morning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.25-29": {
+      "text": "It is good to wait quietly for the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.30-33": {
+      "text": "The Lord will not reject his people forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.34-36": {
+      "text": "The Lord does not approve of injustice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.37-39": {
+      "text": "Everything comes from God, so people should not complain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.40-43": {
+      "text": "The people turn back to the LORD and confess sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.44-47": {
+      "text": "God blocks prayers, and enemies bring ruin to the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.48-50": {
+      "text": "The prophet weeps for the destruction of his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.51-54": {
+      "text": "Enemies hunt the prophet and throw him into a pit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.55-57": {
+      "text": "The prophet calls to the LORD, who comes near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.58-61": {
+      "text": "The prophet asks the LORD to defend him against enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.62-63": {
+      "text": "Enemies slander and mock the prophet all day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.3.64-66": {
+      "text": "The prophet asks the LORD to punish his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.1-2": {
+      "text": "Zion’s people, once precious, are now like clay jars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.3-3": {
+      "text": "Mothers in Zion are more cruel than jackals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.4-5": {
+      "text": "Children go hungry and the once rich are poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.6-6": {
+      "text": "Zion is punished more than Sodom was",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.7-8": {
+      "text": "Once-healthy leaders now look dark and shriveled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.9-10": {
+      "text": "Hunger is so bad that mothers cook children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.11-11": {
+      "text": "The LORD pours out his anger and burns Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.12-13": {
+      "text": "Jerusalem falls for the sins of prophets and priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.14-15": {
+      "text": "Prophets and priests wander blind and are driven away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.16-16": {
+      "text": "The LORD scatters the people, and priests get no honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.17-18": {
+      "text": "The people wait in vain for help while enemies hunt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Using \"hunt\" without an object leaves the sentence incomplete and unclear to second-language readers.",
+        "suggestion": "The people wait in vain for help while enemies hunt them"
+      }
+    },
+    "LAM.4.19-20": {
+      "text": "Enemies chase the people and capture the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.4.21-22": {
+      "text": "Edom will be punished, but Zion’s punishment is complete",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.1-4": {
+      "text": "The people ask the LORD to remember what happened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.5-7": {
+      "text": "The people are weary and suffer for fathers’ sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.8-10": {
+      "text": "Slaves rule the people, and food is hard to find",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.11-12": {
+      "text": "Women are abused and leaders are shamed in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.13-14": {
+      "text": "Young men and boys work hard, and joy has stopped",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text states that music has stopped; joy leaving is not mentioned until verse 15.",
+        "suggestion": "Young men and boys toil, and their music has stopped"
+      }
+    },
+    "LAM.5.15-16": {
+      "text": "Joy turns to mourning, and the people admit sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.17-18": {
+      "text": "The people grow faint over the ruined Mount Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "LAM.5.19-22": {
+      "text": "The people ask the LORD to restore the nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

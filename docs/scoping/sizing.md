@@ -1107,6 +1107,78 @@ suggestions were not read.
 OpenRouter spend of this work: $2.19021075 ($2.15371175 in the thirteen
 records and $0.03649900 in Obadiah's stopped run).
 
+## Measured: English segment titles, Psalms, Song of Songs, Isaiah, Jeremiah, Lamentations (#244)
+
+ADR [0008](../decisions/0008-english-run-before-dispute-verdict.md): the
+remaining books are drafted and checked before the #207 verdict, with
+disputed titles held as for Genesis. Psalms, Song of Songs, Isaiah,
+Jeremiah and Lamentations were drafted on 2026-11-05 the way Genesis was:
+one plain run of the CLI per book, one book after another, the same
+models, the runner and its library as at `3b4cc37` (the runs started from
+`f27c015`, which does not touch them; unchanged at `3e30817`, the base of
+this change), and the prompt on main, `prompts/segment-titles.md` SHA-256
+`e3e08e032d32…` (unchanged by this work).
+
+```
+node scripts/translate/segment-titles.ts --book PSA \
+  --draft-model anthropic/claude-sonnet-5.5 \
+  --check-model google/gemini-3.8-flash --max-cost 4.60 \
+  --out .cache/segment-titles/len-PSA
+```
+
+`--max-cost` was 1.5 times the book's estimate (drafted segments × $0.0027,
+Genesis's rate), at least $0.30: PSA 4.60, SNG 0.32, ISA 2.80, JER 2.33, LAM
+0.30. Every run exited 0 with outcome `done`, first time. Each record was
+copied unchanged to `data/drafts/en/<BOOK>.json` (`cmp`: no difference).
+The counts below were made twice from the records, with `jq` and with
+Python, which gave the same values.
+
+Three books of this stretch are not here. Proverbs and Ecclesiastes ran to
+`done` ($1.28170350 and $0.26111550), but three checker suggestions in them
+are over 60 characters and fail the drafts test; #258 asks which way to go.
+Ezekiel's run ended `incomplete` (the draft left out five single-verse
+segments, #252; $1.55843675 over 32 calls, no record). Its one re-run,
+made once the key's limit was raised, ended `incomplete` too (six other
+single-verse segments; $1.55040300 over 32 calls, no record), so Ezekiel
+is not drafted; #252 has the details.
+
+| Book  | Drafted      | Agreed | Disagreed: criteria                                   | Gate failures              | Over 60 (longest) | Calls   | Cost        | Model time  |
+| ----- | ------------ | ------ | ----------------------------------------------------- | -------------------------- | ----------------- | ------- | ----------- | ----------- |
+| PSA   | 1134 of 1135 | 1080   | 54: `covers` 31, `accurate` 14, `plain` 10, `style` 6 | 0                          | 0 (60)            | 33 + 33 | $3.16346025 | 3,040.471 s |
+| SNG   | 78 of 78     | 74     | 4: `covers` 2, `accurate` 1, `plain` 1                | 0                          | 0 (58)            | 3 + 3   | $0.20470225 | 214.515 s   |
+| ISA   | 689 of 693   | 673    | 16: `style` 5, `accurate` 4, `covers` 4, `plain` 4    | 3 (`length` 3)             | 3 (64)            | 20 + 20 | $1.89613875 | 1,676.669 s |
+| JER   | 573 of 575   | 559    | 14: `style` 7, `plain` 6, `accurate` 4                | 1 (`length` 1, `quotes` 1) | 1 (61)            | 17 + 17 | $1.63535600 | 1,367.391 s |
+| LAM   | 67 of 67     | 64     | 3: `accurate` 1, `covers` 1, `plain` 1                | 0                          | 0 (58)            | 2 + 2   | $0.17476675 | 139.665 s   |
+| Total | 2,541        | 2,450  | 91                                                    | 4                          | 4                 | 75 + 75 | $7.07442400 | 6,438.711 s |
+
+Labels and sources: every row is measured 2026-11-05 from the committed
+record. Drafted: `titles`; the other segments are their pericope's only
+segment (PSA 1, ISA 4, JER 2). Agreed: checker `agree`, all `ai-checked`.
+Criteria: a title can name more than one. Cost and model time:
+OpenRouter's billed `cost` and `ms` per call, summed, exact. Largest
+completion: draft 7,390 of 16,384 (45%, PSA); check 30,983 of 32,768 (95%,
+PSA). No reply was cut off and every reply in these records was readable
+(the runs end `done`). `npm run build` puts the 2,450 `ai-checked` titles in
+the tC Mobile title tables (PSA 1,080 of 1,135, SNG 74 of 78, ISA 673 of
+693, JER 559 of 575, LAM 64 of 67).
+
+Observations from these runs (not trends):
+
+- **A check reply came within 6% of its limit.** Psalms' largest check
+  reply used 30,983 of `CHECK_MAX_TOKENS` (32,768). It was not cut off; a
+  cut-off reply would leave titles unread and stop the run.
+- **Long titles and calls that did not reason.** 3 of 75 draft calls used 0
+  reasoning tokens (PSA, ISA and JER, one each); 3 of the 4 titles over 60
+  are in those batches.
+
+No third check was run and no dispute data is written (ADR 0008); the 91
+disagreements stay `unreviewed`. Counts only; the checker's reasons and
+suggestions were not read.
+
+OpenRouter spend of this work: $7.07442400, the five records. (Proverbs
+and Ecclesiastes, $1.54281900, are counted where they land; Ezekiel's two
+stopped runs cost $3.10883975.)
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

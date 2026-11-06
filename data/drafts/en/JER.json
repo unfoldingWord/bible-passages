@@ -1,0 +1,3876 @@
+{
+  "language": "en",
+  "book": "JER",
+  "bible": "bsb-jer",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793914356-ZLXZNkl6UsS1GnThWkHD",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7212,
+      "completionTokens": 4593,
+      "reasoningTokens": 3565,
+      "cost": 0.060354,
+      "ms": 29152
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914385-dgUZlmKw5HfSBEUIPEYh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7121,
+      "completionTokens": 5980,
+      "reasoningTokens": 4992,
+      "cost": 0.074042,
+      "ms": 37900
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914423-oQsA7aSR4MEf1wfc6N9g",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6996,
+      "completionTokens": 6392,
+      "reasoningTokens": 5370,
+      "cost": 0.077912,
+      "ms": 41760
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914465-xVljuqmjzCLsy2ZbvwOJ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7019,
+      "completionTokens": 5673,
+      "reasoningTokens": 4663,
+      "cost": 0.070768,
+      "ms": 37844
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914502-ci9qbpNUGA9vPT6phPOC",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7101,
+      "completionTokens": 4181,
+      "reasoningTokens": 3231,
+      "cost": 0.056012,
+      "ms": 27425
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914530-v3EGA5xFZhm7rojAlCF3",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7539,
+      "completionTokens": 5918,
+      "reasoningTokens": 4908,
+      "cost": 0.074258,
+      "ms": 37443
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914568-ZsA2NnVebdJIN2X9tTU2",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6989,
+      "completionTokens": 989,
+      "reasoningTokens": 0,
+      "cost": 0.023868,
+      "ms": 6745
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914574-1oXQvNfjHTcQ6p4S9qwQ",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7425,
+      "completionTokens": 5730,
+      "reasoningTokens": 4717,
+      "cost": 0.07215,
+      "ms": 39285
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914613-wB6bSbIbIktUHW0cRwHM",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7169,
+      "completionTokens": 5357,
+      "reasoningTokens": 4392,
+      "cost": 0.067908,
+      "ms": 34796
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914648-9AJRjjZYBlUt58zwhrRV",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6986,
+      "completionTokens": 3871,
+      "reasoningTokens": 2880,
+      "cost": 0.052682,
+      "ms": 23887
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914672-k36hUXd5S2SXjJEfiPrR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7979,
+      "completionTokens": 5980,
+      "reasoningTokens": 4931,
+      "cost": 0.075758,
+      "ms": 35940
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914708-aoER4NepMw1YpoEutj6N",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7438,
+      "completionTokens": 3722,
+      "reasoningTokens": 2649,
+      "cost": 0.052096,
+      "ms": 23091
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914731-wryd1gfIhiDirPkdTrHH",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7799,
+      "completionTokens": 6016,
+      "reasoningTokens": 4999,
+      "cost": 0.075758,
+      "ms": 37708
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914769-DSJi7BGzDsgYEyHK75nX",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7158,
+      "completionTokens": 5743,
+      "reasoningTokens": 4749,
+      "cost": 0.071746,
+      "ms": 37030
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914806-dLrxKBaWJDQgQ655nsPg",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6415,
+      "completionTokens": 5650,
+      "reasoningTokens": 4694,
+      "cost": 0.06933,
+      "ms": 34859
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914841-1kQQKzgmXFLaXJGX02L8",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6319,
+      "completionTokens": 4660,
+      "reasoningTokens": 3750,
+      "cost": 0.059238,
+      "ms": 29024
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914870-8SAIViNR855Q8p27xPHu",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6707,
+      "completionTokens": 5603,
+      "reasoningTokens": 4588,
+      "cost": 0.069444,
+      "ms": 38783
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914909-wY4asryDGGzvUA2G3fjc",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5806,
+      "completionTokens": 9526,
+      "reasoningTokens": 8597,
+      "cost": 0.040077,
+      "ms": 45114
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914954-9cFQlf3I449oVec33LTT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5750,
+      "completionTokens": 4905,
+      "reasoningTokens": 4036,
+      "cost": 0.02270625,
+      "ms": 37395
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914991-mq57Z0HOI6GwMcbxHpr7",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5786,
+      "completionTokens": 6593,
+      "reasoningTokens": 5613,
+      "cost": 0.02906325,
+      "ms": 43899
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915035-sxixhAYymNe1f6QkANEc",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5806,
+      "completionTokens": 8135,
+      "reasoningTokens": 7236,
+      "cost": 0.03486075,
+      "ms": 48199
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915083-cKcH6kLa4g6DvEelZjUf",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5873,
+      "completionTokens": 9230,
+      "reasoningTokens": 8154,
+      "cost": 0.03901725,
+      "ms": 64208
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915148-O37UFKvIdOBBvn9vsbcW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6077,
+      "completionTokens": 4700,
+      "reasoningTokens": 3804,
+      "cost": 0.02218275,
+      "ms": 37881
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915186-GM1AMJPJSlVQ8CynTpc7",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5768,
+      "completionTokens": 6077,
+      "reasoningTokens": 5119,
+      "cost": 0.02711475,
+      "ms": 49383
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915235-boYU3QlUiEI7Y9cMCbtc",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6079,
+      "completionTokens": 5400,
+      "reasoningTokens": 4500,
+      "cost": 0.02480925,
+      "ms": 34825
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915270-mOduEN5vGJYKNNNF2VM2",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5837,
+      "completionTokens": 6742,
+      "reasoningTokens": 5791,
+      "cost": 0.02966025,
+      "ms": 42579
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915313-Y8tLLGnJ8TbX8otbibYt",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5766,
+      "completionTokens": 10584,
+      "reasoningTokens": 9673,
+      "cost": 0.0440145,
+      "ms": 74938
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915388-etVXTgYkp6oNMWWFPApR",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6380,
+      "completionTokens": 11391,
+      "reasoningTokens": 10379,
+      "cost": 0.04750125,
+      "ms": 76726
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915464-qY3HGrYjL4LzoAwLD4Cg",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5926,
+      "completionTokens": 4572,
+      "reasoningTokens": 3668,
+      "cost": 0.0215895,
+      "ms": 31272
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915496-KtbNXCaqtLyCWBIvK2yq",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6191,
+      "completionTokens": 5725,
+      "reasoningTokens": 4805,
+      "cost": 0.026112,
+      "ms": 40585
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915536-pKJEfLMwmwgB02G9Amgx",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5720,
+      "completionTokens": 10096,
+      "reasoningTokens": 9052,
+      "cost": 0.04215,
+      "ms": 62069
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915598-xUikR6gPmLRvDyD7UCdb",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5257,
+      "completionTokens": 7155,
+      "reasoningTokens": 6267,
+      "cost": 0.030774,
+      "ms": 50482
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915649-ODEm0Z06zjNXB2FxlrtP",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5224,
+      "completionTokens": 5491,
+      "reasoningTokens": 4588,
+      "cost": 0.02450925,
+      "ms": 26727
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915676-cw6UtEQP6z7kPREyJSl3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5485,
+      "completionTokens": 5807,
+      "reasoningTokens": 4915,
+      "cost": 0.02589,
+      "ms": 48437
+    }
+  ],
+  "titles": {
+    "JER.1.1-3": {
+      "text": "These are the words of Jeremiah, a priest from Anathoth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.4-6": {
+      "text": "The LORD chooses Jeremiah to be a prophet to the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.7-8": {
+      "text": "The LORD tells Jeremiah not to fear and to speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.9-10": {
+      "text": "The LORD puts his words in Jeremiah’s mouth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.11-12": {
+      "text": "Jeremiah sees an almond branch; the LORD watches his word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.13-14": {
+      "text": "Jeremiah sees a boiling pot; disaster comes from the north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.15-16": {
+      "text": "The LORD will bring northern kingdoms against Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.1.17-19": {
+      "text": "The LORD tells Jeremiah to stand firm and not be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.1-3": {
+      "text": "The LORD remembers Israel’s faithful love long ago",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.4-6": {
+      "text": "The LORD asks why Israel’s fathers left him for idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.7-8": {
+      "text": "Priests, leaders and prophets turned away from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.9-11": {
+      "text": "No nation changes its gods, but Israel did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.12-13": {
+      "text": "Israel left the LORD, the fountain of living water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.14-17": {
+      "text": "Israel’s land is ruined because Israel left the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.18-19": {
+      "text": "Israel gains nothing from turning to Egypt or Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.20-22": {
+      "text": "Israel refused to serve God and became a wild vine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.23-25": {
+      "text": "Israel says it is not defiled but chases foreign gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.26-28": {
+      "text": "Israel calls idols father, then asks God to save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The verb 'save' is missing an object, which makes the sentence sound incomplete to a second-language reader.",
+        "suggestion": "Israel calls idols father, then asks God to save them"
+      }
+    },
+    "JER.2.29-31": {
+      "text": "The LORD asks why Israel turns away from him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.32-34": {
+      "text": "Israel forgets the LORD and is guilty of innocent blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.2.35-37": {
+      "text": "Israel says it is innocent, but the LORD will judge Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.1-2": {
+      "text": "Israel is like an unfaithful wife who wants to return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.3-5": {
+      "text": "Rain stops because of sin; Israel still shows no shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.6-7": {
+      "text": "Israel was unfaithful and Judah saw it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.8-10": {
+      "text": "The LORD divorced Israel, but Judah was unfaithful too",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.11-12": {
+      "text": "The LORD calls faithless Israel to return to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.13-15": {
+      "text": "The LORD asks Israel to admit guilt and promises shepherds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.16-16": {
+      "text": "The ark of the covenant will no longer be remembered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.17-18": {
+      "text": "Jerusalem will be the LORD’s throne for all nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.19-20": {
+      "text": "The LORD wanted Israel as sons, but Israel betrayed him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.21-22": {
+      "text": "The Israelites weep and answer the LORD’s call to return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.3.23-25": {
+      "text": "Israel confesses that idols and sin brought shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.1-3": {
+      "text": "The LORD tells Israel to return and remove idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.4-4": {
+      "text": "The LORD tells Judah to change hearts or face his anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.5-6": {
+      "text": "Jeremiah tells Judah to flee because disaster is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.7-8": {
+      "text": "A lion will destroy Judah; the people must mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.9-10": {
+      "text": "Leaders will lose courage, and Jeremiah complains to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.11-12": {
+      "text": "God will send a strong wind of judgment on Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.13-15": {
+      "text": "An enemy comes; God urges Jerusalem to stop doing evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.16-18": {
+      "text": "Jerusalem’s sins bring an enemy army against the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.19-20": {
+      "text": "Jeremiah cries out in pain over the war and ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.21-22": {
+      "text": "Jeremiah asks how long, and God calls the people foolish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.23-26": {
+      "text": "Jeremiah sees the earth made empty and ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.27-29": {
+      "text": "God will make the land empty but not destroy it all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.4.30-31": {
+      "text": "Jerusalem’s fine clothes cannot save her from enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.1-3": {
+      "text": "God asks if anyone in Jerusalem acts justly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.4-6": {
+      "text": "Poor and powerful alike rebel, so judgment will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.7-9": {
+      "text": "God will punish the nation for adultery and false gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.10-13": {
+      "text": "Israel and Judah are unfaithful and say no harm will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.14-15": {
+      "text": "God will bring a foreign nation against Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.16-17": {
+      "text": "The foreign army will destroy food, families and cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.18-19": {
+      "text": "God will not destroy all; Judah will serve foreigners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.20-22": {
+      "text": "God asks the foolish people of Judah to fear him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.23-25": {
+      "text": "Judah’s sins keep God’s good rains and harvest away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.26-29": {
+      "text": "Wicked rich men trap others and ignore the needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.5.30-31": {
+      "text": "Prophets lie, priests rule, and the people love it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.1-3": {
+      "text": "God tells Benjamin’s people to flee from Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.4-5": {
+      "text": "Enemy soldiers plan to attack Jerusalem day and night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.6-8": {
+      "text": "God tells the enemy to attack Jerusalem for its violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.9-10": {
+      "text": "Jeremiah says the people will not listen to God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.11-12": {
+      "text": "God’s anger will fall on young and old alike",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.13-15": {
+      "text": "Prophets and priests lie and say there is peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.16-19": {
+      "text": "God offers the good way, but the people refuse to listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.20-21": {
+      "text": "God rejects empty offerings and will send trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.22-22": {
+      "text": "God says an army is coming from the north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.23-24": {
+      "text": "The cruel army frightens Judah’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.25-26": {
+      "text": "Jeremiah tells the people to mourn the coming destroyer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.6.27-30": {
+      "text": "God makes Jeremiah test the people, who are all corrupt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.1-2": {
+      "text": "The LORD sends Jeremiah to speak to Judah’s worshipers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.3-4": {
+      "text": "The LORD tells Judah to change and not trust false words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.5-7": {
+      "text": "Judah can stay in the land if the people act justly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.8-11": {
+      "text": "The LORD says Judah sins and then comes to the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.12-15": {
+      "text": "The LORD says he will destroy the temple as he did Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.16-18": {
+      "text": "The LORD tells Jeremiah not to pray for the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.19-20": {
+      "text": "The LORD’s anger will fall on Judah and its land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.21-23": {
+      "text": "The LORD wants Judah to obey more than to sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.24-26": {
+      "text": "Judah’s people refused to listen to the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.27-28": {
+      "text": "The LORD tells Jeremiah that Judah will not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.29-29": {
+      "text": "Judah must mourn because the LORD has rejected the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.30-30": {
+      "text": "Judah has done evil and made the temple unclean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.31-32": {
+      "text": "Judah burned children, so the valley will hold the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.7.33-34": {
+      "text": "Dead bodies will lie unburied and Judah’s joy will end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.1-3": {
+      "text": "Judah’s dead will be taken out of the graves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.4-5": {
+      "text": "The LORD asks why Judah keeps turning away from him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.6-7": {
+      "text": "Birds know when to migrate, but Judah does not repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.8-10": {
+      "text": "Judah’s wise men and scribes reject the LORD’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.11-13": {
+      "text": "Leaders falsely promise peace, and the harvest will fail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.14-15": {
+      "text": "The people say the LORD has doomed Judah because of sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.16-17": {
+      "text": "Enemy horses are heard coming, and snakes will bite Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.8.18-19": {
+      "text": "Jeremiah is deeply sad and asks if the LORD has left Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The people, not Jeremiah, ask if the LORD has left Zion.",
+        "suggestion": "Jeremiah weeps as the people ask if the LORD left Zion"
+      }
+    },
+    "JER.8.20-22": {
+      "text": "Jeremiah mourns because Judah is not healed or saved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.1-3": {
+      "text": "Jeremiah weeps over Judah’s lies and unfaithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.4-6": {
+      "text": "Neighbors and brothers lie to and betray each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.7-9": {
+      "text": "The LORD will test and punish Judah for deceit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.10-12": {
+      "text": "Jeremiah mourns that the land and Jerusalem will be ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.13-14": {
+      "text": "The land is ruined because Judah left the LORD’s law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.15-16": {
+      "text": "The LORD will scatter Judah and send the sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.17-18": {
+      "text": "The LORD tells Judah to call women to mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.19-20": {
+      "text": "Wailing is heard from Zion, and women must teach lament",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.21-22": {
+      "text": "Death will come into Judah’s homes and kill many",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.9.23-24": {
+      "text": "Let no one boast in wisdom, but in knowing the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "It is phrased as a command that does not name who speaks or acts.",
+        "suggestion": "The LORD says to boast only in knowing him"
+      }
+    },
+    "JER.9.25-26": {
+      "text": "The LORD will punish Judah and nearby nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.1-2": {
+      "text": "The LORD tells Israel not to learn the ways of nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.3-5": {
+      "text": "Idols are worthless and cannot speak or walk",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.6-7": {
+      "text": "Jeremiah says no one is like the LORD, King of nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.8-10": {
+      "text": "The LORD is the true God, but idols are foolish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.11-13": {
+      "text": "False gods will perish, but the LORD made the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.14-16": {
+      "text": "Idols are a fraud, but the LORD is Israel’s Maker",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.17-18": {
+      "text": "The LORD will throw the people out of the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.19-20": {
+      "text": "Judah cries over her destroyed home and lost children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.21-22": {
+      "text": "Judah’s leaders do not seek the LORD, and disaster comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.10.23-25": {
+      "text": "Jeremiah asks the LORD for fair correction, not anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.1-2": {
+      "text": "The LORD tells Jeremiah to speak the covenant to Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.3-5": {
+      "text": "The LORD curses anyone who does not obey the covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.6-8": {
+      "text": "Israel’s fathers did not obey, so curses came",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.9-10": {
+      "text": "Judah has broken the covenant and followed other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.11-13": {
+      "text": "Disaster comes, and Judah’s many gods cannot save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.14-16": {
+      "text": "The LORD tells Jeremiah not to pray for the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.17-17": {
+      "text": "Disaster comes because Judah burned incense to Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.18-20": {
+      "text": "Jeremiah learns of a plot to kill him and asks for justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.11.21-23": {
+      "text": "The LORD will punish the people of Anathoth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.1-2": {
+      "text": "Jeremiah asks why wicked people prosper",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.3-4": {
+      "text": "Jeremiah asks the LORD to punish the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.5-6": {
+      "text": "The LORD warns Jeremiah that his own family betrayed him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.7-9": {
+      "text": "The LORD has abandoned Israel to her enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.10-11": {
+      "text": "Many shepherds have ruined the LORD’s vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.12-13": {
+      "text": "The LORD’s sword brings destruction, and harvests fail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.14-15": {
+      "text": "The LORD will uproot Israel’s neighbors, then show mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.12.16-17": {
+      "text": "Nations must obey the LORD or be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.1-4": {
+      "text": "The LORD tells Jeremiah to buy and hide a loincloth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.5-7": {
+      "text": "Jeremiah finds the hidden loincloth ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.8-11": {
+      "text": "Judah will be ruined like the useless loincloth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.15-17": {
+      "text": "Jeremiah urges Judah to listen and not be proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.18-19": {
+      "text": "Judah’s king and queen mother will be brought down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.20-21": {
+      "text": "Jerusalem will lose her flock to enemies from the north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.22-24": {
+      "text": "Judah suffers for her great sin and cannot change",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.13.25-27": {
+      "text": "God will shame Jerusalem for its unfaithfulness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.1-3": {
+      "text": "Judah mourns because there is no water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.4-6": {
+      "text": "The drought hurts farmers and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.7-9": {
+      "text": "Judah confesses sin and asks God not to leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.10-12": {
+      "text": "God rejects the people and tells Jeremiah not to pray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.13-14": {
+      "text": "God says the prophets who promise peace are lying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.15-16": {
+      "text": "God will punish the false prophets and the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.17-18": {
+      "text": "Jeremiah weeps for the people killed and starving",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.19-20": {
+      "text": "The people admit sin and ask if God rejected Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.14.21-22": {
+      "text": "The people ask God to keep his covenant and send rain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.1-2": {
+      "text": "God will not pity Judah even if Moses stood before him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.3-4": {
+      "text": "God will send four destroyers because of Manasseh’s sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.5-7": {
+      "text": "God will destroy Jerusalem because it turned away from him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.8-9": {
+      "text": "God will bring death and grief to mothers and widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.10-12": {
+      "text": "Jeremiah laments, and God promises to rescue him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.13-14": {
+      "text": "God says Judah’s wealth will be taken and people enslaved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.15-16": {
+      "text": "Jeremiah asks God to remember him and punish persecutors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.15.17-18": {
+      "text": "Jeremiah complains of his pain and lonely life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.1-4": {
+      "text": "God tells Jeremiah not to marry, for death is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.5-6": {
+      "text": "God tells Jeremiah not to join funerals or mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.7-9": {
+      "text": "God tells Jeremiah not to join feasts, joy will end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The title splices two independent clauses with only a comma, making it unclear to a second-language reader.",
+        "suggestion": "God tells Jeremiah not to join feasts, for joy will end"
+      }
+    },
+    "JER.16.10-11": {
+      "text": "God says Judah’s fathers left him for other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.12-13": {
+      "text": "God will send Judah out of the land to serve other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.14-15": {
+      "text": "God promises to bring Israel back to its land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.16-18": {
+      "text": "God will find and punish Judah for its idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.16.19-21": {
+      "text": "Jeremiah says the nations will turn from idols to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.1-2": {
+      "text": "Judah’s sin is written deeply on its hearts and altars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.3-4": {
+      "text": "God will let enemies take Judah’s wealth and people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.5-6": {
+      "text": "Cursed is the man who trusts in people, not God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.7-8": {
+      "text": "Blessed is the man who trusts in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "Sentence case requires only the first letter of proper names to be capitalised, not all-capital letters.",
+        "suggestion": "Blessed is the man who trusts in the Lord"
+      }
+    },
+    "JER.17.9-11": {
+      "text": "God searches the heart and rewards each person’s deeds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.12-14": {
+      "text": "Jeremiah asks the LORD to heal and save him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "Sentence case requires only the first letter of proper names to be capitalised, not all-capital letters.",
+        "suggestion": "Jeremiah asks the Lord to heal and save him"
+      }
+    },
+    "JER.17.15-16": {
+      "text": "Jeremiah answers people who mock God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.17-18": {
+      "text": "Jeremiah asks God to shame his persecutors, not him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.19-20": {
+      "text": "The LORD sends Jeremiah to speak at the city gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.21-23": {
+      "text": "The LORD tells the people not to work on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.24-25": {
+      "text": "The LORD promises blessing if the people keep the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.17.26-27": {
+      "text": "The LORD warns of fire if the people ignore the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.1-4": {
+      "text": "Jeremiah watches a potter remake a flawed pot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.5-8": {
+      "text": "Israel is like clay in the LORD’s hand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.9-10": {
+      "text": "The LORD may withhold good from a nation that does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.11-12": {
+      "text": "The LORD calls Judah to turn, but the people refuse",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.13-14": {
+      "text": "The LORD says Israel has done a most terrible thing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.15-17": {
+      "text": "The LORD will scatter Israel for worshiping idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.18-20": {
+      "text": "Enemies plot against Jeremiah, and he prays to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.18.21-23": {
+      "text": "Jeremiah asks the LORD to punish his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.1-3": {
+      "text": "The LORD sends Jeremiah with a jar to announce disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.4-5": {
+      "text": "Judah left the LORD and burned children to Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.6-9": {
+      "text": "The LORD warns of slaughter and siege in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.10-11": {
+      "text": "Jeremiah is to break the jar as a sign of ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.12-13": {
+      "text": "The LORD will make Jerusalem like Topheth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.19.14-15": {
+      "text": "Jeremiah warns the people of disaster at the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.1-2": {
+      "text": "Pashhur has Jeremiah beaten and put in the stocks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.3-4": {
+      "text": "Jeremiah gives Pashhur a new name, Magor-missabib",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.5-6": {
+      "text": "Jeremiah says Pashhur will die in Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.7-9": {
+      "text": "Jeremiah complains that the LORD’s word brings him shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.10-11": {
+      "text": "Jeremiah’s enemies plot, but the LORD is with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.12-13": {
+      "text": "Jeremiah asks for justice and praises the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.14-15": {
+      "text": "Jeremiah curses the day he was born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.20.16-18": {
+      "text": "Jeremiah wishes he had died before birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.1-2": {
+      "text": "King Zedekiah asks Jeremiah to ask the LORD for help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.3-5": {
+      "text": "The LORD says he will fight against Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.6-7": {
+      "text": "Zedekiah and the city will fall to Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.8-10": {
+      "text": "The LORD tells the people to surrender and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.11-12": {
+      "text": "The LORD tells the house of David to do justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.21.13-14": {
+      "text": "The LORD will punish Jerusalem with fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.1-3": {
+      "text": "The LORD tells the king of Judah to do justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.4-5": {
+      "text": "The LORD promises blessing or ruin for the king’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.6-7": {
+      "text": "The LORD will turn the king’s house into a desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.8-9": {
+      "text": "Nations will learn why the LORD destroyed the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.10-10": {
+      "text": "Jeremiah says to weep for the exiled king, not the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.11-12": {
+      "text": "Shallum will die in exile and never see Judah again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.13-14": {
+      "text": "The LORD warns the king who builds with unfair work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.15-16": {
+      "text": "Jehoiakim’s father did justice and helped the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.17-19": {
+      "text": "The LORD says Jehoiakim will have a shameful burial",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.20-21": {
+      "text": "Jerusalem is told to cry out because she did not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.22-23": {
+      "text": "Shame and pain will come to the people of Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.24-26": {
+      "text": "The LORD will give Coniah to Babylon and send him away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.27-28": {
+      "text": "Coniah will never return to the land he longs for",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.22.29-30": {
+      "text": "None of Coniah’s children will sit on David’s throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.1-2": {
+      "text": "The LORD will punish the shepherds who scatter his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.3-4": {
+      "text": "The LORD will gather his people and give them good shepherds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.5-6": {
+      "text": "The LORD promises a righteous king from David’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.7-8": {
+      "text": "The LORD will bring Israel back to their own land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.9-10": {
+      "text": "Jeremiah grieves over the evil prophets and the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.11-12": {
+      "text": "The LORD will punish the wicked prophets and priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.13-15": {
+      "text": "The LORD condemns the prophets of Samaria and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.16-18": {
+      "text": "The LORD tells the people not to listen to false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.19-20": {
+      "text": "The LORD’s anger will fall on the wicked like a storm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.21-22": {
+      "text": "The LORD did not send the prophets who speak lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.23-24": {
+      "text": "The LORD says he is near and sees everything",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.25-27": {
+      "text": "The LORD condemns prophets who tell false dreams",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.28-30": {
+      "text": "The LORD’s word is like fire; he is against false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.31-32": {
+      "text": "The LORD is against prophets who lead his people astray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.33-34": {
+      "text": "The LORD will punish anyone who claims a false burden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.23.35-36": {
+      "text": "The LORD tells the people to stop saying “burden of the LORD”",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length", "quotes"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title contains quotation marks and exceeds the 60-character limit.",
+        "suggestion": "The people must not speak of the burden of the LORD"
+      }
+    },
+    "JER.23.37-40": {
+      "text": "The LORD will cast out those who misuse the word burden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.24.1-3": {
+      "text": "The LORD shows Jeremiah two baskets of figs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.24.4-7": {
+      "text": "The LORD will bring the exiles back like good figs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.24.8-10": {
+      "text": "The LORD will destroy Zedekiah and the rest like bad figs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.1-2": {
+      "text": "Jeremiah speaks to the people of Judah and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.3-4": {
+      "text": "Jeremiah says the people have not listened for 23 years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.5-6": {
+      "text": "The prophets told Judah to turn from evil ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.7-9": {
+      "text": "God will send Nebuchadnezzar because Judah did not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.10-11": {
+      "text": "Nations will serve the king of Babylon seventy years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.12-14": {
+      "text": "God will punish Babylon after seventy years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.15-16": {
+      "text": "God tells Jeremiah to give the cup of wrath to nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.17-18": {
+      "text": "Jeremiah gives the cup to Jerusalem and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.19-21": {
+      "text": "The cup goes to Egypt, Philistia, Edom, Moab and Ammon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.22-23": {
+      "text": "The cup goes to Tyre, Sidon and lands across the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.24-26": {
+      "text": "The cup goes to Arabia, Elam, Media and all other kingdoms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.27-29": {
+      "text": "God says the nations must drink the cup and be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.30-31": {
+      "text": "God will roar and judge all the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.32-33": {
+      "text": "Disaster spreads from nation to nation and many die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.34-36": {
+      "text": "The shepherds wail because God destroys the pasture",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.25.37-38": {
+      "text": "God’s anger leaves the land empty and silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.1-3": {
+      "text": "God tells Jeremiah to warn Judah at the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.4-6": {
+      "text": "God warns that the temple could become like Shiloh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.7-9": {
+      "text": "Priests, prophets and people say Jeremiah must die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.10-12": {
+      "text": "Jeremiah tells the officials that God sent him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.13-15": {
+      "text": "Jeremiah urges Judah to obey and warns against killing him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.16-17": {
+      "text": "Officials and people say Jeremiah should not die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.18-19": {
+      "text": "Elders remind everyone that Hezekiah did not kill Micah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.20-21": {
+      "text": "Uriah prophesies like Jeremiah and flees to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.26.22-24": {
+      "text": "Jehoiakim kills Uriah, but Ahikam protects Jeremiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.1-4": {
+      "text": "Jeremiah makes a yoke and sends word to the kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.5-7": {
+      "text": "God gives all these lands to Nebuchadnezzar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.8-8": {
+      "text": "Nations that refuse to serve Babylon will be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.9-11": {
+      "text": "The kings must not listen to false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.12-13": {
+      "text": "Jeremiah tells Zedekiah to serve Babylon and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.14-15": {
+      "text": "Jeremiah says the false prophets lie in God’s name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.16-18": {
+      "text": "Jeremiah tells the priests not to believe false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.19-20": {
+      "text": "God speaks about the temple items still in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.27.21-22": {
+      "text": "The remaining temple items will go to Babylon for a time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.1-2": {
+      "text": "Hananiah says God has broken Babylon’s yoke",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.3-4": {
+      "text": "Hananiah promises the return of exiles and temple items",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.5-7": {
+      "text": "Jeremiah says Amen but asks Hananiah to listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The word “amen” is not a proper name and should not be capitalized in sentence case.",
+        "suggestion": "Jeremiah says amen but asks Hananiah to listen"
+      }
+    },
+    "JER.28.8-9": {
+      "text": "A prophet of peace is proven only if his word comes true",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.10-11": {
+      "text": "Hananiah breaks Jeremiah’s yoke and speaks falsely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.12-14": {
+      "text": "God tells Jeremiah to say Hananiah made a yoke of iron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.28.15-17": {
+      "text": "Jeremiah tells Hananiah he will die, and Hananiah dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.1-3": {
+      "text": "Jeremiah sends a letter to the exiles in Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.4-5": {
+      "text": "God tells the exiles to build houses and plant gardens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.6-7": {
+      "text": "The exiles are to have families and pray for Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.8-9": {
+      "text": "God warns the exiles not to trust false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.10-11": {
+      "text": "God promises to bring the exiles home and give hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.12-14": {
+      "text": "God promises to be found by the exiles who seek him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.15-17": {
+      "text": "God warns of punishment for the people left in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.18-19": {
+      "text": "God will punish Judah for not listening to the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.20-21": {
+      "text": "God says Nebuchadnezzar will kill two false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.22-23": {
+      "text": "Ahab and Zedekiah will die for lies and adultery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.24-26": {
+      "text": "God speaks to Shemaiah about his letters to the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.27-29": {
+      "text": "Shemaiah asks why Jeremiah is not rebuked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.29.30-32": {
+      "text": "God will punish Shemaiah for false prophecy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.1-3": {
+      "text": "God tells Jeremiah to write of Israel’s return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.4-5": {
+      "text": "A cry of fear is heard in Israel and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.6-7": {
+      "text": "Jacob will be saved from a terrible day of distress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.8-9": {
+      "text": "God will free Israel and raise up David as king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.10-11": {
+      "text": "God will save Israel but also discipline Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.12-13": {
+      "text": "God says Israel’s wound is incurable",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.14-15": {
+      "text": "God says he struck Israel because of many sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.16-17": {
+      "text": "God will punish Israel’s enemies and heal Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.18-19": {
+      "text": "God will rebuild the city and fill it with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.20-22": {
+      "text": "Israel will have its own leader and be God’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.30.23-24": {
+      "text": "God’s anger will fall on the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.1-3": {
+      "text": "God says he loves Israel with an everlasting love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.4-6": {
+      "text": "God will rebuild Israel and bring back joyful dancing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.7-7": {
+      "text": "God tells Israel to sing with joy and ask for help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.8-9": {
+      "text": "God will bring Israel home from the north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.10-11": {
+      "text": "God will gather scattered Israel like a shepherd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.12-12": {
+      "text": "God’s people will rejoice over his gifts in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.13-14": {
+      "text": "The LORD will turn mourning into joy for his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.15-15": {
+      "text": "Rachel weeps for her children in Ramah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.16-17": {
+      "text": "The LORD promises that the children will return home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.18-20": {
+      "text": "Ephraim repents, and the LORD shows him compassion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.21-22": {
+      "text": "The LORD calls Israel to return to her cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.23-25": {
+      "text": "The LORD will restore Judah and refresh the weary",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.26-26": {
+      "text": "Jeremiah wakes from a pleasant sleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.27-28": {
+      "text": "The LORD will build and plant Israel and Judah again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.29-30": {
+      "text": "Each person will die for his own sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.31-32": {
+      "text": "The LORD promises a new covenant with Israel and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.33-34": {
+      "text": "The LORD will write his law on his people’s hearts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.35-36": {
+      "text": "The LORD promises Israel will always be a nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.37-37": {
+      "text": "The LORD will never reject Israel’s descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.31.38-40": {
+      "text": "Jerusalem will be rebuilt and be holy to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.1-2": {
+      "text": "Jeremiah is in prison while Babylon besieges Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.3-5": {
+      "text": "Zedekiah jails Jeremiah for his message about Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.6-7": {
+      "text": "Jeremiah says Hanamel will come to sell his field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.8-9": {
+      "text": "Jeremiah buys Hanamel’s field for seventeen shekels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.10-12": {
+      "text": "Jeremiah signs the deed and gives it to Baruch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.13-15": {
+      "text": "Jeremiah tells Baruch to keep the deeds in a clay jar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.16-18": {
+      "text": "Jeremiah praises God’s great power in prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.19-21": {
+      "text": "Jeremiah remembers what God did for Israel in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.22-23": {
+      "text": "Jeremiah says Israel disobeyed, so disaster came",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.24-25": {
+      "text": "Jeremiah points to the siege and the field he bought",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.26-28": {
+      "text": "The LORD says Babylon will capture Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.29-30": {
+      "text": "The LORD says Babylon will burn the city for Judah’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.31-32": {
+      "text": "The LORD will remove the city because of its people’s evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.33-35": {
+      "text": "The LORD accuses Judah of idols and child sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.36-37": {
+      "text": "The LORD will bring his people home to live safely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.38-40": {
+      "text": "The LORD will make an everlasting covenant with his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.41-42": {
+      "text": "The LORD will rejoice to do good to his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.32.43-44": {
+      "text": "Fields will be bought again in Judah and Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.1-3": {
+      "text": "The LORD tells Jeremiah to call on him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.4-5": {
+      "text": "The LORD will let the Chaldeans attack Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.6-9": {
+      "text": "The LORD promises to heal and forgive Judah and Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.10-11": {
+      "text": "Joy will be heard again in the empty cities of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.12-13": {
+      "text": "Shepherds will again have flocks in the cities of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.14-16": {
+      "text": "The LORD promises a righteous Branch from David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.17-18": {
+      "text": "David will always have a king, and priests will serve",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.19-22": {
+      "text": "The LORD’s promise to David is as sure as day and night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.23-24": {
+      "text": "The LORD hears people say he rejected Israel and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.33.25-26": {
+      "text": "The LORD will restore Jacob’s family and have mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.1-3": {
+      "text": "Jeremiah tells Zedekiah Babylon will capture Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses record what the LORD told Jeremiah to say, not Jeremiah speaking to Zedekiah.",
+        "suggestion": "The LORD tells Jeremiah that Babylon will take Jerusalem"
+      }
+    },
+    "JER.34.4-5": {
+      "text": "Zedekiah will die in peace and people will mourn him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.6-7": {
+      "text": "Jeremiah tells Zedekiah this while Babylon attacks Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The word ’this’ is not clear to a reader seeing the title in a list.",
+        "suggestion": "Jeremiah warns Zedekiah while Babylon attacks Judah"
+      }
+    },
+    "JER.34.8-9": {
+      "text": "Zedekiah and the people agree to free Hebrew slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.10-11": {
+      "text": "The people free slaves but later take the slaves back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.12-14": {
+      "text": "The LORD reminds Judah of the law to free Hebrew slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.15-16": {
+      "text": "The LORD accuses the people of taking back freed slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.17-19": {
+      "text": "The LORD will punish those who broke the covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.34.20-22": {
+      "text": "Zedekiah and Judah’s leaders will be given to enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.1-2": {
+      "text": "The LORD tells Jeremiah to offer wine to the Rechabites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.3-4": {
+      "text": "Jeremiah brings the Rechabites into the LORD’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.5-7": {
+      "text": "The Rechabites refuse wine because of Jonadab’s command",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.8-11": {
+      "text": "The Rechabites have obeyed Jonadab and live in tents",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.12-14": {
+      "text": "The LORD says the Rechabites obey but Judah does not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.15-16": {
+      "text": "The LORD sent prophets, but Judah did not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.17-17": {
+      "text": "The LORD will bring disaster on Judah and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.35.18-19": {
+      "text": "Jonadab’s family will always serve before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.1-3": {
+      "text": "The LORD tells Jeremiah to write his words on a scroll",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.4-6": {
+      "text": "Jeremiah sends Baruch to read the scroll in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.7-8": {
+      "text": "Baruch obeys Jeremiah and reads the scroll in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.9-10": {
+      "text": "Baruch reads the scroll to all the people on a fast day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.11-12": {
+      "text": "Micaiah hears the scroll and goes to the officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.13-15": {
+      "text": "Baruch reads the scroll to the officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.16-19": {
+      "text": "The officials fear, and tell Baruch and Jeremiah to hide",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.20-22": {
+      "text": "Jehudi reads the scroll to King Jehoiakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.23-24": {
+      "text": "Jehoiakim cuts up the scroll and is not afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.25-26": {
+      "text": "The LORD hides Baruch and Jeremiah from the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.27-29": {
+      "text": "The LORD tells Jeremiah to write the scroll again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.30-31": {
+      "text": "The LORD announces punishment on Jehoiakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.36.32-32": {
+      "text": "Baruch writes the words again, with more added",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.1-2": {
+      "text": "Zedekiah and the people refuse to obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.3-5": {
+      "text": "Zedekiah asks Jeremiah to pray to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.6-8": {
+      "text": "The LORD says the Chaldeans will return and burn the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.9-10": {
+      "text": "The LORD warns Judah the Chaldeans will not leave for good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.11-13": {
+      "text": "Irijah seizes Jeremiah at the Gate of Benjamin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.14-15": {
+      "text": "Officials beat Jeremiah and put him in jail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.16-17": {
+      "text": "Zedekiah secretly asks Jeremiah for a word from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.18-20": {
+      "text": "Jeremiah asks Zedekiah not to send him back to prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.37.21-21": {
+      "text": "Zedekiah moves Jeremiah to the courtyard of the guard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.1-3": {
+      "text": "Officials hear Jeremiah say the city will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.4-5": {
+      "text": "Officials ask to kill Jeremiah and Zedekiah allows it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.6-6": {
+      "text": "Officials drop Jeremiah into a cistern full of mud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.7-9": {
+      "text": "Ebed-melech speaks to the king for Jeremiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.10-11": {
+      "text": "The king sends Ebed-melech to pull Jeremiah out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.12-13": {
+      "text": "Ebed-melech pulls Jeremiah out of the cistern",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.14-16": {
+      "text": "Zedekiah promises not to kill Jeremiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.17-18": {
+      "text": "Jeremiah tells Zedekiah to surrender and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.19-19": {
+      "text": "Zedekiah is afraid of the Jews who joined the Chaldeans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.20-21": {
+      "text": "Jeremiah urges Zedekiah to obey the LORD and live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.22-23": {
+      "text": "Jeremiah describes the fall of Zedekiah’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.24-26": {
+      "text": "Zedekiah tells Jeremiah to keep the talk secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.38.27-28": {
+      "text": "Jeremiah answers the officials as the king said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.1-3": {
+      "text": "Babylon’s army breaks into Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.4-5": {
+      "text": "Zedekiah flees but the Chaldeans catch him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.6-7": {
+      "text": "The king of Babylon kills Zedekiah’s sons and blinds him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.8-10": {
+      "text": "The Chaldeans burn Jerusalem and take people away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.11-14": {
+      "text": "Nebuchadnezzar orders that Jeremiah be treated well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.15-16": {
+      "text": "The LORD tells Jeremiah to speak to Ebed-melech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.39.17-18": {
+      "text": "The LORD promises to rescue Ebed-melech",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.1-2": {
+      "text": "Nebuzaradan frees Jeremiah at Ramah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.3-4": {
+      "text": "Nebuzaradan lets Jeremiah choose where to go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.5-6": {
+      "text": "Jeremiah goes to live with Gedaliah at Mizpah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.7-8": {
+      "text": "Army commanders come to Gedaliah at Mizpah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.9-10": {
+      "text": "Gedaliah urges the commanders to serve Babylon’s king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.11-12": {
+      "text": "Jews return to Judah and gather much fruit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.13-14": {
+      "text": "Johanan warns Gedaliah of a plot to kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.40.15-16": {
+      "text": "Johanan offers to kill Ishmael, but Gedaliah refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.1-3": {
+      "text": "Ishmael kills Gedaliah and others at Mizpah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.4-5": {
+      "text": "Eighty men come with offerings after Gedaliah’s death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.6-7": {
+      "text": "Ishmael tricks and kills eighty men at Mizpah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Ishmael did not kill all eighty men, as ten of them were spared.",
+        "suggestion": "Ishmael tricks and slaughters the men at Mizpah"
+      }
+    },
+    "JER.41.8-9": {
+      "text": "Ishmael spares ten men who offer hidden food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.10-10": {
+      "text": "Ishmael takes the people of Mizpah captive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.11-12": {
+      "text": "Johanan goes to fight Ishmael at Gibeon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.13-14": {
+      "text": "The captives rejoice and go over to Johanan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.15-16": {
+      "text": "Ishmael escapes and Johanan leads the people back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.41.17-18": {
+      "text": "The people plan to flee to Egypt from the Chaldeans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.1-3": {
+      "text": "The people ask Jeremiah to pray for God’s guidance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.4-6": {
+      "text": "Jeremiah agrees to pray, and the people promise to obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.7-10": {
+      "text": "God tells the people through Jeremiah to stay in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.11-12": {
+      "text": "God tells the people not to fear the king of Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.13-14": {
+      "text": "God warns the people against choosing to go to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.15-17": {
+      "text": "God says the people who go to Egypt will die there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.18-19": {
+      "text": "Jeremiah warns the people of Judah not to go to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.42.20-22": {
+      "text": "Jeremiah says the people did not obey and will die in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.43.1-3": {
+      "text": "Azariah and Johanan call Jeremiah a liar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.43.4-7": {
+      "text": "Johanan disobeys God and takes the people to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.43.8-10": {
+      "text": "God tells Jeremiah to bury stones at Pharaoh’s palace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.43.11-13": {
+      "text": "God says Nebuchadnezzar will strike Egypt and its gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.1-3": {
+      "text": "God reminds the Jews in Egypt of Jerusalem’s ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.4-6": {
+      "text": "God sent prophets, but Judah served other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.7-8": {
+      "text": "God asks why the Jews in Egypt burn incense to other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.9-10": {
+      "text": "God asks if the Jews have forgotten past wickedness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.11-12": {
+      "text": "The LORD will destroy the Judeans who went to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.13-14": {
+      "text": "God will punish the Judeans in Egypt; few will return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.15-17": {
+      "text": "The Judeans refuse to stop worshiping the Queen of Heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.18-19": {
+      "text": "The people say trouble came after the offerings stopped",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.20-21": {
+      "text": "Jeremiah says the LORD remembered the incense in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.22-23": {
+      "text": "Jeremiah says the people’s sin caused the land’s disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.24-25": {
+      "text": "Jeremiah tells the Judeans to keep the vows to the Queen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "Calling the Queen of Heaven simply “the Queen” misleadingly suggests a human monarch.",
+        "suggestion": "Jeremiah tells the Judeans to keep their vows"
+      }
+    },
+    "JER.44.26-28": {
+      "text": "God swears Judeans in Egypt will die by sword or famine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.44.29-30": {
+      "text": "The LORD gives a sign that Pharaoh Hophra will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.45.1-3": {
+      "text": "Baruch is worn out and full of sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.45.4-5": {
+      "text": "The LORD tells Baruch to stop seeking great things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.1-4": {
+      "text": "Jeremiah’s message about Egypt’s army at Carchemish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence statement.",
+        "suggestion": "Jeremiah speaks about Egypt’s army at Carchemish"
+      }
+    },
+    "JER.46.5-6": {
+      "text": "Egypt’s warriors are afraid and fall in the north",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.7-9": {
+      "text": "Egypt boasts like the Nile and sends its army to war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.10-10": {
+      "text": "The LORD will punish his enemies by the Euphrates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.11-12": {
+      "text": "Egypt cannot be healed and her shame is known",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.13-14": {
+      "text": "The LORD tells Jeremiah that Babylon will attack Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.15-17": {
+      "text": "Egypt’s warriors fall and Pharaoh is called all noise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “all noise” is an idiom that will not make plain sense to a second-language reader.",
+        "suggestion": "Egypt’s warriors fall and Pharaoh misses his chance"
+      }
+    },
+    "JER.46.18-19": {
+      "text": "The LORD says Memphis will be destroyed and Egypt exiled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.20-22": {
+      "text": "An enemy from the north will attack Egypt like woodsmen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.23-24": {
+      "text": "A huge army like locusts will conquer Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.25-26": {
+      "text": "The LORD will punish Egypt but later restore it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.46.27-28": {
+      "text": "The LORD tells Israel not to fear and promises to save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.47.1-2": {
+      "text": "An enemy from the north will overwhelm the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.47.3-4": {
+      "text": "The day has come to destroy all the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.47.5-7": {
+      "text": "Gaza and Ashkelon mourn; the LORD’s sword cannot rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.1-2": {
+      "text": "The LORD says Moab’s cities will be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.3-5": {
+      "text": "People of Moab cry out as destruction comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.6-7": {
+      "text": "Moab trusts its treasures and will be captured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.8-10": {
+      "text": "The destroyer will come on every city of Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.11-12": {
+      "text": "Moab has been at ease, but exile will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.13-14": {
+      "text": "Moab will be ashamed of its god Chemosh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.15-17": {
+      "text": "Moab is destroyed and neighbors are told to mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.18-20": {
+      "text": "People of Dibon and Aroer hear that Moab is destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.21-25": {
+      "text": "God’s judgment falls on the towns of Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.26-27": {
+      "text": "God humbles proud Moab, who mocked Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.28-29": {
+      "text": "Moab’s people must flee the towns; Moab is proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.30-32": {
+      "text": "God knows Moab’s pride and weeps for Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.33-33": {
+      "text": "Joy ends in the orchards and fields of Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.34-35": {
+      "text": "Cries rise from Moab’s towns; God ends false worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.36-37": {
+      "text": "God mourns for Moab, where everyone shows grief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.38-39": {
+      "text": "Moab is shattered like a jar, and all mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.40-41": {
+      "text": "An eagle attacks Moab and its warriors are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.42-44": {
+      "text": "Moab will be destroyed for its pride against the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.45-45": {
+      "text": "Fire from Heshbon destroys Moab’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.48.46-47": {
+      "text": "Moab’s people go into exile, but God will restore Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.1-2": {
+      "text": "God judges the Ammonites for taking Gad’s land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.3-4": {
+      "text": "Heshbon and Rabbah must mourn; Ammon trusted in riches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.5-6": {
+      "text": "God will bring terror to Ammon, then restore it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.7-8": {
+      "text": "God warns Edom of coming disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.9-11": {
+      "text": "God will strip Edom bare but protect orphans and widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.12-13": {
+      "text": "Edom must drink the cup, and Bozrah will be ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.14-15": {
+      "text": "God sends a message calling nations to attack Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.16-16": {
+      "text": "God will bring proud Edom down from the heights",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.17-18": {
+      "text": "Edom will become a ruin like Sodom and Gomorrah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.19-19": {
+      "text": "God will chase Edom from the land like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.20-20": {
+      "text": "God has plans to destroy Edom and Teman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.21-22": {
+      "text": "Edom’s fall shakes the earth; its warriors are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.23-25": {
+      "text": "Hamath, Arpad and Damascus are afraid and weak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.26-27": {
+      "text": "Damascus loses its warriors and its walls burn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.28-29": {
+      "text": "God sends armies to take Kedar’s tents and camels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.30-31": {
+      "text": "God warns Hazor that Nebuchadnezzar plans to attack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.32-33": {
+      "text": "Hazor will be plundered and left empty forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.34-36": {
+      "text": "God will break Elam’s bow and scatter the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.49.37-39": {
+      "text": "God will destroy Elam, then restore Elam later",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.1-2": {
+      "text": "God tells the nations that Babylon is captured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.3-3": {
+      "text": "A nation from the north will destroy Babylon’s land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.4-5": {
+      "text": "Israel and Judah will come weeping to seek the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.6-7": {
+      "text": "God’s people are lost sheep led astray by shepherds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.8-10": {
+      "text": "God tells his people to flee as nations attack Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.11-13": {
+      "text": "Babylon will be a desert for plundering God’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.14-15": {
+      "text": "Archers are told to attack Babylon because she sinned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.16-16": {
+      "text": "Foreigners will flee Babylon and return home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.17-18": {
+      "text": "God will punish Babylon’s king as he punished Assyria’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.19-20": {
+      "text": "God will bring Israel home and forgive the remnant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.21-22": {
+      "text": "God tells attackers to destroy Merathaim and Pekod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.23-24": {
+      "text": "Babylon is broken because she challenged the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.25-26": {
+      "text": "God uses his weapons to destroy Babylon completely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.27-28": {
+      "text": "Babylon’s army will be killed as God takes vengeance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.29-30": {
+      "text": "Archers are to repay Babylon for defying God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.31-32": {
+      "text": "God is against Babylon’s pride and will punish her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.33-34": {
+      "text": "God, the Redeemer, will defend Israel and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.35-37": {
+      "text": "A sword will strike Babylon’s people and treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.38-40": {
+      "text": "Babylon will become a dry land where no one lives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.41-43": {
+      "text": "A great army from the north will attack Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.44-44": {
+      "text": "God will chase Babylon away like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.50.45-46": {
+      "text": "God’s plans against Babylon will shake the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.1-2": {
+      "text": "God sends a destroyer and strangers against Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.3-4": {
+      "text": "Babylon’s army will fall in the streets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.5-6": {
+      "text": "God’s people must flee Babylon before her punishment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.7-8": {
+      "text": "Babylon, God’s gold cup, suddenly falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.9-10": {
+      "text": "People leave Babylon and tell Zion what God has done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.11-12": {
+      "text": "God stirs the Medes to attack Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.13-14": {
+      "text": "God says Babylon’s end has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.15-16": {
+      "text": "God made the earth by his power and wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.17-19": {
+      "text": "Idols are worthless, but God is the Maker of all things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.20-21": {
+      "text": "God calls Babylon his war club to shatter nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.22-23": {
+      "text": "God uses Babylon to shatter people of every kind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.24-24": {
+      "text": "God will repay Babylon for the evil done in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.25-26": {
+      "text": "The LORD is against Babylon, the destroying mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.27-28": {
+      "text": "The LORD calls nations and kings to attack Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.29-29": {
+      "text": "The earth shakes because the LORD will empty Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.30-32": {
+      "text": "Messengers tell Babylon’s king the city is captured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.33-33": {
+      "text": "The LORD says Babylon’s harvest time will soon come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.34-35": {
+      "text": "Zion asks God to punish Babylon for its violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.36-37": {
+      "text": "The LORD will take revenge for Zion and dry up Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.38-40": {
+      "text": "The LORD will bring Babylon’s people down like lambs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.41-42": {
+      "text": "Babylon is captured and becomes a horror to nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.43-44": {
+      "text": "Babylon’s cities become empty and the god Bel is punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.45-46": {
+      "text": "The LORD tells his people to flee Babylon and not fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.47-49": {
+      "text": "Babylon’s idols will be punished and Babylon will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.50-51": {
+      "text": "Survivors are told to leave Babylon and remember the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.52-53": {
+      "text": "Not even high strongholds will save Babylon from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.54-56": {
+      "text": "The LORD will destroy Babylon and repay in full",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.57-58": {
+      "text": "Babylon’s leaders will die and its walls will burn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.59-60": {
+      "text": "Jeremiah gives Seraiah a scroll about Babylon’s disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.61-62": {
+      "text": "Jeremiah tells Seraiah to read the scroll in Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.51.63-64": {
+      "text": "Seraiah must throw the scroll into the Euphrates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.1-3": {
+      "text": "Zedekiah does evil and rebels against Babylon’s king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.4-5": {
+      "text": "Nebuchadnezzar surrounds Jerusalem with his army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.6-8": {
+      "text": "The city wall is broken and Zedekiah flees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.9-11": {
+      "text": "Zedekiah’s sons are killed and Zedekiah is blinded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.12-14": {
+      "text": "Nebuzaradan burns Jerusalem and breaks its walls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.15-16": {
+      "text": "Nebuzaradan takes many people away and leaves the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.17-19": {
+      "text": "The Babylonians take the bronze and gold from the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.20-21": {
+      "text": "The temple bronze was too heavy to weigh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.22-23": {
+      "text": "The pillar tops were decorated with bronze pomegranates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.24-25": {
+      "text": "Nebuzaradan takes the chief priest and other leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.26-27": {
+      "text": "The leaders are killed at Riblah and Judah goes into exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.28-30": {
+      "text": "Nebuchadnezzar takes 4,600 people into exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.31-31": {
+      "text": "Evil-merodach frees Jehoiachin from prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JER.52.32-34": {
+      "text": "Jehoiachin is honored and eats at the king’s table",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
