@@ -1,0 +1,4646 @@
+{
+  "language": "en",
+  "book": "ISA",
+  "bible": "bsb-isa",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793912675-xqwW1UJP7gpQK5cCawRE",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5856,
+      "completionTokens": 7201,
+      "reasoningTokens": 6054,
+      "cost": 0.083722,
+      "ms": 47562
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912722-Ie1Ny1iCPrmtvXa5Efw0",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6218,
+      "completionTokens": 5517,
+      "reasoningTokens": 4449,
+      "cost": 0.067606,
+      "ms": 36341
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912759-jk3KAmgeofz67Boxp28o",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6377,
+      "completionTokens": 6145,
+      "reasoningTokens": 5080,
+      "cost": 0.074204,
+      "ms": 38305
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912797-BEA6fnqFbofv1mqTgbay",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6318,
+      "completionTokens": 4793,
+      "reasoningTokens": 3798,
+      "cost": 0.060566,
+      "ms": 33019
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912830-M4XqteFYrKH9tx7WhRDA",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6562,
+      "completionTokens": 5565,
+      "reasoningTokens": 4403,
+      "cost": 0.068774,
+      "ms": 35825
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912866-la5iOEUZwE7Q2hRAtEbp",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6310,
+      "completionTokens": 6230,
+      "reasoningTokens": 5166,
+      "cost": 0.07492,
+      "ms": 36833
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912903-B7OIwoZM4O99RCf2WbHP",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5985,
+      "completionTokens": 4509,
+      "reasoningTokens": 3506,
+      "cost": 0.05706,
+      "ms": 29738
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912933-QgTY5F8vlJbXy71gksCK",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6116,
+      "completionTokens": 5324,
+      "reasoningTokens": 4276,
+      "cost": 0.065472,
+      "ms": 34835
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912968-PF8m2Smwl75ftoDwYNqa",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6146,
+      "completionTokens": 3794,
+      "reasoningTokens": 2792,
+      "cost": 0.050232,
+      "ms": 25410
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912993-923IS8ByTr7jmFrDGD7E",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6827,
+      "completionTokens": 6860,
+      "reasoningTokens": 5748,
+      "cost": 0.082254,
+      "ms": 43833
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913037-V4sVBbLJ0zBkG2tF2oah",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6451,
+      "completionTokens": 5884,
+      "reasoningTokens": 4836,
+      "cost": 0.071742,
+      "ms": 36783
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913074-8VX4TsPNrAI7eFe18KPO",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5739,
+      "completionTokens": 4050,
+      "reasoningTokens": 3106,
+      "cost": 0.051978,
+      "ms": 28148
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913102-fIWuGwdN9nuRwLLfYcsP",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5618,
+      "completionTokens": 1012,
+      "reasoningTokens": 0,
+      "cost": 0.021356,
+      "ms": 6745
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913109-g1gmP8xMPU9TkunQuuMc",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5884,
+      "completionTokens": 4887,
+      "reasoningTokens": 3918,
+      "cost": 0.060638,
+      "ms": 33961
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913143-quV7K89XYY6Pk74DNcfq",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5898,
+      "completionTokens": 4040,
+      "reasoningTokens": 3121,
+      "cost": 0.052196,
+      "ms": 27380
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913170-Zt6XXoQ3J6o8zqT2NLAL",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5376,
+      "completionTokens": 5367,
+      "reasoningTokens": 4414,
+      "cost": 0.064422,
+      "ms": 38894
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913209-6ONAHAdlExj2nuNGqS3b",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5761,
+      "completionTokens": 4711,
+      "reasoningTokens": 3757,
+      "cost": 0.058632,
+      "ms": 32300
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913241-pmDmWDkXcerrL7PTamdO",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5791,
+      "completionTokens": 4422,
+      "reasoningTokens": 3467,
+      "cost": 0.055802,
+      "ms": 30296
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913272-d2bK5RLCdQ2EEPNKXaZl",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5833,
+      "completionTokens": 4073,
+      "reasoningTokens": 3114,
+      "cost": 0.052396,
+      "ms": 25928
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793913297-z5gYkIlTp47gk5UNhwh4",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5898,
+      "completionTokens": 5889,
+      "reasoningTokens": 4961,
+      "cost": 0.070686,
+      "ms": 40430
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913338-DWZSDxJdMqaJO0i8cfgb",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4848,
+      "completionTokens": 5917,
+      "reasoningTokens": 5030,
+      "cost": 0.02582475,
+      "ms": 41069
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913379-VJGyDxcubmmaENq2pEUV",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5110,
+      "completionTokens": 6157,
+      "reasoningTokens": 5208,
+      "cost": 0.02692125,
+      "ms": 32572
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913412-Jpwz1z2d4SdHn5feddbD",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5268,
+      "completionTokens": 6225,
+      "reasoningTokens": 5257,
+      "cost": 0.02729475,
+      "ms": 45706
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913457-cxAJVqMvvsztg0HsXbtq",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5254,
+      "completionTokens": 7603,
+      "reasoningTokens": 6625,
+      "cost": 0.03245175,
+      "ms": 42779
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913500-FE0xjnxySTHXhpWHOXL5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5372,
+      "completionTokens": 8968,
+      "reasoningTokens": 7949,
+      "cost": 0.037659,
+      "ms": 67035
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913567-ZjgFodItrqvJHEHhv8sW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5217,
+      "completionTokens": 5551,
+      "reasoningTokens": 4635,
+      "cost": 0.024729,
+      "ms": 42771
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913610-RsGWLsGHIphQjkqirvaL",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4991,
+      "completionTokens": 6104,
+      "reasoningTokens": 5189,
+      "cost": 0.02663325,
+      "ms": 30204
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913640-bvE4EGZIK7nDSbdX1ygq",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5139,
+      "completionTokens": 7871,
+      "reasoningTokens": 6829,
+      "cost": 0.0333705,
+      "ms": 55672
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913696-X3QpboxNYra0DOigusJe",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5083,
+      "completionTokens": 11973,
+      "reasoningTokens": 10999,
+      "cost": 0.048711,
+      "ms": 80186
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913776-LK47cmHd2gTHGE9dtS1s",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5595,
+      "completionTokens": 10726,
+      "reasoningTokens": 9833,
+      "cost": 0.04441875,
+      "ms": 62152
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913839-4FpabI0SBCLCJbNRQeGp",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5341,
+      "completionTokens": 6124,
+      "reasoningTokens": 5161,
+      "cost": 0.02697075,
+      "ms": 32085
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913871-Kky0KqLVQeNJXi7qlpuH",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4949,
+      "completionTokens": 11532,
+      "reasoningTokens": 10567,
+      "cost": 0.04695675,
+      "ms": 85910
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913957-xzoAJMKWIGRCaHoUCjRn",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4790,
+      "completionTokens": 6275,
+      "reasoningTokens": 5267,
+      "cost": 0.02712375,
+      "ms": 34849
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913991-QQVv8NmVa8OWD2Bw7ATv",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4945,
+      "completionTokens": 3818,
+      "reasoningTokens": 2922,
+      "cost": 0.01802625,
+      "ms": 24178
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914016-elg0oqtYArkmXX4agbQ6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4963,
+      "completionTokens": 5463,
+      "reasoningTokens": 4573,
+      "cost": 0.0242085,
+      "ms": 30508
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914046-01TXMtYjGXbbV6NchABh",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4563,
+      "completionTokens": 7020,
+      "reasoningTokens": 6139,
+      "cost": 0.02974725,
+      "ms": 41705
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914088-zlIgtZ4KzqdYNk7lWQ7R",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4839,
+      "completionTokens": 5590,
+      "reasoningTokens": 4707,
+      "cost": 0.02459175,
+      "ms": 38749
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914127-CtftvgrRkkNv5S2l2fhg",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4889,
+      "completionTokens": 13228,
+      "reasoningTokens": 12268,
+      "cost": 0.05327175,
+      "ms": 91605
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914219-mbfzZ6wfphr8nGXShWfY",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4884,
+      "completionTokens": 8882,
+      "reasoningTokens": 7883,
+      "cost": 0.0369705,
+      "ms": 71845
+    },
+    {
+      "role": "check",
+      "id": "gen-1793914290-dNiVaOjjl2ZNlHgFeSLm",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4971,
+      "completionTokens": 8499,
+      "reasoningTokens": 7554,
+      "cost": 0.0355995,
+      "ms": 62523
+    }
+  ],
+  "titles": {
+    "ISA.1.1-1": {
+      "text": "Isaiah sees a vision about Judah and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.2-3": {
+      "text": "The LORD says his people have rebelled against him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.4-4": {
+      "text": "Isaiah calls Judah a sinful nation that left the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.5-6": {
+      "text": "Judah is like a body covered with wounds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.7-8": {
+      "text": "Foreigners destroy Judah’s land and cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.9-9": {
+      "text": "The LORD left a few survivors, so Judah is not like Sodom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.10-11": {
+      "text": "The LORD says he does not want the many sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.12-13": {
+      "text": "The LORD rejects worthless offerings and holy days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.14-15": {
+      "text": "The LORD hates the feasts and will not hear prayers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.16-17": {
+      "text": "The LORD tells Judah to stop evil and seek justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.18-18": {
+      "text": "The LORD offers to make Judah’s sins white as snow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.19-20": {
+      "text": "The LORD offers Judah a choice: obey or face the sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.21-22": {
+      "text": "Jerusalem has changed from faithful to unfaithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.23-23": {
+      "text": "Jerusalem’s rulers love bribes and ignore widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.24-25": {
+      "text": "The LORD will turn against Jerusalem to purify it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.26-26": {
+      "text": "The LORD will restore Jerusalem’s judges and counselors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.27-28": {
+      "text": "Zion will be redeemed, but rebels will be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.29-30": {
+      "text": "Judah will be ashamed of its sacred oaks and gardens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.1.31-31": {
+      "text": "The strong man will burn like tinder",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.1-2": {
+      "text": "All nations will come to the LORD’s mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.3-3": {
+      "text": "Many peoples will go to learn the LORD’s ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.4-4": {
+      "text": "The LORD will judge nations and bring peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.5-6": {
+      "text": "The people of Jacob have turned to foreign ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.7-8": {
+      "text": "Judah’s land is full of riches and idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.9-11": {
+      "text": "The proud will be humbled before the LORD’s majesty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.12-13": {
+      "text": "The LORD’s day will come against all that is proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.14-16": {
+      "text": "The LORD’s day will bring down high towers and ships",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.17-19": {
+      "text": "Idols will vanish and men will hide from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.2.20-22": {
+      "text": "Men will throw away idols and flee from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.1-3": {
+      "text": "The LORD will remove Jerusalem’s food, water, and leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.4-5": {
+      "text": "Children will rule and people will oppress one another",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.6-7": {
+      "text": "Men will beg a brother to lead, but he refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.8-9": {
+      "text": "Jerusalem and Judah fall because of sin against the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.10-12": {
+      "text": "The righteous will do well and the wicked will suffer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.13-15": {
+      "text": "The LORD accuses the leaders of crushing the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.16-17": {
+      "text": "The LORD will punish the proud women of Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.18-20": {
+      "text": "The Lord will take away the fine things of Zion’s women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.21-23": {
+      "text": "The Lord will take rings, robes and mirrors from the women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.3.24-26": {
+      "text": "Zion’s women will mourn as men die in war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.4.1-2": {
+      "text": "Seven women ask for one man’s name; the Branch is glorious",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.4.3-4": {
+      "text": "The LORD will wash Jerusalem and call the survivors holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.4.5-6": {
+      "text": "The LORD will shelter Mount Zion with cloud, fire and shade",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.1-2": {
+      "text": "Isaiah sings a song about a vineyard that gave sour grapes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.3-4": {
+      "text": "God asks Jerusalem and Judah to judge his vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.5-6": {
+      "text": "God will destroy his vineyard and leave it a wasteland",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.7-7": {
+      "text": "Israel and Judah are God’s vineyard, but give no justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.8-10": {
+      "text": "Woe to those who take all the land; houses will be empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.11-12": {
+      "text": "Woe to those who drink all day and ignore the LORD’s work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.13-14": {
+      "text": "God’s people will go into exile and many will die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.15-17": {
+      "text": "The proud will be humbled, and God will be exalted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.18-19": {
+      "text": "Woe to those who sin and mock God’s plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.20-21": {
+      "text": "Woe to those who call evil good and good evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title addresses only verse 20 and leaves out the woe against those who are wise in their own eyes in verse 21.",
+        "suggestion": "Woe to those who call evil good and think they are wise"
+      }
+    },
+    "ISA.5.22-23": {
+      "text": "Woe to heavy drinkers and judges who accept bribes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.24-24": {
+      "text": "Fire will destroy those who reject the LORD’s instruction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.25-25": {
+      "text": "The LORD’s anger burns against his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.26-26": {
+      "text": "The LORD calls distant nations to come quickly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.27-28": {
+      "text": "The distant army never tires and is ready for war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.5.29-30": {
+      "text": "The army roars like a lion and the land grows dark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.1-2": {
+      "text": "Isaiah sees the Lord on a throne with seraphim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.3-3": {
+      "text": "The seraphim call out that the LORD is holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.4-5": {
+      "text": "Isaiah cries out that he is unclean before the King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.6-7": {
+      "text": "A seraph touches Isaiah’s mouth and removes his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.8-9": {
+      "text": "Isaiah offers to go, and God sends him to the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.10-10": {
+      "text": "God tells Isaiah the people’s hearts will be closed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.11-12": {
+      "text": "Isaiah asks how long; God says until the land is empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.6.13-13": {
+      "text": "A holy stump will remain in the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.1-2": {
+      "text": "Aram and Israel attack Jerusalem, and Ahaz is afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.3-4": {
+      "text": "God sends Isaiah to tell Ahaz not to be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.5-6": {
+      "text": "Aram and Ephraim plan to attack Judah and appoint a king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.7-9": {
+      "text": "God says the plot will fail; Ahaz must stand firm in faith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.10-12": {
+      "text": "The LORD tells Ahaz to ask for a sign, but Ahaz refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.13-15": {
+      "text": "Isaiah says a virgin will bear a son called Immanuel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.16-16": {
+      "text": "Isaiah says two enemy kings’ land will be laid waste",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.17-17": {
+      "text": "The LORD will bring the king of Assyria against Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.18-19": {
+      "text": "The LORD will call insects from Egypt and Assyria to Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.7.20-22": {
+      "text": "The LORD will use Assyria’s king like a razor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It fits only verse 20 and leaves out the surviving people and their food described in verses 21–22.",
+        "suggestion": "Assyria will shave the land, and survivors will eat curds"
+      }
+    },
+    "ISA.7.23-25": {
+      "text": "Fields of vines will become land of briers and thorns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.1-2": {
+      "text": "The LORD tells Isaiah to write a name on a scroll",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.3-4": {
+      "text": "Isaiah has a son named Maher-shalal-hash-baz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.5-7": {
+      "text": "The LORD says Assyria will flood Judah like a river",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.8-8": {
+      "text": "The flood of Assyria will cover Immanuel’s land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.9-10": {
+      "text": "Isaiah says the nations’ plans will fail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.11-13": {
+      "text": "The LORD tells Isaiah to fear God, not what people fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.14-15": {
+      "text": "Many in Israel will stumble over God and fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.16-18": {
+      "text": "Isaiah will wait for the LORD and trust him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.19-20": {
+      "text": "Isaiah tells the people to consult God, not the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.8.21-22": {
+      "text": "People without God’s word will suffer hunger and darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.1-2": {
+      "text": "A great light will shine on people in darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.3-3": {
+      "text": "God has made the nation grow and filled it with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.4-5": {
+      "text": "God breaks the yoke of the oppressor and ends war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.6-7": {
+      "text": "A child will be born to rule forever on David’s throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.8-10": {
+      "text": "Proud Israelites plan to rebuild with better materials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.11-12": {
+      "text": "Enemies attack Israel, but God’s anger continues",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.13-15": {
+      "text": "The LORD will cut off Israel’s leaders and false prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.16-17": {
+      "text": "Leaders mislead the people and everyone does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.18-19": {
+      "text": "Wickedness burns like a fire and people turn on each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.9.20-21": {
+      "text": "Israel’s tribes attack each other and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.1-2": {
+      "text": "Woe to leaders who make unjust laws against the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.3-4": {
+      "text": "Unjust leaders will have no help on the day of judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.5-6": {
+      "text": "The LORD sends Assyria against a godless nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.7-9": {
+      "text": "Assyria’s king plans to destroy many nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.10-11": {
+      "text": "Assyria’s king boasts he will take Jerusalem like Samaria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.12-13": {
+      "text": "The LORD will punish Assyria’s king for his pride",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.14-14": {
+      "text": "Assyria’s king says he took the nations’ wealth easily",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.15-16": {
+      "text": "The LORD will send disease and fire on Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.17-19": {
+      "text": "God will burn up Assyria like a fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.20-21": {
+      "text": "Israel’s survivors will trust the LORD and return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.22-23": {
+      "text": "God will destroy the land, and only a few will return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.24-25": {
+      "text": "God tells the people of Zion not to fear Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.26-27": {
+      "text": "God will break Assyria’s yoke from his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.28-29": {
+      "text": "Assyria’s army advances and the towns are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.30-32": {
+      "text": "Assyria’s army stops at Nob near Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.10.33-34": {
+      "text": "God will cut down the proud like trees in a forest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.1-2": {
+      "text": "A new king from Jesse’s family will have the Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.3-5": {
+      "text": "The coming king will judge the poor with fairness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.6-7": {
+      "text": "Wild and farm animals will live together in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.8-9": {
+      "text": "Nothing will harm children on God’s holy mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.10-11": {
+      "text": "God will bring his scattered people home a second time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.12-13": {
+      "text": "God will gather exiles, and Ephraim and Judah will make peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title exceeds the limit of 60 characters.",
+        "suggestion": "God will gather exiles, and Ephraim and Judah will unite"
+      }
+    },
+    "ISA.11.14-15": {
+      "text": "Israel will defeat nearby nations and cross the Euphrates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.11.16-16": {
+      "text": "A highway will bring God’s people home from Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.12.1-2": {
+      "text": "God’s people will praise him because he saves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.12.3-4": {
+      "text": "God’s people will tell the nations to praise the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.12.5-6": {
+      "text": "Citizens of Zion will sing because God is great",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.1-3": {
+      "text": "God calls warriors to come against Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.4-5": {
+      "text": "God gathers an army from far away to destroy the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.6-8": {
+      "text": "The Day of the LORD will bring terror and pain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.9-10": {
+      "text": "The Day of the LORD will destroy sinners and darken the sky",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.11-12": {
+      "text": "God will punish the proud and the wicked in the world",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.13-14": {
+      "text": "God will shake heaven and earth in his anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.15-16": {
+      "text": "Babylon’s people will be killed and homes looted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.17-18": {
+      "text": "God will stir up the Medes against Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.19-20": {
+      "text": "God will destroy Babylon like Sodom and Gomorrah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.13.21-22": {
+      "text": "Only wild animals will live in Babylon’s ruins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.3-4": {
+      "text": "Israel will mock the fallen king of Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.5-6": {
+      "text": "The LORD has broken the power of wicked rulers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.7-9": {
+      "text": "The earth rejoices, and the dead in Sheol greet the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.10-11": {
+      "text": "The dead say the king has become weak like the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.12-14": {
+      "text": "The king fell because he wanted to be like the Most High",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.15-17": {
+      "text": "The king will be brought down to the Pit, and people stare",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.18-20": {
+      "text": "The king of Babylon will lie unburied, unlike other kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.21-23": {
+      "text": "The LORD will destroy Babylon and kill the king’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.24-25": {
+      "text": "The LORD will break Assyria and free his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.26-27": {
+      "text": "No one can stop the LORD’s plan for all nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.14.28-30": {
+      "text": "God warns the Philistines not to rejoice too soon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The text tells the Philistines not to rejoice, not that they should avoid rejoicing too soon.",
+        "suggestion": "God warns the Philistines not to rejoice"
+      }
+    },
+    "ISA.14.31-32": {
+      "text": "Philistines will wail but God’s people find refuge in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.15.1-2": {
+      "text": "Moab’s cities are destroyed and people mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.15.3-4": {
+      "text": "Moab’s people wear sackcloth and cry out in grief",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.15.5-7": {
+      "text": "Moab’s refugees flee and the land dries up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.15.8-9": {
+      "text": "Cries of grief fill Moab, and more trouble will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.1-2": {
+      "text": "Moab’s daughters flee like birds pushed from the nest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.3-4": {
+      "text": "Moab’s refugees ask Judah for shelter and protection",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.5-5": {
+      "text": "A faithful judge will sit on David’s throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.6-7": {
+      "text": "Moab’s pride is empty, so Moab will wail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.8-8": {
+      "text": "The fields and vines of Heshbon and Sibmah have withered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.9-10": {
+      "text": "Joy and singing end in Moab’s vineyards",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.11-12": {
+      "text": "Moab prays at the high place, but it does no good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.16.13-14": {
+      "text": "The LORD says Moab’s splendor will end in three years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.1-3": {
+      "text": "Damascus will be ruins and Ephraim will lose its fortress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.4-5": {
+      "text": "Jacob’s splendor will fade like a harvested field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.6-7": {
+      "text": "Only a few will remain and turn to the Holy One",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.8-9": {
+      "text": "People will not look to altars, and cities will be empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.10-11": {
+      "text": "Israel forgot God, so the harvest will vanish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.17.12-14": {
+      "text": "God scatters the nations that plunder his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.18.1-2": {
+      "text": "God sends swift messengers to the tall people of Cush",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text does not say that God sends the messengers.",
+        "suggestion": "Swift messengers are sent to the people of Cush"
+      }
+    },
+    "ISA.18.3-3": {
+      "text": "All the world will see the banner and hear the horn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.18.4-5": {
+      "text": "The LORD watches quietly, then cuts off the shoots",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.18.6-7": {
+      "text": "Cush will bring gifts to the LORD on Mount Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.1-2": {
+      "text": "The LORD comes to Egypt and Egyptians fight each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.3-4": {
+      "text": "God will confuse Egypt and give it to a harsh king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.5-6": {
+      "text": "The Nile will dry up and the canals will stink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.7-8": {
+      "text": "Plants die along the Nile and fishermen mourn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.9-10": {
+      "text": "Egypt’s linen workers and weavers will be dismayed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.11-12": {
+      "text": "Pharaoh’s wise men cannot know what the LORD has planned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.13-15": {
+      "text": "Egypt’s leaders are fools and lead Egypt astray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.16-17": {
+      "text": "Egypt will tremble in fear of the LORD and of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.18-18": {
+      "text": "Five cities in Egypt will swear loyalty to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.19-20": {
+      "text": "An altar in Egypt will be a sign to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.21-22": {
+      "text": "Egypt will know the LORD, worship him and be healed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.23-23": {
+      "text": "A highway will join Egypt and Assyria in worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.19.24-25": {
+      "text": "The LORD will bless Israel, Egypt and Assyria together",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.20.1-2": {
+      "text": "The LORD tells Isaiah to go naked and barefoot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.20.3-4": {
+      "text": "Assyria will take captives from Egypt and Cush",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.20.5-6": {
+      "text": "People who trusted Egypt and Cush will be ashamed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.1-2": {
+      "text": "A terrible vision: an invader comes from the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.3-4": {
+      "text": "Isaiah is filled with pain and fear at the vision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.5-5": {
+      "text": "Leaders feast, then are told to prepare for battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.6-7": {
+      "text": "The Lord tells Isaiah to post a lookout",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.8-9": {
+      "text": "The lookout reports that Babylon has fallen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.10-10": {
+      "text": "Isaiah tells his people what the LORD has said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.13-15": {
+      "text": "Arabian people must give food and water to refugees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.21.16-17": {
+      "text": "The glory of Kedar will end within one year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.1-2": {
+      "text": "Isaiah asks why the city’s people are on the rooftops",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.3-4": {
+      "text": "Rulers flee and are captured; Isaiah weeps for his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.5-7": {
+      "text": "The LORD brings a day of terror to the Valley of Vision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.8-9": {
+      "text": "The people of Judah prepare the city’s defenses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.10-11": {
+      "text": "Jerusalem’s people built defenses but ignored God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.12-14": {
+      "text": "The LORD called for weeping, but people chose to feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.15-16": {
+      "text": "The LORD sends Isaiah to question Shebna about his tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.17-19": {
+      "text": "The LORD will remove Shebna from his office",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.20-22": {
+      "text": "The LORD will give Shebna’s authority to Eliakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.23-24": {
+      "text": "Eliakim will carry the weight of his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.22.25-25": {
+      "text": "The firm peg will give way and the load will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.1-3": {
+      "text": "Tyre is destroyed, and ships and traders wail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.4-5": {
+      "text": "Sidon is ashamed and Egypt is in pain over Tyre",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.6-7": {
+      "text": "People of the coast must wail and flee to Tarshish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.8-9": {
+      "text": "The LORD planned to bring down proud Tyre",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.10-12": {
+      "text": "The LORD ends Sidon’s joy and Canaan’s strongholds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.13-14": {
+      "text": "Assyria ruined the Chaldeans; ships of Tarshish wail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.15-16": {
+      "text": "Tyre will be forgotten for seventy years, then remembered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.23.17-18": {
+      "text": "God restores Tyre and her profits go to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.1-2": {
+      "text": "The LORD will lay waste the earth and scatter its people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.3-5": {
+      "text": "The earth is ruined because people broke God’s covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.6-7": {
+      "text": "A curse consumes the earth and joy turns to groaning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.8-9": {
+      "text": "Music and wine no longer bring joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.10-11": {
+      "text": "The city lies shattered and all joy is gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.12-13": {
+      "text": "Only ruins are left, like a harvested olive tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.14-15": {
+      "text": "People shout for joy and honor the LORD everywhere",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.16-16": {
+      "text": "Isaiah hears praise but mourns over the treacherous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.17-18": {
+      "text": "Terror, pit and snare wait for the people of the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.19-20": {
+      "text": "The earth breaks apart and falls, never to rise again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.24.21-23": {
+      "text": "The LORD punishes the kings and will reign in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.25.1-3": {
+      "text": "Isaiah praises the LORD for his faithful wonders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.25.4-5": {
+      "text": "The LORD protects the poor and silences the ruthless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.25.6-8": {
+      "text": "The LORD prepares a feast and ends death forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.25.9-10": {
+      "text": "The people rejoice in God’s salvation, but Moab falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.25.11-12": {
+      "text": "Moab’s pride and high walls will be brought down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.1-2": {
+      "text": "Judah sings of a strong city with open gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.3-4": {
+      "text": "People who trust the LORD have perfect peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.5-6": {
+      "text": "The LORD brings down the proud city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.7-9": {
+      "text": "The righteous wait for the LORD’s judgments",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.10-10": {
+      "text": "The wicked man does not learn righteousness from grace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.11-12": {
+      "text": "Enemies will be put to shame, but the LORD gives peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.13-14": {
+      "text": "Israel confesses the LORD alone, not other lords",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.15-15": {
+      "text": "The LORD has enlarged the nation and gained glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.16-17": {
+      "text": "In distress the people cry out to the LORD in pain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.18-18": {
+      "text": "The people could not bring salvation to the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.19-19": {
+      "text": "The dead will live and rise from the dust",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.26.20-21": {
+      "text": "The LORD tells his people to hide until the wrath passes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.1-3": {
+      "text": "The LORD punishes Leviathan and guards his vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.4-5": {
+      "text": "The LORD is not angry and offers peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.6-6": {
+      "text": "Israel will blossom and fill the world with fruit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.7-8": {
+      "text": "The LORD sent Israel into exile with warfare",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.9-9": {
+      "text": "Jacob’s guilt is atoned for when idols are destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.10-11": {
+      "text": "The city is deserted because the people lack understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.27.12-13": {
+      "text": "The LORD will gather the Israelites to worship in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.1-2": {
+      "text": "The LORD will destroy the proud drunkards of Ephraim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.3-4": {
+      "text": "Ephraim’s proud crown will be trampled like a ripe fig",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says the crown is trampled and the flower is swallowed like a ripe fig, not that a fig is trampled.",
+        "suggestion": "Ephraim’s crown will be trampled and swallowed up"
+      }
+    },
+    "ISA.28.5-6": {
+      "text": "The LORD will be glory and strength for his remnant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.7-8": {
+      "text": "Priests and prophets stagger from wine and strong drink",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.9-10": {
+      "text": "Leaders say God’s message is only for babies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.11-12": {
+      "text": "God will speak to a people who would not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.13-13": {
+      "text": "The LORD’s word will make the people fall and be captured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.14-15": {
+      "text": "The LORD speaks to Jerusalem’s rulers who trust in lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.16-16": {
+      "text": "The LORD lays a sure cornerstone in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.17-17": {
+      "text": "The LORD will destroy the leaders’ refuge of lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.18-19": {
+      "text": "The leaders’ covenant with death will be dissolved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.20-21": {
+      "text": "The LORD will rise up to do his strange work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.22-22": {
+      "text": "The scoffers must not mock, for destruction is decreed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.23-24": {
+      "text": "A plowman does not plow the soil every day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.25-26": {
+      "text": "God teaches the farmer how to plant each crop",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.27-28": {
+      "text": "Farmers beat each crop in the way that fits it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.28.29-29": {
+      "text": "The wisdom of the LORD of Hosts is wonderful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.1-2": {
+      "text": "The LORD warns Ariel, the city of David, of mourning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.3-4": {
+      "text": "The LORD will besiege Ariel and bring the city low",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.5-6": {
+      "text": "The LORD will suddenly come and scatter Ariel’s enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.7-8": {
+      "text": "The nations attacking Zion will vanish like a dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.9-10": {
+      "text": "The LORD sends deep sleep on the prophets and seers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.11-12": {
+      "text": "The vision is like a sealed scroll no one can read",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.13-14": {
+      "text": "God rebukes people who honor him only with words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.15-15": {
+      "text": "Woe to those who try to hide plans from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading must be a full statement sentence rather than an exclamation.",
+        "suggestion": "The LORD warns those who hide their plans from him"
+      }
+    },
+    "ISA.29.16-16": {
+      "text": "The people deny God, as if clay denied the potter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.17-19": {
+      "text": "The deaf will hear and the humble will rejoice in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.20-21": {
+      "text": "The ruthless and those who cheat the innocent will vanish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.29.22-24": {
+      "text": "Jacob’s children will honor God and the wayward will learn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.1-2": {
+      "text": "The LORD condemns the rebellious children who go to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.3-5": {
+      "text": "Egypt’s protection will bring shame, not help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.6-7": {
+      "text": "Egypt’s help is empty, though treasures are sent there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.8-9": {
+      "text": "The LORD says to write down that the people are rebels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.10-11": {
+      "text": "The people tell the prophets to speak only pleasant words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.12-13": {
+      "text": "God warns that Judah’s sin will collapse suddenly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.14-14": {
+      "text": "God says Judah will break like a smashed clay jar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.15-16": {
+      "text": "Judah refuses quiet trust and plans to flee on horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.17-17": {
+      "text": "One enemy will make a thousand people of Judah flee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.18-19": {
+      "text": "The LORD longs to be kind to the people of Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.20-21": {
+      "text": "God will guide the people of Zion with his voice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.22-22": {
+      "text": "People will throw away idols of silver and gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "It does not name who will throw away their idols.",
+        "suggestion": "The people of Zion will throw away their idols"
+      }
+    },
+    "ISA.30.23-24": {
+      "text": "God will give rain and good pastures to his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.25-26": {
+      "text": "God will heal his people and make the light brighter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.27-28": {
+      "text": "The LORD comes in anger to judge the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.29-29": {
+      "text": "The people of Zion will sing and go up to God’s mountain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.30-30": {
+      "text": "The LORD will show his power with fire, storm and hail",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.31-32": {
+      "text": "The LORD will shatter Assyria with his rod",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.30.33-33": {
+      "text": "God has prepared a place of fire for the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.31.1-2": {
+      "text": "Those who rely on Egypt instead of the LORD will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.31.3-3": {
+      "text": "Egypt is only human and cannot save Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.31.4-4": {
+      "text": "The LORD will fight for Mount Zion like a lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.31.5-9": {
+      "text": "The LORD will protect Jerusalem and defeat Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.1-3": {
+      "text": "A righteous king will rule with justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.4-6": {
+      "text": "People will understand, and fools will not be honored",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.7-8": {
+      "text": "Scoundrels plot against the poor, but noble men do good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.9-10": {
+      "text": "Isaiah warns the comfortable women of coming trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.11-13": {
+      "text": "Isaiah tells the women to mourn for the ruined land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.14-15": {
+      "text": "The city will be empty until God pours out his Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.16-18": {
+      "text": "Justice and peace will fill the land of God’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.32.19-20": {
+      "text": "Hail will destroy the forest, but sowers are blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.1-1": {
+      "text": "God warns the destroyer that he will be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.2-2": {
+      "text": "The people ask the LORD for grace and strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.3-4": {
+      "text": "Nations scatter when the LORD rises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.5-6": {
+      "text": "The LORD is exalted and fills Zion with justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.7-8": {
+      "text": "Peace has failed and people cry in the streets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.9-9": {
+      "text": "The land mourns and Lebanon, Sharon and Bashan fade",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.10-12": {
+      "text": "The LORD rises to burn up the peoples like thorns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.13-14": {
+      "text": "Sinners in Zion fear the LORD’s consuming fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.15-16": {
+      "text": "The righteous person will live safely on the heights",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.17-19": {
+      "text": "God’s people will see the King and no foreign enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.20-21": {
+      "text": "Jerusalem will be safe because the LORD is there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.22-22": {
+      "text": "The LORD is our Judge, our lawgiver and our King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.33.23-24": {
+      "text": "Enemy ships fail, and Zion’s people are forgiven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.1-2": {
+      "text": "The LORD calls the nations to hear of his anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.3-4": {
+      "text": "The dead of the nations lie unburied and the stars fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.5-6": {
+      "text": "The LORD’s sword will fall on Edom in great slaughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.7-7": {
+      "text": "Wild oxen and bulls fall, and Edom’s land is soaked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.8-10": {
+      "text": "The LORD will punish Edom and make its land burn forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.11-12": {
+      "text": "Edom will be ruined, with no king and only wild birds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.13-15": {
+      "text": "Wild animals and birds will live in Edom’s ruined towers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.34.16-17": {
+      "text": "The LORD has given Edom’s land to the wild animals forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.35.1-2": {
+      "text": "The desert will be glad and bloom, and see God’s glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.35.3-4": {
+      "text": "Isaiah tells the weak to be strong because God will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.35.5-7": {
+      "text": "The blind see, the lame leap, and water fills the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.35.8-9": {
+      "text": "God’s people will walk safely on the Way of Holiness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.35.10-10": {
+      "text": "The LORD’s people return to Zion with joy and no sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.1-3": {
+      "text": "Assyria attacks Judah and sends an officer to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.4-5": {
+      "text": "The Rabshakeh asks what Hezekiah trusts in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.6-7": {
+      "text": "The Rabshakeh mocks trust in Egypt and in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.8-8": {
+      "text": "The Rabshakeh dares Judah to find riders for horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.9-10": {
+      "text": "The Rabshakeh says the LORD sent Assyria to destroy Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.11-12": {
+      "text": "The officials ask for Aramaic, but the Rabshakeh refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.13-15": {
+      "text": "The Rabshakeh tells the people not to trust Hezekiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.16-17": {
+      "text": "The Rabshakeh urges the people to surrender to Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.18-20": {
+      "text": "The Rabshakeh says no god has saved a land from Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.36.21-22": {
+      "text": "The people stay silent, and the officials tell Hezekiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.1-2": {
+      "text": "Hezekiah goes to the temple and sends men to Isaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.3-4": {
+      "text": "Hezekiah asks Isaiah to pray for the people who are left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.5-7": {
+      "text": "Isaiah tells Hezekiah not to fear Assyria’s king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.8-10": {
+      "text": "Sennacherib sends a message to Hezekiah not to trust God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.11-13": {
+      "text": "Sennacherib says Assyria destroyed many nations and gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.14-16": {
+      "text": "Hezekiah spreads the letter before the LORD and prays",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.17-18": {
+      "text": "Hezekiah asks the LORD to hear Sennacherib’s words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.19-20": {
+      "text": "Hezekiah asks the LORD to save Judah from Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.21-23": {
+      "text": "The LORD says Sennacherib has mocked the Holy One",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.24-25": {
+      "text": "Sennacherib boasts of the lands he has conquered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.26-27": {
+      "text": "The LORD planned long ago that Assyria would crush cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.28-29": {
+      "text": "The LORD will turn Sennacherib back with a hook and bit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.30-30": {
+      "text": "The LORD gives Hezekiah a sign of three years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.31-32": {
+      "text": "A remnant of Judah will live and bear fruit again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.33-34": {
+      "text": "The LORD says the king of Assyria will not enter Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.35-35": {
+      "text": "The LORD promises to defend Jerusalem for David’s sake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.36-37": {
+      "text": "The LORD’s angel kills 185,000 Assyrian soldiers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.37.38-38": {
+      "text": "Sennacherib’s sons kill him while he worships",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.1-3": {
+      "text": "Hezekiah is told he will die and prays to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.4-6": {
+      "text": "The LORD adds fifteen years to Hezekiah’s life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.7-8": {
+      "text": "The LORD gives a sign: the shadow goes back ten steps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.9-11": {
+      "text": "Hezekiah writes of fearing death in the prime of life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.12-13": {
+      "text": "Hezekiah compares his life to a tent taken down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the first comparison in verse 12 and misses verse 13 where God breaks his bones.",
+        "suggestion": "Hezekiah laments that God is ending his life"
+      }
+    },
+    "ISA.38.14-15": {
+      "text": "Hezekiah cries out to the Lord in his pain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.16-17": {
+      "text": "Hezekiah thanks God for healing him and forgiving sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.18-19": {
+      "text": "Hezekiah says only the living can praise God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.20-20": {
+      "text": "Hezekiah promises to sing in the LORD’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.38.21-22": {
+      "text": "Isaiah orders figs for the boil; Hezekiah asks for a sign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.39.1-2": {
+      "text": "Hezekiah shows Babylon’s envoys all his treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.39.3-4": {
+      "text": "Isaiah asks Hezekiah about the men from Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.39.5-6": {
+      "text": "Isaiah says Babylon will carry off all the treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.39.7-8": {
+      "text": "Hezekiah accepts the LORD’s word and hopes for peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.1-2": {
+      "text": "God says to comfort Jerusalem, for her sin is pardoned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.3-5": {
+      "text": "A voice says to prepare the way for the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.9-10": {
+      "text": "Zion and Jerusalem must announce that God is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.11-11": {
+      "text": "God cares for his flock like a shepherd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.12-12": {
+      "text": "God measures the waters, the sky and the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.13-14": {
+      "text": "No one taught the LORD or gave him advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.15-17": {
+      "text": "The nations are as nothing before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.18-20": {
+      "text": "No idol made by a craftsman can be like God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.21-22": {
+      "text": "God sits above the earth and stretches out the sky",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.23-24": {
+      "text": "God brings rulers to nothing like withered plants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.25-26": {
+      "text": "God made the stars, and no one is equal to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.27-28": {
+      "text": "God reminds Israel that he is the everlasting Creator",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.40.29-31": {
+      "text": "God gives strength to the weak who wait for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.1-2": {
+      "text": "God asks who raised up a conqueror from the east",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.3-4": {
+      "text": "The LORD says he is the first and the last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.5-7": {
+      "text": "The nations fear and workers encourage each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.8-9": {
+      "text": "God tells Israel he has chosen Israel as his servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.10-10": {
+      "text": "God tells Israel not to fear, for he is with Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.11-11": {
+      "text": "God says Israel’s enemies will be ashamed and perish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.12-13": {
+      "text": "God will help Israel, and Israel’s attackers will be nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.14-15": {
+      "text": "God will help weak Israel to crush the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.16-16": {
+      "text": "Israel will scatter the mountains and rejoice in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.17-18": {
+      "text": "God will give water to the poor and needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.19-20": {
+      "text": "God will plant trees in the desert for all to see",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.21-22": {
+      "text": "God challenges the idols to tell what will happen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.23-24": {
+      "text": "God says the idols are nothing and worthless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.25-26": {
+      "text": "God has raised up a ruler, and no idol foretold it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.41.27-29": {
+      "text": "God first told Zion good news; the idols are empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.1-2": {
+      "text": "God presents his chosen Servant who will bring justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.3-4": {
+      "text": "The Servant will gently and faithfully bring justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.5-6": {
+      "text": "God the Creator calls his Servant to be a light to nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.7-7": {
+      "text": "The Servant will open blind eyes and free prisoners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.8-9": {
+      "text": "The LORD will not share his glory with idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.10-11": {
+      "text": "All the earth should sing a new song to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.12-13": {
+      "text": "The LORD goes out like a warrior against his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.14-15": {
+      "text": "God says he has been silent but will now act",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.16-16": {
+      "text": "God will lead the blind and turn darkness into light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.17-17": {
+      "text": "People who trust in idols will be put to shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.18-19": {
+      "text": "God calls his blind and deaf servant to listen and see",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.20-21": {
+      "text": "Israel sees and hears but does not pay attention",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.22-22": {
+      "text": "Israel is plundered and trapped with no one to rescue",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Leaving off the object after 'rescue' makes it unclear whether no one rescues Israel or Israel rescues no one.",
+        "suggestion": "Israel is plundered and trapped with no one to rescue them"
+      }
+    },
+    "ISA.42.23-24": {
+      "text": "Israel was given up because the people would not obey",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.42.25-25": {
+      "text": "God’s anger burned Israel, but Israel did not understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.1-1": {
+      "text": "The LORD tells Israel not to fear, for he has redeemed Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It has 61 characters, exceeding the 60-character limit.",
+        "suggestion": "The LORD tells Israel not to fear, for he redeemed them"
+      }
+    },
+    "ISA.43.2-3": {
+      "text": "The LORD promises to be with Israel in water and fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.4-5": {
+      "text": "The LORD loves Israel and will gather his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.6-7": {
+      "text": "The LORD will bring his sons and daughters home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.8-9": {
+      "text": "The LORD calls the nations to show who can foretell",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.10-11": {
+      "text": "The LORD says Israel is his witness and he alone saves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.12-13": {
+      "text": "The LORD says no one can undo what he does",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.14-15": {
+      "text": "The LORD will bring down Babylon for Israel’s sake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.16-17": {
+      "text": "The LORD, who made a way in the sea, destroys armies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.18-19": {
+      "text": "The LORD will do something new and make a way in the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.20-21": {
+      "text": "The LORD gives water to his chosen people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.22-23": {
+      "text": "The LORD says Israel has not called on him or honored him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.24-24": {
+      "text": "The LORD says Israel has burdened him with sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.25-26": {
+      "text": "The LORD forgives Israel’s sins and invites Israel to argue",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.43.27-28": {
+      "text": "The LORD says Israel’s sin will bring disgrace and ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.1-2": {
+      "text": "The LORD tells Jacob, his chosen servant, not to be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.3-4": {
+      "text": "The LORD will pour out his Spirit on Israel’s children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.5-5": {
+      "text": "People will say that they belong to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.6-6": {
+      "text": "The LORD says he is first and last and the only God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.7-7": {
+      "text": "The LORD asks who can be like him and foretell things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.8-8": {
+      "text": "The LORD tells Israel not to fear, for there is no other God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.9-10": {
+      "text": "Idol makers are nothing, and their idols are worthless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.11-11": {
+      "text": "The LORD says idol makers will be put to shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.12-12": {
+      "text": "A blacksmith works hard to make an idol and grows weak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.13-13": {
+      "text": "A woodworker carefully shapes an idol like a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.14-14": {
+      "text": "A man cuts or plants a tree to use for wood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.15-16": {
+      "text": "A man burns half the wood and makes a god from the rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.17-17": {
+      "text": "A man prays to his idol and asks it to save him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.18-18": {
+      "text": "Idol worshipers cannot see or understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.19-19": {
+      "text": "No one thinks that the idol is only a block of wood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.20-20": {
+      "text": "A deceived heart leads the idol worshiper astray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.21-22": {
+      "text": "The LORD will not forget Israel and calls Israel to return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.23-23": {
+      "text": "Heaven and earth are called to sing for the LORD’s work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.24-25": {
+      "text": "The LORD, Israel’s Redeemer, made all things and shames diviners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "It has 64 characters, exceeding the 60-character limit.",
+        "suggestion": "The LORD made all things and shames diviners"
+      }
+    },
+    "ISA.44.26-27": {
+      "text": "God promises that Jerusalem and Judah will be rebuilt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.44.28-28": {
+      "text": "God calls Cyrus his shepherd to rebuild Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.1-1": {
+      "text": "The LORD speaks to Cyrus and opens doors for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.2-3": {
+      "text": "God will go before Cyrus and give him treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.4-6": {
+      "text": "God calls Cyrus so all will know he is the only God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.7-8": {
+      "text": "The LORD creates all things and sends salvation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.9-9": {
+      "text": "God warns that clay must not argue with the potter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.10-10": {
+      "text": "God warns against asking parents why a child was born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.11-11": {
+      "text": "God says people must not question his work with Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.12-12": {
+      "text": "God made the earth, people and the heavens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.13-13": {
+      "text": "God will use Cyrus to rebuild his city and free exiles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.14-15": {
+      "text": "Nations will come to Israel and say God is with Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.16-17": {
+      "text": "Idol makers will be shamed, but the LORD will save Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.18-18": {
+      "text": "The LORD made the earth to be lived in",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.19-19": {
+      "text": "The LORD speaks openly and tells the truth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.20-20": {
+      "text": "God says people who carry idols are ignorant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.21-21": {
+      "text": "God asks who foretold this and says he alone is God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.22-23": {
+      "text": "God calls all the earth to turn to him and be saved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.45.24-25": {
+      "text": "All Israel will find righteousness and strength in the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.1-2": {
+      "text": "Babylon’s gods Bel and Nebo cannot save themselves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.3-4": {
+      "text": "God will carry Israel from birth to old age",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.5-6": {
+      "text": "Idols made by goldsmiths cannot equal God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.7-7": {
+      "text": "Idols must be carried and cannot answer or save",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.8-9": {
+      "text": "God tells rebels to remember he alone is God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.10-11": {
+      "text": "God declares the end from the start and will do his plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.46.12-13": {
+      "text": "God tells stubborn people his salvation is near",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.1-2": {
+      "text": "Babylon will lose her throne and work like a slave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.3-5": {
+      "text": "God will take revenge on Babylon and shame her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.6-7": {
+      "text": "God judges Babylon for showing no mercy to his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.8-9": {
+      "text": "Babylon will suddenly become a childless widow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.10-11": {
+      "text": "Babylon felt secure in evil, but disaster will come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.12-13": {
+      "text": "Babylon’s sorcerers and astrologers cannot save her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.47.14-15": {
+      "text": "Babylon’s advisers will burn and cannot save her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.1-2": {
+      "text": "God says the house of Jacob uses his name falsely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.3-5": {
+      "text": "God foretold events because Israel was stubborn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.6-7": {
+      "text": "God will tell Israel new things hidden until now",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.8-8": {
+      "text": "God knew Israel was deceitful and a rebel from birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.9-11": {
+      "text": "God delays his anger for the sake of his name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.12-13": {
+      "text": "God is the first and the last and made the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.14-15": {
+      "text": "God’s chosen ally will act against Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.16-16": {
+      "text": "God has sent his messenger with his Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.17-18": {
+      "text": "Obeying God would have given Israel peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.19-19": {
+      "text": "God says Israel’s descendants would have been countless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.20-20": {
+      "text": "God tells Israel to leave Babylon with a shout of joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.48.21-22": {
+      "text": "God gave water in the desert; the wicked have no peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.1-2": {
+      "text": "The Servant tells distant peoples that God called him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.3-4": {
+      "text": "The Servant feels his work was useless but trusts God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.5-6": {
+      "text": "God will make the Servant a light for the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.7-7": {
+      "text": "Kings will honor the Servant whom the nation despised",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.8-8": {
+      "text": "God will appoint the Servant to restore the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.9-9": {
+      "text": "The Servant frees prisoners, and they find food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.10-11": {
+      "text": "God will lead his people to water and make roads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.12-13": {
+      "text": "People will come from far away and earth will rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.14-15": {
+      "text": "Zion says God forgot her, but God will not forget",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.16-18": {
+      "text": "God has written Zion on his hands; her children return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.19-20": {
+      "text": "Zion’s land will be too small for her many children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.21-21": {
+      "text": "Zion wonders who gave her so many children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.22-22": {
+      "text": "The nations will carry Zion’s sons and daughters home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.23-23": {
+      "text": "Kings will bow to Zion and serve her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.24-25": {
+      "text": "God will rescue Zion’s children from the mighty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.49.26-26": {
+      "text": "God will punish oppressors so all will know he saves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.1-1": {
+      "text": "God says Israel was sold because of its sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.2-3": {
+      "text": "God asks why no one answered and shows his power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.4-4": {
+      "text": "The Servant is taught by God to help the weary",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.5-6": {
+      "text": "The Servant obeys God and accepts insults and blows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.7-7": {
+      "text": "God helps the Servant, so he will not be put to shame",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.8-9": {
+      "text": "The Servant trusts God to defend him against accusers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.10-10": {
+      "text": "Those who fear God should trust him in darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.50.11-11": {
+      "text": "God says those who light fires will lie in torment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.1-1": {
+      "text": "God tells seekers of the Lord to look to the rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.2-2": {
+      "text": "God tells Israel to look to Abraham and Sarah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.3-3": {
+      "text": "God will comfort Zion and make her desert like Eden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.4-5": {
+      "text": "God says his justice will come to the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.6-6": {
+      "text": "God says the earth will wear out but his salvation lasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.7-8": {
+      "text": "God tells his people not to fear insults from men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.9-10": {
+      "text": "The people ask the Lord to act as he did long ago",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.11-11": {
+      "text": "The Lord’s redeemed people return to Zion with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.12-12": {
+      "text": "God asks why his people fear mortal men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.13-13": {
+      "text": "God says Israel forgot him and fears the oppressor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.14-15": {
+      "text": "God promises the captive will soon be set free",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.16-16": {
+      "text": "God says he put his words in the mouth of his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.17-18": {
+      "text": "Jerusalem has drunk the cup of God’s fury and is alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.19-20": {
+      "text": "Disaster has come on Jerusalem and her sons have fainted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.21-22": {
+      "text": "God says he has removed the cup of his fury from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.51.23-23": {
+      "text": "God will give the cup to those who tormented Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.1-1": {
+      "text": "God tells Zion to wake up and put on strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.2-3": {
+      "text": "God tells captive Jerusalem to shake off her chains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.4-4": {
+      "text": "God recalls his people in Egypt and under Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.5-6": {
+      "text": "God says his people are taken and will know his name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.7-8": {
+      "text": "Messengers bring good news that God reigns in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.9-10": {
+      "text": "Jerusalem’s ruins sing because God has comforted his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.11-12": {
+      "text": "God tells his people to leave and stay pure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.13-14": {
+      "text": "God says his Servant will prosper though disfigured",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.52.15-15": {
+      "text": "God says kings will be silent before his Servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.1-2": {
+      "text": "The Servant grew up like a tender shoot, without beauty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.3-3": {
+      "text": "People despised and rejected the Servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.4-4": {
+      "text": "The Servant carried our sorrows and griefs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.5-5": {
+      "text": "The Servant was pierced for our sins; we are healed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.6-6": {
+      "text": "All people went astray; God laid sin on the Servant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.7-7": {
+      "text": "The Servant stayed silent like a lamb led to slaughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.8-8": {
+      "text": "The Servant was taken away and cut off from the living",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.9-9": {
+      "text": "The Servant was given a grave with the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.10-11": {
+      "text": "The LORD’s Servant suffers and will make many righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.53.12-12": {
+      "text": "God will honor the Servant who bore the sin of many",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.1-1": {
+      "text": "The LORD tells Zion to shout for joy over many children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.2-3": {
+      "text": "The LORD tells Zion to make room for many descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.4-4": {
+      "text": "The LORD tells Zion not to fear, for shame will end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.5-6": {
+      "text": "The LORD is Zion’s husband and calls her back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.7-8": {
+      "text": "The LORD will bring Zion back with great compassion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.9-10": {
+      "text": "God promises Zion that his love will not depart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.11-12": {
+      "text": "The LORD will rebuild Zion with precious stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.13-14": {
+      "text": "The LORD will teach Zion’s children and keep her safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.15-16": {
+      "text": "God says anyone who attacks Zion will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.54.17-17": {
+      "text": "No weapon against God’s servants will succeed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.1-1": {
+      "text": "The LORD invites thirsty people to come without money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.2-2": {
+      "text": "The LORD tells people to listen and eat what is good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.3-4": {
+      "text": "The LORD offers people an everlasting covenant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.5-5": {
+      "text": "Nations will run to Israel because God honors her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.6-7": {
+      "text": "The wicked should seek the LORD, who will pardon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.8-9": {
+      "text": "God’s thoughts and ways are higher than people’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.10-11": {
+      "text": "God’s word will accomplish what he pleases",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.55.12-13": {
+      "text": "God’s people will go out with joy and peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.1-2": {
+      "text": "The LORD tells people to do right and keep the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.3-3": {
+      "text": "God will not exclude foreigners or eunuchs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.4-5": {
+      "text": "God promises eunuchs who obey a lasting name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.6-7": {
+      "text": "God will welcome foreigners to his house of prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.8-8": {
+      "text": "God will gather still more people to Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.9-10": {
+      "text": "Israel’s watchmen are blind and cannot warn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.56.11-12": {
+      "text": "Israel’s leaders are greedy and seek only gain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.3-4": {
+      "text": "God accuses sinful people of being children of deceit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.5-5": {
+      "text": "God condemns idol worship and killing children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.6-6": {
+      "text": "God asks if offerings to valley stones will move him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.7-8": {
+      "text": "Israel worships idols on hills and forsakes God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.9-10": {
+      "text": "Israel travels far to idols and does not lose hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.11-12": {
+      "text": "God asks why Israel fears others and forgets him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.13-13": {
+      "text": "Idols cannot save, but God protects those who trust him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.14-15": {
+      "text": "God lives with the humble and revives the lowly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.16-17": {
+      "text": "God will not stay angry with people forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.18-19": {
+      "text": "God promises to heal and comfort his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.57.20-21": {
+      "text": "The wicked are like a stormy sea and have no peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.1-2": {
+      "text": "God tells the prophet to announce the people’s sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.3-3": {
+      "text": "God says the people oppress workers while fasting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.4-5": {
+      "text": "God says fasting with strife is not the fast he chose",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.6-7": {
+      "text": "True fasting is to free the oppressed and help the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.8-8": {
+      "text": "God promises light and healing to those who fast rightly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.9-10": {
+      "text": "God will answer when people help the hungry and afflicted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.11-11": {
+      "text": "The LORD will guide and satisfy his people always",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.12-12": {
+      "text": "God’s people will rebuild the old ruins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.13-13": {
+      "text": "God tells the people to honor the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.58.14-14": {
+      "text": "God promises joy to people who honor the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.1-2": {
+      "text": "God can save, but sins separate the people from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.3-4": {
+      "text": "The people’s hands and words are full of sin and lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.5-6": {
+      "text": "The people’s evil plans bring only harm and violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.7-8": {
+      "text": "The people hurry to evil and do not know peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.9-10": {
+      "text": "The people mourn that justice and light are far away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.11-11": {
+      "text": "The people groan and wait for justice and salvation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.12-13": {
+      "text": "The people admit rebelling against God and lying",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.14-15": {
+      "text": "Truth and justice fail, and the LORD is displeased",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.16-16": {
+      "text": "No one helps, so the LORD saves by his own arm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.17-17": {
+      "text": "The LORD puts on righteousness and salvation like armor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.18-18": {
+      "text": "The LORD will punish his enemies for evil deeds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.19-20": {
+      "text": "The Redeemer will come to Zion and to the repentant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.59.21-21": {
+      "text": "God’s Spirit and words will stay with his people forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.1-1": {
+      "text": "God tells Zion to rise because the light has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.2-3": {
+      "text": "Darkness covers the earth, but God’s glory shines on Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.4-5": {
+      "text": "Zion’s children return and the wealth of nations comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.6-7": {
+      "text": "People bring gold, incense and flocks to praise the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.8-9": {
+      "text": "Ships bring Zion’s children home with silver and gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.10-11": {
+      "text": "Foreigners will rebuild Zion’s walls and bring wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.12-13": {
+      "text": "Nations that refuse to serve Zion will be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title covers only verse 12 and misses verse 13, where Lebanon’s glory adorns God’s sanctuary.",
+        "suggestion": "God will destroy rebel nations and adorn his sanctuary"
+      }
+    },
+    "ISA.60.14-14": {
+      "text": "Zion’s oppressors will bow down to her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.15-16": {
+      "text": "God will make Zion a joy and be her Savior",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.17-18": {
+      "text": "God will give Zion gold, peace and no more violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Saying God will give 'no more violence' is ungrammatical and confusing for second-language readers.",
+        "suggestion": "God will give Zion peace and end all violence"
+      }
+    },
+    "ISA.60.19-20": {
+      "text": "The LORD will be Zion’s everlasting light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.60.21-22": {
+      "text": "God’s people will be righteous and become a mighty nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.1-1": {
+      "text": "The LORD’s anointed servant brings good news to the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.2-2": {
+      "text": "The servant announces the LORD’s favor and comfort",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.3-3": {
+      "text": "The servant gives joy to mourners in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.4-5": {
+      "text": "Zion’s people will rebuild ruined cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.6-7": {
+      "text": "God’s people will be priests and receive a double portion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.8-9": {
+      "text": "The LORD will make an everlasting covenant with his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.61.10-11": {
+      "text": "The servant rejoices in the salvation God gives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.1-2": {
+      "text": "Zion will shine and receive a new name",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.3-4": {
+      "text": "The LORD will delight in Zion and give her new names",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.5-5": {
+      "text": "God will rejoice over Zion like a bridegroom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.6-7": {
+      "text": "Watchmen on Jerusalem’s walls must pray without rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.8-9": {
+      "text": "The LORD promises that enemies will not take Zion’s grain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.10-10": {
+      "text": "God tells the people to prepare the road",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.62.11-12": {
+      "text": "The LORD tells Zion that her Savior is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.1-2": {
+      "text": "A warrior comes from Edom with red clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.3-4": {
+      "text": "The LORD says he alone trampled the nations in anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.5-6": {
+      "text": "God found no one to help and acted in wrath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.7-8": {
+      "text": "Israel remembers the LORD’s love and kindness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.9-9": {
+      "text": "The LORD shared Israel’s distress and carried his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.10-10": {
+      "text": "Israel rebelled, so God fought against Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.11-11": {
+      "text": "Israel remembers Moses and asks where God is",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.12-13": {
+      "text": "Israel recalls how God led the people through the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.14-14": {
+      "text": "The Spirit of the LORD gave Israel rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.15-16": {
+      "text": "Israel asks God to look down and calls him Father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.63.17-17": {
+      "text": "Israel asks why the LORD lets the people stray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says God makes his people stray, not that he lets them stray.",
+        "suggestion": "Israel asks why the LORD makes them stray"
+      }
+    },
+    "ISA.63.18-19": {
+      "text": "Israel says enemies have trampled the LORD’s holy place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.1-2": {
+      "text": "Israel asks God to come down and shake the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.3-4": {
+      "text": "God did awesome works for those who wait for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.5-5": {
+      "text": "Israel confesses sin and asks how to be saved",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.6-7": {
+      "text": "The people confess that all are sinful and no one seeks God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.8-9": {
+      "text": "The people call God Father and ask him to be merciful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.64.10-12": {
+      "text": "Israel’s cities and temple are ruined; will God be silent?",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading must be a statement rather than a question.",
+        "suggestion": "The people ask if God will keep silent over their ruins"
+      }
+    },
+    "ISA.65.1-2": {
+      "text": "God reached out to a people who did not seek him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.3-4": {
+      "text": "God condemns false worship and eating unclean meat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.5-5": {
+      "text": "God is angry with proud people who claim to be holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.6-7": {
+      "text": "God will repay the people for sins against him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.8-8": {
+      "text": "God will not destroy all his servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.9-10": {
+      "text": "God will give his servants the land and pasture",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.11-11": {
+      "text": "God speaks to those who leave him for false gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.12-12": {
+      "text": "God will punish those who did not answer his call",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.13-14": {
+      "text": "God’s servants will be glad, but the wicked will suffer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.15-16": {
+      "text": "God will give his servants a new name and end old troubles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.17-19": {
+      "text": "God will create a new earth and a joyful Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.20-21": {
+      "text": "God’s people will have long life, homes and vineyards",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.22-23": {
+      "text": "God’s people will work without loss and be blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.65.24-25": {
+      "text": "God will answer before people call and there will be peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.1-1": {
+      "text": "God says heaven is his throne, so no house can hold him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.2-2": {
+      "text": "God values the humble person who trembles at his word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.3-3": {
+      "text": "God rejects sacrifices from people who choose evil ways",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.4-4": {
+      "text": "God will bring terror on people who did not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.5-5": {
+      "text": "God will shame those who hate the faithful",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.6-6": {
+      "text": "The LORD’s voice from the temple repays his enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.7-8": {
+      "text": "Zion suddenly gives birth to a new nation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.9-9": {
+      "text": "God will surely complete the birth of his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.10-11": {
+      "text": "Everyone who loves Jerusalem should rejoice with her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.12-13": {
+      "text": "God will give peace and comfort to Jerusalem’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.14-14": {
+      "text": "God’s servants will flourish, but enemies face his anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.15-16": {
+      "text": "The LORD will come with fire to judge all people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.17-17": {
+      "text": "God says people who follow false worship will perish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.18-19": {
+      "text": "God will gather nations to see and tell his glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.20-21": {
+      "text": "Nations will bring God’s people home to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.22-23": {
+      "text": "God’s people will last, and all mankind will worship him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ISA.66.24-24": {
+      "text": "Rebels against God face a fire that never goes out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

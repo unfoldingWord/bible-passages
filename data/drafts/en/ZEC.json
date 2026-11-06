@@ -1,0 +1,667 @@
+{
+  "language": "en",
+  "book": "ZEC",
+  "bible": "bsb-zec",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793916535-qe4lW6zzbLWCRSIxLfjc",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6281,
+      "completionTokens": 3777,
+      "reasoningTokens": 2796,
+      "cost": 0.050332,
+      "ms": 23995
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793916559-g0LWBvDm64zMwmF5uGsc",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6334,
+      "completionTokens": 4788,
+      "reasoningTokens": 3869,
+      "cost": 0.060548,
+      "ms": 30389
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793916589-2VsqLiOM4E94osMpXDly",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6441,
+      "completionTokens": 4453,
+      "reasoningTokens": 3497,
+      "cost": 0.057412,
+      "ms": 27595
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916617-sHQGyfUNjDJm3jclv40B",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5058,
+      "completionTokens": 8241,
+      "reasoningTokens": 7288,
+      "cost": 0.03469725,
+      "ms": 60354
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916677-VHMdEPPXECN6Frq7FQr7",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5058,
+      "completionTokens": 11544,
+      "reasoningTokens": 10660,
+      "cost": 0.0470835,
+      "ms": 66924
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916744-wTdWaB5hwDJbLLvj7Li6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5180,
+      "completionTokens": 22319,
+      "reasoningTokens": 21361,
+      "cost": 0.08758125,
+      "ms": 134088
+    }
+  ],
+  "titles": {
+    "ZEC.1.1-3": {
+      "text": "The LORD tells Zechariah to call the people to return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.4-6": {
+      "text": "The fathers ignored the prophets, then repented",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.7-9": {
+      "text": "Zechariah sees a man on a red horse among myrtle trees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.10-11": {
+      "text": "The riders report that the earth is at rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.12-13": {
+      "text": "The angel asks the LORD to show mercy to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.14-15": {
+      "text": "The LORD is jealous for Jerusalem, angry with nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The draft uses clipped headline phrasing instead of a natural, complete sentence.",
+        "suggestion": "The LORD is jealous for Jerusalem and angry with the nations"
+      }
+    },
+    "ZEC.1.16-17": {
+      "text": "The LORD promises to return and rebuild Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.18-19": {
+      "text": "Zechariah sees four horns that scattered Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.1.20-21": {
+      "text": "Four craftsmen come to throw down the horns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.1-2": {
+      "text": "Zechariah sees a man who will measure Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.3-5": {
+      "text": "The LORD will be a wall of fire around Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.6-7": {
+      "text": "The LORD tells the people to flee from Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.8-9": {
+      "text": "The LORD will punish nations that plundered his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.10-11": {
+      "text": "The LORD comes to live among the people of Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.2.12-13": {
+      "text": "The LORD will choose Jerusalem again; all must be silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.3.1-3": {
+      "text": "Satan accuses Joshua, but the LORD rebukes Satan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.3.4-5": {
+      "text": "The LORD removes Joshua’s sin and gives him clean clothes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.3.6-7": {
+      "text": "The LORD promises Joshua authority if he obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.3.8-9": {
+      "text": "The LORD promises to bring his servant, the Branch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.3.10-10": {
+      "text": "On that day neighbors will sit under vine and fig tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "The phrase 'under vine and fig tree' lacks determiners, making it unnatural English for a second-language reader.",
+        "suggestion": "Neighbors will sit under their own vine and fig tree"
+      }
+    },
+    "ZEC.4.1-3": {
+      "text": "Zechariah sees a gold lampstand and two olive trees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.4.4-5": {
+      "text": "Zechariah asks the angel what these things are",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.4.6-7": {
+      "text": "The LORD tells Zerubbabel success comes by his Spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.4.8-11": {
+      "text": "The LORD says Zerubbabel will finish the house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.4.12-13": {
+      "text": "Zechariah asks about the olive branches and gold pipes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.4.14-14": {
+      "text": "The two olive trees are the two anointed ones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.5.1-2": {
+      "text": "Zechariah sees a flying scroll",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.5.3-4": {
+      "text": "The scroll is a curse on thieves and false swearers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.5.5-7": {
+      "text": "Zechariah sees a basket with a woman inside",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.5.8-9": {
+      "text": "The woman Wickedness is shut in the basket",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.5.10-11": {
+      "text": "Two women carry the basket to build a house in Shinar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.1-4": {
+      "text": "Zechariah sees four chariots between two mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.5-6": {
+      "text": "The angel tells Zechariah where the chariots go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.7-8": {
+      "text": "The LORD sends the horses to patrol the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.9-11": {
+      "text": "God tells Zechariah to make a crown for Joshua",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.12-13": {
+      "text": "The Branch will build the LORD’s temple and rule",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.6.14-15": {
+      "text": "The crown stays in the temple as a memorial",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title summarizes verse 14 but leaves out the prophecy in verse 15 about people from far away coming to build the temple.",
+        "suggestion": "The crown is a memorial, and others help build the temple"
+      }
+    },
+    "ZEC.7.1-3": {
+      "text": "Men from Bethel ask whether to keep fasting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.7.4-7": {
+      "text": "The LORD asks if the people fasted for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.7.8-10": {
+      "text": "The LORD tells the people to be just and kind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.7.11-12": {
+      "text": "The people refused to listen, so the LORD was angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.7.13-14": {
+      "text": "The LORD scatters the people who would not listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.1-3": {
+      "text": "The LORD will return to Zion and live in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.4-5": {
+      "text": "Old people and children will fill Jerusalem’s streets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.6-8": {
+      "text": "The LORD will bring his people home to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.9-10": {
+      "text": "The LORD urges the temple builders to be strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.11-12": {
+      "text": "The LORD will give the remaining people good harvests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.13-15": {
+      "text": "The LORD will make Judah and Israel a blessing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.16-17": {
+      "text": "The LORD tells the people to be truthful and fair",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.18-19": {
+      "text": "Judah’s fasts will become joyful feasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.20-22": {
+      "text": "Many peoples will come to Jerusalem to seek the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.8.23-23": {
+      "text": "Ten men from the nations will want to go with a Jew",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.1-2": {
+      "text": "The LORD speaks against Hadrach, Damascus, Tyre and Sidon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.3-4": {
+      "text": "The LORD will destroy Tyre and its wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.5-7": {
+      "text": "The LORD will humble the Philistine cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.8-8": {
+      "text": "The LORD will guard his house and his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.9-10": {
+      "text": "Zion’s humble King comes and brings peace to the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.11-13": {
+      "text": "The LORD will free the prisoners and make Judah strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.14-15": {
+      "text": "The LORD will appear and shield his people in battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.9.16-17": {
+      "text": "The LORD will save his people like a flock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.1-2": {
+      "text": "The people should ask the LORD for rain, not idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.3-3": {
+      "text": "The LORD will punish the leaders and care for Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.4-5": {
+      "text": "Judah will produce strong rulers who win in battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.6-7": {
+      "text": "The LORD promises to strengthen and save Judah and Joseph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.8-10": {
+      "text": "The LORD will bring his scattered people back home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.10.11-12": {
+      "text": "The LORD will strengthen his people and humble Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.1-3": {
+      "text": "Trees and shepherds cry out because the land is ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.4-6": {
+      "text": "The LORD will no longer pity the people of the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.7-9": {
+      "text": "The prophet pastures the flock but then rejects it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.10-12": {
+      "text": "The prophet breaks the staff Favor and asks for his wages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.13-14": {
+      "text": "The prophet throws thirty silver pieces to the potter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only verse 13 and omits the prophet breaking the staff Union in verse 14.",
+        "suggestion": "The prophet throws silver to the potter and breaks Union"
+      }
+    },
+    "ZEC.11.15-16": {
+      "text": "The LORD will raise up a foolish shepherd over the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.11.17-17": {
+      "text": "The LORD declares judgment on the worthless shepherd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.12.1-3": {
+      "text": "The LORD will make Jerusalem a heavy stone for the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.12.4-5": {
+      "text": "The LORD will protect Judah and strike the enemy horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.12.6-6": {
+      "text": "Judah’s clans will destroy the nations like fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.12.7-9": {
+      "text": "The LORD will save Judah first and defend Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.12.10-11": {
+      "text": "The LORD will give Jerusalem a spirit of grace and prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only the first line of verse 10 and omits the mourning for the one who was pierced.",
+        "suggestion": "Jerusalem will mourn for the one they have pierced"
+      }
+    },
+    "ZEC.12.12-14": {
+      "text": "Every clan in the land will mourn on its own",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.13.1-2": {
+      "text": "The LORD will cleanse Jerusalem and remove idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.13.3-3": {
+      "text": "Parents will put false prophets to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.13.4-6": {
+      "text": "False prophets will be ashamed and deny being prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.13.7-7": {
+      "text": "The LORD commands the sword to strike his Shepherd",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.13.8-9": {
+      "text": "The LORD will refine the remaining third of the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.1-2": {
+      "text": "The LORD will gather the nations to attack Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.3-4": {
+      "text": "The LORD will fight and stand on the Mount of Olives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.5-5": {
+      "text": "The people will flee through the valley as the LORD comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.6-8": {
+      "text": "Living water will flow out from Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.9-11": {
+      "text": "The LORD will be King over all the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.12-13": {
+      "text": "The LORD will strike Jerusalem’s enemies with a plague",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.14-15": {
+      "text": "Judah will fight and collect the wealth of the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.16-18": {
+      "text": "Nations must go up to Jerusalem to worship the King",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.19-19": {
+      "text": "Egypt and other nations will be punished for not coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ZEC.14.20-21": {
+      "text": "Everything in Jerusalem and Judah will be holy to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,547 @@
+{
+  "language": "en",
+  "book": "EST",
+  "bible": "bsb-est",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793911978-mTfYUibfs5py9JTGlBLb",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5338,
+      "completionTokens": 4255,
+      "reasoningTokens": 3410,
+      "cost": 0.053226,
+      "ms": 25664
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912004-lvHKDXl4pq6aLPNYYduR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5808,
+      "completionTokens": 2269,
+      "reasoningTokens": 1544,
+      "cost": 0.034306,
+      "ms": 14449
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912018-3AsBvQru56zUkUesqn9q",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5617,
+      "completionTokens": 4098,
+      "reasoningTokens": 3322,
+      "cost": 0.052214,
+      "ms": 25703
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912044-TzB0hLtre0KmaK1e6m7R",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4345,
+      "completionTokens": 2964,
+      "reasoningTokens": 2310,
+      "cost": 0.01437375,
+      "ms": 20838
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912065-Pi8bUsg4XRzJIIM0I0Vf",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4726,
+      "completionTokens": 4701,
+      "reasoningTokens": 3993,
+      "cost": 0.02117325,
+      "ms": 34728
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912100-1LdMaFxdc6fVSemotile",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4551,
+      "completionTokens": 14502,
+      "reasoningTokens": 13845,
+      "cost": 0.05779575,
+      "ms": 64803
+    }
+  ],
+  "titles": {
+    "EST.1.1-2": {
+      "text": "Xerxes rules 127 provinces from his throne in Susa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.3-4": {
+      "text": "Xerxes shows his riches to his officials for 180 days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.5-6": {
+      "text": "Xerxes gives a seven-day feast for all people in Susa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.7-8": {
+      "text": "At the feast, the king lets every man drink freely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.9-11": {
+      "text": "Xerxes orders eunuchs to bring Queen Vashti to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.12-12": {
+      "text": "Queen Vashti refuses to come, and the king is furious",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.13-15": {
+      "text": "Xerxes asks his advisors what to do about Vashti",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.16-18": {
+      "text": "Memucan warns that wives will despise husbands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.19-20": {
+      "text": "Memucan advises a decree to remove Vashti as queen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.1.21-22": {
+      "text": "Xerxes sends letters that every man must rule his home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.1-2": {
+      "text": "Xerxes’ attendants suggest a search for young women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.3-4": {
+      "text": "Xerxes plans to choose a new queen from young women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.5-6": {
+      "text": "Mordecai is a Jewish man living in Susa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.7-7": {
+      "text": "Mordecai raises his cousin Esther as his own daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.8-9": {
+      "text": "Esther is taken to the palace and Hegai favors her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.10-11": {
+      "text": "Esther does not reveal her people, as Mordecai said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.12-13": {
+      "text": "Each young woman receives a year of beauty treatments",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.14-14": {
+      "text": "A young woman goes to the king and then to a second harem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.15-16": {
+      "text": "Esther gains favor and goes to King Xerxes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.17-18": {
+      "text": "Xerxes makes Esther queen and holds a great banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.19-20": {
+      "text": "Esther still keeps her people secret, as Mordecai said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.21-21": {
+      "text": "Two guards plan to kill King Xerxes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.2.22-23": {
+      "text": "Mordecai reports the plot and the two guards are hanged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.1-2": {
+      "text": "The king honors Haman, but Mordecai will not bow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.3-4": {
+      "text": "The king’s servants tell Haman that Mordecai disobeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.5-6": {
+      "text": "Haman is angry and plans to destroy all the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.7-7": {
+      "text": "Haman casts lots to choose a day and month",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.8-9": {
+      "text": "Haman asks King Xerxes to destroy the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.10-11": {
+      "text": "The king gives Haman his ring and power over the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.12-13": {
+      "text": "Haman’s order to kill all the Jews is written and sent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.3.14-15": {
+      "text": "The edict is sent out and Susa is in confusion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.1-3": {
+      "text": "Mordecai and the Jews mourn because of the edict",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.4-5": {
+      "text": "Esther sends Hathach to ask Mordecai what is wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.6-8": {
+      "text": "Mordecai asks Esther to plead with the king for the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.9-12": {
+      "text": "Esther tells Mordecai she may not go to the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.13-14": {
+      "text": "Mordecai tells Esther she must not stay silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.4.15-17": {
+      "text": "Esther asks the Jews to fast and agrees to go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "It does not make clear where or to whom Esther agrees to go.",
+        "suggestion": "Esther asks the Jews to fast and agrees to go to the king"
+      }
+    },
+    "EST.5.1-2": {
+      "text": "The king welcomes Esther with his gold scepter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.3-4": {
+      "text": "Esther invites the king and Haman to a banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.5-6": {
+      "text": "At the banquet the king asks Esther what she wants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.7-8": {
+      "text": "Esther invites the king and Haman to a second banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.9-11": {
+      "text": "Haman is angry at Mordecai and boasts to his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.12-13": {
+      "text": "Haman says Mordecai’s presence spoils all his joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.5.14-14": {
+      "text": "Haman’s wife and friends tell him to build a gallows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.6.1-3": {
+      "text": "The king learns that Mordecai was never rewarded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.6.4-6": {
+      "text": "The king asks Haman how to honor a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.6.7-9": {
+      "text": "Haman describes how the king should honor a man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.6.10-11": {
+      "text": "The king orders Haman to honor Mordecai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.6.12-14": {
+      "text": "Haman goes home in grief and is taken to the banquet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.1-2": {
+      "text": "The king asks Esther again what she wants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.3-5": {
+      "text": "Esther asks the king to save her and her people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.6-6": {
+      "text": "Esther names Haman as the enemy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.7-7": {
+      "text": "The angry king leaves, and Haman begs Esther for his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.8-8": {
+      "text": "The king sees Haman fall on Esther’s couch",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.7.9-10": {
+      "text": "Haman is hanged on the gallows he made for Mordecai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.1-2": {
+      "text": "The king honors Esther and Mordecai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.3-4": {
+      "text": "Esther weeps and begs the king to stop Haman’s plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.5-6": {
+      "text": "Esther asks the king to cancel Haman’s letters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.7-8": {
+      "text": "The king lets Mordecai write a new decree for the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.9-9": {
+      "text": "Mordecai’s orders are written to all 127 provinces",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.10-12": {
+      "text": "The decree lets the Jews defend themselves on one day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.13-14": {
+      "text": "Couriers carry the decree to every province quickly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.8.15-17": {
+      "text": "Mordecai leaves the king, and the Jews rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.1-2": {
+      "text": "On the thirteenth day, the Jews overpower enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.3-5": {
+      "text": "Officials help the Jews, who defeat all enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.6-10": {
+      "text": "The Jews kill 500 men and Haman’s ten sons in Susa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.11-12": {
+      "text": "The king asks Esther what more she wants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.13-14": {
+      "text": "Esther asks for one more day, and Haman’s sons are hanged",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.15-16": {
+      "text": "The Jews kill more enemies in Susa and the provinces",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.17-17": {
+      "text": "The Jews rest on the fourteenth day with feasting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.18-19": {
+      "text": "Jews in Susa and in villages rest on different days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.20-22": {
+      "text": "Mordecai tells the Jews to celebrate two days each year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.23-25": {
+      "text": "The Jews continue the custom because Haman’s plot failed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.26-28": {
+      "text": "The days are called Purim and are to be kept every year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.29-29": {
+      "text": "Esther and Mordecai write a second letter about Purim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.9.30-32": {
+      "text": "Mordecai sends letters to confirm the days of Purim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.10.1-2": {
+      "text": "King Xerxes taxes the land; Mordecai’s deeds are recorded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EST.10.3-3": {
+      "text": "Mordecai is second only to King Xerxes and helps the Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,2999 @@
+{
+  "language": "en",
+  "book": "JOB",
+  "bible": "bsb-job",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793912166-zateH4lthDy7Guxpt7Gb",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5839,
+      "completionTokens": 4677,
+      "reasoningTokens": 3744,
+      "cost": 0.058448,
+      "ms": 31164
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912197-vRewS2mp0GjMoFddUKJK",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5497,
+      "completionTokens": 4005,
+      "reasoningTokens": 3046,
+      "cost": 0.051044,
+      "ms": 25710
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912223-0tXxqgK88igzXCW6KO6t",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5385,
+      "completionTokens": 3939,
+      "reasoningTokens": 3039,
+      "cost": 0.05016,
+      "ms": 26030
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912249-cqRZBpRHrDmQ4uLr8Th8",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5193,
+      "completionTokens": 5678,
+      "reasoningTokens": 4741,
+      "cost": 0.067166,
+      "ms": 35858
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912285-bciSD09v2WOMgD0CBi7Z",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5173,
+      "completionTokens": 2440,
+      "reasoningTokens": 1494,
+      "cost": 0.034746,
+      "ms": 14691
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912300-OvBf6qEBjGkfKPFeaskW",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5229,
+      "completionTokens": 996,
+      "reasoningTokens": 0,
+      "cost": 0.020418,
+      "ms": 6934
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912306-MVsNIh2QisdJ8zYE22Oh",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5222,
+      "completionTokens": 6160,
+      "reasoningTokens": 5211,
+      "cost": 0.072044,
+      "ms": 41443
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912348-IGSZlvGQAHrRFqbZkjsg",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5065,
+      "completionTokens": 3926,
+      "reasoningTokens": 2976,
+      "cost": 0.04939,
+      "ms": 25773
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912374-PRrtL58EqfmdPiXTxO5V",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4978,
+      "completionTokens": 4187,
+      "reasoningTokens": 3255,
+      "cost": 0.051826,
+      "ms": 28356
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912402-Vm48aocxI8kZABF3G4jY",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5147,
+      "completionTokens": 3163,
+      "reasoningTokens": 2209,
+      "cost": 0.041924,
+      "ms": 21156
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912423-L0fvcEPyUTa9srGuKgjB",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5242,
+      "completionTokens": 4601,
+      "reasoningTokens": 3629,
+      "cost": 0.056494,
+      "ms": 30477
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912454-FAm6mOOxUAp68QO5Rxb3",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5022,
+      "completionTokens": 4610,
+      "reasoningTokens": 3588,
+      "cost": 0.056144,
+      "ms": 30686
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912484-qwa3eEyhaYGRZ0Azpz0B",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5283,
+      "completionTokens": 4151,
+      "reasoningTokens": 3159,
+      "cost": 0.052076,
+      "ms": 25211
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912510-Dw7ZWcZAMCfHrjfx6mI1",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4917,
+      "completionTokens": 10613,
+      "reasoningTokens": 9573,
+      "cost": 0.0434865,
+      "ms": 67397
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912577-tBmiFrOgojPXjqkFTQru",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4636,
+      "completionTokens": 11193,
+      "reasoningTokens": 10281,
+      "cost": 0.04545075,
+      "ms": 74756
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912652-b1uvV5nklnSb5hAF0IRj",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4696,
+      "completionTokens": 4019,
+      "reasoningTokens": 3136,
+      "cost": 0.01859325,
+      "ms": 22559
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912674-OTjpdEK1iW4l7Jdvp4VD",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4571,
+      "completionTokens": 6103,
+      "reasoningTokens": 5141,
+      "cost": 0.0263145,
+      "ms": 25284
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912700-Ed0a3zS8vBtzMEWrgxGy",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4520,
+      "completionTokens": 9882,
+      "reasoningTokens": 8918,
+      "cost": 0.0404475,
+      "ms": 57120
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912757-GEFLF0wfsIH6w047tJIQ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4550,
+      "completionTokens": 10532,
+      "reasoningTokens": 9263,
+      "cost": 0.0429075,
+      "ms": 52842
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912810-EDwG3nMFPGtiWALbW8Sv",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4508,
+      "completionTokens": 4864,
+      "reasoningTokens": 3987,
+      "cost": 0.021621,
+      "ms": 33014
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912843-dMkurZwhYY5B9nZbhg7p",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4335,
+      "completionTokens": 20820,
+      "reasoningTokens": 19826,
+      "cost": 0.08132625,
+      "ms": 129254
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912972-nndVpjYpvPrVtcNIK1BC",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4378,
+      "completionTokens": 6425,
+      "reasoningTokens": 5500,
+      "cost": 0.02737725,
+      "ms": 36737
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913009-j1viptrW1NR3LuVNY8J3",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4528,
+      "completionTokens": 7515,
+      "reasoningTokens": 6574,
+      "cost": 0.03157725,
+      "ms": 45892
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913056-aAar0oLjLeOgo13WEgJ6",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4551,
+      "completionTokens": 5042,
+      "reasoningTokens": 4167,
+      "cost": 0.02232075,
+      "ms": 32225
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913087-XOqPAwDCjOr9YWlBoCs0",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4318,
+      "completionTokens": 4930,
+      "reasoningTokens": 3926,
+      "cost": 0.021726,
+      "ms": 35105
+    },
+    {
+      "role": "check",
+      "id": "gen-1793913122-Y9LqTUPKncvWxZpIvMbA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4504,
+      "completionTokens": 4730,
+      "reasoningTokens": 3849,
+      "cost": 0.0211155,
+      "ms": 27794
+    }
+  ],
+  "titles": {
+    "JOB.1.1-3": {
+      "text": "Job lived in Uz and feared God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only summarizes verse 1 and leaves out Job’s family and great wealth in verses 2–3.",
+        "suggestion": "Job fears God and has great wealth and a large family"
+      }
+    },
+    "JOB.1.4-5": {
+      "text": "Job offers sacrifices for his children after feasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.6-8": {
+      "text": "The LORD points Satan to Job as blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.9-12": {
+      "text": "The LORD lets Satan test Job’s possessions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.13-15": {
+      "text": "A messenger reports that Sabeans took Job’s animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.16-17": {
+      "text": "Fire destroys Job’s sheep and Chaldeans take his camels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.18-19": {
+      "text": "A wind collapses the house and Job’s children die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.1.20-22": {
+      "text": "Job mourns and still worships God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.1-2": {
+      "text": "Satan again comes before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.3-3": {
+      "text": "The LORD says Job still keeps his integrity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.4-6": {
+      "text": "The LORD lets Satan strike Job but not kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.7-8": {
+      "text": "Satan covers Job with painful boils",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.9-10": {
+      "text": "Job’s wife says to curse God, but Job refuses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.11-11": {
+      "text": "Job’s three friends come to comfort him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.2.12-13": {
+      "text": "Job’s friends weep and sit silent with him seven days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.1-3": {
+      "text": "Job curses the day he was born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.4-5": {
+      "text": "Job wishes his birth day would become darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.6-7": {
+      "text": "Job wants that night removed from the year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.8-10": {
+      "text": "Job curses the night that did not stop his birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.11-12": {
+      "text": "Job asks why he did not die at birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.13-14": {
+      "text": "Job says he would now rest with kings and counselors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.15-16": {
+      "text": "Job wishes he had been hidden like a stillborn child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.17-19": {
+      "text": "Job says the grave gives rest to all people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.20-22": {
+      "text": "Job asks why suffering people must live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.23-24": {
+      "text": "Job asks why God gives life to a man in pain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.3.25-26": {
+      "text": "Job says what he feared has happened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.1-3": {
+      "text": "Eliphaz reminds Job that Job has helped many people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.4-6": {
+      "text": "Eliphaz says Job is now troubled and should trust God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.7-9": {
+      "text": "Eliphaz says God destroys those who sow trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.10-11": {
+      "text": "Eliphaz compares the wicked to lions that perish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Verses 10–11 do not mention the wicked, only that even fierce lions perish.",
+        "suggestion": "Eliphaz says that even fierce lions perish"
+      }
+    },
+    "JOB.4.12-13": {
+      "text": "Eliphaz says a secret word came to him in the night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.14-15": {
+      "text": "Eliphaz trembles when a spirit passes by",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.16-17": {
+      "text": "Eliphaz hears a voice ask if people are purer than God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.4.18-19": {
+      "text": "Eliphaz says God finds fault even with his angels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only mentions the angels in verse 18 and leaves out the conclusion about humans in verse 19.",
+        "suggestion": "Eliphaz says God trusts humans even less than angels"
+      }
+    },
+    "JOB.4.20-21": {
+      "text": "Eliphaz says people die without wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.1-3": {
+      "text": "Eliphaz says resentment and envy kill fools",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.4-5": {
+      "text": "Eliphaz says a fool’s sons and harvest are lost",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.6-7": {
+      "text": "Eliphaz says people are born to trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.8-10": {
+      "text": "Eliphaz tells Job to appeal to God, who does great things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.11-13": {
+      "text": "Eliphaz says God lifts the lowly and stops the crafty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.14-16": {
+      "text": "Eliphaz says God saves the needy and gives the poor hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.17-19": {
+      "text": "Eliphaz tells Job that God corrects and also heals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.20-22": {
+      "text": "Eliphaz says God will keep Job safe from harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.23-25": {
+      "text": "Eliphaz promises Job peace, safety and many descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.5.26-27": {
+      "text": "Eliphaz says Job will live long; Job should listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.1-3": {
+      "text": "Job says his grief is heavier than the sand of the seas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.4-6": {
+      "text": "Job says God’s arrows have pierced him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.7-9": {
+      "text": "Job wishes that God would crush him and end his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.10-11": {
+      "text": "Job has comfort in God’s words but little strength to hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.12-13": {
+      "text": "Job asks if his strength is like stone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.14-17": {
+      "text": "Job says his friends are faithless like dry streams",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.18-20": {
+      "text": "Job compares his friends to caravans that find no water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Job compares his friends to dry streams, not to the caravans looking for water.",
+        "suggestion": "Job describes caravans that find no water"
+      }
+    },
+    "JOB.6.21-23": {
+      "text": "Job says his friends have been no help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.24-25": {
+      "text": "Job asks his friends to show him his error",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.26-27": {
+      "text": "Job says his friends treat his cry as wind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.6.28-30": {
+      "text": "Job asks his friends to look at him and be fair",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.1-3": {
+      "text": "Job says human life is hard work and misery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.4-5": {
+      "text": "Job describes his sleepless nights and sick body",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.6-7": {
+      "text": "Job says his days pass quickly and life is a breath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.8-10": {
+      "text": "Job says the dead do not return home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.11-12": {
+      "text": "Job will not be silent and asks why God guards him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.13-15": {
+      "text": "Job says God frightens him with dreams and visions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.16-18": {
+      "text": "Job asks God to leave him alone, for life is a breath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.19-20": {
+      "text": "Job asks God why Job has become God’s target",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.7.21-21": {
+      "text": "Job asks God to pardon his sin before he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.1-3": {
+      "text": "Bildad says Job speaks like wind and God is just",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.4-5": {
+      "text": "Bildad says Job should seek God and ask for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.6-7": {
+      "text": "Bildad says God will restore Job if Job is pure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.8-10": {
+      "text": "Bildad tells Job to learn from past generations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.11-12": {
+      "text": "Bildad says papyrus and reeds die without water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.13-15": {
+      "text": "Bildad says the hope of the godless will perish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.16-18": {
+      "text": "Bildad compares the godless to a plant pulled up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.19-20": {
+      "text": "Bildad says God does not reject the blameless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.8.21-22": {
+      "text": "Bildad says God will give Job joy again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.1-3": {
+      "text": "Job asks how a person can be right before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.4-6": {
+      "text": "Job says God is very strong and shakes the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.7-9": {
+      "text": "Job says God made the stars and rules the sky",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.10-12": {
+      "text": "Job says no one can stop what God does",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.13-15": {
+      "text": "Job says he could not answer God, only beg for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.16-18": {
+      "text": "Job believes God would not listen and would crush him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.19-20": {
+      "text": "Job says his own mouth would declare him guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.21-24": {
+      "text": "Job says God destroys both the blameless and the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.25-26": {
+      "text": "Job says his days pass quickly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.27-29": {
+      "text": "Job fears God will not declare him innocent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.30-31": {
+      "text": "Job says washing himself clean would not help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.32-33": {
+      "text": "Job says no mediator stands between him and God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.9.34-35": {
+      "text": "Job wants God to stop frightening him so he can speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.1-3": {
+      "text": "Job complains to God and asks not to be condemned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.4-7": {
+      "text": "Job asks if God sees as a man sees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.8-9": {
+      "text": "Job reminds God that God made him from clay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.10-11": {
+      "text": "Job says God formed him with skin, flesh, and bones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.12-14": {
+      "text": "Job says God gave him life but watches for his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.15-16": {
+      "text": "Job says he is in shame and God hunts him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.17-17": {
+      "text": "Job says God brings new troubles against him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.18-19": {
+      "text": "Job asks why God let him be born",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.10.20-22": {
+      "text": "Job asks God to leave him alone before he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.1-3": {
+      "text": "Zophar says Job talks too much and must be rebuked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.4-6": {
+      "text": "Zophar says God would show Job his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.7-9": {
+      "text": "Zophar says no one can fully understand God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.10-12": {
+      "text": "Zophar says no one can stop God from judging",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.13-14": {
+      "text": "Zophar urges Job to turn to God and put away sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.15-17": {
+      "text": "Zophar promises Job a life without shame or fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.18-19": {
+      "text": "Zophar says Job will have hope and live in safety",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.11.20-20": {
+      "text": "Zophar says the wicked will lose hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.1-3": {
+      "text": "Job says he is as wise as his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.4-6": {
+      "text": "Job is laughed at, while wicked people live in safety",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.7-8": {
+      "text": "Job says animals, birds and fish can teach his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.9-10": {
+      "text": "Job says God holds the life of every living thing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.11-12": {
+      "text": "Job says the old have wisdom and understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.13-15": {
+      "text": "Job says God has wisdom and power over all things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.16-18": {
+      "text": "Job says God humbles counselors, judges and kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.19-21": {
+      "text": "Job says God overthrows priests, elders and nobles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.22-23": {
+      "text": "Job says God raises up nations and destroys nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.12.24-25": {
+      "text": "Job says God makes earth’s leaders wander without light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.1-2": {
+      "text": "Job says he knows as much as his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.3-5": {
+      "text": "Job wants to argue with God and calls friends worthless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Adding 'his' before 'friends' makes the sentence natural and clear for readers of English as a second language.",
+        "suggestion": "Job wants to argue with God and calls his friends worthless"
+      }
+    },
+    "JOB.13.6-8": {
+      "text": "Job asks if his friends should lie to defend God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.9-10": {
+      "text": "Job warns his friends that God will rebuke partiality",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.11-12": {
+      "text": "Job says God’s majesty should terrify his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.13-15": {
+      "text": "Job says he will hope in God even if God kills him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.16-17": {
+      "text": "Job says no godless person can come before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.18-19": {
+      "text": "Job has prepared his case and expects to be proved right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.20-22": {
+      "text": "Job asks God to stop hurting and frightening him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.23-25": {
+      "text": "Job asks God to show his sin and why God opposes him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.13.26-28": {
+      "text": "Job says God watches him closely and records his sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.1-3": {
+      "text": "Job says human life is short and full of trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.4-6": {
+      "text": "Job asks God to look away and let people rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.7-9": {
+      "text": "Job says a cut tree has hope to grow again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.10-12": {
+      "text": "Job says a man dies and does not rise again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.13-14": {
+      "text": "Job wishes God would hide him until God’s anger passes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.15-17": {
+      "text": "Job imagines God would call him and forgive his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.18-19": {
+      "text": "Job says God destroys human hope like water on stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.14.20-22": {
+      "text": "Job says a dead man cannot know what happens to his sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.1-3": {
+      "text": "Eliphaz says Job speaks empty and useless words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.4-6": {
+      "text": "Eliphaz says Job’s own words show he is guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.7-9": {
+      "text": "Eliphaz asks if Job knows more than his friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.10-11": {
+      "text": "Eliphaz says older men agree with him, not Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.12-14": {
+      "text": "Eliphaz asks why Job turns against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.15-16": {
+      "text": "Eliphaz says no human is pure before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.17-18": {
+      "text": "Eliphaz promises to tell what wise men taught",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.19-21": {
+      "text": "Eliphaz says a wicked man suffers all his days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.22-24": {
+      "text": "Eliphaz says the wicked live in fear of death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.25-26": {
+      "text": "Eliphaz says the wicked man fights against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.27-28": {
+      "text": "Eliphaz says the rich wicked man will lose his home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.29-30": {
+      "text": "Eliphaz says the wicked man’s wealth will not last",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.31-33": {
+      "text": "Eliphaz warns that trusting emptiness brings loss",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.15.34-35": {
+      "text": "Eliphaz says the godless will have nothing but trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.1-3": {
+      "text": "Job says his friends give no comfort",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.4-5": {
+      "text": "Job says he would comfort friends who suffered like him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.6-8": {
+      "text": "Job says God has worn him out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.9-10": {
+      "text": "Job says God and people attack him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.11-12": {
+      "text": "Job says God has given him to wicked men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.13-14": {
+      "text": "Job says God attacks him without mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.15-17": {
+      "text": "Job mourns, yet says his hands are free of violence",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.18-19": {
+      "text": "Job says his witness in heaven will speak for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.16.20-22": {
+      "text": "Job weeps to God and expects to die soon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.17.1-3": {
+      "text": "Job says his spirit is broken and the grave awaits",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.17.4-5": {
+      "text": "Job says God has closed his friends’ minds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.17.6-8": {
+      "text": "Job says people mock him and his body is weak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.17.9-10": {
+      "text": "Job says the righteous stay strong; friends are not wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "Using “friends” without “his” sounds like friends in general rather than Job’s friends.",
+        "suggestion": "The righteous stay strong, but Job’s friends are not wise"
+      }
+    },
+    "JOB.17.11-12": {
+      "text": "Job says his days are gone and his plans are broken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.17.13-16": {
+      "text": "Job asks where his hope is as he faces the grave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.1-2": {
+      "text": "Bildad tells Job to stop talking and show sense",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.3-4": {
+      "text": "Bildad asks why Job treats his friends as stupid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.5-6": {
+      "text": "Bildad says the wicked man’s light goes out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.7-8": {
+      "text": "Bildad says the wicked man walks into a net",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.9-11": {
+      "text": "Bildad says traps and terrors catch the wicked man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.12-13": {
+      "text": "Bildad says the wicked man loses strength and health",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.14-15": {
+      "text": "Bildad says the wicked man is taken to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.16-17": {
+      "text": "Bildad says the wicked man is forgotten on earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.18-20": {
+      "text": "Bildad says the wicked man is driven out and forgotten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.18.21-21": {
+      "text": "Bildad says this is the fate of those who do not know God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.1-2": {
+      "text": "Job asks his friends how long they will hurt him with words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.3-4": {
+      "text": "Job says his friends have shamelessly insulted him many times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 61 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Job says his friends repeatedly mistreat and insult him"
+      }
+    },
+    "JOB.19.5-6": {
+      "text": "Job says God has wronged him and trapped him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.7-9": {
+      "text": "Job says God gives no justice and has taken his honor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.10-12": {
+      "text": "Job says God attacks him like an enemy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.13-14": {
+      "text": "Job says his relatives and friends have abandoned him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.15-16": {
+      "text": "Job says even his guests and servants treat him as a stranger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 61 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Job says his guests and servants treat him as a stranger"
+      }
+    },
+    "JOB.19.17-19": {
+      "text": "Job says his wife, family and close friends turn from him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.20-22": {
+      "text": "Job asks his friends to pity him and stop attacking him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.23-24": {
+      "text": "Job wishes his words could be written down forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.25-27": {
+      "text": "Job says he knows his Redeemer lives and he will see God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.19.28-29": {
+      "text": "Job warns his friends that they will face God’s judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.1-3": {
+      "text": "Zophar says he must answer Job because he feels insulted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.4-5": {
+      "text": "Zophar says the joy of the wicked lasts only a short time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.6-7": {
+      "text": "Zophar says the proud wicked man will perish and be gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.8-9": {
+      "text": "Zophar says the wicked man will vanish like a dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.10-11": {
+      "text": "Zophar says the wicked man’s sons will pay back the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.12-14": {
+      "text": "Zophar says evil tastes sweet to the wicked but turns to poison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 63 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Zophar says evil tastes sweet but turns to poison"
+      }
+    },
+    "JOB.20.15-16": {
+      "text": "Zophar says God will make the wicked man give up his wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.17-19": {
+      "text": "Zophar says the wicked man loses wealth gained by oppressing the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 69 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Zophar says the wicked man cannot enjoy his stolen wealth"
+      }
+    },
+    "JOB.20.20-22": {
+      "text": "Zophar says the greedy wicked man will fall into misery",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.23-25": {
+      "text": "Zophar says God will pour out anger on the wicked man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.20.26-27": {
+      "text": "Zophar says fire, heaven and earth will turn against the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 63 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Zophar says heaven and earth will rise against the wicked"
+      }
+    },
+    "JOB.20.28-29": {
+      "text": "Zophar says God’s wrath takes the wicked man’s house and goods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 62 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Zophar says God’s wrath takes the wicked man’s wealth"
+      }
+    },
+    "JOB.21.1-3": {
+      "text": "Job asks his friends to listen to him before they mock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.4-6": {
+      "text": "Job says his complaint is serious and his friends should be shocked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "With 67 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Job asks his friends to look at him and be appalled"
+      }
+    },
+    "JOB.21.7-9": {
+      "text": "Job asks why the wicked live long, safe and strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.10-12": {
+      "text": "Job says the wicked have rich flocks and happy children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.13-15": {
+      "text": "Job says the wicked live in peace but reject God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.16-18": {
+      "text": "Job asks how often the wicked really suffer disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.19-21": {
+      "text": "Job says the wicked man himself should be punished by God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.22-24": {
+      "text": "Job says one man dies healthy and secure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.25-26": {
+      "text": "Job says another man dies bitter, and both lie in dust",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.27-28": {
+      "text": "Job says his friends plan to wrong him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.29-30": {
+      "text": "Job says the evil man escapes the day of calamity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.31-33": {
+      "text": "Job says an evil man is honored at his burial",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.21.34-34": {
+      "text": "Job says his friends’ comfort is empty and false",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.1-3": {
+      "text": "Eliphaz asks if Job’s goodness helps God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.4-5": {
+      "text": "Eliphaz says Job’s wickedness is great",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.6-8": {
+      "text": "Eliphaz accuses Job of harming the poor and hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.9-11": {
+      "text": "Eliphaz says Job harmed widows and now faces danger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.12-14": {
+      "text": "Eliphaz says Job thinks God cannot see or judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.15-17": {
+      "text": "Eliphaz asks if Job will follow wicked men’s old path",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.18-20": {
+      "text": "Eliphaz says the righteous are glad when the wicked fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.21-22": {
+      "text": "Eliphaz urges Job to make peace with God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.23-25": {
+      "text": "Eliphaz says Job will be restored if he returns to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.26-28": {
+      "text": "Eliphaz promises Job joy in God and answered prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.22.29-30": {
+      "text": "Eliphaz says God will rescue others through Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.1-2": {
+      "text": "Job says his complaint is bitter and God’s hand is heavy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.3-5": {
+      "text": "Job wishes he could find God and plead his case",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.6-7": {
+      "text": "Job believes God would listen to an upright man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.8-9": {
+      "text": "Job cannot find God in any direction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.10-12": {
+      "text": "Job says God knows his way and he has obeyed God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.13-14": {
+      "text": "Job says no one can oppose God’s plans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.23.15-17": {
+      "text": "Job is terrified of God but not silenced by darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.1-1": {
+      "text": "Job asks why God does not set times for judgment",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.2-4": {
+      "text": "Job says wicked men steal from the poor and fatherless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.5-7": {
+      "text": "Job says the poor search for food and have no clothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.8-10": {
+      "text": "Job says the poor are cold and hungry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.11-12": {
+      "text": "Job says workers suffer, yet God charges no one",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.13-14": {
+      "text": "Job says the murderer kills the poor at night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.15-17": {
+      "text": "Job says adulterers and thieves hide in the dark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.18-19": {
+      "text": "Job says sinners are like foam and go to Sheol",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.20-21": {
+      "text": "Job says the wicked are forgotten and harm widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.22-23": {
+      "text": "God drags away the mighty and watches the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.24.24-25": {
+      "text": "Job says the wicked are exalted briefly, then gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.25.1-3": {
+      "text": "Bildad says God rules and his light shines on all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.25.4-6": {
+      "text": "Bildad asks how a man can be pure before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.26.1-4": {
+      "text": "Job asks Bildad whose spirit spoke through him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verse 4, leaving out Job’s rebuke of Bildad’s advice in verses 1–3.",
+        "suggestion": "Job rebukes Bildad for giving useless counsel"
+      }
+    },
+    "JOB.26.5-6": {
+      "text": "Job says the dead and Sheol are open before God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.26.7-8": {
+      "text": "God hangs the earth on nothing and wraps water in clouds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.26.9-10": {
+      "text": "God covers the moon and marks the horizon on the waters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.26.11-12": {
+      "text": "God shakes heaven and defeats Rahab by his power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.26.13-14": {
+      "text": "Job says people hear only a faint whisper of God’s power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.1-3": {
+      "text": "Job swears by the living God while he still has breath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.4-5": {
+      "text": "Job refuses to lie or to say his friends are right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.6-6": {
+      "text": "Job holds to his righteousness and has a clear conscience",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.7-7": {
+      "text": "Job wishes his enemy to be like the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.8-10": {
+      "text": "The godless man has no hope when God ends his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.11-12": {
+      "text": "Job will teach his friends about God’s power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.13-14": {
+      "text": "The wicked man’s children will die by the sword or hunger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.15-17": {
+      "text": "The wicked man’s riches will go to the righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It covers only verses 16–17, leaving out the death of the wicked man’s survivors in verse 15.",
+        "suggestion": "The wicked man’s survivors die and his wealth is divided"
+      }
+    },
+    "JOB.27.18-19": {
+      "text": "The wicked man’s house is weak and his wealth soon gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.20-21": {
+      "text": "Terrors and a storm sweep the wicked man away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.27.22-23": {
+      "text": "The storm mocks the wicked man and drives him away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.1-2": {
+      "text": "People mine silver, gold, iron and copper from the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.3-4": {
+      "text": "Miners search deep dark places far from people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.5-6": {
+      "text": "Miners find sapphires and gold in the earth’s rocks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.7-8": {
+      "text": "No bird or animal knows the path to the mine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.9-11": {
+      "text": "Miners overturn mountains to find hidden treasure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.12-14": {
+      "text": "Job asks where wisdom is found; the sea does not have it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.15-17": {
+      "text": "Wisdom cannot be bought with gold, silver or jewels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.18-19": {
+      "text": "Wisdom is worth more than coral, rubies or topaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.20-22": {
+      "text": "Wisdom is hidden from all living things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.23-25": {
+      "text": "God knows where wisdom is, for he sees all the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.28.26-28": {
+      "text": "God tells people that fear of the Lord is wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.1-3": {
+      "text": "Job longs for the days when God watched over him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.4-6": {
+      "text": "Job remembers when God’s friendship blessed his home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.7-8": {
+      "text": "Young and old men honored Job at the city gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.9-10": {
+      "text": "Princes and nobles became silent before Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.11-13": {
+      "text": "Job helped the poor, the fatherless and widows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.14-16": {
+      "text": "Job did right and helped the blind, lame and needy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.17-19": {
+      "text": "Job stopped the unjust and hoped for a long, safe life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.20-22": {
+      "text": "Men listened to Job and waited for his advice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.23-24": {
+      "text": "People waited for Job’s words as for rain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.29.25-25": {
+      "text": "Job led the people like a king and comforted mourners",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.1-3": {
+      "text": "Young men whose fathers were poor now mock Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.4-6": {
+      "text": "Outcast men ate roots and lived in holes in the ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.7-8": {
+      "text": "Job says the outcasts were driven from the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.9-11": {
+      "text": "Job says the outcasts now mock and spit at him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.12-13": {
+      "text": "A crowd of outcasts attacks Job and ruins his way",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.14-14": {
+      "text": "The attackers rush in like water through a broken wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text describes an advance through a breach but does not say it is like water.",
+        "suggestion": "The attackers rush in through a broken wall"
+      }
+    },
+    "JOB.30.15-15": {
+      "text": "Terrors take away Job’s dignity and prosperity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.16-17": {
+      "text": "Job is in constant pain day and night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.18-19": {
+      "text": "Job says God throws him into the mud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.20-21": {
+      "text": "Job cries to God, but God does not answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.22-23": {
+      "text": "Job says God tosses him in a storm toward death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.24-26": {
+      "text": "Job wept for others, yet evil came when he hoped for good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.27-29": {
+      "text": "Job is restless, darkened, and alone in his suffering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.30.30-31": {
+      "text": "Job’s skin is black and his songs are of mourning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.1-2": {
+      "text": "Job says he made a promise not to look with desire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.3-4": {
+      "text": "Job says God sees his steps and judges the unjust",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.5-6": {
+      "text": "Job asks God to weigh him fairly if he lied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.7-8": {
+      "text": "Job accepts loss of his crops if he has sinned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.9-10": {
+      "text": "Job rejects adultery and accepts punishment if guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.11-12": {
+      "text": "Job says adultery is a crime that destroys harvests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.13-15": {
+      "text": "Job treats his servants fairly because God made all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.16-18": {
+      "text": "Job says he fed the poor, widows and the fatherless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.19-21": {
+      "text": "Job says he clothed the needy and did not harm the fatherless",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.22-23": {
+      "text": "Job says his arm should fall if guilty, for he fears God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.24-25": {
+      "text": "Job says he never trusted in gold or wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.26-28": {
+      "text": "Job says he never worshiped the sun or moon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.29-30": {
+      "text": "Job says he never rejoiced when an enemy suffered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.31-32": {
+      "text": "Job says his house welcomed strangers and travelers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.33-34": {
+      "text": "Job says he did not hide his sins out of fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.35-37": {
+      "text": "Job wants God to answer him and accuse him openly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.31.38-40": {
+      "text": "Job says he never wronged his land or its workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.1-2": {
+      "text": "Elihu becomes angry with Job for justifying himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.3-5": {
+      "text": "Elihu is angry because the friends could not answer Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.6-7": {
+      "text": "Elihu says he was afraid to speak because he is young",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.8-10": {
+      "text": "Elihu says understanding comes from God, not only age",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.11-12": {
+      "text": "Elihu says none of the friends proved Job wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.13-14": {
+      "text": "Elihu will not answer Job with the friends’ arguments",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.15-16": {
+      "text": "Elihu says the friends have no more to say",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.17-19": {
+      "text": "Elihu says he is full of words and must speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.32.20-22": {
+      "text": "Elihu says he must speak and will not flatter anyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.1-3": {
+      "text": "Elihu asks Job to listen to his sincere words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.4-5": {
+      "text": "Elihu says God made him and invites Job to answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.6-7": {
+      "text": "Elihu says he is, like Job, formed from clay",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions verse 6 but leaves out verse 7, where Elihu tells Job not to fear him.",
+        "suggestion": "Elihu says Job should not fear him, who is also clay"
+      }
+    },
+    "JOB.33.8-9": {
+      "text": "Elihu repeats Job’s claim that he is pure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.10-12": {
+      "text": "Elihu says Job is wrong because God is greater than man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.13-15": {
+      "text": "Elihu says God speaks to people in dreams and visions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.16-18": {
+      "text": "Elihu says God warns people to turn from wrongdoing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.19-20": {
+      "text": "Elihu says pain on a sickbed can also warn a person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.21-22": {
+      "text": "Elihu describes a sick man near death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.23-24": {
+      "text": "Elihu says a messenger can win mercy for a sick man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.25-26": {
+      "text": "Elihu says the man is restored and sees God with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.27-28": {
+      "text": "Elihu says the saved man admits his sin and sings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.29-30": {
+      "text": "Elihu says God does these things to save a man’s life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.33.31-33": {
+      "text": "Elihu tells Job to answer or to listen and learn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.1-3": {
+      "text": "Elihu calls the wise men to hear his words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.4-6": {
+      "text": "Elihu quotes Job’s claim that God denies him justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.7-9": {
+      "text": "Elihu accuses Job of keeping company with the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.10-12": {
+      "text": "Elihu says God never does wrong or twists justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.13-15": {
+      "text": "Elihu says all life depends on God’s breath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.16-17": {
+      "text": "Elihu asks Job if he will condemn the just God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.18-20": {
+      "text": "Elihu says God favors neither rich nor poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.21-23": {
+      "text": "Elihu says God sees every step and no one can hide",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.24-25": {
+      "text": "Elihu says God overthrows the mighty in the night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.26-28": {
+      "text": "Elihu says God punishes wicked rulers who harm the poor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.29-30": {
+      "text": "Elihu says no one can condemn God when he is silent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.31-33": {
+      "text": "Elihu says God will not repay Job on Job’s terms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.34-35": {
+      "text": "Elihu says wise men will say Job speaks without knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.34.36-37": {
+      "text": "Elihu says Job adds rebellion to his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.1-3": {
+      "text": "Elihu says Job claims to be more righteous than God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.4-5": {
+      "text": "Elihu tells Job to look at the heavens and clouds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.6-8": {
+      "text": "Elihu says Job’s sin and goodness do not change God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.9-11": {
+      "text": "Elihu says people cry out but do not ask for God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.12-14": {
+      "text": "Elihu says God does not answer proud, empty pleas",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.35.15-16": {
+      "text": "Elihu says Job speaks many words without knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.1-3": {
+      "text": "Elihu says he has more to say for God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.4-5": {
+      "text": "Elihu says God is mighty and despises no one",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.6-7": {
+      "text": "Elihu says God helps the afflicted, not the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.8-9": {
+      "text": "Elihu says God warns people who are bound in chains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.10-12": {
+      "text": "Elihu says those who obey God prosper, others perish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.13-14": {
+      "text": "Elihu says godless people do not cry to God for help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.15-16": {
+      "text": "Elihu says God rescues the afflicted and once helped Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.17-18": {
+      "text": "Elihu warns Job not to be led astray by riches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.19-21": {
+      "text": "Elihu warns Job not to choose wrong over affliction",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.22-24": {
+      "text": "Elihu says God is a great teacher and does no wrong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.25-26": {
+      "text": "Elihu says God is great beyond human knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.27-29": {
+      "text": "Elihu says God sends rain and thunder from the clouds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.30-31": {
+      "text": "Elihu says God uses lightning to judge and give food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.36.32-33": {
+      "text": "Elihu says God commands the lightning to hit its mark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.1-3": {
+      "text": "Elihu trembles at the thunder of God’s voice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.4-6": {
+      "text": "Elihu says God thunders and commands snow and rain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.7-9": {
+      "text": "Elihu says God stops people’s work and sends storms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.10-11": {
+      "text": "Elihu says God makes ice and fills the clouds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.12-13": {
+      "text": "Elihu says God uses clouds to punish or to help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.14-15": {
+      "text": "Elihu tells Job to stop and think about God’s wonders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.16-17": {
+      "text": "Elihu asks Job about the clouds and God’s knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.18-20": {
+      "text": "Elihu says no one can argue a case against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.37.21-22": {
+      "text": "Elihu says no one can look at God’s golden glory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The text says no one can gaze at the sun, not that no one can look at God.",
+        "suggestion": "Elihu speaks of the bright sun and God’s majesty"
+      }
+    },
+    "JOB.37.23-24": {
+      "text": "Elihu says God is powerful and just, so people fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.1-3": {
+      "text": "The LORD speaks to Job out of the whirlwind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.4-5": {
+      "text": "The LORD asks Job who measured the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.6-7": {
+      "text": "The LORD asks Job who laid the earth’s cornerstone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.8-9": {
+      "text": "The LORD asks Job who shut the sea behind doors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.10-11": {
+      "text": "The LORD set limits that the sea’s waves cannot pass",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.12-13": {
+      "text": "The LORD asks Job if Job ever commanded the dawn",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.14-15": {
+      "text": "Dawn shapes the earth, but light is kept from the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.16-18": {
+      "text": "The LORD asks Job if Job has seen the gates of death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The title focuses only on the gates of death and ignores the depths of the sea and the extent of the earth.",
+        "suggestion": "The LORD asks Job about the sea, death, and the earth"
+      }
+    },
+    "JOB.38.19-21": {
+      "text": "The LORD asks Job about the homes of light and darkness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.22-24": {
+      "text": "The LORD asks Job about snow, hail and lightning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.25-27": {
+      "text": "The LORD asks Job who sends rain to the empty desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.28-30": {
+      "text": "The LORD asks Job who gives birth to rain, ice and frost",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.31-33": {
+      "text": "The LORD asks Job about the stars and the heavens’ laws",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.34-35": {
+      "text": "The LORD asks Job if Job can command clouds and lightning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.36-38": {
+      "text": "The LORD asks Job who gives wisdom and controls the clouds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.39-40": {
+      "text": "The LORD asks Job if Job can feed the lions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.38.41-41": {
+      "text": "The LORD asks Job who feeds the young ravens",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.1-2": {
+      "text": "The LORD asks Job if Job knows when wild goats give birth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.3-4": {
+      "text": "The young of wild goats and deer grow up and leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.5-6": {
+      "text": "The LORD made the wilderness the wild donkey’s home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.7-8": {
+      "text": "The wild donkey avoids the city and searches the mountains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.9-10": {
+      "text": "The LORD asks Job if the wild ox will work for Job",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.11-12": {
+      "text": "The LORD asks Job if Job can trust the wild ox’s strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.13-15": {
+      "text": "The ostrich leaves her eggs on the ground",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.16-18": {
+      "text": "God gave the ostrich no wisdom, yet she laughs at horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.19-20": {
+      "text": "The LORD asks Job if he gave the horse its strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.21-23": {
+      "text": "The war horse is strong and unafraid in battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.24-25": {
+      "text": "The horse is eager when the horn sounds for war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.26-26": {
+      "text": "The LORD asks Job if he teaches the hawk to fly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.27-28": {
+      "text": "The LORD asks if Job commands the eagle to nest high",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.39.29-30": {
+      "text": "The eagle sees food from far away and feeds its young",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.1-2": {
+      "text": "The LORD asks if Job will argue with God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.3-5": {
+      "text": "Job says he is unworthy and will not answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.6-7": {
+      "text": "The LORD tells Job to get ready to answer questions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.8-9": {
+      "text": "The LORD asks if Job would condemn God to be right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.10-11": {
+      "text": "The LORD tells Job to bring down the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.12-14": {
+      "text": "The LORD says Job must defeat the wicked to save himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.15-16": {
+      "text": "The LORD shows Job Behemoth, a strong animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.17-18": {
+      "text": "Behemoth has a tail like a cedar and bones like bronze",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.19-21": {
+      "text": "Behemoth is the greatest of God’s works and lives safely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.40.22-24": {
+      "text": "Behemoth is not afraid; no one can capture him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.1-3": {
+      "text": "The LORD asks if Job can catch and control Leviathan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.4-6": {
+      "text": "Leviathan will not serve Job or become his pet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.7-9": {
+      "text": "No one can fight Leviathan and win",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.10-12": {
+      "text": "No one can stand against Leviathan, or against God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.13-15": {
+      "text": "No one can approach Leviathan’s jaws and scales",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.16-18": {
+      "text": "Leviathan’s scales are tightly joined, and his eyes shine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.19-21": {
+      "text": "Fire and smoke come from Leviathan’s mouth and nose",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.22-24": {
+      "text": "Leviathan has a strong neck and a chest hard as rock",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.25-27": {
+      "text": "Strong men fear Leviathan, and weapons cannot hurt him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.28-30": {
+      "text": "Arrows, stones and clubs do not harm Leviathan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.31-32": {
+      "text": "Leviathan stirs the sea and leaves a shining wake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.41.33-34": {
+      "text": "Leviathan has no equal and is king over the proud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.42.1-3": {
+      "text": "Job tells the LORD he spoke without understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.42.4-6": {
+      "text": "Job sees the LORD and repents in dust and ashes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.42.10-11": {
+      "text": "The LORD gives Job back his wealth; friends comfort him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.42.12-14": {
+      "text": "The LORD blesses Job with animals and ten children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "JOB.42.15-17": {
+      "text": "Job’s daughters receive an inheritance, and Job dies old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,2417 @@
+{
+  "language": "en",
+  "book": "1KI",
+  "bible": "bsb-1ki",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793907316-YD3n8Tq2flReZkUcxxyu",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7363,
+      "completionTokens": 5519,
+      "reasoningTokens": 4465,
+      "cost": 0.069916,
+      "ms": 31016
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907347-rCjWl4urGRsrDQJD6grj",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7010,
+      "completionTokens": 1095,
+      "reasoningTokens": 0,
+      "cost": 0.02497,
+      "ms": 6917
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907354-1FWPJfwUXHgCLQYNFaDb",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6089,
+      "completionTokens": 2858,
+      "reasoningTokens": 1861,
+      "cost": 0.040758,
+      "ms": 16976
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907371-BDMWJYRsYmbpHU732FSM",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6850,
+      "completionTokens": 1054,
+      "reasoningTokens": 0,
+      "cost": 0.02424,
+      "ms": 6609
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907377-hoWlrpjzV2RmjJwHqOGN",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6437,
+      "completionTokens": 1082,
+      "reasoningTokens": 0,
+      "cost": 0.023694,
+      "ms": 6635
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907384-BmUE9uoQpei9YCTJtXCB",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7487,
+      "completionTokens": 1104,
+      "reasoningTokens": 0,
+      "cost": 0.026014,
+      "ms": 6599
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907391-Fe9BtG8Ttv7UFrVBapAo",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7367,
+      "completionTokens": 3509,
+      "reasoningTokens": 2454,
+      "cost": 0.049824,
+      "ms": 21484
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907412-qI8tIzz7yynRRi6UNLb1",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7235,
+      "completionTokens": 3930,
+      "reasoningTokens": 2888,
+      "cost": 0.05377,
+      "ms": 23594
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907436-unXMtTyevA1GDVBqIMak",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7263,
+      "completionTokens": 5780,
+      "reasoningTokens": 4681,
+      "cost": 0.072326,
+      "ms": 33955
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793907470-dCX6BjA7zFmynXNi6w6b",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7293,
+      "completionTokens": 4930,
+      "reasoningTokens": 3858,
+      "cost": 0.063886,
+      "ms": 31408
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907501-5kDOHIDsCFDOdFuWc60d",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6142,
+      "completionTokens": 7449,
+      "reasoningTokens": 6402,
+      "cost": 0.03254025,
+      "ms": 55562
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907557-qC0qtUkWnkycgBGyYMjV",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5781,
+      "completionTokens": 30679,
+      "reasoningTokens": 29419,
+      "cost": 0.119382,
+      "ms": 187788
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907745-ONCCT8RTxDcpBz0wI4BU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5043,
+      "completionTokens": 10410,
+      "reasoningTokens": 9418,
+      "cost": 0.04281975,
+      "ms": 64732
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907809-NssnTHgIPdvObIfr9Cj9",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5653,
+      "completionTokens": 3006,
+      "reasoningTokens": 1958,
+      "cost": 0.01551225,
+      "ms": 15174
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907824-oNs6BoDMW6GwdnpxyiBk",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5325,
+      "completionTokens": 9066,
+      "reasoningTokens": 7894,
+      "cost": 0.03799125,
+      "ms": 50396
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907875-IiQ4kAvf7DeIJlgE5qPB",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6254,
+      "completionTokens": 7687,
+      "reasoningTokens": 6715,
+      "cost": 0.03351675,
+      "ms": 52174
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907927-i7RlwjLYRwcukRYA1hRB",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6101,
+      "completionTokens": 7609,
+      "reasoningTokens": 6573,
+      "cost": 0.0331095,
+      "ms": 59526
+    },
+    {
+      "role": "check",
+      "id": "gen-1793907987-43n6jRnYFIRtusPuwTvS",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5974,
+      "completionTokens": 9688,
+      "reasoningTokens": 8666,
+      "cost": 0.0408105,
+      "ms": 78733
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908065-JXQK6tqsbpMOKe74zSuJ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5984,
+      "completionTokens": 8360,
+      "reasoningTokens": 7359,
+      "cost": 0.035838,
+      "ms": 66513
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908132-N7fqmF4gPiT3AFNzWckY",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5950,
+      "completionTokens": 4259,
+      "reasoningTokens": 3319,
+      "cost": 0.02043375,
+      "ms": 25085
+    }
+  ],
+  "titles": {
+    "1KI.1.1-2": {
+      "text": "David’s servants want a young woman to care for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.3-4": {
+      "text": "Servants find Abishag to care for King David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.5-6": {
+      "text": "Adonijah says he will be king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.7-8": {
+      "text": "Joab and Abiathar support Adonijah; others do not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.9-10": {
+      "text": "Adonijah holds a feast and does not invite Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.11-12": {
+      "text": "Nathan warns Bathsheba to save her life and Solomon’s",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.13-14": {
+      "text": "Nathan tells Bathsheba what to say to King David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.15-17": {
+      "text": "Bathsheba reminds David of his promise about Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.18-19": {
+      "text": "Bathsheba tells David that Adonijah has become king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.20-21": {
+      "text": "Bathsheba asks David to name the next king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.22-23": {
+      "text": "Nathan the prophet arrives to see King David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.24-25": {
+      "text": "Nathan asks David if he chose Adonijah as king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.26-27": {
+      "text": "Nathan asks David who should sit on the throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.32-34": {
+      "text": "David orders that Solomon be anointed king at Gihon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.35-37": {
+      "text": "David makes Solomon ruler and Benaiah agrees",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.38-40": {
+      "text": "Solomon is anointed king and the people rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.41-42": {
+      "text": "Adonijah and Joab hear the noise of the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.43-45": {
+      "text": "Jonathan tells Adonijah that Solomon is now king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.46-48": {
+      "text": "Jonathan says Solomon sits on the throne",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.49-51": {
+      "text": "Adonijah’s guests flee and Adonijah fears Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.1.52-53": {
+      "text": "Solomon spares Adonijah and sends him home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.1-4": {
+      "text": "David tells Solomon to be strong and obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.5-6": {
+      "text": "David tells Solomon to punish Joab for killing two men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.7-7": {
+      "text": "David asks Solomon to be kind to Barzillai’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.8-9": {
+      "text": "David tells Solomon to deal with Shimei",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The phrase “deal with” is an idiom.",
+        "suggestion": "David tells Solomon to punish Shimei"
+      }
+    },
+    "1KI.2.13-15": {
+      "text": "Adonijah comes to Bathsheba to ask a favor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Adonijah speaks about losing the kingship in these verses and does not ask for anything until verse 16.",
+        "suggestion": "Adonijah speaks to Bathsheba about the kingdom"
+      }
+    },
+    "1KI.2.16-18": {
+      "text": "Adonijah asks Bathsheba to request Abishag for him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.19-21": {
+      "text": "Bathsheba asks Solomon to give Abishag to Adonijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.22-23": {
+      "text": "Solomon swears that Adonijah must die for his request",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.24-25": {
+      "text": "Solomon sends Benaiah to kill Adonijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.26-27": {
+      "text": "Solomon removes Abiathar from the priesthood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.28-29": {
+      "text": "Joab flees to the altar and Solomon sends Benaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.30-31": {
+      "text": "Joab refuses to leave and Solomon orders his death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.32-33": {
+      "text": "Solomon says Joab must pay for killing Abner and Amasa",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.34-35": {
+      "text": "Benaiah kills Joab and takes his place over the army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.36-38": {
+      "text": "Solomon orders Shimei to live in Jerusalem and not leave",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.39-40": {
+      "text": "Shimei goes to Gath to bring back his runaway slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.41-42": {
+      "text": "Solomon asks Shimei why he left Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Solomon reminds Shimei of the oath and warning rather than asking why he left.",
+        "suggestion": "Solomon reminds Shimei of the oath and warning"
+      }
+    },
+    "1KI.2.43-44": {
+      "text": "Solomon says Shimei broke his oath and did evil to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.2.45-46": {
+      "text": "Solomon has Benaiah kill Shimei, and the kingdom is secure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.1-3": {
+      "text": "Solomon marries Pharaoh’s daughter and sacrifices at high places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 64 characters, which exceeds the 60-character limit.",
+        "suggestion": "Solomon marries Pharaoh’s daughter and offers sacrifices"
+      }
+    },
+    "1KI.3.4-5": {
+      "text": "God appears to Solomon at Gibeon and tells him to ask",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.6-6": {
+      "text": "Solomon thanks God for his faithfulness to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.7-9": {
+      "text": "Solomon asks God for an understanding heart to judge the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 63 characters, which exceeds the 60-character limit.",
+        "suggestion": "Solomon asks God for an understanding heart to judge"
+      }
+    },
+    "1KI.3.10-12": {
+      "text": "God is pleased and gives Solomon a wise heart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.13-14": {
+      "text": "God also promises Solomon riches, honor and long life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.15-15": {
+      "text": "Solomon wakes, offers sacrifices in Jerusalem and holds a feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 63 characters, which exceeds the 60-character limit.",
+        "suggestion": "Solomon wakes, offers sacrifices, and holds a feast"
+      }
+    },
+    "1KI.3.16-17": {
+      "text": "Two women come to King Solomon, and one tells her story",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.18-20": {
+      "text": "The first woman says the other woman took her living son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.21-22": {
+      "text": "The two women argue before Solomon about the living baby",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.23-25": {
+      "text": "Solomon orders the living child to be cut in two",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.3.26-28": {
+      "text": "Solomon gives the baby to its mother, and Israel honors him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.1-4": {
+      "text": "The names of Solomon’s chief officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.5-6": {
+      "text": "More names of Solomon’s officials and their duties",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.7-10": {
+      "text": "Solomon’s twelve governors provide food for the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.11-14": {
+      "text": "The names of more governors and the places they rule",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.15-17": {
+      "text": "Three more governors, and two marry Solomon’s daughters",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Only one governor in these verses married a daughter of Solomon.",
+        "suggestion": "Three more governors rule in Naphtali, Asher and Issachar"
+      }
+    },
+    "1KI.4.18-19": {
+      "text": "The last governors, including one in Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.20-23": {
+      "text": "The people are happy, and Solomon rules many kingdoms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.24-25": {
+      "text": "Solomon rules in peace, and the people live safely",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.26-28": {
+      "text": "Solomon’s horses, and the governors supply food each month",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.29-31": {
+      "text": "God gives Solomon great wisdom, and his fame spreads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.4.32-34": {
+      "text": "Solomon speaks proverbs and songs, and people come to listen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.1-3": {
+      "text": "Hiram sends envoys, and Solomon explains why David did not build",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 64 characters, which exceeds the 60-character limit.",
+        "suggestion": "Solomon explains to Hiram why David could not build"
+      }
+    },
+    "1KI.5.4-5": {
+      "text": "Solomon tells Hiram he plans to build the Lord’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.6-6": {
+      "text": "Solomon asks Hiram to have cedars cut in Lebanon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.7-8": {
+      "text": "Hiram rejoices and agrees to send cedar and cypress",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.9-9": {
+      "text": "Hiram will float the logs by sea if Solomon sends food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.10-12": {
+      "text": "Hiram and Solomon exchange timber for food and make a treaty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.13-14": {
+      "text": "Solomon sends 30,000 forced workers to Lebanon in shifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.15-16": {
+      "text": "Solomon had many workers and foremen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.5.17-18": {
+      "text": "Builders cut large stones for the temple foundation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.1-2": {
+      "text": "Solomon begins to build the LORD’s temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.3-4": {
+      "text": "Solomon builds the temple porch and windows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.5-6": {
+      "text": "Solomon builds side rooms around the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.7-8": {
+      "text": "The temple is built with stones cut at the quarry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft only mentions the stones in verse 7 and leaves out the entrance and stairway described in verse 8.",
+        "suggestion": "Quarried stones are used, and stairs lead to upper floors"
+      }
+    },
+    "1KI.6.9-10": {
+      "text": "Solomon finishes the temple roof and side rooms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.14-15": {
+      "text": "Solomon lines the temple walls with cedar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.16-18": {
+      "text": "Solomon makes the Most Holy Place inside the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.19-20": {
+      "text": "Solomon prepares the inner room for the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.21-22": {
+      "text": "Solomon covers the temple interior with gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.23-26": {
+      "text": "Solomon makes two large cherubim of olive wood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.27-28": {
+      "text": "Solomon places the gold cherubim in the inner room",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.29-30": {
+      "text": "Solomon carves the walls and covers the floor with gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.31-32": {
+      "text": "Solomon makes carved olive wood doors for the inner room",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.33-35": {
+      "text": "Solomon makes carved doors for the temple entrance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.36-36": {
+      "text": "Solomon builds the inner courtyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.6.37-38": {
+      "text": "Solomon finishes the temple in seven years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.1-2": {
+      "text": "Solomon builds the House of the Forest of Lebanon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.3-5": {
+      "text": "The House of the Forest has cedar roof and windows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.6-6": {
+      "text": "Solomon builds a colonnade with a portico",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.7-7": {
+      "text": "Solomon builds the Hall of Justice for judging",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.8-8": {
+      "text": "Solomon builds houses for himself and Pharaoh’s daughter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.9-10": {
+      "text": "Solomon uses large costly stones for the buildings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.11-12": {
+      "text": "Stones and cedar beams are used for the courtyards",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.13-14": {
+      "text": "Solomon brings Huram, a skilled bronze worker, from Tyre",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.15-17": {
+      "text": "Huram casts two bronze pillars with capitals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.18-19": {
+      "text": "Huram decorates the capitals with pomegranates and lilies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.20-22": {
+      "text": "Huram sets up the pillars Jachin and Boaz",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.23-24": {
+      "text": "Huram makes the large bronze Sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.25-26": {
+      "text": "The Sea stands on twelve bronze oxen",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.27-29": {
+      "text": "Huram makes ten movable bronze stands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.30-31": {
+      "text": "The stands have bronze wheels, axles, and basins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.32-33": {
+      "text": "The stand wheels are made like chariot wheels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.34-35": {
+      "text": "Each stand has four handles and a circular band",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.36-37": {
+      "text": "Huram engraves designs on the ten bronze stands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.40-41": {
+      "text": "Huram finishes the pillars and other bronze work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.42-43": {
+      "text": "The bronze pomegranates, stands and basins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence describing an action.",
+        "suggestion": "Huram makes the pomegranates, stands, and basins"
+      }
+    },
+    "1KI.7.44-45": {
+      "text": "The Sea, the twelve oxen and the bronze articles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a noun phrase rather than a full sentence describing an action.",
+        "suggestion": "Huram makes the bronze Sea and other articles"
+      }
+    },
+    "1KI.7.46-47": {
+      "text": "Solomon casts the bronze articles and does not weigh them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.48-49": {
+      "text": "Solomon makes the gold furnishings for the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.50-50": {
+      "text": "Solomon makes gold basins, bowls and hinges",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.7.51-51": {
+      "text": "Solomon places David’s gifts in the temple treasuries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.1-2": {
+      "text": "Solomon gathers Israel’s leaders to move the ark",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.3-5": {
+      "text": "The priests carry the ark up and Israel offers sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.6-8": {
+      "text": "The priests place the ark in the Most Holy Place",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.9-11": {
+      "text": "The cloud of the LORD’s glory fills the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.12-13": {
+      "text": "Solomon says he has built a house for the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.14-16": {
+      "text": "Solomon blesses Israel and praises the LORD’s promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.17-19": {
+      "text": "Solomon says David’s son will build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.20-21": {
+      "text": "Solomon says the LORD has kept his promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.22-24": {
+      "text": "Solomon praises the LORD for keeping his promise to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.25-26": {
+      "text": "Solomon asks the LORD to keep his promise to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.27-28": {
+      "text": "Solomon asks the LORD to hear his prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.29-30": {
+      "text": "Solomon asks the LORD to hear prayers toward the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.31-32": {
+      "text": "Solomon prays about a man who must take an oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.33-34": {
+      "text": "Solomon prays for Israel when enemies defeat them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.35-36": {
+      "text": "Solomon prays for Israel when there is no rain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.37-38": {
+      "text": "Solomon prays for Israel in famine, plague and siege",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.39-40": {
+      "text": "Solomon asks the LORD to forgive and repay each person",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.41-43": {
+      "text": "Solomon prays for foreigners who pray toward the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.44-45": {
+      "text": "Solomon prays for Israel when the people go to war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.46-47": {
+      "text": "Solomon prays for Israel when captives repent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.48-48": {
+      "text": "Solomon prays for captives who return to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.49-50": {
+      "text": "Solomon asks the LORD to forgive and show mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.51-53": {
+      "text": "Solomon reminds the LORD that Israel is his people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.54-56": {
+      "text": "Solomon blesses Israel and praises the LORD’s promises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.57-58": {
+      "text": "Solomon asks the LORD to be with Israel and guide them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.59-61": {
+      "text": "Solomon urges Israel to be fully devoted to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.62-63": {
+      "text": "Solomon and Israel offer sacrifices to dedicate the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.64-64": {
+      "text": "Solomon offers sacrifices in the courtyard of the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.8.65-66": {
+      "text": "Solomon and Israel keep a feast for fourteen days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.1-2": {
+      "text": "The LORD appears to Solomon a second time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.3-3": {
+      "text": "The LORD says he has made the temple holy forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.4-5": {
+      "text": "The LORD promises Solomon a lasting throne if he obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.6-7": {
+      "text": "The LORD warns that Israel will lose the land if it worships other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 71 characters, the draft exceeds the 60-character limit.",
+        "suggestion": "The LORD warns Israel against worshiping other gods"
+      }
+    },
+    "1KI.9.8-9": {
+      "text": "The LORD says people will see why the temple was ruined",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.10-11": {
+      "text": "Solomon gives twenty towns to Hiram king of Tyre",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.12-14": {
+      "text": "Hiram is not pleased with the towns Solomon gave him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.15-16": {
+      "text": "Solomon uses forced labor to build many places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.17-19": {
+      "text": "Solomon rebuilds Gezer and other cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.20-21": {
+      "text": "Solomon makes the people left in the land forced laborers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.22-22": {
+      "text": "Solomon does not make any Israelites slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.23-23": {
+      "text": "Solomon has 550 supervisors over the workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.9.24-24": {
+      "text": "Solomon builds the terraces after his wife moves to her palace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 62 characters, the draft exceeds the 60-character limit.",
+        "suggestion": "Solomon builds the terraces after Pharaoh’s daughter moves"
+      }
+    },
+    "1KI.9.25-25": {
+      "text": "Solomon offers sacrifices three times a year and finishes the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 68 characters, the draft exceeds the 60-character limit.",
+        "suggestion": "Solomon offers sacrifices and finishes the temple"
+      }
+    },
+    "1KI.9.26-28": {
+      "text": "Solomon builds a fleet and brings gold from Ophir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.1-2": {
+      "text": "The queen of Sheba comes to Jerusalem to test Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.3-5": {
+      "text": "Solomon answers her questions and she is amazed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The draft uses \"her\" and \"she\" without naming the queen of Sheba, so it is unclear on its own in a list.",
+        "suggestion": "The queen of Sheba is amazed by Solomon’s wisdom"
+      }
+    },
+    "1KI.10.6-7": {
+      "text": "The queen of Sheba says Solomon is greater than the report",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.8-9": {
+      "text": "The queen of Sheba praises the LORD for making Solomon king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.10-10": {
+      "text": "The queen of Sheba gives Solomon gold, spices and jewels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.11-12": {
+      "text": "Hiram’s fleet brings almug wood and jewels from Ophir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.13-13": {
+      "text": "Solomon gives the queen of Sheba gifts and she goes home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.14-15": {
+      "text": "Solomon receives a great weight of gold each year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.16-17": {
+      "text": "Solomon makes gold shields for the House of the Forest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.18-20": {
+      "text": "Solomon makes a great throne of ivory and gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.21-22": {
+      "text": "Solomon’s cups and utensils are gold, and ships bring riches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.23-25": {
+      "text": "Solomon is greater than all kings, and visitors bring gifts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.26-27": {
+      "text": "Solomon gathers chariots and horses and makes silver common",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.10.28-29": {
+      "text": "Solomon’s men buy horses and chariots and sell them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.1-2": {
+      "text": "Solomon loves many foreign women the LORD had forbidden",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.3-4": {
+      "text": "Solomon’s many wives turn his heart to other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.5-6": {
+      "text": "Solomon follows other gods and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.7-8": {
+      "text": "Solomon builds high places for the gods of his wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.9-10": {
+      "text": "The LORD is angry with Solomon for following other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.11-13": {
+      "text": "God tells Solomon he will take the kingdom from Solomon’s son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.14-17": {
+      "text": "God raises up Hadad the Edomite against Solomon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.18-19": {
+      "text": "Hadad goes to Egypt and marries the queen’s sister",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.20-22": {
+      "text": "Hadad asks Pharaoh to let him return to Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.26-27": {
+      "text": "Jeroboam, Solomon’s servant, rebels against the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.28-30": {
+      "text": "Ahijah tears a new cloak into twelve pieces",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.31-33": {
+      "text": "Ahijah tells Jeroboam he will rule ten tribes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.34-36": {
+      "text": "God will leave one tribe to Solomon’s son for David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.37-39": {
+      "text": "God promises Jeroboam a lasting dynasty if he obeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.11.40-40": {
+      "text": "Solomon tries to kill Jeroboam, who flees to Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.1-2": {
+      "text": "Rehoboam goes to Shechem to be made king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.3-5": {
+      "text": "The people ask Rehoboam to lighten their heavy work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.6-7": {
+      "text": "The elders advise Rehoboam to serve the people kindly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.8-9": {
+      "text": "Rehoboam rejects the elders and asks the young men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.10-11": {
+      "text": "The young men advise Rehoboam to answer harshly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.12-14": {
+      "text": "Rehoboam answers the people harshly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.15-15": {
+      "text": "Rehoboam’s refusal fulfills the LORD’s word to Jeroboam",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.16-17": {
+      "text": "The Israelites reject David’s house and go home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.18-19": {
+      "text": "Israel stones Adoram and Rehoboam flees to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.20-20": {
+      "text": "Israel makes Jeroboam king; only Judah follows David’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.21-21": {
+      "text": "Rehoboam gathers 180,000 warriors to fight Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.22-24": {
+      "text": "God tells Rehoboam’s men not to fight, and they go home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.25-27": {
+      "text": "Jeroboam fears the people will return to Rehoboam",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.28-30": {
+      "text": "Jeroboam makes two golden calves for the people to worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.31-32": {
+      "text": "Jeroboam appoints non-Levite priests and a feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.12.33-33": {
+      "text": "Jeroboam offers sacrifices at the altar in Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.1-3": {
+      "text": "A man of God speaks against the altar at Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.4-5": {
+      "text": "Jeroboam’s hand withers and the altar splits apart",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.6-7": {
+      "text": "The man of God prays and the king’s hand is healed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.8-10": {
+      "text": "The man of God refuses the king’s offer and leaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.11-13": {
+      "text": "An old prophet in Bethel goes after the man of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.14-17": {
+      "text": "The old prophet asks the man of God to eat with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.18-19": {
+      "text": "The old prophet lies, and the man of God goes with him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.20-22": {
+      "text": "God tells the man of God he will not reach his tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.23-25": {
+      "text": "A lion kills the man of God on the road",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.26-28": {
+      "text": "The old prophet finds the body beside the lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.29-30": {
+      "text": "The old prophet buries the man of God in his tomb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.31-32": {
+      "text": "The old prophet asks to be buried by the man of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.13.33-34": {
+      "text": "Jeroboam keeps appointing priests for the high places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.1-3": {
+      "text": "Jeroboam sends his wife to ask Ahijah about his sick son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.4-5": {
+      "text": "God warns old Ahijah that Jeroboam’s wife is coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.6-8": {
+      "text": "Ahijah says Jeroboam was not like David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only fits verse 8 and leaves out Ahijah identifying Jeroboam’s disguised wife with bad news in verse 6.",
+        "suggestion": "Ahijah recognizes Jeroboam’s wife and gives her bad news"
+      }
+    },
+    "1KI.14.9-10": {
+      "text": "God will bring disaster on Jeroboam’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.11-13": {
+      "text": "Ahijah says Jeroboam’s son will die and be buried",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.14-16": {
+      "text": "God will punish Israel for Jeroboam’s sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.17-18": {
+      "text": "Jeroboam’s son dies as Ahijah said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.21-22": {
+      "text": "Rehoboam rules Judah, and Judah does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.23-24": {
+      "text": "Judah builds high places and copies evil customs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.25-26": {
+      "text": "King Shishak of Egypt takes treasures from Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.27-28": {
+      "text": "Rehoboam makes bronze shields to replace the gold ones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.14.29-31": {
+      "text": "Rehoboam dies and his son Abijam becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.1-3": {
+      "text": "Abijam becomes king of Judah and sins like his father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.4-6": {
+      "text": "God keeps David’s family on the throne in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.7-8": {
+      "text": "Abijam dies and his son Asa becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.9-11": {
+      "text": "Asa becomes king of Judah and does what is right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.12-13": {
+      "text": "Asa removes idols and his grandmother’s Asherah pole",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.14-15": {
+      "text": "Asa serves the LORD fully and brings gifts to the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.16-17": {
+      "text": "Baasha of Israel fortifies Ramah against Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.18-19": {
+      "text": "Asa sends silver and gold to Ben-hadad for help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.20-22": {
+      "text": "Ben-hadad attacks Israel, and Asa takes Ramah’s stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.25-26": {
+      "text": "Nadab becomes king of Israel and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.27-28": {
+      "text": "Baasha kills Nadab and becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.29-30": {
+      "text": "Baasha kills all Jeroboam’s family, as God said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.15.31-32": {
+      "text": "War continues between Asa and Baasha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.1-2": {
+      "text": "God accuses Baasha through Jehu of sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.3-4": {
+      "text": "God says he will destroy Baasha and his family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.5-6": {
+      "text": "Baasha dies and his son Elah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.7-7": {
+      "text": "God’s word through Jehu explains why Baasha is punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.8-10": {
+      "text": "Zimri kills King Elah and becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.11-13": {
+      "text": "Zimri kills all of Baasha’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.14-14": {
+      "text": "The rest of Elah’s acts are in the royal records",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.15-17": {
+      "text": "Zimri reigns seven days; Israel makes Omri king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.18-20": {
+      "text": "Zimri burns the palace down and dies in it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.21-22": {
+      "text": "Israel is divided, and Omri defeats Tibni",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.23-24": {
+      "text": "Omri becomes king and builds the city of Samaria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.25-26": {
+      "text": "Omri does more evil than all kings before him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.27-28": {
+      "text": "Omri dies and his son Ahab becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.29-30": {
+      "text": "Ahab becomes king and does great evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.31-33": {
+      "text": "Ahab marries Jezebel and worships Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.16.34-34": {
+      "text": "Hiel rebuilds Jericho and his sons die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.1-1": {
+      "text": "Elijah tells Ahab that no rain will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.2-4": {
+      "text": "God tells Elijah to hide by the Brook of Cherith",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.5-7": {
+      "text": "Ravens feed Elijah until the brook dries up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.8-10": {
+      "text": "God sends Elijah to a widow in Zarephath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.11-13": {
+      "text": "Elijah asks the widow to make him bread first",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.14-16": {
+      "text": "The widow’s flour and oil do not run out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.17-18": {
+      "text": "The widow’s son dies and she blames Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.19-21": {
+      "text": "Elijah prays that the boy will live again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.17.22-24": {
+      "text": "God restores the boy’s life, and the widow believes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.1-2": {
+      "text": "God sends Elijah to Ahab in the third year of drought",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.3-4": {
+      "text": "Ahab calls Obadiah, who hid the LORD’s prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.5-6": {
+      "text": "Ahab and Obadiah search the land for grass",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.7-8": {
+      "text": "Elijah meets Obadiah and tells him to call Ahab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.9-11": {
+      "text": "Obadiah fears Ahab will kill him for finding Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Obadiah fears being killed for reporting Elijah to Ahab, not for finding him.",
+        "suggestion": "Obadiah fears telling Ahab that Elijah is here"
+      }
+    },
+    "1KI.18.12-13": {
+      "text": "Obadiah says he has served the LORD and hid prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.14-15": {
+      "text": "Elijah promises Obadiah to meet Ahab today",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.16-17": {
+      "text": "Ahab meets Elijah and calls him a troubler",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.18-19": {
+      "text": "Elijah tells Ahab to gather Israel and the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.20-21": {
+      "text": "Elijah asks the people to choose the LORD or Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.22-24": {
+      "text": "Elijah proposes a test: the God who answers by fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.25-26": {
+      "text": "The prophets of Baal call on Baal, but no one answers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.27-29": {
+      "text": "Elijah mocks Baal’s prophets, but there is no answer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.30-32": {
+      "text": "Elijah repairs the altar of the LORD with twelve stones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.33-35": {
+      "text": "Elijah has water poured on the offering and wood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.36-37": {
+      "text": "Elijah prays that the people will know the LORD is God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.38-40": {
+      "text": "Fire from the LORD falls and Baal’s prophets are killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.41-42": {
+      "text": "Elijah tells Ahab rain is coming, then bows on Carmel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.43-44": {
+      "text": "Elijah’s servant sees a small cloud over the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.18.45-46": {
+      "text": "Heavy rain falls and Elijah runs ahead of Ahab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.1-3": {
+      "text": "Jezebel threatens Elijah, and he runs away in fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.4-6": {
+      "text": "Elijah asks to die, and an angel gives him food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.7-8": {
+      "text": "Elijah eats and walks forty days to Horeb",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.9-10": {
+      "text": "Elijah tells the LORD he is the only prophet left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.11-12": {
+      "text": "The LORD comes to Elijah in a still, small voice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.13-14": {
+      "text": "Elijah again says he is the only prophet left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.15-16": {
+      "text": "The LORD tells Elijah to anoint Hazael, Jehu and Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.17-18": {
+      "text": "Seven thousand in Israel have not bowed to Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only verse 18 and leaves out the judgment described in verse 17.",
+        "suggestion": "The LORD promises judgment but spares seven thousand"
+      }
+    },
+    "1KI.19.19-20": {
+      "text": "Elijah throws his cloak around Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.19.21-21": {
+      "text": "Elisha cooks his oxen and follows Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.1-3": {
+      "text": "Ben-hadad besieges Samaria and demands Ahab’s wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.4-6": {
+      "text": "Ben-hadad says he will search Ahab’s palace tomorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.7-8": {
+      "text": "The elders tell Ahab not to accept Ben-hadad’s terms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.9-10": {
+      "text": "Ahab refuses, and Ben-hadad threatens Samaria again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.11-12": {
+      "text": "Ahab tells Ben-hadad not to boast too soon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.13-15": {
+      "text": "A prophet tells Ahab the LORD will give him victory",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.16-17": {
+      "text": "Ahab’s men march out while Ben-hadad is drinking",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.18-19": {
+      "text": "Ben-hadad orders his men to take the Israelites alive",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.20-21": {
+      "text": "Israel defeats the Arameans, and Ben-hadad escapes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.22-23": {
+      "text": "A prophet warns Ahab that Aram will attack in spring",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.24-25": {
+      "text": "Ben-hadad plans a new army to fight on the plain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.26-27": {
+      "text": "Aram and Israel gather for battle at Aphek",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.28-28": {
+      "text": "A man of God promises Ahab victory over the Arameans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.29-30": {
+      "text": "Israel kills many Arameans, and Ben-hadad hides",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.31-32": {
+      "text": "Ben-hadad’s servants beg Ahab for mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.33-34": {
+      "text": "Ahab makes a treaty with Ben-hadad and lets him go",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.35-36": {
+      "text": "A man refuses to strike a prophet and a lion kills him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.37-38": {
+      "text": "Another man strikes the prophet, who disguises himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.39-40": {
+      "text": "The prophet tells Ahab a story about a lost prisoner",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.20.41-43": {
+      "text": "The prophet tells Ahab he will lose his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.1-2": {
+      "text": "Ahab asks Naboth for his vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.3-4": {
+      "text": "Naboth refuses, and Ahab is sullen and angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.5-7": {
+      "text": "Jezebel tells Ahab she will get the vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.8-10": {
+      "text": "Jezebel writes letters to have Naboth killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.11-14": {
+      "text": "The elders do as Jezebel says and Naboth is killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.15-16": {
+      "text": "Ahab takes Naboth’s vineyard after Naboth dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.17-18": {
+      "text": "The LORD sends Elijah to meet Ahab in the vineyard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.19-20": {
+      "text": "Elijah says Ahab murdered Naboth and will die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.21-22": {
+      "text": "The LORD will end Ahab’s family because of his sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.23-24": {
+      "text": "The LORD says dogs will eat Jezebel and Ahab’s people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.25-26": {
+      "text": "Ahab did great evil, urged on by Jezebel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.21.27-29": {
+      "text": "Ahab humbles himself, and the LORD delays the disaster",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.1-2": {
+      "text": "Jehoshaphat visits Ahab after three years of peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.3-4": {
+      "text": "Ahab asks Jehoshaphat to fight for Ramoth-gilead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.5-6": {
+      "text": "Ahab’s 400 prophets say he should go to war",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.7-9": {
+      "text": "Jehoshaphat asks for a prophet; Ahab names Micaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.10-12": {
+      "text": "Zedekiah and the prophets say Ahab will win",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.13-15": {
+      "text": "Micaiah answers Ahab as the other prophets did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.16-17": {
+      "text": "Micaiah sees Israel scattered like sheep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.18-20": {
+      "text": "Micaiah sees the LORD asking who will entice Ahab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.21-23": {
+      "text": "Micaiah says a lying spirit is in Ahab’s prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.24-25": {
+      "text": "Zedekiah strikes Micaiah in the face",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.26-28": {
+      "text": "Ahab jails Micaiah, who says Ahab will not return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.29-30": {
+      "text": "Ahab disguises himself for the battle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.31-33": {
+      "text": "The Aramean commanders chase Jehoshaphat by mistake",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.34-34": {
+      "text": "A man shoots an arrow and wounds Ahab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.35-36": {
+      "text": "Ahab dies in his chariot that evening",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.37-38": {
+      "text": "Ahab is buried, and dogs lick his blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.39-40": {
+      "text": "Ahab’s reign ends and his son Ahaziah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.41-42": {
+      "text": "Jehoshaphat becomes king of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.43-44": {
+      "text": "Jehoshaphat does right but high places remain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.45-47": {
+      "text": "Jehoshaphat removes shrine prostitutes from the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "1KI.22.48-50": {
+      "text": "Jehoshaphat’s ships are wrecked, and he dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "language": "en",
+  "book": "NAM",
+  "bible": "bsb-nam",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793916215-e8B7IRcpnetELSp1FuT6",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4600,
+      "completionTokens": 2588,
+      "reasoningTokens": 1823,
+      "cost": 0.03508,
+      "ms": 16912
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916232-QshvBlq8cu6p5fzA8Tk5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3675,
+      "completionTokens": 11282,
+      "reasoningTokens": 10502,
+      "cost": 0.04506375,
+      "ms": 74470
+    }
+  ],
+  "titles": {
+    "NAM.1.1-1": {
+      "text": "The book of Nahum’s vision against Nineveh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title should be a full sentence statement rather than a noun phrase.",
+        "suggestion": "Nahum records a vision against Nineveh"
+      }
+    },
+    "NAM.1.2-3": {
+      "text": "The LORD punishes his enemies but is slow to anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.4-5": {
+      "text": "The LORD’s power shakes the sea, mountains and earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.6-6": {
+      "text": "No one can stand before the LORD’s burning anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.7-8": {
+      "text": "The LORD protects those who trust him and ends Nineveh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.9-11": {
+      "text": "The LORD will end the evil plots of Nineveh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.12-13": {
+      "text": "The LORD promises to free Judah from Nineveh’s yoke",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.14-14": {
+      "text": "The LORD commands that Nineveh will have no descendants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.1.15-15": {
+      "text": "Good news for Judah: the wicked will be cut off",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.1-2": {
+      "text": "An enemy attacks Nineveh and the LORD restores Jacob",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.3-4": {
+      "text": "Red-clad warriors and chariots rush through the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.5-5": {
+      "text": "The attackers rush to Nineveh’s wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.6-7": {
+      "text": "The river gates open and Nineveh’s palace falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.8-10": {
+      "text": "Nineveh is emptied, plundered and laid waste",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.2.11-12": {
+      "text": "Where is Nineveh, the lions’ den full of prey?",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title should be a statement rather than a question.",
+        "suggestion": "Nineveh was like a lions’ den full of prey"
+      }
+    },
+    "NAM.2.13-13": {
+      "text": "The LORD declares that he is against Nineveh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.1-2": {
+      "text": "Woe to Nineveh, the city of blood and lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.3-4": {
+      "text": "Nineveh’s war and witchcraft leave many dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.5-7": {
+      "text": "The LORD will shame Nineveh before the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.8-9": {
+      "text": "Nineveh is no better than Thebes, which also fell",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses describe the strength of Thebes and do not mention that it fell.",
+        "suggestion": "Nineveh is no better than Thebes and her allies"
+      }
+    },
+    "NAM.3.10-11": {
+      "text": "Thebes went into exile, and Nineveh will also fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.12-13": {
+      "text": "Nineveh’s fortresses and troops will fall to enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.14-15": {
+      "text": "Nineveh’s defenses will not save it from fire and sword",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.16-17": {
+      "text": "Nineveh’s merchants and guards will vanish like locusts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NAM.3.18-19": {
+      "text": "Assyria’s king falls, and all who hear applaud",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

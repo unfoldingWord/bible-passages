@@ -1,0 +1,814 @@
+{
+  "language": "en",
+  "book": "EZR",
+  "bible": "bsb-ezr",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793911273-e1qGvWMAWSqAIHXWJDKr",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5280,
+      "completionTokens": 5014,
+      "reasoningTokens": 4139,
+      "cost": 0.0607,
+      "ms": 31961
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911305-gXGI6ca773j2GTV4N1ZR",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5924,
+      "completionTokens": 4555,
+      "reasoningTokens": 3728,
+      "cost": 0.057398,
+      "ms": 28834
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911334-Faw4ioiks37LAq8ybzzx",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6091,
+      "completionTokens": 896,
+      "reasoningTokens": 0,
+      "cost": 0.021142,
+      "ms": 5917
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911340-OpkPQhTgkGDYQW2zOb8i",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5666,
+      "completionTokens": 5728,
+      "reasoningTokens": 4873,
+      "cost": 0.068612,
+      "ms": 35236
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911375-vXYzBtjMjvz5OlclnwrE",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4439,
+      "completionTokens": 9386,
+      "reasoningTokens": 8638,
+      "cost": 0.03852675,
+      "ms": 68539
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911444-ad4bXWva3VsjT2KXB2YW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4674,
+      "completionTokens": 4764,
+      "reasoningTokens": 3973,
+      "cost": 0.0213705,
+      "ms": 30577
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911474-wcWiH93ZatKfOsct0ccW",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4918,
+      "completionTokens": 6308,
+      "reasoningTokens": 5508,
+      "cost": 0.0273435,
+      "ms": 36095
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911510-GblqKEh6syBXNAqelWJi",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4591,
+      "completionTokens": 8604,
+      "reasoningTokens": 7533,
+      "cost": 0.03570825,
+      "ms": 52939
+    }
+  ],
+  "titles": {
+    "EZR.1.1-2": {
+      "text": "God moves King Cyrus to send out a proclamation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.1.3-4": {
+      "text": "Cyrus invites God’s people to go and build the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.1.5-6": {
+      "text": "Many people prepare to go and rebuild the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.1.7-8": {
+      "text": "Cyrus brings out the temple articles for Sheshbazzar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.1.9-11": {
+      "text": "Sheshbazzar carries 5,400 articles to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.1-2": {
+      "text": "Zerubbabel and others lead the exiles back to Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.3-6": {
+      "text": "The families of Parosh, Shephatiah, Arah and Pahath-moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.7-10": {
+      "text": "The families of Elam, Zattu, Zaccai and Bani",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.11-14": {
+      "text": "The families of Bebai, Azgad, Adonikam and Bigvai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.15-18": {
+      "text": "The families of Adin, Ater, Bezai and Jorah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.19-22": {
+      "text": "Hashum and Gibbar families; men of Bethlehem and Netophah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.23-26": {
+      "text": "Men of Anathoth, Kiriath-jearim, Ramah and other towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.27-30": {
+      "text": "People of Michmash, Bethel, Ai, Nebo and Magbish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.31-33": {
+      "text": "People of Elam, Harim, Lod, Hadid and Ono",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.34-35": {
+      "text": "People of Jericho and Senaah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.36-39": {
+      "text": "The four families of priests who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.40-42": {
+      "text": "Levites, singers and gatekeepers who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.43-46": {
+      "text": "Temple servant families from Ziha to Hanan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.47-50": {
+      "text": "More temple servant families, from Giddel to Nephusim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.51-54": {
+      "text": "More temple servant families, from Bakbuk to Hatipha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.55-58": {
+      "text": "Families of Solomon’s servants; total of 392 servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.59-60": {
+      "text": "Some families cannot prove Israelite descent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.61-63": {
+      "text": "Some priests cannot find family records and are excluded",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.64-65": {
+      "text": "The whole group numbers 42,360, with servants and singers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.66-67": {
+      "text": "The returning exiles have 736 horses and other animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.68-69": {
+      "text": "Family heads give gold, silver and garments for the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.2.70-70": {
+      "text": "Priests, Levites and other Israelites settle in towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.3.1-2": {
+      "text": "Jeshua and Zerubbabel begin to build the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.3.3-5": {
+      "text": "The Israelites set up the altar and offer sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.3.6-7": {
+      "text": "The Israelites buy cedar logs for the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions the cedar logs from verse 7 but misses the burnt offerings in verse 6.",
+        "suggestion": "The Israelites offer sacrifices and buy cedar logs"
+      }
+    },
+    "EZR.3.8-9": {
+      "text": "Levites are appointed to supervise the temple work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.3.10-11": {
+      "text": "Priests and Levites praise God for the new foundation",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.3.12-13": {
+      "text": "Older people weep while others shout for joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.1-2": {
+      "text": "Enemies of Judah ask to join in building the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.3-3": {
+      "text": "Zerubbabel and Jeshua refuse help with the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.4-5": {
+      "text": "The people of the land discourage the Jews from building",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.6-6": {
+      "text": "An accusation is made against Judah and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.7-8": {
+      "text": "Rehum and Shimshai write against Jerusalem to the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.9-10": {
+      "text": "A letter comes from Rehum, Shimshai and other officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.11-12": {
+      "text": "The letter says the Jews are rebuilding a wicked city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.13-13": {
+      "text": "The letter warns that the king will lose tax money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.14-16": {
+      "text": "The officials ask the king to search the old records",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.17-19": {
+      "text": "Artaxerxes replies that a search found the city rebelled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.20-22": {
+      "text": "Artaxerxes orders the men to stop rebuilding the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.4.23-24": {
+      "text": "The officials force the Jews to stop building the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.1-2": {
+      "text": "Haggai and Zechariah help the Jews begin building again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.3-5": {
+      "text": "Tattenai asks the Jews who authorized the building",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.6-7": {
+      "text": "Tattenai writes a letter to King Darius",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.8-10": {
+      "text": "Tattenai reports that the Jews are building the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.11-11": {
+      "text": "The elders say the Jews serve the God of heaven and earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.12-13": {
+      "text": "The Jews explain the exile and Cyrus’s decree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.14-15": {
+      "text": "Cyrus returned the temple articles to Sheshbazzar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.16-16": {
+      "text": "Sheshbazzar laid the foundation and building continues",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.5.17-17": {
+      "text": "Tattenai asks the king to search the records in Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.1-2": {
+      "text": "Darius orders a search and a scroll is found",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.3-5": {
+      "text": "Cyrus ordered the temple rebuilt and its articles returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.6-7": {
+      "text": "Darius tells Tattenai to leave the temple work alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.8-10": {
+      "text": "Darius orders that the Jews be given money and offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.11-12": {
+      "text": "Darius warns that anyone who changes his decree will be punished",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The draft has 64 characters, which exceeds the limit of 60.",
+        "suggestion": "Darius threatens anyone who interferes with his decree"
+      }
+    },
+    "EZR.6.19-20": {
+      "text": "The exiles keep the Passover and the Levites kill the lambs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.6.21-22": {
+      "text": "The Israelites eat the Passover and keep the Feast with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.1-5": {
+      "text": "Ezra’s family line goes back to Aaron the chief priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.6-7": {
+      "text": "Ezra, a skilled scribe, goes up from Babylon to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.8-10": {
+      "text": "Ezra arrives in Jerusalem and gives himself to God’s Law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.11-13": {
+      "text": "Artaxerxes lets willing Israelites go to Jerusalem with Ezra",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.14-16": {
+      "text": "Artaxerxes sends Ezra with silver and gold for God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.17-18": {
+      "text": "Artaxerxes tells Ezra to buy offerings with the money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.19-20": {
+      "text": "Artaxerxes tells Ezra to deliver the articles to God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.21-23": {
+      "text": "Artaxerxes orders the treasurers to give Ezra what he needs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.24-24": {
+      "text": "Artaxerxes forbids taxes on the temple workers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.7.25-26": {
+      "text": "Artaxerxes tells Ezra to appoint judges and teach the law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.1-3": {
+      "text": "The family heads who return with Ezra are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.4-7": {
+      "text": "More family heads and their men who return are listed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.8-11": {
+      "text": "The list of family heads and their men continues",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.12-14": {
+      "text": "The list of the families who return with Ezra ends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.15-16": {
+      "text": "Ezra finds no Levites and calls for the leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.17-17": {
+      "text": "Ezra sends leaders to Iddo to ask for ministers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.18-20": {
+      "text": "Levites and temple servants come to Ezra",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.24-25": {
+      "text": "Ezra sets apart twelve priests to carry the offering",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.26-27": {
+      "text": "Ezra weighs out the silver, gold and articles to the priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.28-30": {
+      "text": "Ezra tells the priests to guard the holy offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.31-31": {
+      "text": "The group leaves the Ahava Canal and God protects them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.32-32": {
+      "text": "Ezra and the people arrive in Jerusalem and rest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.33-34": {
+      "text": "The silver, gold and articles are weighed in God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.8.35-36": {
+      "text": "The exiles offer sacrifices and give the king’s edicts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.1-2": {
+      "text": "Leaders tell Ezra that Israel has married foreign women",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.3-4": {
+      "text": "Ezra tears his clothes and sits in horror",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.5-6": {
+      "text": "Ezra kneels in prayer, ashamed of the people’s guilt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.7-7": {
+      "text": "Ezra says the people’s guilt has led to captivity",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.8-9": {
+      "text": "Ezra says God has shown grace and given new life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.10-12": {
+      "text": "Ezra says Israel broke God’s commands about marriage",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.13-14": {
+      "text": "Ezra fears God’s anger if people marry foreigners again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.9.15-15": {
+      "text": "Ezra says God is righteous and the people are guilty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.1-2": {
+      "text": "A large crowd weeps, and Shecaniah speaks of hope",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.3-4": {
+      "text": "Shecaniah urges Ezra to act and send away foreign wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.5-5": {
+      "text": "Ezra makes the leaders and all Israel take an oath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.6-6": {
+      "text": "Ezra mourns and fasts in Jehohanan’s room",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.7-8": {
+      "text": "A call goes out for all the exiles to gather in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.9-10": {
+      "text": "Ezra accuses the men of Judah of unfaithful marriages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.11-11": {
+      "text": "Ezra tells the men to confess and leave foreign wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.12-13": {
+      "text": "The assembly agrees but says the work needs more time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.14-15": {
+      "text": "The assembly asks leaders to handle the cases town by town",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.16-17": {
+      "text": "Ezra and the family heads investigate the marriages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.18-19": {
+      "text": "Priests pledge to send away foreign wives and bring a ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "EZR.10.20-22": {
+      "text": "Priests from the families of Immer, Harim and Pashhur",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Priests of Immer, Harim, and Pashhur had foreign wives"
+      }
+    },
+    "EZR.10.23-25": {
+      "text": "Guilty Levites, a singer, gatekeepers and men of Parosh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Levites and other Israelites had married foreign women"
+      }
+    },
+    "EZR.10.26-29": {
+      "text": "Guilty men from families of Elam, Zattu, Bebai and Bani",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Men from Elam, Zattu, Bebai, and Bani had foreign wives"
+      }
+    },
+    "EZR.10.30-32": {
+      "text": "Guilty men from the families of Pahath-moab and Harim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Men of Pahath-moab and Harim had married foreign women"
+      }
+    },
+    "EZR.10.33-36": {
+      "text": "Guilty men from the families of Hashum and Bani",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Men from Hashum and Bani had married foreign women"
+      }
+    },
+    "EZR.10.37-40": {
+      "text": "More guilty men from the families of Bani and Binnui",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "More men of Bani and Binnui had married foreign women"
+      }
+    },
+    "EZR.10.41-44": {
+      "text": "More guilty men from Nebo; all had foreign wives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title must be a full sentence.",
+        "suggestion": "Men from Nebo and others had married foreign women"
+      }
+    }
+  }
+}

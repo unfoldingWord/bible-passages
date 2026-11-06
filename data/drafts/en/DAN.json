@@ -1,0 +1,1181 @@
+{
+  "language": "en",
+  "book": "DAN",
+  "bible": "bsb-dan",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793914839-BJaVZqycqhBZzhLeohZ5",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6913,
+      "completionTokens": 4319,
+      "reasoningTokens": 3291,
+      "cost": 0.057016,
+      "ms": 27440
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914867-r6foDi3Er8bqenp8nM3f",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7310,
+      "completionTokens": 6827,
+      "reasoningTokens": 5758,
+      "cost": 0.08289,
+      "ms": 46950
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914914-i57tHKgr4Vsqk2xh2B8R",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6583,
+      "completionTokens": 5138,
+      "reasoningTokens": 4097,
+      "cost": 0.064546,
+      "ms": 31371
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914945-fMakER7MduFWevLDX4h2",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7021,
+      "completionTokens": 5492,
+      "reasoningTokens": 4450,
+      "cost": 0.068962,
+      "ms": 33246
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793914978-aGP54Eg1zO46YxnLD6N1",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6146,
+      "completionTokens": 4965,
+      "reasoningTokens": 4058,
+      "cost": 0.061942,
+      "ms": 35729
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915014-Y1GuMCOKjaNaEdvcDE4Z",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5597,
+      "completionTokens": 6474,
+      "reasoningTokens": 5515,
+      "cost": 0.02847525,
+      "ms": 40326
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915054-7p9ZrdbkDRYOzTjtclsU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5944,
+      "completionTokens": 9669,
+      "reasoningTokens": 8702,
+      "cost": 0.04071675,
+      "ms": 81857
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915136-cYPdqh9b2qKir6MHtfXZ",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5348,
+      "completionTokens": 6933,
+      "reasoningTokens": 6038,
+      "cost": 0.03000975,
+      "ms": 47660
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915184-k1eIsK2dx6hbA4JUBzhS",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5629,
+      "completionTokens": 3970,
+      "reasoningTokens": 3073,
+      "cost": 0.01910925,
+      "ms": 28109
+    },
+    {
+      "role": "check",
+      "id": "gen-1793915212-3RYqydbJ2V22B4TG303L",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5382,
+      "completionTokens": 16671,
+      "reasoningTokens": 15659,
+      "cost": 0.06655275,
+      "ms": 119223
+    }
+  ],
+  "titles": {
+    "DAN.1.1-2": {
+      "text": "Nebuchadnezzar takes Jehoiakim and temple items to Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses say Nebuchadnezzar took articles from the temple to Babylon, but not Jehoiakim.",
+        "suggestion": "Nebuchadnezzar besieges Jerusalem and takes temple items"
+      }
+    },
+    "DAN.1.3-5": {
+      "text": "The king orders young Israelites trained for service",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.6-7": {
+      "text": "Daniel and three friends receive new Babylonian names",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.8-10": {
+      "text": "Daniel asks not to eat the king’s food",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.11-13": {
+      "text": "Daniel asks the steward for a ten-day test",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.14-16": {
+      "text": "After ten days, Daniel and his friends look healthier",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.17-18": {
+      "text": "God gives the four young men wisdom and understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.1.19-21": {
+      "text": "The king finds the four young men wiser than all others",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.1-2": {
+      "text": "Nebuchadnezzar has troubling dreams and calls his wise men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.3-4": {
+      "text": "The astrologers ask the king to tell his dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.5-6": {
+      "text": "The king demands the dream and its meaning, or death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.7-9": {
+      "text": "The king says the astrologers are stalling for time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.10-11": {
+      "text": "The astrologers say no one can tell the king’s dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.12-13": {
+      "text": "The king orders all the wise men of Babylon killed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.14-16": {
+      "text": "Daniel asks the king for time to explain the dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.17-18": {
+      "text": "Daniel asks his friends to pray for mercy from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.19-20": {
+      "text": "God shows Daniel the mystery, and Daniel praises God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.21-22": {
+      "text": "Daniel says God changes times and reveals hidden things",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.23-23": {
+      "text": "Daniel thanks God for showing the king’s dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.24-24": {
+      "text": "Daniel asks Arioch not to kill the wise men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.25-26": {
+      "text": "Arioch brings Daniel to the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.27-28": {
+      "text": "Daniel says only God in heaven reveals mysteries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.29-30": {
+      "text": "Daniel says God has revealed the mystery to him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.31-33": {
+      "text": "Daniel describes the king’s dream of a great statue",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.34-35": {
+      "text": "A stone destroys the statue and fills the earth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.36-38": {
+      "text": "Daniel tells Nebuchadnezzar he is the head of gold",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.39-39": {
+      "text": "Two more kingdoms will rule after Nebuchadnezzar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.40-40": {
+      "text": "A fourth kingdom will be strong like iron",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.41-43": {
+      "text": "The fourth kingdom will be divided and partly brittle",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.44-45": {
+      "text": "God will set up a kingdom that never ends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.46-47": {
+      "text": "Nebuchadnezzar honors Daniel and praises Daniel’s God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.2.48-49": {
+      "text": "The king gives Daniel and his friends high positions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.1-2": {
+      "text": "Nebuchadnezzar builds a golden statue and calls officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.3-5": {
+      "text": "The herald commands all people to worship the statue",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.6-7": {
+      "text": "The people worship the statue to avoid the furnace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.8-10": {
+      "text": "Astrologers remind the king of his order to worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.11-12": {
+      "text": "Astrologers say three Jews refuse to worship the statue",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.13-14": {
+      "text": "Nebuchadnezzar angrily questions the three Jews",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.15-15": {
+      "text": "Nebuchadnezzar threatens the three Jews with the furnace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.16-18": {
+      "text": "The three men refuse to serve the king’s gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.19-20": {
+      "text": "Angry king orders the three men thrown into a hot furnace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain", "style"],
+        "why": "Nebuchadnezzar is not named, and omitting the article creates unnatural headline style.",
+        "suggestion": "Nebuchadnezzar orders the three men thrown into the furnace"
+      }
+    },
+    "DAN.3.21-23": {
+      "text": "Soldiers die as the three bound men fall into the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.24-25": {
+      "text": "Nebuchadnezzar sees four men walking unharmed in the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.26-27": {
+      "text": "The three men come out of the fire without harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.28-28": {
+      "text": "Nebuchadnezzar praises the God who saved his servants",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.3.29-30": {
+      "text": "The king orders respect for God and promotes the three men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.4-6": {
+      "text": "Nebuchadnezzar has a frightening dream and calls wise men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.7-9": {
+      "text": "Nebuchadnezzar asks Daniel to explain the dream",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.10-12": {
+      "text": "Nebuchadnezzar sees a huge tree that feeds all creatures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.13-14": {
+      "text": "A holy watcher from heaven orders the tree cut down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.15-16": {
+      "text": "The stump stays while a man lives like a beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.17-18": {
+      "text": "God rules all kingdoms; the king asks Daniel for meaning",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.19-19": {
+      "text": "Daniel is troubled, and the king comforts him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.20-22": {
+      "text": "Daniel says the king is the great tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.23-23": {
+      "text": "Daniel repeats the watcher’s order to cut down the tree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.24-25": {
+      "text": "Daniel says the king will live with the beasts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.26-27": {
+      "text": "Daniel urges the king to turn from sin and show mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.28-30": {
+      "text": "Nebuchadnezzar boasts about the Babylon he built",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.31-32": {
+      "text": "A voice from heaven says the king will lose his kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.33-33": {
+      "text": "Nebuchadnezzar is driven out and lives like an animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.34-34": {
+      "text": "Nebuchadnezzar regains his mind and praises the Most High",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.35-35": {
+      "text": "Nebuchadnezzar says God rules and no one can stop him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.4.36-37": {
+      "text": "Nebuchadnezzar gets his throne back and praises God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.1-2": {
+      "text": "Belshazzar uses the temple vessels at his feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.3-4": {
+      "text": "The king and guests drink wine and praise gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.5-6": {
+      "text": "A hand writes on the wall and the king is terrified",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.7-7": {
+      "text": "The king offers rewards to anyone who explains the writing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.8-9": {
+      "text": "The wise men cannot read the writing, so fear grows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.10-10": {
+      "text": "The queen comes in and tells the king not to be afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.11-12": {
+      "text": "The queen tells the king to call Daniel to explain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.13-14": {
+      "text": "Belshazzar speaks to Daniel about his wisdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.15-16": {
+      "text": "Belshazzar offers Daniel rewards to read the writing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.17-19": {
+      "text": "Daniel refuses gifts and speaks of Nebuchadnezzar’s power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.20-21": {
+      "text": "Nebuchadnezzar became proud and lived like a wild animal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.22-24": {
+      "text": "Daniel tells Belshazzar he did not honor God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.25-28": {
+      "text": "Daniel says God has ended Belshazzar’s reign",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.5.29-31": {
+      "text": "Daniel is honored and Belshazzar dies that night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.1-3": {
+      "text": "Darius appoints rulers and Daniel stands out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.4-5": {
+      "text": "Officials try to accuse Daniel but find no fault",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.6-7": {
+      "text": "Officials ask Darius to forbid prayer to any god but him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.8-9": {
+      "text": "Darius signs the decree that cannot be changed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.10-11": {
+      "text": "Daniel keeps praying to God and officials find him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.12-12": {
+      "text": "Officials remind Darius of his decree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.13-14": {
+      "text": "Officials accuse Daniel and Darius tries to save him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.15-15": {
+      "text": "Officials tell Darius the law cannot be changed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.16-16": {
+      "text": "Darius has Daniel thrown to the lions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.17-18": {
+      "text": "Daniel’s den is sealed and Darius cannot sleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.19-20": {
+      "text": "Darius hurries to the den and calls to Daniel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.21-22": {
+      "text": "Daniel says God shut the mouths of the lions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.23-23": {
+      "text": "Daniel is lifted out without any wounds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.24-24": {
+      "text": "Daniel’s accusers are thrown to the lions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.25-25": {
+      "text": "Darius writes a letter to all the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.26-27": {
+      "text": "Darius orders people to fear the God of Daniel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.6.28-28": {
+      "text": "Daniel prospers under Darius and Cyrus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.1-3": {
+      "text": "Daniel dreams of four beasts from the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.4-5": {
+      "text": "Daniel sees a lion-like beast and a bear-like beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.6-7": {
+      "text": "Daniel sees a leopard-like beast and a terrible beast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.8-8": {
+      "text": "Daniel sees a little horn that speaks proudly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.9-9": {
+      "text": "Daniel sees the Ancient of Days take his seat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.10-10": {
+      "text": "Daniel sees God’s court meet and the books opened",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.11-12": {
+      "text": "Daniel sees the beast destroyed in the fire",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.15-16": {
+      "text": "Daniel is afraid and asks what the visions mean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.17-18": {
+      "text": "Four kings will rise, but God’s people get the kingdom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.19-20": {
+      "text": "Daniel asks about the fourth beast and the horns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.21-22": {
+      "text": "The horn fights God’s people until God judges",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.23-24": {
+      "text": "The fourth beast is a kingdom with ten kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.25-26": {
+      "text": "A king will oppress God’s people, but God will judge him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.7.27-28": {
+      "text": "God’s people receive the kingdom; Daniel is troubled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.1-2": {
+      "text": "Daniel sees himself in Susa beside the Ulai Canal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.3-4": {
+      "text": "Daniel sees a powerful ram with two horns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.5-6": {
+      "text": "A goat with one horn rushes at the ram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.7-8": {
+      "text": "The goat destroys the ram, then its large horn breaks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.9-10": {
+      "text": "A little horn grows and attacks the host of heaven",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.11-12": {
+      "text": "The little horn opposes the Prince and removes sacrifice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.13-14": {
+      "text": "A holy one says the sanctuary will be restored",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.15-17": {
+      "text": "Gabriel comes to explain the vision to Daniel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.18-19": {
+      "text": "Gabriel helps Daniel stand and speaks of the end time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.20-21": {
+      "text": "The ram is Media and Persia; the goat is Greece",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.22-23": {
+      "text": "Four kingdoms come, then a proud king rises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.24-25": {
+      "text": "A strong king will destroy many but will be broken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.26-26": {
+      "text": "Gabriel tells Daniel to seal up the vision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.8.27-27": {
+      "text": "Daniel is ill and does not understand the vision",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.1-2": {
+      "text": "Daniel learns how long Jerusalem will be desolate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.3-4": {
+      "text": "Daniel begins to pray to God with fasting",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.5-6": {
+      "text": "Daniel confesses that Israel has sinned and rebelled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.7-8": {
+      "text": "Daniel says Israel is covered with shame for sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.9-11": {
+      "text": "Daniel says God is merciful, but Israel broke his law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.12-14": {
+      "text": "Daniel says God was right to bring disaster on Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.15-16": {
+      "text": "Daniel asks God to turn his anger from Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.17-19": {
+      "text": "Daniel asks God to hear and forgive Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.20-21": {
+      "text": "Gabriel comes to Daniel while Daniel prays",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.22-23": {
+      "text": "Gabriel has come to give Daniel understanding",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.24-25": {
+      "text": "Gabriel tells Daniel of seventy weeks for Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.26-26": {
+      "text": "The Messiah will be cut off and the city destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.9.27-27": {
+      "text": "A ruler makes a covenant, then stops the sacrifices",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.1-1": {
+      "text": "Daniel receives a true message about a great conflict",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.2-3": {
+      "text": "Daniel mourns and fasts for three weeks",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.4-6": {
+      "text": "Daniel sees a shining man by the Tigris river",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.7-9": {
+      "text": "Only Daniel sees the vision and loses his strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.10-11": {
+      "text": "A man touches Daniel and tells him to stand up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.12-13": {
+      "text": "The angel tells Daniel his prayer was heard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.14-15": {
+      "text": "The angel comes to explain the future to Daniel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.16-17": {
+      "text": "Daniel is weak and cannot speak to the angel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Daniel does speak to the angel after his lips are touched.",
+        "suggestion": "Daniel is touched and says he has no strength"
+      }
+    },
+    "DAN.10.18-19": {
+      "text": "The angel strengthens Daniel and tells him not to fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.10.20-21": {
+      "text": "The angel must fight the princes of Persia and Greece",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.1-2": {
+      "text": "The angel tells Daniel about the kings of Persia",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.3-4": {
+      "text": "A mighty king’s kingdom will be divided",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.5-6": {
+      "text": "The kings of South and North make an alliance that fails",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.7-9": {
+      "text": "A king from her family defeats the king of the North",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.10-10": {
+      "text": "The sons of the northern king gather a great army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.11-12": {
+      "text": "The king of the South defeats an army but will not triumph",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.13-13": {
+      "text": "The king of the North raises a larger army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.14-14": {
+      "text": "Many rise up against the king of the South",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.15-16": {
+      "text": "The king of the North captures a fortified city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.17-19": {
+      "text": "The king of the North’s plans fail and he falls",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.20-22": {
+      "text": "A despicable man takes the kingdom in a time of peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.23-24": {
+      "text": "The king acts deceitfully and takes rich provinces",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.25-27": {
+      "text": "The king of the North attacks the king of the South",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.28-28": {
+      "text": "The king of the North returns home with great wealth",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.29-30": {
+      "text": "Ships of Kittim turn the king of the North back",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.31-32": {
+      "text": "The king’s forces desecrate the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.33-35": {
+      "text": "The wise teach many and suffer for a time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.36-37": {
+      "text": "The king exalts himself above every god",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.38-39": {
+      "text": "The king honors a god of fortresses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.40-41": {
+      "text": "The king of the North invades many countries",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.42-43": {
+      "text": "The king gains power over Egypt and its riches",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.11.44-45": {
+      "text": "The king hears alarming news and meets his end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.1-2": {
+      "text": "Michael rises up; Daniel’s people will be delivered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.3-4": {
+      "text": "Daniel must seal the book until the end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.5-6": {
+      "text": "Daniel sees two others ask the man in linen how long",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "Only one of the two men asks the question, not both.",
+        "suggestion": "One of two men asks the man in linen how long it will be"
+      }
+    },
+    "DAN.12.7-7": {
+      "text": "The man in linen swears by God about the time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.8-9": {
+      "text": "Daniel asks about the outcome, but the words are sealed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.10-11": {
+      "text": "The wise will understand, but the wicked will not",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "DAN.12.12-13": {
+      "text": "Daniel will rest and receive his inheritance at the end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
