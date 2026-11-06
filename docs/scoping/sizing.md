@@ -1179,6 +1179,51 @@ OpenRouter spend of this work: $7.07442400, the five records. (Proverbs
 and Ecclesiastes, $1.54281900, are counted where they land; Ezekiel's two
 stopped runs cost $3.10883975.)
 
+## Measured: English segment titles, Proverbs and Ecclesiastes (#244, #258)
+
+Proverbs and Ecclesiastes were drafted and checked on 2026-11-05 with the
+Psalms group above: one plain run of the CLI per book, the same models, the
+runner and its library as at `3b4cc37` (the runs started from `f27c015`),
+and the prompt on main, `prompts/segment-titles.md` SHA-256
+`e3e08e032d32…`. `--max-cost` was PRO 1.80 and ECC 0.49. Both runs exited 0
+with outcome `done`, first time. They were held because three checker
+suggestions in them are over 60 characters (`PRO.19.26-27` 61, `ECC.1.1-3`
+61, `ECC.3.8-8` 62), which the drafts test then rejected. The maintainer
+chose to hold only shipped titles to 60 characters (#258); the test now
+does that, and the two records are copied unchanged to
+`data/drafts/en/<BOOK>.json` (`cmp`: no difference). No book was re-run.
+The counts below were made twice from the records, with `jq` and with
+Python, which gave the same values.
+
+| Book  | Drafted    | Agreed | Disagreed: criteria                                   | Gate failures    | Over 60 (longest) | Calls   | Cost        | Model time  |
+| ----- | ---------- | ------ | ----------------------------------------------------- | ---------------- | ----------------- | ------- | ----------- | ----------- |
+| PRO   | 442 of 442 | 319    | 123: `covers` 80, `style` 42, `accurate` 2, `plain` 2 | 6 (`length` 6)   | 6 (67)            | 13 + 13 | $1.28170350 | 1,207.237 s |
+| ECC   | 120 of 120 | 94     | 26: `style` 22, `covers` 3, `accurate` 1              | 19 (`length` 19) | 19 (85)           | 4 + 4   | $0.26111550 | 260.254 s   |
+| Total | 562        | 413    | 149                                                   | 25               | 25                | 17 + 17 | $1.54281900 | 1,467.491 s |
+
+Labels and sources: measured 2026-11-05 from the committed records. Every
+segment of both books shares its pericope, so all are drafted. Agreed:
+checker `agree`, all `ai-checked`. Criteria: a title can name more than
+one. Cost and model time: OpenRouter's billed `cost` and `ms` per call,
+summed, exact. Largest completion: draft 7,291 of 16,384 (45%, PRO); check
+22,432 of 32,768 (68%, PRO). No reply was cut off. `npm run build` puts the
+413 `ai-checked` titles in the tC Mobile title tables (PRO 319 of 442, ECC
+94 of 120).
+
+Observations from these runs (not trends):
+
+- **Proverbs has many disputes.** 123 of 442 (28%), 80 naming `covers`.
+  Why is not measured; the checker's reasons were not read.
+- **Ecclesiastes has many long titles.** 19 of 120 are over 60 (longest
+  85), all in its two draft calls that did not reason, and all disputed.
+  In both books, all 25 titles over 60 are in the 5 draft calls (of 17) that
+  used 0 reasoning tokens.
+
+No third check was run and no dispute data is written (ADR 0008); the 149
+disagreements stay `unreviewed`.
+
+OpenRouter spend of this work: $1.54281900, the two records.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

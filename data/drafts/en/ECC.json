@@ -1,0 +1,988 @@
+{
+  "language": "en",
+  "book": "ECC",
+  "bible": "bsb-ecc",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793912197-1gAOMR3YmzPmaN1HOKbI",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4919,
+      "completionTokens": 995,
+      "reasoningTokens": 0,
+      "cost": 0.019788,
+      "ms": 6512
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912204-tujDIPr1mwSwYvjcus6S",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4877,
+      "completionTokens": 859,
+      "reasoningTokens": 0,
+      "cost": 0.018344,
+      "ms": 6404
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912210-qgZZK1Qh59y0LwP3lvN4",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4820,
+      "completionTokens": 3116,
+      "reasoningTokens": 2315,
+      "cost": 0.0408,
+      "ms": 20390
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793912231-6vqjbPWvozQ1TEnmo6Jc",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4680,
+      "completionTokens": 6013,
+      "reasoningTokens": 5116,
+      "cost": 0.06949,
+      "ms": 44605
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912275-xt7AwV453Fs2TLwDBHNT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4244,
+      "completionTokens": 3662,
+      "reasoningTokens": 1996,
+      "cost": 0.0169155,
+      "ms": 23216
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912299-QLX6YFX9RcGQJIIYxzmd",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4207,
+      "completionTokens": 6665,
+      "reasoningTokens": 5718,
+      "cost": 0.028149,
+      "ms": 44493
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912343-7plH0nNIFDynzNs6kE67",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4092,
+      "completionTokens": 8409,
+      "reasoningTokens": 7606,
+      "cost": 0.03460275,
+      "ms": 51820
+    },
+    {
+      "role": "check",
+      "id": "gen-1793912395-bdo4Xk7Gfrq96UTtrPxA",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4050,
+      "completionTokens": 7997,
+      "reasoningTokens": 7035,
+      "cost": 0.03302625,
+      "ms": 62814
+    }
+  ],
+  "titles": {
+    "ECC.1.1-3": {
+      "text": "The Teacher says everything is futile and asks what work gains",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says everything is futile and asks what is gained"
+      }
+    },
+    "ECC.1.4-6": {
+      "text": "The Teacher says generations pass, but the earth, sun and wind repeat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 69 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says people pass away but the earth remains"
+      }
+    },
+    "ECC.1.7-8": {
+      "text": "The Teacher says rivers and all things are wearisome and never satisfy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 70 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says rivers flow and nothing ever satisfies"
+      }
+    },
+    "ECC.1.9-11": {
+      "text": "The Teacher says nothing is new and people are forgotten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.1.12-15": {
+      "text": "The Teacher, king in Jerusalem, finds all human work futile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.1.16-18": {
+      "text": "The Teacher learns that much wisdom brings much sorrow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.1-2": {
+      "text": "The Teacher tests pleasure and finds it futile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.3-3": {
+      "text": "The Teacher tries wine and folly to see what is worthwhile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.4-6": {
+      "text": "The Teacher builds houses, vineyards, gardens and reservoirs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.7-8": {
+      "text": "The Teacher gathers servants, flocks, silver, gold and singers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher gathers servants, flocks, gold and singers"
+      }
+    },
+    "ECC.2.9-10": {
+      "text": "The Teacher becomes great and denies himself no pleasure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.11-11": {
+      "text": "The Teacher sees that all his work gains nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.12-12": {
+      "text": "The Teacher turns to think about wisdom and folly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.13-14": {
+      "text": "The Teacher sees wisdom is better than folly, but both share one fate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 69 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher sees wisdom is better, but one fate awaits all"
+      }
+    },
+    "ECC.2.15-16": {
+      "text": "The Teacher sees that the wise and the fool will both die and be forgotten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 74 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher sees both the wise and the fool will die"
+      }
+    },
+    "ECC.2.17-17": {
+      "text": "The Teacher hates life because all work is futile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.18-18": {
+      "text": "The Teacher hates his work because he must leave it to another",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher hates his work since he must leave it behind"
+      }
+    },
+    "ECC.2.19-20": {
+      "text": "The Teacher despairs because an unknown man will take his work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 62 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher despairs over who will take over his work"
+      }
+    },
+    "ECC.2.21-23": {
+      "text": "The Teacher says leaving work to one who did not earn it is futile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 66 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says leaving work to another is futile"
+      }
+    },
+    "ECC.2.24-25": {
+      "text": "The Teacher says enjoying food and work is from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.2.26-26": {
+      "text": "The Teacher says God gives joy to the pleasing but not the sinner",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 65 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says God gives wisdom and joy to who pleases him"
+      }
+    },
+    "ECC.3.1-3": {
+      "text": "The Teacher says there is a time for every purpose, such as birth and death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 75 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says there is a time for every purpose"
+      }
+    },
+    "ECC.3.4-5": {
+      "text": "The Teacher lists times to weep, laugh, mourn and dance",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.3.6-7": {
+      "text": "The Teacher lists times to search, keep, tear, mend, be silent and speak",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 72 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher lists times to search, keep, tear and speak"
+      }
+    },
+    "ECC.3.8-8": {
+      "text": "The Teacher says there is a time to love, to hate, for war and for peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 72 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says there are times for love, hate, war and peace"
+      }
+    },
+    "ECC.3.9-10": {
+      "text": "The Teacher asks what work gains and notes the burden God gave people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 69 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher asks what work gains and sees God’s heavy burden"
+      }
+    },
+    "ECC.3.11-11": {
+      "text": "The Teacher says God made all things beautiful, but people cannot understand his work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 85 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says people cannot understand God’s work"
+      }
+    },
+    "ECC.3.12-13": {
+      "text": "The Teacher says people should rejoice, do good and enjoy their work as God’s gift",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 82 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says enjoying food and work is God’s gift"
+      }
+    },
+    "ECC.3.14-15": {
+      "text": "The Teacher says God’s work lasts forever so that people will fear him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 69 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher says God’s work lasts so people will fear him"
+      }
+    },
+    "ECC.3.16-17": {
+      "text": "The Teacher sees wickedness in courts, but says God will judge everyone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 71 characters, which exceeds the limit of 60.",
+        "suggestion": "The Teacher sees wicked courts but says God will judge all"
+      }
+    },
+    "ECC.3.18-18": {
+      "text": "God tests people to show them they are like animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.3.19-20": {
+      "text": "Men and animals share the same breath and the same end",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.3.21-22": {
+      "text": "No one knows what comes after death, so enjoy your work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.1-1": {
+      "text": "The Preacher sees the tears of the oppressed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.2-3": {
+      "text": "The Preacher thinks the dead and the unborn are better off",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.4-4": {
+      "text": "Work and success come from envy of a neighbor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.5-6": {
+      "text": "A fool does nothing; a quiet handful is better than toil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.7-8": {
+      "text": "A man alone works without end and has no one to enjoy it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.9-11": {
+      "text": "Two people are better than one because they help each other",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.12-12": {
+      "text": "Two can resist an attacker, and a cord of three is strong",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.13-14": {
+      "text": "A poor wise youth is better than a foolish old king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.4.15-16": {
+      "text": "People follow the new king, but later people forget him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.1-1": {
+      "text": "Be careful and listen when you go to God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "People should listen when they go to God’s house"
+      }
+    },
+    "ECC.5.2-3": {
+      "text": "The Preacher tells worshipers to speak few words to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.4-5": {
+      "text": "Worshipers must keep their vows to God quickly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.6-7": {
+      "text": "Worshipers must not excuse a broken vow, but fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.8-9": {
+      "text": "Do not be surprised at oppression; officials watch officials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is a command that names no one.",
+        "suggestion": "Officials watch officials, so oppression is not surprising"
+      }
+    },
+    "ECC.5.10-11": {
+      "text": "Those who love money are never satisfied with it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.12-12": {
+      "text": "A worker sleeps well, but the rich man cannot sleep",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.13-14": {
+      "text": "Wealth can be lost, leaving nothing for a man’s son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.15-17": {
+      "text": "A man leaves with nothing and lives in sorrow and anger",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.18-18": {
+      "text": "It is good to enjoy work and food in the days God gives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.5.19-20": {
+      "text": "God gives wealth and joy as a gift to people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.6.1-2": {
+      "text": "God gives a man riches, but a stranger enjoys them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.6.3-4": {
+      "text": "A man with many children but no joy is worse than a stillborn child",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is longer than 60 characters.",
+        "suggestion": "A man without joy is worse off than a stillborn child"
+      }
+    },
+    "ECC.6.5-6": {
+      "text": "The stillborn child has more rest than a man without joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.6.7-8": {
+      "text": "People work to eat, yet are never satisfied",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.6.9-12": {
+      "text": "No one knows what is good for people in their short lives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.1-2": {
+      "text": "A good name and a house of mourning teach people well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The verses do not say that a good name teaches people.",
+        "suggestion": "A house of mourning is better than a house of feasting"
+      }
+    },
+    "ECC.7.3-4": {
+      "text": "Sorrow is better than laughter; the wise think of death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.5-6": {
+      "text": "A wise person’s rebuke is better than fools’ songs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.7-7": {
+      "text": "Extortion and bribes harm even a wise man",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.8-9": {
+      "text": "Patience is better than pride; anger belongs to fools",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.10-10": {
+      "text": "The Teacher warns against longing for the old days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.11-12": {
+      "text": "Wisdom is good and protects the life of its owner",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.13-13": {
+      "text": "No one can straighten what God has bent",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.14-14": {
+      "text": "Be joyful in good times; God also sends hard times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title begins with a command that names no one.",
+        "suggestion": "God makes both good times and hard times"
+      }
+    },
+    "ECC.7.15-16": {
+      "text": "The Teacher warns against being too righteous or too wise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.17-18": {
+      "text": "Whoever fears God avoids wickedness and folly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.19-20": {
+      "text": "Wisdom is strong, but no one is always righteous",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.21-22": {
+      "text": "The Teacher says not to listen to every word spoken",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.23-25": {
+      "text": "The Teacher tests wisdom but cannot fully understand",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.26-26": {
+      "text": "The Teacher warns of a woman who is like a snare",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.27-28": {
+      "text": "The Teacher finds few upright people among many",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.7.29-29": {
+      "text": "God made people upright, but people seek many schemes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.1-1": {
+      "text": "Wisdom brightens a person’s face",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.2-4": {
+      "text": "The Teacher says to obey the king’s command",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.5-7": {
+      "text": "A wise heart knows the right time to act",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.8-9": {
+      "text": "No one has power over the day of death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.10-11": {
+      "text": "Slow punishment leads people to do more evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.12-13": {
+      "text": "It will go well for people who fear God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.14-15": {
+      "text": "Life is unfair, so the Teacher commends enjoying life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.8.16-17": {
+      "text": "No one can fully understand God’s work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.1-1": {
+      "text": "The righteous and wise are in God’s hands",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.2-2": {
+      "text": "The same fate comes to the righteous and the wicked",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.3-3": {
+      "text": "All people face one fate, and all join the dead",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.4-5": {
+      "text": "The living have hope, but the dead know nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.6-6": {
+      "text": "The dead no longer share in life under the sun",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.7-8": {
+      "text": "People should eat and drink with joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.9-10": {
+      "text": "People should enjoy life with a wife and work hard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.11-12": {
+      "text": "Time and chance come to all, and bad times come suddenly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.13-15": {
+      "text": "A poor wise man saves a small city but is forgotten",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.16-16": {
+      "text": "People despise a poor man’s wisdom and ignore his words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.9.17-18": {
+      "text": "Wise calm words are heeded; one sinner destroys much good",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.1-3": {
+      "text": "A little folly spoils wisdom, and a fool shows his folly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.4-4": {
+      "text": "A calm person stays at his post when a ruler is angry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.5-7": {
+      "text": "The Teacher sees fools in high places and slaves on horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.8-9": {
+      "text": "Workers can be hurt by digging, quarrying or splitting logs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.10-11": {
+      "text": "Skill brings success, as a dull axe needs more strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.12-12": {
+      "text": "A wise man’s words are kind, but a fool’s words ruin him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.13-14": {
+      "text": "A fool’s many words begin in folly and end in evil madness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.15-15": {
+      "text": "A fool grows tired and does not know the way to the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.16-17": {
+      "text": "A land with a noble king and wise princes is blessed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It mentions only the blessing in verse 17 and ignores the woe given to foolish rulers in verse 16.",
+        "suggestion": "Foolish rulers bring woe, but noble rulers bring blessing"
+      }
+    },
+    "ECC.10.18-19": {
+      "text": "Laziness ruins a house, and money is the answer to all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.10.20-20": {
+      "text": "People should not curse the king or the rich, even in secret",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.11.1-3": {
+      "text": "People should give freely, since no one knows what comes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.11.4-5": {
+      "text": "Whoever watches the wind and clouds fails to sow or reap",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It only covers verse 4 and leaves out that no one can understand the work of God.",
+        "suggestion": "Those who watch the wind fail, and God’s work is unknown"
+      }
+    },
+    "ECC.11.6-6": {
+      "text": "People should sow morning and evening; success is unknown",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.11.7-8": {
+      "text": "People should rejoice in life, but remember the dark days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.11.9-10": {
+      "text": "A young man should rejoice, but God will judge his actions",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.1-2": {
+      "text": "The Teacher warns of hard years when pleasure is gone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "It leaves out the main command of the segment to remember one’s Creator in youth.",
+        "suggestion": "Young people should remember their Creator before hard days"
+      }
+    },
+    "ECC.12.3-3": {
+      "text": "Strong men stoop and those who watch see dimly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.4-4": {
+      "text": "Doors shut, the mill is quiet, and sounds grow faint",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.5-5": {
+      "text": "Man goes to his eternal home and mourners walk the streets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.6-7": {
+      "text": "Before death, the dust returns to earth and spirit to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.8-8": {
+      "text": "The Teacher says that everything is futile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.9-9": {
+      "text": "The Teacher was wise and taught the people knowledge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.10-11": {
+      "text": "The Teacher wrote true words; wise words are like goads",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.12-12": {
+      "text": "The Teacher warns his son that much study is tiring",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "ECC.12.13-14": {
+      "text": "People must fear God, for he will judge every deed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
