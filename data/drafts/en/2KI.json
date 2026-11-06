@@ -1,0 +1,2077 @@
+{
+  "language": "en",
+  "book": "2KI",
+  "bible": "bsb-2ki",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793908159-T0xuXlHmqREl7DmcjUWD",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7134,
+      "completionTokens": 3515,
+      "reasoningTokens": 2383,
+      "cost": 0.049418,
+      "ms": 21747
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908180-Poy9XTKeqNiUunQP3nhw",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6893,
+      "completionTokens": 5095,
+      "reasoningTokens": 4057,
+      "cost": 0.064736,
+      "ms": 34023
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908214-65LgGtMO9oQVwO0hqrn8",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7781,
+      "completionTokens": 1083,
+      "reasoningTokens": 0,
+      "cost": 0.026392,
+      "ms": 6818
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908221-16ay1oRnxdbGxmHtLaCw",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7476,
+      "completionTokens": 4931,
+      "reasoningTokens": 3883,
+      "cost": 0.064262,
+      "ms": 29680
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908251-InFJ7b2HD3e22UO6Hsty",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7222,
+      "completionTokens": 4702,
+      "reasoningTokens": 3672,
+      "cost": 0.061464,
+      "ms": 27903
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908279-cSTh2832UKf7m4pxFp35",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6933,
+      "completionTokens": 4911,
+      "reasoningTokens": 3897,
+      "cost": 0.062976,
+      "ms": 30000
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908309-dIqcfhYELcqdELzphDap",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7205,
+      "completionTokens": 6052,
+      "reasoningTokens": 4983,
+      "cost": 0.07493,
+      "ms": 34903
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908344-aRbndsVsuS1HIL0N7yYP",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7419,
+      "completionTokens": 1038,
+      "reasoningTokens": 0,
+      "cost": 0.025218,
+      "ms": 7110
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793908351-bXgbtJDivTmv6xKzrgd7",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 7115,
+      "completionTokens": 5739,
+      "reasoningTokens": 4639,
+      "cost": 0.07162,
+      "ms": 35085
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908386-gYGlMhlvX5DCJ1Dudqvj",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5847,
+      "completionTokens": 5586,
+      "reasoningTokens": 4635,
+      "cost": 0.02533275,
+      "ms": 30984
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908417-fpL3FhalutD1nIqOOHDM",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5920,
+      "completionTokens": 7135,
+      "reasoningTokens": 6178,
+      "cost": 0.03119625,
+      "ms": 42442
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908459-tcYHWPpmdZw9EXFjtMbe",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6538,
+      "completionTokens": 10367,
+      "reasoningTokens": 9120,
+      "cost": 0.04377975,
+      "ms": 61768
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908521-S8R7Rrs7Ci6FV7kAl4Wb",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6072,
+      "completionTokens": 5419,
+      "reasoningTokens": 4516,
+      "cost": 0.02487525,
+      "ms": 34911
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908556-Hwf9sQBqMqjJqFjlzTgH",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5822,
+      "completionTokens": 9819,
+      "reasoningTokens": 8859,
+      "cost": 0.04118775,
+      "ms": 74026
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908631-JNihkbzDwI4djYAk4qXC",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5585,
+      "completionTokens": 6466,
+      "reasoningTokens": 5482,
+      "cost": 0.02843625,
+      "ms": 57952
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908688-NV6Q9LYoUs4PvMPyDOU5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5886,
+      "completionTokens": 4544,
+      "reasoningTokens": 3632,
+      "cost": 0.0214545,
+      "ms": 27624
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908716-8EM0B0JR8hvatFqozBo5",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 6036,
+      "completionTokens": 8530,
+      "reasoningTokens": 7497,
+      "cost": 0.0365145,
+      "ms": 56321
+    },
+    {
+      "role": "check",
+      "id": "gen-1793908772-QKpVXl21s8iqJHok2zDu",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5744,
+      "completionTokens": 8624,
+      "reasoningTokens": 7665,
+      "cost": 0.036648,
+      "ms": 65042
+    }
+  ],
+  "titles": {
+    "2KI.1.1-2": {
+      "text": "Ahaziah is hurt and asks Baal-zebub if he will live",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.3-4": {
+      "text": "An angel sends Elijah to say Ahaziah will die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.5-6": {
+      "text": "The messengers tell Ahaziah what Elijah said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.7-8": {
+      "text": "Ahaziah learns that the man was Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.9-10": {
+      "text": "Fire from heaven kills the first captain and his men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.11-12": {
+      "text": "Fire from heaven kills a second captain and his men",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.13-14": {
+      "text": "The third captain begs Elijah to spare his life",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.1.15-16": {
+      "text": "Elijah tells King Ahaziah he will surely die",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.1-2": {
+      "text": "Elisha refuses to leave Elijah and goes to Bethel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.3-4": {
+      "text": "Elisha stays with Elijah on the way to Jericho",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.5-6": {
+      "text": "Elisha stays with Elijah on the way to the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.7-8": {
+      "text": "Elijah parts the Jordan River and crosses with Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.9-10": {
+      "text": "Elisha asks Elijah for a double portion of his spirit",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.11-12": {
+      "text": "Elijah goes up to heaven in a whirlwind",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.13-14": {
+      "text": "Elisha takes Elijah’s cloak and parts the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.15-16": {
+      "text": "The prophets bow to Elisha and want to search for Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.17-18": {
+      "text": "Elisha sends fifty men who do not find Elijah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The prophets sent the men to search for Elijah, not Elisha, who had warned them not to go.",
+        "suggestion": "Fifty men search for Elijah but do not find him"
+      }
+    },
+    "2KI.2.19-20": {
+      "text": "The men of Jericho tell Elisha the water is bad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.2.21-22": {
+      "text": "Elisha puts salt in the spring and heals the water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.1-3": {
+      "text": "Jehoram becomes king of Israel and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.4-6": {
+      "text": "Moab rebels, and King Jehoram gathers Israel’s army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.7-8": {
+      "text": "Jehoshaphat agrees to join Jehoram against Moab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.9-10": {
+      "text": "The three kings run out of water in the desert",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.11-12": {
+      "text": "The three kings go to ask Elisha for God’s word",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.13-14": {
+      "text": "Elisha speaks harshly to Jehoram but honors Jehoshaphat",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.15-17": {
+      "text": "Elisha says God will fill the valley with water",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.18-19": {
+      "text": "Elisha says God will give Moab to the three kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.20-20": {
+      "text": "Water flows from Edom and fills the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.21-23": {
+      "text": "The Moabites see red water and think it is blood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.24-25": {
+      "text": "Israel defeats Moab and destroys the land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.3.26-27": {
+      "text": "Moab’s king offers his son and Israel goes home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.1-2": {
+      "text": "A prophet’s widow asks Elisha for help with her debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.3-4": {
+      "text": "Elisha tells the widow to borrow many empty jars",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.5-6": {
+      "text": "The widow pours oil into jars until all are full",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.7-7": {
+      "text": "Elisha tells the widow to sell the oil and pay her debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.8-9": {
+      "text": "A woman in Shunem feeds Elisha and calls him holy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.10-11": {
+      "text": "The Shunammite woman makes a small room for Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.12-13": {
+      "text": "Elisha offers to help the woman, but she needs nothing",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.14-16": {
+      "text": "Elisha promises the woman she will have a son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.17-17": {
+      "text": "The woman gives birth to a son, as Elisha said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.18-20": {
+      "text": "The Shunammite’s son gets a headache and dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.21-22": {
+      "text": "The mother asks her husband for a donkey to go to Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.23-24": {
+      "text": "The husband questions her trip, but she says all is well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.25-26": {
+      "text": "Elisha sends Gehazi to ask the woman if all is well",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.27-27": {
+      "text": "Elisha stops Gehazi from pushing the woman away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.28-29": {
+      "text": "Elisha sends Gehazi with his staff to the boy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.30-31": {
+      "text": "Gehazi’s staff does not wake the boy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate"],
+        "why": "The staff belonged to Elisha, not to Gehazi.",
+        "suggestion": "Elisha’s staff does not wake the boy"
+      }
+    },
+    "2KI.4.32-34": {
+      "text": "Elisha prays and lies on the dead boy, who becomes warm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.35-37": {
+      "text": "The boy comes alive and Elisha gives him to his mother",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.38-39": {
+      "text": "A man puts unknown wild gourds into the stew pot",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.4.40-41": {
+      "text": "Elisha puts flour in the pot and the stew is safe",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.1-2": {
+      "text": "Naaman is a great commander with leprosy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.3-4": {
+      "text": "An Israelite girl says a prophet can cure Naaman",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.5-6": {
+      "text": "The king of Aram sends Naaman to Israel with a letter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.7-7": {
+      "text": "The king of Israel is upset by the letter",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.8-10": {
+      "text": "Elisha tells Naaman to wash seven times in the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.11-12": {
+      "text": "Naaman is angry about washing in the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.13-14": {
+      "text": "Naaman’s servants persuade him, and he is made clean",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.15-16": {
+      "text": "Naaman praises God, but Elisha refuses his gift",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.17-19": {
+      "text": "Naaman asks for soil and for God’s forgiveness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.20-22": {
+      "text": "Gehazi runs after Naaman and lies to get silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.23-25": {
+      "text": "Gehazi hides the gifts and lies to Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.5.26-27": {
+      "text": "Elisha says Gehazi will have Naaman’s leprosy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.1-3": {
+      "text": "The prophets ask to build a bigger place at the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.4-5": {
+      "text": "A man loses a borrowed axe head in the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.6-7": {
+      "text": "Elisha makes the iron axe head float",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.8-9": {
+      "text": "Elisha warns the king of Israel about Aram’s camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.10-11": {
+      "text": "The king of Aram is angry about Elisha’s warnings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.12-13": {
+      "text": "A servant tells the king that Elisha knows his plans",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.14-16": {
+      "text": "Aram’s army surrounds the city, but Elisha tells his servant not to fear",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 72 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Elisha tells his servant not to fear the Aramean army"
+      }
+    },
+    "2KI.6.17-19": {
+      "text": "Elisha’s servant sees God’s army; Elisha leads the blinded Arameans to Samaria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 79 characters, the title exceeds the 60-character limit.",
+        "suggestion": "God blinds the Arameans, and Elisha leads them to Samaria"
+      }
+    },
+    "2KI.6.20-21": {
+      "text": "God opens the Arameans’ eyes in Samaria; the king asks Elisha what to do",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 73 characters, the title exceeds the 60-character limit.",
+        "suggestion": "God opens the Arameans’ eyes; the king asks to kill them"
+      }
+    },
+    "2KI.6.22-23": {
+      "text": "Elisha tells the king to feed the Arameans and send them home",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 61 characters, the title exceeds the 60-character limit.",
+        "suggestion": "The king feeds the Arameans and sends them home"
+      }
+    },
+    "2KI.6.24-26": {
+      "text": "Aram besieges Samaria and a terrible famine begins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.27-29": {
+      "text": "A woman tells the king about the boiled son",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.30-31": {
+      "text": "The king tears his clothes and vows to kill Elisha",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.6.32-33": {
+      "text": "Elisha tells the elders to keep the king’s messenger out",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.3-4": {
+      "text": "Four men with leprosy decide to go to the Aramean camp",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.5-6": {
+      "text": "The four men find the Aramean camp empty",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.7-8": {
+      "text": "The four men eat in the empty camp and hide the treasure",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.9-11": {
+      "text": "The four men decide to tell the king’s household the news",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.12-13": {
+      "text": "The king fears a trap, but a servant suggests sending scouts",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.7.14-15": {
+      "text": "The scouts follow the Arameans and find clothing along the road",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 63 characters, the title exceeds the 60-character limit.",
+        "suggestion": "Scouts track the Arameans and find abandoned clothes"
+      }
+    },
+    "2KI.7.16-17": {
+      "text": "The people plunder the camp, and the officer is trampled to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "At 65 characters, the title exceeds the 60-character limit.",
+        "suggestion": "The people plunder the camp, and the officer is trampled"
+      }
+    },
+    "2KI.7.18-20": {
+      "text": "Elisha’s words come true for the doubting officer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.1-2": {
+      "text": "Elisha tells the Shunammite woman to leave because of famine",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.3-4": {
+      "text": "The woman returns and goes to the king for her land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.5-6": {
+      "text": "Gehazi tells the king about her; the king restores her land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.7-9": {
+      "text": "Ben-hadad sends Hazael to ask Elisha if he will recover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.10-12": {
+      "text": "Elisha tells Hazael that Ben-hadad will die and weeps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.13-15": {
+      "text": "Hazael kills Ben-hadad and becomes king of Aram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.16-17": {
+      "text": "Jehoram becomes king of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.18-19": {
+      "text": "Jehoram does evil, but God keeps his promise to David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.20-21": {
+      "text": "Edom rebels against Judah and Jehoram’s troops flee",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.22-24": {
+      "text": "Edom and Libnah stay in revolt, and Jehoram dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.25-27": {
+      "text": "Ahaziah becomes king of Judah and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.8.28-29": {
+      "text": "Ahaziah visits the wounded King Joram at Jezreel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.1-3": {
+      "text": "Elisha sends a young prophet to anoint Jehu as king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.4-6": {
+      "text": "The young prophet anoints Jehu king over Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.7-8": {
+      "text": "God tells Jehu to destroy the house of Ahab",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.9-10": {
+      "text": "The prophet says Jezebel will die; then he runs away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.11-13": {
+      "text": "Jehu’s fellow officers proclaim him king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.14-16": {
+      "text": "Jehu plots against Joram and goes to Jezreel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.17-18": {
+      "text": "Joram’s first rider meets Jehu and does not return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.19-20": {
+      "text": "A second rider goes to Jehu and does not return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.21-22": {
+      "text": "Joram and Ahaziah meet Jehu at Naboth’s field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.23-24": {
+      "text": "Jehu shoots Joram with an arrow and kills him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.25-26": {
+      "text": "Jehu orders Joram’s body thrown into Naboth’s field",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.27-28": {
+      "text": "Ahaziah of Judah is shot and dies at Megiddo",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.29-29": {
+      "text": "Ahaziah became king of Judah in Joram’s eleventh year",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.30-32": {
+      "text": "Jezebel challenges Jehu from her window",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.33-34": {
+      "text": "Jehu has Jezebel thrown down from the window",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.9.35-37": {
+      "text": "Only parts of Jezebel are found, as Elijah said",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.1-3": {
+      "text": "Jehu writes to Samaria’s leaders about Ahab’s sons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.4-5": {
+      "text": "Samaria’s leaders promise to obey Jehu",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.6-7": {
+      "text": "Samaria’s leaders kill Ahab’s seventy sons for Jehu",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.8-9": {
+      "text": "Jehu shows the heads and speaks to the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.10-11": {
+      "text": "Jehu kills the rest of Ahab’s house in Jezreel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.12-14": {
+      "text": "Jehu kills forty-two relatives of Ahaziah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.15-17": {
+      "text": "Jehu meets Jehonadab and destroys Ahab’s family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.18-20": {
+      "text": "Jehu pretends he will serve Baal and calls an assembly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.21-22": {
+      "text": "All the servants of Baal gather in the temple of Baal",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.23-24": {
+      "text": "Jehu checks that only servants of Baal are in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.25-27": {
+      "text": "Jehu’s men kill Baal’s servants and destroy the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.28-28": {
+      "text": "Jehu removes the worship of Baal from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.29-31": {
+      "text": "Jehu keeps the sins of Jeroboam despite God’s promise",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.10.32-33": {
+      "text": "Hazael takes land from Israel east of the Jordan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.4-6": {
+      "text": "Jehoiada makes a covenant with the commanders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.7-8": {
+      "text": "Jehoiada tells the guards to protect the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.9-10": {
+      "text": "The commanders obey Jehoiada and receive David’s weapons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.11-12": {
+      "text": "Jehoiada crowns Joash king and the people cheer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.13-14": {
+      "text": "Athaliah sees the king and cries out that it is treason",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.15-16": {
+      "text": "Athaliah is taken out and put to death",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.17-18": {
+      "text": "Jehoiada makes a covenant and the people end Baal worship",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.19-20": {
+      "text": "Joash sits on the throne and the people rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.11.21-21": {
+      "text": "Joash becomes king at seven years old",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.1-3": {
+      "text": "Joash does right, but the high places remain",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.4-5": {
+      "text": "Joash tells the priests to use temple money for repairs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.6-8": {
+      "text": "Joash rebukes the priests for not repairing the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.9-10": {
+      "text": "Jehoiada sets a money chest beside the altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.11-12": {
+      "text": "Counted money pays the workers and buys materials",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The supervisors pay the workers and buy materials, not the money itself.",
+        "suggestion": "Supervisors use the money to pay workers and buy materials"
+      }
+    },
+    "2KI.12.13-14": {
+      "text": "The money is used for repairs, not for temple articles",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.15-16": {
+      "text": "Honest men pay the workers; offering money is for priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.17-18": {
+      "text": "Joash pays Hazael with temple gold to save Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.12.19-21": {
+      "text": "Servants kill Joash, and his son Amaziah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.1-2": {
+      "text": "Jehoahaz becomes king of Israel and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.3-5": {
+      "text": "The LORD hears Jehoahaz and sends Israel a deliverer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.6-7": {
+      "text": "Israel keeps sinning, and Jehoahaz has a small army",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.8-9": {
+      "text": "Jehoahaz dies, and his son Jehoash becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.10-11": {
+      "text": "Jehoash becomes king of Israel and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.12-13": {
+      "text": "Jehoash dies, and Jeroboam becomes king of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.14-16": {
+      "text": "Jehoash visits sick Elisha and takes a bow and arrows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.17-19": {
+      "text": "Elisha says Jehoash will defeat Aram three times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.20-21": {
+      "text": "A dead man comes alive when he touches Elisha’s bones",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.13.22-25": {
+      "text": "The LORD is kind to Israel, and Jehoash defeats Aram",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.1-3": {
+      "text": "Amaziah becomes king and does right, but not like David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.4-5": {
+      "text": "Amaziah executes the servants who killed his father",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.6-7": {
+      "text": "Amaziah spares the murderers’ sons and defeats Edom",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.8-10": {
+      "text": "Jehoash warns Amaziah not to fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.11-12": {
+      "text": "Israel defeats Judah at Beth-shemesh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.13-14": {
+      "text": "Jehoash captures Amaziah and takes Jerusalem’s treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.17-19": {
+      "text": "Conspirators kill Amaziah at Lachish",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.20-20": {
+      "text": "Amaziah is buried in Jerusalem with his fathers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.23-25": {
+      "text": "Jeroboam II becomes king and restores Israel’s border",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.26-27": {
+      "text": "The LORD sees Israel’s suffering and saves Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.14.28-29": {
+      "text": "Jeroboam dies, and his son Zechariah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.1-3": {
+      "text": "Azariah becomes king of Judah and does right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.4-5": {
+      "text": "The LORD afflicts Azariah with leprosy; Jotham governs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.6-7": {
+      "text": "Azariah dies and his son Jotham becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.8-9": {
+      "text": "Zechariah rules Israel six months and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.10-12": {
+      "text": "Shallum kills Zechariah and becomes king of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.13-14": {
+      "text": "Menahem kills Shallum and becomes king of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.15-16": {
+      "text": "Menahem cruelly attacks the people of Tiphsah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.17-18": {
+      "text": "Menahem rules Israel ten years and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.19-20": {
+      "text": "Menahem pays the king of Assyria to leave Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.21-22": {
+      "text": "Menahem dies and his son Pekahiah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.23-24": {
+      "text": "Pekahiah rules Israel two years and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.25-26": {
+      "text": "Pekah kills Pekahiah and becomes king of Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.27-28": {
+      "text": "Pekah rules Israel twenty years and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.29-31": {
+      "text": "Assyria captures cities, and Hoshea kills Pekah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.32-33": {
+      "text": "Jotham becomes king of Judah at age twenty-five",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.15.34-38": {
+      "text": "Jotham does right, but the people still use high places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.1-2": {
+      "text": "Ahaz becomes king of Judah and does not follow David",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "plain"],
+        "why": "The text states that Ahaz did not do what was right in the eyes of the LORD, not that he did not follow David.",
+        "suggestion": "Ahaz becomes king of Judah and does not do what is right"
+      }
+    },
+    "2KI.16.3-4": {
+      "text": "Ahaz sacrifices his son and worships at high places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.5-6": {
+      "text": "Aram and Israel attack Jerusalem; Aram takes Elath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.7-9": {
+      "text": "Ahaz sends silver and gold to Assyria for help",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.10-12": {
+      "text": "Ahaz has Uriah build a new altar like one in Damascus",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.13-14": {
+      "text": "Ahaz offers on the new altar and moves the bronze altar",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.15-16": {
+      "text": "Ahaz orders Uriah to use the new altar for offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.17-18": {
+      "text": "Ahaz changes parts of the temple because of Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.16.19-20": {
+      "text": "Ahaz dies and his son Hezekiah becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.1-3": {
+      "text": "Hoshea becomes king of Israel and pays tribute to Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.4-4": {
+      "text": "The king of Assyria puts Hoshea in prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.5-6": {
+      "text": "Assyria captures Samaria and takes the Israelites away",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.7-8": {
+      "text": "The Israelites sinned by worshiping other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.9-10": {
+      "text": "The Israelites secretly built high places and idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.11-12": {
+      "text": "The Israelites burned incense and served idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.13-13": {
+      "text": "The LORD warns Israel and Judah through the prophets",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.14-15": {
+      "text": "The Israelites refuse to listen and follow worthless idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.16-18": {
+      "text": "The LORD removes Israel because of idols and evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.19-20": {
+      "text": "Judah also disobeys and the LORD punishes Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.21-23": {
+      "text": "The LORD removed Israel because of Jeroboam’s sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.24-26": {
+      "text": "Foreigners settle in Samaria, and lions kill some",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.27-28": {
+      "text": "The king of Assyria sends a priest to teach the settlers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.29-31": {
+      "text": "Each nation of settlers makes its own idols in Samaria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.32-33": {
+      "text": "The settlers worship the LORD and also serve other gods",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.34-35": {
+      "text": "The settlers keep old customs and do not obey the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.36-38": {
+      "text": "The LORD told Israel to worship only him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.17.39-41": {
+      "text": "The settlers do not listen and keep serving idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.1-3": {
+      "text": "Hezekiah becomes king of Judah and does what is right",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.4-5": {
+      "text": "Hezekiah removes idols and trusts the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.6-8": {
+      "text": "The LORD is with Hezekiah, who rebels against Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.9-10": {
+      "text": "Assyria captures Samaria after three years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.11-12": {
+      "text": "Assyria exiles Israel because Israel disobeyed the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.13-15": {
+      "text": "Hezekiah pays Sennacherib to leave Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.16-16": {
+      "text": "Hezekiah gives the temple gold to Assyria’s king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.17-18": {
+      "text": "Assyria’s officers meet Hezekiah’s officials at Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.19-21": {
+      "text": "The Rabshakeh mocks Hezekiah’s trust in Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.22-23": {
+      "text": "The Rabshakeh mocks trust in the LORD and offers horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.24-25": {
+      "text": "The Rabshakeh says the LORD sent Assyria against Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.26-27": {
+      "text": "Hezekiah’s officials ask the Rabshakeh to speak Aramaic",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.28-30": {
+      "text": "The Rabshakeh tells the people not to trust Hezekiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.31-32": {
+      "text": "The Rabshakeh urges the people to surrender to Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.33-35": {
+      "text": "The Rabshakeh says no god has saved a land from Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.18.36-37": {
+      "text": "The people stay silent, and officials report to Hezekiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.1-2": {
+      "text": "Hezekiah goes to the temple and sends men to Isaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.3-4": {
+      "text": "Hezekiah asks Isaiah to pray for the remnant",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.5-7": {
+      "text": "Isaiah tells Hezekiah not to be afraid of Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.8-9": {
+      "text": "Sennacherib sends messengers to Hezekiah again",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.10-11": {
+      "text": "Sennacherib warns Hezekiah not to trust God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.12-13": {
+      "text": "Sennacherib says the gods of other nations failed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.14-15": {
+      "text": "Hezekiah spreads the letter before the LORD and prays",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.16-18": {
+      "text": "Hezekiah asks the LORD to hear Sennacherib’s words",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.19-19": {
+      "text": "Hezekiah asks the LORD to save Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.20-22": {
+      "text": "Isaiah tells Hezekiah that God heard his prayer",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.23-24": {
+      "text": "God says Sennacherib mocked him and boasted of his power",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.25-26": {
+      "text": "God says he planned long ago what Assyria has done",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.27-28": {
+      "text": "God will turn Sennacherib back with a hook in his nose",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.29-31": {
+      "text": "God gives Hezekiah a sign that Judah will live and grow",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.19.32-34": {
+      "text": "God promises that Assyria’s king will not enter Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.1-3": {
+      "text": "Isaiah tells sick Hezekiah he will die, and Hezekiah prays",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.4-5": {
+      "text": "God tells Isaiah to say he will heal Hezekiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.6-7": {
+      "text": "God adds fifteen years to Hezekiah’s life and heals him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.8-9": {
+      "text": "Hezekiah asks Isaiah for a sign that God will heal him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.10-11": {
+      "text": "Isaiah prays and the shadow goes back ten steps",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.12-13": {
+      "text": "Hezekiah shows the Babylonian envoys all his treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.14-15": {
+      "text": "Isaiah asks Hezekiah about the men from Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.16-18": {
+      "text": "Isaiah says Babylon will take away Hezekiah’s treasures",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.20.19-19": {
+      "text": "Hezekiah accepts Isaiah’s word and hopes for peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.1-3": {
+      "text": "Manasseh becomes king and does evil like the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.4-6": {
+      "text": "Manasseh builds altars to false gods in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.7-9": {
+      "text": "Manasseh sets an Asherah pole in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.10-12": {
+      "text": "God says he will bring disaster on Jerusalem and Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.13-15": {
+      "text": "God says he will wipe out Jerusalem like a bowl",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.16-18": {
+      "text": "Manasseh kills many innocent people and then dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.19-20": {
+      "text": "Amon becomes king of Judah and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.21-23": {
+      "text": "Amon follows his father’s idols and his servants kill him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.21.24-26": {
+      "text": "The people make Josiah king after Amon dies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.3-5": {
+      "text": "Josiah tells Shaphan to have the temple money counted",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.6-7": {
+      "text": "The money is given to workers who repair the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["accurate", "covers"],
+        "why": "These verses continue Josiah’s speech directing that the workers need not account for the money, rather than describing the money being given.",
+        "suggestion": "Josiah says the temple workers need not account for money"
+      }
+    },
+    "2KI.22.8-10": {
+      "text": "Hilkiah finds the Book of the Law and Shaphan reads it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.11-13": {
+      "text": "Josiah tears his clothes and sends men to ask God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.14-16": {
+      "text": "Huldah says God will bring disaster on Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.17-19": {
+      "text": "Huldah says God heard Josiah because he humbled himself",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.22.20-20": {
+      "text": "Huldah says Josiah will die in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.1-2": {
+      "text": "Josiah reads the Book of the Covenant to all the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.3-3": {
+      "text": "Josiah and the people make a covenant to follow the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "Words in sentence case should not be written in all-capital letters.",
+        "suggestion": "Josiah and the people make a covenant to follow the Lord"
+      }
+    },
+    "2KI.23.4-5": {
+      "text": "Josiah removes Baal objects and idol priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.6-7": {
+      "text": "Josiah burns the Asherah pole and tears down shrine rooms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.8-9": {
+      "text": "Josiah destroys the high places across Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.10-11": {
+      "text": "Josiah ends child sacrifice and removes the sun horses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.12-14": {
+      "text": "Josiah destroys altars and high places built by kings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.15-16": {
+      "text": "Josiah destroys the Bethel altar and burns bones on it",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.17-18": {
+      "text": "Josiah leaves the tomb of the man of God alone",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.19-20": {
+      "text": "Josiah removes shrines in Samaria and returns to Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.21-23": {
+      "text": "Josiah commands the people to keep the Passover",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.24-25": {
+      "text": "Josiah removes mediums and idols and obeys the Law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.26-27": {
+      "text": "The LORD is still angry with Judah because of Manasseh",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.31-33": {
+      "text": "Jehoahaz reigns three months and Pharaoh Neco imprisons him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.23.34-35": {
+      "text": "Pharaoh Neco makes Eliakim king and renames him Jehoiakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.1-2": {
+      "text": "Nebuchadnezzar invades and Jehoiakim later rebels",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.3-4": {
+      "text": "The LORD sends this trouble because of Manasseh’s sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The reference in “this trouble” is not clear when read alone in a list.",
+        "suggestion": "The LORD removes Judah because of Manasseh’s sins"
+      }
+    },
+    "2KI.24.5-5": {
+      "text": "The rest of Jehoiakim’s acts are in the royal records",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.6-6": {
+      "text": "Jehoiakim dies and his son Jehoiachin becomes king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.7-7": {
+      "text": "Babylon’s king takes the land of the king of Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.8-9": {
+      "text": "Jehoiachin becomes king at eighteen and does evil",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.10-12": {
+      "text": "Nebuchadnezzar besieges Jerusalem and takes Jehoiachin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.13-14": {
+      "text": "Nebuchadnezzar takes the temple treasures and many captives",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.24.15-17": {
+      "text": "Nebuchadnezzar exiles Jehoiachin and makes Zedekiah king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.1-3": {
+      "text": "Nebuchadnezzar surrounds Jerusalem and famine grows",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.4-5": {
+      "text": "The city wall is broken and Zedekiah flees but is caught",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.6-7": {
+      "text": "Babylon’s soldiers kill Zedekiah’s sons and blind him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.8-10": {
+      "text": "Nebuzaradan burns the temple, palace and houses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.11-12": {
+      "text": "Nebuzaradan exiles the people but leaves the poorest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.13-15": {
+      "text": "The Chaldeans take the temple’s bronze, gold and silver",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.16-17": {
+      "text": "The size of the temple’s bronze pillars is described",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.18-19": {
+      "text": "Nebuzaradan takes the chief priest and other leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.20-21": {
+      "text": "The king of Babylon kills the leaders at Riblah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.27-27": {
+      "text": "Evil-merodach releases King Jehoiachin from prison",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "2KI.25.28-30": {
+      "text": "The king of Babylon is kind to Jehoiachin and feeds him",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
