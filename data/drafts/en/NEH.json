@@ -1,0 +1,1219 @@
+{
+  "language": "en",
+  "book": "NEH",
+  "bible": "bsb-neh",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793911565-9n8lhSKuccVjwWBhG68e",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6971,
+      "completionTokens": 5242,
+      "reasoningTokens": 4138,
+      "cost": 0.066362,
+      "ms": 32196
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911597-RUDathQfkq1IRTm12bjj",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6261,
+      "completionTokens": 6320,
+      "reasoningTokens": 5246,
+      "cost": 0.075722,
+      "ms": 40292
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911637-touQA6roagJwibYidbBk",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6602,
+      "completionTokens": 914,
+      "reasoningTokens": 0,
+      "cost": 0.022344,
+      "ms": 5917
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911643-9lTSJrA1TkxDCPnZS8Ly",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6635,
+      "completionTokens": 4571,
+      "reasoningTokens": 3653,
+      "cost": 0.05898,
+      "ms": 29860
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793911673-pzrPWfQEAoLmHmbnLd4b",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 6902,
+      "completionTokens": 4639,
+      "reasoningTokens": 3619,
+      "cost": 0.060194,
+      "ms": 27716
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911701-5nqoexCnQ10fwcTgEcuw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5688,
+      "completionTokens": 12241,
+      "reasoningTokens": 11152,
+      "cost": 0.05016975,
+      "ms": 92345
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911793-Mkzgdz3kXgm8eWXrFhuq",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5315,
+      "completionTokens": 7345,
+      "reasoningTokens": 6205,
+      "cost": 0.03153,
+      "ms": 48458
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911841-8aXekfJdeWIwu0O0VonU",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5488,
+      "completionTokens": 5200,
+      "reasoningTokens": 4221,
+      "cost": 0.023616,
+      "ms": 31872
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911873-2lvl6NrY6YFwhs7rirwT",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5442,
+      "completionTokens": 6898,
+      "reasoningTokens": 5782,
+      "cost": 0.029949,
+      "ms": 45183
+    },
+    {
+      "role": "check",
+      "id": "gen-1793911919-jPkcjRvKb7JsjDXPiqyu",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 5595,
+      "completionTokens": 10691,
+      "reasoningTokens": 9633,
+      "cost": 0.0442875,
+      "ms": 58265
+    }
+  ],
+  "titles": {
+    "NEH.1.1-2": {
+      "text": "Nehemiah asks Hanani about the Jews and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.1.3-3": {
+      "text": "Nehemiah hears that Jerusalem’s wall is broken down",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.1.4-5": {
+      "text": "Nehemiah weeps, fasts and begins to pray to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.1.6-7": {
+      "text": "Nehemiah confesses the sins of Israel to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.1.8-9": {
+      "text": "Nehemiah asks God to remember the promise to Moses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.1.10-11": {
+      "text": "Nehemiah prays that the king will show him mercy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.1-2": {
+      "text": "The king sees that Nehemiah is sad",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.3-3": {
+      "text": "Nehemiah tells the king he is sad about Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.4-6": {
+      "text": "Nehemiah asks the king to send him to rebuild Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft mentions Nehemiah’s request but leaves out that the king agrees to send him in verse 6.",
+        "suggestion": "The king agrees to send Nehemiah to rebuild Jerusalem"
+      }
+    },
+    "NEH.2.7-8": {
+      "text": "The king gives Nehemiah letters and timber for the work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.9-10": {
+      "text": "Sanballat and Tobiah are upset by Nehemiah’s coming",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.11-12": {
+      "text": "Nehemiah secretly goes out at night in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.13-14": {
+      "text": "Nehemiah inspects the broken walls and gates at night",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.15-16": {
+      "text": "Nehemiah returns and has told no one his plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.17-18": {
+      "text": "Nehemiah urges the people to rebuild, and they agree",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.2.19-20": {
+      "text": "Enemies mock the builders; Nehemiah trusts God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["plain"],
+        "why": "The men who mock are named in the text as Sanballat, Tobiah, and Geshem rather than called enemies.",
+        "suggestion": "Sanballat and others mock, but Nehemiah trusts God"
+      }
+    },
+    "NEH.3.1-2": {
+      "text": "Eliashib and the priests rebuild the Sheep Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.3-5": {
+      "text": "The sons of Hassenaah and others rebuild the Fish Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.6-7": {
+      "text": "Joiada and Meshullam repair the Jeshanah Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.8-10": {
+      "text": "Uzziel, Hananiah and others repair the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.11-12": {
+      "text": "Shallum and his daughters repair part of the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["covers"],
+        "why": "The draft covers only Shallum in verse 12 and leaves out Malchijah and Hasshub from verse 11.",
+        "suggestion": "Malchijah, Shallum and his daughters repair the wall"
+      }
+    },
+    "NEH.3.13-13": {
+      "text": "Hanun and the people of Zanoah repair the Valley Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.14-15": {
+      "text": "Malchijah and Shallun repair the Dung and Fountain Gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.16-17": {
+      "text": "Levites and rulers repair the wall near David’s tombs",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.18-19": {
+      "text": "Binnui, Ezer and others repair more of the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.20-21": {
+      "text": "Baruch and Meremoth repair the wall by Eliashib’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.22-24": {
+      "text": "Priests, Benjamin and Azariah repair the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.25-27": {
+      "text": "Palal, Pedaiah and the Tekoites repair more of the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.28-30": {
+      "text": "Priests and others repair the wall near the Horse Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.3.31-32": {
+      "text": "Goldsmiths and merchants repair the wall to the Sheep Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.1-3": {
+      "text": "Sanballat and Tobiah mock the Jews who rebuild the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.4-6": {
+      "text": "Nehemiah prays, and the people keep building the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.7-8": {
+      "text": "Sanballat and others plan to fight against Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.9-9": {
+      "text": "Nehemiah and the people pray and set a guard",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.10-11": {
+      "text": "Judah is discouraged and enemies plan to attack",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.12-14": {
+      "text": "Nehemiah tells the people not to fear and to fight",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.15-16": {
+      "text": "Half of Nehemiah’s men work and half hold weapons",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.17-18": {
+      "text": "Nehemiah’s workers build with weapons ready",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.19-20": {
+      "text": "Nehemiah tells the people to gather when the horn sounds",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.4.21-23": {
+      "text": "Nehemiah’s people guard at night and work by day",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.1-3": {
+      "text": "Poor Jews cry out because of hunger and debt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.4-5": {
+      "text": "Jews borrow for taxes and must sell children as slaves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.6-8": {
+      "text": "Nehemiah angrily rebukes the nobles for charging interest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.9-11": {
+      "text": "Nehemiah tells the nobles to return fields and homes",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.12-13": {
+      "text": "The nobles swear an oath to do as Nehemiah says",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.14-15": {
+      "text": "Nehemiah does not burden the people like earlier governors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.16-17": {
+      "text": "Nehemiah works on the wall and feeds 150 at his table",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.5.18-19": {
+      "text": "Nehemiah gives up the governor’s food and asks God’s favor",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.1-2": {
+      "text": "Sanballat and Geshem invite Nehemiah to meet, planning harm",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.3-4": {
+      "text": "Nehemiah refuses four times to leave the work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.5-6": {
+      "text": "Sanballat falsely says Nehemiah plans to become king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.7-7": {
+      "text": "Sanballat threatens to tell the king and asks to meet",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.8-9": {
+      "text": "Nehemiah denies the rumors and asks God for strength",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.10-11": {
+      "text": "Nehemiah refuses Shemaiah’s advice to hide in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.12-14": {
+      "text": "Nehemiah sees that Tobiah and Sanballat hired Shemaiah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.15-16": {
+      "text": "The wall is finished in 52 days and enemies are afraid",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.6.17-19": {
+      "text": "Tobiah exchanges letters with the nobles of Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.1-2": {
+      "text": "Nehemiah appoints Hanani and Hananiah to lead Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.3-3": {
+      "text": "Nehemiah gives orders about opening the city gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.4-4": {
+      "text": "Jerusalem is large, but few people live there",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.5-5": {
+      "text": "Nehemiah decides to register the people by family",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.6-7": {
+      "text": "Nehemiah lists the people who returned from Babylon",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.8-10": {
+      "text": "Returning families of Parosh, Shephatiah and Arah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase rather than a full sentence.",
+        "suggestion": "Families of Parosh, Shephatiah and Arah return"
+      }
+    },
+    "NEH.7.11-14": {
+      "text": "Returning families of Pahath-moab, Elam, Zattu and Zaccai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase rather than a full sentence.",
+        "suggestion": "Families of Pahath-moab, Elam, Zattu and Zaccai return"
+      }
+    },
+    "NEH.7.15-18": {
+      "text": "Returning families of Binnui, Bebai, Azgad and Adonikam",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase rather than a full sentence.",
+        "suggestion": "Families of Binnui, Bebai, Azgad and Adonikam return"
+      }
+    },
+    "NEH.7.19-22": {
+      "text": "Returning families of Bigvai, Adin, Ater and Hashum",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase rather than a full sentence.",
+        "suggestion": "Families of Bigvai, Adin, Ater and Hashum return"
+      }
+    },
+    "NEH.7.23-26": {
+      "text": "Returning families of Bezai, Hariph, Gibeon and Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The heading is a noun phrase rather than a full sentence.",
+        "suggestion": "Families of Bezai, Hariph, Gibeon and Bethlehem return"
+      }
+    },
+    "NEH.7.27-30": {
+      "text": "The numbers of men from Anathoth and other towns who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, which exceeds the limit of 60.",
+        "suggestion": "The numbers of men from Anathoth and other towns"
+      }
+    },
+    "NEH.7.31-34": {
+      "text": "The numbers of men from Michmash, Bethel and other places",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.35-38": {
+      "text": "The numbers from Harim, Jericho, Lod and Senaah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.39-42": {
+      "text": "The numbers of priests who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.43-45": {
+      "text": "The numbers of Levites, singers and gatekeepers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.46-49": {
+      "text": "The first families of temple servants who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.50-52": {
+      "text": "More families of temple servants who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.53-56": {
+      "text": "The last families of temple servants who returned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.57-60": {
+      "text": "The families of Solomon’s servants and the total number",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.61-63": {
+      "text": "Some families could not prove they came from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.64-65": {
+      "text": "Priests without family records are barred from the priesthood",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "gates": ["length"],
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title has 61 characters, which exceeds the limit of 60.",
+        "suggestion": "Priests without family records are excluded"
+      }
+    },
+    "NEH.7.66-67": {
+      "text": "The total number of people, servants and singers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.68-69": {
+      "text": "The numbers of horses, mules, camels and donkeys",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.70-72": {
+      "text": "The governor and the people give gifts for the work",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.7.73-73": {
+      "text": "The priests and the people settle in their towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.1-3": {
+      "text": "Ezra reads the Law to the people at the Water Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.4-5": {
+      "text": "Ezra stands on a platform and the people stand up",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.6-8": {
+      "text": "The people worship and the Levites explain the Law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.9-10": {
+      "text": "Nehemiah tells the people not to weep but to feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.11-12": {
+      "text": "The Levites calm the people, who eat and rejoice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.13-15": {
+      "text": "Leaders find the command to live in booths",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.16-17": {
+      "text": "The people make booths and celebrate with great joy",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.8.18-18": {
+      "text": "Ezra reads the Law daily during the seven-day feast",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.1-2": {
+      "text": "The Israelites fast and confess their sins",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.3-4": {
+      "text": "The people read the Law and the Levites cry out to God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.5-6": {
+      "text": "The Levites call the people to bless God the Creator",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.7-8": {
+      "text": "The Levites remember God’s covenant with Abraham",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.9-10": {
+      "text": "The Levites remember how God saved Israel from Egypt",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.11-11": {
+      "text": "The Levites remember God dividing the sea",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.12-13": {
+      "text": "The Levites remember God’s guidance and the laws at Sinai",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.14-15": {
+      "text": "The Levites remember the Sabbath, bread and water from God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.16-17": {
+      "text": "Israel’s fathers disobeyed, but God forgave them",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.18-19": {
+      "text": "God did not leave Israel even after the calf idol",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.20-21": {
+      "text": "God cared for Israel in the wilderness for forty years",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.22-22": {
+      "text": "God gave Israel kingdoms and the land of Sihon and Og",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.23-24": {
+      "text": "God gave Israel many descendants and the promised land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.25-25": {
+      "text": "Israel took strong cities and enjoyed God’s goodness",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.26-27": {
+      "text": "Israel rebelled and killed prophets; God sent deliverers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.28-29": {
+      "text": "Israel did evil again, and God saved Israel many times",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.30-31": {
+      "text": "God was patient and did not destroy Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.32-34": {
+      "text": "The people say God is just and Israel has sinned",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.35-35": {
+      "text": "Israel did not serve God even in a good land",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.36-37": {
+      "text": "The people are slaves in the land God gave Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.9.38-38": {
+      "text": "The people make a written agreement, sealed by leaders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.1-3": {
+      "text": "Nehemiah and others sign the agreement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.4-8": {
+      "text": "More priests sign the agreement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.9-14": {
+      "text": "Levites and leaders of the people sign the agreement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.15-21": {
+      "text": "More leaders of the people sign the agreement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.22-27": {
+      "text": "The last leaders sign the agreement",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.28-29": {
+      "text": "The people swear an oath to obey God’s law",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.30-31": {
+      "text": "The people vow not to intermarry and to keep the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.32-33": {
+      "text": "The people promise a yearly gift for the temple service",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.34-36": {
+      "text": "The people promise wood and the first of crops and animals",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.37-38": {
+      "text": "The people promise tithes to the Levites and priests",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.10.39-39": {
+      "text": "The people promise not to neglect God’s house",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.1-2": {
+      "text": "Leaders and one in ten people settle in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.3-4": {
+      "text": "Settlers from Judah live in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.5-6": {
+      "text": "More men from Judah settle in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.7-9": {
+      "text": "Settlers from Benjamin in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "Settlers from Benjamin live in Jerusalem"
+      }
+    },
+    "NEH.11.10-12": {
+      "text": "Priests who settle in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "Priests settle in Jerusalem"
+      }
+    },
+    "NEH.11.13-14": {
+      "text": "More priests who settle in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "More priests settle in Jerusalem"
+      }
+    },
+    "NEH.11.15-16": {
+      "text": "Levites who lead the work outside the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "Levites lead the work outside the temple"
+      }
+    },
+    "NEH.11.17-18": {
+      "text": "Other Levites in Jerusalem, 284 in all",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "284 Levites live in Jerusalem"
+      }
+    },
+    "NEH.11.19-19": {
+      "text": "172 gatekeepers live in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.20-21": {
+      "text": "Others live in Judah’s villages and on Ophel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.22-24": {
+      "text": "Uzzi leads the Levites and Pethahiah serves the king",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.25-27": {
+      "text": "Some people of Judah lived in towns and villages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.11.28-36": {
+      "text": "People of Judah and Benjamin settled in other towns",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.1-3": {
+      "text": "These priests came back with Zerubbabel and Jeshua",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.4-7": {
+      "text": "These were the leaders of the priests in Jeshua’s time",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.8-9": {
+      "text": "Levites led the songs of thanksgiving",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.10-11": {
+      "text": "Jeshua’s family line down to Jaddua",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "The descendants of Jeshua are listed down to Jaddua"
+      }
+    },
+    "NEH.12.12-14": {
+      "text": "Heads of priestly families in the days of Joiakim",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "Priestly family heads served in the days of Joiakim"
+      }
+    },
+    "NEH.12.15-21": {
+      "text": "More heads of priestly families in Joiakim’s days",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is not a full sentence.",
+        "suggestion": "More priestly family heads served in Joiakim’s days"
+      }
+    },
+    "NEH.12.22-23": {
+      "text": "Priests and Levites were recorded in the days of Darius",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.24-26": {
+      "text": "Levites praised God and guarded the storerooms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.27-28": {
+      "text": "Levites and singers come to Jerusalem for the dedication",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.29-30": {
+      "text": "Priests and Levites purify the people, gates and wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.31-31": {
+      "text": "Nehemiah puts two thanksgiving choirs on the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.32-35": {
+      "text": "Leaders and priests with trumpets follow the first choir",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.36-37": {
+      "text": "Ezra leads the first choir to the Water Gate",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.38-39": {
+      "text": "Nehemiah follows the second choir along the wall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.40-42": {
+      "text": "Both choirs and the leaders stand in the house of God",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.43-43": {
+      "text": "The people offer sacrifices and rejoice in Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.44-45": {
+      "text": "Men are appointed over the storerooms for the offerings",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.12.46-47": {
+      "text": "All Israel gave daily portions to singers and gatekeepers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.4-5": {
+      "text": "Eliashib gave Tobiah a large room in the temple",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.6-7": {
+      "text": "Nehemiah returns and finds the evil Eliashib did",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.8-9": {
+      "text": "Nehemiah throws Tobiah’s goods out and purifies the rooms",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.10-11": {
+      "text": "Nehemiah rebukes the officials and restores the Levites",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.12-14": {
+      "text": "Judah brings tithes and Nehemiah appoints treasurers",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.15-15": {
+      "text": "Nehemiah warns people who work and sell on the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.16-18": {
+      "text": "Nehemiah rebukes the nobles for breaking the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.19-20": {
+      "text": "Nehemiah has the gates shut during the Sabbath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.21-22": {
+      "text": "Nehemiah warns the merchants and sets Levites at the gates",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.23-24": {
+      "text": "Some Jews married foreign women from nearby peoples",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.25-27": {
+      "text": "Nehemiah rebukes the men and forbids foreign marriages",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.28-29": {
+      "text": "Nehemiah drives away a son of the high priest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "NEH.13.30-31": {
+      "text": "Nehemiah purifies priests and Levites and sets duties",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

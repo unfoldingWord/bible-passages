@@ -1,0 +1,365 @@
+{
+  "language": "en",
+  "book": "MIC",
+  "bible": "bsb-mic",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793916091-BVhKFKdgVlIaoHWD7N6O",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 5187,
+      "completionTokens": 3379,
+      "reasoningTokens": 2589,
+      "cost": 0.044164,
+      "ms": 22195
+    },
+    {
+      "role": "draft",
+      "id": "gen-1793916113-d0BH1Mz17YMvgdqw2LWU",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 4748,
+      "completionTokens": 2901,
+      "reasoningTokens": 2158,
+      "cost": 0.038506,
+      "ms": 19635
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916132-stdPAhTGkSMYvROCT98V",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 4120,
+      "completionTokens": 7172,
+      "reasoningTokens": 6470,
+      "cost": 0.029985,
+      "ms": 52013
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916185-dgfqSGtV0cReJkLMZeZw",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 3848,
+      "completionTokens": 3618,
+      "reasoningTokens": 2987,
+      "cost": 0.0164535,
+      "ms": 28762
+    }
+  ],
+  "titles": {
+    "MIC.1.1-1": {
+      "text": "The LORD gives Micah a message about Samaria and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.2-4": {
+      "text": "The LORD comes down and the mountains melt like wax",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.5-5": {
+      "text": "Jacob’s sin is seen in Samaria and Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.6-7": {
+      "text": "The LORD will destroy Samaria and its idols",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.8-10": {
+      "text": "Micah mourns because Samaria’s wound has reached Judah",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.11-12": {
+      "text": "Disaster from the LORD reaches the towns near Jerusalem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.13-14": {
+      "text": "Micah speaks against Lachish and Moresheth-gath",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.1.15-16": {
+      "text": "Micah tells the people of Judah to mourn for exile",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.2.1-2": {
+      "text": "Woe to people who plan evil and take fields and houses",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "unreviewed",
+      "check": {
+        "by": "ai:google/gemini-3.8-flash",
+        "verdict": "disagree",
+        "criteria": ["style"],
+        "why": "The title is an exclamation rather than a full sentence making a statement.",
+        "suggestion": "Micah warns those who plan evil and take fields and houses"
+      }
+    },
+    "MIC.2.3-5": {
+      "text": "The LORD plans disaster for the proud oppressors",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.2.6-8": {
+      "text": "God accuses his people of acting like enemies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.2.9-11": {
+      "text": "God accuses oppressors of driving out women and children",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.1-3": {
+      "text": "Micah accuses Israel’s leaders of harming the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.4-4": {
+      "text": "The LORD will not answer the leaders’ cry",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.5-7": {
+      "text": "God will bring darkness on prophets who lead people astray",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.8-8": {
+      "text": "Micah is filled with power to speak about Israel’s sin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.9-11": {
+      "text": "Leaders, priests and prophets act wrongly for money",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.3.12-12": {
+      "text": "Jerusalem will become a heap of rubble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.1-1": {
+      "text": "In the last days the LORD’s mountain will be highest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.2-3": {
+      "text": "Nations will learn God’s ways and live in peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.4-5": {
+      "text": "God’s people will live safely and follow the LORD forever",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.6-8": {
+      "text": "The LORD will gather the outcast and rule in Zion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.9-10": {
+      "text": "Zion will go to Babylon, and the LORD will rescue her",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.11-12": {
+      "text": "Many nations gather against Zion, but God has a plan",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.4.13-13": {
+      "text": "Zion will break many peoples and give wealth to the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.1-1": {
+      "text": "Enemies attack Jerusalem and strike Israel’s judge",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.2-3": {
+      "text": "A ruler from long ago will come from small Bethlehem",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.4-5": {
+      "text": "The ruler will shepherd Israel and bring peace",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.6-6": {
+      "text": "The ruler will deliver Israel from Assyria",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.7-7": {
+      "text": "Jacob’s remnant will be like dew from the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.8-9": {
+      "text": "Jacob’s remnant will be like a strong lion",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.10-11": {
+      "text": "The LORD will destroy Israel’s horses, chariots and cities",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.5.12-15": {
+      "text": "The LORD will remove sorcery and idols from Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.1-2": {
+      "text": "The LORD calls the mountains to hear his case against Israel",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.3-5": {
+      "text": "The LORD reminds Israel how he saved the people",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.6-8": {
+      "text": "God wants people to act justly, love mercy and walk humbly",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.9-10": {
+      "text": "The LORD speaks against dishonest gain in the city",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.11-12": {
+      "text": "The LORD condemns false weights, violence and lies",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.13-15": {
+      "text": "Because of sin, Israel will not enjoy its harvest",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.6.16-16": {
+      "text": "Israel followed Ahab’s ways, so it will become a ruin",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.1-2": {
+      "text": "Micah grieves that no godly person is left",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.3-4": {
+      "text": "Leaders are corrupt, and the day of punishment has come",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.5-6": {
+      "text": "Micah says people cannot trust even family and friends",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.7-8": {
+      "text": "Micah will wait for God, who will be his light",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.9-9": {
+      "text": "Israel bears God’s anger until he brings justice",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.10-10": {
+      "text": "Israel’s enemy will be shamed and trampled",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.11-13": {
+      "text": "Israel’s walls will be rebuilt and people will return",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.14-15": {
+      "text": "Micah asks God to shepherd his people and show wonders",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.16-17": {
+      "text": "Nations will be ashamed and tremble before the LORD",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.18-18": {
+      "text": "Micah praises God for pardoning sin and showing love",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "MIC.7.19-20": {
+      "text": "God will forgive Israel’s sins and keep his promises",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}

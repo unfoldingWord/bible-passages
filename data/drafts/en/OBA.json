@@ -1,0 +1,93 @@
+{
+  "language": "en",
+  "book": "OBA",
+  "bible": "bsb-oba",
+  "prompt": {
+    "file": "prompts/segment-titles.md",
+    "sha256": "e3e08e032d32fa5b6399653612627a40953a94f35b7a3bcef62d53dc54ae31ee"
+  },
+  "calls": [
+    {
+      "role": "draft",
+      "id": "gen-1793915994-0M480s9pqWjHU0jH85np",
+      "model": "anthropic/claude-sonnet-5.5",
+      "promptTokens": 2644,
+      "completionTokens": 2063,
+      "reasoningTokens": 1765,
+      "cost": 0.025918,
+      "ms": 14564
+    },
+    {
+      "role": "check",
+      "id": "gen-1793916008-SPYvwAnMywTKkVWNseoX",
+      "model": "google/gemini-3.8-flash",
+      "promptTokens": 1964,
+      "completionTokens": 2125,
+      "reasoningTokens": 1855,
+      "cost": 0.00944175,
+      "ms": 17170
+    }
+  ],
+  "titles": {
+    "OBA.1.1-2": {
+      "text": "The LORD will make Edom small among the nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.3-4": {
+      "text": "The LORD will bring proud Edom down from the heights",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.5-6": {
+      "text": "Edom will be robbed worse than by thieves",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.7-9": {
+      "text": "Allies will betray Edom and its wise men will fall",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.10-11": {
+      "text": "Edom will be shamed for standing aside when Jacob suffered",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.12-14": {
+      "text": "Edom should not have gloated when Judah was in trouble",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.15-16": {
+      "text": "The Day of the LORD is near for all nations",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.17-18": {
+      "text": "Zion will be safe, and Edom will be destroyed",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.19-19": {
+      "text": "Israel will take the lands of Edom and the Philistines",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    },
+    "OBA.1.20-21": {
+      "text": "Israel’s exiles will take new land, and the LORD will rule",
+      "source": "ai:anthropic/claude-sonnet-5.5",
+      "status": "ai-checked",
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+    }
+  }
+}
