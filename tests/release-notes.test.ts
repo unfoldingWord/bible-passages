@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { STRUCTURE_BOOKS } from "../scripts/lib/books.ts";
 import type { DisputedRecord } from "../scripts/lib/dispute-titles.ts";
@@ -10,9 +10,16 @@ import {
   knownIssueProblems,
   renderNotes,
   shipped,
+  shippedSegments,
+  SHIPPED_FLOOR,
+  tableProblems,
 } from "../scripts/lib/release-notes.ts";
 import { BLANK_TITLE } from "../scripts/lib/segment-titles.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
+import {
+  SHIPPED_STATUSES,
+  type TitleEntries,
+} from "../scripts/lib/title-table.ts";
 
 // A Matthew-shaped structure, so MAT.17.21-21 is one of BLANK_SEGMENTS:
 // pericope A has segments 1-6, pericope B only segment 7 (decision 12's
@@ -169,6 +176,17 @@ describe("countBook", () => {
     ).toThrow("s3: title is not its draft's as built");
   });
 
+  it("counts the blank segments' fixed title in English only", () => {
+    // A second language with a title on the blank segment does not add to
+    // `blank`, which the notes report as titled in English.
+    const fr = countBook("fr", structure, {
+      "MAT.17.21-21": t("Pas dans les plus anciens", "ai-checked"),
+    });
+    expect(fr.blank).toBe(0);
+    expect(fr.status["ai-checked"]).toBe(1);
+    expect(countBook("fr", structure, {}).blank).toBe(0);
+  });
+
   it("counts a book with no titles as not drafted", () => {
     const c = countBook(
       "en",
@@ -190,6 +208,50 @@ describe("addCounts", () => {
     expect(sum.held).toEqual({ dispute: 2, check: 2, review: 2, reused: 2 });
     expect(sum.pericopeStatus.unreviewed).toBe(6);
     expect(sum.blank).toBe(2);
+  });
+});
+
+describe("SHIPPED_FLOOR", () => {
+  it("is the lowest shipped status", () => {
+    expect(SHIPPED_FLOOR).toBe(SHIPPED_STATUSES[0]);
+    expect(SHIPPED_FLOOR).toBe("ai-checked");
+  });
+});
+
+describe("shippedSegments and tableProblems", () => {
+  const expected = shippedSegments(structure, titles);
+
+  it("lists the segment titles at the floor or above, key to text", () => {
+    expect(expected).toEqual({
+      s1: "One",
+      s2: "Two",
+      "MAT.17.21-21": BLANK_TITLE.text,
+    });
+    expect(Object.keys(expected)).toHaveLength(
+      shipped(countBook("en", structure, titles, drafts))
+    );
+  });
+
+  it("accepts a table that ships exactly those", () => {
+    expect(tableProblems("t.json", expected, { ...expected })).toEqual([]);
+  });
+
+  it("refuses a swapped pair though the counts agree", () => {
+    // s2 shipped in place of s3: same count, different keys.
+    const { s2: _, ...rest } = expected;
+    expect(tableProblems("t.json", expected, { ...rest, s3: "Two" })).toEqual([
+      "t.json: s2 is at ai-checked or above in data/ but not in the table",
+      "t.json: s3 is in the table but not at ai-checked or above in data/",
+    ]);
+  });
+
+  it("refuses a text that differs from data/", () => {
+    expect(
+      tableProblems("t.json", expected, { ...expected, s1: "Two", s2: "One" })
+    ).toEqual([
+      "t.json: s1 differs from its title in data/",
+      "t.json: s2 differs from its title in data/",
+    ]);
   });
 });
 
@@ -252,11 +314,17 @@ describe("renderNotes", () => {
     tag: "v1.2.3",
     languages: [
       ["en", c],
-      ["fr", countBook("fr", structure, {})],
+      // fr titles the blank segment: not counted as titled in English.
+      [
+        "fr",
+        countBook("fr", structure, {
+          "MAT.17.21-21": t("Pas dans les plus anciens", "ai-checked"),
+        }),
+      ],
     ],
     shippedBooks: [
       ["en", [["MAT", 3]]],
-      ["fr", []],
+      ["fr", [["MAT", 1]]],
     ],
     issues: [
       { issue: 232, key: "s1", language: "en", text: "Wrong | scope." },
@@ -265,26 +333,28 @@ describe("renderNotes", () => {
     title: (language, key) =>
       language === "en" && key === "s1" ? titles.s1 : undefined,
   });
+  const lines = notes.split("\n");
 
   it("counts per language and in total", () => {
-    expect(notes).toContain("| | en | fr | Total |");
-    expect(notes).toContain("| Segments | 8 | 8 | 16 |");
-    expect(notes).toContain("| Titled | 7 | 0 | 7 |");
-    expect(notes).toContain("| … `approved` | 1 | 0 | 1 |");
-    expect(notes).toContain("| … `unreviewed` | 4 | 0 | 4 |");
-    expect(notes).toContain("| Shipped (`ai-checked` or above) | 3 | 0 | 3 |");
-    expect(notes).toContain("| Not shipped | 5 | 8 | 13 |");
-    expect(notes).toContain(
+    expect(lines).toContain("| | en | fr | Total |");
+    expect(lines).toContain("| Segments | 8 | 8 | 16 |");
+    expect(lines).toContain("| Titled | 7 | 1 | 8 |");
+    expect(lines).toContain("| … `approved` | 1 | 0 | 1 |");
+    expect(lines).toContain("| … `ai-checked` | 1 | 1 | 2 |");
+    expect(lines).toContain("| … `unreviewed` | 4 | 0 | 4 |");
+    expect(lines).toContain("| Shipped (`ai-checked` or above) | 3 | 1 | 4 |");
+    expect(lines).toContain("| Not shipped | 5 | 7 | 12 |");
+    expect(lines).toContain(
       "| … held: a third model's answer left it `unreviewed` | 1 | 0 | 1 |"
     );
-    expect(notes).toContain("| … not drafted (no title) | 1 | 8 | 9 |");
-    expect(notes).toContain("| Pericopes | 4 | 4 | 8 |");
-    expect(notes).toContain("| No title | 1 | 4 | 5 |");
-    expect(notes).toContain(
-      "Segments BSB numbers but leaves blank (MAT.17.21-21, MRK.11.26-26, ROM.16.24-24), titled: 1."
+    expect(lines).toContain("| … not drafted (no title) | 1 | 7 | 8 |");
+    expect(lines).toContain("| Pericopes | 4 | 4 | 8 |");
+    expect(lines).toContain("| No title | 1 | 4 | 5 |");
+    expect(lines).toContain(
+      'Segments BSB numbers but leaves blank (MAT.17.21-21, MRK.11.26-26, ROM.16.24-24), titled in English: 1. They are never drafted: in English each has one fixed title a person chose, "Not in the oldest manuscripts", counted above as `approved`.'
     );
-    expect(notes).toContain("Books with segment titles shipped, en: MAT (3).");
-    expect(notes).toContain("Books with segment titles shipped, fr: none.");
+    expect(lines).toContain("Books with segment titles shipped, en: MAT (3).");
+    expect(lines).toContain("Books with segment titles shipped, fr: MAT (1).");
     expect(notes).toMatch(/^tc-mobile template packages v0 .* for v1\.2\.3,/);
   });
 
@@ -292,15 +362,17 @@ describe("renderNotes", () => {
     expect(notes).toContain(
       "- s1 (en, `ai-checked`): “One”. Wrong \\| scope. (#232)\n- Not about a title. (#9)\n"
     );
-    expect(
-      renderNotes({
-        tag: "v0.0.1",
-        languages: [],
-        shippedBooks: [],
-        issues: [],
-        title: () => undefined,
-      })
-    ).toContain("## Known issues\n\nNone listed.\n");
+    const empty = renderNotes({
+      tag: "v0.0.1",
+      languages: [],
+      shippedBooks: [["en", []]],
+      issues: [],
+      title: () => undefined,
+    });
+    expect(empty).toContain("## Known issues\n\nNone listed.\n");
+    expect(empty.split("\n")).toContain(
+      "Books with segment titles shipped, en: none."
+    );
   });
 });
 
@@ -328,13 +400,29 @@ describe("scripts/release/notes.ts on the committed data", () => {
       segments += s.segments.length;
       pericopes += s.pericopes.length;
     }
-    expect(run.stdout).toContain(`| Segments | ${segments} | ${segments} |`);
-    expect(run.stdout).toContain(`| Pericopes | ${pericopes} | ${pericopes} |`);
+    // Every language counts every segment; "Total" adds them.
+    const languages = readdirSync("data/titles", { withFileTypes: true })
+      .filter((e) => e.isDirectory())
+      .map((e) => e.name);
+    const row = (label: string, n: number) =>
+      `\n| ${label} | ${[...languages.map(() => n), n * languages.length].join(" | ")} |\n`;
+    expect(run.stdout).toContain(row("Segments", segments));
+    expect(run.stdout).toContain(row("Pericopes", pericopes));
   });
 
-  it("lists GEN.9.11-13 as a known issue (#232)", () => {
-    expect(run.stdout).toMatch(
-      /^- GEN\.9\.11-13 \(en, `[a-z-]+`\): .*\(#232\)$/m
+  it("lists GEN.9.11-13 as a known issue (#232) with its built title and status", () => {
+    const built = (
+      JSON.parse(readFileSync("data/titles/en/GEN.json", "utf8")) as {
+        titles: TitleEntries;
+      }
+    ).titles["GEN.9.11-13"]!;
+    const issue = (
+      JSON.parse(readFileSync("known-issues.json", "utf8")) as {
+        issues: { issue: number; text: string }[];
+      }
+    ).issues.find((i) => i.issue === 232)!;
+    expect(run.stdout).toContain(
+      `\n- GEN.9.11-13 (en, \`${built.status}\`): “${built.text}”. ${issue.text} (#232)\n`
     );
   });
 });
