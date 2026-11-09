@@ -240,9 +240,16 @@ describe("shippedSegments and tableProblems", () => {
     // s2 shipped in place of s3: same count, different keys.
     const { s2: _, ...rest } = expected;
     expect(tableProblems("t.json", expected, { ...rest, s3: "Two" })).toEqual([
-      "t.json: s2 is at ai-checked or above in data/ but not in the table",
-      "t.json: s3 is in the table but not at ai-checked or above in data/",
+      `t.json: s2 is at ${SHIPPED_FLOOR} or above in data/ but not in the table`,
+      `t.json: s3 is in the table but not at ${SHIPPED_FLOOR} or above in data/`,
     ]);
+  });
+
+  it("refuses segments that are not an object of strings", () => {
+    for (const v of [undefined, null, [], "x", { s1: 1 }])
+      expect(tableProblems("t.json", expected, v)).toEqual([
+        "t.json: segments is not an object of strings",
+      ]);
   });
 
   it("refuses a text that differs from data/", () => {

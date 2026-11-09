@@ -12,6 +12,7 @@ import {
   countBook,
   emptyCounts,
   addCounts,
+  isSegmentMap,
   knownIssueProblems,
   renderNotes,
   shippedSegments,
@@ -70,13 +71,13 @@ for (const language of languages) {
     // The title tables must ship exactly the titles counted as shipped:
     // the same keys with the same text, not just as many.
     const tablePath = `dist/tc-mobile/titles/${language}/${book}.json`;
-    const table = has(tablePath)
-      ? (read(tablePath) as { segments: Record<string, string> }).segments
+    const table: unknown = has(tablePath)
+      ? (read(tablePath) as { segments?: unknown } | null)?.segments
       : {};
     problems.push(
       ...tableProblems(tablePath, shippedSegments(structure, titles), table)
     );
-    const inTable = Object.keys(table).length;
+    const inTable = isSegmentMap(table) ? Object.keys(table).length : 0;
     if (inTable > 0) books.push([book, inTable]);
   }
   counted.push([language, total]);

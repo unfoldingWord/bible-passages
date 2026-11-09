@@ -155,7 +155,10 @@ export function countBook(
 /**
  * The segment titles a book's title table must hold, key to text: every
  * segment of `structure` whose title in `titles` is at SHIPPED_FLOOR or
- * above.
+ * above, with its text as stored. It re-derives the table rather than
+ * calling titleTable (title-table.ts), which writes the same rule: ship a
+ * title whose status is in SHIPPED_STATUSES, text unchanged (it throws on
+ * an empty or padded text rather than trimming it).
  */
 export function shippedSegments(
   structure: Structure,
@@ -170,17 +173,27 @@ export function shippedSegments(
   return out;
 }
 
+/** A title table's `segments` shape: an object of string values. */
+export const isSegmentMap = (v: unknown): v is Record<string, string> =>
+  typeof v === "object" &&
+  v !== null &&
+  !Array.isArray(v) &&
+  Object.values(v).every((t) => typeof t === "string");
+
 /**
  * How a title table's `segments` (`table`, at `where`) differs from what
  * data/ ships (`expected`, from shippedSegments): each key on one side
  * only, and each key whose text differs, so equal counts with different
- * keys still fail.
+ * keys still fail. A `table` that is not an object of strings is one
+ * problem.
  */
 export function tableProblems(
   where: string,
   expected: Record<string, string>,
-  table: Record<string, string>
+  table: unknown
 ): string[] {
+  if (!isSegmentMap(table))
+    return [`${where}: segments is not an object of strings`];
   const problems: string[] = [];
   for (const key of Object.keys(expected))
     if (!Object.hasOwn(table, key))
