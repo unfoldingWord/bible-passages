@@ -39,6 +39,7 @@ import {
   segmentInputs,
   verseTexts,
 } from "../lib/segment-titles.ts";
+import { runSummary } from "../lib/segment-summary.ts";
 import { readSource } from "../lib/sources.ts";
 import { parseHeadings, type Structure } from "../lib/structure.ts";
 import { writeJson } from "../lib/write.ts";
@@ -127,14 +128,14 @@ try {
   });
   if (record) {
     await writeJson(new URL(`en/${book}.json`, out), record);
-    const titles = Object.values(record.titles);
     console.log(
-      `en ${book}: ${titles.length} of ${inputs.length} segments drafted ` +
-        `(${reused.length} reuse their pericope title, ` +
-        `${blank.length} blank in BSB skipped; the build writes their title), ` +
-        `${titles.filter((t) => t.status === "ai-checked").length} ai-checked, ` +
-        `${titles.filter((t) => t.check?.verdict === "disagree").length} disagreements, ` +
-        `${titles.filter((t) => t.gates).length} gate failures`
+      runSummary({
+        book,
+        inputs: inputs.length,
+        reused: reused.length,
+        blank: blank.length,
+        titles: record.titles,
+      })
     );
     for (const c of record.calls)
       console.log(
