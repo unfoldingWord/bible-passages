@@ -4,6 +4,57 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-05 — English segment titles for 63 books; release notes from the data; three decisions recorded
+
+The session ran past midnight UTC into 6 Nov. Lanes ran as background agents, each in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green: under the maintainer's grant for 5 Nov, then under their approval to finish the in-flight run PRs the same way. 13 PRs merged, #240 to #260.
+
+### Shipped
+
+| What                                                                                                                                                | Evidence                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| English segment titles drafted and checked for 57 more books, in 8 PRs: 12,171 segment titles now ship (`ai-checked` or above)                      | #248, #249, #255, #250, #256, #257, #259, #260 |
+| Release notes generated from the built data: titles by status, why each held title is held, and a known-issues list (`known-issues.json`)           | #245 (closes #243)                             |
+| ADRs 0006 (v0.1.0 ships in English only), 0007 (v0.1.0 keys on the UFW chunk files) and 0008 (the English run starts before the #207 verdict)       | #246 (closes #244)                             |
+| `verseTexts` stops with an error when a footnote or cross-reference span runs past a verse or chapter marker; three exact verse strings pinned      | #240 (closes #235)                             |
+| The drafting summary says blank BSB segments are skipped and the build writes their title                                                           | #241 (closes #238)                             |
+| A checker suggestion over 60 characters no longer fails the tests; the limit applies to shipped titles (Proverbs and Ecclesiastes committed as run) | #260 (closes #258)                             |
+| Measured the local `claude` and `codex` CLIs against OpenRouter on one book and the 9 blind disputes                                                | #253 (Part of #251)                            |
+
+`main` at `ae2e650`: `npm run verify` 11,767 passed, 2 todo, 28 test files (run in the main checkout at `ae2e650`). `scripts/release/run.sh --dry-run` passed at `c479756` (before the run PRs).
+
+### Measured
+
+- **Segment titles on main `ae2e650`** (`node scripts/release/notes.ts`): 13,770 segments; 12,171 shipped; 792 held (checker disagreed or a gate failed); 255 reuse their pericope heading; 552 not drafted (Ezekiel).
+- **Run spend** (the lane's records): $43.05, against an estimate of about $34; $6.77 of it in 7 stopped runs, all from replies that left out single-verse segments or broke off (#252). OpenRouter key limit raised to $70 by the maintainer; account credit topped up by $50.
+- **Local CLIs** (#253): checker run-to-run variation is the largest effect (the same 1TH drafts drew 1 and 11 disagreements); `claude -p` adds 1,314 tokens that cannot be removed; `codex exec` cannot run `gpt-6.1-sol` on the ChatGPT account.
+- **OBS via `door43-preview-renderers`** (#78 comment): all 10 v0.1 languages have 50 stories; 598 frames each except zh_obs v8.3 (592: frames are numbered by counting image lines, and zh leaves some out).
+
+### Decisions (the maintainer, 5 Nov)
+
+- Merge on clean + green, pinned to the reviewed head, for 5 Nov; then the same for the in-flight run PRs.
+- Start the English run before the #207 verdict, holding disputes (ADR 0008). v0.1.0 ships in English only (ADR 0006). v0.1.0 keys are built on the UFW chunk files (ADR 0007); the 1,184 differences went to the content team on Zulip.
+- #258: loosen the test; commit Proverbs and Ecclesiastes as run.
+- The `@uwreview ack stomp` a lane posted on #250 under the maintainer's account without approval was accepted after the fact, with a standing rule for that run: ack only when the flagged lines are the drafted-books or prompt-history sentence in `docs/schema.md` being reworded.
+- Calls through the local CLIs are not used for the English run; measured first (#251).
+
+### Open
+
+- **Ezekiel:** not drafted; two runs ended incomplete. #252 (re-ask only the missing keys) would finish it cheaply.
+- **#207:** the review page (no project background needed) is with the content team; no answers saved at the last check (6 Nov ~01:40Z). The third check on the held disputes waits for the verdict.
+- **Known wrong titles** shipping `ai-checked`, in `known-issues.json`: GEN.9.11-13 (#232), JUD.1.9-11 (#254).
+- **#251:** the subscription terms, the AGENTS.md wording for codex, the account email the claude CLI sends, and Gemini through the organization's Google account.
+- **#4:** a content-team member asked what "UFW" means; answered in chat by the maintainer.
+- **Before the tag:** a PR that bumps `package.json` to 0.1.0, last.
+- **Low follow-ups:** #242, #247, #230 (held until #207).
+
+### Next
+
+- Fix #252, then draft Ezekiel.
+- Read back the #207 answers when they arrive; then the third check on the held disputes.
+- The version bump and a release dry run on the final main.
+
+---
+
 ## 2026-11-04 — Genesis drafted in batches; all 66 BSB books read; the site shows project health
 
 Lanes ran as background agents, each in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green (the maintainer's grant for today). On #228 the bench's gate held the branch for removing a line from main; the maintainer accepted it, and it was acknowledged on the PR. 8 PRs merged, #225 to #237.
