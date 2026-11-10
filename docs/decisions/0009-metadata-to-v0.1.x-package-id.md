@@ -67,9 +67,13 @@ Observed on 10 Nov 2026 at `d68be25` (origin/main).
   `scripts/lib/release-notes.ts` count titles from `data/titles/`,
   `data/drafts/` and `dist/tc-mobile/titles/`; neither mentions glossaries,
   key terms, figures of speech or metadata (`grep -i`).
-- **The id is already in every package.** `dist/tc-mobile/TIT.json` and its
-  title table carry `bible-passages:TIT`; `../schema.md`, "`dist/tc-mobile/`",
-  marked it "proposed".
+- **The id is already in every package.** Each of the 66
+  `dist/tc-mobile/<BOOK>.json` has `"id": "bible-passages:<BOOK>"` for its
+  own book, and each of the 65 English title tables has
+  `"packageId": "bible-passages:<BOOK>"` for its book (a shell loop over the
+  files, matching the book code from the file name; `grep -l` on the package
+  `id` field counts the same 66). `../schema.md`, "`dist/tc-mobile/`",
+  marked the id "proposed".
 
 ## Why
 
@@ -91,10 +95,10 @@ record's reading of the evidence, not the maintainer's words.
 
 ## Consequences
 
-- **v0.1.0's release notes say that metadata comes in v0.1.x**, as they
-  must say it is English only (ADR 0006). The generator
-  (`scripts/release/notes.ts`) does not say either today; that is
-  follow-up #267, not changed here.
+- **v0.1.0's release notes have to say that metadata comes in v0.1.x**,
+  as they have to say it is English only (ADR 0006). The generator
+  (`scripts/release/notes.ts`) says neither today; #267 tracks it, and
+  this record does not change it.
 - **`bible-passages:<BOOK>` is permanent from the v0.1.0 tag.** Changing it
   after the tag would be a new package to tC Mobile, not a new version of
   the old one.

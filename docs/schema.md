@@ -33,7 +33,7 @@ data/
   glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
   glossary-drafts/<lang>/<BOOK>.json  committed AI key-term records (zh-Hans)
   retired-keys.json          append-only log of retired keys, each with its successor
-  metadata/<BOOK>.json       v0.1.x, not in v0.1.0: key terms, figures of speech (decisions/0009)
+  metadata/<BOOK>.json       not built yet; decision 11's metadata, v0.1.x (decisions/0009); key terms are in glossaries/
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
   titles/<lang>/<BOOK>.json  one title table per package per language
