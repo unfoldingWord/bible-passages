@@ -6,9 +6,11 @@ import type { DisputedRecord } from "../scripts/lib/dispute-titles.ts";
 import {
   addCounts,
   countBook,
+  distProblems,
   emptyCounts,
   knownIssueProblems,
   renderNotes,
+  scopeLines,
   shipped,
   shippedSegments,
   SHIPPED_FLOOR,
@@ -319,6 +321,7 @@ describe("renderNotes", () => {
   const c = countBook("en", structure, titles, drafts);
   const notes = renderNotes({
     tag: "v1.2.3",
+    books: 1,
     languages: [
       ["en", c],
       // fr titles the blank segment: not counted as titled in English.
@@ -365,12 +368,25 @@ describe("renderNotes", () => {
     expect(notes).toMatch(/^tc-mobile template packages v0 .* for v1\.2\.3,/);
   });
 
+  it("says what the release holds and what follows", () => {
+    expect(notes).toContain(
+      "\n## In this release\n\n- Structure: pericopes and segments for all 1 books.\n- Titles: English (en), French (fr).\n"
+    );
+    expect(lines).toContain(
+      "- Titles in Arabic (ar), Latin American Spanish (es-419), Hindi (hi), Indonesian (id), Brazilian Portuguese (pt-BR), Russian (ru), Swahili (sw), Simplified Chinese (zh-Hans) follow in v0.1.x, as each passes its checks (docs/decisions/0006)."
+    );
+    expect(lines).toContain(
+      "- Metadata (key terms, figures of speech) is not in this release. It follows in v0.1.x (docs/decisions/0009)."
+    );
+  });
+
   it("lists the known issues with the title as built", () => {
     expect(notes).toContain(
       "- s1 (en, `ai-checked`): “One”. Wrong \\| scope. (#232)\n- Not about a title. (#9)\n"
     );
     const empty = renderNotes({
       tag: "v0.0.1",
+      books: 0,
       languages: [],
       shippedBooks: [["en", []]],
       issues: [],
@@ -380,6 +396,93 @@ describe("renderNotes", () => {
     expect(empty.split("\n")).toContain(
       "Books with segment titles shipped, en: none."
     );
+  });
+});
+
+describe("scopeLines", () => {
+  const metadata =
+    "- Metadata (key terms, figures of speech) is not in this release. It follows in v0.1.x (docs/decisions/0009).";
+  const nine = [
+    "Arabic (ar)",
+    "Latin American Spanish (es-419)",
+    "French (fr)",
+    "Hindi (hi)",
+    "Indonesian (id)",
+    "Brazilian Portuguese (pt-BR)",
+    "Russian (ru)",
+    "Swahili (sw)",
+    "Simplified Chinese (zh-Hans)",
+  ];
+  const follow = (names: string[]) =>
+    `- Titles in ${names.join(", ")} follow in v0.1.x, as each passes its checks (docs/decisions/0006).`;
+
+  it("says English only when only English ships, even with other titles in data/", () => {
+    expect(
+      scopeLines(66, [
+        ["en", [["TIT", 9]]],
+        ["fr", []],
+      ])
+    ).toEqual([
+      "- Structure: pericopes and segments for all 66 books.",
+      "- Titles: English (en) only.",
+      follow(nine),
+      metadata,
+    ]);
+  });
+
+  it("names every language that ships and drops it from those that follow", () => {
+    expect(
+      scopeLines(66, [
+        ["en", [["TIT", 9]]],
+        ["fr", [["TIT", 2]]],
+        ["xx", [["TIT", 1]]],
+      ])
+    ).toEqual([
+      "- Structure: pericopes and segments for all 66 books.",
+      "- Titles: English (en), French (fr), xx.",
+      follow(nine.filter((n) => n !== "French (fr)")),
+      metadata,
+    ]);
+  });
+
+  it("drops the follow line once every v0.1 language ships, and says none with no titles", () => {
+    const all = [
+      "en",
+      "ar",
+      "es-419",
+      "fr",
+      "hi",
+      "id",
+      "pt-BR",
+      "ru",
+      "sw",
+      "zh-Hans",
+    ];
+    expect(
+      scopeLines(
+        66,
+        all.map((l) => [l, [["TIT", 1]]])
+      )
+    ).toEqual([
+      "- Structure: pericopes and segments for all 66 books.",
+      `- Titles: English (en), ${nine.join(", ")}.`,
+      metadata,
+    ]);
+    expect(scopeLines(0, [["en", []]])).toEqual([
+      "- Structure: pericopes and segments for all 0 books.",
+      "- Titles: none.",
+      follow(nine),
+      metadata,
+    ]);
+  });
+});
+
+describe("distProblems", () => {
+  it("passes dist/ with only tc-mobile/ and names anything else", () => {
+    expect(distProblems(["tc-mobile"])).toEqual([]);
+    expect(distProblems(["tc-mobile", "metadata"])).toEqual([
+      "dist/metadata: the notes say only tc-mobile/ ships; update scopeLines in scripts/lib/release-notes.ts",
+    ]);
   });
 });
 
@@ -415,6 +518,39 @@ describe("scripts/release/notes.ts on the committed data", () => {
       `\n| ${label} | ${[...languages.map(() => n), n * languages.length].join(" | ")} |\n`;
     expect(run.stdout).toContain(row("Segments", segments));
     expect(run.stdout).toContain(row("Pericopes", pericopes));
+  });
+
+  // v0.1.0 is English only (ADR 0006) and has no metadata (ADR 0009). The
+  // languages are re-derived here from the title tables in dist/, not from
+  // the notes; when a second language ships, this test changes with it.
+  it("says English only and that metadata follows in v0.1.x", () => {
+    const shipping = readdirSync("dist/tc-mobile/titles", {
+      withFileTypes: true,
+    })
+      .filter((e) => e.isDirectory())
+      .map((e) => e.name)
+      .filter((l) =>
+        readdirSync(`dist/tc-mobile/titles/${l}`).some(
+          (f) =>
+            Object.keys(
+              (
+                JSON.parse(
+                  readFileSync(`dist/tc-mobile/titles/${l}/${f}`, "utf8")
+                ) as { segments: object }
+              ).segments
+            ).length > 0
+        )
+      );
+    expect(shipping).toEqual(["en"]);
+    expect(readdirSync("dist")).toEqual(["tc-mobile"]);
+    const lines = run.stdout.split("\n");
+    expect(lines).toContain(
+      `- Structure: pericopes and segments for all ${STRUCTURE_BOOKS.length} books.`
+    );
+    expect(lines).toContain("- Titles: English (en) only.");
+    expect(lines).toContain(
+      "- Metadata (key terms, figures of speech) is not in this release. It follows in v0.1.x (docs/decisions/0009)."
+    );
   });
 
   it("lists GEN.9.11-13 as a known issue (#232) with its built title and status", () => {
