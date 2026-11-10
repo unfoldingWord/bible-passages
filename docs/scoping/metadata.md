@@ -4,7 +4,9 @@ Part of [6. Metadata](pipeline.md#6-metadata). Tracking issue: #44.
 
 Decision 11 ([ADR 0003](../decisions/0003-v0.1-scope-and-titles.md)) puts
 in v0.1: key terms, figures of speech, and any other metadata already in the
-data that needs no new writing. Key terms are built (glossaries for 59 books,
+data that needs no new writing. On 9 Nov the maintainer moved all of it from
+v0.1.0 to v0.1.x ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md));
+what qualifies is unchanged. Key terms are built (glossaries for 59 books,
 #62). This file measures the rest. Nothing here is built and no input is
 pinned, because no build reads these files yet.
 

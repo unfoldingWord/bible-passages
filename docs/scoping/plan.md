@@ -15,7 +15,7 @@ evidence or becomes a decision, never a quiet shortcut.
 | Fri 13 Nov  | **Go/no-go 2: release** | English through the quality gates (v0.1.0 is English only, ADR 0006); `dist/` passes tC Mobile's checker; release notes list review status          | Slip the tag, or ship the subset that passes, as a recorded decision                        |
 | Mon 16 Nov  | v0.1.0 tag (#13)        | Tagged, read by tC Mobile (#1459)                                                                                                                   | Recorded slip with a new date                                                               |
 
-Changes since the table was written (5 Nov 2026, #244):
+Changes since the table was written (5 Nov 2026, #244; 9 Nov 2026):
 
 - **Decisions (1 Nov).** 1, 2 and 3 were decided (ADRs 0001 and 0003). 8 is
   settled for v0.1.0 by the maintainer: keys are built on the UFW chunk
@@ -32,17 +32,24 @@ Changes since the table was written (5 Nov 2026, #244):
 - **Go/no-go 2 (13 Nov)** no longer waits on other languages: v0.1.0 is
   English only, and the other nine follow in v0.1.x once the model is
   chosen (#64) ([ADR 0006](../decisions/0006-v0.1.0-english-only.md)).
+- **Metadata (9 Nov).** Key terms and figures of speech (ADR 0003
+  decision 11) move to v0.1.x; v0.1.0's `dist/` is `dist/tc-mobile/` only.
+  The package id `bible-passages:<BOOK>` is confirmed and permanent from the
+  tag ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md)).
 
 ## If v0.1 must be a subset
 
 Chosen on 5 Nov: items 1 and 2 are v0.1.0, and 3 and 4 are v0.1.x
-([ADR 0006](../decisions/0006-v0.1.0-english-only.md)). The candidate, in
-order of what to keep:
+([ADR 0006](../decisions/0006-v0.1.0-english-only.md)). Item 5 was added on
+9 Nov ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md)). The
+candidate, in order of what to keep:
 
 1. Structure for all 66 books (pericopes and segments, permanent keys).
 2. English pericope titles (BSB) and English segment titles.
 3. Translations in the languages that pass the gates by 13 Nov.
 4. The other languages in v0.1.x as they pass.
+5. Metadata (key terms, figures of speech) in v0.1.x
+   ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md)).
 
 Every title ships with its status. The dataset request says the whole
 dataset need not be human-reviewed before launch; which titles must be is

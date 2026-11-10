@@ -19,3 +19,4 @@ Until then it stays in the "Open decisions" list at the end of
 | [0006](0006-v0.1.0-english-only.md)                | v0.1.0 ships in English only                                               | accepted |
 | [0007](0007-v0.1.0-keys-on-ufw-chunks.md)          | v0.1.0 keys are built on the UFW chunk files                               | accepted |
 | [0008](0008-english-run-before-dispute-verdict.md) | Draft and check the remaining English books before the third-check verdict | accepted |
+| [0009](0009-metadata-to-v0.1.x-package-id.md)      | Metadata moves to v0.1.x; the package id is `bible-passages:<BOOK>`        | accepted |
