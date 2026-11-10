@@ -6,6 +6,7 @@ import {
   CHECK_BATCH,
   CHECK_MAX_TOKENS,
   DRAFT_BATCH,
+  DRAFT_FOLLOW_UPS,
   checkMessage,
   draftMessage,
   draftSegmentTitles,
@@ -731,11 +732,20 @@ describe("draftSegmentTitles", () => {
   });
 
   it("reports titles the models left out", async () => {
-    const { complete } = fakeModels([
+    const { complete, sent } = fakeModels([
       { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0 },
+      // The two follow-up rounds (#252) leave it out too.
+      { reply: {}, cost: 0 },
+      { reply: {}, cost: 0 },
       { reply: {}, cost: 0 },
     ]);
     const { outcome } = await run(complete, []);
+    expect(sent.map((s) => s.model)).toEqual([
+      "a/draft",
+      "a/draft",
+      "a/draft",
+      "g/check",
+    ]);
     expect(outcome).toEqual({
       incomplete: { draft: ["XYZ.1.4-4"], check: ["XYZ.1.2-3"] },
     });
@@ -890,7 +900,8 @@ describe("draftSegmentTitles", () => {
   });
 
   // #211: with no draft read there is no check call, but the fuse still
-  // decides how the run ends.
+  // decides how the run ends. Since #252 the fuse first refuses the
+  // follow-up draft call for the segments left out.
   it("stops, not incomplete, when no draft was read and the cap is reached or cost is unknown", async () => {
     for (const cost of [1, null]) {
       const { complete, sent } = fakeModels([{ reply: {}, cost }]);
@@ -900,8 +911,8 @@ describe("draftSegmentTitles", () => {
       expect(outcome).toEqual({
         stopped:
           cost === null
-            ? "check: cost unknown, not run"
-            : "check: spent 1 of 1, not run",
+            ? "draft follow-up 1 batch 1 of 1: cost unknown, not run"
+            : "draft follow-up 1 batch 1 of 1: spent 1 of 1, not run",
       });
       expect(sent).toHaveLength(1);
       expect(ledgers.at(-1)).toMatchObject({
@@ -915,10 +926,15 @@ describe("draftSegmentTitles", () => {
   });
 
   it("ends incomplete, with no check call, when no draft was read and the fuse allows", async () => {
-    const { complete, sent } = fakeModels([{ reply: {}, cost: 0.01 }]);
+    const { complete, sent } = fakeModels([
+      { reply: {}, cost: 0.01 },
+      { reply: {}, cost: 0.01 },
+      { reply: {}, cost: 0.01 },
+    ]);
     const ledgers: unknown[] = [];
     const { record, outcome } = await run(complete, ledgers);
-    expect(sent).toHaveLength(1);
+    // The first draft call and its DRAFT_FOLLOW_UPS rounds, no check.
+    expect(sent.map((s) => s.model)).toEqual(["a/draft", "a/draft", "a/draft"]);
     expect(record?.titles).toEqual({});
     expect(outcome).toEqual({
       incomplete: { draft: ["XYZ.1.2-3", "XYZ.1.4-4"], check: [] },
@@ -1058,6 +1074,178 @@ describe("draftSegmentTitles", () => {
       expect(outcome).toEqual({ stopped });
       expect(ledgers.at(-1)).toMatchObject({ outcome });
     }
+  });
+
+  // #252: long books' draft replies left out single-verse segments, and the
+  // whole run had to be paid for again.
+  describe("follow-up draft calls for segments left out (#252)", () => {
+    const agree = { verdict: "agree" };
+
+    it("asks again for only the single-verse segment left out, and checks its title", async () => {
+      const { complete, sent } = fakeModels([
+        { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
+        {
+          reply: { "XYZ.1.4-4": "Paul will come to see the believers" },
+          cost: 0.02,
+          answeredBy: "a/draft-2",
+        },
+        { reply: { "XYZ.1.2-3": agree, "XYZ.1.4-4": agree }, cost: 0.03 },
+      ]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers);
+      expect(outcome).toBe("done");
+      expect(DRAFT_FOLLOW_UPS).toBe(2);
+      expect(sent.map((s) => s.model)).toEqual([
+        "a/draft",
+        "a/draft",
+        "g/check",
+      ]);
+      // The same draft prompt; the message names only the key left out.
+      expect(sent[1]?.system).toBe(promptPart(promptText, "draft"));
+      const single = inputs.filter((s) => s.key === "XYZ.1.4-4");
+      expect(single.map((s) => s.verses)).toEqual(["1:4"]);
+      expect(sent[1]?.user).toBe(draftMessage("XYZ", single));
+      const asked = (
+        JSON.parse(sent[1]!.user) as { segments: { key: string }[] }
+      ).segments.map((s) => s.key);
+      expect(asked).toEqual(["XYZ.1.4-4"]);
+      expect(sent[1]?.maxTokens).toBeUndefined();
+      // The recovered title is checked with the others.
+      const titles = {
+        "XYZ.1.2-3": draftReply["XYZ.1.2-3"],
+        "XYZ.1.4-4": "Paul will come to see the believers",
+      };
+      expect(sent[2]?.user).toBe(checkMessage("XYZ", inputs, titles));
+      expect(record?.titles["XYZ.1.4-4"]).toEqual({
+        text: "Paul will come to see the believers",
+        source: "ai:a/draft-2",
+        status: "ai-checked",
+        check: { by: "ai:g/check", verdict: "agree" },
+      });
+      expect(record?.calls.map((c) => [c.role, c.id, c.cost])).toEqual([
+        ["draft", "gen-1", 0.01],
+        ["draft", "gen-2", 0.02],
+        ["check", "gen-3", 0.03],
+      ]);
+      expect(ledgers.at(-1)).toMatchObject({
+        outcome: "done",
+        draftFollowUpRounds: 2,
+        draftTitles: titles,
+        draftFollowUps: [
+          { round: 1, asked: ["XYZ.1.4-4"], read: ["XYZ.1.4-4"] },
+        ],
+        totals: { cost: 0.06 },
+      });
+    });
+
+    it("asks again for a title the reply gave unreadably", async () => {
+      const { complete, sent } = fakeModels([
+        { reply: { ...draftReply, "XYZ.1.4-4": " " }, cost: 0.01 },
+        { reply: { "XYZ.1.4-4": "Paul will come soon" }, cost: 0.01 },
+        { reply: { "XYZ.1.2-3": agree, "XYZ.1.4-4": agree }, cost: 0.01 },
+      ]);
+      const { record, outcome } = await run(complete, []);
+      expect(outcome).toBe("done");
+      expect(sent[1]?.user).toBe(
+        draftMessage(
+          "XYZ",
+          inputs.filter((s) => s.key === "XYZ.1.4-4")
+        )
+      );
+      expect(record?.titles["XYZ.1.4-4"]?.text).toBe("Paul will come soon");
+    });
+
+    it("still ends incomplete when the segment stays left out after every round", async () => {
+      const { complete, sent } = fakeModels([
+        { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
+        // A follow-up's title for a key it was not asked for is not read.
+        { reply: { "XYZ.1.2-3": "Another title" }, cost: 0.01 },
+        { reply: {}, cost: 0.01 },
+        { reply: { "XYZ.1.2-3": agree }, cost: 0.01 },
+      ]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers);
+      expect(sent.map((s) => s.model)).toEqual([
+        "a/draft",
+        "a/draft",
+        "a/draft",
+        "g/check",
+      ]);
+      const single = draftMessage(
+        "XYZ",
+        inputs.filter((s) => s.key === "XYZ.1.4-4")
+      );
+      expect([sent[1]?.user, sent[2]?.user]).toEqual([single, single]);
+      expect(outcome).toEqual({
+        incomplete: { draft: ["XYZ.1.4-4"], check: [] },
+      });
+      expect(record?.titles).toEqual({
+        "XYZ.1.2-3": {
+          text: draftReply["XYZ.1.2-3"],
+          source: "ai:a/draft",
+          status: "ai-checked",
+          check: { by: "ai:g/check", verdict: "agree" },
+        },
+      });
+      expect(ledgers.at(-1)).toMatchObject({
+        outcome,
+        draftFollowUps: [
+          { round: 1, asked: ["XYZ.1.4-4"], read: [] },
+          { round: 2, asked: ["XYZ.1.4-4"], read: [] },
+        ],
+      });
+    });
+
+    it("makes no follow-up call when every segment was drafted", async () => {
+      const { complete, sent } = fakeModels([
+        { reply: draftReply, cost: 0.01 },
+        { reply: { "XYZ.1.2-3": agree, "XYZ.1.4-4": agree }, cost: 0.01 },
+      ]);
+      const ledgers: unknown[] = [];
+      expect((await run(complete, ledgers)).outcome).toBe("done");
+      expect(sent).toHaveLength(2);
+      expect(ledgers.at(-1)).toMatchObject({ draftFollowUps: [] });
+    });
+
+    it("stops when a follow-up reply cannot be read, keeping the drafts on record", async () => {
+      const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
+      const { complete, sent } = fakeModels([
+        { reply: first, cost: 0.01 },
+        { reply: "cut off", cost: 0.01 },
+      ]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers);
+      expect(record).toBeNull();
+      expect(outcome).toMatchObject({
+        stopped: expect.stringMatching(
+          /^draft follow-up 1 batch 1 of 1: unreadable reply/
+        ),
+      });
+      expect(sent).toHaveLength(2);
+      expect(ledgers.at(-1)).toMatchObject({
+        outcome,
+        calls: [{ role: "draft" }, { role: "draft" }],
+        draftTitles: first,
+      });
+    });
+
+    it("refuses a check of a recovered title its follow-up's model family drafted", async () => {
+      const { complete } = fakeModels([
+        { reply: { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] }, cost: 0.01 },
+        {
+          reply: { "XYZ.1.4-4": "Paul will come soon" },
+          cost: 0.01,
+          answeredBy: "g/other",
+        },
+        { reply: { "XYZ.1.2-3": agree, "XYZ.1.4-4": agree }, cost: 0.01 },
+      ]);
+      const { record, outcome } = await run(complete, []);
+      expect(record).toBeNull();
+      expect(outcome).toEqual({
+        stopped:
+          "check batch 1 of 1: answered by g/check, of the drafting model's family",
+      });
+    });
   });
 
   it("refuses the same model, or one of its family, for drafting and checking", async () => {

@@ -1,8 +1,9 @@
 // Drafts one book's English segment titles with one model and checks every
 // title with a second model, through OpenRouter: one draft call per batch
-// of at most DRAFT_BATCH segments (#208), then one check call per batch of
-// at most CHECK_BATCH titles (#201). See scripts/lib/segment-titles.ts and
-// prompts/segment-titles.md.
+// of at most DRAFT_BATCH segments (#208), up to DRAFT_FOLLOW_UPS more rounds
+// of draft calls for only the segments the replies left out (#252), then one
+// check call per batch of at most CHECK_BATCH titles (#201). See
+// scripts/lib/segment-titles.ts and prompts/segment-titles.md.
 //
 //   OPENROUTER_API_KEY=... node scripts/translate/segment-titles.ts \
 //     --book PHP \

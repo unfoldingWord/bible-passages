@@ -491,6 +491,17 @@ export const CHECK_MAX_TOKENS = 32_768;
 export const DRAFT_BATCH = 35;
 
 /**
+ * The most follow-up rounds of draft calls for segments a draft reply left
+ * out or titled unreadably (#252). Long Old Testament books lost a few
+ * single-verse segments per run (1KI, NUM, DEU, OBA, EZK twice), each time
+ * different ones; re-drafting the whole book cost the whole run again. A
+ * round asks again, with the same draft prompt and the same message shape,
+ * for only the segments still without a title; a segment still without one
+ * after the last round leaves the run `incomplete`, as before.
+ */
+export const DRAFT_FOLLOW_UPS = 2;
+
+/**
  * `items` split, in order, into the fewest batches of at most `size`, as
  * even as they can be (37 at 35 gives 19 and 18).
  */
@@ -512,13 +523,17 @@ export function batches<T>(items: T[], size: number): T[][] {
  * Drafts and checks one book's segment titles: one call to `draftModel` per
  * batch of at most `draftBatch` segments (default DRAFT_BATCH), then one
  * call to `checkModel` per batch of at most `checkBatch` drafts (default
- * CHECK_BATCH). A draft call is allowed MAX_TOKENS, a check call
- * CHECK_MAX_TOKENS. The two models must be of different families. `write`
- * gets the ledger after each call and before any throw, so money spent is
- * on record. No call, draft or check, is made once `maxCost` is spent, or
- * while any cost so far is unknown (the fuse fails closed). A draft or check reply that cannot be read stops the run,
- * as does a check answered by a model that drafted any title of its batch,
- * or by one of that model's family.
+ * CHECK_BATCH). The segments the draft replies leave out or title
+ * unreadably are asked again, in at most DRAFT_FOLLOW_UPS rounds of draft
+ * calls for only those segments, before any check call; every title, first
+ * asked or followed up, is checked the same way. A draft call is allowed
+ * MAX_TOKENS, a check call CHECK_MAX_TOKENS. The two models must be of
+ * different families. `write` gets the ledger after each call and before
+ * any throw, so money spent is on record. No call, draft, follow-up or
+ * check, is made once `maxCost` is spent, or while any cost so far is
+ * unknown (the fuse fails closed). A draft or check reply that cannot be
+ * read stops the run, as does a check answered by a model that drafted any
+ * title of its batch, or by one of that model's family.
  */
 export async function draftSegmentTitles(args: {
   book: string;
@@ -545,6 +560,10 @@ export async function draftSegmentTitles(args: {
   // The parsed drafts, batch by batch, kept in the ledger so a run that
   // stops before the check does not lose titles already paid for.
   let draftTitles: Record<string, string> | null = null;
+  // Each follow-up draft call (#252): the round, the keys it asked for and
+  // the keys whose title it read.
+  const draftFollowUps: { round: number; asked: string[]; read: string[] }[] =
+    [];
   // The parsed verdicts, batch by batch, kept in the ledger for the same
   // reason: a later batch that stops the run does not lose earlier ones
   // (#211). `checkUnread` are the keys a batch left out or answered
@@ -562,12 +581,14 @@ export async function draftSegmentTitles(args: {
       draftBatch: args.draftBatch ?? DRAFT_BATCH,
       checkBatch: args.checkBatch ?? CHECK_BATCH,
       checkMaxTokens: CHECK_MAX_TOKENS,
+      draftFollowUpRounds: DRAFT_FOLLOW_UPS,
       prompt,
       segments: keys.length,
       outcome,
       updatedAt: new Date().toISOString(),
       calls,
       draftTitles,
+      draftFollowUps,
       checks: checkVerdicts,
       checkUnread,
       totals: {
@@ -619,38 +640,56 @@ export async function draftSegmentTitles(args: {
     const titlesDrafted: Record<string, string> = {};
     // The model OpenRouter says answered each title's draft call.
     const draftedBy: Record<string, string> = {};
-    const unreadDraft: string[] = [];
-    const toDraft = batches(inputs, args.draftBatch ?? DRAFT_BATCH);
-    for (const [i, batch] of toDraft.entries()) {
-      const stop = fuse(`draft batch ${i + 1} of ${toDraft.length}`);
+    // Round 0 drafts every segment; each later round (#252) only those
+    // still without a title, in reading order, batched the same way.
+    // Returns the stop, or null when the round ran to its end.
+    const draftRound = async (
+      round: number,
+      todo: SegmentInput[]
+    ): Promise<string | null> => {
+      const toDraft = batches(todo, args.draftBatch ?? DRAFT_BATCH);
+      const name = round === 0 ? "draft" : `draft follow-up ${round}`;
+      for (const [i, batch] of toDraft.entries()) {
+        const at = `${name} batch ${i + 1} of ${toDraft.length}`;
+        const stop = fuse(at);
+        if (stop !== null) return stop;
+        const draftReply = await ask(
+          "draft",
+          draftModel,
+          draftMessage(book, batch)
+        );
+        if (typeof draftReply === "string") return `${at}: ${draftReply}`;
+        const by = calls.at(-1)?.model ?? draftModel;
+        const asked = batch.map((s) => s.key);
+        const draft = readDraft(draftReply, asked);
+        for (const [k, t] of Object.entries(draft.titles)) {
+          titlesDrafted[k] = t;
+          draftedBy[k] = by;
+        }
+        if (round > 0)
+          draftFollowUps.push({
+            round,
+            asked,
+            read: asked.filter((k) => draft.titles[k] !== undefined),
+          });
+        draftTitles = { ...titlesDrafted };
+        await ledger("running");
+      }
+      return null;
+    };
+    const undrafted = () =>
+      inputs.filter((s) => titlesDrafted[s.key] === undefined);
+    for (let round = 0; round <= DRAFT_FOLLOW_UPS; round++) {
+      const todo = round === 0 ? inputs : undrafted();
+      if (todo.length === 0) break;
+      const stop = await draftRound(round, todo);
       if (stop !== null) {
         outcome = { stopped: stop };
         return { record: null, outcome };
       }
-      const draftReply = await ask(
-        "draft",
-        draftModel,
-        draftMessage(book, batch)
-      );
-      if (typeof draftReply === "string") {
-        outcome = {
-          stopped: `draft batch ${i + 1} of ${toDraft.length}: ${draftReply}`,
-        };
-        return { record: null, outcome };
-      }
-      const by = calls.at(-1)?.model ?? draftModel;
-      const draft = readDraft(
-        draftReply,
-        batch.map((s) => s.key)
-      );
-      for (const [k, t] of Object.entries(draft.titles)) {
-        titlesDrafted[k] = t;
-        draftedBy[k] = by;
-      }
-      unreadDraft.push(...draft.missing, ...draft.invalid);
-      draftTitles = { ...titlesDrafted };
-      await ledger("running");
     }
+    // Left out or unreadable after every round, in reading order.
+    const unreadDraft = undrafted().map((s) => s.key);
     const drafted = keys.filter((k) => titlesDrafted[k] !== undefined);
     const checks: Record<string, Check> = {};
     const unreadCheck: string[] = [];
