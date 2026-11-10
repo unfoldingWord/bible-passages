@@ -33,7 +33,7 @@ data/
   glossaries/<lang>/<BOOK>.json  key terms a book links, with headwords per language
   glossary-drafts/<lang>/<BOOK>.json  committed AI key-term records (zh-Hans)
   retired-keys.json          append-only log of retired keys, each with its successor
-  metadata/<BOOK>.json       later: topics, key terms, difficulty
+  metadata/<BOOK>.json       v0.1.x, not in v0.1.0: key terms, figures of speech (decisions/0009)
 dist/tc-mobile/              generated, never edited by hand
   <BOOK>.json                one template package per book
   titles/<lang>/<BOOK>.json  one title table per package per language
@@ -493,7 +493,9 @@ so title translation can use it.
 Generated from `data/` by `scripts/`. Never edited by hand. Each package is a
 tc-mobile template package v0:
 
-- `id`: `bible-passages:<BOOK>` (proposed; an id is permanent once released).
+- `id`: `bible-passages:<BOOK>`
+  ([decisions/0009](decisions/0009-metadata-to-v0.1.x-package-id.md));
+  permanent from the v0.1.0 tag.
 - `kind`: `bible-book`. `bookCode`: the USFM code.
 - `version`: the release tag without the `v` (`0.0.0`, from `package.json`,
   until the first release). Title tables carry the same
@@ -705,16 +707,20 @@ every test run until they exist.
 3. **Keys**: decided: span keys. See
    [decisions/0001](decisions/0001-span-keys.md).
 4. **Versification and UTN release**: which scheme spans are checked against,
-   and which UTN release the segment boundaries come from.
-5. **Package id**: `bible-passages:<BOOK>`, permanent once released.
+   and which UTN release the segment boundaries come from. Owner: the
+   maintainer. Decide by: 13 Nov 2026 (go/no-go 2).
+5. **Package id**: decided: `bible-passages:<BOOK>`, permanent from the
+   v0.1.0 tag ([decisions/0009](decisions/0009-metadata-to-v0.1.x-package-id.md)).
 6. **Translation**: the selection procedure, the two model IDs and the
    choice rule are decided: measure Gemini and Claude on Titus, then choose
    quality first ([decisions/0002](decisions/0002-measure-translation-models.md)).
    Still open: how key-term consistency is checked across a book and a
-   language.
+   language. Owner: the maintainer. Decide by: v0.1.x planning, after
+   16 Nov 2026.
 7. **Review viewer**: the request asks for a visual way to review the dataset
    that can push versioned updates back to this repo. Its form and how it
-   writes back (a PR per change, never a push to `main`) are open.
+   writes back (a PR per change, never a push to `main`) are open. Owner:
+   the maintainer. Decide by: v0.1.x planning, after 16 Nov 2026.
 8. **Authoritative chunk source**: decided for v0.1.0: the UFW chunk files
    ([decisions/0007](decisions/0007-v0.1.0-keys-on-ufw-chunks.md)). Still
    open: the content team's ruling on the 1,184 places where they and ULT's
@@ -727,7 +733,9 @@ every test run until they exist.
     ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 11. **Metadata in v0.1**: decided: key terms and figures of speech, plus any
     other metadata already in the pinned inputs that needs no new writing
-    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
+    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)). It ships in
+    v0.1.x, not v0.1.0
+    ([decisions/0009](decisions/0009-metadata-to-v0.1.x-package-id.md)).
 12. **Single-segment pericopes**: decided: reuse the pericope title, 16,523
     English titles ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 13. **Spanish language tag**: decided: `es-419`
