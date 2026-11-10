@@ -6,6 +6,7 @@
 import { builtTitle, type DisputedRecord } from "./dispute-titles.ts";
 import { BLANK_SEGMENTS, BLANK_TITLE } from "./segment-titles.ts";
 import type { Structure } from "./structure.ts";
+import { LANGUAGES } from "./translate.ts";
 import {
   SHIPPED_STATUSES,
   TITLE_STATUSES,
@@ -275,13 +276,66 @@ export function knownIssueProblems(
 const inline = (s: string) =>
   s.replace(/\s+/g, " ").replace(/\|/g, "\\|").trim();
 
+/** A language tag with its English name: "English (en)". */
+const named = (tag: string) => {
+  const name = tag === "en" ? "English" : LANGUAGES[tag];
+  return name === undefined ? tag : `${name} (${tag})`;
+};
+
 /**
- * The release notes, in Markdown. `languages` maps each language to its
- * counts, in order; `issues` have passed knownIssueProblems, and `title`
- * gives each one's built title and status.
+ * What the release holds and what follows (ADR 0006, ADR 0009), one line
+ * each. The languages with titles are those with a title shipped in a
+ * title table (`shippedBooks`), so the line stays true when a second
+ * language ships; the v0.1 languages (LANGUAGES) not among them follow.
+ * Metadata is fixed text: no build writes it to dist/ yet, and
+ * scripts/release/notes.ts stops if dist/ holds anything but tc-mobile/.
+ */
+export function scopeLines(
+  books: number,
+  shippedBooks: [language: string, books: [book: string, n: number][]][]
+): string[] {
+  const shipping = shippedBooks.filter(([, b]) => b.length > 0).map(([l]) => l);
+  const follow = Object.keys(LANGUAGES).filter((l) => !shipping.includes(l));
+  return [
+    `- Structure: pericopes and segments for all ${books} books.`,
+    `- Titles: ${
+      shipping.length === 0
+        ? "none"
+        : shipping.length === 1
+          ? `${named(shipping[0]!)} only`
+          : shipping.map(named).join(", ")
+    }.`,
+    ...(follow.length === 0
+      ? []
+      : [
+          `- Titles in ${follow.map(named).join(", ")} follow in v0.1.x, as each passes its checks (docs/decisions/0006).`,
+        ]),
+    "- Metadata (key terms, figures of speech) is not in this release. It follows in v0.1.x (docs/decisions/0009).",
+  ];
+}
+
+/**
+ * What is wrong with dist/'s top-level `entries` for the notes: scopeLines
+ * says metadata is not in the release, true while dist/ holds only
+ * tc-mobile/. Anything else there needs scopeLines changed first.
+ */
+export const distProblems = (entries: readonly string[]): string[] =>
+  entries
+    .filter((e) => e !== "tc-mobile")
+    .map(
+      (e) =>
+        `dist/${e}: the notes say only tc-mobile/ ships; update scopeLines in scripts/lib/release-notes.ts`
+    );
+
+/**
+ * The release notes, in Markdown. `books` is the number of books with
+ * structure; `languages` maps each language to its counts, in order;
+ * `issues` have passed knownIssueProblems, and `title` gives each one's
+ * built title and status.
  */
 export function renderNotes(args: {
   tag: string;
+  books: number;
   languages: [language: string, counts: Counts][];
   shippedBooks: [language: string, books: [book: string, n: number][]][];
   issues: KnownIssue[];
@@ -290,7 +344,7 @@ export function renderNotes(args: {
     key: string
   ) => { text: string; status: string } | undefined;
 }): string {
-  const { tag, languages, shippedBooks, issues, title } = args;
+  const { tag, books, languages, shippedBooks, issues, title } = args;
   const total = languages.reduce((t, [, c]) => addCounts(t, c), emptyCounts());
   const cols = [...languages.map(([l]) => l), "Total"];
   const all = [...languages.map(([, c]) => c), total];
@@ -303,6 +357,10 @@ export function renderNotes(args: {
   const statuses = [...TITLE_STATUSES].reverse();
   const lines = [
     `tc-mobile template packages v0 and their title tables (titles.<lang>.<BOOK>.json) for ${tag}, built from the pinned sources in sources.json at this tag. See docs/schema.md, "Releases".`,
+    "",
+    "## In this release",
+    "",
+    ...scopeLines(books, shippedBooks),
     "",
     "## Titles",
     "",

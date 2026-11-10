@@ -625,7 +625,12 @@ check the bump yet.
    runner decodes.
 5. The release notes are generated from the built `data/`
    (`scripts/release/notes.ts`, `scripts/lib/release-notes.ts`), not
-   written by hand. Per language and in total they count segments, titled
+   written by hand. They open with what the release holds and what
+   follows: the number of books with structure; the languages with a title
+   in a title table (so v0.1.0 says English only, ADR 0006); the v0.1
+   languages still to follow in v0.1.x; and that metadata follows in
+   v0.1.x (ADR 0009), a fixed line the release stops on if `dist/` holds
+   anything but `tc-mobile/`. Per language and in total they count segments, titled
    segments and segment titles by status (every status above, at 0 too);
    how many ship (`ai-checked` or above); why the rest do not (held back
    because a third model's answer, the checker or a gate, or a person's

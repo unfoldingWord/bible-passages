@@ -1,8 +1,8 @@
 // Prints the release notes for <tag> in Markdown (scripts/lib/release-notes.ts),
 // or fails with every problem: segment and pericope titles counted by status
 // per language and in total from the built data/, checked against the
-// title tables in dist/tc-mobile/, and the known issues from the committed
-// known-issues.json. Called by scripts/release/run.sh after the build.
+// title tables in dist/tc-mobile/, what the release holds and what follows,
+// and the known issues from the committed known-issues.json. Called by scripts/release/run.sh after the build.
 //
 //   node scripts/release/notes.ts <tag>
 import { existsSync, readdirSync, readFileSync } from "node:fs";
@@ -10,6 +10,7 @@ import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import type { DisputedRecord } from "../lib/dispute-titles.ts";
 import {
   countBook,
+  distProblems,
   emptyCounts,
   addCounts,
   isSegmentMap,
@@ -91,6 +92,8 @@ const title = (language: string, key: string) => {
   const t = titlesOf(language, book);
   return Object.hasOwn(t, key) ? t[key] : undefined;
 };
+problems.push(...distProblems(readdirSync(new URL("dist/", root))));
+
 const known = read("known-issues.json");
 problems.push(...knownIssueProblems(known, title));
 
@@ -100,6 +103,7 @@ if (problems.length > 0) process.exit(1);
 process.stdout.write(
   renderNotes({
     tag,
+    books: STRUCTURE_BOOKS.length,
     languages: counted,
     shippedBooks,
     issues: (known as { issues: KnownIssue[] }).issues,
