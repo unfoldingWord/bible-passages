@@ -30,7 +30,11 @@ export type Counts = {
   segments: number;
   /** Segment titles by status: every status the schema allows, at 0 too. */
   status: Record<string, number>;
-  /** Titled segments BSB leaves blank (English: BLANK_TITLE, in `status`). */
+  /**
+   * English only: segments BSB leaves blank, each with the fixed English
+   * title BLANK_TITLE (also counted in `status`). 0 in other languages,
+   * where the build writes no title for them.
+   */
   blank: number;
   /** `unreviewed` segment titles, by why they are held back. */
   held: Record<HeldReason, number>;
@@ -71,7 +75,10 @@ export function addCounts(into: Counts, c: Counts): Counts {
   return into;
 }
 
-/** Titles shipped in the title tables: those at `ai-checked` or above. */
+/** The lowest status a title table ships (SHIPPED_STATUSES is lowest first). */
+export const SHIPPED_FLOOR = SHIPPED_STATUSES[0]!;
+
+/** Titles shipped in the title tables: those at SHIPPED_FLOOR or above. */
 export const shipped = (c: Counts): number =>
   SHIPPED_STATUSES.reduce((n, s) => n + (c.status[s] ?? 0), 0);
 
@@ -114,10 +121,10 @@ export function countBook(
   for (const s of structure.segments) {
     c.segments++;
     const t = titles[s.key];
-    if (BLANK_SEGMENTS.includes(s.key)) {
-      if (language === "en" && (t === undefined || !same(t, BLANK_TITLE)))
+    if (language === "en" && BLANK_SEGMENTS.includes(s.key)) {
+      if (t === undefined || !same(t, BLANK_TITLE))
         throw new Error(`${s.key}: blank in BSB but not the fixed title`);
-      if (t !== undefined) c.blank++;
+      c.blank++;
     }
     if (t === undefined) {
       c.notDrafted++;
@@ -143,6 +150,64 @@ export function countBook(
       );
   }
   return c;
+}
+
+/**
+ * The segment titles a book's title table must hold, key to text: every
+ * segment of `structure` whose title in `titles` is at SHIPPED_FLOOR or
+ * above, with its text as stored. It re-derives the table rather than
+ * calling titleTable (title-table.ts), which writes the same rule: ship a
+ * title whose status is in SHIPPED_STATUSES, text unchanged (it throws on
+ * an empty or padded text rather than trimming it).
+ */
+export function shippedSegments(
+  structure: Structure,
+  titles: TitleEntries
+): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const s of structure.segments) {
+    const t = titles[s.key];
+    if (t !== undefined && SHIPPED_STATUSES.includes(t.status))
+      out[s.key] = t.text;
+  }
+  return out;
+}
+
+/** A title table's `segments` shape: an object of string values. */
+export const isSegmentMap = (v: unknown): v is Record<string, string> =>
+  typeof v === "object" &&
+  v !== null &&
+  !Array.isArray(v) &&
+  Object.values(v).every((t) => typeof t === "string");
+
+/**
+ * How a title table's `segments` (`table`, at `where`) differs from what
+ * data/ ships (`expected`, from shippedSegments): each key on one side
+ * only, and each key whose text differs, so equal counts with different
+ * keys still fail. A `table` that is not an object of strings is one
+ * problem.
+ */
+export function tableProblems(
+  where: string,
+  expected: Record<string, string>,
+  table: unknown
+): string[] {
+  if (!isSegmentMap(table))
+    return [`${where}: segments is not an object of strings`];
+  const problems: string[] = [];
+  for (const key of Object.keys(expected))
+    if (!Object.hasOwn(table, key))
+      problems.push(
+        `${where}: ${key} is at ${SHIPPED_FLOOR} or above in data/ but not in the table`
+      );
+    else if (table[key] !== expected[key])
+      problems.push(`${where}: ${key} differs from its title in data/`);
+  for (const key of Object.keys(table))
+    if (!Object.hasOwn(expected, key))
+      problems.push(
+        `${where}: ${key} is in the table but not at ${SHIPPED_FLOOR} or above in data/`
+      );
+  return problems;
 }
 
 /** One entry of known-issues.json. */
@@ -241,7 +306,7 @@ export function renderNotes(args: {
     "",
     "## Titles",
     "",
-    `Counted from the built data/ at this tag (scripts/release/notes.ts). "Total" adds the languages together. A title table ships a segment title at \`${SHIPPED_STATUSES[0]}\` or above; an \`unreviewed\` one is held back, and the app shows no label. The tables hold plain strings, so the app cannot tell the statuses apart (unfoldingWord/tc-mobile#1450).`,
+    `Counted from the built data/ at this tag (scripts/release/notes.ts). "Total" adds the languages together. A title table ships a segment title at \`${SHIPPED_FLOOR}\` or above; an \`unreviewed\` one is held back, and the app shows no label. The tables hold plain strings, so the app cannot tell the statuses apart (unfoldingWord/tc-mobile#1450).`,
     "",
     "### Segment titles",
     "",
@@ -251,7 +316,7 @@ export function renderNotes(args: {
       ...statuses.map(
         (s) => [`… \`${s}\``, (c: Counts) => c.status[s] ?? 0] as const
       ),
-      ["Shipped (`ai-checked` or above)", shipped],
+      [`Shipped (\`${SHIPPED_FLOOR}\` or above)`, shipped],
       ["Not shipped", (c) => c.segments - shipped(c)],
       [
         "… held: a third model's answer left it `unreviewed`",
@@ -266,7 +331,7 @@ export function renderNotes(args: {
       ["… not drafted (no title)", (c) => c.notDrafted],
     ]),
     "",
-    `Segments BSB numbers but leaves blank (${BLANK_SEGMENTS.join(", ")}), titled: ${total.blank}. They are never drafted: in English each has one fixed title a person chose, "${BLANK_TITLE.text}", counted above as \`${BLANK_TITLE.status}\`.`,
+    `Segments BSB numbers but leaves blank (${BLANK_SEGMENTS.join(", ")}), titled in English: ${total.blank}. They are never drafted: in English each has one fixed title a person chose, "${BLANK_TITLE.text}", counted above as \`${BLANK_TITLE.status}\`.`,
     "",
     ...shippedBooks.map(
       ([language, books]) =>

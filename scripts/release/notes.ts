@@ -12,9 +12,11 @@ import {
   countBook,
   emptyCounts,
   addCounts,
+  isSegmentMap,
   knownIssueProblems,
   renderNotes,
-  shipped,
+  shippedSegments,
+  tableProblems,
   type Counts,
   type KnownIssue,
 } from "../lib/release-notes.ts";
@@ -57,23 +59,25 @@ for (const language of languages) {
     const drafts = has(draftPath)
       ? (read(draftPath) as DisputedRecord)
       : undefined;
+    const titles = titlesOf(language, book);
     let c: Counts;
     try {
-      c = countBook(language, structure, titlesOf(language, book), drafts);
+      c = countBook(language, structure, titles, drafts);
     } catch (e) {
       problems.push(`${language} ${book}: ${(e as Error).message}`);
       continue;
     }
     addCounts(total, c);
-    // The counts must say what the title tables ship.
+    // The title tables must ship exactly the titles counted as shipped:
+    // the same keys with the same text, not just as many.
     const tablePath = `dist/tc-mobile/titles/${language}/${book}.json`;
-    const inTable = has(tablePath)
-      ? Object.keys((read(tablePath) as { segments: object }).segments).length
-      : 0;
-    if (inTable !== shipped(c))
-      problems.push(
-        `${tablePath}: ${inTable} segment titles, but data/ has ${shipped(c)} at ai-checked or above`
-      );
+    const table: unknown = has(tablePath)
+      ? (read(tablePath) as { segments?: unknown } | null)?.segments
+      : {};
+    problems.push(
+      ...tableProblems(tablePath, shippedSegments(structure, titles), table)
+    );
+    const inTable = isSegmentMap(table) ? Object.keys(table).length : 0;
     if (inTable > 0) books.push([book, inTable]);
   }
   counted.push([language, total]);
