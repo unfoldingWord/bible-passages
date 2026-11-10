@@ -110,6 +110,7 @@ export const BOOKS = [
   "EPH",
   "EST",
   "EXO",
+  "EZK",
   "EZR",
   "GAL",
   "GEN",

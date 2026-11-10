@@ -252,6 +252,7 @@ describe.each([
   "LAM",
   "PRO",
   "ECC",
+  "EZK",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -1246,6 +1247,26 @@ describe.each([
     checks: 4,
     batched: true,
   },
+  {
+    book: "EZK",
+    reused: [
+      "EZK.1.1-3",
+      "EZK.25.8-11",
+      "EZK.25.15-17",
+      "EZK.28.25-26",
+      "EZK.40.17-19",
+      "EZK.45.10-12",
+      "EZK.48.21-22",
+    ],
+    drafted: 545,
+    // Drafted for #244 (ADR 0008) with the prompt on main. 16 batches, then
+    // one follow-up call (#252) for the 5 segments the replies left out.
+    prompt: "prompts/segment-titles.md",
+    drafts: 17,
+    followUps: 1,
+    checks: 16,
+    batched: true,
+  },
 ])("a scripted segment-title record ($book)", (t) => {
   const record = read(`data/drafts/en/${t.book}.json`) as Record;
   const structure = read(`data/structure/${t.book}.json`) as {
@@ -1284,9 +1305,13 @@ describe.each([
       ...Array<string>(t.checks).fill("check"),
     ]);
     // A record made with batched drafting (#213) has exactly the draft calls
-    // its batching makes; PHP, drafted whole before it, one.
+    // its batching makes, plus any follow-up calls for segments a reply left
+    // out (#252); PHP, drafted whole before it, one.
     expect(drafts).toBe(
-      t.batched ? batches(Object.keys(record.titles), DRAFT_BATCH).length : 1
+      t.batched
+        ? batches(Object.keys(record.titles), DRAFT_BATCH).length +
+            (t.followUps ?? 0)
+        : 1
     );
     // A record made with the batched check (#201) has exactly the check
     // calls the runner's batching makes (#215); PHP, made before it, one.
