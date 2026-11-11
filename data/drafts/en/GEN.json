@@ -957,7 +957,15 @@
       "text": "God promises no more floods; the rainbow is the sign",
       "source": "ai:anthropic/claude-sonnet-5.5",
       "status": "ai-checked",
-      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" },
+      "review": {
+        "by": "reviewer:maintainer",
+        "at": "2026-11-11",
+        "status": "human-reviewed",
+        "text": "God promises a flood will never again destroy the earth",
+        "why": "Genesis 9:11 limits the promise to a flood that destroys the earth; the draft said no more floods at all (#232).",
+        "saved": "2026-11-11T16:30:30.000Z"
+      }
     },
     "GEN.9.14-15": {
       "text": "God will remember his promise when the rainbow appears",

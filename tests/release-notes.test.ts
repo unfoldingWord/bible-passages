@@ -18,10 +18,7 @@ import {
 } from "../scripts/lib/release-notes.ts";
 import { BLANK_TITLE } from "../scripts/lib/segment-titles.ts";
 import type { Structure } from "../scripts/lib/structure.ts";
-import {
-  SHIPPED_STATUSES,
-  type TitleEntries,
-} from "../scripts/lib/title-table.ts";
+import { SHIPPED_STATUSES } from "../scripts/lib/title-table.ts";
 
 // A Matthew-shaped structure, so MAT.17.21-21 is one of BLANK_SEGMENTS:
 // pericope A has segments 1-6, pericope B only segment 7 (decision 12's
@@ -487,7 +484,7 @@ describe("distProblems", () => {
 });
 
 // The committed data: the notes generate, add up, agree with the title
-// tables (the CLI stops if not) and list #232 until a person fixes it.
+// tables (the CLI stops if not) and list known-issues.json.
 describe("scripts/release/notes.ts on the committed data", () => {
   const run = spawnSync(
     process.execPath,
@@ -553,19 +550,17 @@ describe("scripts/release/notes.ts on the committed data", () => {
     );
   });
 
-  it("lists GEN.9.11-13 as a known issue (#232) with its built title and status", () => {
-    const built = (
-      JSON.parse(readFileSync("data/titles/en/GEN.json", "utf8")) as {
-        titles: TitleEntries;
-      }
-    ).titles["GEN.9.11-13"]!;
-    const issue = (
+  // How a known issue is rendered is tested above with fixtures; here, the
+  // committed known-issues.json reaches the notes whole, or "None listed."
+  it("lists every entry of known-issues.json, or says none", () => {
+    const issues = (
       JSON.parse(readFileSync("known-issues.json", "utf8")) as {
         issues: { issue: number; text: string }[];
       }
-    ).issues.find((i) => i.issue === 232)!;
-    expect(run.stdout).toContain(
-      `\n- GEN.9.11-13 (en, \`${built.status}\`): “${built.text}”. ${issue.text} (#232)\n`
-    );
+    ).issues;
+    const section = run.stdout.slice(run.stdout.indexOf("\n## Known issues\n"));
+    if (issues.length === 0) expect(section).toContain("\n\nNone listed.\n");
+    for (const i of issues)
+      expect(section).toContain(` ${i.text} (#${i.issue})\n`);
   });
 });

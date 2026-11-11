@@ -57,7 +57,15 @@
       "text": "Michael did not slander the devil; ungodly men do",
       "source": "ai:anthropic/claude-sonnet-5.5",
       "status": "ai-checked",
-      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" },
+      "review": {
+        "by": "reviewer:maintainer",
+        "at": "2026-11-11",
+        "status": "human-reviewed",
+        "text": "Ungodly men slander and follow Cain, Balaam and Korah",
+        "why": "Jude 1:10-11: the men slander what they do not understand and follow Cain, Balaam and Korah; the draft said they slander the devil (#254).",
+        "saved": "2026-11-11T16:30:30.000Z"
+      }
     },
     "JUD.1.12-13": {
       "text": "Jude compares the ungodly men to reefs, clouds and waves",
