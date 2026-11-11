@@ -996,7 +996,9 @@ describe("draftSegmentTitles", () => {
     expect(ledgers.at(-1)).toMatchObject({ draftBatch: DRAFT_BATCH });
   });
 
-  it("stops before a later draft batch once the spend cap is reached, or when cost is unknown", async () => {
+  // #278: a later first-round batch that stops keeps the titles earlier
+  // batches read, as a follow-up that stops does (#266).
+  it("keeps the titles in hand unchecked when the fuse refuses a later draft batch, and ends incomplete", async () => {
     for (const cost of [1, null]) {
       const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
       const { complete, sent } = fakeModels([{ reply: first, cost }]);
@@ -1004,42 +1006,143 @@ describe("draftSegmentTitles", () => {
       const { record, outcome } = await run(complete, ledgers, {
         draftBatch: 1,
       });
-      expect(record).toBeNull();
-      expect(outcome).toEqual({
-        stopped:
-          cost === null
-            ? "draft batch 2 of 2: cost unknown, not run"
-            : "draft batch 2 of 2: spent 1 of 1, not run",
-      });
       expect(sent).toHaveLength(1);
-      // The first batch's paid-for drafts stay on record.
+      const why = cost === null ? "cost unknown" : "spent 1 of 1";
+      // The check is refused for the same reason; no call is made.
+      expect(outcome).toEqual({
+        incomplete: {
+          draft: ["XYZ.1.4-4"],
+          check: ["XYZ.1.2-3"],
+          stopped: `check: ${why}, not run`,
+        },
+      });
+      // Unchecked, so unreviewed and with no check: the drafts test
+      // refuses such a record if it is committed.
+      expect(record?.titles).toEqual({
+        "XYZ.1.2-3": {
+          text: first["XYZ.1.2-3"],
+          source: "ai:a/draft",
+          status: "unreviewed",
+        },
+      });
+      expect(record?.calls.map((c) => c.role)).toEqual(["draft"]);
+      // The first batch's paid-for drafts stay on record, and the refused
+      // batch is named; no follow-up was asked.
       expect(ledgers.at(-1)).toMatchObject({
         outcome,
         calls: [{ role: "draft" }],
         draftTitles: first,
+        draftFollowUps: [],
+        draftFollowUpsEnded: `draft batch 2 of 2: ${why}, not run`,
+        checks: null,
       });
     }
   });
 
-  it("stops when a draft batch's reply cannot be read, keeping earlier drafts on record", async () => {
+  it("checks the titles in hand and ends incomplete when a later draft batch's reply cannot be read", async () => {
+    const agree = { verdict: "agree" };
     const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
     const { complete, sent } = fakeModels([
       { reply: first, cost: 0.01 },
       { reply: "cut off", cost: 0.01 },
+      { reply: { "XYZ.1.2-3": agree }, cost: 0.01 },
     ]);
     const ledgers: unknown[] = [];
     const { record, outcome } = await run(complete, ledgers, {
       draftBatch: 1,
     });
-    expect(record).toBeNull();
-    expect(outcome).toMatchObject({
-      stopped: expect.stringMatching(/^draft batch 2 of 2: unreadable reply/),
+    // No follow-up draft call: the check of the one title read comes next.
+    expect(sent.map((s) => s.model)).toEqual(["a/draft", "a/draft", "g/check"]);
+    expect(sent[2]?.user).toBe(
+      checkMessage(
+        "XYZ",
+        inputs.filter((s) => s.key === "XYZ.1.2-3"),
+        first
+      )
+    );
+    const stopped = expect.stringMatching(
+      /^draft batch 2 of 2: unreadable reply/
+    );
+    expect(outcome).toEqual({
+      incomplete: { draft: ["XYZ.1.4-4"], check: [], stopped },
+    });
+    expect(record?.titles).toEqual({
+      "XYZ.1.2-3": {
+        text: first["XYZ.1.2-3"],
+        source: "ai:a/draft",
+        status: "ai-checked",
+        check: { by: "ai:g/check", verdict: "agree" },
+      },
+    });
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      calls: [{ role: "draft" }, { role: "draft" }, { role: "check" }],
+      draftTitles: first,
+      draftFollowUps: [],
+      draftFollowUpsEnded: stopped,
+    });
+  });
+
+  it("keeps the titles in hand unchecked when an unreadable later draft batch spends the cap", async () => {
+    const first = { "XYZ.1.2-3": draftReply["XYZ.1.2-3"] };
+    const { complete, sent } = fakeModels([
+      { reply: first, cost: 0.5 },
+      { reply: "cut off", cost: 0.5 },
+    ]);
+    const ledgers: unknown[] = [];
+    const { record, outcome } = await run(complete, ledgers, {
+      draftBatch: 1,
     });
     expect(sent).toHaveLength(2);
-    expect(ledgers.at(-1)).toMatchObject({
-      calls: [{ role: "draft" }, { role: "draft" }],
-      draftTitles: first,
+    expect(outcome).toEqual({
+      incomplete: {
+        draft: ["XYZ.1.4-4"],
+        check: ["XYZ.1.2-3"],
+        stopped: "check: spent 1 of 1, not run",
+      },
     });
+    expect(record?.titles).toEqual({
+      "XYZ.1.2-3": {
+        text: first["XYZ.1.2-3"],
+        source: "ai:a/draft",
+        status: "unreviewed",
+      },
+    });
+    // The outcome names the refused check; the unreadable draft batch that
+    // came before it is in the ledger.
+    expect(ledgers.at(-1)).toMatchObject({
+      outcome,
+      draftTitles: first,
+      draftFollowUpsEnded: expect.stringMatching(
+        /^draft batch 2 of 2: unreadable reply/
+      ),
+    });
+  });
+
+  // #211 still holds in the first round: with no title read, a stop writes
+  // no record.
+  it("still stops when a later draft batch stops and no earlier batch read a title", async () => {
+    for (const [second, stopped] of [
+      [[], "draft batch 2 of 2: spent 1 of 1, not run"],
+      [
+        [{ reply: "cut off", cost: 0.01 }],
+        expect.stringMatching(/^draft batch 2 of 2: unreadable reply/),
+      ],
+    ] as const) {
+      const firstCost = second.length === 0 ? 1 : 0.01;
+      const { complete, sent } = fakeModels([
+        { reply: {}, cost: firstCost },
+        ...second,
+      ]);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers, {
+        draftBatch: 1,
+      });
+      expect(sent).toHaveLength(1 + second.length);
+      expect(record).toBeNull();
+      expect(outcome).toEqual({ stopped });
+      expect(ledgers.at(-1)).toMatchObject({ outcome, draftTitles: {} });
+    }
   });
 
   it("refuses a check of drafts a later draft batch's model, or its family, answered", async () => {
