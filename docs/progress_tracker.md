@@ -41,6 +41,24 @@ Lanes ran as background agents, each in its own worktree. 9 PRs merged: #273 to 
 - **#207:** the third check on the 813 held disputes still waits for the verdict (ADR 0008).
 - **Before the tag:** the release-prep PR (version 0.1.0, this entry), then go/no-go 2 on 13 Nov and the tag on 16 Nov, each gated on its review.
 
+### 2026-11-11 evening
+
+2 more PRs merged after the entry above: #284 (21:20 UTC) and #285 (22:25 UTC).
+
+| What                                                                                                                             | Evidence                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| Version 0.1.0 in `package.json`; every dist package and title table carries `"version": "0.1.0"`; tracker for 9 to 11 Nov        | #284 (Part of #13), `79061ea` |
+| v0.1.x metadata sized: figure rows re-counted two ways (28,252 over 59 books), two 6B tables, a Titus-first plan, five questions | #285 (Part of #44), `5655790` |
+
+- **Release dry run on `main`:** `scripts/release/run.sh --dry-run` on `79061ea`, unmodified, exit 0 ("Dry run passed"; 11,819 tests passed, 2 todo; 132 assets; `data/` and `dist/` restored). No tag exists (`git ls-remote --tags origin` empty). Posted on #13.
+- **Sprint status (11 Nov, end of day):**
+  1. Current work: v0.1.0 is release-ready on `main`; v0.1.x metadata is sized.
+  2. Verified change since 9 Nov: Ezekiel in (all 66 books), three known wrong titles reviewed by the maintainer, 0.1.0 bump, dry run passed on `main`.
+  3. The one constraint: go/no-go 2 on 13 Nov, owned by the maintainer.
+  4. Next milestone: the v0.1.0 tag on 16 Nov, if go/no-go 2 passes.
+  5. Release stage: pre-release, release-ready.
+- **Not merged:** #272 (a dependency bump opened by Dependabot) has no linked issue, assignee or bench review.
+
 ---
 
 ## 2026-11-10 — follow-up calls for omitted segments; release notes say what v0.1.0 holds; Ezekiel drafted
