@@ -715,8 +715,10 @@ export async function draftSegmentTitles(args: {
       if (todo.length === 0) break;
       const stop = await draftRound(round, todo);
       if (stop !== null) {
-        // A first draft call that stops, or a follow-up with no title read
-        // at all, stops the run as before (#211): there is nothing to keep.
+        // A stop in the first round, or in a follow-up with no title read
+        // at all, stops the run with no record, as before (#211). A first-
+        // round stop does so even when an earlier batch of that round read
+        // titles: they are kept only in the ledger's draftTitles (#278).
         if (round === 0 || Object.keys(titlesDrafted).length === 0) {
           outcome = { stopped: stop };
           return { record: null, outcome };

@@ -1334,7 +1334,8 @@ describe("draftSegmentTitles", () => {
         { reply: first, cost: 0.5 },
         { reply: "cut off", cost: 0.5 },
       ]);
-      const { record, outcome } = await run(complete, []);
+      const ledgers: unknown[] = [];
+      const { record, outcome } = await run(complete, ledgers);
       expect(sent).toHaveLength(2);
       expect(outcome).toEqual({
         incomplete: {
@@ -1344,6 +1345,16 @@ describe("draftSegmentTitles", () => {
         },
       });
       expect(record?.titles["XYZ.1.2-3"]?.status).toBe("unreviewed");
+      // The outcome names the refused check; the unreadable follow-up that
+      // came before it is in the ledger.
+      const unread = expect.stringMatching(/^unreadable reply/);
+      expect(ledgers.at(-1)).toMatchObject({
+        outcome,
+        draftFollowUps: [{ round: 1, asked: ["XYZ.1.4-4"], read: [], unread }],
+        draftFollowUpsEnded: expect.stringMatching(
+          /^draft follow-up 1 batch 1 of 1: unreadable reply/
+        ),
+      });
     });
 
     it("still stops when a follow-up reply cannot be read and no title was read", async () => {
