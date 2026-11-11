@@ -3,9 +3,10 @@ import type { DraftRecord } from "./segment-titles.ts";
 /**
  * The one-line summary `scripts/translate/segment-titles.ts` prints at the
  * end of a run. Pure, so the wording is pinned by a test (#242): the
- * clause on blank segments says only the build writes *those* titles, and
- * cannot be read as covering the segments that reuse their pericope title.
- * Each counted noun agrees in number with its count (#265).
+ * clause on blank segments says only the build writes *those* titles
+ * ("that title" for one), and cannot be read as covering the segments that
+ * reuse their pericope title. Each counted noun agrees in number with its
+ * count (#265).
  */
 export function runSummary(args: {
   book: string;
