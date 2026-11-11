@@ -478,7 +478,9 @@ Building Titus first replaces these with measured times.
   and `dist/` clean.
 - The 25 segments' figure sets equal the Titus table under "Counts" (20
   segments with a figure, 28 pairs, 8 figures), checked by a test, and by a
-  second reader (door43-preview-renderers or `awk`) in the PR body.
+  second reader (door43-preview-renderers or `awk`) in the PR body. Titus
+  has no `c:front`, range or verse-list figure rows, so the reader's rule
+  gives the same sets as "Counts".
 - Every input is in `sources.json` with its SHA-256; the file names the
   licence and attribution of `en_tn` and `en_ta` (CC BY-SA 4.0).
 - Both bench lenses clean at the PR's head.
@@ -519,6 +521,7 @@ test "$(git -C $W/en_tn rev-parse HEAD)" = e586762e330f482a60c52aedd1c7b3a2f155d
 git -c advice.detachedHead=false clone -q --depth 1 --branch v91 https://git.door43.org/unfoldingWord/en_ta.git $W/en_ta
 test "$(git -C $W/en_ta rev-parse HEAD)" = ce9a1bb9431317ca888e8c1f9620caa7f5fe45fd
 # The 32 figure articles: the "Figures of Speech" and "Biblical Imagery" sections, without their introductions
+# bita-part3 is the last article of "Biblical Imagery" and one of the 32, so it is printed, then the walk stops
 awk '/title: "Figures of Speech"$/ && !s {s=1} s && /link:/ {print $2} /link: bita-part3/ {exit}' \
   $W/en_ta/translate/toc.yaml | grep -vx 'figs-intro\|biblicalimageryta' > $W/figs.txt
 test "$(wc -l < $W/figs.txt)" -eq 32
@@ -527,7 +530,11 @@ for f in $W/en_tn/tn_*.tsv; do b=$(basename $f .tsv); awk -F'\t' -v b=${b#tn_} \
   'NR==FNR{fig["rc://*/ta/man/translate/"$1]=1;next} FNR==1{for(i=1;i<=NF;i++) if($i=="SupportReference") c=i; next}
    {n++; if($c in fig) k++} END{print b"\t"n"\t"k+0}' $W/figs.txt $f; done | sort > $W/awk.tsv
 # Reader 2, door43-preview-renderers 1.7.0 (installed in its own directory, not this repo)
-mkdir $W/r && (cd $W/r && npm i -q --no-audit --no-fund @unfoldingword/door43-preview-renderers@1.7.0)
+# npm init first, so npm installs here and not into a package.json in a parent directory
+mkdir $W/r && (cd $W/r && npm init -y >/dev/null && npm i -q --no-audit --no-fund @unfoldingword/door43-preview-renderers@1.7.0)
+# The installed bytes are the registry's 1.7.0 tarball (npm records no git commit in it)
+test "$(jq -r '.packages["node_modules/@unfoldingword/door43-preview-renderers"].integrity' $W/r/package-lock.json)" \
+  = sha512-FZ1lG6Jji9ulqY4PS1cNC6ueW/mw+EH5kETEr9P/M7N5mJVqQv/qauedkY0n1muChS9rOnQjiLCunFAuB0s5sg==
 figs=$(jq -R -s 'split("\n")|map(select(length>0)|"rc://*/ta/man/translate/"+.)' $W/figs.txt)
 for f in $W/en_tn/tn_*.tsv; do b=$(basename $f .tsv); b=${b#tn_}
   (cd $W/r && npx door43-renderers getResourceData --owner unfoldingWord --repo en_tn --ref v91 \
@@ -535,20 +542,23 @@ for f in $W/en_tn/tn_*.tsv; do b=$(basename $f .tsv); b=${b#tn_}
   jq -r --arg b $b --argjson figs "$figs" '[.books[].chapters[].verses[] | (if type=="array" then .[] else . end)] as $r
     | [$b, ($r|length), ($r|map(select(.SupportReference as $s | $figs|index($s)))|length)] | @tsv' $W/r/$b.json
 done | sort > $W/rend.tsv
-diff $W/awk.tsv $W/rend.tsv && awk -F'\t' '{n+=$2; k+=$3} END{print NR, n, k}' $W/awk.tsv   # 59 87573 28252
-# Verse and range rows only, against counts.tsv: prints "59 59"
+diff $W/awk.tsv $W/rend.tsv
+test "$(awk -F'\t' '{n+=$2; k+=$3} END{print NR, n, k}' $W/awk.tsv)" = "59 87573 28252"
+# Verse and range rows only, against counts.tsv (column found by name in both files): 59 books, 59 equal
 for f in $W/en_tn/tn_*.tsv; do b=$(basename $f .tsv); awk -F'\t' -v b=${b#tn_} \
-  'NR==FNR{fig["rc://*/ta/man/translate/"$1]=1;next} FNR>1 && ($4 in fig) && $1 ~ /^[0-9]+:[0-9]+(-[0-9]+)?$/ {k++}
-   END{print b"\t"k+0}' $W/figs.txt $f; done | sort > $W/verse.tsv
-join -t$'\t' <(awk -F'\t' 'NR>1{print $1"\t"$3}' docs/scoping/metadata/counts.tsv | sort) $W/verse.tsv |
-  awk -F'\t' '{n++; if ($2==$3) s++} END{print n, s}'
+  'NR==FNR{fig["rc://*/ta/man/translate/"$1]=1;next}
+   FNR==1{for(i=1;i<=NF;i++){if($i=="Reference") r=i; if($i=="SupportReference") c=i}; next}
+   ($c in fig) && $r ~ /^[0-9]+:[0-9]+(-[0-9]+)?$/ {k++} END{print b"\t"k+0}' $W/figs.txt $f; done | sort > $W/verse.tsv
+test "$(join -t$'\t' <(awk -F'\t' 'NR==1{for(i=1;i<=NF;i++) if($i=="tn_figure_rows") c=i; next} {print $1"\t"$c}' \
+  docs/scoping/metadata/counts.tsv | sort) $W/verse.tsv | awk -F'\t' '{n++; if ($2==$3) s++} END{print n, s}')" = "59 59"
 # Key terms: terms, verses, dropped, distinct articles per language (the Python pass is not kept)
 for l in $(ls data/glossaries); do printf '%s\t' $l; cat data/glossaries/$l/*.json | jq -rs \
   '[(map(.terms|length)|add), (map(.terms[]|.refs|length)|add), (map(.gaps|length)|add), (map(.terms|keys[])|unique|length)] | @tsv'; done
 # Releases, and tc-mobile's template type
-curl -fsS 'https://git.door43.org/api/v1/repos/unfoldingWord/en_tn/releases?limit=1' | jq -r '.[0].tag_name'   # v91
-gh api 'repos/unfoldingWord/tc-mobile/contents/src/types/template.ts?ref=develop' --jq .content | base64 -d |
-  { grep -ci 'metadata\|figure\|term' || true; }   # 0
+test "$(curl -fsS 'https://git.door43.org/api/v1/repos/unfoldingWord/en_tn/releases?limit=1' | jq -r '.[0].tag_name')" = v91
+test "$(gh api 'repos/unfoldingWord/tc-mobile/contents/src/types/template.ts?ref=develop' --jq .content | base64 -d |
+  { grep -ci 'metadata\|figure\|term' || true; })" = 0
+echo recipe passed
 ```
 
 The seven books' master counts came from the same `awk` over a clone of
