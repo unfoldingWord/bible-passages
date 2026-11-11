@@ -16,10 +16,10 @@ export type Assets = { assets: Asset[]; problems: string[] };
  * run.sh's "<name><TAB><file>" lines and `gh release create`'s
  * "file#label" would misread, and a package name cannot equal a table's.
  */
-const LANGUAGE_TAG = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
+export const LANGUAGE_TAG = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const isBook = (code: string): boolean => STRUCTURE_BOOKS.includes(code);
 /** The book code of a package file name `<BOOK>.json`, or null. */
-const packageBook = (name: string): string | null => {
+export const packageBook = (name: string): string | null => {
   const book = name.slice(0, -".json".length);
   return name === `${book}.json` && isBook(book) ? book : null;
 };

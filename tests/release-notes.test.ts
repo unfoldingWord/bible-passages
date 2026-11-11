@@ -478,10 +478,82 @@ describe("scopeLines", () => {
 });
 
 describe("distProblems", () => {
-  it("passes dist/ with only tc-mobile/ and names anything else", () => {
-    expect(distProblems(["tc-mobile"])).toEqual([]);
-    expect(distProblems(["tc-mobile", "metadata"])).toEqual([
-      "dist/metadata: the notes say only tc-mobile/ ships; update scopeLines in scripts/lib/release-notes.ts",
+  const file = (path: string) => ({ path, kind: "file" as const });
+  const dir = (path: string) => ({ path, kind: "directory" as const });
+  const say = (path: string) =>
+    `dist/${path}: the notes say dist/ holds only tc-mobile/ packages and title tables; update scopeLines in scripts/lib/release-notes.ts`;
+  const layout = [
+    dir("tc-mobile"),
+    file("tc-mobile/.gitkeep"),
+    file("tc-mobile/GEN.json"),
+    file("tc-mobile/TIT.json"),
+    dir("tc-mobile/titles"),
+    dir("tc-mobile/titles/en"),
+    file("tc-mobile/titles/en/TIT.json"),
+    dir("tc-mobile/titles/pt-BR"),
+    file("tc-mobile/titles/pt-BR/GEN.json"),
+  ];
+
+  it("passes the tc-mobile/ packages and title tables, and an empty dist/", () => {
+    expect(distProblems(layout)).toEqual([]);
+    expect(distProblems([])).toEqual([]);
+  });
+
+  it("names a top-level entry other than tc-mobile/ once, not its contents", () => {
+    expect(
+      distProblems([
+        ...layout,
+        dir("metadata"),
+        file("metadata/TIT.json"),
+        dir("metadata/en"),
+        file("metadata/en/TIT.json"),
+        file("README.md"),
+        file("tc-mobile"),
+      ])
+    ).toEqual([say("README.md"), say("metadata/"), say("tc-mobile")]);
+  });
+
+  it("names metadata nested under tc-mobile/, at any depth", () => {
+    expect(
+      distProblems([
+        ...layout,
+        dir("tc-mobile/metadata"),
+        file("tc-mobile/metadata/TIT.json"),
+        file("tc-mobile/key-terms.TIT.json"),
+        file("tc-mobile/titles/en/TIT.metadata.json"),
+        dir("tc-mobile/titles/en/metadata"),
+        file("tc-mobile/titles/en/metadata/TIT.json"),
+        file("tc-mobile/titles/key-terms.json"),
+        dir("tc-mobile/titles/en/GEN.json"),
+        file("tc-mobile/titles/EN/TIT.json"),
+      ])
+    ).toEqual([
+      say("tc-mobile/key-terms.TIT.json"),
+      say("tc-mobile/metadata/"),
+      say("tc-mobile/titles/EN/TIT.json"),
+      say("tc-mobile/titles/en/GEN.json/"),
+      say("tc-mobile/titles/en/TIT.metadata.json"),
+      say("tc-mobile/titles/en/metadata/"),
+      say("tc-mobile/titles/key-terms.json"),
+    ]);
+  });
+
+  it("names a book code that is not one, a symlink and a stray dotfile", () => {
+    expect(
+      distProblems([
+        ...layout,
+        file("tc-mobile/XYZ.json"),
+        { path: "tc-mobile/MAT.json", kind: "other" },
+        file(".DS_Store"),
+        file("tc-mobile/titles/.DS_Store"),
+        file("tc-mobile/titles/en/.gitkeep"),
+      ])
+    ).toEqual([
+      say(".DS_Store"),
+      say("tc-mobile/MAT.json"),
+      say("tc-mobile/XYZ.json"),
+      say("tc-mobile/titles/.DS_Store"),
+      say("tc-mobile/titles/en/.gitkeep"),
     ]);
   });
 });
@@ -524,23 +596,35 @@ describe("scripts/release/notes.ts on the committed data", () => {
   // languages are re-derived here from the title tables in dist/, not from
   // the notes; when a second language ships, this test changes with it.
   it("says English only and that metadata follows in v0.1.x", () => {
+    // Sorted, so the expected list does not depend on directory order; only
+    // *.json files are read, and one that does not parse or has no
+    // segments object counts as no titles (the CLI reports such a file:
+    // see "prints the notes").
+    const hasTitles = (file: string): boolean => {
+      try {
+        const segments = (
+          JSON.parse(readFileSync(file, "utf8")) as { segments?: unknown }
+        )?.segments;
+        return (
+          typeof segments === "object" &&
+          segments !== null &&
+          Object.keys(segments).length > 0
+        );
+      } catch {
+        return false;
+      }
+    };
     const shipping = readdirSync("dist/tc-mobile/titles", {
       withFileTypes: true,
     })
       .filter((e) => e.isDirectory())
       .map((e) => e.name)
       .filter((l) =>
-        readdirSync(`dist/tc-mobile/titles/${l}`).some(
-          (f) =>
-            Object.keys(
-              (
-                JSON.parse(
-                  readFileSync(`dist/tc-mobile/titles/${l}/${f}`, "utf8")
-                ) as { segments: object }
-              ).segments
-            ).length > 0
-        )
-      );
+        readdirSync(`dist/tc-mobile/titles/${l}`, { withFileTypes: true })
+          .filter((f) => f.isFile() && f.name.endsWith(".json"))
+          .some((f) => hasTitles(`dist/tc-mobile/titles/${l}/${f.name}`))
+      )
+      .sort();
     expect(shipping).toEqual(["en"]);
     expect(readdirSync("dist")).toEqual(["tc-mobile"]);
     const lines = run.stdout.split("\n");
