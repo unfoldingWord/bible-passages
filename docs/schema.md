@@ -204,7 +204,8 @@ never calls a model. Such a record also has:
   and Psalms, Song of Songs, Isaiah, Jeremiah and Lamentations, and
   Proverbs and Ecclesiastes, #244).
 - `calls`: the draft calls (one before #208; one per batch of at most 35
-  segments since), then the check calls (one before #201; one per batch of
+  segments since, then any follow-up calls for segments a reply left out,
+  #252), then the check calls (one before #201; one per batch of
   at most 35 titles since), each with its OpenRouter generation id, model,
   tokens and cost in US dollars. Each title's `source` names the model that
   answered its own draft call.

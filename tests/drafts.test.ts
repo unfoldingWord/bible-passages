@@ -13,6 +13,7 @@ import {
   CHECK_BATCH,
   CRITERIA,
   DRAFT_BATCH,
+  DRAFT_FOLLOW_UPS,
   gateProblems,
 } from "../scripts/lib/segment-titles.ts";
 import { sha256 } from "../scripts/lib/translate.ts";
@@ -407,7 +408,21 @@ describe.each([
 // draft call per batch of at most DRAFT_BATCH segments (#208), then one check
 // call per batch of at most CHECK_BATCH titles (#201); `drafts` and `checks`
 // are what each committed record holds (`drafts` is 1 unless given).
-describe.each([
+// `followUps` is how many of the draft calls were follow-up calls for
+// segments a reply left out (#252); 0 unless given. The record does not mark
+// which draft calls were follow-ups (the run's ledger does), so a row states
+// the count it read from the ledger and the test checks the record agrees.
+type RecordRow = {
+  book: string;
+  reused: string[];
+  drafted: number;
+  prompt: string;
+  drafts?: number;
+  followUps?: number;
+  checks: number;
+  batched: boolean;
+};
+describe.each<RecordRow>([
   {
     book: "PHP",
     reused: ["PHP.1.1-2", "PHP.4.21-23"],
@@ -1284,9 +1299,18 @@ describe.each([
       ...Array<string>(t.checks).fill("check"),
     ]);
     // A record made with batched drafting (#213) has exactly the draft calls
-    // its batching makes; PHP, drafted whole before it, one.
-    expect(drafts).toBe(
-      t.batched ? batches(Object.keys(record.titles), DRAFT_BATCH).length : 1
+    // its batching makes, plus any follow-up calls for segments a reply left
+    // out (#252); PHP, drafted whole before it, one.
+    const followUps = t.followUps ?? 0;
+    const draftBatches = batches(Object.keys(record.titles), DRAFT_BATCH);
+    expect(drafts).toBe(t.batched ? draftBatches.length + followUps : 1);
+    // Follow-ups came after batching, and there are at most DRAFT_FOLLOW_UPS
+    // rounds, each asking for fewer segments than the first, so no round
+    // makes more calls than the first round's batches.
+    if (!t.batched) expect(followUps).toBe(0);
+    expect(followUps).toBeGreaterThanOrEqual(0);
+    expect(followUps).toBeLessThanOrEqual(
+      DRAFT_FOLLOW_UPS * draftBatches.length
     );
     // A record made with the batched check (#201) has exactly the check
     // calls the runner's batching makes (#215); PHP, made before it, one.
