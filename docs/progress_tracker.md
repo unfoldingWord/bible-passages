@@ -6,7 +6,7 @@ Newest first. One entry per working session.
 
 ## 2026-11-11 — Ezekiel committed; the known wrong titles reviewed; release prep for v0.1.0
 
-Lanes ran as background agents, each in its own worktree. 8 PRs merged: #273 to #277 and #280 to #282 (GitHub merge times 16:33 to 20:24 UTC).
+Lanes ran as background agents, each in its own worktree. 9 PRs merged: #273 to #277 and #280 to #283 (GitHub merge times 16:33 to 21:08 UTC).
 
 ### Shipped
 
@@ -19,6 +19,8 @@ Lanes ran as background agents, each in its own worktree. 8 PRs merged: #273 to 
 | The maintainer's review of GEN.9.11-13 and JUD.1.9-11: both now `human-reviewed` with the maintainer's wording; `known-issues.json` is now empty                                                                 | #277 (closes #232, #254)                |
 | Ezekiel, the last book: English segment titles drafted and checked on 10 Nov, committed in two PRs (test and docs first, then the data), because the bench's second lens returned no review on the combined #271 | #280 (Part of #252), #281 (closes #252) |
 | The maintainer's wording for EZK.40.46-46, after the bench's first lens found the draft called it "the north chamber" (BSB 40:44-46: it stands by the south gate and faces north)                                | #281                                    |
+| `docs/schema.md` names the one `.gitkeep` path the release-notes guard allows, `dist/tc-mobile/.gitkeep`                                                                                                         | #282 (closes #279)                      |
+| A stop in a later first-round draft batch keeps the titles that earlier batches read                                                                                                                             | #283 (closes #278)                      |
 
 #8 (segment title drafting with a cross-model check) closed as done: all 66 books have English drafts (`ls data/drafts/en | wc -l` = 66 on `6b28076`, #8's closing comment). #271 was closed unmerged, replaced by #280 and #281.
 
@@ -31,8 +33,8 @@ Lanes ran as background agents, each in its own worktree. 8 PRs merged: #273 to 
 
 ### Follow-ups filed
 
-- #278: a stop in a later first-round draft batch discards titles that earlier batches read.
-- #279: say that `.gitkeep` is allowed only at `dist/tc-mobile/.gitkeep` in the release-notes guard (closed by #282, which names that path in `docs/schema.md`).
+- #278: a stop in a later first-round draft batch discards titles that earlier batches read (closed by #283).
+- #279: say that `.gitkeep` is allowed only at `dist/tc-mobile/.gitkeep` in the release-notes guard (closed by #282).
 
 ### Open
 
