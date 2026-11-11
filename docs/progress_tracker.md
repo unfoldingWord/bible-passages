@@ -6,7 +6,7 @@ Newest first. One entry per working session.
 
 ## 2026-11-11 — Ezekiel committed; the known wrong titles reviewed; release prep for v0.1.0
 
-Lanes ran as background agents, each in its own worktree. 7 PRs merged, #273 to #281 (GitHub merge times 16:33 to 20:11 UTC).
+Lanes ran as background agents, each in its own worktree. 8 PRs merged: #273 to #277 and #280 to #282 (GitHub merge times 16:33 to 20:24 UTC).
 
 ### Shipped
 
@@ -32,7 +32,7 @@ Lanes ran as background agents, each in its own worktree. 7 PRs merged, #273 to 
 ### Follow-ups filed
 
 - #278: a stop in a later first-round draft batch discards titles that earlier batches read.
-- #279: say that `.gitkeep` is allowed only at `dist/tc-mobile/.gitkeep` in the release-notes guard (PR #282 open).
+- #279: say that `.gitkeep` is allowed only at `dist/tc-mobile/.gitkeep` in the release-notes guard (closed by #282, which names that path in `docs/schema.md`).
 
 ### Open
 
@@ -43,7 +43,7 @@ Lanes ran as background agents, each in its own worktree. 7 PRs merged, #273 to 
 
 ## 2026-11-10 — follow-up calls for omitted segments; release notes say what v0.1.0 holds; Ezekiel drafted
 
-5 PRs merged, #262 to #269 (GitHub merge times 15:05 to 15:29 UTC).
+5 PRs merged: #262, #263, #264, #268 and #269 (GitHub merge times 15:05 to 15:29 UTC).
 
 ### Shipped
 
@@ -57,7 +57,7 @@ Lanes ran as background agents, each in its own worktree. 7 PRs merged, #273 to 
 
 ### Measured
 
-- **Ezekiel** (#281's body and `docs/scoping/sizing.md`): drafted and checked on its first try with #264's follow-up rounds: 545 of 552 drafted, 524 agreed, 21 disagreed; $1.54912350; 1,311.5 s of model time. The 16 draft batches left out 5 single-verse segments (EZK.40.46-46, EZK.40.47-47, EZK.42.15-15, EZK.42.20-20, EZK.45.25-25); one follow-up call returned all 5. Ezekiel's two stopped runs on 5 Nov cost $3.10883975, so the book cost $4.65796325 in all. The data merged on 11 Nov (#281).
+- **Ezekiel** (#281's body and `docs/scoping/sizing.md`): drafted and checked on its first try with #264's follow-up rounds: 545 of 552 drafted (the other 7 are their pericope's only segment, so they reuse its heading), 524 agreed, 21 disagreed; $1.54912350; 1,311.5 s of model time. The 16 draft batches left out 5 single-verse segments (EZK.40.46-46, EZK.40.47-47, EZK.42.15-15, EZK.42.20-20, EZK.45.25-25); one follow-up call returned all 5, and they are among the 545. Ezekiel's two stopped runs on 5 Nov cost $3.10883975, so the book cost $4.65796325 in all. The data merged on 11 Nov (#281).
 
 ### Follow-ups filed
 
