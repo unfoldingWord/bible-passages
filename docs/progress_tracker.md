@@ -4,6 +4,97 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-11 — Ezekiel committed; the known wrong titles reviewed; release prep for v0.1.0
+
+Lanes ran as background agents, each in its own worktree. 9 PRs merged: #273 to #277 and #280 to #283 (GitHub merge times 16:33 to 21:08 UTC).
+
+### Shipped
+
+| What                                                                                                                                                                                                             | Evidence                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Owners and dates for open decisions 6, 7 and 8 in `docs/schema.md`                                                                                                                                               | #274 (closes #2)                        |
+| The release-notes metadata guard checks all of `dist/`, and its test is hardened                                                                                                                                 | #275 (closes #270)                      |
+| The segment-title run summary uses the singular for a count of 1                                                                                                                                                 | #273 (closes #265)                      |
+| Draft follow-up rounds keep the titles already read when a follow-up stops, and stop when a round makes no progress                                                                                              | #276 (closes #266)                      |
+| The maintainer's review of GEN.9.11-13 and JUD.1.9-11: both now `human-reviewed` with the maintainer's wording; `known-issues.json` is now empty                                                                 | #277 (closes #232, #254)                |
+| Ezekiel, the last book: English segment titles drafted and checked on 10 Nov, committed in two PRs (test and docs first, then the data), because the bench's second lens returned no review on the combined #271 | #280 (Part of #252), #281 (closes #252) |
+| The maintainer's wording for EZK.40.46-46, after the bench's first lens found the draft called it "the north chamber" (BSB 40:44-46: it stands by the south gate and faces north)                                | #281                                    |
+| `docs/schema.md` names the one `.gitkeep` path the release-notes guard allows, `dist/tc-mobile/.gitkeep`                                                                                                         | #282 (closes #279)                      |
+| A stop in a later first-round draft batch keeps the titles that earlier batches read                                                                                                                             | #283 (closes #278)                      |
+
+#8 (segment title drafting with a cross-model check) closed as done: all 66 books have English drafts (`ls data/drafts/en | wc -l` = 66 on `6b28076`, #8's closing comment). #271 was closed unmerged, replaced by #280 and #281.
+
+`main` at `6b28076`: `npm run verify` 29 test files, 11,817 passed, 2 todo (from #8's closing comment, run on `6b28076`).
+
+### Measured
+
+- **Segment titles on `6b28076` plus the 0.1.0 version bump** (`node scripts/release/notes.ts v0.1.0`, run in the release-prep worktree): 13,770 segments; **12,695 shipped** (3 `approved`, 15 `human-reviewed`, 12,677 `ai-checked`); 813 held (checker disagreed or a gate failed); 262 reuse their pericope's `unreviewed` heading; 0 not drafted. Re-derived by summing the segments in the 66 English title tables with a separate Node script: 12,695.
+- **Known issues:** none listed (`known-issues.json` holds `{ "issues": [] }`).
+
+### Follow-ups filed
+
+- #278: a stop in a later first-round draft batch discards titles that earlier batches read (closed by #283).
+- #279: say that `.gitkeep` is allowed only at `dist/tc-mobile/.gitkeep` in the release-notes guard (closed by #282).
+
+### Open
+
+- **#207:** the third check on the 813 held disputes still waits for the verdict (ADR 0008).
+- **Before the tag:** the release-prep PR (version 0.1.0, this entry), then go/no-go 2 on 13 Nov and the tag on 16 Nov, each gated on its review.
+
+---
+
+## 2026-11-10 — follow-up calls for omitted segments; release notes say what v0.1.0 holds; Ezekiel drafted
+
+5 PRs merged: #262, #263, #264, #268 and #269 (GitHub merge times 15:05 to 15:29 UTC).
+
+### Shipped
+
+| What                                                                                                                                             | Evidence                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
+| A draft reply that leaves out segments is followed by up to two follow-up rounds that ask for only the missing keys, instead of a whole new run  | #264 (Part of #252)            |
+| The segment-title run summary is tightened and pinned with tests                                                                                 | #262 (closes #242)             |
+| The release notes' blank count, dist cross-check and status floor are tightened                                                                  | #263 (closes #247)             |
+| ADR 0009: metadata (key terms, figures of speech) moves to v0.1.x; the package id `bible-passages:<BOOK>` is confirmed and permanent from v0.1.0 | #268 (Part of #2, Part of #44) |
+| The release notes open with what the release holds and what follows in v0.1.x                                                                    | #269 (closes #267)             |
+
+### Measured
+
+- **Ezekiel** (#281's body and `docs/scoping/sizing.md`): drafted and checked on its first try with #264's follow-up rounds: 545 of 552 drafted (the other 7 are their pericope's only segment, so they reuse its heading), 524 agreed, 21 disagreed; $1.54912350; 1,311.5 s of model time. The 16 draft batches left out 5 single-verse segments (EZK.40.46-46, EZK.40.47-47, EZK.42.15-15, EZK.42.20-20, EZK.45.25-25); one follow-up call returned all 5, and they are among the 545. Ezekiel's two stopped runs on 5 Nov cost $3.10883975, so the book cost $4.65796325 in all. The data merged on 11 Nov (#281).
+
+### Follow-ups filed
+
+- #270: harden the scope-line guard and its committed-data test (from the review of #269; closed 11 Nov by #275).
+
+### Sprint housekeeping (GitHub, 14:21 to 14:22 UTC)
+
+The changes from the 9 Nov sprint audit were made on GitHub this morning: the v0.1.x milestone created; Sprint 1 closed; #3 (Titus end to end) and #7 (segments nested in pericopes) closed as done, with counts taken on 9 Nov at `d68be25`.
+
+---
+
+## 2026-11-09 — 5 Nov tracker merged; sprint audit; the maintainer's metadata and package-id decisions
+
+### Shipped
+
+| What                                         | Evidence |
+| -------------------------------------------- | -------- |
+| Progress tracker entry for the 5 Nov session | #261     |
+
+### Sprint audit
+
+- Counts re-taken on main `d68be25` for the audit: `npm run verify` 28 test files, 11,767 passed, 2 todo; `data/structure/` 66 books, 3,016 pericopes, 13,770 segments (from the closing comments on #3 and #7).
+- Outcome, applied on GitHub on 10 Nov at 14:21 to 14:22 UTC (see that entry): Sprint 1 closed; a v0.1.x milestone created (17 open issues when read on 11 Nov); #3 and #7 closed.
+- #179 (key-term format gate follow-ups): items 1 and 3 were already done in #185, as #179's 2 Nov comment records; item 2 stays open, and #179 sits in v0.1.x. When on 9 Nov this was found is not recorded on GitHub.
+
+### Decisions (the maintainer, 9 Nov)
+
+- Metadata follows in v0.1.x, and the package id is `bible-passages:<BOOK>` (recorded as ADR 0009 on 10 Nov, #268).
+
+### Follow-ups filed
+
+- #265 (singular forms in the run summary) and #266 (follow-up draft calls, stops and empty replies; from #264's review). Both closed 11 Nov (#273, #276).
+
+---
+
 ## 2026-11-05 — English segment titles for 63 books; release notes from the data; three decisions recorded
 
 The session ran past midnight UTC into 6 Nov. Lanes ran as background agents, each in its own worktree. Every PR was reviewed by both bench lenses and merged pinned to the reviewed head on clean + green: under the maintainer's grant for 5 Nov, then under their approval to finish the in-flight run PRs the same way. 13 PRs merged, #240 to #260.
