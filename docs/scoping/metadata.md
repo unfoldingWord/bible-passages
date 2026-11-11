@@ -94,7 +94,7 @@ So 20 figures occur in the notes.
 Granularity: one row per occurrence, on a verse (`1:5`) or a verse range in
 one chapter (`1:5-7`); one row lists verses (Psalm `5:1,3,8,12`, a
 `writing-poetry` note, not a figure). This sentence said "three rows" until
-2026-11-11; re-measured then, all 59 files hold one such row (see
+2026-11-11; re-measured then, the 59 files hold one such row in all (see
 [v0.1.x: sizing and plan](#v01x-sizing-and-plan)). No reference failed to
 parse. A segment has a figure if any verse of a row naming it lies
 in the segment.
@@ -417,6 +417,13 @@ place in `dist/` (question 1).
 | Bide   | n/a                 | Nothing to wait for: the released notes are enough for 59 books.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Build  | not-yet             | A Translation Notes row reader that takes `c:v`, `c:v-v` and verse lists, puts `c:front` in the segment that starts at the chapter's verse 1, as title translation does for glossary refs (`scripts/lib/translate.ts`, #54), skips intros, and fails on any other form; traced to Breaks 2 and 3.                                                                                                                                                                                                                                                     |
 
+The reader's rule for each form in the census above, used by both the build
+and its tests: `c:v` goes on that verse; `c:v-v` and the verse list are
+spread to each of their verses; `c:front` goes on the chapter's verse 1;
+`c:intro` and `front:intro` are skipped, which drops the one `JOS 21:intro`
+figure row. `counts.tsv` counts verse and range rows only, so a check
+against it leaves out the 12 Psalm `c:front` figure rows on purpose.
+
 Reversibility: forward = low; backward = low. The reader changes no data
 format.
 
@@ -477,8 +484,10 @@ Building Titus first replaces these with measured times.
 - Both bench lenses clean at the PR's head.
 
 **Then:** the other 58 books with notes, re-derived the same way against
-`counts.tsv`; the seven books with an empty figure set (#174) until an
-`en_tn` release carries them; figure names per language after question 4.
+`counts.tsv`, leaving out the 12 Psalm `c:front` figure rows (see the
+reader's rule under "6B: reading Translation Notes"); the seven books
+with an empty figure set (#174) until an `en_tn` release carries them;
+figure names per language after question 4.
 
 ### Questions for the maintainer
 
@@ -486,8 +495,8 @@ Building Titus first replaces these with measured times.
    `dist/metadata/<BOOK>.json`, keyed by package id and span keys, not
    inside the tC Mobile packages (which have no field for it). Yes or no?
 2. **Do the key terms in `data/glossaries/` ship in that file in v0.1.x**,
-   for the nine languages built, with each language's dropped terms left
-   out as now?
+   for the ten languages built (zh-Hans for Titus only), with each
+   language's dropped terms left out as now?
 3. **For the requirements owner, unanswered on #44 since 29 Oct:** are
    literary form (poetry, prose or mixed per segment), parallel passages
    (per pericope) and book-level translation difficulty in v0.1.x?
