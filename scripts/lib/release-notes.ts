@@ -4,6 +4,7 @@
 // scripts/release/notes.ts reads the files and checks the counts against
 // dist/tc-mobile/.
 import { builtTitle, type DisputedRecord } from "./dispute-titles.ts";
+import { LANGUAGE_TAG, packageBook } from "./release.ts";
 import { BLANK_SEGMENTS, BLANK_TITLE } from "./segment-titles.ts";
 import type { Structure } from "./structure.ts";
 import { LANGUAGES } from "./translate.ts";
@@ -288,7 +289,8 @@ const named = (tag: string) => {
  * title table (`shippedBooks`), so the line stays true when a second
  * language ships; the v0.1 languages (LANGUAGES) not among them follow.
  * Metadata is fixed text: no build writes it to dist/ yet, and
- * scripts/release/notes.ts stops if dist/ holds anything but tc-mobile/.
+ * scripts/release/notes.ts stops if dist/ holds anything but the
+ * tc-mobile/ packages and title tables (distProblems).
  */
 export function scopeLines(
   books: number,
@@ -314,18 +316,63 @@ export function scopeLines(
   ];
 }
 
+/** An entry under dist/: its path from dist/, "/"-separated, and its kind. */
+export type DistEntry = {
+  path: string;
+  kind: "file" | "directory" | "other";
+};
+
 /**
- * What is wrong with dist/'s top-level `entries` for the notes: scopeLines
- * says metadata is not in the release, true while dist/ holds only
- * tc-mobile/. Anything else there needs scopeLines changed first.
+ * Whether `path` (from dist/) is part of the tc-mobile/ layout: the
+ * directories tc-mobile/, tc-mobile/titles/ and tc-mobile/titles/<lang>/,
+ * and the regular files tc-mobile/<BOOK>.json (a package),
+ * tc-mobile/titles/<lang>/<BOOK>.json (a title table) and
+ * tc-mobile/.gitkeep, with the book codes and language tags of
+ * scripts/lib/release.ts.
  */
-export const distProblems = (entries: readonly string[]): string[] =>
-  entries
-    .filter((e) => e !== "tc-mobile")
-    .map(
-      (e) =>
-        `dist/${e}: the notes say only tc-mobile/ ships; update scopeLines in scripts/lib/release-notes.ts`
+const inLayout = ({ path, kind }: DistEntry): boolean => {
+  const [top, a, b, c, ...rest] = path.split("/");
+  if (top !== "tc-mobile" || rest.length > 0) return false;
+  if (kind === "directory")
+    return (
+      a === undefined ||
+      (a === "titles" &&
+        c === undefined &&
+        (b === undefined || LANGUAGE_TAG.test(b)))
     );
+  if (kind !== "file" || a === undefined) return false;
+  if (b === undefined) return a === ".gitkeep" || packageBook(a) !== null;
+  return (
+    a === "titles" &&
+    LANGUAGE_TAG.test(b) &&
+    c !== undefined &&
+    packageBook(c) !== null
+  );
+};
+
+/**
+ * What is wrong with dist/ for the notes, given every entry under it at any
+ * depth: scopeLines says metadata is not in the release, true while dist/
+ * holds only the tc-mobile/ packages and title tables. Anything else there,
+ * at any depth and dotfiles included, needs scopeLines changed first. One
+ * message per entry, sorted by path; an entry inside a directory already
+ * named is not named again.
+ */
+export const distProblems = (entries: readonly DistEntry[]): string[] => {
+  const problems: string[] = [];
+  const named: string[] = [];
+  const byPath = [...entries].sort((x, y) =>
+    x.path < y.path ? -1 : x.path > y.path ? 1 : 0
+  );
+  for (const e of byPath) {
+    if (inLayout(e) || named.some((d) => e.path.startsWith(`${d}/`))) continue;
+    if (e.kind === "directory") named.push(e.path);
+    problems.push(
+      `dist/${e.path}${e.kind === "directory" ? "/" : ""}: the notes say dist/ holds only tc-mobile/ packages and title tables; update scopeLines in scripts/lib/release-notes.ts`
+    );
+  }
+  return problems;
+};
 
 /**
  * The release notes, in Markdown. `books` is the number of books with
