@@ -498,8 +498,8 @@ tc-mobile template package v0:
   ([decisions/0009](decisions/0009-metadata-to-v0.1.x-package-id.md));
   permanent from the v0.1.0 tag.
 - `kind`: `bible-book`. `bookCode`: the USFM code.
-- `version`: the release tag without the `v` (`0.0.0`, from `package.json`,
-  until the first release). Title tables carry the same
+- `version`: the release tag without the `v`, from `package.json` (`0.1.0`
+  for the first release, v0.1.0). Title tables carry the same
   version, so every release ships its own tables even when titles did not
   change.
 - `dataLicence`: `CC-BY-SA-4.0`. `recordingLicence`: `CC-BY-SA-4.0` (the only
@@ -512,13 +512,13 @@ tc-mobile template package v0:
 
 A tc-mobile v0 title table, one per package per language in its
 `titleLanguages` whose `data/titles/<lang>/<BOOK>.json` has a title to ship.
-Built by `scripts/lib/title-table.ts`. Today that is English Philippians
-and Titus.
+Built by `scripts/lib/title-table.ts`. Today that is English, for all 66
+books.
 
 ```json
 {
   "packageId": "bible-passages:TIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "language": "en",
   "chapters": {},
   "segments": {
