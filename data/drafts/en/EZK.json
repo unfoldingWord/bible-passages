@@ -3133,7 +3133,15 @@
       "text": "The north chamber is for the priests, the sons of Zadok",
       "source": "ai:anthropic/claude-sonnet-5.5",
       "status": "ai-checked",
-      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" }
+      "check": { "by": "ai:google/gemini-3.8-flash", "verdict": "agree" },
+      "review": {
+        "by": "reviewer:maintainer",
+        "at": "2026-11-11",
+        "status": "human-reviewed",
+        "text": "The chamber facing north is for the priests of the altar",
+        "why": "Ezekiel 40:44-46: the chamber stands by the south gate and faces north; it is for the priests who keep charge of the altar. The draft called it the north chamber (Frank, #281).",
+        "saved": "2026-11-11T19:26:36.000Z"
+      }
     },
     "EZK.40.47-47": {
       "text": "The man measures the square court and the altar",

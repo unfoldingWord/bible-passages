@@ -1267,6 +1267,12 @@ No third check was run and no dispute data is written (ADR 0008); the 21
 disagreements stay `unreviewed`. Counts only; the checker's reasons and
 suggestions were not read.
 
+After the run, review found one agreed title wrong: `EZK.40.46-46`, "The
+north chamber is for the priests, the sons of Zadok". The chamber stands by
+the south gate and faces north (40:44-46). The maintainer reworded it
+through `scripts/review/apply.ts`, so it is `human-reviewed`; the counts
+above are the run's, and the tC Mobile table still holds 524 EZK titles.
+
 OpenRouter spend of this work: $1.54912350, the one record. With
 Ezekiel's two stopped runs ($3.10883975, above), Ezekiel has cost
 $4.65796325 in all.
