@@ -631,8 +631,15 @@ check the bump yet.
    in a title table (so v0.1.0 says English only, ADR 0006); the v0.1
    languages still to follow in v0.1.x; and that metadata follows in
    v0.1.x (ADR 0009), a fixed line the release stops on if `dist/` holds,
-   at any depth, anything but the `tc-mobile/` packages, title tables and
-   `.gitkeep` (a stray `.DS_Store` included). Per language and in total they count segments, titled
+   at any depth, anything but the directories `dist/tc-mobile/`,
+   `dist/tc-mobile/titles/` and `dist/tc-mobile/titles/<lang>/`, and the
+   regular files `dist/tc-mobile/<BOOK>.json` (a package),
+   `dist/tc-mobile/titles/<lang>/<BOOK>.json` (a title table) and
+   `dist/tc-mobile/.gitkeep`, where `<BOOK>` is one of the 66 book codes
+   and `<lang>` a language tag as `scripts/lib/release.ts` defines them
+   (`distProblems` in `scripts/lib/release-notes.ts`). `.gitkeep` is
+   allowed at that one path only: anywhere else it stops the release, as
+   does a stray `.DS_Store` or a symlink. Per language and in total they count segments, titled
    segments and segment titles by status (every status above, at 0 too);
    how many ship (`ai-checked` or above); why the rest do not (held back
    because a third model's answer, the checker or a gate, or a person's
