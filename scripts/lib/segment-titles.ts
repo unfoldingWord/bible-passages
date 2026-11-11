@@ -456,7 +456,14 @@ export type Complete = (request: {
 export type DraftOutcome =
   | "done"
   | { stopped: string }
-  | { incomplete: { draft: string[]; check: string[] } };
+  | {
+      incomplete: {
+        draft: string[];
+        check: string[];
+        /** The refused or unreadable call that cut the run short (#266). */
+        stopped?: string;
+      };
+    };
 
 /**
  * The most drafts one check call judges (#201). One reply must hold every
@@ -497,7 +504,10 @@ export const DRAFT_BATCH = 35;
  * different ones; re-drafting the whole book cost the whole run again. A
  * round asks again, with the same draft prompt and the same message shape,
  * for only the segments still without a title; a segment still without one
- * after the last round leaves the run `incomplete`, as before.
+ * after the last round leaves the run `incomplete`, as before. A follow-up
+ * round that reads no title ends the follow-ups early: asking the same
+ * question again is unlikely to help, and each round can be a whole book's
+ * calls (#266).
  */
 export const DRAFT_FOLLOW_UPS = 2;
 
@@ -533,7 +543,12 @@ export function batches<T>(items: T[], size: number): T[][] {
  * check, is made once `maxCost` is spent, or while any cost so far is
  * unknown (the fuse fails closed). A draft or check reply that cannot be
  * read stops the run, as does a check answered by a model that drafted any
- * title of its batch, or by one of that model's family.
+ * title of its batch, or by one of that model's family. A follow-up draft
+ * call refused by the fuse or answered unreadably (#266) instead ends the
+ * follow-ups: the titles already read go on to the check, or, when the fuse
+ * refuses the check too, into the record unchecked, and the run ends
+ * `incomplete` with every such key listed. Only with no title read does it
+ * stop, as before.
  */
 export async function draftSegmentTitles(args: {
   book: string;
@@ -561,9 +576,18 @@ export async function draftSegmentTitles(args: {
   // stops before the check does not lose titles already paid for.
   let draftTitles: Record<string, string> | null = null;
   // Each follow-up draft call (#252): the round, the keys it asked for and
-  // the keys whose title it read.
-  const draftFollowUps: { round: number; asked: string[]; read: string[] }[] =
-    [];
+  // the keys whose title it read. A call whose reply could not be read reads
+  // none and names why (#266).
+  const draftFollowUps: {
+    round: number;
+    asked: string[];
+    read: string[];
+    unread?: string;
+  }[] = [];
+  // Why the follow-up rounds ended with a segment still to ask for (#266):
+  // a round that read no title, or a follow-up call the fuse refused or
+  // whose reply could not be read. Null when they ran their course.
+  let draftFollowUpsEnded: string | null = null;
   // The parsed verdicts, batch by batch, kept in the ledger for the same
   // reason: a later batch that stops the run does not lose earlier ones
   // (#211). `checkUnread` are the keys a batch left out or answered
@@ -589,6 +613,7 @@ export async function draftSegmentTitles(args: {
       calls,
       draftTitles,
       draftFollowUps,
+      draftFollowUpsEnded,
       checks: checkVerdicts,
       checkUnread,
       totals: {
@@ -658,9 +683,13 @@ export async function draftSegmentTitles(args: {
           draftModel,
           draftMessage(book, batch)
         );
-        if (typeof draftReply === "string") return `${at}: ${draftReply}`;
-        const by = calls.at(-1)?.model ?? draftModel;
         const asked = batch.map((s) => s.key);
+        if (typeof draftReply === "string") {
+          if (round > 0)
+            draftFollowUps.push({ round, asked, read: [], unread: draftReply });
+          return `${at}: ${draftReply}`;
+        }
+        const by = calls.at(-1)?.model ?? draftModel;
         const draft = readDraft(draftReply, asked);
         for (const [k, t] of Object.entries(draft.titles)) {
           titlesDrafted[k] = t;
@@ -679,13 +708,30 @@ export async function draftSegmentTitles(args: {
     };
     const undrafted = () =>
       inputs.filter((s) => titlesDrafted[s.key] === undefined);
+    // A follow-up that stopped (#266): the titles read so far are kept.
+    let followUpStop: string | null = null;
     for (let round = 0; round <= DRAFT_FOLLOW_UPS; round++) {
       const todo = round === 0 ? inputs : undrafted();
       if (todo.length === 0) break;
       const stop = await draftRound(round, todo);
       if (stop !== null) {
-        outcome = { stopped: stop };
-        return { record: null, outcome };
+        // A first draft call that stops, or a follow-up with no title read
+        // at all, stops the run as before (#211): there is nothing to keep.
+        if (round === 0 || Object.keys(titlesDrafted).length === 0) {
+          outcome = { stopped: stop };
+          return { record: null, outcome };
+        }
+        followUpStop = stop;
+        draftFollowUpsEnded = stop;
+        break;
+      }
+      if (
+        round > 0 &&
+        round < DRAFT_FOLLOW_UPS &&
+        undrafted().length === todo.length
+      ) {
+        draftFollowUpsEnded = `draft follow-up ${round}: read no title, not asked again`;
+        break;
       }
     }
     // Left out or unreadable after every round, in reading order.
@@ -693,14 +739,23 @@ export async function draftSegmentTitles(args: {
     const drafted = keys.filter((k) => titlesDrafted[k] !== undefined);
     const checks: Record<string, Check> = {};
     const unreadCheck: string[] = [];
-    const toCheck = batches(
-      inputs.filter((s) => titlesDrafted[s.key] !== undefined),
-      args.checkBatch ?? CHECK_BATCH
-    );
+    // After a follow-up stop the fuse is asked once before the check; after
+    // a follow-up it refused it refuses again, as no call has been made
+    // since. Then the titles read go into the record unchecked, each listed
+    // as unread by the check, so the run ends incomplete (#266).
+    const checkRefused = followUpStop === null ? null : fuse("check");
+    if (checkRefused !== null) unreadCheck.push(...drafted);
+    const toCheck =
+      checkRefused !== null
+        ? []
+        : batches(
+            inputs.filter((s) => titlesDrafted[s.key] !== undefined),
+            args.checkBatch ?? CHECK_BATCH
+          );
     // With no draft to check no call follows, but a run whose cost is
     // unknown or over the cap still ends stopped, as it did when the check
     // was one call (#211).
-    if (toCheck.length === 0) {
+    if (toCheck.length === 0 && checkRefused === null) {
       const stop = fuse("check");
       if (stop !== null) {
         outcome = { stopped: stop };
@@ -775,8 +830,15 @@ export async function draftSegmentTitles(args: {
         ...(c ? { check: c } : {}),
       };
     }
-    if (unreadDraft.length + unreadCheck.length > 0)
-      outcome = { incomplete: { draft: unreadDraft, check: unreadCheck } };
+    const cutShort = checkRefused ?? followUpStop;
+    if (unreadDraft.length + unreadCheck.length > 0 || cutShort !== null)
+      outcome = {
+        incomplete: {
+          draft: unreadDraft,
+          check: unreadCheck,
+          ...(cutShort !== null ? { stopped: cutShort } : {}),
+        },
+      };
     const record: DraftRecord = {
       language: "en",
       book,
