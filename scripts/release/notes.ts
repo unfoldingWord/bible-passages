@@ -6,6 +6,8 @@
 //
 //   node scripts/release/notes.ts <tag>
 import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { join, relative, sep } from "node:path";
+import { fileURLToPath } from "node:url";
 import { STRUCTURE_BOOKS } from "../lib/books.ts";
 import type { DisputedRecord } from "../lib/dispute-titles.ts";
 import {
@@ -92,7 +94,16 @@ const title = (language: string, key: string) => {
   const t = titlesOf(language, book);
   return Object.hasOwn(t, key) ? t[key] : undefined;
 };
-problems.push(...distProblems(readdirSync(new URL("dist/", root))));
+// Every entry under dist/, at any depth, for the metadata guard.
+const dist = fileURLToPath(new URL("dist/", root));
+problems.push(
+  ...distProblems(
+    readdirSync(dist, { withFileTypes: true, recursive: true }).map((e) => ({
+      path: relative(dist, join(e.parentPath, e.name)).split(sep).join("/"),
+      kind: e.isFile() ? "file" : e.isDirectory() ? "directory" : "other",
+    }))
+  )
+);
 
 const known = read("known-issues.json");
 problems.push(...knownIssueProblems(known, title));
