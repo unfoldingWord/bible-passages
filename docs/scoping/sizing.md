@@ -1224,6 +1224,59 @@ disagreements stay `unreviewed`.
 
 OpenRouter spend of this work: $1.54281900, the two records.
 
+## Measured: English segment titles, Ezekiel (#244, #252)
+
+Ezekiel was drafted and checked on 2026-11-10: one plain run of the CLI, the
+same models as every other #244 book, the runner at `d9dfb4d` (which has the
+draft follow-up rounds of #252), and the prompt on main,
+`prompts/segment-titles.md` SHA-256 `e3e08e032d32…`, with `--max-cost`
+3.00. It exited 0 with outcome `done`, first time. The record is copied
+unchanged to `data/drafts/en/EZK.json` (`cmp`: no difference). The counts
+below were made twice from the record and its ledger, with `jq` and with
+Python, which gave the same values.
+
+| Book | Drafted    | Agreed | Disagreed: criteria                                 | Gate failures  | Over 60 (longest) | Calls         | Cost        | Model time  |
+| ---- | ---------- | ------ | --------------------------------------------------- | -------------- | ----------------- | ------------- | ----------- | ----------- |
+| EZK  | 545 of 552 | 524    | 21: `style` 10, `accurate` 6, `plain` 4, `covers` 1 | 2 (`length` 2) | 2 (67)            | (16 + 1) + 16 | $1.54912350 | 1,311.512 s |
+
+Labels and sources: measured 2026-11-10 from the record and the run's
+ledger. Drafted: `titles`; the other 7 segments are their pericope's only
+segment. Agreed: checker `agree`, all `ai-checked`. Criteria: a title can
+name more than one; here each disagreement named one. Calls: 16 draft
+batches, 1 follow-up draft call, 16 check batches. Cost and model time:
+OpenRouter's billed `cost` and `ms` per call, summed, exact. Largest
+completion: draft 6,330 of 16,384 (39%); check 14,609 of 32,768 (45%). No
+reply was cut off. `npm run build` puts the 524 `ai-checked` titles in the
+tC Mobile title table (EZK 524 of 552).
+
+Observations from this run (not trends):
+
+- **The follow-up round recovered what the draft left out.** The 16 draft
+  batches left out 5 single-verse segments (`EZK.40.46-46`, `EZK.40.47-47`,
+  `EZK.42.15-15`, `EZK.42.20-20`, `EZK.45.25-25`). One follow-up call
+  (round 1 of at most 2) asked for those 5 and its reply gave all 5, so no
+  second round ran. This is the first real run in which #252's follow-up
+  was used. Four of the five keys were also left out by the second stopped
+  run on 2026-11-05.
+- **Long titles and calls that did not reason.** 2 of 17 draft calls used 0
+  reasoning tokens (batch 14 and the follow-up call); both titles over 60
+  (`EZK.42.13-14` 67, `EZK.45.25-25` 62) are in those calls, and both are
+  disputed.
+
+No third check was run and no dispute data is written (ADR 0008); the 21
+disagreements stay `unreviewed`. Counts only; the checker's reasons and
+suggestions were not read.
+
+After the run, review found one agreed title wrong: `EZK.40.46-46`, "The
+north chamber is for the priests, the sons of Zadok". The chamber stands by
+the south gate and faces north (40:44-46). The maintainer reworded it
+through `scripts/review/apply.ts`, so it is `human-reviewed`; the counts
+above are the run's, and the tC Mobile table still holds 524 EZK titles.
+
+OpenRouter spend of this work: $1.54912350, the one record. With
+Ezekiel's two stopped runs ($3.10883975, above), Ezekiel has cost
+$4.65796325 in all.
+
 ## Not measured yet
 
 | Quantity                                         | Why it matters                       | How it gets measured                                       |

@@ -253,6 +253,7 @@ describe.each([
   "LAM",
   "PRO",
   "ECC",
+  "EZK",
 ])("English %s segment drafts", (book) => {
   const structure = read(`data/structure/${book}.json`) as {
     pericopes: { key: string }[];
@@ -1259,6 +1260,26 @@ describe.each<RecordRow>([
     prompt: "prompts/segment-titles.md",
     drafts: 4,
     checks: 4,
+    batched: true,
+  },
+  {
+    book: "EZK",
+    reused: [
+      "EZK.1.1-3",
+      "EZK.25.8-11",
+      "EZK.25.15-17",
+      "EZK.28.25-26",
+      "EZK.40.17-19",
+      "EZK.45.10-12",
+      "EZK.48.21-22",
+    ],
+    drafted: 545,
+    // Drafted for #244 (ADR 0008) with the prompt on main. 16 batches, then
+    // one follow-up call (#252) for the 5 segments the replies left out.
+    prompt: "prompts/segment-titles.md",
+    drafts: 17,
+    followUps: 1,
+    checks: 16,
     batched: true,
   },
 ])("a scripted segment-title record ($book)", (t) => {
