@@ -32,6 +32,7 @@ describe("vendored tc-mobile checker", () => {
     "bible-book-min.json",
     "collection-min.json",
     "hymnal-min.json",
+    "obs-min.json",
     "pair-v0.1.0.json",
     "pair-v0.2.0.json",
   ])("accepts tc-mobile's fixture %s", (file) => {
