@@ -36,6 +36,11 @@ Changes since the table was written (5 Nov 2026, #244; 9 Nov 2026):
   decision 11) move to v0.1.x; v0.1.0's `dist/` is `dist/tc-mobile/` only.
   The package id `bible-passages:<BOOK>` is confirmed and permanent from the
   tag ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md)).
+- **Go/no-go 2 (13 Nov) and the tag (16 Nov).** The gate check ran on
+  16 Nov and passed; the maintainer tagged `v0.1.0` at `a0c6bbf` the same
+  day, and the Release workflow made the draft release. Versification stays
+  `ufw` for v0.1.0; a later change is deferred to v0.1.x
+  ([ADR 0010](../decisions/0010-go-no-go-2-tag-v0.1.0.md)).
 
 ## If v0.1 must be a subset
 
@@ -50,12 +55,6 @@ candidate, in order of what to keep:
 4. The other languages in v0.1.x as they pass.
 5. Metadata (key terms, figures of speech) in v0.1.x
    ([ADR 0009](../decisions/0009-metadata-to-v0.1.x-package-id.md)).
-
-- **Go/no-go 2 (13 Nov) and the tag (16 Nov).** The gate check ran on
-  16 Nov and passed; the maintainer tagged `v0.1.0` at `a0c6bbf` the same
-  day, and the Release workflow made the draft release. Versification stays
-  `ufw` for v0.1.0; a later change is deferred to v0.1.x
-  ([ADR 0010](../decisions/0010-go-no-go-2-tag-v0.1.0.md)).
 
 Every title ships with its status. The dataset request says the whole
 dataset need not be human-reviewed before launch; which titles must be is
