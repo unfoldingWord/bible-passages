@@ -90,7 +90,7 @@ for the other languages).
 | 1:4     | Paul greets Titus, his true child in the faith            | Paulo amsalimu Tito, mwanaye wa kweli katika imani (Gemini, sw)                | _amsalimu_ is subjunctive, not the present tense a heading needs (plain)                        | Paulo anamsalimu Tito, mwanawe wa kweli katika imani |
 | 1:5     | Paul left Titus in Crete to appoint elders                | 保罗留提多在克里特任命长老 (Claude, zh-Hans)                                   | The Chinese Bible writes Crete as 革哩底 (names)                                                | 保罗留提多在革哩底任命长老                           |
 | 1:10–11 | (same as above)                                           | Непокорным, которые вводят в заблуждение семьи, нужно закрыть рот (Claude, ru) | _закрыть рот_ is a colloquial, possibly rude idiom (plain, style)                               | … нужно заставить замолчать                          |
-| 1:1–4   | Paul’s Greeting to Titus                                  | पौलुस की तीतुस को शुभकामना (Claude, hi)                                        | _शुभकामना_ means "best wishes", not a letter's greeting (accurate, plain)                       | तीतुस को पौलुस का नमस्कार                            |
+| 1:1–4   | Paul’s Greeting to Titus                                  | पौलुस की तीतुस को शुभकामना (Claude, hi)                                           | _शुभकामना_ means "best wishes", not a letter's greeting (accurate, plain)                        | तीतुस को पौलुस का नमस्कार                               |
 
 Not checked: whether each checker was right. That is the reviewer's job; a
 disagreement is a flag, not a finding.
