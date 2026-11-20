@@ -117,8 +117,8 @@ letters, digits and `. _ : -`, at most 64 characters).
 
 - `start` and `end` are `[chapter, verse]`, inclusive.
 - Pericopes, and the segments within each, are listed in reading order.
-- `versification` names the scheme every span is checked against. Which scheme
-  is still open (see the end).
+- `versification` names the scheme every span is checked against: `ufw` in
+  v0.1.0 ([decisions/0010](decisions/0010-go-no-go-2-tag-v0.1.0.md)).
 
 ## `data/titles/<lang>/<BOOK>.json`
 
@@ -720,9 +720,11 @@ every test run until they exist.
    ([decisions/0003](decisions/0003-v0.1-scope-and-titles.md)).
 3. **Keys**: decided: span keys. See
    [decisions/0001](decisions/0001-span-keys.md).
-4. **Versification and UTN release**: which scheme spans are checked against,
-   and which UTN release the segment boundaries come from. Owner: the
-   maintainer. Decide by: 13 Nov 2026 (go/no-go 2).
+4. **Versification and UTN release**: settled for v0.1.0: spans are checked
+   against `ufw`, and segment boundaries come from the UFW chunk files, not
+   a UTN release ([decisions/0010](decisions/0010-go-no-go-2-tag-v0.1.0.md)).
+   Still open: whether a later release moves to another scheme or to UTN
+   boundaries. Owner: the maintainer.
 5. **Package id**: decided: `bible-passages:<BOOK>`, permanent from the
    v0.1.0 tag ([decisions/0009](decisions/0009-metadata-to-v0.1.x-package-id.md)).
 6. **Translation**: the selection procedure, the two model IDs and the
