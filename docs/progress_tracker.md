@@ -4,6 +4,43 @@ Newest first. One entry per working session.
 
 ---
 
+## 2026-11-20: v0.1.0 released; ADR 0010; checker and dependency PRs (16 and 20 Nov)
+
+### Shipped
+
+| What                                                                                                                                        | Evidence                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Go/no-go 2 check on `main` `a0c6bbf`: all three gates passed (16 Nov)                                                                       | #13 comment, 16 Nov                                                 |
+| Tag `v0.1.0` at `a0c6bbf`, pushed by the maintainer (16 Nov). The push bypassed the repo's tag-creation ruleset                             | `git ls-remote --tags origin`                                       |
+| Release run 43958463719 passed and made a draft release with 132 assets (16 Nov)                                                            | `gh run view 43958463719`                                           |
+| **v0.1.0 published** by the maintainer, 20 Nov 15:41 UTC; the latest release                                                                | https://github.com/unfoldingWord/bible-passages/releases/tag/v0.1.0 |
+| ADR 0010: go/no-go 2 recorded; decision 4 settled for v0.1.0 (`ufw` versification, UFW chunk boundaries), a later change deferred to v0.1.x | #289, `54eda1e`                                                     |
+| #13 closed with the release link; tc-mobile #1459 told the package is published                                                             | #13 and tc-mobile #1459 comments, 20 Nov                            |
+
+### Measured
+
+- **Dry run, 16 Nov** (`scripts/release/run.sh --dry-run` on `a0c6bbf`): exit 0; 29 test files, 11,819 passed, 2 todo; rebuild matched the committed files; 132 assets.
+- **tC Mobile's checker, 16 Nov:** a separate script ran it over all of `dist/tc-mobile/` (66 packages, 66 title tables): 0 failures with the vendored copy (`8757e3a`) and with tc-mobile `develop` `dfc7d31`.
+- **Release assets, 16 Nov** (downloaded from the draft): the 66 title tables are byte for byte `dist/tc-mobile/titles/en/`. Each of the 66 packages differs from `dist/` only in `source.revision` (`"unreleased"` → `"v0.1.0"`, by design in `scripts/data/dist.ts`).
+- **Titles in v0.1.0** (`notes.ts v0.1.0`): 13,770 segments; 12,695 shipped (3 `approved`, 15 `human-reviewed`, 12,677 `ai-checked`); 1,075 held (813 disputes waiting on #207, 262 reusing an `unreviewed` BSB heading). No known issues.
+
+### Open
+
+| PR   | What                                                                                                                                               | State (20 Nov)            |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| #290 | Vendored tC Mobile checker updated to tc-mobile `develop` `94430f3` (has #1761's hardened validator), plus the `obs-min.json` fixture. Closes #287 | CI green; bench requested |
+| #292 | prettier 3.10.1 and vitest 5.1.0, with the reformat 3.10 needs (Devanagari width). Replaces Dependabot's #288 (closed). Closes #291                | CI green; bench requested |
+
+- **#207:** the third check on the 813 held disputes still waits for the verdict (ADR 0008).
+- **Sprint status (20 Nov):**
+  1. Current work: v0.1.0 is out; follow-ups #290 and #292 are in review.
+  2. Verified change since 11 Nov: go/no-go 2 passed, v0.1.0 tagged and published, ADR 0010 merged.
+  3. The one constraint: the #207 verdict (a person's sample check of the third step, ADR 0008), assigned to the maintainer. It gates the 813 held English titles; the other languages wait on #64.
+  4. Next milestone: v0.1.x, if #207 and #64 are decided. Not dated yet.
+  5. Release stage: v0.1.0 released.
+
+---
+
 ## 2026-11-11 — Ezekiel committed; the known wrong titles reviewed; release prep for v0.1.0
 
 Lanes ran as background agents, each in its own worktree. 9 PRs merged: #273 to #277 and #280 to #283 (GitHub merge times 16:33 to 21:08 UTC).
