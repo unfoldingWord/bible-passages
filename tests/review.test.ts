@@ -704,9 +704,7 @@ describe("wording with a line break, control or invisible character", () => {
 
   it("lets Arabic and Hindi joiners through, and no other language's", () => {
     const en = "The grace of God";
-    expect(wordingProblems("hi", "परमेश्\u{200D}वर का अनुग्रह", en)).toEqual(
-      []
-    );
+    expect(wordingProblems("hi", "परमेश्\u{200D}वर का अनुग्रह", en)).toEqual([]);
     expect(wordingProblems("ar", "بولس يحيي\u{200C} ابنه", en)).toEqual([]);
     expect(
       wordingProblems("en", "Paul greets\u{200C}his son", undefined)

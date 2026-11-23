@@ -158,9 +158,9 @@ describe("title translation gates (ported from tc-mobile)", () => {
     // परमेश्वर (God) as Door43's Hindi tW writes it, with ZWJ after the
     // virama: data/glossaries/hi/1CO.json, kt/god.
     const god = "परमेश्\u{200D}वर";
-    expect(
-      titleProblems("hi", "The grace of God", `${god} का अनुग्रह`)
-    ).toEqual([]);
+    expect(titleProblems("hi", "The grace of God", `${god} का अनुग्रह`)).toEqual(
+      []
+    );
     expect(
       titleProblems("hi", "The grace of God", `परमेश्${zwnj}वर का अनुग्रह`)
     ).toEqual([]);
